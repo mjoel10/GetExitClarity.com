@@ -179,7 +179,7 @@ export default function BenefitsSection() {
                   className="text-center"
                 >
                   <div className="text-4xl font-bold mb-2">{stat.value}</div>
-                  <div className="text-white/90">{stat.label}</div>
+                  <div className="text-white/90 text-sm">{stat.label}</div>
                 </motion.div>
               ))}
             </div>

@@ -66,7 +66,7 @@ export default function HowItWorks() {
           </p>
         </motion.div>
 
-        <div className="space-y-20">
+        <div className="space-y-16">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -74,20 +74,20 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
+              className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
             >
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                 <div className="flex items-center mb-6">
-                  <div className={`w-12 h-12 ${step.color} text-white rounded-lg flex items-center justify-center font-bold text-xl mr-4`}>
+                  <div className={`w-10 h-10 ${step.color} text-white rounded-lg flex items-center justify-center font-bold text-lg mr-4`}>
                     {step.number}
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-900">{step.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">{step.title}</h3>
                 </div>
-                <p className="text-lg text-gray-600 mb-6">{step.description}</p>
+                <p className="text-gray-600 mb-6">{step.description}</p>
                 <div className="grid grid-cols-2 gap-4">
                   {step.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-accent mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                       <span className="text-gray-700 text-sm">{feature}</span>
                     </div>
                   ))}
@@ -95,7 +95,7 @@ export default function HowItWorks() {
               </div>
               
               <div className={`relative ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                <div className={`${step.color} p-8 rounded-2xl shadow-2xl`}>
+                <div className={`${index === 0 ? 'bg-sky-500' : index === 1 ? 'bg-gray-300' : 'bg-sky-500'} p-8 rounded-2xl shadow-lg`}>
                   <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>

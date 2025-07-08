@@ -43,6 +43,8 @@ export class MemStorage implements IStorage {
     const id = this.currentDemoRequestId++;
     const request: DemoRequest = { 
       ...insertRequest, 
+      phone: insertRequest.phone || null,
+      message: insertRequest.message || null,
       id, 
       createdAt: new Date(),
       contacted: false

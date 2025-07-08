@@ -65,7 +65,7 @@ export default function PlatformFeatures() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -73,16 +73,16 @@ export default function PlatformFeatures() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="bg-white p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                <feature.icon className="w-8 h-8 text-primary" />
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+                <feature.icon className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-              <p className="text-gray-600 mb-4">{feature.description}</p>
-              <div className="text-sm text-gray-500">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
+              <p className="text-gray-600 mb-4 text-sm">{feature.description}</p>
+              <div className="text-xs text-gray-500">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-1 h-1 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span>{feature.benefit}</span>
                 </div>
               </div>

@@ -71,30 +71,27 @@ export default function SolutionSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white p-10 rounded-2xl shadow-lg border-t-4 border-primary"
+            className="bg-white p-8 rounded-2xl border border-gray-200"
           >
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900">For M&A Professionals</h3>
-                <p className="text-gray-600">Systematize early-stage engagement and build stronger pipelines</p>
-              </div>
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">For M&A Professionals</h3>
+              <p className="text-gray-600">Systematize early-stage engagement and build stronger pipelines</p>
             </div>
             <ul className="space-y-4">
               {maFeatures.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-accent mr-4 mt-1 flex-shrink-0" />
+                  <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <div className="w-1 h-1 bg-white rounded-full"></div>
+                  </div>
                   <div>
                     <div className="font-semibold text-gray-900">{feature.title}</div>
-                    <div className="text-gray-600">{feature.description}</div>
+                    <div className="text-gray-600 text-sm">{feature.description}</div>
                   </div>
                 </li>
               ))}
@@ -106,24 +103,21 @@ export default function SolutionSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white p-10 rounded-2xl shadow-lg border-t-4 border-accent"
+            className="bg-white p-8 rounded-2xl border border-gray-200"
           >
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
-                <Building className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900">For Business Owners</h3>
-                <p className="text-gray-600">Understand where you stand and how to move forward</p>
-              </div>
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">For Business Owners</h3>
+              <p className="text-gray-600">Understand where you stand and how to move forward</p>
             </div>
             <ul className="space-y-4">
               {ownerFeatures.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-accent mr-4 mt-1 flex-shrink-0" />
+                  <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
+                  </div>
                   <div>
                     <div className="font-semibold text-gray-900">{feature.title}</div>
-                    <div className="text-gray-600">{feature.description}</div>
+                    <div className="text-gray-600 text-sm">{feature.description}</div>
                   </div>
                 </li>
               ))}

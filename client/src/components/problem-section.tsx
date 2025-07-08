@@ -60,7 +60,7 @@ export default function ProblemSection() {
           >
             Why So Many Deals Fall Apart Before They Begin
           </motion.h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {problemCards.map((card, index) => (
               <motion.div
                 key={index}
@@ -68,13 +68,13 @@ export default function ProblemSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                  <card.icon className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+                  <card.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-4">{card.title}</h4>
-                <p className="text-gray-600">{card.description}</p>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">{card.title}</h4>
+                <p className="text-gray-600 text-sm leading-relaxed">{card.description}</p>
               </motion.div>
             ))}
           </div>

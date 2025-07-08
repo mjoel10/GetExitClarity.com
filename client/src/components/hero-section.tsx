@@ -13,7 +13,7 @@ export default function HeroSection() {
   return (
     <section id="hero" className="pt-24 pb-20 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-[1fr,1.2fr] gap-20 items-center">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function HeroSection() {
               Turn Exit Readiness Into{" "}
               <span className="text-primary">High-Confidence Deals</span>
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
               ExitClarity systematizes and scales early owner engagement by turning the overwhelming thought of selling into a clear, actionable process.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -45,14 +45,14 @@ export default function HeroSection() {
               </Button>
             </div>
             
-            <div className="flex flex-wrap gap-8 pt-8">
+            <div className="flex flex-wrap gap-12 pt-8">
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center"
               >
-                <div className="text-3xl font-bold text-primary">30+</div>
+                <div className="text-4xl font-bold text-gray-900">30+</div>
                 <div className="text-sm text-gray-600 font-medium">Years M&A Experience</div>
               </motion.div>
               <motion.div 
@@ -61,7 +61,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-center"
               >
-                <div className="text-3xl font-bold text-primary">11</div>
+                <div className="text-4xl font-bold text-gray-900">11</div>
                 <div className="text-sm text-gray-600 font-medium">Readiness Factors</div>
               </motion.div>
               <motion.div 
@@ -70,7 +70,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="text-center"
               >
-                <div className="text-3xl font-bold text-primary">500+</div>
+                <div className="text-4xl font-bold text-gray-900">500+</div>
                 <div className="text-sm text-gray-600 font-medium">Deals Analyzed</div>
               </motion.div>
             </div>
@@ -82,25 +82,27 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <img 
-              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-              alt="Professional business meeting with data dashboards" 
-              className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
-            />
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="absolute bottom-6 left-6 bg-white p-4 rounded-lg shadow-lg"
-            >
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-accent" />
-                <div>
-                  <div className="font-semibold text-sm">Assessment Complete</div>
-                  <div className="text-xs text-gray-600">Ready for strategic review</div>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                alt="Professional business meeting with data dashboards" 
+                className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
+              />
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="absolute bottom-6 left-6 bg-white p-4 rounded-lg shadow-lg border border-gray-200"
+              >
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <div>
+                    <div className="font-semibold text-sm">Assessment Complete</div>
+                    <div className="text-xs text-gray-600">Ready for strategic review</div>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>

@@ -89,7 +89,7 @@ export default function FinalCTA() {
   ];
 
   return (
-    <section id="final-cta" className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
+    <section id="final-cta" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -97,10 +97,10 @@ export default function FinalCTA() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl font-bold mb-6">
-            Start Turning Exit Conversations Into <span className="text-blue-200">Strategic Wins</span>
+          <h2 className="text-5xl font-bold mb-6 text-gray-900">
+            Start Turning Exit Conversations Into <span className="text-primary">Strategic Wins</span>
           </h2>
-          <p className="text-xl mb-12 opacity-90 max-w-4xl mx-auto">
+          <p className="text-xl mb-12 text-gray-600 max-w-4xl mx-auto">
             Whether you're advising or preparing to sell, ExitClarity brings structure, insight, and confidence to every step of the journey.
           </p>
           
@@ -110,7 +110,7 @@ export default function FinalCTA() {
                 <Button 
                   onClick={() => openDialog("demo")}
                   size="lg"
-                  className="bg-white text-primary hover:bg-gray-100 font-bold px-10 py-4 rounded-lg transition-all duration-200 hover:shadow-lg"
+                  className="bg-primary hover:bg-primary/90 text-white font-bold px-10 py-4 rounded-lg transition-all duration-200 hover:shadow-lg"
                 >
                   <Calendar className="w-5 h-5 mr-2" />
                   Schedule a Demo
@@ -121,7 +121,7 @@ export default function FinalCTA() {
                   onClick={() => openDialog("sample_report")}
                   variant="outline"
                   size="lg"
-                  className="border-2 border-white text-white hover:bg-white hover:text-primary font-bold px-10 py-4 rounded-lg transition-all duration-200"
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold px-10 py-4 rounded-lg transition-all duration-200"
                 >
                   <FileText className="w-5 h-5 mr-2" />
                   See Sample Report
@@ -132,7 +132,7 @@ export default function FinalCTA() {
                   onClick={() => openDialog("assessment")}
                   variant="outline"
                   size="lg"
-                  className="border-2 border-white text-white hover:bg-white hover:text-primary font-bold px-10 py-4 rounded-lg transition-all duration-200"
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold px-10 py-4 rounded-lg transition-all duration-200"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Start Assessment
@@ -235,12 +235,12 @@ export default function FinalCTA() {
               viewport={{ once: true }}
               className="text-left"
             >
-              <h3 className="text-2xl font-bold mb-4">For M&A Professionals</h3>
-              <p className="text-white/90 mb-6">Transform your practice with systematic prospect qualification, automated nurturing, and higher-quality deal flow.</p>
-              <ul className="space-y-2 text-white/90">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">For M&A Professionals</h3>
+              <p className="text-gray-600 mb-6">Transform your practice with systematic prospect qualification, automated nurturing, and higher-quality deal flow.</p>
+              <ul className="space-y-2 text-gray-600">
                 {maFeatures.map((feature, index) => (
                   <li key={index} className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0" />
+                    <div className="w-1 h-1 bg-primary rounded-full mr-3 flex-shrink-0"></div>
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -254,12 +254,12 @@ export default function FinalCTA() {
               viewport={{ once: true }}
               className="text-left"
             >
-              <h3 className="text-2xl font-bold mb-4">For Business Owners</h3>
-              <p className="text-white/90 mb-6">Gain clarity on your exit readiness, understand your value, and build a strategic roadmap for maximum return.</p>
-              <ul className="space-y-2 text-white/90">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">For Business Owners</h3>
+              <p className="text-gray-600 mb-6">Gain clarity on your exit readiness, understand your value, and build a strategic roadmap for maximum return.</p>
+              <ul className="space-y-2 text-gray-600">
                 {ownerFeatures.map((feature, index) => (
                   <li key={index} className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0" />
+                    <div className="w-1 h-1 bg-primary rounded-full mr-3 flex-shrink-0"></div>
                     <span>{feature}</span>
                   </li>
                 ))}
