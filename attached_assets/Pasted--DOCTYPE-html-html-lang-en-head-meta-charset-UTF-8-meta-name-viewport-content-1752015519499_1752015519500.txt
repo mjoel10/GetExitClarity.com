@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ExitClarity systematizes early owner engagement by turning the overwhelming thought of selling into a clear, actionable process for M&A professionals and business owners.">
+    <meta name="keywords" content="M&A, business exit, exit planning, business valuation, mergers acquisitions">
+    <title>Turn Exit Readiness Into High-Confidence Deals | ExitClarity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #6b7280;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .cta-button {
+            background: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
+        .cta-secondary:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 120px 0 80px;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero-text h1 .highlight {
+            color: #2563eb;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            color: #6b7280;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2563eb;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .assessment-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-header h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .section-header h2 .highlight {
+            color: #2563eb;
+        }
+
+        .section-header p {
+            font-size: 20px;
+            color: #6b7280;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 64px;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 32px 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f3f4f6;
+            transition: all 0.2s;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .problem-icon {
+            width: 48px;
+            height: 48px;
+            background: #eff6ff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 24px;
+            color: #2563eb;
+        }
+
+        .problem-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .problem-card p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            text-align: center;
+        }
+
+        .big-stat {
+            font-size: 64px;
+            font-weight: 700;
+            color: #2563eb;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .big-stat-label {
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-top: 48px;
+        }
+
+        .audience-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .audience-card.professionals {
+            border-top: 4px solid #2563eb;
+        }
+
+        .audience-card.owners {
+            border-top: 4px solid #10b981;
+        }
+
+        .audience-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .audience-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .professionals .audience-icon {
+            background: #2563eb;
+        }
+
+        .owners .audience-icon {
+            background: #10b981;
+        }
+
+        .audience-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .audience-card .subtitle {
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .final-cta .cta-button {
+            background: white;
+            color: #2563eb;
+        }
+
+        .final-cta .cta-button:hover {
+            background: #f8fafc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content,
+            .solution-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .section-header h2 {
+                font-size: 36px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">ExitClarity</a>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+            </ul>
+            <a href="#" class="cta-button">Schedule Demo</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Turn Exit Readiness Into <span class="highlight">High-Confidence Deals</span></h1>
+                    <p>ExitClarity systematizes and scales early owner engagement by turning the overwhelming thought of selling into a clear, actionable process.</p>
+                    
+                    <div class="hero-ctas">
+                        <a href="#" class="cta-button">Schedule a Demo</a>
+                        <a href="#" class="cta-button cta-secondary">View Sample Report</a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Years M&A Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">11</span>
+                            <span class="stat-label">Readiness Factors</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Deals Analyzed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Business meeting with data analytics">
+                    <div class="assessment-badge">
+                        <div class="badge-dot"></div>
+                        <span>Assessment Complete<br><small>Ready for strategic review</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Most Exit Conversations Stall Because <span class="highlight">Readiness Is Unclear</span></h2>
+                <p>M&A professionals waste time on prospects who aren't ready. Business owners wait too long, unprepared and overconfident. ExitClarity bridges that gap with structured, scalable intelligence that moves both sides forward.</p>
+            </div>
+
+            <h3 style="text-align: center; font-size: 32px; margin-bottom: 48px; font-weight: 600;">Why So Many Deals Fall Apart Before They Begin</h3>
+
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">💰</div>
+                    <h3>Revenue ≠ Exit Ready</h3>
+                    <p>Top-line growth doesn't matter if financials aren't clean, predictable, and documented.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⚠️</div>
+                    <h3>Operational Blind Spots</h3>
+                    <p>Key-person risk, poor systems, and undocumented processes stall deals in diligence.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📈</div>
+                    <h3>Unrealistic Expectations</h3>
+                    <p>Inflated valuations and short timelines kill trust before deals can even start.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">👥</div>
+                    <h3>Inadequate Representation</h3>
+                    <p>The wrong advisor (or no advisor) leads to costly mistakes in high-stakes negotiations.</p>
+                </div>
+            </div>
+
+            <div class="stats-row">
+                <div>
+                    <span class="big-stat">70%</span>
+                    <span class="big-stat-label">of M&A conversations never progress to LOI</span>
+                </div>
+                <div>
+                    <span class="big-stat">6–18</span>
+                    <span class="big-stat-label">months wasted on unqualified prospects</span>
+                </div>
+                <div>
+                    <span class="big-stat">40%</span>
+                    <span class="big-stat-label">of deals fail during diligence</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>A Readiness Engine That Works for <span class="highlight">Both Sides</span></h2>
+                <p>ExitClarity creates alignment between M&A professionals and business owners through structured intelligence and actionable insights.</p>
+            </div>
+
+            <div class="solution-grid">
+                <div class="audience-card professionals">
+                    <div class="audience-header">
+                        <div class="audience-icon">💼</div>
+                        <h3>For M&A Professionals</h3>
+                    </div>
+                    <p class="subtitle">Systematize early-stage engagement and build stronger pipelines</p>
+                    <ul class="feature-list">
+                        <li><span class="check-icon">✓</span> Systematize early-stage engagement</li>
+                        <li><span class="check-icon">✓</span> Objectively score prospect readiness</li>
+                        <li><span class="check-icon">✓</span> Track and prioritize your pipeline</li>
+                        <li><span class="check-icon">✓</span> Deliver high-value analysis without custom consulting</li>
+                        <li><span class="check-icon">✓</span> Build trust early—before the deal</li>
+                    </ul>
+                </div>
+
+                <div class="audience-card owners">
+                    <div class="audience-header">
+                        <div class="audience-icon">🏢</div>
+                        <h3>For Business Owners</h3>
+                    </div>
+                    <p class="subtitle">Understand where you stand and how to move forward</p>
+                    <ul class="feature-list">
+                        <li><span class="check-icon">✓</span> Understand if and when you're ready to sell</li>
+                        <li><span class="check-icon">✓</span> Get a personalized roadmap to improve valuation</li>
+                        <li><span class="check-icon">✓</span> Know your deal risks before a buyer does</li>
+                        <li><span class="check-icon">✓</span> Build clarity, confidence, and control into the process</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Start Turning Exit Conversations Into Strategic Wins</h2>
+            <p>Whether you're advising or preparing to sell, ExitClarity brings structure, insight, and confidence to every step of the journey.</p>
+            <div style="display: flex; gap: 16px; justify-content: center;">
+                <a href="#" class="cta-button">Schedule a Demo</a>
+                <a href="#" class="cta-button cta-secondary" style="border-color: white; color: white;">See Sample Report</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
