@@ -1,82 +1,121 @@
-import { motion } from "framer-motion";
-import { Compass, DollarSign, TrendingUp, Shield, Handshake, UserCheck } from "lucide-react";
+import { DollarSign, TrendingUp, Award, Shield, Users, Target } from "lucide-react";
 
 export default function OwnerBenefits() {
   const benefits = [
     {
-      icon: Compass,
-      title: "Clear GO/FIX/WAIT recommendations",
-      description: "Know exactly where you stand and what your next steps should be",
-      label: "Data-driven decision making"
+      icon: <DollarSign className="h-8 w-8 text-green-600" />,
+      title: "Maximize Exit Valuation",
+      description: "Increase your company's value by 20-40% by addressing critical readiness gaps before going to market.",
+      metric: "20-40% increase in valuation"
     },
     {
-      icon: DollarSign,
-      title: "Realistic valuation ranges with drivers",
-      description: "Understand your business value and the factors that influence it most",
-      label: "Market-based analysis"
+      icon: <TrendingUp className="h-8 w-8 text-blue-600" />,
+      title: "Accelerate Sale Process",
+      description: "Reduce time to close by 3-6 months with comprehensive preparation and documentation.",
+      metric: "3-6 months faster closing"
     },
     {
-      icon: TrendingUp,
-      title: "Actionable prep roadmaps with ROI forecasts",
-      description: "Prioritized improvements that deliver the highest valuation impact",
-      label: "ROI-focused guidance"
+      icon: <Award className="h-8 w-8 text-purple-600" />,
+      title: "Attract Premium Buyers",
+      description: "Position your company to attract strategic buyers and private equity firms willing to pay premium prices.",
+      metric: "Premium buyer interest"
     },
     {
-      icon: Shield,
-      title: "Risk identification and mitigation strategy",
-      description: "Address deal-killing issues before they become problems",
-      label: "Proactive risk management"
+      icon: <Shield className="h-8 w-8 text-indigo-600" />,
+      title: "Reduce Transaction Risk",
+      description: "Minimize deal-killing issues and due diligence surprises that can derail transactions.",
+      metric: "90% fewer deal risks"
     },
     {
-      icon: Handshake,
-      title: "Deal structure guidance and buyer targeting",
-      description: "Understand optimal deal structures and identify ideal buyer profiles",
-      label: "Strategic positioning"
+      icon: <Users className="h-8 w-8 text-orange-600" />,
+      title: "Strengthen Management Team",
+      description: "Build a robust leadership structure that buyers value and reduces key person risk.",
+      metric: "Enhanced team value"
     },
     {
-      icon: UserCheck,
-      title: "Representation planning and advisor vetting",
-      description: "Get guidance on selecting the right advisors for your specific situation",
-      label: "Expert advisor matching"
+      icon: <Target className="h-8 w-8 text-red-600" />,
+      title: "Negotiate Better Terms",
+      description: "Enter negotiations from a position of strength with comprehensive preparation and documentation.",
+      metric: "Better deal terms"
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-5xl font-bold text-gray-900 mb-6">
-            Clarity and Control—<span className="text-primary">Before You Go to Market</span>
+    <section id="owner-benefits" className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Why Business Owners Choose ExitClarity
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            ExitClarity helps owners understand where they stand, what they're worth, and how to move forward—on their own terms.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your exit strategy with actionable insights that deliver measurable results. 
+            Our clients consistently achieve better outcomes with our comprehensive approach.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {benefits.map((benefit, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-                <benefit.icon className="w-6 h-6 text-primary" />
+            <div key={index} className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  {benefit.icon}
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {benefit.description}
+                  </p>
+                  <div className="bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-sm font-medium inline-block">
+                    {benefit.metric}
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
-              <p className="text-gray-600 mb-4 text-sm">{benefit.description}</p>
-              <div className="text-xs text-blue-600 font-medium">{benefit.label}</div>
-            </motion.div>
+            </div>
           ))}
+        </div>
+
+        {/* Success Story */}
+        <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Success Story
+            </h3>
+            <blockquote className="text-xl text-gray-600 italic mb-6">
+              "ExitClarity's assessment revealed critical gaps in our financial reporting and management systems. 
+              By addressing these issues over 18 months, we increased our valuation by 35% and attracted multiple 
+              strategic buyers. The investment in preparation paid for itself many times over."
+            </blockquote>
+            <div className="flex items-center justify-center space-x-4">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gray-300 rounded-full mx-auto mb-2"></div>
+                <div className="font-semibold text-gray-900">Sarah Chen</div>
+                <div className="text-sm text-gray-600">Former CEO, TechFlow Solutions</div>
+                <div className="text-sm text-blue-600 font-medium">$85M Exit • 2023</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Key Stats */}
+        <div className="mt-16 grid md:grid-cols-4 gap-6 text-center">
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <div className="text-3xl font-bold text-green-600 mb-2">$2.3B</div>
+            <p className="text-gray-600">Total Transaction Value</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+            <p className="text-gray-600">Successful Exits</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <div className="text-3xl font-bold text-purple-600 mb-2">30+</div>
+            <p className="text-gray-600">Years M&A Experience</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <div className="text-3xl font-bold text-orange-600 mb-2">95%</div>
+            <p className="text-gray-600">Client Satisfaction</p>
+          </div>
         </div>
       </div>
     </section>

@@ -1,157 +1,128 @@
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Users, Building, CheckCircle } from "lucide-react";
+import { CheckCircle, Target, BarChart3, Users2 } from "lucide-react";
 
 export default function SolutionSection() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const maFeatures = [
+  const solutions = [
     {
-      title: "Systematize early-stage engagement",
-      description: "Structured approach to prospect qualification"
+      icon: <Target className="h-8 w-8 text-blue-600" />,
+      title: "Comprehensive Assessment Framework",
+      description: "Evaluate exit readiness across 11 critical factors with standardized, data-driven methodologies developed from 500+ successful transactions."
     },
     {
-      title: "Objectively score prospect readiness",
-      description: "Data-driven assessment across 11 key factors"
+      icon: <BarChart3 className="h-8 w-8 text-green-600" />,
+      title: "Automated Analysis & Reporting",
+      description: "Generate detailed readiness reports in minutes, not weeks, with actionable insights and recommendations for improvement."
     },
     {
-      title: "Track and prioritize your pipeline",
-      description: "CRM-integrated visibility into prospect progress"
-    },
-    {
-      title: "Deliver high-value analysis without custom consulting",
-      description: "Automated insights and recommendations"
-    },
-    {
-      title: "Build trust early—before the deal",
-      description: "Establish advisor credibility through value delivery"
+      icon: <Users2 className="h-8 w-8 text-purple-600" />,
+      title: "Dual-Audience Platform",
+      description: "Serve both M&A professionals seeking deal intelligence and business owners preparing for exit with tailored insights."
     }
   ];
 
-  const ownerFeatures = [
+  const audiences = [
     {
-      title: "Understand if and when you're ready to sell",
-      description: "Clear GO/FIX/WAIT recommendations based on data"
+      title: "M&A Professionals",
+      description: "Streamline due diligence, identify high-potential targets, and provide superior client advisory services.",
+      benefits: [
+        "Faster deal qualification",
+        "Enhanced client relationships",
+        "Improved transaction success rates",
+        "Competitive differentiation"
+      ]
     },
     {
-      title: "Get a personalized roadmap to improve valuation",
-      description: "Actionable steps with ROI forecasts"
-    },
-    {
-      title: "Know your deal risks before a buyer does",
-      description: "Identify and address vulnerabilities early"
-    },
-    {
-      title: "Build clarity, confidence, and control into the process",
-      description: "Take charge of your exit timeline and outcomes"
+      title: "Business Owners",
+      description: "Understand your exit readiness, identify improvement areas, and maximize transaction value.",
+      benefits: [
+        "Clear exit readiness assessment",
+        "Actionable improvement roadmap",
+        "Valuation optimization strategies",
+        "Transaction timeline planning"
+      ]
     }
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-5xl font-bold text-gray-900 mb-6">
-            A Readiness Engine That Works for{" "}
-            <span className="text-primary">Both Sides</span>
+    <section id="solution" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            The ExitClarity Solution
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            ExitClarity creates alignment between M&A professionals and business owners through structured intelligence and actionable insights.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            A comprehensive platform that transforms exit readiness assessment from 
+            guesswork into data-driven strategic advantage.
           </p>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-8">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-white p-8 rounded-2xl border border-gray-200"
-          >
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">For M&A Professionals</h3>
-              <p className="text-gray-600">Systematize early-stage engagement and build stronger pipelines</p>
-            </div>
-            <ul className="space-y-4">
-              {maFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                    <div className="w-1 h-1 bg-white rounded-full"></div>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">{feature.title}</div>
-                    <div className="text-gray-600 text-sm">{feature.description}</div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-white p-8 rounded-2xl border border-gray-200"
-          >
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">For Business Owners</h3>
-              <p className="text-gray-600">Understand where you stand and how to move forward</p>
-            </div>
-            <ul className="space-y-4">
-              {ownerFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                    <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">{feature.title}</div>
-                    <div className="text-gray-600 text-sm">{feature.description}</div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
         </div>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="bg-white p-8 rounded-2xl shadow-lg inline-block">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to bridge the readiness gap?</h3>
-            <p className="text-gray-600 mb-6">See how ExitClarity creates better outcomes for both M&A professionals and business owners.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={() => scrollToSection("final-cta")}
-                className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200"
-              >
-                Schedule Demo
-              </Button>
-              <Button 
-                variant="outline"
-                onClick={() => scrollToSection("sample-report")}
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200"
-              >
-                View Sample Report
-              </Button>
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {solutions.map((solution, index) => (
+            <div key={index} className="text-center">
+              <div className="flex justify-center mb-4">
+                {solution.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {solution.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {solution.description}
+              </p>
             </div>
+          ))}
+        </div>
+
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8 mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              11 Critical Readiness Factors
+            </h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Our comprehensive assessment framework evaluates every aspect of exit readiness
+            </p>
           </div>
-        </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "Financial Performance",
+              "Market Position",
+              "Operational Efficiency",
+              "Management Team",
+              "Growth Potential",
+              "Risk Management",
+              "Customer Concentration",
+              "Competitive Advantage",
+              "Scalability",
+              "Documentation Quality",
+              "Legal Compliance"
+            ].map((factor, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                <span className="text-gray-700">{factor}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          {audiences.map((audience, index) => (
+            <div key={index} className="bg-gray-50 rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                {audience.title}
+              </h3>
+              <p className="text-gray-600 mb-6">
+                {audience.description}
+              </p>
+              <ul className="space-y-3">
+                {audience.benefits.map((benefit, benefitIndex) => (
+                  <li key={benefitIndex} className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-gray-700">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

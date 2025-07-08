@@ -1,26 +1,22 @@
-import Header from "@/components/header";
-import HeroSection from "@/components/hero-section";
+import { HeroSection } from "@/components/hero-section";
 import ProblemSection from "@/components/problem-section";
 import SolutionSection from "@/components/solution-section";
-import HowItWorks from "@/components/how-it-works";
-import PlatformFeatures from "@/components/platform-features";
+import ProcessSection from "@/components/process-section";
+import FeaturesSection from "@/components/features-section";
 import OwnerBenefits from "@/components/owner-benefits";
-import TestimonialSection from "@/components/testimonial-section";
 import BenefitsSection from "@/components/benefits-section";
 import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/footer";
 
 export default function Landing() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
+    <div className="min-h-screen bg-background">
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
-      <HowItWorks />
-      <PlatformFeatures />
+      <ProcessSection />
+      <FeaturesSection />
       <OwnerBenefits />
-      <TestimonialSection />
       <BenefitsSection />
       <FinalCTA />
       <Footer />
