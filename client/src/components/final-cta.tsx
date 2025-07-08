@@ -89,7 +89,7 @@ export default function FinalCTA() {
   ];
 
   return (
-    <section id="final-cta" className="py-20 bg-white">
+    <section id="final-cta" className="py-24 bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -97,10 +97,10 @@ export default function FinalCTA() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl font-bold mb-6 text-gray-900">
-            Start Turning Exit Conversations Into <span className="text-primary">Strategic Wins</span>
+          <h2 className="text-5xl sm:text-6xl font-bold mb-8 text-gray-900">
+            Start Turning Exit Conversations Into <span className="text-blue-600">Strategic Wins</span>
           </h2>
-          <p className="text-xl mb-12 text-gray-600 max-w-4xl mx-auto">
+          <p className="text-xl mb-16 text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Whether you're advising or preparing to sell, ExitClarity brings structure, insight, and confidence to every step of the journey.
           </p>
           
@@ -110,7 +110,7 @@ export default function FinalCTA() {
                 <Button 
                   onClick={() => openDialog("demo")}
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white font-bold px-10 py-4 rounded-lg transition-all duration-200 hover:shadow-lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 py-4 rounded-lg transition-all duration-200 hover:shadow-xl"
                 >
                   <Calendar className="w-5 h-5 mr-2" />
                   Schedule a Demo

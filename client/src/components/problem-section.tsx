@@ -25,13 +25,13 @@ export default function ProblemSection() {
   ];
 
   return (
-    <section id="problem" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+    <section id="problem" className="py-24 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             The Exit Readiness Challenge
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             M&A professionals and business owners face critical gaps in assessing exit readiness, 
             leading to missed opportunities and suboptimal outcomes.
           </p>
@@ -39,13 +39,13 @@ export default function ProblemSection() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {problems.map((problem, index) => (
-            <div key={index} className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+            <div key={index} className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
                   {problem.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {problem.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">

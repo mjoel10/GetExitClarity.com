@@ -9,24 +9,24 @@ export default function TestimonialSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-white rounded-2xl p-12 shadow-lg"
+          className="bg-white rounded-2xl p-16 shadow-2xl border border-gray-200"
         >
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="text-3xl font-bold text-gray-900 mb-6">"Finally, a clear path forward"</div>
-              <p className="text-lg text-gray-600 mb-8 italic">
+              <div className="text-4xl font-bold text-gray-900 mb-8 leading-tight">"Finally, a clear path forward"</div>
+              <p className="text-xl text-gray-600 mb-8 italic leading-relaxed">
                 "After years of wondering if we were ready to sell, ExitClarity gave us the clarity we needed. We identified three critical areas to improve and increased our valuation by 40% over 18 months."
               </p>
               <div className="mb-6">
-                <div className="font-bold text-gray-900 text-lg">Sarah Chen</div>
-                <div className="text-gray-600">CEO, TechStart Solutions</div>
+                <div className="font-bold text-gray-900 text-xl">Sarah Chen</div>
+                <div className="text-gray-600 text-lg">CEO, TechStart Solutions</div>
                 <div className="text-gray-500 text-sm">$24M Exit • 2023</div>
               </div>
             </div>
@@ -38,10 +38,10 @@ export default function TestimonialSection() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center"
+                  className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl"
                 >
-                  <div className="text-4xl font-bold text-primary mb-2">{result.value}</div>
-                  <div className="text-gray-600">{result.label}</div>
+                  <div className="text-5xl font-bold text-blue-600 mb-2">{result.value}</div>
+                  <div className="text-gray-600 text-sm uppercase tracking-wider">{result.label}</div>
                 </motion.div>
               ))}
             </div>

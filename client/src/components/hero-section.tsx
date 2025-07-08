@@ -65,7 +65,7 @@ export function HeroSection() {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 overflow-hidden">
       {/* Header */}
       <div className="absolute top-0 left-0 w-full z-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,9 +111,10 @@ export function HeroSection() {
                   30+ Years M&A Experience
                 </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 Turn Exit Readiness Into{" "}
-                <span className="text-blue-600">Competitive Advantage</span>
+                <span className="text-blue-600">High-Confidence</span>{" "}
+                <span className="text-blue-600">Deals</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 ExitClarity provides M&A professionals and business owners with data-driven insights 
