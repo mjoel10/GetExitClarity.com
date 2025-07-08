@@ -65,7 +65,7 @@ export function HeroSection() {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 overflow-hidden">
+    <div className="loveable-gradient min-h-screen">
       {/* Header */}
       <div className="absolute top-0 left-0 w-full z-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,54 +107,51 @@ export function HeroSection() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="mb-6">
-                <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+                <span className="loveable-badge">
                   30+ Years M&A Experience
                 </span>
               </div>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="loveable-heading text-5xl sm:text-6xl lg:text-7xl text-gray-900 mb-6">
                 Turn Exit Readiness Into{" "}
-                <span className="text-blue-600">High-Confidence</span>{" "}
-                <span className="text-blue-600">Deals</span>
+                <span className="loveable-heading-accent">High-Confidence</span>{" "}
+                <span className="loveable-heading-accent">Deals</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                ExitClarity provides M&A professionals and business owners with data-driven insights 
-                to assess exit readiness across 11 critical factors, enabling strategic decisions 
-                that maximize transaction value.
+              <p className="loveable-subheading text-xl mb-8">
+                ExitClarity systematizes and scales early owner engagement by turning 
+                the overwhelming thought of selling into a clear, actionable process.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button 
-                  variant="hero" 
-                  size="xl"
+                <button 
+                  className="loveable-btn-primary"
                   onClick={() => openModal("demo")}
                 >
                   Schedule Demo
-                </Button>
-                <Button 
-                  variant="professional" 
-                  size="xl"
+                </button>
+                <button 
+                  className="loveable-btn-secondary"
                   onClick={() => openModal("sample_report")}
                 >
                   View Sample Report
-                </Button>
+                </button>
               </div>
-              <div className="flex items-center space-x-8 text-sm text-gray-600">
-                <div className="flex items-center">
-                  <div className="h-2 w-2 bg-green-500 rounded-full mr-2"></div>
-                  500+ Deals Analyzed
+              <div className="flex items-center space-x-8">
+                <div className="loveable-stat">
+                  <div className="loveable-stat-number text-2xl">30+</div>
+                  <div className="loveable-stat-label text-xs">Years M&A Experience</div>
                 </div>
-                <div className="flex items-center">
-                  <div className="h-2 w-2 bg-green-500 rounded-full mr-2"></div>
-                  11 Readiness Factors
+                <div className="loveable-stat">
+                  <div className="loveable-stat-number text-2xl">11</div>
+                  <div className="loveable-stat-label text-xs">Readiness Factors</div>
                 </div>
-                <div className="flex items-center">
-                  <div className="h-2 w-2 bg-green-500 rounded-full mr-2"></div>
-                  Expert Insights
+                <div className="loveable-stat">
+                  <div className="loveable-stat-number text-2xl">500+</div>
+                  <div className="loveable-stat-label text-xs">Deals Analyzed</div>
                 </div>
               </div>
             </div>
             <div className="lg:pl-8">
               <div className="relative">
-                <div className="bg-white rounded-lg shadow-xl p-8 border border-gray-200">
+                <div className="loveable-card p-8">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">
                     Exit Readiness Assessment
                   </h3>

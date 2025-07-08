@@ -25,39 +25,45 @@ export default function ProblemSection() {
   ];
 
   return (
-    <section id="problem" className="py-24 bg-slate-50">
+    <section id="problem" className="py-24 bg-gradient-to-br from-red-50 to-red-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
+            <AlertTriangle className="w-8 h-8 text-red-600" />
+          </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            The Exit Readiness Challenge
+            Most Exit Conversations Stall Because <span className="text-red-600">Readiness Is Unclear</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            M&A professionals and business owners face critical gaps in assessing exit readiness, 
-            leading to missed opportunities and suboptimal outcomes.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            M&A professionals waste time on prospects who aren't ready. Business owners wait too long, 
+            unprepared and overconfident. ExitClarity bridges that gap with structured, scalable intelligence that 
+            moves both sides forward.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Why So Many Deals Fall Apart Before They Begin
+          </h3>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {problems.map((problem, index) => (
-            <div key={index} className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  {problem.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    {problem.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {problem.description}
-                  </p>
-                </div>
+            <div key={index} className="bg-white rounded-lg shadow-sm border border-red-200 p-8 text-center hover:shadow-md transition-all duration-200 hover:scale-105">
+              <div className="flex justify-center mb-6">
+                {problem.icon}
               </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                {problem.title}
+              </h4>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {problem.description}
+              </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 bg-red-50 rounded-lg p-8 border border-red-200">
+        <div className="mt-16 bg-white rounded-lg shadow-sm border border-red-200 p-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-red-800 mb-4">
               The Cost of Inadequate Assessment

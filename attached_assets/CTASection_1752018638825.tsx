@@ -1,0 +1,135 @@
+import { Button } from "@/components/ui/button";
+import { Calendar, FileText, Play, ArrowRight } from "lucide-react";
+
+export function CTASection() {
+  return (
+    <section className="py-24 bg-gradient-to-br from-primary/5 to-accent/5">
+      <div className="container mx-auto px-6">
+        {/* Main CTA */}
+        <div className="text-center max-w-4xl mx-auto mb-16">
+          <h2 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
+            Start Turning Exit Conversations Into{" "}
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Strategic Wins
+            </span>
+          </h2>
+          <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            Whether you're advising or preparing to sell, ExitClarity brings structure, insight, and confidence to every step of the journey.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="hero" size="xl" className="group">
+              <Calendar className="mr-2 h-5 w-5" />
+              Schedule a Demo
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+            
+            <Button variant="professional" size="xl" className="group">
+              <FileText className="mr-2 h-5 w-5" />
+              See Sample Report
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+            
+            <Button variant="outline" size="xl" className="group">
+              <Play className="mr-2 h-5 w-5" />
+              Start Assessment
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+        </div>
+
+        {/* Two-Column Value Props */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          <div className="bg-white p-8 rounded-2xl shadow-soft border">
+            <h3 className="text-2xl font-bold text-foreground mb-4">For M&A Professionals</h3>
+            <p className="text-muted-foreground mb-6">
+              Transform your practice with systematic prospect qualification, automated nurturing, and higher-quality deal flow.
+            </p>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-center space-x-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                <span>Qualify prospects 3x faster with objective scoring</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                <span>Generate white-labeled reports to build trust early</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                <span>Track pipeline progress with CRM integration</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                <span>Close deals faster with better-prepared clients</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-8 rounded-2xl border">
+            <h3 className="text-2xl font-bold text-foreground mb-4">For Business Owners</h3>
+            <p className="text-muted-foreground mb-6">
+              Gain clarity on your exit readiness, understand your value, and build a strategic roadmap for maximum return.
+            </p>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-center space-x-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                <span>Get clear GO/FIX/WAIT recommendation with rationale</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                <span>Understand your valuation range and value drivers</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                <span>Identify and mitigate deal-killing risks early</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                <span>Build confidence and control in your exit process</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Contact Options */}
+        <div className="bg-white rounded-2xl p-8 shadow-soft border text-center">
+          <h3 className="text-2xl font-bold text-foreground mb-4">
+            Ready to Get Started?
+          </h3>
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            Choose the option that best fits your needs. Our team is ready to help you transform your exit conversations into strategic wins.
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-6 border border-border rounded-xl hover:border-primary/50 transition-colors">
+              <Calendar className="h-8 w-8 text-primary mx-auto mb-3" />
+              <h4 className="font-semibold text-foreground mb-2">Schedule Demo</h4>
+              <p className="text-sm text-muted-foreground mb-4">
+                See the platform in action with a personalized demonstration
+              </p>
+              <Button variant="outline" size="sm" className="w-full">Book Demo</Button>
+            </div>
+            
+            <div className="p-6 border border-border rounded-xl hover:border-primary/50 transition-colors">
+              <FileText className="h-8 w-8 text-primary mx-auto mb-3" />
+              <h4 className="font-semibold text-foreground mb-2">Sample Report</h4>
+              <p className="text-sm text-muted-foreground mb-4">
+                Review a real ExitClarity report to see the depth of insights
+              </p>
+              <Button variant="outline" size="sm" className="w-full">View Report</Button>
+            </div>
+            
+            <div className="p-6 border border-primary rounded-xl bg-primary/5">
+              <Play className="h-8 w-8 text-primary mx-auto mb-3" />
+              <h4 className="font-semibold text-foreground mb-2">Start Assessment</h4>
+              <p className="text-sm text-muted-foreground mb-4">
+                Begin your exit readiness assessment immediately
+              </p>
+              <Button variant="default" size="sm" className="w-full">Get Started</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
