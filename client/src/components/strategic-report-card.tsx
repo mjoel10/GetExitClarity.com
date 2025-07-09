@@ -13,7 +13,6 @@ export default function StrategicReportCard() {
         <div className="header-top">
           <div className="logo-section">
             <img src={exitClarityLogo} alt="ExitClarity" className="logo-image" />
-            <div className="logo-text">ExitClarity</div>
           </div>
           <div className="report-type">STRATEGIC ANALYSIS</div>
         </div>
