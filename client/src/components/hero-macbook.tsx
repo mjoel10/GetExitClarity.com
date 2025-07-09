@@ -2,14 +2,13 @@ import { motion } from "framer-motion";
 
 export default function HeroMacBook() {
   return (
-    <div className="relative w-full max-w-4xl mx-auto macbook-container">
+    <div className="relative w-full max-w-4xl mx-auto" style={{ perspective: '1200px' }}>
       {/* Realistic MacBook */}
       <motion.div
         className="macbook"
-        initial={{ opacity: 0, y: 20, rotateX: 15, rotateY: -10 }}
-        animate={{ opacity: 1, y: 0, rotateX: 15, rotateY: -10 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        style={{ transformStyle: "preserve-3d" }}
+        initial={{ opacity: 0, rotateX: 0, rotateY: 0 }}
+        animate={{ opacity: 1, rotateX: 5, rotateY: -5, rotateZ: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
       >
         <div className="macbook-lid">
           <div className="macbook-screen">

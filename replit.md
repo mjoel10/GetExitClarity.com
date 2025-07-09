@@ -6,15 +6,6 @@ This is a React-based landing page for ExitClarity, a B2B SaaS platform that hel
 
 ## Recent Changes
 
-### January 2025 - MacBook Hero Component Enhancement
-- **MacBook Display**: Created realistic 3D MacBook component displaying live ExitClarity assessment interface
-- **Assessment Interface**: Added complete 11-step assessment process with progress tracking (7 of 11 complete)
-- **Visual Improvements**: Made MacBook taller (520px) and wider (720px) for better content display
-- **Animation Updates**: Replaced spinning entrance with smooth fade-in and slide-up animation
-- **3D Perspective**: Added proper perspective and transform-style for tilted MacBook appearance
-- **Assessment Complete**: Added subtle blinking green dot indicator for completed assessment status
-- **Progress Tracking**: Updated progress bar to show 64% completion (7 out of 11 steps)
-
 ### January 2025 - Dashboard Layout Optimization and Badge Positioning
 - **Dashboard Layout**: Optimized ProgressDashboard to be shorter and wider (720px vs 520px) for better space utilization
 - **Stats Grid**: Changed from 2x2 to 4x1 layout displaying all stats horizontally in one row
