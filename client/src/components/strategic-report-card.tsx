@@ -29,10 +29,10 @@ export default function StrategicReportCard() {
               TechFlow Solutions, under CEO Sarah Mitchell's leadership, has built a compelling value proposition in the industrial automation space. With $8M in annual revenue and $2.4M in Adjusted EBITDA...
             </div>
             <div className="key-metrics">
-              • Revenue Growth: 23% YoY
-              • EBITDA Margin: 30.2%
+              • Enterprise Value: $9.6M-$16.8M
+              • Revenue Multiple: 1.2-2.1x
+              • EBITDA Multiple: 4-7x
               • Customer Retention: 94%
-              • Market Share: 15% (regional leader)
             </div>
           </div>
         </div>
