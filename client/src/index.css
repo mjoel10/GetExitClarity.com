@@ -1166,16 +1166,13 @@ All colors MUST be HSL.
   .logo-section {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    height: 40px;
+    gap: 8px;
   }
 
-  .logo-section .logo-image {
-    height: 24px;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    display: block;
+  .logo-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e40af;
   }
 
   .logo-icon {
@@ -1197,14 +1194,10 @@ All colors MUST be HSL.
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 8px;
     font-size: 12px;
     font-weight: 600;
     color: #374151;
-    height: 40px;
-    min-height: 40px;
-    margin-top: 2px;
   }
 
   .progress-bar {
