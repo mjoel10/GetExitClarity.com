@@ -1067,7 +1067,7 @@ All colors MUST be HSL.
 
   .macbook-lid {
     width: 600px;
-    height: 450px;
+    height: 520px;
     background: linear-gradient(135deg, #f1f3f4 0%, #e8eaed 50%, #dadce0 100%);
     border-radius: 12px;
     position: relative;
@@ -1278,16 +1278,14 @@ All colors MUST be HSL.
   .assessment-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 6px;
     flex: 1;
-    overflow-y: auto;
-    max-height: 280px;
   }
 
   .assessment-item {
     background: white;
     border-radius: 8px;
-    padding: 10px 12px;
+    padding: 8px 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     border: 1px solid #f1f5f9;
     position: relative;
