@@ -1201,7 +1201,6 @@ All colors MUST be HSL.
     background: linear-gradient(90deg, #10b981, #059669);
     width: 64%;
     border-radius: 2px;
-    animation: progressGlow 2s ease-in-out infinite alternate;
   }
 
   @keyframes progressGlow {

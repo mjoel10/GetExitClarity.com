@@ -6,9 +6,10 @@ export default function HeroMacBook() {
       {/* Realistic MacBook */}
       <motion.div
         className="macbook"
-        initial={{ opacity: 0, rotateX: 0, rotateY: 0 }}
-        animate={{ opacity: 1, rotateX: 5, rotateY: -5, rotateZ: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        style={{ transform: "rotateX(5deg) rotateY(-5deg)" }}
       >
         <div className="macbook-lid">
           <div className="macbook-screen">
