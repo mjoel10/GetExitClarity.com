@@ -1,108 +1,115 @@
 import React from 'react';
-import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
 
 export default function StrategicReportCard() {
   return (
-    <div className="report-container">
-      {/* Floating Badges */}
-      <div className="floating-badge badge-go">GO ✓</div>
-      <div className="floating-badge badge-score">76/100 Score</div>
-      <div className="floating-badge badge-ready">Market Ready</div>
+    <div className="new-report-container">
+      {/* Floating Elements */}
+      <div className="floating-element element-1">GO ✓</div>
+      <div className="floating-element element-2">8-14 Months</div>
 
-      {/* Header */}
-      <div className="report-header">
+      {/* Document Header */}
+      <div className="new-report-header">
         <div className="header-top">
-          <img src={exitClarityLogo} alt="ExitClarity" className="logo-image" />
-          <div className="report-id">Report #168</div>
+          <div className="logo-section">
+            <div className="logo-icon">✓</div>
+            <div className="logo-text">ExitClarity</div>
+          </div>
+          <div className="report-type">STRATEGIC ANALYSIS</div>
         </div>
-        <div className="report-title">Strategic Analysis Report</div>
-        <div className="company-info">Apex International • Financial Services • $17M Revenue</div>
+        <h1 className="document-title">Comprehensive Exit Readiness & Valuation Report</h1>
+        <div className="company-info">TechFlow Solutions • Manufacturing Technology • $8M Revenue • January 2025</div>
       </div>
 
-      {/* Content */}
-      <div className="report-content">
-        {/* Executive Summary */}
-        <div className="summary-section">
-          <div className="section-title">
-            <div className="section-icon">📊</div>
-            Executive Summary
+      {/* Document Content */}
+      <div className="new-report-content">
+        <div className="section">
+          <div className="section-header">
+            <div className="section-number">##</div>
+            <div className="section-title">Executive Summary</div>
           </div>
-          
-          <div className="recommendation-card">
-            <div className="recommendation-badge">GO</div>
-            <div className="recommendation-text">Ready for market entry</div>
+          <div className="section-content">
+            <div className="paragraph">
+              Based on our comprehensive assessment yielding an Overall Exit Readiness Score of 82/100, we recommend <strong>GO</strong> for TechFlow Solutions' market exit strategy. This score reflects strong fundamentals balanced against identified optimization opportunities for this established manufacturing technology company.
+            </div>
+            <div className="paragraph">
+              TechFlow Solutions, under CEO Sarah Mitchell's leadership, has built a compelling value proposition in the industrial automation space over 18 years. With $8M in annual revenue and $2.4M in Adjusted EBITDA, the firm demonstrates attractive financial metrics for potential acquirers.
+            </div>
           </div>
         </div>
 
-        {/* Key Metrics */}
+        <div className="highlight-box">
+          <div className="recommendation-header">
+            <div className="recommendation-icon">GO</div>
+            <div className="recommendation-title">Strategic Recommendation: Proceed to Market</div>
+          </div>
+          <div className="recommendation-text">
+            Given the company's manufacturing technology focus, we estimate a valuation range of 3.0-4.5x EBITDA ($7.2M-$10.8M), reflecting strong growth potential and market position. The company's expanding automation solutions align well with current market demand.
+          </div>
+        </div>
+
         <div className="metrics-grid">
-          <div className="metric-card">
-            <div className="metric-value">$18-25M</div>
+          <div className="metric-item">
+            <div className="metric-value">$7.2-10.8M</div>
             <div className="metric-label">Valuation Range</div>
           </div>
-          <div className="metric-card">
-            <div className="metric-value">6-12 Mo</div>
-            <div className="metric-label">Timeline Est.</div>
+          <div className="metric-item">
+            <div className="metric-value">8-14 Mo</div>
+            <div className="metric-label">Timeline Est</div>
           </div>
-          <div className="metric-card">
-            <div className="metric-value">76/100</div>
+          <div className="metric-item">
+            <div className="metric-value">82/100</div>
             <div className="metric-label">Readiness Score</div>
           </div>
-          <div className="metric-card">
-            <div className="metric-value">Low Risk</div>
+          <div className="metric-item">
+            <div className="metric-value">Medium Risk</div>
             <div className="metric-label">Deal Risk</div>
           </div>
         </div>
 
-        {/* Action Items */}
-        <div className="action-section">
-          <div className="section-title">
-            <div className="section-icon">🎯</div>
-            Critical Next Steps
+        <div className="section">
+          <div className="section-header">
+            <div className="section-number">##</div>
+            <div className="section-title">Key Financial Metrics</div>
           </div>
-          
-          <div className="action-item">
-            <div className="action-number">1</div>
-            <div className="action-content">
-              <div className="action-title">Engage M&A Advisor</div>
-              <div className="action-description">Focus on advisor quality given mixed past experiences</div>
-            </div>
-          </div>
-
-          <div className="action-item">
-            <div className="action-number">2</div>
-            <div className="action-content">
-              <div className="action-title">Valuation Gap Strategy</div>
-              <div className="action-description">Develop earnout structure for significant earnout tolerance</div>
-            </div>
-          </div>
-
-          <div className="action-item">
-            <div className="action-number">3</div>
-            <div className="action-content">
-              <div className="action-title">Strategic Positioning</div>
-              <div className="action-description">Enhance competitive positioning before market entry</div>
+          <div className="section-content">
+            <div className="paragraph">
+              <strong>Revenue:</strong> $8,000,000 (growing 15-20% YOY)<br/>
+              <strong>Adjusted EBITDA:</strong> $2,400,000<br/>
+              <strong>EBITDA Margin:</strong> 30.0%<br/>
+              <strong>Customer Concentration:</strong> 15% (manageable diversification)<br/>
+              <strong>Owner Dependence:</strong> 35% (moderate)
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Stats */}
-      <div className="stats-footer">
-        <div className="stats-grid">
-          <div className="stat-item">
-            <div className="stat-number">15-20</div>
-            <div className="stat-label">Report Pages</div>
+        <div className="section">
+          <div className="section-header">
+            <div className="section-number">##</div>
+            <div className="section-title">Primary Value Drivers</div>
           </div>
-          <div className="stat-item">
-            <div className="stat-number">3-5 Days</div>
-            <div className="stat-label">Delivery Time</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">M&A Ready</div>
-            <div className="stat-label">Status</div>
+          <div className="section-content">
+            <div className="paragraph">
+              1. <strong>Market-Leading Technology:</strong> 18-year track record in industrial automation solutions<br/>
+              2. <strong>Strong Growth Trajectory:</strong> 15-20% annual revenue growth with expanding market share<br/>
+              3. <strong>Proprietary IP Portfolio:</strong> 12 patents in manufacturing automation technology<br/>
+              4. <strong>Experienced Management Team:</strong> Including CTO David Park and VP Operations Lisa Chen<br/>
+              5. <strong>Scalable Operations:</strong> Modern facilities and ERP systems supporting growth
+            </div>
           </div>
         </div>
+
+        <div className="next-steps">
+          <div className="next-steps-title">
+            🔔 Critical Next Steps (8-14 Month Timeline)
+          </div>
+          <ul className="step-list">
+            <li><strong>Management Transition Planning (45 days)</strong> - Reduce owner dependence through team development</li>
+            <li><strong>Customer Diversification Strategy (90 days)</strong> - Expand beyond top 3 customers for risk mitigation</li>
+            <li><strong>Strategic Buyer Targeting (120 days)</strong> - Focus on industrial automation and tech consolidators</li>
+          </ul>
+        </div>
+
+        <div className="document-fade"></div>
       </div>
     </div>
   );

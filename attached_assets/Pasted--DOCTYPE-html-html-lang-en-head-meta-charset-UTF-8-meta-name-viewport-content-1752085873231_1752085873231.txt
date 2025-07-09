@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExitClarity Strategic Report - Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f1f5f9;
+            padding: 40px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .report-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            max-width: 700px;
+            width: 100%;
+            position: relative;
+        }
+
+        .report-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8b5cf6, #6366f1);
+        }
+
+        /* Document Header */
+        .report-header {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            padding: 24px 32px;
+            border-bottom: 2px solid #e5e7eb;
+            position: relative;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #8b5cf6, #6366f1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: #6366f1;
+        }
+
+        .report-type {
+            background: #8b5cf6;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .document-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .company-info {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* Document Content */
+        .report-content {
+            padding: 28px;
+            background: white;
+            max-height: 450px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .section-number {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #8b5cf6, #6366f1);
+            color: white;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .section-content {
+            line-height: 1.5;
+            color: #374151;
+            font-size: 13px;
+        }
+
+        .paragraph {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+            border: 1px solid #10b981;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 16px 0;
+            position: relative;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #10b981;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .recommendation-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .recommendation-icon {
+            width: 20px;
+            height: 20px;
+            background: #10b981;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .recommendation-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #065f46;
+        }
+
+        .recommendation-text {
+            color: #047857;
+            font-weight: 500;
+            line-height: 1.4;
+            font-size: 12px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .metric-item {
+            background: #f8fafc;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .metric-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: #6366f1;
+            margin-bottom: 4px;
+        }
+
+        .metric-label {
+            font-size: 10px;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .next-steps {
+            background: #fef7ed;
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 14px;
+            margin-top: 16px;
+        }
+
+        .next-steps-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .step-list {
+            list-style: none;
+            color: #b45309;
+            font-size: 12px;
+        }
+
+        .step-list li {
+            margin-bottom: 4px;
+            padding-left: 14px;
+            position: relative;
+            line-height: 1.3;
+        }
+
+        .step-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+            font-weight: 600;
+        }
+
+        .document-fade {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(transparent, white);
+            pointer-events: none;
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            background: white;
+            border-radius: 10px;
+            padding: 8px 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            font-size: 12px;
+            font-weight: 600;
+            animation: float 5s ease-in-out infinite;
+            z-index: 10;
+        }
+
+        .floating-element.element-1 {
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            animation-delay: 0s;
+        }
+
+        .floating-element.element-2 {
+            bottom: 15px;
+            left: 15px;
+            color: #6366f1;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            33% { transform: translateY(-8px) translateX(3px); }
+            66% { transform: translateY(4px) translateX(-2px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <!-- Floating Elements -->
+        <div class="floating-element element-1">GO ✓</div>
+        <div class="floating-element element-2">8-14 Months</div>
+
+        <!-- Document Header -->
+        <div class="report-header">
+            <div class="header-top">
+                <div class="logo-section">
+                    <div class="logo-icon">✓</div>
+                    <div class="logo-text">ExitClarity</div>
+                </div>
+                <div class="report-type">STRATEGIC ANALYSIS</div>
+            </div>
+            <h1 class="document-title">Comprehensive Exit Readiness & Valuation Report</h1>
+            <div class="company-info">TechFlow Solutions • Manufacturing Technology • $8M Revenue • January 2025</div>
+        </div>
+
+        <!-- Document Content -->
+        <div class="report-content">
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">##</div>
+                    <div class="section-title">Executive Summary</div>
+                </div>
+                <div class="section-content">
+                    <div class="paragraph">
+                        Based on our comprehensive assessment yielding an Overall Exit Readiness Score of 82/100, we recommend <strong>GO</strong> for TechFlow Solutions' market exit strategy. This score reflects strong fundamentals balanced against identified optimization opportunities for this established manufacturing technology company.
+                    </div>
+                    <div class="paragraph">
+                        TechFlow Solutions, under CEO Sarah Mitchell's leadership, has built a compelling value proposition in the industrial automation space over 18 years. With $8M in annual revenue and $2.4M in Adjusted EBITDA, the firm demonstrates attractive financial metrics for potential acquirers.
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <div class="recommendation-header">
+                    <div class="recommendation-icon">GO</div>
+                    <div class="recommendation-title">Strategic Recommendation: Proceed to Market</div>
+                </div>
+                <div class="recommendation-text">
+                    Given the company's manufacturing technology focus, we estimate a valuation range of 3.0-4.5x EBITDA ($7.2M-$10.8M), reflecting strong growth potential and market position. The company's expanding automation solutions align well with current market demand.
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-value">$7.2-10.8M</div>
+                    <div class="metric-label">Valuation Range</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">8-14 Mo</div>
+                    <div class="metric-label">Timeline Est</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">82/100</div>
+                    <div class="metric-label">Readiness Score</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">Medium Risk</div>
+                    <div class="metric-label">Deal Risk</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">##</div>
+                    <div class="section-title">Key Financial Metrics</div>
+                </div>
+                <div class="section-content">
+                    <div class="paragraph">
+                        <strong>Revenue:</strong> $8,000,000 (growing 15-20% YOY)<br>
+                        <strong>Adjusted EBITDA:</strong> $2,400,000<br>
+                        <strong>EBITDA Margin:</strong> 30.0%<br>
+                        <strong>Customer Concentration:</strong> 15% (manageable diversification)<br>
+                        <strong>Owner Dependence:</strong> 35% (moderate)
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">##</div>
+                    <div class="section-title">Primary Value Drivers</div>
+                </div>
+                <div class="section-content">
+                    <div class="paragraph">
+                        1. <strong>Market-Leading Technology:</strong> 18-year track record in industrial automation solutions<br>
+                        2. <strong>Strong Growth Trajectory:</strong> 15-20% annual revenue growth with expanding market share<br>
+                        3. <strong>Proprietary IP Portfolio:</strong> 12 patents in manufacturing automation technology<br>
+                        4. <strong>Experienced Management Team:</strong> Including CTO David Park and VP Operations Lisa Chen<br>
+                        5. <strong>Scalable Operations:</strong> Modern facilities and ERP systems supporting growth
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <div class="next-steps-title">
+                    🔔 Critical Next Steps (8-14 Month Timeline)
+                </div>
+                <ul class="step-list">
+                    <li><strong>Management Transition Planning (45 days)</strong> - Reduce owner dependence through team development</li>
+                    <li><strong>Customer Diversification Strategy (90 days)</strong> - Expand beyond top 3 customers for risk mitigation</li>
+                    <li><strong>Strategic Buyer Targeting (120 days)</strong> - Focus on industrial automation and tech consolidators</li>
+                </ul>
+            </div>
+
+            <div class="document-fade"></div>
+        </div>
+    </div>
+</body>
+</html>
