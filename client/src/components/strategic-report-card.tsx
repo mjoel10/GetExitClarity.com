@@ -39,7 +39,7 @@ export default function StrategicReportCard() {
         {/* Key Metrics */}
         <div className="metrics-grid">
           <div className="metric-card">
-            <div className="metric-value">$4-7M</div>
+            <div className="metric-value">$18-25M</div>
             <div className="metric-label">Valuation Range</div>
           </div>
           <div className="metric-card">
