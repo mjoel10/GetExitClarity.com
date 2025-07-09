@@ -774,15 +774,15 @@ All colors MUST be HSL.
   }
 
   .dashboard-container .badge-clients {
-    bottom: 40px;
-    left: 10px;
+    bottom: 80px;
+    left: 20px;
     color: #3b82f6;
     animation-delay: 3s;
   }
 
   .dashboard-container .badge-alerts {
-    top: 50%;
-    right: 10px;
+    top: 200px;
+    right: 20px;
     color: #10b981;
     animation-delay: 1.5s;
   }
