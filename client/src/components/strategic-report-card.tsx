@@ -23,7 +23,7 @@ export default function StrategicReportCard() {
           </div>
           <div className="section-content">
             <div className="paragraph">
-              Based on our comprehensive assessment yielding an Overall Exit Readiness Score of 82/100, we recommend <strong>GO</strong> for TechFlow Solutions' market exit strategy. This score reflects strong fundamentals balanced against identified optimization opportunities for this established manufacturing technology company.
+              Based on our comprehensive assessment yielding an Overall Exit Readiness Score of 82/100, we recommend <strong style={{ color: '#10b981' }}>GO</strong> for TechFlow Solutions' market exit strategy. This score reflects strong fundamentals balanced against identified optimization opportunities for this established manufacturing technology company.
             </div>
             <div className="paragraph">
               TechFlow Solutions, under CEO Sarah Mitchell's leadership, has built a compelling value proposition in the industrial automation space over 18 years...
