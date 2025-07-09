@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { CheckCircle, BarChart, TrendingUp } from "lucide-react";
 import assessmentProgressImage from "@assets/ChatGPT Image Jul 9, 2025, 09_40_33 AM_1752079279510.png";
 import AssessmentCard from "./assessment-card";
+import StrategicReportCard from "./strategic-report-card";
 
 export default function HowItWorks() {
   const steps = [
@@ -99,24 +100,17 @@ export default function HowItWorks() {
               <div className={`relative ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 {index === 0 ? (
                   <AssessmentCard />
+                ) : index === 1 ? (
+                  <StrategicReportCard />
                 ) : (
-                  <div className={`${index === 1 ? 'bg-gray-300' : 'bg-sky-500'} p-8 rounded-2xl shadow-lg`}>
+                  <div className="bg-sky-500 p-8 rounded-2xl shadow-lg">
                     <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6 mx-auto">
                       <step.icon className="w-8 h-8 text-white" />
                     </div>
                     <div className="text-center">
-                      <div className="text-white/90 text-lg mb-2">
-                        {index === 1 && "Strategic Report"}
-                        {index === 2 && "Readiness Score"}
-                      </div>
-                      <div className="text-4xl font-bold text-white">
-                        {index === 1 && "GO"}
-                        {index === 2 && "92%"}
-                      </div>
-                      <div className="text-white/80 text-sm">
-                        {index === 1 && "Ready for market entry"}
-                        {index === 2 && "Ready for market entry"}
-                      </div>
+                      <div className="text-white/90 text-lg mb-2">Readiness Score</div>
+                      <div className="text-4xl font-bold text-white">92%</div>
+                      <div className="text-white/80 text-sm">Ready for market entry</div>
                     </div>
                   </div>
                 )}
