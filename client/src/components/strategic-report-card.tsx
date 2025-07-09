@@ -4,13 +4,11 @@ export default function StrategicReportCard() {
   return (
     <div className="new-report-container">
       {/* Floating Elements */}
-      <div className="floating-element element-1">GO ✓</div>
       <div className="floating-element element-2">8-14 Months</div>
 
       {/* Document Header */}
       <div className="new-report-header">
         <div className="header-top">
-          <div className="report-type">STRATEGIC ANALYSIS</div>
         </div>
         <h1 className="document-title">Comprehensive Exit Readiness & Valuation Report</h1>
         <div className="company-info">TechFlow Solutions • Manufacturing Technology • $8M Revenue • January 2025</div>
