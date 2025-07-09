@@ -6,19 +6,6 @@ export default function MAFirms() {
     <div className="min-h-screen bg-background">
       <Header />
       <div className="pt-20">
-        <div className="py-24">
-          <div className="container mx-auto px-6">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                For M&A Firms
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Enhance your deal sourcing and evaluation processes with advanced analytics and comprehensive business intelligence tools.
-              </p>
-            </div>
-          </div>
-        </div>
-        
         <FeaturesSection />
         
         <div className="py-24">
