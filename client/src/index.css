@@ -1209,6 +1209,45 @@ All colors MUST be HSL.
     100% { box-shadow: 0 0 8px rgba(16, 185, 129, 0.6); }
   }
 
+  /* Assessment Complete Indicator */
+  .assessment-complete-indicator {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 8px 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+  }
+
+  .indicator-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: #059669;
+    margin-bottom: 2px;
+  }
+
+  .indicator-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: subtleBlink 3s ease-in-out infinite;
+  }
+
+  .indicator-subtitle {
+    font-size: 10px;
+    color: #6b7280;
+    font-weight: 500;
+  }
+
+  @keyframes subtleBlink {
+    0%, 70%, 100% { opacity: 1; }
+    35% { opacity: 0.4; }
+  }
+
   .interface-content {
     flex: 1;
     padding: 20px 24px;

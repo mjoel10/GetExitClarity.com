@@ -3,40 +3,11 @@ import { motion } from "framer-motion";
 export default function HeroMacBook() {
   return (
     <div className="relative w-full max-w-4xl mx-auto" style={{ perspective: '1200px' }}>
-      {/* Floating Badges */}
-      <motion.div
-        className="absolute top-[10%] right-[-60px] z-10"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1, duration: 0.8 }}
-      >
-        <div className="floating-badge completion-badge">
-          <div className="badge-content">
-            <div className="badge-icon">✓</div>
-            <span>Assessment Complete</span>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-[20%] left-[-80px] z-10"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1.5, duration: 0.8 }}
-      >
-        <div className="floating-badge readiness-badge">
-          <div className="badge-content">
-            <div className="badge-icon">76</div>
-            <span>Ready for Strategic Review</span>
-          </div>
-        </div>
-      </motion.div>
-
       {/* Realistic MacBook */}
       <motion.div
         className="macbook"
         initial={{ opacity: 0, rotateX: 0, rotateY: 0 }}
-        animate={{ opacity: 1, rotateX: 20, rotateY: -15, rotateZ: 2 }}
+        animate={{ opacity: 1, rotateX: 5, rotateY: -5, rotateZ: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <div className="macbook-lid">
@@ -151,6 +122,22 @@ export default function HeroMacBook() {
           </div>
         </div>
         <div className="macbook-base"></div>
+      </motion.div>
+
+      {/* Subtle Assessment Complete Indicator */}
+      <motion.div
+        className="absolute bottom-[-20px] right-[50px] z-10"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.5, duration: 0.8 }}
+      >
+        <div className="assessment-complete-indicator">
+          <div className="indicator-content">
+            <div className="indicator-dot"></div>
+            <span>Assessment Complete</span>
+          </div>
+          <div className="indicator-subtitle">Ready for Strategic Review</div>
+        </div>
       </motion.div>
     </div>
   );
