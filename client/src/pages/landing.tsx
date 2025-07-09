@@ -1,3 +1,4 @@
+import Header from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
 import { ProblemSection } from "@/components/problem-section";
 import { SolutionSection } from "@/components/solution-section";
@@ -11,15 +12,18 @@ import { CTASection } from "@/components/cta-section";
 export default function Landing() {
   return (
     <div className="min-h-screen bg-background">
-      <HeroSection />
-      <ProblemSection />
-      <SolutionSection />
-      <HowItWorks />
-      <FeaturesSection />
-      <OwnerBenefitsSection />
-      <TestimonialSection />
-      <OutcomesSection />
-      <CTASection />
+      <Header />
+      <div className="pt-20">
+        <HeroSection />
+        <ProblemSection />
+        <SolutionSection />
+        <HowItWorks />
+        <FeaturesSection />
+        <OwnerBenefitsSection />
+        <TestimonialSection />
+        <OutcomesSection />
+        <CTASection />
+      </div>
     </div>
   );
 }

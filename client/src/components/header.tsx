@@ -1,10 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { Link } from "wouter";
+import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isPlatformDropdownOpen, setIsPlatformDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +16,17 @@ export default function Header() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsPlatformDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const scrollToSection = (id: string) => {
@@ -24,49 +39,80 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-white/90 backdrop-blur-sm"
+      isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-white/90 backdrop-blur-sm shadow-sm"
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
-        <nav className="flex items-center justify-between">
-          <div className="flex items-center">
-            <button 
-              onClick={() => scrollToSection("hero")}
-              className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
-            >
-              ExitClarity
-            </button>
-          </div>
+        <nav className="flex items-center justify-between h-8">
+          {/* Logo Section */}
+          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+            <img src={exitClarityLogo} alt="ExitClarity" className="h-8 w-auto" />
+            <span className="text-xl font-bold text-primary">ExitClarity</span>
+          </Link>
           
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection("how-it-works")}
-              className="text-gray-600 hover:text-primary transition-colors font-medium"
-            >
-              How It Works
-            </button>
-            <button 
-              onClick={() => scrollToSection("features")}
-              className="text-gray-600 hover:text-primary transition-colors font-medium"
-            >
-              Features
-            </button>
-            <button 
-              onClick={() => scrollToSection("benefits")}
-              className="text-gray-600 hover:text-primary transition-colors font-medium"
-            >
-              Benefits
-            </button>
+            <Link href="/" className="text-gray-600 hover:text-primary transition-colors font-medium">
+              Home
+            </Link>
+            
+            {/* Platform Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setIsPlatformDropdownOpen(!isPlatformDropdownOpen)}
+                onMouseEnter={() => setIsPlatformDropdownOpen(true)}
+                className="flex items-center space-x-1 text-gray-600 hover:text-primary transition-colors font-medium"
+              >
+                <span>Platform</span>
+                <ChevronDown size={16} className={`transition-transform duration-200 ${
+                  isPlatformDropdownOpen ? 'rotate-180' : ''
+                }`} />
+              </button>
+              
+              {isPlatformDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 nav-dropdown nav-dropdown-menu"
+                  onMouseLeave={() => setIsPlatformDropdownOpen(false)}
+                >
+                  <Link 
+                    href="/business-owners" 
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                    onClick={() => setIsPlatformDropdownOpen(false)}
+                  >
+                    For Business Owners
+                  </Link>
+                  <Link 
+                    href="/ma-firms" 
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                    onClick={() => setIsPlatformDropdownOpen(false)}
+                  >
+                    For M&A Firms
+                  </Link>
+                </div>
+              )}
+            </div>
+            
+            <Link href="/about" className="text-gray-600 hover:text-primary transition-colors font-medium">
+              About
+            </Link>
+            <Link href="/resources" className="text-gray-600 hover:text-primary transition-colors font-medium">
+              Resources
+            </Link>
+            <Link href="/contact" className="text-gray-600 hover:text-primary transition-colors font-medium">
+              Contact
+            </Link>
           </div>
           
-          <div className="hidden md:flex items-center space-x-4">
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center">
             <Button 
-              onClick={() => scrollToSection("final-cta")}
-              className="bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg"
+              onClick={() => window.open('https://calendly.com/exitclarity', '_blank')}
+              className="bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
             >
-              Schedule Demo
+              Get Started
             </Button>
           </div>
 
+          {/* Mobile Menu Button */}
           <button 
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -75,33 +121,67 @@ export default function Header() {
           </button>
         </nav>
 
-        {/* Mobile menu */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <button 
-                onClick={() => scrollToSection("how-it-works")}
+              <Link 
+                href="/" 
                 className="text-gray-600 hover:text-primary transition-colors font-medium text-left"
+                onClick={() => setIsMenuOpen(false)}
               >
-                How It Works
-              </button>
-              <button 
-                onClick={() => scrollToSection("features")}
+                Home
+              </Link>
+              
+              {/* Mobile Platform Submenu */}
+              <div className="pl-4 space-y-2">
+                <div className="text-gray-800 font-medium">Platform</div>
+                <Link 
+                  href="/business-owners" 
+                  className="block text-gray-600 hover:text-primary transition-colors pl-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  For Business Owners
+                </Link>
+                <Link 
+                  href="/ma-firms" 
+                  className="block text-gray-600 hover:text-primary transition-colors pl-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  For M&A Firms
+                </Link>
+              </div>
+              
+              <Link 
+                href="/about" 
                 className="text-gray-600 hover:text-primary transition-colors font-medium text-left"
+                onClick={() => setIsMenuOpen(false)}
               >
-                Features
-              </button>
-              <button 
-                onClick={() => scrollToSection("benefits")}
+                About
+              </Link>
+              <Link 
+                href="/resources" 
                 className="text-gray-600 hover:text-primary transition-colors font-medium text-left"
+                onClick={() => setIsMenuOpen(false)}
               >
-                Benefits
-              </button>
+                Resources
+              </Link>
+              <Link 
+                href="/contact" 
+                className="text-gray-600 hover:text-primary transition-colors font-medium text-left"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              
               <Button 
-                onClick={() => scrollToSection("final-cta")}
+                onClick={() => {
+                  window.open('https://calendly.com/exitclarity', '_blank');
+                  setIsMenuOpen(false);
+                }}
                 className="bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg mt-4"
               >
-                Schedule Demo
+                Get Started
               </Button>
             </div>
           </div>

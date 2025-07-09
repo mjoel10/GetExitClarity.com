@@ -1248,6 +1248,54 @@ All colors MUST be HSL.
     35% { opacity: 0.4; }
   }
 
+  /* Navigation Dropdown Animations */
+  .dropdown-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .dropdown-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+  }
+
+  .dropdown-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dropdown-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in, transform 150ms ease-in;
+  }
+
+  /* Enhanced Navigation Styles */
+  .nav-dropdown {
+    animation: dropdownSlide 200ms ease-out forwards;
+  }
+
+  @keyframes dropdownSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Ensure proper z-index layering */
+  .nav-header {
+    z-index: 1000;
+  }
+
+  .nav-dropdown-menu {
+    z-index: 1001;
+  }
+
   /* New Strategic Report Styles */
   .new-report-container {
     background: white;
