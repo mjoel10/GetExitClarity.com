@@ -45,7 +45,7 @@ export function CTASection() {
             <p className="text-muted-foreground mb-6">
               Transform your practice with systematic prospect qualification, automated nurturing, and higher-quality deal flow.
             </p>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <ul className="space-y-3 text-sm text-muted-foreground mb-6">
               <li className="flex items-center space-x-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
                 <span>Qualify prospects 3x faster with objective scoring</span>
@@ -63,6 +63,11 @@ export function CTASection() {
                 <span>Close deals faster with better-prepared clients</span>
               </li>
             </ul>
+            <Button variant="hero" size="lg" className="group w-full">
+              <Calendar className="mr-2 h-5 w-5" />
+              Get Started Today
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
           </div>
 
           <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-8 rounded-2xl border">
@@ -70,7 +75,7 @@ export function CTASection() {
             <p className="text-muted-foreground mb-6">
               Gain clarity on your exit readiness, understand your value, and build a strategic roadmap for maximum return.
             </p>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <ul className="space-y-3 text-sm text-muted-foreground mb-6">
               <li className="flex items-center space-x-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
                 <span>Get clear GO/FIX/WAIT recommendation with rationale</span>
@@ -88,6 +93,11 @@ export function CTASection() {
                 <span>Build confidence and control in your exit process</span>
               </li>
             </ul>
+            <Button variant="outline" size="lg" className="group w-full">
+              <FileText className="mr-2 h-5 w-5" />
+              Learn More
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
           </div>
         </div>
 
