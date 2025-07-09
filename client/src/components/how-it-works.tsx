@@ -97,7 +97,7 @@ export default function HowItWorks() {
               
               <div className={`relative ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 {index === 0 ? (
-                  <div className="bg-white rounded-2xl shadow-lg p-4">
+                  <div className="bg-white rounded-2xl shadow-lg p-4 max-w-md mx-auto">
                     <img 
                       src={assessmentProgressImage} 
                       alt="Assessment Progress Interface showing 85% completion with categories and remaining steps"
