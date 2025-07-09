@@ -19,7 +19,6 @@ export default function HeroMacBook() {
                 <div className="interface-header">
                   <div className="logo-section">
                     <img src={exitClarityLogo} alt="ExitClarity" className="logo-image" />
-                    <span>ExitClarity</span>
                   </div>
                   <div className="progress-section">
                     <div className="progress-bar">
