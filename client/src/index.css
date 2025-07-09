@@ -1444,6 +1444,28 @@ All colors MUST be HSL.
     margin-bottom: 14px;
   }
 
+  .key-metrics {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #374151;
+  }
+
+  .key-metrics::before {
+    content: '📊 Key Metrics';
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    color: #6366f1;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
   .highlight-box {
     background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
     border: 1px solid #10b981;

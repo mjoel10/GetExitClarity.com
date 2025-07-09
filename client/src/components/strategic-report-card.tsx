@@ -26,7 +26,13 @@ export default function StrategicReportCard() {
               Based on our comprehensive assessment yielding an Overall Exit Readiness Score of 82/100, we recommend <strong>GO</strong> for TechFlow Solutions' market exit strategy. This score reflects strong fundamentals balanced against identified optimization opportunities for this established manufacturing technology company.
             </div>
             <div className="paragraph">
-              TechFlow Solutions, under CEO Sarah Mitchell's leadership, has built a compelling value proposition in the industrial automation space over 18 years. With $8M in annual revenue and $2.4M in Adjusted EBITDA, the firm demonstrates attractive financial metrics for potential acquirers.
+              TechFlow Solutions, under CEO Sarah Mitchell's leadership, has built a compelling value proposition in the industrial automation space. With $8M in annual revenue and $2.4M in Adjusted EBITDA...
+            </div>
+            <div className="key-metrics">
+              • Revenue Growth: 23% YoY
+              • EBITDA Margin: 30.2%
+              • Customer Retention: 94%
+              • Market Share: 15% (regional leader)
             </div>
           </div>
         </div>
