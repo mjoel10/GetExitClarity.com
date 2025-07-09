@@ -1,5 +1,4 @@
 import React from "react";
-import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
 
 export default function ProgressDashboard() {
   return (
@@ -12,18 +11,7 @@ export default function ProgressDashboard() {
 
         {/* Header */}
         <div className="dashboard-header">
-          <div className="header-top">
-            <img
-              src={exitClarityLogo}
-              alt="ExitClarity"
-              className="logo-image"
-            />
-            <div className="user-info">Expert Advisory Dashboard</div>
-          </div>
           <div className="dashboard-title">Progress Tracking Dashboard</div>
-          <div className="dashboard-subtitle">
-            Review and enhance client exit assessment reports
-          </div>
         </div>
 
         {/* Content */}
