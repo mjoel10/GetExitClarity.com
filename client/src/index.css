@@ -1067,7 +1067,7 @@ All colors MUST be HSL.
 
   .macbook-lid {
     width: 600px;
-    height: 520px;
+    height: 420px;
     background: linear-gradient(135deg, #f1f3f4 0%, #e8eaed 50%, #dadce0 100%);
     border-radius: 12px;
     position: relative;
@@ -1278,8 +1278,33 @@ All colors MUST be HSL.
   .assessment-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 6px;
+    gap: 8px;
     flex: 1;
+  }
+
+  .progress-indicator {
+    margin-bottom: 16px;
+  }
+
+  .progress-text {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+
+  .progress-bar {
+    height: 6px;
+    background: #f1f5f9;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981, #059669);
+    border-radius: 3px;
+    transition: width 0.3s ease;
   }
 
   .assessment-item {

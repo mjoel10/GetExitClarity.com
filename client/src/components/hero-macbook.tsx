@@ -33,6 +33,12 @@ export default function HeroMacBook() {
                   <div className="content-header">
                     <h2 className="main-title">Exit Readiness Assessment</h2>
                     <p className="subtitle">Comprehensive analysis across 11 critical factors</p>
+                    <div className="progress-indicator">
+                      <div className="progress-text">6 of 11 steps completed</div>
+                      <div className="progress-bar">
+                        <div className="progress-fill" style={{ width: '55%' }}></div>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="assessment-grid">
@@ -84,45 +90,7 @@ export default function HeroMacBook() {
                       </div>
                     </div>
 
-                    <div className="assessment-item completed">
-                      <div className="item-icon completed">✓</div>
-                      <div className="item-content">
-                        <div className="item-title">Team & Transition Risk</div>
-                        <div className="item-step">Step 7 of 11 • Employment & succession planning</div>
-                      </div>
-                    </div>
 
-                    <div className="assessment-item current">
-                      <div className="item-icon current">8</div>
-                      <div className="item-content">
-                        <div className="item-title">Previous M&A Experience</div>
-                        <div className="item-step">Step 8 of 11 • Previous experience & preparation approach</div>
-                      </div>
-                    </div>
-
-                    <div className="assessment-item pending">
-                      <div className="item-icon pending">9</div>
-                      <div className="item-content">
-                        <div className="item-title">Representation & Market Strategy</div>
-                        <div className="item-step">Step 9 of 11 • Advisory experience & market knowledge</div>
-                      </div>
-                    </div>
-
-                    <div className="assessment-item pending">
-                      <div className="item-icon pending">10</div>
-                      <div className="item-content">
-                        <div className="item-title">Deal Structure & Risk</div>
-                        <div className="item-step">Step 10 of 11 • Deal terms & risk preferences</div>
-                      </div>
-                    </div>
-
-                    <div className="assessment-item pending">
-                      <div className="item-icon pending">11</div>
-                      <div className="item-content">
-                        <div className="item-title">Business Continuity & Post-Sale</div>
-                        <div className="item-step">Step 11 of 11 • Operations management & exit planning</div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
