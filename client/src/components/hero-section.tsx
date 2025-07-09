@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, FileText, Play, ArrowRight } from "lucide-react";
+import { Calendar, FileText, ArrowRight } from "lucide-react";
 import exitClarityScreenshot from "@assets/previewed (2)_1752029982903.png";
 
 export function HeroSection() {
@@ -38,12 +38,6 @@ export function HeroSection() {
               <Button variant="professional" size="xl" className="group">
                 <FileText className="mr-2 h-5 w-5" />
                 View Sample Report
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-              
-              <Button variant="outline" size="xl" className="group">
-                <Play className="mr-2 h-5 w-5" />
-                Start Assessment
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
