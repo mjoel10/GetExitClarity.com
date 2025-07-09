@@ -1778,8 +1778,46 @@ All colors MUST be HSL.
     z-index: 10;
   }
 
-  /* Mobile Responsive Breakpoints */
+  /* Hero Section Layout */
+  .hero-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Desktop Layout - Two Column Grid */
+  @media (min-width: 1024px) {
+    .hero-content-wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* Mobile Layout - Reorder using flexbox order */
   @media (max-width: 1023px) {
+    .hero-headlines {
+      order: 1;
+    }
+    
+    .hero-macbook-section {
+      order: 2;
+      margin: 2rem 0;
+    }
+    
+    .hero-cta-section {
+      order: 3;
+    }
+    
+    .hero-stats-section {
+      order: 4;
+    }
+    
     .hero-macbook-container {
       max-width: 600px;
     }
