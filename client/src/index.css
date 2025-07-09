@@ -419,7 +419,7 @@ All colors MUST be HSL.
     border-radius: 20px;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
     width: 100%;
-    max-width: 520px;
+    max-width: 640px;
     position: relative;
     overflow: hidden;
     margin: 0 auto;
@@ -450,7 +450,7 @@ All colors MUST be HSL.
 
   .badge-go {
     top: 15px;
-    right: -20px;
+    right: 10px;
     background: linear-gradient(135deg, #10b981, #059669);
     color: white;
     animation-delay: 0s;
@@ -458,14 +458,14 @@ All colors MUST be HSL.
 
   .badge-score {
     bottom: 30px;
-    left: -25px;
+    left: 10px;
     color: #1e40af;
     animation-delay: 2s;
   }
 
   .badge-ready {
     top: 60%;
-    right: -35px;
+    right: 10px;
     color: #059669;
     animation-delay: 4s;
   }
@@ -473,7 +473,7 @@ All colors MUST be HSL.
   /* Header */
   .report-header {
     background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-    padding: 24px 28px 20px;
+    padding: 16px 24px 12px;
     border-bottom: 1px solid #e5e7eb;
   }
 
@@ -481,7 +481,7 @@ All colors MUST be HSL.
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
 
   .logo {
@@ -503,32 +503,32 @@ All colors MUST be HSL.
   }
 
   .report-title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: #1f2937;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
 
   .company-info {
-    font-size: 14px;
+    font-size: 12px;
     color: #6b7280;
   }
 
   /* Main Content */
   .report-content {
-    padding: 28px;
+    padding: 20px 24px;
   }
 
   /* Executive Summary */
   .summary-section {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
   .section-title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #374151;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -549,10 +549,10 @@ All colors MUST be HSL.
   .recommendation-card {
     background: linear-gradient(135deg, #ecfdf5, #d1fae5);
     border: 2px solid #10b981;
-    border-radius: 16px;
-    padding: 20px;
+    border-radius: 12px;
+    padding: 12px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     position: relative;
     overflow: hidden;
   }
@@ -576,11 +576,11 @@ All colors MUST be HSL.
   .recommendation-badge {
     background: linear-gradient(135deg, #10b981, #059669);
     color: white;
-    padding: 8px 16px;
-    border-radius: 25px;
-    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     display: inline-block;
     position: relative;
     z-index: 2;
@@ -593,7 +593,7 @@ All colors MUST be HSL.
   }
 
   .recommendation-text {
-    font-size: 12px;
+    font-size: 10px;
     color: #047857;
     font-weight: 500;
     position: relative;
@@ -603,16 +603,16 @@ All colors MUST be HSL.
   /* Key Metrics Grid */
   .metrics-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
   }
 
   .metric-card {
     background: #f9fafb;
     border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 16px;
+    border-radius: 8px;
+    padding: 12px 8px;
     text-align: center;
     transition: all 0.3s ease;
   }
@@ -623,14 +623,14 @@ All colors MUST be HSL.
   }
 
   .metric-value {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     color: #1e40af;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   .metric-label {
-    font-size: 11px;
+    font-size: 9px;
     color: #6b7280;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -639,17 +639,17 @@ All colors MUST be HSL.
   /* Action Items */
   .action-section {
     background: #fafafa;
-    border-radius: 12px;
-    padding: 20px;
+    border-radius: 8px;
+    padding: 12px;
     border: 1px solid #e5e7eb;
   }
 
   .action-item {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 12px;
-    font-size: 13px;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 11px;
   }
 
   .action-item:last-child {
@@ -689,7 +689,7 @@ All colors MUST be HSL.
   /* Bottom Stats */
   .stats-footer {
     background: linear-gradient(135deg, #1e40af, #3b82f6);
-    padding: 20px 28px;
+    padding: 12px 24px;
     color: white;
     position: relative;
     overflow: hidden;
@@ -714,7 +714,7 @@ All colors MUST be HSL.
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 12px;
     position: relative;
     z-index: 2;
   }
@@ -724,14 +724,14 @@ All colors MUST be HSL.
   }
 
   .stat-number {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   .stat-label {
-    font-size: 10px;
+    font-size: 9px;
     opacity: 0.9;
     text-transform: uppercase;
     letter-spacing: 0.5px;
