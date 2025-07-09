@@ -729,7 +729,7 @@ All colors MUST be HSL.
     border-radius: 20px;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
     width: 100%;
-    max-width: 520px;
+    max-width: 720px;
     position: relative;
     overflow: visible;
     margin: 0 auto;
@@ -789,7 +789,7 @@ All colors MUST be HSL.
 
   .dashboard-header {
     background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-    padding: 24px 28px;
+    padding: 20px 32px;
     border-bottom: 1px solid #e5e7eb;
   }
 
@@ -822,21 +822,21 @@ All colors MUST be HSL.
   }
 
   .dashboard-content {
-    padding: 28px;
+    padding: 24px 32px;
   }
 
   .dashboard-container .stats-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .dashboard-container .stat-card {
     background: #f9fafb;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
-    padding: 18px;
+    padding: 16px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -864,9 +864,9 @@ All colors MUST be HSL.
   }
 
   .dashboard-container .stat-number {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     position: relative;
     z-index: 2;
   }
@@ -895,16 +895,16 @@ All colors MUST be HSL.
   .dashboard-container .progress-section {
     background: #fafafa;
     border-radius: 16px;
-    padding: 24px;
+    padding: 20px;
     border: 1px solid #e5e7eb;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .dashboard-container .section-title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #374151;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -925,13 +925,13 @@ All colors MUST be HSL.
   .client-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
   }
 
   .client-item {
     background: white;
     border-radius: 10px;
-    padding: 16px;
+    padding: 12px;
     border: 1px solid #e5e7eb;
     transition: all 0.2s ease;
   }
@@ -1007,7 +1007,7 @@ All colors MUST be HSL.
 
   .action-bar {
     background: linear-gradient(135deg, #1e40af, #3b82f6);
-    padding: 20px 28px;
+    padding: 16px 32px;
     color: white;
     position: relative;
     overflow: hidden;
