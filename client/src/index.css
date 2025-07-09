@@ -1324,7 +1324,10 @@ All colors MUST be HSL.
   .new-report-container {
     background: white;
     border-radius: 20px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e5e7eb;
+    box-shadow: 
+      0 1px 3px rgba(0, 0, 0, 0.1),
+      0 25px 60px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     max-width: 850px;
     width: 100%;
