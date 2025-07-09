@@ -18,7 +18,7 @@ export default function StrategicReportCard() {
           <div className="report-id">Report #168</div>
         </div>
         <div className="report-title">Strategic Analysis Report</div>
-        <div className="company-info">Woodbridge International • Financial Services • $17M Revenue</div>
+        <div className="company-info">Apex International • Financial Services • $17M Revenue</div>
       </div>
 
       {/* Content */}
