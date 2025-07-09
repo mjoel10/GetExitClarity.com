@@ -104,7 +104,7 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
             <Button 
-              onClick={() => window.open('https://calendly.com/exitclarity', '_blank')}
+              onClick={() => window.open('https://calendly.com/exitclarity-info/30min', '_blank')}
               className="bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
             >
               Get Started
@@ -175,7 +175,7 @@ export default function Header() {
               
               <Button 
                 onClick={() => {
-                  window.open('https://calendly.com/exitclarity', '_blank');
+                  window.open('https://calendly.com/exitclarity-info/30min', '_blank');
                   setIsMenuOpen(false);
                 }}
                 className="bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg mt-4"
