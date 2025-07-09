@@ -63,11 +63,18 @@ export function CTASection() {
                 <span>Close deals faster with better-prepared clients</span>
               </li>
             </ul>
-            <Button variant="hero" size="lg" className="group w-full">
-              <Calendar className="mr-2 h-5 w-5" />
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button variant="hero" size="lg" className="group flex-1">
+                <Calendar className="mr-2 h-5 w-5" />
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <Button variant="outline" size="lg" className="group flex-1">
+                <FileText className="mr-2 h-5 w-5" />
+                Learn More
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-8 rounded-2xl border">
@@ -93,11 +100,18 @@ export function CTASection() {
                 <span>Build confidence and control in your exit process</span>
               </li>
             </ul>
-            <Button variant="outline" size="lg" className="group w-full">
-              <FileText className="mr-2 h-5 w-5" />
-              Learn More
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button variant="hero" size="lg" className="group flex-1">
+                <Calendar className="mr-2 h-5 w-5" />
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <Button variant="outline" size="lg" className="group flex-1">
+                <FileText className="mr-2 h-5 w-5" />
+                Learn More
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
           </div>
         </div>
 
