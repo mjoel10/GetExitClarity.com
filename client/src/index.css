@@ -1289,16 +1289,10 @@ All colors MUST be HSL.
     gap: 12px;
   }
 
-  .new-report-header .logo-icon {
+  .new-report-header .logo-image {
     width: 32px;
     height: 32px;
-    background: linear-gradient(135deg, #8b5cf6, #6366f1);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 16px;
+    object-fit: contain;
   }
 
   .new-report-header .logo-text {
