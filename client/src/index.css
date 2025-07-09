@@ -1204,6 +1204,7 @@ All colors MUST be HSL.
     color: #374151;
     height: 40px;
     min-height: 40px;
+    margin-top: 2px;
   }
 
   .progress-bar {
