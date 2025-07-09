@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, FileText, ArrowRight } from "lucide-react";
-import exitClarityScreenshot from "@assets/previewed (2)_1752029982903.png";
+import HeroMacBook from "./hero-macbook";
 
 export function HeroSection() {
   return (
@@ -59,28 +59,10 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column - App Screenshot */}
+          {/* Right Column - MacBook Assessment Interface */}
           <div className="relative">
             <div className="relative z-10">
-              <img 
-                src={exitClarityScreenshot} 
-                alt="ExitClarity Assessment Interface showing exit goals, timeline, and assessment progress"
-                className="w-full h-auto max-w-2xl mx-auto rounded-lg shadow-lg"
-              />
-              
-              {/* Floating notification badge */}
-              <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg border border-gray-100 p-4 z-20">
-                <div className="flex items-center space-x-3">
-                  <div className="relative">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <div className="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping opacity-75"></div>
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-gray-900">Assessment Complete</div>
-                    <div className="text-xs text-gray-500">Ready for strategic review</div>
-                  </div>
-                </div>
-              </div>
+              <HeroMacBook />
             </div>
             
             {/* Background decorative elements */}
