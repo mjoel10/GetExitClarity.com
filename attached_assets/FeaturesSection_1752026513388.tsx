@@ -78,15 +78,19 @@ export function FeaturesSection() {
               Watch how ExitClarity transforms your prospect engagement from initial contact to deal closure, with complete visibility and control throughout the process.
             </p>
           </div>
-          
-          <div className="flex justify-center">
-            <div className="bg-white rounded-xl p-6 shadow-soft border">
-              <div className="w-96 h-48 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary mb-2">Platform Demo</div>
-                  <div className="text-lg text-muted-foreground">Coming Soon</div>
-                </div>
-              </div>
+
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div className="bg-white p-6 rounded-xl shadow-soft">
+              <div className="text-2xl font-bold text-primary mb-2">3x</div>
+              <p className="text-sm text-muted-foreground">Faster prospect qualification</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-soft">
+              <div className="text-2xl font-bold text-primary mb-2">85%</div>
+              <p className="text-sm text-muted-foreground">Reduction in time-to-qualification</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-soft">
+              <div className="text-2xl font-bold text-primary mb-2">60%</div>
+              <p className="text-sm text-muted-foreground">Increase in qualified pipeline</p>
             </div>
           </div>
         </div>

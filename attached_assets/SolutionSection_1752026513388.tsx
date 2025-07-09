@@ -81,7 +81,7 @@ export function SolutionSection() {
               {professionalFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={index} className="flex items-start space-x-4">
+                  <div key={index} className="flex space-x-4">
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon className="h-5 w-5 text-primary" />
                     </div>
@@ -96,18 +96,18 @@ export function SolutionSection() {
           </div>
 
           {/* For Business Owners */}
-          <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 border">
+          <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 border">
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-foreground mb-2">For Business Owners</h3>
-              <p className="text-muted-foreground">Understand your readiness and maximize your exit value</p>
+              <p className="text-muted-foreground">Understand where you stand and how to move forward</p>
             </div>
             
             <div className="space-y-6">
               {ownerFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div key={index} className="flex space-x-4">
+                    <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 shadow-soft">
                       <Icon className="h-5 w-5 text-primary" />
                     </div>
                     <div>
@@ -117,6 +117,26 @@ export function SolutionSection() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-primary/5 rounded-2xl p-8 border">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Ready to bridge the readiness gap?
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              See how ExitClarity creates better outcomes for both M&A professionals and business owners.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-medium transition-colors">
+                Schedule Demo
+              </button>
+              <button className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors">
+                View Sample Report
+              </button>
             </div>
           </div>
         </div>

@@ -1,4 +1,7 @@
 import { CheckCircle, FileText, TrendingUp } from "lucide-react";
+import assessmentIcon from "@/assets/assessment-icon.png";
+import reportIcon from "@/assets/report-icon.png";
+import actionIcon from "@/assets/action-icon.png";
 
 export function ProcessSection() {
   const steps = [
@@ -6,7 +9,7 @@ export function ProcessSection() {
       number: "01",
       title: "Complete the Assessment",
       description: "Owners answer questions across 11 readiness categories—covering operational, financial, emotional, and strategic dimensions.",
-      icon: CheckCircle,
+      icon: assessmentIcon,
       details: [
         "11 comprehensive readiness factors",
         "30-minute guided assessment",
@@ -18,7 +21,7 @@ export function ProcessSection() {
       number: "02", 
       title: "Receive a Strategic Report",
       description: "Each owner receives a 15–20 page personalized report with a GO/FIX/WAIT recommendation, risk analysis, valuation estimate, and action plan.",
-      icon: FileText,
+      icon: reportIcon,
       details: [
         "GO/FIX/WAIT recommendation",
         "Detailed risk analysis",
@@ -30,7 +33,7 @@ export function ProcessSection() {
       number: "03",
       title: "Take Action & Track Progress",
       description: "Advisors use the platform to nurture prospects, track improvement, and accelerate deals with better-prepared clients.",
-      icon: TrendingUp,
+      icon: actionIcon,
       details: [
         "Progress tracking dashboard",
         "Automated follow-up sequences",
@@ -75,8 +78,8 @@ export function ProcessSection() {
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+
+                  <div className="grid md:grid-cols-2 gap-3">
                     {step.details.map((detail, detailIndex) => (
                       <div key={detailIndex} className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
@@ -88,19 +91,44 @@ export function ProcessSection() {
               </div>
 
               {/* Visual */}
-              <div className={`relative ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                <div className="bg-white rounded-2xl p-8 shadow-soft border">
-                  <div className="flex items-center justify-center h-48">
-                    <div className="text-center">
-                      <step.icon className="w-12 h-12 text-primary mx-auto mb-4" />
-                      <div className="text-2xl font-bold text-foreground mb-2">Step {step.number}</div>
-                      <div className="text-lg text-muted-foreground">{step.title}</div>
-                    </div>
+              <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
+                <div className="relative">
+                  <div className="bg-white rounded-2xl p-8 shadow-soft border">
+                    <img 
+                      src={step.icon} 
+                      alt={step.title}
+                      className="w-full h-auto max-w-xs mx-auto"
+                    />
                   </div>
+                  
+                  {/* Step connector (except for last step) */}
+                  {index < steps.length - 1 && (
+                    <div className="hidden lg:block absolute -bottom-8 left-1/2 transform -translate-x-1/2">
+                      <div className="w-px h-16 bg-gradient-to-b from-primary to-transparent"></div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom Stats */}
+        <div className="mt-20 bg-white rounded-2xl p-8 shadow-soft border">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold text-primary mb-2">15-20</div>
+              <p className="text-muted-foreground">Pages of strategic insights per report</p>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-primary mb-2">11</div>
+              <p className="text-muted-foreground">Comprehensive readiness factors assessed</p>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-primary mb-2">30</div>
+              <p className="text-muted-foreground">Minutes to complete full assessment</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

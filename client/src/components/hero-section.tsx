@@ -1,287 +1,67 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
-import { insertDemoRequestSchema } from "@shared/schema";
-import { z } from "zod";
-
-const formSchema = insertDemoRequestSchema.extend({
-  requestType: z.enum(["demo", "sample_report", "assessment"]),
-});
-
-type FormData = z.infer<typeof formSchema>;
+import { Calendar, FileText, Play, ArrowRight } from "lucide-react";
 
 export function HeroSection() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-    requestType: "demo",
-  });
-  const { toast } = useToast();
-
-  const mutation = useMutation({
-    mutationFn: async (data: FormData) => {
-      const response = await apiRequest("/api/demo-request", {
-        method: "POST",
-        body: JSON.stringify(data),
-      });
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Request submitted successfully!",
-        description: "We'll get back to you within 24 hours.",
-      });
-      setIsModalOpen(false);
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        message: "",
-        requestType: "demo",
-      });
-    },
-    onError: () => {
-      toast({
-        title: "Error submitting request",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    mutation.mutate(formData);
-  };
-
-  const openModal = (type: "demo" | "sample_report" | "assessment") => {
-    setFormData({ ...formData, requestType: type });
-    setIsModalOpen(true);
-  };
-
   return (
-    <div className="loveable-gradient min-h-screen">
-      {/* Header */}
-      <div className="absolute top-0 left-0 w-full z-10">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center">
-              <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">EC</span>
-              </div>
-              <span className="ml-2 text-xl font-semibold text-gray-800">ExitClarity</span>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <a href="#problem" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Problem
-              </a>
-              <a href="#solution" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Solution
-              </a>
-              <a href="#process" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Process
-              </a>
-              <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Features
-              </a>
-            </nav>
-            <Button 
-              variant="professional" 
-              size="sm"
-              onClick={() => openModal("demo")}
-            >
+    <section className="relative py-20 lg:py-28 bg-gradient-to-br from-background to-muted/20">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
+            Trusted by 500+ M&A Professionals
+          </div>
+          
+          {/* Main Headlines */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+            Turn Exit Conversations Into{" "}
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Strategic Wins
+            </span>
+          </h1>
+          
+          <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            ExitClarity delivers structured intelligence that helps M&A professionals systematically qualify prospects and empowers business owners to maximize exit value.
+          </p>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Button variant="hero" size="xl" className="group">
+              <Calendar className="mr-2 h-5 w-5" />
               Schedule Demo
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+            
+            <Button variant="professional" size="xl" className="group">
+              <FileText className="mr-2 h-5 w-5" />
+              View Sample Report
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+            
+            <Button variant="outline" size="xl" className="group">
+              <Play className="mr-2 h-5 w-5" />
+              Start Assessment
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
-        </div>
-      </div>
-
-      {/* Hero Content */}
-      <div className="relative pt-20 pb-16 min-h-screen flex items-center">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="mb-6">
-                <span className="loveable-badge">
-                  30+ Years M&A Experience
-                </span>
-              </div>
-              <h1 className="loveable-heading text-5xl sm:text-6xl lg:text-7xl text-gray-900 mb-6">
-                Turn Exit Readiness Into{" "}
-                <span className="loveable-heading-accent">High-Confidence</span>{" "}
-                <span className="loveable-heading-accent">Deals</span>
-              </h1>
-              <p className="loveable-subheading text-xl mb-8">
-                ExitClarity systematizes and scales early owner engagement by turning 
-                the overwhelming thought of selling into a clear, actionable process.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button 
-                  className="loveable-btn-primary"
-                  onClick={() => openModal("demo")}
-                >
-                  Schedule Demo
-                </button>
-                <button 
-                  className="loveable-btn-secondary"
-                  onClick={() => openModal("sample_report")}
-                >
-                  View Sample Report
-                </button>
-              </div>
-              <div className="flex items-center space-x-8">
-                <div className="loveable-stat">
-                  <div className="loveable-stat-number text-2xl">30+</div>
-                  <div className="loveable-stat-label text-xs">Years M&A Experience</div>
-                </div>
-                <div className="loveable-stat">
-                  <div className="loveable-stat-number text-2xl">11</div>
-                  <div className="loveable-stat-label text-xs">Readiness Factors</div>
-                </div>
-                <div className="loveable-stat">
-                  <div className="loveable-stat-number text-2xl">500+</div>
-                  <div className="loveable-stat-label text-xs">Deals Analyzed</div>
-                </div>
-              </div>
+          
+          {/* Key Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">85%</div>
+              <p className="text-sm text-muted-foreground">Higher deal success rate</p>
             </div>
-            <div className="lg:pl-8">
-              <div className="relative">
-                <div className="loveable-card p-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    Exit Readiness Assessment
-                  </h3>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Financial Performance</span>
-                      <div className="flex items-center">
-                        <div className="w-16 h-2 bg-gray-200 rounded-full mr-2">
-                          <div className="w-3/4 h-2 bg-green-500 rounded-full"></div>
-                        </div>
-                        <span className="text-sm font-medium">85%</span>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Market Position</span>
-                      <div className="flex items-center">
-                        <div className="w-16 h-2 bg-gray-200 rounded-full mr-2">
-                          <div className="w-4/5 h-2 bg-blue-500 rounded-full"></div>
-                        </div>
-                        <span className="text-sm font-medium">78%</span>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Operational Efficiency</span>
-                      <div className="flex items-center">
-                        <div className="w-16 h-2 bg-gray-200 rounded-full mr-2">
-                          <div className="w-2/3 h-2 bg-yellow-500 rounded-full"></div>
-                        </div>
-                        <span className="text-sm font-medium">72%</span>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Risk Management</span>
-                      <div className="flex items-center">
-                        <div className="w-16 h-2 bg-gray-200 rounded-full mr-2">
-                          <div className="w-3/5 h-2 bg-red-500 rounded-full"></div>
-                        </div>
-                        <span className="text-sm font-medium">65%</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-6 pt-4 border-t border-gray-200">
-                    <div className="flex justify-between items-center">
-                      <span className="font-semibold text-gray-900">Overall Readiness</span>
-                      <span className="text-xl font-bold text-blue-600">75%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="text-center">
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">$1.2M</div>
+              <p className="text-sm text-muted-foreground">Average valuation increase</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">4.8/5</div>
+              <p className="text-sm text-muted-foreground">Client satisfaction</p>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-8 max-w-md w-full mx-4">
-            <h2 className="text-2xl font-bold mb-6">
-              {formData.requestType === "demo" && "Schedule Demo"}
-              {formData.requestType === "sample_report" && "Request Sample Report"}
-              {formData.requestType === "assessment" && "Start Assessment"}
-            </h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Company
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={formData.company}
-                  onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Message
-                </label>
-                <textarea
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  rows={3}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div className="flex justify-end space-x-4 pt-4">
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={() => setIsModalOpen(false)}
-                >
-                  Cancel
-                </Button>
-                <Button
-                  type="submit"
-                  disabled={mutation.isPending}
-                >
-                  {mutation.isPending ? "Submitting..." : "Submit"}
-                </Button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
-    </div>
+    </section>
   );
 }
