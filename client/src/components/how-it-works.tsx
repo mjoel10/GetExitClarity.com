@@ -55,8 +55,8 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="how-it-works" className="py-20 bg-muted/30 overflow-visible">
+      <div className="max-w-7xl mx-auto px-6 overflow-visible">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export default function HowItWorks() {
           </p>
         </motion.div>
 
-        <div className="space-y-16">
+        <div className="space-y-16 overflow-visible">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -78,7 +78,7 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
+              className={`grid lg:grid-cols-2 gap-12 items-center overflow-visible ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
             >
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                 <div className="flex items-center mb-6">
@@ -104,7 +104,7 @@ export default function HowItWorks() {
                 ) : index === 1 ? (
                   <StrategicReportCard />
                 ) : (
-                  <div className="overflow-visible" style={{ padding: '0 30px' }}>
+                  <div className="overflow-visible" style={{ padding: '0 60px' }}>
                     <ProgressDashboard />
                   </div>
                 )}
