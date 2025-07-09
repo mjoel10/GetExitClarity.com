@@ -1,4 +1,5 @@
 import { FileText, BarChart3, Shield } from 'lucide-react';
+import { DualCTA } from './dual-cta';
 
 export function EnhancedDealPreparation() {
   return (
@@ -51,6 +52,8 @@ export function EnhancedDealPreparation() {
             <p className="text-sm" style={{ color: 'hsl(218, 10%, 45%)' }}>Proactive risk identification and strategic insights beyond basic financial analysis.</p>
           </div>
         </div>
+        
+        <DualCTA variant="centered" className="mt-12" />
       </div>
     </section>
   );
