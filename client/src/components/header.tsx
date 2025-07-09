@@ -41,7 +41,7 @@ export default function Header() {
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-white/90 backdrop-blur-sm shadow-sm"
     }`}>
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between h-8">
           {/* Logo Section */}
           <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
