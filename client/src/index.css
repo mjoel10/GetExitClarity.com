@@ -840,12 +840,6 @@ All colors MUST be HSL.
     text-align: center;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
-  }
-
-  .dashboard-container .stat-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
 
   .dashboard-container .stat-card.primary {
@@ -933,12 +927,6 @@ All colors MUST be HSL.
     border-radius: 10px;
     padding: 12px;
     border: 1px solid #e5e7eb;
-    transition: all 0.2s ease;
-  }
-
-  .client-item:hover {
-    border-color: #3b82f6;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
   }
 
   .client-header {
@@ -1068,71 +1056,6 @@ All colors MUST be HSL.
     font-size: 12px;
     font-weight: 600;
     border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .action-button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
-  }
-
-  .action-bar::before {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    width: 300%;
-    height: 300%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    animation: rotate 10s linear infinite;
-  }
-
-  .action-bar .action-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .action-stats {
-    display: flex;
-    gap: 18px;
-  }
-
-  .action-stat {
-    text-align: center;
-  }
-
-  .action-number {
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 2px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-
-  .action-label {
-    font-size: 10px;
-    opacity: 0.9;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .action-button {
-    background: white;
-    color: #1e40af;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 12px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .action-button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    cursor: default;
   }
 }
