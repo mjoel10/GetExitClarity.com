@@ -77,7 +77,7 @@ export function SolutionSection() {
               <p className="text-muted-foreground">Systematize early-stage engagement and build stronger pipelines</p>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-6 mb-8">
               {professionalFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
@@ -93,6 +93,23 @@ export function SolutionSection() {
                 );
               })}
             </div>
+            
+            <div className="flex flex-col gap-3">
+              <a
+                href="https://calendly.com/exitclarity/demo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+              >
+                Get Started Today
+              </a>
+              <a
+                href="/ma-firms"
+                className="inline-flex items-center justify-center px-6 py-3 bg-white text-foreground border border-border rounded-lg font-semibold hover:bg-muted/50 transition-colors"
+              >
+                Learn More
+              </a>
+            </div>
           </div>
 
           {/* For Business Owners */}
@@ -102,7 +119,7 @@ export function SolutionSection() {
               <p className="text-muted-foreground">Understand your readiness and maximize your exit value</p>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-6 mb-8">
               {ownerFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
@@ -117,6 +134,23 @@ export function SolutionSection() {
                   </div>
                 );
               })}
+            </div>
+            
+            <div className="flex flex-col gap-3">
+              <a
+                href="https://calendly.com/exitclarity/demo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+              >
+                Get Started Today
+              </a>
+              <a
+                href="/business-owners"
+                className="inline-flex items-center justify-center px-6 py-3 bg-white text-foreground border border-border rounded-lg font-semibold hover:bg-muted/50 transition-colors"
+              >
+                Learn More
+              </a>
             </div>
           </div>
         </div>
