@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
+import exitClarityLogo from "@assets/Exit Clarity Logo_1752099881839.png";
 
 export default function HeroMacBook() {
   return (
@@ -18,8 +18,7 @@ export default function HeroMacBook() {
                 {/* Header */}
                 <div className="dashboard-header">
                   <div className="header-left">
-                    <div className="logo-icon">✓</div>
-                    <span className="logo-text">ExitClarity</span>
+                    <img src={exitClarityLogo} alt="ExitClarity" className="dashboard-logo" />
                   </div>
                   <div className="header-right">
                     <div className="progress-bar">

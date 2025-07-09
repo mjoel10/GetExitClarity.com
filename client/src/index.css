@@ -1180,10 +1180,11 @@ All colors MUST be HSL.
     gap: 8px;
   }
 
-  .logo-text {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1e40af;
+  .dashboard-logo {
+    width: 130px;
+    height: auto;
+    margin: 0;
+    padding: 0;
   }
 
   .progress-text {
