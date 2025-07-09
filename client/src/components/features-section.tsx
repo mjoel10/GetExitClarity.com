@@ -4,32 +4,32 @@ export function FeaturesSection() {
   const features = [
     {
       icon: Target,
-      title: "Prospect Scoring Engine",
-      description: "Objective, data-driven assessment of exit readiness across 11 key factors"
-    },
-    {
-      icon: Database,
-      title: "CRM-Integrated Pipeline Tracking",
-      description: "Seamless integration with your existing systems for unified prospect management"
-    },
-    {
-      icon: FileText,
-      title: "White-labeled Strategic Reports",
-      description: "Professional, branded reports that position you as the trusted advisor"
-    },
-    {
-      icon: Settings,
-      title: "Automated Roadmaps & Recommendations",
-      description: "Personalized action plans with prioritized next steps and ROI projections"
+      title: "Unlimited Client Assessments",
+      description: "Unlimited client assessments with professional-grade reporting"
     },
     {
       icon: BarChart3,
-      title: "Portfolio Management by Readiness Stage",
-      description: "Visual dashboard to track prospects across the readiness spectrum"
+      title: "Pipeline Visibility Dashboard",
+      description: "Pipeline visibility dashboard to track client readiness across your portfolio"
+    },
+    {
+      icon: FileText,
+      title: "Expert Analysis & Commentary",
+      description: "Expert analysis and commentary from experienced M&A professionals"
+    },
+    {
+      icon: Settings,
+      title: "Co-Branded Reports",
+      description: "Co-branded reports that position your firm alongside ExitClarity as trusted exit-readiness experts"
+    },
+    {
+      icon: Database,
+      title: "Systematic Preparation Tools",
+      description: "Systematic preparation tools to improve client outcomes before market entry"
     },
     {
       icon: Zap,
-      title: "Scalable Prospect Engagement at Zero Cost",
+      title: "Automated Client Engagement",
       description: "Automated nurturing sequences that maintain engagement without manual effort"
     }
   ];
