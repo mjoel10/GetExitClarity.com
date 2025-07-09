@@ -1063,7 +1063,7 @@ All colors MUST be HSL.
   .macbook {
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateX(5deg) rotateY(-5deg);
+    transform: rotateX(15deg) rotateY(-10deg);
   }
 
   .macbook-lid {
