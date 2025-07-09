@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import { OwnerBenefitsSection } from "@/components/owner-benefits-section";
+import { DualCTA } from "@/components/dual-cta";
 
 export default function BusinessOwners() {
   return (
@@ -20,6 +21,8 @@ export default function BusinessOwners() {
         </div>
         
         <OwnerBenefitsSection />
+        
+        <DualCTA />
         
         <div className="py-24">
           <div className="container mx-auto px-6">
@@ -47,6 +50,8 @@ export default function BusinessOwners() {
             </div>
           </div>
         </div>
+        
+        <DualCTA />
       </div>
     </div>
   );
