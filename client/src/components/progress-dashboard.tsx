@@ -7,7 +7,6 @@ export default function ProgressDashboard() {
       <div className="dashboard-inner">
         {/* Floating Badges */}
         <div className="floating-badge badge-clients">48 Reports</div>
-        <div className="floating-badge badge-alerts">⚡ 3 Alerts</div>
 
         {/* Header */}
         <div className="dashboard-header">
@@ -86,26 +85,7 @@ export default function ProgressDashboard() {
           </div>
         </div>
 
-        {/* Action Bar */}
-        <div className="action-bar">
-          <div className="action-content">
-            <div className="action-stats">
-              <div className="action-stat">
-                <div className="action-number">3x</div>
-                <div className="action-label">Faster Progress</div>
-              </div>
-              <div className="action-stat">
-                <div className="action-number">85%</div>
-                <div className="action-label">Time Saved</div>
-              </div>
-              <div className="action-stat">
-                <div className="action-number">95%</div>
-                <div className="action-label">Client Success</div>
-              </div>
-            </div>
-            <button className="action-button">View All</button>
-          </div>
-        </div>
+
       </div>
     </div>
   );
