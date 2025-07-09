@@ -9,6 +9,10 @@ export default function HeroMacBook() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
+        style={{ 
+          transform: "rotateX(15deg) rotateY(-10deg)",
+          transformStyle: "preserve-3d"
+        }}
       >
         <div className="macbook-lid">
           <div className="macbook-screen">
