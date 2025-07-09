@@ -16,16 +16,16 @@ export default function HeroMacBook() {
             <div className="screen-content">
               <div className="assessment-interface">
                 {/* Header */}
-                <div className="interface-header">
-                  <div className="logo-section">
+                <div className="dashboard-header">
+                  <div className="header-left">
                     <div className="logo-icon">✓</div>
                     <span className="logo-text">ExitClarity</span>
                   </div>
-                  <div className="progress-section">
+                  <div className="header-right">
                     <div className="progress-bar">
                       <div className="progress-fill"></div>
                     </div>
-                    <span>7 of 11</span>
+                    <span className="progress-text">7 of 11</span>
                   </div>
                 </div>
 
