@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle, BarChart, TrendingUp } from "lucide-react";
 import assessmentProgressImage from "@assets/ChatGPT Image Jul 9, 2025, 09_40_33 AM_1752079279510.png";
+import AssessmentCard from "./assessment-card";
 
 export default function HowItWorks() {
   const steps = [
@@ -97,13 +98,7 @@ export default function HowItWorks() {
               
               <div className={`relative ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 {index === 0 ? (
-                  <div className="bg-white rounded-2xl shadow-lg p-4 max-w-md mx-auto">
-                    <img 
-                      src={assessmentProgressImage} 
-                      alt="Assessment Progress Interface showing 85% completion with categories and remaining steps"
-                      className="w-full h-auto rounded-lg"
-                    />
-                  </div>
+                  <AssessmentCard />
                 ) : (
                   <div className={`${index === 1 ? 'bg-gray-300' : 'bg-sky-500'} p-8 rounded-2xl shadow-lg`}>
                     <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6 mx-auto">
