@@ -91,29 +91,7 @@ export function CTASection() {
           </div>
         </div>
 
-        {/* Final Call to Action */}
-        <div className="text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-soft border max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Ready to Transform Your Exit Strategy?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Join the M&A professionals and business owners who've already discovered the power of structured exit readiness.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" className="group">
-                <Calendar className="mr-2 h-5 w-5" />
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="outline" size="lg" className="group">
-                <FileText className="mr-2 h-5 w-5" />
-                Learn More
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
