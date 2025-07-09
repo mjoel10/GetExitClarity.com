@@ -4,12 +4,10 @@ export default function AssessmentCard() {
   return (
     <div className="assessment-card">
       {/* Floating Badges */}
-      <div className="floating-badge badge-1">85% Complete</div>
       <div className="floating-badge badge-2">✓ On Track</div>
 
       {/* Header */}
       <div className="card-header">
-        <div className="progress-header">Assessment Progress: 85%</div>
       </div>
 
       {/* Progress */}
