@@ -1165,10 +1165,11 @@ All colors MUST be HSL.
   .logo-section {
     display: flex;
     align-items: center;
-    height: 100%;
   }
 
   .logo-section .logo-image {
+    height: 24px;
+    width: auto;
     margin: 0;
     padding: 0;
     vertical-align: middle;
@@ -1197,6 +1198,7 @@ All colors MUST be HSL.
     font-size: 12px;
     font-weight: 600;
     color: #374151;
+    height: 40px;
   }
 
   .progress-bar {
