@@ -1290,8 +1290,8 @@ All colors MUST be HSL.
   }
 
   .new-report-header .logo-image {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
   }
 
