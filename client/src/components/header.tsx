@@ -44,13 +44,12 @@ export default function Header() {
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between h-8">
           {/* Logo Section */}
-          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
             <img src={exitClarityLogo} alt="ExitClarity" className="h-8 w-auto" />
-            <span className="text-xl font-bold text-primary">ExitClarity</span>
           </Link>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             <Link href="/" className="text-gray-600 hover:text-primary transition-colors font-medium">
               Home
             </Link>
