@@ -1,4 +1,5 @@
 import { Target, Database, FileText, Settings, BarChart3, Zap } from "lucide-react";
+import { DualCTA } from "./dual-cta";
 
 export function FeaturesSection() {
   const features = [
@@ -43,9 +44,10 @@ export function FeaturesSection() {
             Purpose-Built for{" "}
             <span className="text-primary">M&A Professionals</span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-xl text-muted-foreground leading-relaxed mb-8">
             Streamline how you qualify, track, and support long-term exit prospects with tools designed specifically for the M&A workflow.
           </p>
+          <DualCTA variant="centered" />
         </div>
 
         {/* Features Grid */}
