@@ -44,7 +44,7 @@ export function FeaturesSection() {
             <span className="text-primary">M&A Professionals</span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            ExitClarity streamlines how you qualify, track, and support long-term exit prospects with tools designed specifically for the M&A workflow.
+            Streamline how you qualify, track, and support long-term exit prospects with tools designed specifically for the M&A workflow.
           </p>
         </div>
 
