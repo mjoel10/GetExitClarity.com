@@ -725,7 +725,7 @@ All colors MUST be HSL.
 
   /* Progress Dashboard Styles */
   .dashboard-container {
-    background: white;
+    background: white !important;
     border-radius: 20px;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
     width: 100%;
@@ -734,6 +734,8 @@ All colors MUST be HSL.
     position: relative;
     overflow: visible;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .dashboard-container::before {
@@ -745,47 +747,50 @@ All colors MUST be HSL.
     height: 4px;
     background: linear-gradient(90deg, #3b82f6, #06b6d4, #10b981);
     z-index: 1;
+    border-radius: 20px 20px 0 0;
   }
 
   .dashboard-container .floating-badge {
-    position: absolute;
-    background: white;
-    border-radius: 8px;
-    padding: 6px 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    font-size: 11px;
-    font-weight: 600;
-    animation: float 6s ease-in-out infinite;
-    z-index: 10;
-    white-space: nowrap;
+    position: absolute !important;
+    background: white !important;
+    border-radius: 8px !important;
+    padding: 6px 10px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    animation: float 6s ease-in-out infinite !important;
+    z-index: 100 !important;
+    white-space: nowrap !important;
   }
 
   .dashboard-container .badge-score {
-    top: 15px;
-    right: -20px;
-    background: linear-gradient(135deg, #06b6d4, #0891b2);
-    color: white;
-    animation-delay: 0s;
+    top: 15px !important;
+    right: -20px !important;
+    background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+    color: white !important;
+    animation-delay: 0s !important;
   }
 
   .dashboard-container .badge-clients {
-    bottom: 60px;
-    left: -25px;
-    color: #3b82f6;
-    animation-delay: 3s;
+    bottom: 60px !important;
+    left: -25px !important;
+    color: #3b82f6 !important;
+    animation-delay: 3s !important;
   }
 
   .dashboard-container .badge-alerts {
-    top: 45%;
-    right: -25px;
-    color: #10b981;
-    animation-delay: 1.5s;
+    top: 45% !important;
+    right: -25px !important;
+    color: #10b981 !important;
+    animation-delay: 1.5s !important;
   }
 
   .dashboard-header {
-    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-    padding: 16px 20px;
-    border-bottom: 1px solid #e5e7eb;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0) !important;
+    padding: 16px 20px !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    position: relative !important;
+    z-index: 2 !important;
   }
 
   .dashboard-header .header-top {
@@ -817,7 +822,11 @@ All colors MUST be HSL.
   }
 
   .dashboard-content {
-    padding: 20px;
+    padding: 20px !important;
+    position: relative !important;
+    z-index: 2 !important;
+    background: white !important;
+    flex: 1 !important;
   }
 
   .dashboard-container .stats-grid {
@@ -1006,6 +1015,8 @@ All colors MUST be HSL.
     color: white;
     position: relative;
     overflow: hidden;
+    z-index: 2;
+    border-radius: 0 0 20px 20px;
   }
 
   .action-bar::before {
