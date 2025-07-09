@@ -11,7 +11,7 @@ export default function StrategicReportCard() {
         <div className="header-top">
         </div>
         <h1 className="document-title">Comprehensive Exit Readiness & Valuation Report</h1>
-        <div className="company-info">TechFlow Solutions • Manufacturing Technology • $8M Revenue • January 2025</div>
+        <div className="company-info">TechFlow Solutions • Manufacturing Tech • $8M Revenue • Jan 2025</div>
       </div>
 
       {/* Document Content */}
