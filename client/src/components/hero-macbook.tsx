@@ -40,79 +40,87 @@ export default function HeroMacBook() {
                       <div className="item-icon completed">✓</div>
                       <div className="item-content">
                         <div className="item-title">Business Overview</div>
-                        <div className="item-step">Step 1 of 11</div>
+                        <div className="item-step">Step 1 of 11 • Contact information & business details</div>
                       </div>
                     </div>
 
                     <div className="assessment-item completed">
                       <div className="item-icon completed">✓</div>
                       <div className="item-content">
-                        <div className="item-title">Financial Health</div>
-                        <div className="item-step">Step 2 of 11</div>
+                        <div className="item-title">Exit Goals & Timeline</div>
+                        <div className="item-step">Step 2 of 11 • Your exit objectives and timeline</div>
                       </div>
                     </div>
 
                     <div className="assessment-item completed">
                       <div className="item-icon completed">✓</div>
                       <div className="item-content">
-                        <div className="item-title">Operations & Systems</div>
-                        <div className="item-step">Step 3 of 11</div>
+                        <div className="item-title">Personal & Emotional Readiness</div>
+                        <div className="item-step">Step 3 of 11 • Personal preparedness for exit</div>
                       </div>
                     </div>
 
                     <div className="assessment-item completed">
                       <div className="item-icon completed">✓</div>
                       <div className="item-content">
-                        <div className="item-title">Management Team</div>
-                        <div className="item-step">Step 4 of 11</div>
+                        <div className="item-title">Financial Quality</div>
+                        <div className="item-step">Step 4 of 11 • Revenue stability & profitability</div>
                       </div>
                     </div>
 
                     <div className="assessment-item completed">
                       <div className="item-icon completed">✓</div>
                       <div className="item-content">
-                        <div className="item-title">Market Position</div>
-                        <div className="item-step">Step 5 of 11</div>
+                        <div className="item-title">Operational Maturity</div>
+                        <div className="item-step">Step 5 of 11 • Systems, processes & scalability</div>
                       </div>
                     </div>
 
                     <div className="assessment-item completed">
                       <div className="item-icon completed">✓</div>
                       <div className="item-content">
-                        <div className="item-title">Customer Base</div>
-                        <div className="item-step">Step 6 of 11</div>
+                        <div className="item-title">Documentation Preparedness</div>
+                        <div className="item-step">Step 6 of 11 • Records, contracts & compliance</div>
                       </div>
                     </div>
 
                     <div className="assessment-item completed">
                       <div className="item-icon completed">✓</div>
                       <div className="item-content">
-                        <div className="item-title">Legal & Compliance</div>
-                        <div className="item-step">Step 7 of 11</div>
+                        <div className="item-title">Team & Transition Risk</div>
+                        <div className="item-step">Step 7 of 11 • Employment & succession planning</div>
                       </div>
                     </div>
 
                     <div className="assessment-item current">
                       <div className="item-icon current">8</div>
                       <div className="item-content">
-                        <div className="item-title">Owner Readiness</div>
-                        <div className="item-step">Step 8 of 11</div>
+                        <div className="item-title">Previous M&A Experience</div>
+                        <div className="item-step">Step 8 of 11 • Previous experience & preparation approach</div>
                       </div>
                     </div>
 
                     <div className="assessment-item pending">
                       <div className="item-icon pending">9</div>
                       <div className="item-content">
-                        <div className="item-title">Strategic Options</div>
-                        <div className="item-step">Step 9 of 11</div>
+                        <div className="item-title">Representation & Market Strategy</div>
+                        <div className="item-step">Step 9 of 11 • Advisory experience & market knowledge</div>
                       </div>
                     </div>
 
                     <div className="assessment-item pending">
                       <div className="item-icon pending">10</div>
                       <div className="item-content">
-                        <div className="item-title">Risk Assessment</div>
-                        <div className="item-step">Step 10 of 11</div>
+                        <div className="item-title">Deal Structure & Risk</div>
+                        <div className="item-step">Step 10 of 11 • Deal terms & risk preferences</div>
+                      </div>
+                    </div>
+
+                    <div className="assessment-item pending">
+                      <div className="item-icon pending">11</div>
+                      <div className="item-content">
+                        <div className="item-title">Business Continuity & Post-Sale</div>
+                        <div className="item-step">Step 11 of 11 • Operations management & exit planning</div>
                       </div>
                     </div>
                   </div>
