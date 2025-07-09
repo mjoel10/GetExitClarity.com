@@ -61,6 +61,9 @@ export function HeroSection() {
 
           {/* Right Column - MacBook Assessment Interface */}
           <div className="relative">
+            {/* Subtle blue background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/8 to-accent/5 rounded-2xl blur-sm"></div>
+            
             <div className="relative z-10">
               <HeroMacBook />
             </div>
