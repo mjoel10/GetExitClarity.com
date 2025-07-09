@@ -4,10 +4,12 @@ import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
 export default function ProgressDashboard() {
   return (
     <div className="dashboard-container">
-      {/* Floating Badges */}
-      <div className="floating-badge badge-score">92% Ready</div>
-      <div className="floating-badge badge-clients">48 Reports</div>
-      <div className="floating-badge badge-alerts">⚡ 3 Alerts</div>
+      {/* Main Dashboard Content */}
+      <div className="dashboard-inner">
+        {/* Floating Badges */}
+        <div className="floating-badge badge-score">92% Ready</div>
+        <div className="floating-badge badge-clients">48 Reports</div>
+        <div className="floating-badge badge-alerts">⚡ 3 Alerts</div>
 
       {/* Header */}
       <div className="dashboard-header">
@@ -91,24 +93,25 @@ export default function ProgressDashboard() {
         </div>
       </div>
 
-      {/* Action Bar */}
-      <div className="action-bar">
-        <div className="action-content">
-          <div className="action-stats">
-            <div className="action-stat">
-              <div className="action-number">3x</div>
-              <div className="action-label">Faster Progress</div>
+        {/* Action Bar */}
+        <div className="action-bar">
+          <div className="action-content">
+            <div className="action-stats">
+              <div className="action-stat">
+                <div className="action-number">3x</div>
+                <div className="action-label">Faster Progress</div>
+              </div>
+              <div className="action-stat">
+                <div className="action-number">85%</div>
+                <div className="action-label">Time Saved</div>
+              </div>
+              <div className="action-stat">
+                <div className="action-number">95%</div>
+                <div className="action-label">Client Success</div>
+              </div>
             </div>
-            <div className="action-stat">
-              <div className="action-number">85%</div>
-              <div className="action-label">Time Saved</div>
-            </div>
-            <div className="action-stat">
-              <div className="action-number">95%</div>
-              <div className="action-label">Client Success</div>
-            </div>
+            <button className="action-button">View All</button>
           </div>
-          <button className="action-button">View All</button>
         </div>
       </div>
     </div>

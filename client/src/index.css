@@ -725,20 +725,24 @@ All colors MUST be HSL.
 
   /* Progress Dashboard Styles */
   .dashboard-container {
-    background: white !important;
+    background: white;
     border-radius: 20px;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
     width: 100%;
-    max-width: 480px;
-    height: 600px;
+    max-width: 520px;
     position: relative;
     overflow: visible;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
   }
 
-  .dashboard-container::before {
+  .dashboard-inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: white;
+  }
+
+  .dashboard-inner::before {
     content: '';
     position: absolute;
     top: 0;
@@ -747,57 +751,53 @@ All colors MUST be HSL.
     height: 4px;
     background: linear-gradient(90deg, #3b82f6, #06b6d4, #10b981);
     z-index: 1;
-    border-radius: 20px 20px 0 0;
   }
 
   .dashboard-container .floating-badge {
-    position: absolute !important;
-    background: white !important;
-    border-radius: 8px !important;
-    padding: 6px 10px !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
-    font-size: 11px !important;
-    font-weight: 600 !important;
-    animation: float 6s ease-in-out infinite !important;
-    z-index: 100 !important;
-    white-space: nowrap !important;
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    padding: 10px 14px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    font-weight: 600;
+    animation: float 6s ease-in-out infinite;
+    z-index: 10;
   }
 
   .dashboard-container .badge-score {
-    top: 15px !important;
-    right: -20px !important;
-    background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
-    color: white !important;
-    animation-delay: 0s !important;
+    top: 20px;
+    right: -30px;
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    color: white;
+    animation-delay: 0s;
   }
 
   .dashboard-container .badge-clients {
-    bottom: 60px !important;
-    left: -25px !important;
-    color: #3b82f6 !important;
-    animation-delay: 3s !important;
+    bottom: 40px;
+    left: -35px;
+    color: #3b82f6;
+    animation-delay: 3s;
   }
 
   .dashboard-container .badge-alerts {
-    top: 45% !important;
-    right: -25px !important;
-    color: #10b981 !important;
-    animation-delay: 1.5s !important;
+    top: 50%;
+    right: -40px;
+    color: #10b981;
+    animation-delay: 1.5s;
   }
 
   .dashboard-header {
-    background: linear-gradient(135deg, #f8fafc, #e2e8f0) !important;
-    padding: 16px 20px !important;
-    border-bottom: 1px solid #e5e7eb !important;
-    position: relative !important;
-    z-index: 2 !important;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    padding: 24px 28px;
+    border-bottom: 1px solid #e5e7eb;
   }
 
   .dashboard-header .header-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
 
   .dashboard-header .user-info {
@@ -810,37 +810,33 @@ All colors MUST be HSL.
   }
 
   .dashboard-title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: #1f2937;
     margin-bottom: 4px;
   }
 
   .dashboard-subtitle {
-    font-size: 12px;
+    font-size: 13px;
     color: #6b7280;
   }
 
   .dashboard-content {
-    padding: 20px !important;
-    position: relative !important;
-    z-index: 2 !important;
-    background: white !important;
-    flex: 1 !important;
+    padding: 28px;
   }
 
   .dashboard-container .stats-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-bottom: 18px;
+    gap: 16px;
+    margin-bottom: 24px;
   }
 
   .dashboard-container .stat-card {
     background: #f9fafb;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
-    padding: 14px;
+    padding: 18px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -868,9 +864,9 @@ All colors MUST be HSL.
   }
 
   .dashboard-container .stat-number {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     position: relative;
     z-index: 2;
   }
@@ -899,16 +895,16 @@ All colors MUST be HSL.
   .dashboard-container .progress-section {
     background: #fafafa;
     border-radius: 16px;
-    padding: 18px;
+    padding: 24px;
     border: 1px solid #e5e7eb;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
   .dashboard-container .section-title {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     color: #374151;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -929,13 +925,13 @@ All colors MUST be HSL.
   .client-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
   .client-item {
     background: white;
     border-radius: 10px;
-    padding: 12px;
+    padding: 16px;
     border: 1px solid #e5e7eb;
     transition: all 0.2s ease;
   }
@@ -1011,12 +1007,74 @@ All colors MUST be HSL.
 
   .action-bar {
     background: linear-gradient(135deg, #1e40af, #3b82f6);
-    padding: 16px 20px;
+    padding: 20px 28px;
     color: white;
     position: relative;
     overflow: hidden;
+  }
+
+  .action-bar::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .action-content {
+    position: relative;
     z-index: 2;
-    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .action-stats {
+    display: flex;
+    gap: 24px;
+  }
+
+  .action-stat {
+    text-align: center;
+  }
+
+  .action-number {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .action-label {
+    font-size: 10px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .action-button {
+    background: white;
+    color: #1e40af;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .action-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
   }
 
   .action-bar::before {
