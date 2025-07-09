@@ -1,4 +1,5 @@
 import React from 'react';
+import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
 
 export default function AssessmentCard() {
   return (
@@ -9,8 +10,7 @@ export default function AssessmentCard() {
 
       {/* Header */}
       <div className="card-header">
-        <div className="logo-icon">✓</div>
-        <div className="logo-text">ExitClarity</div>
+        <img src={exitClarityLogo} alt="ExitClarity" className="logo-image" />
       </div>
 
       {/* Progress */}

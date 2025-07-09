@@ -172,23 +172,9 @@ All colors MUST be HSL.
     margin-bottom: 24px;
   }
 
-  .logo-icon {
-    width: 32px;
-    height: 32px;
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-  }
-
-  .logo-text {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1e40af;
+  .logo-image {
+    height: 24px;
+    width: auto;
   }
 
   /* Progress Section */

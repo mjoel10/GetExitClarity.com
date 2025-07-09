@@ -1,4 +1,5 @@
 import React from 'react';
+import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
 
 export default function StrategicReportCard() {
   return (
@@ -11,10 +12,7 @@ export default function StrategicReportCard() {
       {/* Header */}
       <div className="report-header">
         <div className="header-top">
-          <div className="logo">
-            <div className="logo-icon">✓</div>
-            ExitClarity
-          </div>
+          <img src={exitClarityLogo} alt="ExitClarity" className="logo-image" />
           <div className="report-id">Report #168</div>
         </div>
         <div className="report-title">Strategic Analysis Report</div>
