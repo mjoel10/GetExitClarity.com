@@ -9,19 +9,19 @@ export function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
             <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-            Trusted by 500+ M&A Professionals
+            30+ Years M&A Experience
           </div>
           
           {/* Main Headlines */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Turn Exit Conversations Into{" "}
+            Turn Exit Readiness Into{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Strategic Wins
+              High-Confidence Deals
             </span>
           </h1>
           
           <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            ExitClarity delivers structured intelligence that helps M&A professionals systematically qualify prospects and empowers business owners to maximize exit value.
+            ExitClarity systematizes and scales early owner engagement by turning the overwhelming thought of selling into a clear, actionable process.
           </p>
           
           {/* CTA Buttons */}
@@ -48,16 +48,16 @@ export function HeroSection() {
           {/* Key Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">85%</div>
-              <p className="text-sm text-muted-foreground">Higher deal success rate</p>
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">30+</div>
+              <p className="text-sm text-muted-foreground">Years M&A Experience</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">$1.2M</div>
-              <p className="text-sm text-muted-foreground">Average valuation increase</p>
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">11</div>
+              <p className="text-sm text-muted-foreground">Readiness Factors</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">4.8/5</div>
-              <p className="text-sm text-muted-foreground">Client satisfaction</p>
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">500+</div>
+              <p className="text-sm text-muted-foreground">Deals Analyzed</p>
             </div>
           </div>
         </div>

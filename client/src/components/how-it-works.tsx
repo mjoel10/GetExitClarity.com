@@ -51,7 +51,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-white">
+    <section id="how-it-works" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -60,8 +60,8 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold text-gray-900 mb-6">How ExitClarity Works</h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <h2 className="text-5xl font-bold text-foreground mb-6">How ExitClarity Works</h2>
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Built on 30+ years of M&A experience, our 11-factor assessment delivers strategic clarity, risk analysis, and actionable guidance for every stakeholder.
           </p>
         </motion.div>
@@ -81,14 +81,14 @@ export default function HowItWorks() {
                   <div className={`w-10 h-10 ${step.color} text-white rounded-lg flex items-center justify-center font-bold text-lg mr-4`}>
                     {step.number}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{step.title}</h3>
+                  <h3 className="text-2xl font-bold text-foreground">{step.title}</h3>
                 </div>
-                <p className="text-gray-600 mb-6">{step.description}</p>
+                <p className="text-muted-foreground mb-6">{step.description}</p>
                 <div className="grid grid-cols-2 gap-4">
                   {step.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700 text-sm">{feature}</span>
+                      <span className="text-foreground text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>

@@ -32,17 +32,17 @@ export function SolutionSection() {
   const ownerFeatures = [
     {
       icon: Shield,
-      title: "Understand if and when you're ready to sell",
+      title: "Understand if and when they're ready to sell",
       description: "Clear GO/FIX/WAIT recommendations based on data"
     },
     {
       icon: TrendingUp,
-      title: "Get a personalized roadmap to improve valuation",
+      title: "Personalized roadmap to improve valuation",
       description: "Actionable steps with ROI forecasts"
     },
     {
       icon: CheckCircle,
-      title: "Know your deal risks before a buyer does",
+      title: "Know their deal risks before a buyer does",
       description: "Identify and address vulnerabilities early"
     },
     {

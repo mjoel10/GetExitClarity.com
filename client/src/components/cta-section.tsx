@@ -52,7 +52,7 @@ export function CTASection() {
               </li>
               <li className="flex items-center space-x-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                <span>Generate white-labeled reports to build trust early</span>
+                <span>Generate co-brand strategic reports to build trust early</span>
               </li>
               <li className="flex items-center space-x-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
@@ -81,11 +81,11 @@ export function CTASection() {
               </li>
               <li className="flex items-center space-x-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                <span>Identify and address critical deal risks early</span>
+                <span>Identify and mitigate deal-killing risks early</span>
               </li>
               <li className="flex items-center space-x-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                <span>Build confidence in your exit timing and strategy</span>
+                <span>Build confidence and control in your exit process</span>
               </li>
             </ul>
           </div>
