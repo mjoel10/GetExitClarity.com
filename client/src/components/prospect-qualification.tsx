@@ -34,7 +34,7 @@ export function ProspectQualification() {
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Prospect Qualification at Scale
+            Key Benefits
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Transform your business development approach with systematic prospect evaluation and relationship building tools.
