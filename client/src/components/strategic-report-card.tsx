@@ -1,5 +1,4 @@
 import React from 'react';
-import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
 
 export default function StrategicReportCard() {
   return (
@@ -11,9 +10,6 @@ export default function StrategicReportCard() {
       {/* Document Header */}
       <div className="new-report-header">
         <div className="header-top">
-          <div className="logo-section">
-            <img src={exitClarityLogo} alt="ExitClarity" className="logo-image" />
-          </div>
           <div className="report-type">STRATEGIC ANALYSIS</div>
         </div>
         <h1 className="document-title">Comprehensive Exit Readiness & Valuation Report</h1>
