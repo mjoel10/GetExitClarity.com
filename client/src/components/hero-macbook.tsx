@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function HeroMacBook() {
   return (
-    <div className="relative w-full max-w-4xl mx-auto" style={{ perspective: '1200px' }}>
+    <div className="hero-macbook-container" style={{ perspective: '1200px' }}>
       {/* Realistic MacBook */}
       <motion.div
         className="macbook"
@@ -134,7 +134,7 @@ export default function HeroMacBook() {
 
       {/* Subtle Assessment Complete Indicator */}
       <motion.div
-        className="absolute bottom-[-20px] right-[50px] z-10"
+        className="assessment-complete-wrapper"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
