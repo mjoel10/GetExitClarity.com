@@ -104,7 +104,9 @@ export default function HowItWorks() {
                 ) : index === 1 ? (
                   <StrategicReportCard />
                 ) : (
-                  <ProgressDashboard />
+                  <div className="overflow-visible" style={{ padding: '0 30px' }}>
+                    <ProgressDashboard />
+                  </div>
                 )}
               </div>
             </motion.div>
