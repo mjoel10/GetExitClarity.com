@@ -1383,11 +1383,10 @@ All colors MUST be HSL.
 
   .document-title {
     font-size: 20px;
-    font-weight: 800;
-    color: #111827;
+    font-weight: 700;
+    color: #1f2937;
     margin-bottom: 8px;
     line-height: 1.2;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   }
 
   .new-report-header .company-info {
