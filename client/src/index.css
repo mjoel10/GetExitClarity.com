@@ -1271,7 +1271,7 @@ All colors MUST be HSL.
 
   .new-report-header {
     background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-    padding: 28px 40px;
+    padding: 20px 40px;
     border-bottom: 2px solid #e5e7eb;
     position: relative;
   }
@@ -1280,7 +1280,7 @@ All colors MUST be HSL.
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .new-report-header .logo-section {
@@ -1290,9 +1290,8 @@ All colors MUST be HSL.
   }
 
   .new-report-header .logo-image {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
+    height: 24px;
+    width: auto;
   }
 
   .new-report-header .logo-text {

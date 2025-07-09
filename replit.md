@@ -6,7 +6,10 @@ This is a React-based landing page for ExitClarity, a B2B SaaS platform that hel
 
 ## Recent Changes
 
-### January 2025 - Dashboard Layout Optimization and Badge Positioning
+### January 2025 - Logo Sizing Standardization and Layout Refinements
+- **Logo Standardization**: Standardized ExitClarity logo sizing across all components to 24px height with auto width
+- **Strategic Report**: Removed purple "ExitClarity" text from strategic report header for cleaner appearance
+- **Logo Consistency**: Ensured all logo instances (progress dashboard, assessment card, strategic report) use identical sizing
 - **Dashboard Layout**: Optimized ProgressDashboard to be shorter and wider (720px vs 520px) for better space utilization
 - **Stats Grid**: Changed from 2x2 to 4x1 layout displaying all stats horizontally in one row
 - **Floating Badges**: Fixed positioning of "48 Reports" and "3 Alerts" badges to prevent cutoff at window edges
