@@ -4,32 +4,32 @@ export function FeaturesSection() {
   const features = [
     {
       icon: Target,
-      title: "Unlimited Client Assessments",
+      title: "Scale Your Practice Instantly",
       description: "Unlimited client assessments with professional-grade reporting"
     },
     {
       icon: BarChart3,
-      title: "Pipeline Visibility Dashboard",
+      title: "Deal Flow Intelligence",
       description: "Pipeline visibility dashboard to track client readiness across your portfolio"
     },
     {
       icon: FileText,
-      title: "Expert Analysis & Commentary",
+      title: "30+ Years of M&A Wisdom",
       description: "Expert analysis and commentary from experienced M&A professionals"
     },
     {
       icon: Settings,
-      title: "Co-Branded Reports",
+      title: "White-Label Authority Building",
       description: "Co-branded reports that position your firm alongside ExitClarity as trusted exit-readiness experts"
     },
     {
       icon: Database,
-      title: "Systematic Preparation Tools",
+      title: "Client Success Accelerator",
       description: "Systematic preparation tools to improve client outcomes before market entry"
     },
     {
       icon: Zap,
-      title: "Automated Client Engagement",
+      title: "Zero-Touch Nurturing Engine",
       description: "Automated nurturing sequences that maintain engagement without manual effort"
     }
   ];
