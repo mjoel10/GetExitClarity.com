@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/hero-section";
 import { ProblemSection } from "@/components/problem-section";
 import { SolutionSection } from "@/components/solution-section";
 import HowItWorks from "@/components/how-it-works";
+import { CTASection } from "@/components/cta-section";
 
 export default function Landing() {
   return (
@@ -13,6 +14,7 @@ export default function Landing() {
         <ProblemSection />
         <SolutionSection />
         <HowItWorks />
+        <CTASection />
       </div>
     </div>
   );
