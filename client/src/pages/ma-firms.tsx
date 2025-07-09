@@ -12,7 +12,6 @@ export default function MAFirms() {
       <div className="pt-20">
         <FeaturesSection />
         <BusinessCaseROI />
-        <DualCTA />
         <EnhancedDealPreparation />
         <PracticeBenefits />
         <DualCTA />
