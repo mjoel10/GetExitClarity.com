@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function HeroMacBook() {
   return (
-    <div className="relative w-full max-w-4xl mx-auto" style={{ perspective: '1200px' }}>
+    <div className="relative w-full max-w-4xl mx-auto macbook-container">
       {/* Realistic MacBook */}
       <motion.div
         className="macbook"

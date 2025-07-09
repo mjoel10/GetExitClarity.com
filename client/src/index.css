@@ -1060,6 +1060,11 @@ All colors MUST be HSL.
   }
 
   /* Hero MacBook Styles */
+  .macbook-container {
+    perspective: 1200px;
+    perspective-origin: center center;
+  }
+
   .macbook {
     position: relative;
     transform-style: preserve-3d;
@@ -1073,6 +1078,7 @@ All colors MUST be HSL.
     border-radius: 12px;
     position: relative;
     transform-origin: bottom center;
+    transform-style: preserve-3d;
     box-shadow: 
       0 0 0 2px #dadce0,
       0 20px 40px rgba(0, 0, 0, 0.3),
