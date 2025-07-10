@@ -3,7 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertDemoRequestSchema } from "@shared/schema";
 import { z } from "zod";
-import { sendSampleReportNotification, sendContactFormNotification } from "./email";
+import { sendNotificationEmail } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Demo request endpoint
@@ -12,23 +12,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertDemoRequestSchema.parse(req.body);
       const demoRequest = await storage.createDemoRequest(validatedData);
       
-      // Send email notification based on request type
-      if (validatedData.requestType === 'sample_report') {
-        await sendSampleReportNotification({
-          name: validatedData.name,
-          email: validatedData.email,
-          company: validatedData.company || 'Not provided',
-          audienceType: validatedData.audienceType || 'Not specified'
-        });
-      } else {
-        await sendContactFormNotification({
-          name: validatedData.name,
-          email: validatedData.email,
-          company: validatedData.company,
-          message: validatedData.message || 'No message provided',
-          requestType: validatedData.requestType
-        });
-      }
+      // Send email notification
+      await sendNotificationEmail({
+        name: validatedData.name,
+        email: validatedData.email,
+        company: validatedData.company || 'Not provided',
+        requestType: validatedData.requestType,
+        audienceType: validatedData.audienceType,
+        message: validatedData.message
+      });
       
       res.json({ success: true, data: demoRequest });
     } catch (error) {

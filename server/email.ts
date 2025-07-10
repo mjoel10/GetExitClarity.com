@@ -1,152 +1,75 @@
-import { MailService } from '@sendgrid/mail';
+import sgMail from '@sendgrid/mail';
 
 if (!process.env.SENDGRID_API_KEY) {
-  console.warn("SENDGRID_API_KEY environment variable not set - email notifications will be disabled");
+  throw new Error("SENDGRID_API_KEY environment variable must be set");
 }
 
-const mailService = new MailService();
-if (process.env.SENDGRID_API_KEY) {
-  mailService.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+interface EmailNotificationData {
+  name: string;
+  email: string;
+  company: string;
+  requestType: 'demo' | 'sample_report' | 'assessment';
+  audienceType?: 'ma-firm' | 'business-owner';
+  message?: string;
 }
 
-interface EmailParams {
-  to: string;
-  from: string;
-  subject: string;
-  text?: string;
-  html?: string;
-}
-
-export async function sendEmail(params: EmailParams): Promise<boolean> {
-  if (!process.env.SENDGRID_API_KEY) {
-    console.log("Email notification skipped - SendGrid API key not configured");
-    return false;
-  }
-
+export async function sendNotificationEmail(data: EmailNotificationData): Promise<boolean> {
   try {
-    await mailService.send({
-      to: params.to,
-      from: params.from,
-      subject: params.subject,
-      text: params.text,
-      html: params.html,
-    });
-    console.log(`Email sent successfully to ${params.to}`);
+    const requestTypeLabels = {
+      demo: 'Demo Request',
+      sample_report: 'Sample Report Download',
+      assessment: 'Assessment Request'
+    };
+
+    const audienceTypeLabels = {
+      'ma-firm': 'M&A Firm Professional',
+      'business-owner': 'Business Owner'
+    };
+
+    const subject = `New ${requestTypeLabels[data.requestType]} - ${data.name}`;
+    
+    let htmlContent = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <h2 style="color: #1e40af; margin-bottom: 20px;">New ${requestTypeLabels[data.requestType]}</h2>
+        
+        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #1e40af;">
+          <h3 style="margin-top: 0; color: #334155;">Contact Information</h3>
+          <p><strong>Name:</strong> ${data.name}</p>
+          <p><strong>Email:</strong> ${data.email}</p>
+          <p><strong>Company:</strong> ${data.company}</p>
+          ${data.audienceType ? `<p><strong>Audience Type:</strong> ${audienceTypeLabels[data.audienceType]}</p>` : ''}
+          ${data.message ? `
+            <h3 style="color: #334155;">Message</h3>
+            <p style="background-color: white; padding: 15px; border-radius: 4px; border: 1px solid #e2e8f0;">${data.message}</p>
+          ` : ''}
+        </div>
+        
+        <div style="margin-top: 20px; padding: 15px; background-color: #ecfdf5; border-radius: 8px;">
+          <p style="margin: 0; color: #166534;">
+            <strong>Next Steps:</strong> Please follow up with this lead within 24 hours for optimal conversion.
+          </p>
+        </div>
+        
+        <div style="margin-top: 30px; text-align: center; color: #64748b; font-size: 14px;">
+          <p>This notification was sent automatically from the ExitClarity website.</p>
+        </div>
+      </div>
+    `;
+
+    const msg = {
+      to: 'info@exitclarity.io',
+      from: 'info@exitclarity.io', // This should be verified in SendGrid
+      subject: subject,
+      html: htmlContent,
+    };
+
+    await sgMail.send(msg);
+    console.log(`Email notification sent for ${data.requestType} request from ${data.name}`);
     return true;
   } catch (error) {
     console.error('SendGrid email error:', error);
     return false;
   }
-}
-
-export async function sendSampleReportNotification(formData: {
-  name: string;
-  email: string;
-  company: string;
-  audienceType: string;
-}) {
-  const subject = "New Sample Report Download - ExitClarity";
-  const text = `
-New sample report download request:
-
-Name: ${formData.name}
-Email: ${formData.email}
-Company: ${formData.company}
-Audience Type: ${formData.audienceType}
-
-This lead was generated from the ExitClarity sample report form.
-  `;
-  
-  const html = `
-    <h2>New Sample Report Download - ExitClarity</h2>
-    <p><strong>A new user has downloaded the sample report!</strong></p>
-    
-    <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f9f9f9;"><strong>Name:</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px;">${formData.name}</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f9f9f9;"><strong>Email:</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px;">${formData.email}</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f9f9f9;"><strong>Company:</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px;">${formData.company}</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f9f9f9;"><strong>Audience Type:</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px;">${formData.audienceType}</td>
-      </tr>
-    </table>
-    
-    <p><em>This lead was generated from the ExitClarity sample report form.</em></p>
-  `;
-
-  return await sendEmail({
-    to: "info@exitclarity.io",
-    from: "noreply@exitclarity.io", // You'll need to verify this domain in SendGrid
-    subject,
-    text,
-    html
-  });
-}
-
-export async function sendContactFormNotification(formData: {
-  name: string;
-  email: string;
-  company?: string;
-  message: string;
-  requestType: string;
-}) {
-  const subject = "New Contact Form Submission - ExitClarity";
-  const text = `
-New contact form submission:
-
-Name: ${formData.name}
-Email: ${formData.email}
-Company: ${formData.company || 'Not provided'}
-Request Type: ${formData.requestType}
-Message: ${formData.message}
-
-This lead was generated from the ExitClarity contact form.
-  `;
-  
-  const html = `
-    <h2>New Contact Form Submission - ExitClarity</h2>
-    <p><strong>A new contact form has been submitted!</strong></p>
-    
-    <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f9f9f9;"><strong>Name:</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px;">${formData.name}</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f9f9f9;"><strong>Email:</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px;">${formData.email}</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f9f9f9;"><strong>Company:</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px;">${formData.company || 'Not provided'}</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f9f9f9;"><strong>Request Type:</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px;">${formData.requestType}</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f9f9f9;"><strong>Message:</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px;">${formData.message}</td>
-      </tr>
-    </table>
-    
-    <p><em>This lead was generated from the ExitClarity contact form.</em></p>
-  `;
-
-  return await sendEmail({
-    to: "info@exitclarity.io",
-    from: "noreply@exitclarity.io", // You'll need to verify this domain in SendGrid
-    subject,
-    text,
-    html
-  });
 }
