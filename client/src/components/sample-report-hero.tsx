@@ -10,6 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { FileText, Download, ArrowRight, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -26,6 +27,7 @@ export function SampleReportHero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
+  const queryClient = useQueryClient();
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -37,10 +39,50 @@ export function SampleReportHero() {
     },
   });
 
+  const createDemoRequestMutation = useMutation({
+    mutationFn: async (requestData: FormData) => {
+      const response = await fetch("/api/demo-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: requestData.name,
+          email: requestData.email,
+          company: requestData.company,
+          requestType: "sample_report",
+          audienceType: requestData.audienceType,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit request");
+      }
+
+      return response.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/demo-requests"] });
+    },
+  });
+
+  const downloadPDF = () => {
+    // Create a link element to trigger the download
+    const link = document.createElement("a");
+    link.href = "/ExitClarity-Sample-Report.pdf";
+    link.download = "ExitClarity-Sample-Report.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const onSubmit = async (data: FormData) => {
     try {
-      // Here you would typically send the data to your backend
-      console.log("Form submitted:", data);
+      // Submit the form data to the database
+      await createDemoRequestMutation.mutateAsync(data);
+      
+      // Trigger PDF download
+      downloadPDF();
       
       // Show success state
       setIsSubmitted(true);
@@ -48,7 +90,7 @@ export function SampleReportHero() {
       // Show success toast
       toast({
         title: "Success!",
-        description: "Your sample report has been sent to your email.",
+        description: "Your sample report is downloading now!",
       });
 
       // Auto-close modal after 3 seconds
@@ -179,7 +221,7 @@ export function SampleReportHero() {
             <div className="text-center py-8">
               <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
               <p className="text-lg text-muted-foreground mb-4">
-                Your sample report has been sent to your email address.
+                Your sample report is downloading now!
               </p>
               <p className="text-sm text-muted-foreground">
                 This window will close automatically in a few seconds.

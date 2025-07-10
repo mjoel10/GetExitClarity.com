@@ -6,6 +6,12 @@ This is a React-based landing page for ExitClarity, a B2B SaaS platform that hel
 
 ## Recent Changes
 
+### January 2025 - ExitClarity Sample Report PDF Integration
+- **PDF Download Functionality**: Integrated actual ExitClarity Sample Report PDF file for download when users complete the sample report form
+- **Lead Capture Enhancement**: Users now provide contact information (name, email, company, audience type) before accessing the PDF download
+- **Database Persistence**: All sample report requests are saved to PostgreSQL database with audience type tracking
+- **User Experience**: Streamlined download process with immediate PDF download after form submission plus success notifications
+
 ### January 2025 - Hero Section Mobile Responsive Implementation
 - **Mobile Layout Reordering**: Implemented different content flow for mobile vs desktop in hero section
 - **Desktop Layout**: Maintained original two-column grid (left: text content, right: MacBook visual)
