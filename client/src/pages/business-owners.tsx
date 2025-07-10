@@ -13,7 +13,7 @@ export default function BusinessOwners() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="pt-20">
+      <div>
         <OwnerBenefitsSection />
         
         <ExitClarityProcess />
