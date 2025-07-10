@@ -33,17 +33,9 @@ export default function Footer() {
                 alt="ExitClarity" 
                 style={{
                   height: '32px',
-                  width: 'auto',
-                  marginRight: '0.75rem'
+                  width: 'auto'
                 }}
               />
-              <span style={{
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                color: 'white'
-              }}>
-                ExitClarity
-              </span>
             </div>
             <p style={{
               color: 'rgba(255, 255, 255, 0.8)',
