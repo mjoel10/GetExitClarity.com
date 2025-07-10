@@ -1,5 +1,6 @@
-import { Target, BarChart3, TrendingUp, CheckCircle, Settings, Zap, Shield, DollarSign, Info, AlertTriangle, TrendingDown, Clock } from "lucide-react";
+import { Target, BarChart3, TrendingUp, CheckCircle, Settings, Zap, Shield, DollarSign, Info, AlertTriangle, TrendingDown, Clock, Calendar, FileText } from "lucide-react";
 import { useState } from "react";
+import { Link } from "wouter";
 
 export function ExitClarityProcess() {
   const [hoveredFactor, setHoveredFactor] = useState<number | null>(null);
@@ -93,17 +94,24 @@ export function ExitClarityProcess() {
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
             </div>
             
-            <div className="flex flex-wrap justify-center gap-4 relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
               {factors.map((factor, index) => (
                 <div 
                   key={index} 
-                  className="relative"
+                  className="relative group"
                   onMouseEnter={() => setHoveredFactor(index)}
                   onMouseLeave={() => setHoveredFactor(null)}
                 >
-                  <div className="bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 px-6 py-3 rounded-full text-sm font-semibold text-foreground hover:from-primary/20 hover:to-accent/20 transition-all duration-200 transform hover:scale-105 cursor-help flex items-center gap-2">
-                    {index + 1}. {factor}
-                    <Info className="h-3 w-3 text-primary/60" />
+                  <div className="bg-gradient-to-br from-white to-slate-50 border-2 border-primary/10 p-4 rounded-xl text-sm font-semibold text-foreground hover:border-primary/30 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 cursor-help">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                        {index + 1}
+                      </div>
+                      <Info className="h-4 w-4 text-primary/60 ml-auto" />
+                    </div>
+                    <div className="text-foreground font-medium leading-tight">
+                      {factor}
+                    </div>
                   </div>
                   
                   {/* Tooltip */}
@@ -123,19 +131,42 @@ export function ExitClarityProcess() {
                 </div>
               ))}
             </div>
+            
+            {/* CTA after 11 factors */}
+            <div className="text-center mt-12">
+              <p className="text-muted-foreground mb-6">Ready to assess your exit readiness?</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="https://calendly.com/exitclarity-info/30min" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  <Calendar className="h-5 w-5 mr-2" />
+                  Schedule Demo
+                </a>
+                <Link 
+                  href="/sample-report"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-foreground border-2 border-primary/20 font-semibold rounded-xl hover:border-primary hover:text-primary transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                >
+                  <FileText className="h-5 w-5 mr-2" />
+                  View Sample Report
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 2: Common Exit Challenges - White Background */}
-      <section className="py-24 bg-white relative">
+      {/* Section 2: Common Exit Challenges - Navy Background */}
+      <section className="py-24 bg-primary relative overflow-hidden">
         <div className="container mx-auto px-6">
           {/* Section Header */}
           <div className="text-center max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Common Exit Challenges
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-blue-100 leading-relaxed">
               Most business owners face these critical obstacles when preparing for exit. ExitClarity helps you identify and address them before they derail your transaction.
             </p>
           </div>
@@ -143,7 +174,7 @@ export function ExitClarityProcess() {
           {/* Challenge Cards */}
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-8 shadow-xl border-2 border-red-100 hover:border-red-200 transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <AlertTriangle className="h-8 w-8 text-white" />
@@ -153,7 +184,7 @@ export function ExitClarityProcess() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-3xl p-8 shadow-xl border-2 border-amber-100 hover:border-amber-200 transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <TrendingDown className="h-8 w-8 text-white" />
@@ -163,7 +194,7 @@ export function ExitClarityProcess() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 shadow-xl border-2 border-blue-100 hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <Clock className="h-8 w-8 text-white" />
@@ -177,19 +208,18 @@ export function ExitClarityProcess() {
         </div>
       </section>
 
-      {/* Section 3: Why Business Owners Choose ExitClarity - Blue Background */}
-      <section className="py-24 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-blue-700"></div>
+      {/* Section 3: Why Business Owners Choose ExitClarity - White Background */}
+      <section className="py-24 bg-white relative">
         <div className="container mx-auto px-6 relative">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Why Business Owners Choose{" "}
-              <span className="text-blue-200">
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 ExitClarity
               </span>
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-muted-foreground">
               Join the business owners who've gained clarity and confidence in their exit journey
             </p>
           </div>
@@ -198,7 +228,7 @@ export function ExitClarityProcess() {
           <div className="max-w-6xl mx-auto">
             {/* Benefits Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <CheckCircle className="h-8 w-8 text-white" />
@@ -208,7 +238,7 @@ export function ExitClarityProcess() {
                 </div>
               </div>
               
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-violet-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <Settings className="h-8 w-8 text-white" />
@@ -218,7 +248,7 @@ export function ExitClarityProcess() {
                 </div>
               </div>
               
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <Zap className="h-8 w-8 text-white" />
@@ -228,7 +258,7 @@ export function ExitClarityProcess() {
                 </div>
               </div>
               
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <Shield className="h-8 w-8 text-white" />
@@ -238,7 +268,7 @@ export function ExitClarityProcess() {
                 </div>
               </div>
               
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-1">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <DollarSign className="h-8 w-8 text-white" />

@@ -1,4 +1,4 @@
-import { CheckCircle, Target, TrendingUp, Shield, Users, DollarSign } from "lucide-react";
+import { CheckCircle, Target, TrendingUp, Shield, Users, DollarSign, Calendar, FileText } from "lucide-react";
 import { Link } from "wouter";
 
 export function OwnerBenefitsSection() {
@@ -52,9 +52,29 @@ export function OwnerBenefitsSection() {
               Before You Go to Market
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-xl text-muted-foreground leading-relaxed mb-8">
             ExitClarity helps owners understand where they stand, what they're worth, and how to move forward—on their own terms.
           </p>
+          
+          {/* CTA Section - Moved from bottom */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="https://calendly.com/exitclarity-info/30min" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              <Calendar className="h-5 w-5 mr-2" />
+              Schedule Demo
+            </a>
+            <Link 
+              href="/sample-report"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-foreground border-2 border-border font-semibold rounded-xl hover:border-primary hover:text-primary transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            >
+              <FileText className="h-5 w-5 mr-2" />
+              View Sample Report
+            </Link>
+          </div>
         </div>
 
         {/* Benefits Grid */}
@@ -85,7 +105,6 @@ export function OwnerBenefitsSection() {
             );
           })}
         </div>
-
 
       </div>
     </section>
