@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Mail, Phone, Calendar, Linkedin } from "lucide-react";
-import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
+import exitClarityLogo from "@assets/Exit Clarity Logo White_1752106228914.png";
 
 export default function Footer() {
   return (
