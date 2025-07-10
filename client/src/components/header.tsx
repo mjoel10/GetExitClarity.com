@@ -73,18 +73,18 @@ export default function Header() {
                   onMouseLeave={() => setIsPlatformDropdownOpen(false)}
                 >
                   <Link 
-                    href="/business-owners" 
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
-                    onClick={() => setIsPlatformDropdownOpen(false)}
-                  >
-                    For Business Owners
-                  </Link>
-                  <Link 
                     href="/ma-firms" 
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
                     onClick={() => setIsPlatformDropdownOpen(false)}
                   >
                     For M&A Firms
+                  </Link>
+                  <Link 
+                    href="/business-owners" 
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                    onClick={() => setIsPlatformDropdownOpen(false)}
+                  >
+                    For Business Owners
                   </Link>
                 </div>
               )}
@@ -136,18 +136,18 @@ export default function Header() {
               <div className="pl-4 space-y-2">
                 <div className="text-gray-800 font-medium">Platform</div>
                 <Link 
-                  href="/business-owners" 
-                  className="block text-gray-600 hover:text-primary transition-colors pl-4"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  For Business Owners
-                </Link>
-                <Link 
                   href="/ma-firms" 
                   className="block text-gray-600 hover:text-primary transition-colors pl-4"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   For M&A Firms
+                </Link>
+                <Link 
+                  href="/business-owners" 
+                  className="block text-gray-600 hover:text-primary transition-colors pl-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  For Business Owners
                 </Link>
               </div>
               
