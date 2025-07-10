@@ -41,14 +41,11 @@ export function ExitClarityProcess() {
             </p>
           </div>
 
-          {/* Timeline Process Steps */}
-          <div className="relative max-w-6xl mx-auto mb-20">
-            {/* Timeline Line */}
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 transform -translate-y-1/2 hidden lg:block"></div>
-            
-            <div className="grid lg:grid-cols-4 gap-8 lg:gap-4">
+          {/* Process Steps - Clean Grid */}
+          <div className="max-w-6xl mx-auto mb-20">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center shadow-lg lg:scale-110">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-xl">1</span>
                 </div>
                 <div className="pt-8">
@@ -57,8 +54,8 @@ export function ExitClarityProcess() {
                 </div>
               </div>
               
-              <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group lg:mt-12">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg lg:scale-110">
+              <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-xl">2</span>
                 </div>
                 <div className="pt-8">
@@ -68,7 +65,7 @@ export function ExitClarityProcess() {
               </div>
               
               <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg lg:scale-110">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-xl">3</span>
                 </div>
                 <div className="pt-8">
@@ -77,8 +74,8 @@ export function ExitClarityProcess() {
                 </div>
               </div>
               
-              <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group lg:mt-12">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center shadow-lg lg:scale-110">
+              <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-xl">4</span>
                 </div>
                 <div className="pt-8">
@@ -198,17 +195,11 @@ export function ExitClarityProcess() {
             </p>
           </div>
           
-          {/* Benefits - Circular Layout */}
-          <div className="max-w-5xl mx-auto relative">
-            {/* Center Circle */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-2xl z-10 hidden lg:flex">
-              <span className="text-white font-bold text-lg text-center leading-tight">Exit<br/>Success</span>
-            </div>
-            
-            {/* Benefit Cards in Circular Pattern */}
-            <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-              {/* Top Row */}
-              <div className="lg:col-start-2 bg-gradient-to-br from-white to-blue-50 rounded-2xl p-8 shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-2">
+          {/* Benefits - Clean Grid Layout */}
+          <div className="max-w-6xl mx-auto">
+            {/* Benefits Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-white to-blue-50 rounded-2xl p-8 shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <CheckCircle className="h-8 w-8 text-white" />
@@ -218,7 +209,6 @@ export function ExitClarityProcess() {
                 </div>
               </div>
               
-              {/* Middle Row */}
               <div className="bg-gradient-to-br from-white to-purple-50 rounded-2xl p-8 shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-violet-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -239,7 +229,6 @@ export function ExitClarityProcess() {
                 </div>
               </div>
               
-              {/* Bottom Row */}
               <div className="bg-gradient-to-br from-white to-cyan-50 rounded-2xl p-8 shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -250,7 +239,7 @@ export function ExitClarityProcess() {
                 </div>
               </div>
               
-              <div className="lg:col-start-2 bg-gradient-to-br from-white to-green-50 rounded-2xl p-8 shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-white to-green-50 rounded-2xl p-8 shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-1">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <DollarSign className="h-8 w-8 text-white" />
