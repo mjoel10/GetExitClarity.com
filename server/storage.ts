@@ -1,4 +1,6 @@
 import { users, demoRequests, type User, type InsertUser, type DemoRequest, type InsertDemoRequest } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
@@ -9,65 +11,53 @@ export interface IStorage {
   updateDemoRequestContacted(id: number, contacted: boolean): Promise<DemoRequest | undefined>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<number, User>;
-  private demoRequests: Map<number, DemoRequest>;
-  private currentUserId: number;
-  private currentDemoRequestId: number;
-
-  constructor() {
-    this.users = new Map();
-    this.demoRequests = new Map();
-    this.currentUserId = 1;
-    this.currentDemoRequestId = 1;
-  }
-
+export class DatabaseStorage implements IStorage {
   async getUser(id: number): Promise<User | undefined> {
-    return this.users.get(id);
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user || undefined;
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user || undefined;
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = this.currentUserId++;
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
+    const [user] = await db
+      .insert(users)
+      .values(insertUser)
+      .returning();
     return user;
   }
 
   async createDemoRequest(insertRequest: InsertDemoRequest): Promise<DemoRequest> {
-    const id = this.currentDemoRequestId++;
-    const request: DemoRequest = { 
-      ...insertRequest, 
-      phone: insertRequest.phone || null,
-      message: insertRequest.message || null,
-      id, 
-      createdAt: new Date(),
-      contacted: false
-    };
-    this.demoRequests.set(id, request);
+    const [request] = await db
+      .insert(demoRequests)
+      .values({
+        ...insertRequest,
+        phone: insertRequest.phone || null,
+        message: insertRequest.message || null,
+      })
+      .returning();
     return request;
   }
 
   async getDemoRequests(): Promise<DemoRequest[]> {
-    return Array.from(this.demoRequests.values()).sort((a, b) => 
-      b.createdAt.getTime() - a.createdAt.getTime()
-    );
+    const requests = await db
+      .select()
+      .from(demoRequests)
+      .orderBy(demoRequests.createdAt);
+    return requests.reverse(); // Most recent first
   }
 
   async updateDemoRequestContacted(id: number, contacted: boolean): Promise<DemoRequest | undefined> {
-    const request = this.demoRequests.get(id);
-    if (request) {
-      const updatedRequest = { ...request, contacted };
-      this.demoRequests.set(id, updatedRequest);
-      return updatedRequest;
-    }
-    return undefined;
+    const [updatedRequest] = await db
+      .update(demoRequests)
+      .set({ contacted })
+      .where(eq(demoRequests.id, id))
+      .returning();
+    return updatedRequest || undefined;
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();
