@@ -156,8 +156,8 @@ export function ExitClarityProcess() {
         </div>
       </section>
 
-      {/* Section 2: Common Exit Challenges - Navy Background */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      {/* Section 2: Common Exit Challenges - Blue to White Gradient */}
+      <section className="py-24 bg-gradient-to-b from-primary to-white relative overflow-hidden">
         <div className="container mx-auto px-6">
           {/* Section Header */}
           <div className="text-center max-w-4xl mx-auto mb-20">
