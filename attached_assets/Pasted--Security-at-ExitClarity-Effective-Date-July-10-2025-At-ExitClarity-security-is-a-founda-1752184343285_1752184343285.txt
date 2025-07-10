@@ -1,0 +1,98 @@
+**Security at ExitClarity**
+
+**Effective Date:** July 10, 2025
+
+At ExitClarity, security is a foundational part of how we build, operate, and deliver our platform. We understand the sensitivity of the financial and strategic data our users share, and we take that responsibility seriously.
+
+---
+
+## 1. Data Protection Principles
+
+We follow industry best practices and security frameworks for handling sensitive business and personal data:
+
+* **Confidentiality**: Access to your data is restricted to authorized users and team members through access controls and authentication mechanisms.
+* **Integrity**: All data is encrypted and monitored to prevent unauthorized tampering or modification.
+* **Availability**: Our platform is designed for high reliability and uptime to ensure uninterrupted service.
+* **Privacy by Design**: Security and privacy considerations are integrated into the platform architecture from the ground up.
+
+---
+
+## 2. Secure Data Protection
+
+Your information is protected by multiple layers of security:
+
+* **Encryption at Rest**: All stored data is protected with AES-256 encryption.
+* **Encryption in Transit**: All data transmission is protected using TLS 1.3 encryption.
+* **Database Security**: Encrypted databases include additional access controls and audit logging.
+* **Backup Protection**: Backups are encrypted and stored securely in geographically redundant locations.
+
+---
+
+## 3. Infrastructure Security
+
+* **Hosting Environment**: ExitClarity is hosted on SOC 2 Type II compliant infrastructure providers (e.g., AWS, GCP) with built-in redundancy, DDoS protection, and fault tolerance.
+* **Monitoring**: We utilize cloud-native monitoring tools and alerts to detect unusual activity.
+* **Network Security**: Includes traffic filtering, firewall configurations, and internal network segmentation.
+* **Vulnerability Scanning**: Periodic internal reviews and vulnerability scans are conducted to identify and remediate potential risks.
+
+---
+
+## 4. Application Security
+
+* **Authentication**: User authentication is protected using securely hashed credentials.
+* **Access Controls**: Role-based access control (RBAC) ensures users only access the data necessary for their role.
+* **Session Management**: Secure session handling with automatic timeouts and token-based authentication.
+* **Audit Logging**: System activity is logged and reviewed to detect unauthorized access or anomalies.
+
+---
+
+## 5. Vendor & Data Privacy Controls
+
+* We work with carefully selected third-party service providers who meet high security and compliance standards.
+* Third-party access is limited to the minimum necessary to perform contracted functions.
+
+---
+
+## 6. Data Retention & Deletion
+
+* You may request access, correction, or deletion of your personal data by contacting our team.
+* Data is retained only as long as necessary to deliver services or fulfill legal obligations.
+
+---
+
+## 7. Incident Response
+
+ExitClarity maintains an internal incident response process. In the unlikely event of a security incident:
+
+* We act promptly to contain the event and assess the impact.
+* Affected users will be notified as required by applicable laws.
+* Post-incident reviews are conducted and any necessary safeguards are implemented.
+
+---
+
+## 8. Compliance & Roadmap
+
+* ExitClarity is hosted on SOC 2 Type II compliant infrastructure.
+* We comply with applicable privacy laws, including GDPR and CCPA.
+* We align with best practices from NIST and OWASP.
+* We are actively working toward full SOC 2 Type II certification for our application.
+
+---
+
+## 9. Responsible Disclosure
+
+If you believe you have discovered a security vulnerability, we appreciate responsible disclosure. Please contact us:
+
+**Security Team:** [security@exitclarity.io](mailto:security@exitclarity.io)
+We aim to acknowledge valid reports within 24 hours and work toward a timely resolution.
+
+---
+
+## 10. Contact
+
+For any security-related questions or concerns, please contact:
+
+**EntrepreneurXL, LLC**
+Naples, FL
+[info@exitclarity.io](mailto:info@exitclarity.io)
+[https://www.exitclarity.io](https://www.exitclarity.io)
