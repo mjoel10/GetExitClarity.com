@@ -4,6 +4,7 @@ import { BusinessCaseROI } from "@/components/business-case-roi";
 import { EnhancedDealPreparation } from "@/components/enhanced-deal-preparation";
 import { PracticeBenefits } from "@/components/practice-benefits";
 import { DualCTA } from "@/components/dual-cta";
+import Footer from "@/components/footer";
 
 export default function MAFirms() {
   return (
@@ -16,6 +17,7 @@ export default function MAFirms() {
         <PracticeBenefits />
         <DualCTA />
       </div>
+      <Footer />
     </div>
   );
 }

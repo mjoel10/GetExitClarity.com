@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import { OwnerBenefitsSection } from "@/components/owner-benefits-section";
 import { DualCTA } from "@/components/dual-cta";
+import Footer from "@/components/footer";
 
 export default function BusinessOwners() {
   return (
@@ -53,6 +54,7 @@ export default function BusinessOwners() {
         
         <DualCTA />
       </div>
+      <Footer />
     </div>
   );
 }
