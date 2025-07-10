@@ -1,0 +1,36 @@
+Here's what to tell the Replit agent:
+
+"Add hover tooltips or click popups to each of the 11 Critical Assessment Factors. When users hover over or click each factor button, show a description popup. Here are the descriptions for each factor:
+Factor Descriptions:
+javascriptconst factorDescriptions = {
+  "1. Business Overview": "Evaluate your company's market position, competitive advantages, revenue model, and growth trajectory to understand overall business strength and appeal to buyers.",
+  
+  "2. Exit Goals & Timeline": "Define your exit objectives, preferred timeline, minimum valuation expectations, and deal structure preferences to align strategy with realistic outcomes.",
+  
+  "3. Personal & Emotional Readiness": "Assess your psychological preparation for transition, family alignment, post-exit plans, and emotional attachment to ensure you're truly ready to let go.",
+  
+  "4. Financial Quality": "Review financial reporting standards, revenue predictability, profitability trends, and accounting practices that directly impact valuation and buyer confidence.",
+  
+  "5. Operational Maturity": "Analyze systems, processes, technology infrastructure, and operational efficiency to determine how well the business can function independently.",
+  
+  "6. Documentation Preparedness": "Examine legal agreements, compliance records, intellectual property protection, and organizational documentation required for due diligence.",
+  
+  "7. Team & Transition Risk": "Evaluate key person dependencies, management depth, employee retention risks, and succession planning that could affect business continuity.",
+  
+  "8. Previous M&A Experience": "Consider prior transaction attempts, lessons learned, and market knowledge that influence current exit strategy and buyer expectations.",
+  
+  "9. Representation & Market Strategy": "Plan advisor selection, marketing approach, buyer targeting, and competitive positioning to maximize exposure and negotiating leverage.",
+  
+  "10. Deal Structure & Risk": "Understand transaction structures, risk tolerance, earnout preferences, and terms negotiation to optimize deal outcome and minimize exposure.",
+  
+  "11. Business Continuity & Post-Sale": "Prepare transition planning, cultural integration, employee communication, and operational handoff to ensure smooth ownership transfer."
+};
+Implementation:
+
+Add hover tooltips or clickable info icons to each factor
+Style the popups to match our design system
+Make them responsive for mobile
+Use a subtle animation for smooth appearance
+
+Preferred approach: hover tooltips that appear above or below each button."
+RetryClaude can make mistakes. Please double-check responses.Research Sonnet 4

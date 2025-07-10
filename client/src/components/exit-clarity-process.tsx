@@ -1,6 +1,30 @@
-import { Target, BarChart3, TrendingUp, CheckCircle, Settings, Zap, Shield, DollarSign } from "lucide-react";
+import { Target, BarChart3, TrendingUp, CheckCircle, Settings, Zap, Shield, DollarSign, Info } from "lucide-react";
+import { useState } from "react";
 
 export function ExitClarityProcess() {
+  const [hoveredFactor, setHoveredFactor] = useState<number | null>(null);
+
+  const factorDescriptions = {
+    0: "Evaluate your company's market position, competitive advantages, revenue model, and growth trajectory to understand overall business strength and appeal to buyers.",
+    1: "Define your exit objectives, preferred timeline, minimum valuation expectations, and deal structure preferences to align strategy with realistic outcomes.",
+    2: "Assess your psychological preparation for transition, family alignment, post-exit plans, and emotional attachment to ensure you're truly ready to let go.",
+    3: "Review financial reporting standards, revenue predictability, profitability trends, and accounting practices that directly impact valuation and buyer confidence.",
+    4: "Analyze systems, processes, technology infrastructure, and operational efficiency to determine how well the business can function independently.",
+    5: "Examine legal agreements, compliance records, intellectual property protection, and organizational documentation required for due diligence.",
+    6: "Evaluate key person dependencies, management depth, employee retention risks, and succession planning that could affect business continuity.",
+    7: "Consider prior transaction attempts, lessons learned, and market knowledge that influence current exit strategy and buyer expectations.",
+    8: "Plan advisor selection, marketing approach, buyer targeting, and competitive positioning to maximize exposure and negotiating leverage.",
+    9: "Understand transaction structures, risk tolerance, earnout preferences, and terms negotiation to optimize deal outcome and minimize exposure.",
+    10: "Prepare transition planning, cultural integration, employee communication, and operational handoff to ensure smooth ownership transfer."
+  };
+
+  const factors = [
+    "Business Overview", "Exit Goals & Timeline", "Personal & Emotional Readiness", 
+    "Financial Quality", "Operational Maturity", "Documentation Preparedness", 
+    "Team & Transition Risk", "Previous M&A Experience", "Representation & Market Strategy", 
+    "Deal Structure & Risk", "Business Continuity & Post-Sale"
+  ];
+
   return (
     <>
       {/* Section 1: The ExitClarity Process - Timeline Style */}
@@ -72,15 +96,33 @@ export function ExitClarityProcess() {
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
             </div>
             
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
-                "Business Overview", "Exit Goals & Timeline", "Personal & Emotional Readiness", 
-                "Financial Quality", "Operational Maturity", "Documentation Preparedness", 
-                "Team & Transition Risk", "Previous M&A Experience", "Representation & Market Strategy", 
-                "Deal Structure & Risk", "Business Continuity & Post-Sale"
-              ].map((factor, index) => (
-                <div key={index} className="bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 px-6 py-3 rounded-full text-sm font-semibold text-foreground hover:from-primary/20 hover:to-accent/20 transition-all duration-200 transform hover:scale-105">
-                  {index + 1}. {factor}
+            <div className="flex flex-wrap justify-center gap-4 relative">
+              {factors.map((factor, index) => (
+                <div 
+                  key={index} 
+                  className="relative"
+                  onMouseEnter={() => setHoveredFactor(index)}
+                  onMouseLeave={() => setHoveredFactor(null)}
+                >
+                  <div className="bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 px-6 py-3 rounded-full text-sm font-semibold text-foreground hover:from-primary/20 hover:to-accent/20 transition-all duration-200 transform hover:scale-105 cursor-help flex items-center gap-2">
+                    {index + 1}. {factor}
+                    <Info className="h-3 w-3 text-primary/60" />
+                  </div>
+                  
+                  {/* Tooltip */}
+                  {hoveredFactor === index && (
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-80 max-w-[90vw] bg-white border border-primary/20 rounded-xl shadow-2xl p-4 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
+                      <div className="text-sm text-foreground font-medium mb-2">
+                        {index + 1}. {factor}
+                      </div>
+                      <div className="text-xs text-muted-foreground leading-relaxed">
+                        {factorDescriptions[index as keyof typeof factorDescriptions]}
+                      </div>
+                      {/* Arrow pointing down */}
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-white"></div>
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 translate-y-[-1px] w-0 h-0 border-l-[7px] border-r-[7px] border-t-[7px] border-l-transparent border-r-transparent border-t-primary/20"></div>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
