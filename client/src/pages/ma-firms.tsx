@@ -3,7 +3,7 @@ import { FeaturesSection } from "@/components/features-section";
 import { BusinessCaseROI } from "@/components/business-case-roi";
 import { EnhancedDealPreparation } from "@/components/enhanced-deal-preparation";
 import { PracticeBenefits } from "@/components/practice-benefits";
-import { DualCTA } from "@/components/dual-cta";
+import { MAFirmsHeroCTA } from "@/components/ma-firms-hero-cta";
 import Footer from "@/components/footer";
 import { useMeta } from "@/hooks/use-meta";
 
@@ -21,7 +21,7 @@ export default function MAFirms() {
         <BusinessCaseROI />
         <EnhancedDealPreparation />
         <PracticeBenefits />
-        <DualCTA />
+        <MAFirmsHeroCTA />
       </div>
       <Footer />
     </div>
