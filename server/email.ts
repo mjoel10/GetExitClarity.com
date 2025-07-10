@@ -60,7 +60,7 @@ export async function sendNotificationEmail(data: EmailNotificationData): Promis
 
     const msg = {
       to: 'info@exitclarity.io',
-      from: 'info@exitclarity.io', // This should be verified in SendGrid
+      from: 'noreply@exitclarity.io', // Using noreply prefix for notifications
       subject: subject,
       html: htmlContent,
     };
