@@ -31,9 +31,9 @@ export default function Resources() {
               <p className="text-gray-600 mb-4">
                 Comprehensive guide to preparing your business for a successful exit, from initial planning to final transaction.
               </p>
-              <a href="#" className="text-primary font-medium hover:text-primary/80 transition-colors">
-                Download PDF →
-              </a>
+              <span className="text-gray-500 font-medium bg-gray-100 px-3 py-1 rounded-full text-sm">
+                Coming Soon
+              </span>
             </div>
             
             <div className="bg-white rounded-lg shadow-md p-6">
@@ -41,9 +41,9 @@ export default function Resources() {
               <p className="text-gray-600 mb-4">
                 Industry-specific valuation multiples and benchmarks to help you understand your company's market position.
               </p>
-              <a href="#" className="text-primary font-medium hover:text-primary/80 transition-colors">
-                View Report →
-              </a>
+              <span className="text-gray-500 font-medium bg-gray-100 px-3 py-1 rounded-full text-sm">
+                Coming Soon
+              </span>
             </div>
             
             <div className="bg-white rounded-lg shadow-md p-6">
@@ -51,9 +51,9 @@ export default function Resources() {
               <p className="text-gray-600 mb-4">
                 Latest trends and insights from the M&A market, including deal activity, valuations, and strategic considerations.
               </p>
-              <a href="#" className="text-primary font-medium hover:text-primary/80 transition-colors">
-                Read More →
-              </a>
+              <span className="text-gray-500 font-medium bg-gray-100 px-3 py-1 rounded-full text-sm">
+                Coming Soon
+              </span>
             </div>
             
             <div className="bg-white rounded-lg shadow-md p-6">
@@ -61,9 +61,9 @@ export default function Resources() {
               <p className="text-gray-600 mb-4">
                 Essential checklist for conducting thorough due diligence in M&A transactions.
               </p>
-              <a href="#" className="text-primary font-medium hover:text-primary/80 transition-colors">
-                Download →
-              </a>
+              <span className="text-gray-500 font-medium bg-gray-100 px-3 py-1 rounded-full text-sm">
+                Coming Soon
+              </span>
             </div>
             
             <div className="bg-white rounded-lg shadow-md p-6">
@@ -71,9 +71,9 @@ export default function Resources() {
               <p className="text-gray-600 mb-4">
                 Join our expert-led webinars covering key topics in M&A strategy, valuation, and transaction execution.
               </p>
-              <a href="#" className="text-primary font-medium hover:text-primary/80 transition-colors">
-                View Schedule →
-              </a>
+              <span className="text-gray-500 font-medium bg-gray-100 px-3 py-1 rounded-full text-sm">
+                Coming Soon
+              </span>
             </div>
             
             <div className="bg-white rounded-lg shadow-md p-6">
@@ -81,9 +81,9 @@ export default function Resources() {
               <p className="text-gray-600 mb-4">
                 Real-world examples of successful exits and lessons learned from various M&A transactions.
               </p>
-              <a href="#" className="text-primary font-medium hover:text-primary/80 transition-colors">
-                Explore Cases →
-              </a>
+              <span className="text-gray-500 font-medium bg-gray-100 px-3 py-1 rounded-full text-sm">
+                Coming Soon
+              </span>
             </div>
           </div>
         </div>

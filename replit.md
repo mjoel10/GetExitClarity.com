@@ -6,6 +6,12 @@ This is a React-based landing page for ExitClarity, a B2B SaaS platform that hel
 
 ## Recent Changes
 
+### January 2025 - Footer Navigation Enhancement and Resources Page Visual Fix
+- **Footer Scroll-to-Top**: Added smooth scroll-to-top functionality to all footer links (Navigation and Legal sections)
+- **Resources Page Visual Fix**: Removed crooked rotation effect from sample report preview for professional alignment
+- **User Experience**: All footer links now navigate to correct pages and automatically scroll to the top
+- **Visual Consistency**: Sample report preview displays straight and properly aligned across all devices
+
 ### January 2025 - Security Page Complete Content Update and Icon Optimization
 - **Complete Content Restructuring**: Updated security page with new numbered format (1-10 sections) featuring concise, professional content structure
 - **Icon Diversity Enhancement**: Replaced repetitive Lock and Eye icons with diverse, contextually appropriate icons (Database, KeyRound, FileCheck, Globe, Mail, etc.)
