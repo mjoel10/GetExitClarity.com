@@ -3,6 +3,10 @@ import { Mail, Phone, Calendar, Linkedin } from "lucide-react";
 import exitClarityLogo from "@assets/Exit Clarity Logo White_1752106228914.png";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer style={{
       backgroundColor: 'hsl(218, 100%, 25%)',
@@ -66,6 +70,7 @@ export default function Footer() {
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <Link 
                 href="/" 
+                onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -79,6 +84,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/ma-firms" 
+                onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -92,6 +98,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/business-owners" 
+                onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -105,6 +112,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/about" 
+                onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -118,6 +126,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/resources" 
+                onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -131,6 +140,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/contact" 
+                onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -224,6 +234,7 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <Link 
                 href="/privacy" 
+                onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -237,6 +248,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/terms" 
+                onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -250,6 +262,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/cookies" 
+                onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -263,6 +276,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/security" 
+                onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
