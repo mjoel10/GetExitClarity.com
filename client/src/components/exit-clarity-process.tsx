@@ -81,7 +81,7 @@ export function ExitClarityProcess() {
                 </div>
                 <div className="pt-8">
                   <h3 className="text-xl font-bold text-foreground mb-4 text-center">Follow Your Action Plan</h3>
-                  <p className="text-muted-foreground leading-relaxed text-center">Execute your personalized action plan with prioritized improvements, timeline milestones, and ROI projections to maximize valuation and achieve your ideal exit outcome</p>
+                  <p className="text-muted-foreground leading-relaxed text-center">Execute your personalized action plan with prioritized improvements, timeline milestones, and ROI projections</p>
                 </div>
               </div>
             </div>
