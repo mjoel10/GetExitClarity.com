@@ -115,7 +115,7 @@ export default function Contact() {
                   See ExitClarity in action with a personalized demo tailored to your specific needs and use cases.
                 </p>
                 <Button 
-                  onClick={() => window.open('https://calendly.com/exitclarity', '_blank')}
+                  onClick={() => window.open('https://calendly.com/exitclarity-info/30min', '_blank')}
                   className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg transition-all duration-200"
                 >
                   Book a Demo
