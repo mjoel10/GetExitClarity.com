@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, FileText, Play, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 export function CTASection() {
   return (
@@ -51,10 +52,12 @@ export function CTASection() {
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="group flex-1">
-                <FileText className="mr-2 h-5 w-5" />
-                Learn More
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <Button variant="outline" size="lg" className="group flex-1" asChild>
+                <Link href="/ma-firms">
+                  <FileText className="mr-2 h-5 w-5" />
+                  Learn More
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -90,10 +93,12 @@ export function CTASection() {
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="group flex-1">
-                <FileText className="mr-2 h-5 w-5" />
-                Learn More
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <Button variant="outline" size="lg" className="group flex-1" asChild>
+                <Link href="/business-owners">
+                  <FileText className="mr-2 h-5 w-5" />
+                  Learn More
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>
