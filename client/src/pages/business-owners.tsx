@@ -24,35 +24,6 @@ export default function BusinessOwners() {
         <OwnerBenefitsSection />
         
         <DualCTA />
-        
-        <div className="py-24">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-4">Exit Readiness Assessment</h3>
-                <p className="text-muted-foreground">
-                  Comprehensive evaluation of your business across 11 key dimensions to identify strengths and optimization opportunities.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-4">Strategic Planning</h3>
-                <p className="text-muted-foreground">
-                  Develop a roadmap to enhance your company's value and market position before entering the M&A process.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-4">Valuation Optimization</h3>
-                <p className="text-muted-foreground">
-                  Identify and implement strategies to maximize your business valuation and negotiation position.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <DualCTA />
       </div>
       <Footer />
     </div>
