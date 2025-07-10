@@ -86,25 +86,7 @@ export function OwnerBenefitsSection() {
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-soft border max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Ready to Take Control of Your Exit?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Join the business owners who've gained clarity and confidence in their exit journey.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-medium transition-colors">
-                Start Your Assessment
-              </button>
-              <Link href="/resources" className="border border-border hover:border-primary text-foreground px-6 py-3 rounded-lg font-medium transition-colors inline-block text-center">
-                View Sample Report
-              </Link>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
