@@ -1,0 +1,147 @@
+**Cookie Policy**
+
+**Effective Date:** July 10, 2025
+
+This Cookie Policy explains how ExitClarity, a service of EntrepreneurXL, LLC ("we," "us," or "our"), uses cookies and similar technologies to recognize you when you visit our website at https://www.exitclarity.io ("Site"). It explains what these technologies are, why we use them, and your rights to control our use of them.
+
+---
+
+### 1. What Are Cookies?
+
+Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used to make websites work more efficiently, as well as to provide reporting information and enhance user experiences.
+
+We also use similar technologies such as:
+* **Tracking pixels** - Small images that help us understand user behavior
+* **Local storage** - Data stored in your browser for functionality
+* **Session identifiers** - Temporary tokens to maintain your session
+* **Web beacons** - Small graphics that track page views and email opens
+
+---
+
+### 2. Why We Use Cookies
+
+We use both first-party and third-party cookies for the following purposes:
+
+**Essential Cookies** (Always Active)
+These cookies are necessary for the Site to function and cannot be switched off. They are typically set in response to actions you take such as:
+* Logging in to your account
+* Submitting assessment forms
+* Maintaining your session security
+* Loading essential site features
+
+**Performance & Analytics Cookies**
+These cookies collect information about how users interact with the Site, such as:
+* Pages visited and time spent on pages
+* Click patterns and user flow
+* Error messages and technical issues
+* Device and browser information
+
+This data helps us improve the functionality and performance of our platform.
+*Example tools: Google Analytics, HubSpot Analytics*
+
+**Functionality Cookies**
+These cookies allow the Site to remember your choices and preferences to provide a more personalized experience:
+* Saved form fields and preferences
+* Language and region settings
+* Assessment progress and saved data
+* Custom dashboard configurations
+
+**Targeting & Marketing Cookies** (Opt-in Required)
+Used only with your explicit consent to:
+* Track browsing habits across sessions
+* Deliver relevant content recommendations
+* Enable retargeting ads via platforms like LinkedIn or Google Ads
+* Measure marketing campaign effectiveness
+
+---
+
+### 3. Third-Party Cookies
+
+Some cookies on our Site are placed by third-party services we use for analytics, hosting, customer support, and marketing. These providers may use their own cookies subject to their privacy policies.
+
+**Current Third-Party Services:**
+* **Google Analytics** - Website analytics and user behavior tracking
+* **HubSpot** - Customer relationship management and marketing automation
+* **LinkedIn Insights Tag** - Professional audience analytics and advertising
+* **Cloudflare** - Security, performance, and content delivery
+* **Hosting and infrastructure providers** - Essential site operation
+
+**Important Note:** We do not control third-party cookies. Please review their respective privacy policies for more information about their data practices.
+
+---
+
+### 4. Cookie Duration
+
+Cookies may be either:
+* **Session cookies** - Deleted when you close your browser
+* **Persistent cookies** - Remain on your device for a set period (typically 30 days to 2 years)
+
+We regularly review and minimize cookie duration to collect only what's necessary for functionality and analytics.
+
+---
+
+### 5. Cookie Management and Your Choices
+
+**Browser Settings:**
+You can control or disable cookies through your browser settings. Most browsers allow you to:
+* View which cookies are stored
+* Delete existing cookies
+* Block cookies from specific sites
+* Set preferences for accepting cookies
+
+**Direct Opt-Outs:**
+You can also opt out of certain tracking tools directly:
+* [Google Analytics Opt-Out](https://tools.google.com/dlpage/gaoptout)
+* [LinkedIn Ads Settings](https://www.linkedin.com/psettings/advertising)
+* [HubSpot Cookie Settings](https://legal.hubspot.com/cookie-policy)
+
+**Our Cookie Consent Manager:**
+When you first visit our site, you can manage your cookie preferences through our consent banner. You can update these preferences at any time by clicking the "Cookie Settings" link in our footer.
+
+**Important:** Disabling essential cookies may affect certain features of the Site, including:
+* Login functionality
+* Form submissions
+* Saved preferences
+* Security features
+
+---
+
+### 6. International Users
+
+If you are located in the European Union, United Kingdom, or other regions with specific cookie regulations, you have additional rights regarding cookie consent and data processing. We comply with applicable cookie laws including GDPR and ePrivacy Directive requirements.
+
+---
+
+### 7. Do Not Track Signals
+
+Some browsers include a "Do Not Track" feature. Our Site does not currently respond to Do Not Track signals, but you can use the cookie management options described above to control tracking.
+
+---
+
+### 8. Updates to This Policy
+
+We may update this Cookie Policy from time to time to reflect changes in technology, our practices, or applicable regulations. When we make changes, we will:
+* Update the "Effective Date" at the top of this page
+* Notify you of material changes through our website or email
+* Request renewed consent where required by law
+
+---
+
+### 9. Contact Us
+
+If you have any questions about this Cookie Policy, how we use cookies, or would like to exercise your rights regarding cookies, please contact us at:
+
+**EntrepreneurXL, LLC**  
+Naples, FL  
+[info@exitclarity.io](mailto:info@exitclarity.io)  
+[https://www.exitclarity.io](https://www.exitclarity.io)
+
+---
+
+### 10. Related Policies
+
+This Cookie Policy should be read in conjunction with our:
+* [Privacy Policy](https://www.exitclarity.io/privacy)
+* [Terms of Service](https://www.exitclarity.io/terms)
+
+**Last Updated:** July 10, 2025

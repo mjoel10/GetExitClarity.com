@@ -9,6 +9,10 @@ import MAFirms from "@/pages/ma-firms";
 import About from "@/pages/about";
 import Resources from "@/pages/resources";
 import Contact from "@/pages/contact";
+import Privacy from "@/pages/privacy";
+import Terms from "@/pages/terms";
+import Cookies from "@/pages/cookies";
+import Security from "@/pages/security";
 import NotFound from "@/pages/not-found";
 import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
@@ -26,6 +30,10 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/resources" component={Resources} />
       <Route path="/contact" component={Contact} />
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
+      <Route path="/cookies" component={Cookies} />
+      <Route path="/security" component={Security} />
       <Route component={NotFound} />
     </Switch>
   );
