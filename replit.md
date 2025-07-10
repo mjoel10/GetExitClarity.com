@@ -6,6 +6,12 @@ This is a React-based landing page for ExitClarity, a B2B SaaS platform that hel
 
 ## Recent Changes
 
+### January 2025 - Interactive Assessment Features and Content Restructuring
+- **Interactive Tooltips**: Added hover tooltips to all 11 Critical Assessment Factors with detailed professional descriptions and smooth animations
+- **Content Flow Optimization**: Replaced "What You'll Receive" section with "Common Exit Challenges" section for better problem-solution flow
+- **Visual Contrast Enhancement**: Redesigned sections with alternating white and blue backgrounds for optimal visual hierarchy
+- **Layout Fixes**: Corrected wave effects and tilted cards across all three dynamic sections for professional appearance
+
 ### January 2025 - ExitClarity Sample Report PDF Integration
 - **PDF Download Functionality**: Integrated actual ExitClarity Sample Report PDF file for download when users complete the sample report form
 - **Lead Capture Enhancement**: Users now provide contact information (name, email, company, audience type) before accessing the PDF download
