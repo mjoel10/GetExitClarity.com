@@ -80,7 +80,7 @@ export function ExitClarityProcess() {
                   <span className="text-white font-bold text-xl">4</span>
                 </div>
                 <div className="pt-8">
-                  <h3 className="text-xl font-bold text-foreground mb-4 text-center">Follow Action Plan</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-4 text-center">Follow Your Action Plan</h3>
                   <p className="text-muted-foreground leading-relaxed text-center">Execute your custom 90-180 day action plan to maximize valuation and accelerate exit</p>
                 </div>
               </div>
