@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { SampleReportHero } from "@/components/sample-report-hero";
 
 export default function Resources() {
   return (
@@ -15,8 +16,14 @@ export default function Resources() {
               Access valuable insights, guides, and tools to enhance your M&A knowledge and decision-making process.
             </p>
           </div>
-          
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </div>
+      </main>
+
+      <SampleReportHero />
+
+      <main className="pb-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Exit Planning Guide</h3>
               <p className="text-gray-600 mb-4">
