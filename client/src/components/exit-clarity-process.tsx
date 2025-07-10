@@ -1,4 +1,4 @@
-import { Target, BarChart3, TrendingUp, CheckCircle, Settings, Zap, Shield, DollarSign, Info, AlertTriangle, TrendingDown, Clock, Calendar, FileText } from "lucide-react";
+import { Target, BarChart3, TrendingUp, CheckCircle, Settings, Zap, Shield, DollarSign, Info, AlertTriangle, TrendingDown, Clock, Calendar, FileText, Users } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
 
@@ -266,13 +266,23 @@ export function ExitClarityProcess() {
                 </div>
               </div>
               
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <DollarSign className="h-8 w-8 text-white" />
                   </div>
                   <h4 className="text-xl font-bold text-foreground mb-4">Cost Savings</h4>
                   <p className="text-muted-foreground leading-relaxed">Save on professional fees through early preparation and efficient process management</p>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-foreground mb-4">Expert Guidance</h4>
+                  <p className="text-muted-foreground leading-relaxed">Access 30+ years of M&A expertise and proven methodologies without the cost of full consulting engagements</p>
                 </div>
               </div>
             </div>
