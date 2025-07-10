@@ -1,7 +1,12 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { useMeta } from "@/hooks/use-meta";
 
 export default function About() {
+  useMeta({
+    title: "ExitClarity | About Our M&A Platform",
+    description: "Founded by M&A professionals with 30+ years experience. Transforming exit conversations into strategic wins for advisors and business owners."
+  });
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />

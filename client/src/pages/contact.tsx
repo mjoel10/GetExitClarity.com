@@ -2,8 +2,13 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { useMeta } from "@/hooks/use-meta";
 
 export default function Contact() {
+  useMeta({
+    title: "ExitClarity | Contact & Demo",
+    description: "Schedule a demo, request a sample report, or learn how our platform can accelerate your M&A success. Get started today."
+  });
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />

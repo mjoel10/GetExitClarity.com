@@ -1,8 +1,13 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { SampleReportHero } from "@/components/sample-report-hero";
+import { useMeta } from "@/hooks/use-meta";
 
 export default function Resources() {
+  useMeta({
+    title: "ExitClarity | M&A Resources & Insights",
+    description: "Access exit planning guides, market insights, and strategic tools. Download our sample exit readiness report and M&A knowledge resources."
+  });
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
