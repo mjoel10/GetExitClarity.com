@@ -1,7 +1,7 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { useMeta } from "@/hooks/use-meta";
-import { Shield, Lock, Eye, Users, Server, AlertTriangle } from "lucide-react";
+import { Shield, Lock, Database, KeyRound, Server, Users, AlertTriangle, FileCheck, Globe, Mail, Eye } from "lucide-react";
 
 export default function Security() {
   useMeta({
@@ -34,60 +34,52 @@ export default function Security() {
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
                   <Lock className="h-6 w-6 text-primary" />
-                  Data Protection Principles
+                  1. Data Protection Principles
                 </h2>
-                <p>We follow industry best practices and established security frameworks for handling sensitive business and personal data:</p>
+                <p className="mb-6">We follow industry best practices and security frameworks for handling sensitive business and personal data:</p>
                 
-                <div className="grid md:grid-cols-2 gap-6 mt-6">
-                  <div className="border border-muted rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Confidentiality</h3>
-                    <p className="text-muted-foreground text-sm">Only authorized users and team members can access your data through strict access controls and authentication mechanisms</p>
-                  </div>
-                  <div className="border border-muted rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Integrity</h3>
-                    <p className="text-muted-foreground text-sm">All data is encrypted and continuously monitored to prevent unauthorized tampering or modification</p>
-                  </div>
-                  <div className="border border-muted rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Availability</h3>
-                    <p className="text-muted-foreground text-sm">Our platform is built for high reliability and uptime to ensure uninterrupted service when you need it</p>
-                  </div>
-                  <div className="border border-muted rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Privacy by Design</h3>
-                    <p className="text-muted-foreground text-sm">Security and privacy considerations are built into every aspect of our platform from the ground up</p>
-                  </div>
-                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Confidentiality:</strong> Access to your data is restricted to authorized users and team members through access controls and authentication mechanisms.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Integrity:</strong> All data is encrypted and monitored to prevent unauthorized tampering or modification.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Availability:</strong> Our platform is designed for high reliability and uptime to ensure uninterrupted service.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Privacy by Design:</strong> Security and privacy considerations are integrated into the platform architecture from the ground up.</span>
+                  </li>
+                </ul>
               </section>
 
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
-                  <Lock className="h-6 w-6 text-primary" />
-                  Data Encryption & Protection
+                  <Database className="h-6 w-6 text-primary" />
+                  2. Secure Data Protection
                 </h2>
-                <p>Your information is protected with multiple layers of security:</p>
-                <ul className="space-y-3 mt-4">
+                <p className="mb-6">Your information is protected by multiple layers of security:</p>
+                <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <strong>Encryption at Rest:</strong> All stored data is protected with <strong>AES-256 encryption</strong>, the gold standard for data protection
-                    </div>
+                    <span><strong>Encryption at Rest:</strong> All stored data is protected with AES-256 encryption.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <strong>Encryption in Transit:</strong> All data transmission uses <strong>TLS 1.3 encryption</strong> to protect information as it moves between your device and our servers
-                    </div>
+                    <span><strong>Encryption in Transit:</strong> All data transmission is protected using TLS 1.3 encryption.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <strong>Database Security:</strong> Encrypted databases with additional access controls and audit logging
-                    </div>
+                    <span><strong>Database Security:</strong> Encrypted databases include additional access controls and audit logging.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <strong>Backup Protection:</strong> All backups are encrypted and stored in geographically separate, secure locations
-                    </div>
+                    <span><strong>Backup Protection:</strong> Backups are encrypted and stored securely in geographically redundant locations.</span>
                   </li>
                 </ul>
               </section>
@@ -95,134 +87,83 @@ export default function Security() {
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
                   <Server className="h-6 w-6 text-primary" />
-                  Infrastructure Security
+                  3. Infrastructure Security
                 </h2>
-                
-                <div className="space-y-6">
-                  <div className="border border-muted rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-4">Hosting Environment</h3>
-                    <ul className="space-y-3 text-muted-foreground">
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>ExitClarity is hosted on <strong>SOC 2 Type II compliant</strong> cloud infrastructure providers with enterprise-grade security</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Built-in redundancy and automatic failover capabilities</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Advanced DDoS mitigation and network-level protection</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>24/7 infrastructure monitoring and incident response</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="border border-muted rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-4">Network Security</h3>
-                    <ul className="space-y-3 text-muted-foreground">
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Automated security tools and real-time monitoring to detect unusual activity</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Intrusion detection and prevention systems</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Network segmentation to isolate sensitive systems</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Regular penetration testing and vulnerability assessments</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Hosting Environment:</strong> ExitClarity is hosted on SOC 2 Type II compliant infrastructure providers (e.g., AWS, GCP) with built-in redundancy, DDoS protection, and fault tolerance.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Monitoring:</strong> We utilize cloud-native monitoring tools and alerts to detect unusual activity.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Network Security:</strong> Includes traffic filtering, firewall configurations, and internal network segmentation.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Vulnerability Scanning:</strong> Periodic internal reviews and vulnerability scans are conducted to identify and remediate potential risks.</span>
+                  </li>
+                </ul>
               </section>
 
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
-                  <Eye className="h-6 w-6 text-primary" />
-                  Application Security
+                  <KeyRound className="h-6 w-6 text-primary" />
+                  4. Application Security
                 </h2>
-                
-                <div className="space-y-6">
-                  <div className="border border-muted rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-4">Authentication & Access</h3>
-                    <ul className="space-y-3 text-muted-foreground">
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Secure user authentication with industry-standard password hashing (bcrypt)</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span><strong>Two-factor authentication (2FA)</strong> available for all user accounts</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Session management with automatic timeout and secure session tokens</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Account lockout protection against brute force attacks</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="border border-muted rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-4">Access Controls</h3>
-                    <ul className="space-y-3 text-muted-foreground">
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span><strong>Role-based access control (RBAC)</strong> to ensure users only access information relevant to their role</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Principle of least privilege - minimum necessary access granted</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Regular access reviews and automatic deprovisioning</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Audit trails for all data access and modifications</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Authentication:</strong> User authentication is protected using securely hashed credentials.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Access Controls:</strong> Role-based access control (RBAC) ensures users only access the data necessary for their role.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Session Management:</strong> Secure session handling with automatic timeouts and token-based authentication.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Audit Logging:</strong> System activity is logged and reviewed to detect unauthorized access or anomalies.</span>
+                  </li>
+                </ul>
               </section>
 
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
                   <Users className="h-6 w-6 text-primary" />
-                  Employee Security & Training
+                  5. Vendor & Data Privacy Controls
                 </h2>
-                <ul className="space-y-3 text-muted-foreground">
+                <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Background checks for all employees with access to customer data</span>
+                    <span>We work with carefully selected third-party service providers who meet high security and compliance standards.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Security awareness training for all team members</span>
+                    <span>Third-party access is limited to the minimum necessary to perform contracted functions.</span>
+                  </li>
+                </ul>
+              </section>
+
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
+                  <FileCheck className="h-6 w-6 text-primary" />
+                  6. Data Retention & Deletion
+                </h2>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>You may request access, correction, or deletion of your personal data by contacting our team.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Regular security refresher training and phishing simulation tests</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Immediate access revocation upon employee departure</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Separation of duties for critical operations</span>
+                    <span>Data is retained only as long as necessary to deliver services or fulfill legal obligations.</span>
                   </li>
                 </ul>
               </section>
@@ -230,138 +171,76 @@ export default function Security() {
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
                   <AlertTriangle className="h-6 w-6 text-primary" />
-                  Incident Response & Business Continuity
+                  7. Incident Response
                 </h2>
-                
-                <div className="border border-muted rounded-lg p-6 mb-6">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Incident Response Plan</h3>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Formal incident response procedures with defined roles and responsibilities</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span>24/7 security monitoring and rapid response capabilities</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Regular incident response drills and plan updates</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Forensic investigation capabilities for security events</span>
-                    </li>
-                  </ul>
-                </div>
+                <p className="mb-6">ExitClarity maintains an internal incident response process. In the unlikely event of a security incident:</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>We act promptly to contain the event and assess the impact.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Affected users will be notified as required by applicable laws.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Post-incident reviews are conducted and any necessary safeguards are implemented.</span>
+                  </li>
+                </ul>
+              </section>
 
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
+                  <Shield className="h-6 w-6 text-primary" />
+                  8. Compliance & Roadmap
+                </h2>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>ExitClarity is hosted on SOC 2 Type II compliant infrastructure.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>We comply with applicable privacy laws, including GDPR and CCPA.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>We align with best practices from NIST and OWASP.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>We are actively working toward full SOC 2 Type II certification for our application.</span>
+                  </li>
+                </ul>
+              </section>
+
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
+                  <Globe className="h-6 w-6 text-primary" />
+                  9. Responsible Disclosure
+                </h2>
+                <p className="mb-6">If you believe you have discovered a security vulnerability, we appreciate responsible disclosure. Please contact us:</p>
+                
                 <div className="border border-muted rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Breach Notification</h3>
-                  <p className="text-muted-foreground mb-4">In the unlikely event of a data breach, we will:</p>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Contain the incident immediately</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Conduct thorough investigation and impact assessment</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Notify affected users within 72 hours or as required by law</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Provide clear information about the incident and remediation steps</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Implement additional safeguards to prevent recurrence</span>
-                    </li>
-                  </ul>
+                  <p className="mb-4"><strong>Security Team:</strong> <a href="mailto:security@exitclarity.io" className="text-primary hover:underline">security@exitclarity.io</a></p>
+                  <p>We aim to acknowledge valid reports within 24 hours and work toward a timely resolution.</p>
                 </div>
               </section>
 
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold text-foreground mb-6">Compliance & Certifications</h2>
+                <h2 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
+                  <Mail className="h-6 w-6 text-primary" />
+                  10. Contact
+                </h2>
+                <p className="mb-6">For any security-related questions or concerns, please contact:</p>
                 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="border border-muted rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-4">Current Compliance</h3>
-                    <ul className="space-y-3 text-muted-foreground">
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span><strong>SOC 2 Type II compliant infrastructure</strong> with enterprise-grade security controls</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span><strong>GDPR and CCPA</strong> privacy regulation compliance</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Industry best practices alignment with <strong>NIST Cybersecurity Framework</strong></span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Regular third-party security assessments and audits</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="border border-muted rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-4">Compliance Roadmap</h3>
-                    <ul className="space-y-3 text-muted-foreground">
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Actively working toward <strong>SOC 2 Type II certification</strong> for ExitClarity specifically</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Ongoing evaluation of additional compliance frameworks as we scale</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span>Regular compliance gap assessments and remediation</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold text-foreground mb-6">Responsible Disclosure & Security Research</h2>
-                <p>We encourage and appreciate responsible security research. If you believe you've discovered a vulnerability or security concern:</p>
-                
-                <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 mt-4">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Security Contact</h3>
-                  <ul className="space-y-2 text-sm">
-                    <li><strong>Primary:</strong> <a href="mailto:security@exitclarity.io" className="text-primary hover:underline">security@exitclarity.io</a></li>
-                    <li><strong>Response Time:</strong> We acknowledge reports within 24 hours</li>
-                    <li><strong>Investigation:</strong> Thorough investigation with regular updates</li>
-                    <li><strong>Recognition:</strong> Public acknowledgment for valid findings (with your permission)</li>
-                  </ul>
-                </div>
-              </section>
-
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold text-foreground mb-6">Contact Information</h2>
-                <p>For any security-related questions, concerns, or to report security issues:</p>
-                
-                <div className="border border-muted rounded-lg p-6 mt-4">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">Security Team</h3>
-                      <p><a href="mailto:security@exitclarity.io" className="text-primary hover:underline">security@exitclarity.io</a></p>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">General Inquiries</h3>
-                      <div className="space-y-1">
-                        <p>EntrepreneurXL, LLC</p>
-                        <p>Naples, FL</p>
-                        <p><a href="mailto:info@exitclarity.io" className="text-primary hover:underline">info@exitclarity.io</a></p>
-                      </div>
-                    </div>
+                <div className="border border-muted rounded-lg p-6">
+                  <div className="space-y-2">
+                    <p><strong>EntrepreneurXL, LLC</strong></p>
+                    <p>Naples, FL</p>
+                    <p><a href="mailto:info@exitclarity.io" className="text-primary hover:underline">info@exitclarity.io</a></p>
+                    <p><a href="https://www.exitclarity.io" className="text-primary hover:underline">https://www.exitclarity.io</a></p>
                   </div>
                 </div>
               </section>
