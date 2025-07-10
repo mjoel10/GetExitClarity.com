@@ -1,6 +1,7 @@
+import React from 'react';
 import { TrendingUp, Clock, Target, Users, CheckCircle, ArrowRight } from 'lucide-react';
 
-export function BusinessCaseROI() {
+const ImprovedROISection = () => {
   return (
     <section style={{ 
       backgroundColor: 'hsl(0, 0%, 100%)',
@@ -339,4 +340,6 @@ export function BusinessCaseROI() {
       </div>
     </section>
   );
-}
+};
+
+export default ImprovedROISection;
