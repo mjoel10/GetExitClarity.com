@@ -157,7 +157,7 @@ export default function Footer() {
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <a 
-                href="mailto:info@exitclarity.com" 
+                href="mailto:info@exitclarity.io" 
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -170,7 +170,7 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 <Mail style={{ width: '1rem', height: '1rem', marginRight: '0.5rem' }} />
-                info@exitclarity.com
+                info@exitclarity.io
               </a>
               <a 
                 href="tel:+1-555-123-4567" 
