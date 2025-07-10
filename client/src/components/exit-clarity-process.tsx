@@ -157,7 +157,7 @@ export function ExitClarityProcess() {
       </section>
 
       {/* Section 2: Common Exit Challenges - Blue to White Gradient */}
-      <section className="py-24 bg-gradient-to-b from-primary via-primary/50 to-slate-100 relative overflow-hidden border-b border-slate-200">
+      <section className="py-24 bg-gradient-to-b from-blue-900 via-primary/60 to-slate-50 relative overflow-hidden">
         <div className="container mx-auto px-6">
           {/* Section Header */}
           <div className="text-center max-w-4xl mx-auto mb-20">
