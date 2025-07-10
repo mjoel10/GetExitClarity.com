@@ -75,7 +75,7 @@ export function SampleReportHero() {
 
   return (
     <>
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Report Preview */}
