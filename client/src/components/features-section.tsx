@@ -69,28 +69,7 @@ export function FeaturesSection() {
           })}
         </div>
 
-        {/* Platform Preview */}
-        <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 border">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              See the Platform in Action
-            </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Watch how ExitClarity transforms your prospect engagement from initial contact to deal closure, with complete visibility and control throughout the process.
-            </p>
-          </div>
-          
-          <div className="flex justify-center">
-            <div className="bg-white rounded-xl p-6 shadow-soft border">
-              <div className="w-96 h-48 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary mb-2">Platform Demo</div>
-                  <div className="text-lg text-muted-foreground">Coming Soon</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
