@@ -60,7 +60,7 @@ export async function sendNotificationEmail(data: EmailNotificationData): Promis
 
     const msg = {
       to: 'info@exitclarity.io',
-      from: 'exitclarity.notifications@gmail.com', // Using Gmail for testing
+      from: 'notifications@exitclarity.io', // Using your domain
       subject: subject,
       html: htmlContent,
     };
