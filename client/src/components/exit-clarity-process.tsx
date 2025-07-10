@@ -311,37 +311,37 @@ export function ExitClarityProcess() {
             </div>
             
             {/* Enhanced Bottom CTA */}
-            <div className="mt-16">
-              <div className="bg-gradient-to-r from-primary to-blue-600 rounded-3xl p-12 shadow-2xl text-center">
-                <div className="max-w-4xl mx-auto">
-                  <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <div className="mt-12">
+              <div className="bg-gradient-to-r from-primary to-blue-600 rounded-2xl p-8 shadow-xl text-center">
+                <div className="max-w-3xl mx-auto">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
                     Ready to Transform Your Exit Strategy?
                   </h3>
-                  <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+                  <p className="text-lg text-blue-100 mb-6 leading-relaxed">
                     Join successful business owners who've gained clarity and confidence in their exit journey. 
                     Get your comprehensive strategic report and personalized recommendations today.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
                       href="https://calendly.com/exitclarity-info/30min" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center px-10 py-5 bg-white text-primary font-bold rounded-xl hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-xl"
+                      className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-lg"
                     >
-                      <Calendar className="h-6 w-6 mr-4" />
+                      <Calendar className="h-5 w-5 mr-3" />
                       Schedule Your Demo
                     </a>
                     <Link 
                       href="/sample-report"
-                      className="inline-flex items-center justify-center px-10 py-5 bg-white/10 text-white border-2 border-white/30 font-bold rounded-xl hover:bg-white/20 hover:border-white/50 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-xl"
+                      className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white border-2 border-white/30 font-bold rounded-xl hover:bg-white/20 hover:border-white/50 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-lg"
                     >
-                      <FileText className="h-6 w-6 mr-4" />
+                      <FileText className="h-5 w-5 mr-3" />
                       Download Sample Report
                     </Link>
                   </div>
-                  <div className="mt-8 flex items-center justify-center text-blue-100">
+                  <div className="mt-6 flex items-center justify-center text-blue-100">
                     <div className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5" />
+                      <CheckCircle className="h-4 w-4" />
                       <span className="text-sm">No obligation • 30+ years M&A expertise</span>
                     </div>
                   </div>
