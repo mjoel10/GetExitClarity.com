@@ -3,11 +3,12 @@ import { Target, BarChart3, TrendingUp, CheckCircle, Settings, Zap, Shield, Doll
 export function ExitClarityProcess() {
   return (
     <>
-      {/* Section 1: The ExitClarity Process */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-6">
+      {/* Section 1: The ExitClarity Process - Timeline Style */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="container mx-auto px-6 relative">
           {/* Section Header */}
-          <div className="text-center max-w-4xl mx-auto mb-16">
+          <div className="text-center max-w-4xl mx-auto mb-20">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               The ExitClarity Process
             </h2>
@@ -16,109 +17,134 @@ export function ExitClarityProcess() {
             </p>
           </div>
 
-          {/* Process Steps */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-                <span className="text-primary-foreground font-bold text-xl">1</span>
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Complete Assessment</h3>
-              <p className="text-muted-foreground leading-relaxed">30-45 minute comprehensive evaluation covering all critical aspects of exit readiness</p>
-            </div>
+          {/* Timeline Process Steps */}
+          <div className="relative max-w-6xl mx-auto mb-20">
+            {/* Timeline Line */}
+            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 transform -translate-y-1/2 hidden lg:block"></div>
             
-            <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-                <span className="text-primary-foreground font-bold text-xl">2</span>
+            <div className="grid lg:grid-cols-4 gap-8 lg:gap-4">
+              <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center shadow-lg lg:scale-110">
+                  <span className="text-white font-bold text-xl">1</span>
+                </div>
+                <div className="pt-8">
+                  <h3 className="text-xl font-bold text-foreground mb-4 text-center">Complete Assessment</h3>
+                  <p className="text-muted-foreground leading-relaxed text-center">30-45 minute comprehensive evaluation covering all critical aspects of exit readiness</p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Receive Strategic Report</h3>
-              <p className="text-muted-foreground leading-relaxed">Detailed 15-20 page personalized analysis with specific insights for your business</p>
-            </div>
-            
-            <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-                <span className="text-primary-foreground font-bold text-xl">3</span>
+              
+              <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group lg:mt-12">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg lg:scale-110">
+                  <span className="text-white font-bold text-xl">2</span>
+                </div>
+                <div className="pt-8">
+                  <h3 className="text-xl font-bold text-foreground mb-4 text-center">Receive Strategic Report</h3>
+                  <p className="text-muted-foreground leading-relaxed text-center">Detailed 15-20 page personalized analysis with specific insights for your business</p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Get Clear Recommendation</h3>
-              <p className="text-muted-foreground leading-relaxed">GO/FIX/WAIT decision with weighted scoring methodology and specific reasoning</p>
-            </div>
-            
-            <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-                <span className="text-primary-foreground font-bold text-xl">4</span>
+              
+              <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg lg:scale-110">
+                  <span className="text-white font-bold text-xl">3</span>
+                </div>
+                <div className="pt-8">
+                  <h3 className="text-xl font-bold text-foreground mb-4 text-center">Get Clear Recommendation</h3>
+                  <p className="text-muted-foreground leading-relaxed text-center">GO/FIX/WAIT decision with weighted scoring methodology and specific reasoning</p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Follow Action Plan</h3>
-              <p className="text-muted-foreground leading-relaxed">Phased roadmap with 90-180 day preparation phases and measurable milestones</p>
+              
+              <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group lg:mt-12">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center shadow-lg lg:scale-110">
+                  <span className="text-white font-bold text-xl">4</span>
+                </div>
+                <div className="pt-8">
+                  <h3 className="text-xl font-bold text-foreground mb-4 text-center">Follow Action Plan</h3>
+                  <p className="text-muted-foreground leading-relaxed text-center">Phased roadmap with 90-180 day preparation phases and measurable milestones</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* 11 Factors */}
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4">11 Critical Assessment Factors</h3>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            <div className="bg-muted p-4 rounded-lg text-sm font-medium text-foreground">1. Business Overview</div>
-            <div className="bg-muted p-4 rounded-lg text-sm font-medium text-foreground">2. Exit Goals & Timeline</div>
-            <div className="bg-muted p-4 rounded-lg text-sm font-medium text-foreground">3. Personal & Emotional Readiness</div>
-            <div className="bg-muted p-4 rounded-lg text-sm font-medium text-foreground">4. Financial Quality</div>
-            <div className="bg-muted p-4 rounded-lg text-sm font-medium text-foreground">5. Operational Maturity</div>
-            <div className="bg-muted p-4 rounded-lg text-sm font-medium text-foreground">6. Documentation Preparedness</div>
-            <div className="bg-muted p-4 rounded-lg text-sm font-medium text-foreground">7. Team & Transition Risk</div>
-            <div className="bg-muted p-4 rounded-lg text-sm font-medium text-foreground">8. Previous M&A Experience</div>
-            <div className="bg-muted p-4 rounded-lg text-sm font-medium text-foreground">9. Representation & Market Strategy</div>
-            <div className="bg-muted p-4 rounded-lg text-sm font-medium text-foreground">10. Deal Structure & Risk</div>
-            <div className="bg-muted p-4 rounded-lg text-sm font-medium text-foreground">11. Business Continuity & Post-Sale</div>
+          {/* 11 Factors - Badge Style */}
+          <div className="bg-white rounded-3xl p-12 shadow-2xl border border-primary/10">
+            <div className="text-center mb-10">
+              <h3 className="text-3xl font-bold text-foreground mb-4">11 Critical Assessment Factors</h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              {[
+                "Business Overview", "Exit Goals & Timeline", "Personal & Emotional Readiness", 
+                "Financial Quality", "Operational Maturity", "Documentation Preparedness", 
+                "Team & Transition Risk", "Previous M&A Experience", "Representation & Market Strategy", 
+                "Deal Structure & Risk", "Business Continuity & Post-Sale"
+              ].map((factor, index) => (
+                <div key={index} className="bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 px-6 py-3 rounded-full text-sm font-semibold text-foreground hover:from-primary/20 hover:to-accent/20 transition-all duration-200 transform hover:scale-105">
+                  {index + 1}. {factor}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 2: What You'll Receive */}
-      <section className="py-24 bg-muted/30">
-        <div className="container mx-auto px-6">
+      {/* Section 2: What You'll Receive - Split Layout Style */}
+      <section className="py-24 bg-primary relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-blue-700"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/5 to-transparent"></div>
+        <div className="container mx-auto px-6 relative">
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               What You'll Receive
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-blue-100">
               Comprehensive strategic analysis tailored specifically to your business situation and exit goals
             </p>
           </div>
           
-          {/* Deliverables Grid */}
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-                <Target className="h-7 w-7 text-primary" />
+          {/* Deliverables - Asymmetric Layout */}
+          <div className="max-w-7xl mx-auto">
+            {/* First Item - Full Width */}
+            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-10 mb-8 shadow-2xl border border-white/20">
+              <div className="flex items-start lg:items-center gap-8 flex-col lg:flex-row">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Target className="h-10 w-10 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Strategic Direction</h3>
+                  <p className="text-muted-foreground leading-relaxed text-lg">Clear GO/FIX/WAIT recommendation with weighted scoring methodology, specific reasoning, and detailed preparation roadmap identifying exactly what needs to be addressed before going to market.</p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Strategic Direction</h3>
-              <p className="text-muted-foreground leading-relaxed">Clear GO/FIX/WAIT recommendation with weighted scoring methodology, specific reasoning, and detailed preparation roadmap identifying exactly what needs to be addressed before going to market.</p>
             </div>
             
-            <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-                <BarChart3 className="h-7 w-7 text-primary" />
+            {/* Second & Third Items - Side by Side */}
+            <div className="grid lg:grid-cols-2 gap-8">
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20 transform lg:-rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                  <BarChart3 className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Market Reality Check</h3>
+                <p className="text-muted-foreground leading-relaxed">Market-appropriate valuation ranges using current industry multiples and comparable transactions. Multiple scenario analysis with Conservative, Base Case, and Optimistic projections.</p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Market Reality Check</h3>
-              <p className="text-muted-foreground leading-relaxed">Market-appropriate valuation ranges using current industry multiples and comparable transactions. Multiple scenario analysis with Conservative, Base Case, and Optimistic projections.</p>
-            </div>
-            
-            <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-                <TrendingUp className="h-7 w-7 text-primary" />
+              
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20 transform lg:rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                  <TrendingUp className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Actionable Roadmap</h3>
+                <p className="text-muted-foreground leading-relaxed">Phase-by-phase preparation with specific investments and projected 3-5x ROI, success metrics, and timeline management to prevent delays and maintain business momentum.</p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Actionable Roadmap</h3>
-              <p className="text-muted-foreground leading-relaxed">Phase-by-phase preparation with specific investments and projected 3-5x ROI, success metrics, and timeline management to prevent delays and maintain business momentum.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 3: Why Business Owners Choose ExitClarity */}
-      <section className="py-24 bg-background">
+      {/* Section 3: Why Business Owners Choose ExitClarity - Hexagon Pattern */}
+      <section className="py-24 bg-gradient-to-b from-slate-50 to-white relative">
         <div className="container mx-auto px-6">
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Why Business Owners Choose{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -130,64 +156,65 @@ export function ExitClarityProcess() {
             </p>
           </div>
           
-          {/* Benefits Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-6 shadow-soft border border-border hover:shadow-medium transition-all duration-200">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <CheckCircle className="h-6 w-6 text-primary" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-semibold text-foreground mb-2">Confidence & Clarity</h4>
-                  <p className="text-sm text-muted-foreground">Understand realistic estimated outcomes for your specific business and gain confidence about the entire exit process</p>
-                </div>
-              </div>
+          {/* Benefits - Circular Layout */}
+          <div className="max-w-5xl mx-auto relative">
+            {/* Center Circle */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-2xl z-10 hidden lg:flex">
+              <span className="text-white font-bold text-lg text-center leading-tight">Exit<br/>Success</span>
             </div>
             
-            <div className="bg-white rounded-xl p-6 shadow-soft border border-border hover:shadow-medium transition-all duration-200">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Settings className="h-6 w-6 text-primary" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-semibold text-foreground mb-2">Control Over Process</h4>
-                  <p className="text-sm text-muted-foreground">Take control through detailed preparation and personalized guidance tailored to your business and situation</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-soft border border-border hover:shadow-medium transition-all duration-200">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Zap className="h-6 w-6 text-primary" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-semibold text-foreground mb-2">Faster Sales</h4>
-                  <p className="text-sm text-muted-foreground">Accelerate your sale process through comprehensive pre-diligence preparation and documentation</p>
+            {/* Benefit Cards in Circular Pattern */}
+            <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+              {/* Top Row */}
+              <div className="lg:col-start-2 bg-gradient-to-br from-white to-blue-50 rounded-2xl p-8 shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <CheckCircle className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-foreground mb-4">Confidence & Clarity</h4>
+                  <p className="text-muted-foreground leading-relaxed">Understand realistic estimated outcomes for your specific business and gain confidence about the entire exit process</p>
                 </div>
               </div>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-soft border border-border hover:shadow-medium transition-all duration-200">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Shield className="h-6 w-6 text-primary" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-semibold text-foreground mb-2">Reduced Risk</h4>
-                  <p className="text-sm text-muted-foreground">Minimize process risk using lessons learned from previous transactions and proven best practices</p>
+              
+              {/* Middle Row */}
+              <div className="bg-gradient-to-br from-white to-purple-50 rounded-2xl p-8 shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-violet-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Settings className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-foreground mb-4">Control Over Process</h4>
+                  <p className="text-muted-foreground leading-relaxed">Take control through detailed preparation and personalized guidance tailored to your business and situation</p>
                 </div>
               </div>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-soft border border-border hover:shadow-medium transition-all duration-200 md:col-span-2 max-w-md mx-auto">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <DollarSign className="h-6 w-6 text-primary" />
+              
+              <div className="bg-gradient-to-br from-white to-orange-50 rounded-2xl p-8 shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Zap className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-foreground mb-4">Faster Sales</h4>
+                  <p className="text-muted-foreground leading-relaxed">Accelerate your sale process through comprehensive pre-diligence preparation and documentation</p>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-semibold text-foreground mb-2">Cost Savings</h4>
-                  <p className="text-sm text-muted-foreground">Save on professional fees through early preparation and efficient process management</p>
+              </div>
+              
+              {/* Bottom Row */}
+              <div className="bg-gradient-to-br from-white to-cyan-50 rounded-2xl p-8 shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Shield className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-foreground mb-4">Reduced Risk</h4>
+                  <p className="text-muted-foreground leading-relaxed">Minimize process risk using lessons learned from previous transactions and proven best practices</p>
+                </div>
+              </div>
+              
+              <div className="lg:col-start-2 bg-gradient-to-br from-white to-green-50 rounded-2xl p-8 shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <DollarSign className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-foreground mb-4">Cost Savings</h4>
+                  <p className="text-muted-foreground leading-relaxed">Save on professional fees through early preparation and efficient process management</p>
                 </div>
               </div>
             </div>
