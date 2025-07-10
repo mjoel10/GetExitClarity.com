@@ -173,22 +173,6 @@ export default function Footer() {
                 info@exitclarity.io
               </a>
               <a 
-                href="tel:+1-555-123-4567" 
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
-              >
-                <Phone style={{ width: '1rem', height: '1rem', marginRight: '0.5rem' }} />
-                (555) 123-4567
-              </a>
-              <a 
                 href="https://calendly.com/exitclarity-info/30min" 
                 target="_blank" 
                 rel="noopener noreferrer"

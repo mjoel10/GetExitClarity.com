@@ -95,16 +95,12 @@ export default function Contact() {
                     <span className="text-gray-600">info@exitclarity.io</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-primary" />
-                    <span className="text-gray-600">+1 (555) 123-4567</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-primary" />
-                    <span className="text-gray-600">Naples, FL</span>
+                    <span className="text-gray-600">San Francisco, CA</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Clock className="w-5 h-5 text-primary" />
-                    <span className="text-gray-600">Mon-Fri 9AM-6PM EST</span>
+                    <span className="text-gray-600">Mon-Fri 9AM-6PM PST</span>
                   </div>
                 </div>
               </div>
