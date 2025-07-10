@@ -78,19 +78,6 @@ export default function Footer() {
                 Home
               </Link>
               <Link 
-                href="/business-owners" 
-                style={{
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
-              >
-                For Business Owners
-              </Link>
-              <Link 
                 href="/ma-firms" 
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
@@ -102,6 +89,19 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 For M&A Firms
+              </Link>
+              <Link 
+                href="/business-owners" 
+                style={{
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+              >
+                For Business Owners
               </Link>
               <Link 
                 href="/about" 
