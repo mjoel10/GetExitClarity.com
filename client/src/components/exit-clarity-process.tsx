@@ -28,88 +28,17 @@ export function ExitClarityProcess() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="py-32 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
-        <div className="container mx-auto px-6">
-          {/* Hero Content */}
-          <div className="text-center max-w-5xl mx-auto">
-            <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
-              Clarity and Control—
-              <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-                Before You Go to Market
-              </span>
-            </h1>
-            <p className="text-2xl text-muted-foreground leading-relaxed mb-12 max-w-4xl mx-auto">
-              Get the strategic insights and actionable roadmap you need to maximize your exit value and minimize risk—on your own terms.
-            </p>
-            
-            {/* Primary CTAs */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <a 
-                href="https://calendly.com/exitclarity-info/30min" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-10 py-5 bg-primary text-white font-bold rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 text-lg"
-              >
-                <Calendar className="h-6 w-6 mr-3" />
-                Schedule Demo
-              </a>
-              <Link 
-                href="/sample-report"
-                className="inline-flex items-center justify-center px-10 py-5 bg-white text-foreground border-2 border-primary/20 font-bold rounded-2xl hover:border-primary hover:text-primary transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg"
-              >
-                <FileText className="h-6 w-6 mr-3" />
-                View Sample Report
-              </Link>
-            </div>
-
-            {/* Key Value Props - Simplified */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Target className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">Clear Recommendations</h3>
-                <p className="text-muted-foreground text-sm">Get definitive GO/FIX/WAIT guidance based on your specific situation</p>
-              </div>
-              
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">Realistic Valuations</h3>
-                <p className="text-muted-foreground text-sm">Understand your true market value and key value drivers</p>
-              </div>
-              
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">Actionable Roadmaps</h3>
-                <p className="text-muted-foreground text-sm">Prioritized improvements with ROI forecasts and timelines</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Background Elements */}
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-xl"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-200/20 rounded-full blur-xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-100/10 to-purple-100/10 rounded-full blur-3xl"></div>
-        </div>
-      </section>
-
-      {/* Process Steps Section */}
-      <section className="py-24 bg-background relative overflow-hidden">
-        <div className="container mx-auto px-6">
+      {/* Section 1: The ExitClarity Process - Timeline Style */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="container mx-auto px-6 relative">
           {/* Section Header */}
-          <div className="text-center max-w-4xl mx-auto mb-16">
+          <div className="text-center max-w-4xl mx-auto mb-20">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               The ExitClarity Process
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Four simple steps to gain clarity and control over your exit strategy
+              Our comprehensive 11-factor assessment provides the strategic clarity you need to maximize your exit outcome
             </p>
           </div>
 
@@ -176,7 +105,7 @@ export function ExitClarityProcess() {
                     onMouseLeave={() => setHoveredFactor(null)}
                   >
                     <div className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:border-slate-300 hover:bg-slate-100 transition-all duration-200 cursor-help flex items-center gap-2">
-                      <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                      <div className="w-5 h-5 bg-slate-400 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
                         {index + 1}
                       </div>
                       <span className="leading-tight">{factor}</span>
