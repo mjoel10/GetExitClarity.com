@@ -3,7 +3,7 @@ import { TrendingUp, Clock, Target, Users, CheckCircle, ArrowRight } from 'lucid
 export function BusinessCaseROI() {
   return (
     <section style={{ 
-      backgroundColor: 'hsl(0, 0%, 100%)',
+      backgroundColor: 'hsl(210, 20%, 96%)',
       padding: '5rem 0'
     }}>
       <div style={{ 
