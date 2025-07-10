@@ -1,5 +1,6 @@
-import { Target, Database, FileText, Settings, BarChart3, Zap } from "lucide-react";
+import { Target, Database, FileText, Settings, BarChart3, Zap, Calendar, ArrowRight } from "lucide-react";
 import { DualCTA } from "./dual-cta";
+import { Button } from "@/components/ui/button";
 
 export function FeaturesSection() {
   const features = [
@@ -44,9 +45,19 @@ export function FeaturesSection() {
             Purpose-Built for{" "}
             <span className="text-primary">M&A Professionals</span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-xl text-muted-foreground leading-relaxed mb-8">
             Streamline how you qualify, track, and support long-term exit prospects with tools designed specifically for the M&A workflow.
           </p>
+          
+          <div className="flex justify-center">
+            <Button variant="hero" size="xl" className="group" asChild>
+              <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
+                <Calendar className="mr-2 h-5 w-5" />
+                See How It Works
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </Button>
+          </div>
         </div>
 
         {/* Features Grid */}
