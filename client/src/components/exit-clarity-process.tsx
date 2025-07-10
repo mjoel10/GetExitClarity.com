@@ -94,42 +94,118 @@ export function ExitClarityProcess() {
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
-              {factors.map((factor, index) => (
-                <div 
-                  key={index} 
-                  className="relative group"
-                  onMouseEnter={() => setHoveredFactor(index)}
-                  onMouseLeave={() => setHoveredFactor(null)}
-                >
-                  <div className="bg-gradient-to-br from-white to-slate-50 border-2 border-primary/10 p-4 rounded-xl text-sm font-semibold text-foreground hover:border-primary/30 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 cursor-help">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
-                        {index + 1}
+            {/* Flowing Layout with Visual Groupings */}
+            <div className="max-w-6xl mx-auto">
+              {/* Row 1: Foundation Factors */}
+              <div className="text-center mb-8">
+                <h4 className="text-lg font-semibold text-primary mb-4">Foundation Assessment</h4>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {factors.slice(0, 4).map((factor, index) => (
+                    <div 
+                      key={index} 
+                      className="relative"
+                      onMouseEnter={() => setHoveredFactor(index)}
+                      onMouseLeave={() => setHoveredFactor(null)}
+                    >
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 px-4 py-3 rounded-2xl text-sm font-medium text-foreground hover:border-blue-400 hover:shadow-md transition-all duration-200 transform hover:scale-105 cursor-help flex items-center gap-2 max-w-xs">
+                        <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                          {index + 1}
+                        </div>
+                        <span className="leading-tight">{factor}</span>
+                        <Info className="h-3 w-3 text-blue-500 ml-1 flex-shrink-0" />
                       </div>
-                      <Info className="h-4 w-4 text-primary/60 ml-auto" />
+                      
+                      {/* Tooltip */}
+                      {hoveredFactor === index && (
+                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-80 max-w-[90vw] bg-white border border-primary/20 rounded-xl shadow-2xl p-4 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
+                          <div className="text-sm text-foreground font-medium mb-2">
+                            {index + 1}. {factor}
+                          </div>
+                          <div className="text-xs text-muted-foreground leading-relaxed">
+                            {factorDescriptions[index as keyof typeof factorDescriptions]}
+                          </div>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-white"></div>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 translate-y-[-1px] w-0 h-0 border-l-[7px] border-r-[7px] border-t-[7px] border-l-transparent border-r-transparent border-t-primary/20"></div>
+                        </div>
+                      )}
                     </div>
-                    <div className="text-foreground font-medium leading-tight">
-                      {factor}
-                    </div>
-                  </div>
-                  
-                  {/* Tooltip */}
-                  {hoveredFactor === index && (
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-80 max-w-[90vw] bg-white border border-primary/20 rounded-xl shadow-2xl p-4 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
-                      <div className="text-sm text-foreground font-medium mb-2">
-                        {index + 1}. {factor}
-                      </div>
-                      <div className="text-xs text-muted-foreground leading-relaxed">
-                        {factorDescriptions[index as keyof typeof factorDescriptions]}
-                      </div>
-                      {/* Arrow pointing down */}
-                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-white"></div>
-                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 translate-y-[-1px] w-0 h-0 border-l-[7px] border-r-[7px] border-t-[7px] border-l-transparent border-r-transparent border-t-primary/20"></div>
-                    </div>
-                  )}
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* Row 2: Operational Factors */}
+              <div className="text-center mb-8">
+                <h4 className="text-lg font-semibold text-emerald-600 mb-4">Operational Readiness</h4>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {factors.slice(4, 8).map((factor, index) => (
+                    <div 
+                      key={index + 4} 
+                      className="relative"
+                      onMouseEnter={() => setHoveredFactor(index + 4)}
+                      onMouseLeave={() => setHoveredFactor(null)}
+                    >
+                      <div className="bg-gradient-to-r from-emerald-50 to-green-50 border-2 border-emerald-200 px-4 py-3 rounded-2xl text-sm font-medium text-foreground hover:border-emerald-400 hover:shadow-md transition-all duration-200 transform hover:scale-105 cursor-help flex items-center gap-2 max-w-xs">
+                        <div className="w-6 h-6 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                          {index + 5}
+                        </div>
+                        <span className="leading-tight">{factor}</span>
+                        <Info className="h-3 w-3 text-emerald-500 ml-1 flex-shrink-0" />
+                      </div>
+                      
+                      {/* Tooltip */}
+                      {hoveredFactor === (index + 4) && (
+                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-80 max-w-[90vw] bg-white border border-primary/20 rounded-xl shadow-2xl p-4 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
+                          <div className="text-sm text-foreground font-medium mb-2">
+                            {index + 5}. {factor}
+                          </div>
+                          <div className="text-xs text-muted-foreground leading-relaxed">
+                            {factorDescriptions[(index + 4) as keyof typeof factorDescriptions]}
+                          </div>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-white"></div>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 translate-y-[-1px] w-0 h-0 border-l-[7px] border-r-[7px] border-t-[7px] border-l-transparent border-r-transparent border-t-primary/20"></div>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Row 3: Strategic Factors */}
+              <div className="text-center">
+                <h4 className="text-lg font-semibold text-purple-600 mb-4">Strategic Execution</h4>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {factors.slice(8, 11).map((factor, index) => (
+                    <div 
+                      key={index + 8} 
+                      className="relative"
+                      onMouseEnter={() => setHoveredFactor(index + 8)}
+                      onMouseLeave={() => setHoveredFactor(null)}
+                    >
+                      <div className="bg-gradient-to-r from-purple-50 to-violet-50 border-2 border-purple-200 px-4 py-3 rounded-2xl text-sm font-medium text-foreground hover:border-purple-400 hover:shadow-md transition-all duration-200 transform hover:scale-105 cursor-help flex items-center gap-2 max-w-xs">
+                        <div className="w-6 h-6 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                          {index + 9}
+                        </div>
+                        <span className="leading-tight">{factor}</span>
+                        <Info className="h-3 w-3 text-purple-500 ml-1 flex-shrink-0" />
+                      </div>
+                      
+                      {/* Tooltip */}
+                      {hoveredFactor === (index + 8) && (
+                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-80 max-w-[90vw] bg-white border border-primary/20 rounded-xl shadow-2xl p-4 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
+                          <div className="text-sm text-foreground font-medium mb-2">
+                            {index + 9}. {factor}
+                          </div>
+                          <div className="text-xs text-muted-foreground leading-relaxed">
+                            {factorDescriptions[(index + 8) as keyof typeof factorDescriptions]}
+                          </div>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-white"></div>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 translate-y-[-1px] w-0 h-0 border-l-[7px] border-r-[7px] border-t-[7px] border-l-transparent border-r-transparent border-t-primary/20"></div>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
             
             {/* CTA after 11 factors */}
