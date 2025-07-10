@@ -122,7 +122,7 @@ export function SampleReportHero() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Report Preview */}
             <div className="order-2 lg:order-1">
-              <div className="relative bg-white rounded-2xl shadow-2xl p-10 transform rotate-1 hover:rotate-0 transition-transform duration-300 border border-gray-100">
+              <div className="relative bg-white rounded-2xl shadow-2xl p-10 border border-gray-100">
                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                   <FileText className="w-3 h-3 text-white" />
                 </div>
