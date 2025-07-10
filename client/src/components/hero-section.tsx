@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, FileText, ArrowRight } from "lucide-react";
 import HeroMacBook from "./hero-macbook";
+import { Link } from "wouter";
 
 export function HeroSection() {
   return (
@@ -50,10 +51,12 @@ export function HeroSection() {
                   </a>
                 </Button>
                 
-                <Button variant="professional" size="xl" className="group">
-                  <FileText className="mr-2 h-5 w-5" />
-                  View Sample Report
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <Button variant="professional" size="xl" className="group" asChild>
+                  <Link href="/resources">
+                    <FileText className="mr-2 h-5 w-5" />
+                    View Sample Report
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </Button>
               </div>
             </div>

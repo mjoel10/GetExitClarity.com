@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, FileText, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 interface DualCTAProps {
   className?: string;
@@ -17,10 +18,12 @@ export function DualCTA({ className = "", variant = 'centered' }: DualCTAProps) 
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
         </Button>
-        <Button variant="outline" size="lg" className="group">
-          <FileText className="mr-2 h-4 w-4" />
-          View Sample Report
-          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        <Button variant="outline" size="lg" className="group" asChild>
+          <Link href="/resources">
+            <FileText className="mr-2 h-4 w-4" />
+            View Sample Report
+            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </Button>
       </div>
     );
@@ -36,10 +39,12 @@ export function DualCTA({ className = "", variant = 'centered' }: DualCTAProps) 
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
         </Button>
-        <Button variant="outline" size="lg" className="group">
-          <FileText className="mr-2 h-4 w-4" />
-          View Sample Report
-          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        <Button variant="outline" size="lg" className="group" asChild>
+          <Link href="/resources">
+            <FileText className="mr-2 h-4 w-4" />
+            View Sample Report
+            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </Button>
       </div>
     </div>

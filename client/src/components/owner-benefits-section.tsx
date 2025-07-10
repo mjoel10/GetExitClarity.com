@@ -1,4 +1,5 @@
 import { CheckCircle, Target, TrendingUp, Shield, Users, DollarSign } from "lucide-react";
+import { Link } from "wouter";
 
 export function OwnerBenefitsSection() {
   const benefits = [
@@ -98,9 +99,9 @@ export function OwnerBenefitsSection() {
               <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-medium transition-colors">
                 Start Your Assessment
               </button>
-              <button className="border border-border hover:border-primary text-foreground px-6 py-3 rounded-lg font-medium transition-colors">
+              <Link href="/resources" className="border border-border hover:border-primary text-foreground px-6 py-3 rounded-lg font-medium transition-colors inline-block text-center">
                 View Sample Report
-              </button>
+              </Link>
             </div>
           </div>
         </div>
