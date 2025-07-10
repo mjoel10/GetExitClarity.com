@@ -92,7 +92,7 @@ export default function Contact() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-primary" />
-                    <span className="text-gray-600">contact@exitclarity.com</span>
+                    <span className="text-gray-600">info@exitclarity.io</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-primary" />
@@ -100,7 +100,7 @@ export default function Contact() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-primary" />
-                    <span className="text-gray-600">New York, NY</span>
+                    <span className="text-gray-600">Naples, FL</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Clock className="w-5 h-5 text-primary" />
