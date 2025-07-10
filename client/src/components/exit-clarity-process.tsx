@@ -51,7 +51,7 @@ export function ExitClarityProcess() {
                 </div>
                 <div className="pt-8">
                   <h3 className="text-xl font-bold text-foreground mb-4 text-center">Complete Assessment</h3>
-                  <p className="text-muted-foreground leading-relaxed text-center">30-45 minute comprehensive evaluation covering all critical aspects of exit readiness</p>
+                  <p className="text-muted-foreground leading-relaxed text-center">Answer strategic questions across 11 key factors in just 30-45 minutes to reveal your true exit readiness</p>
                 </div>
               </div>
               
@@ -61,7 +61,7 @@ export function ExitClarityProcess() {
                 </div>
                 <div className="pt-8">
                   <h3 className="text-xl font-bold text-foreground mb-4 text-center">Receive Strategic Report</h3>
-                  <p className="text-muted-foreground leading-relaxed text-center">Detailed 15-20 page personalized analysis with specific insights for your business</p>
+                  <p className="text-muted-foreground leading-relaxed text-center">Get your personalized 15-20 page strategic report with valuation estimates, risk analysis, and preparation roadmap</p>
                 </div>
               </div>
               
@@ -71,7 +71,7 @@ export function ExitClarityProcess() {
                 </div>
                 <div className="pt-8">
                   <h3 className="text-xl font-bold text-foreground mb-4 text-center">Get Clear Recommendation</h3>
-                  <p className="text-muted-foreground leading-relaxed text-center">GO/FIX/WAIT decision with weighted scoring methodology and specific reasoning</p>
+                  <p className="text-muted-foreground leading-relaxed text-center">Receive a definitive GO/FIX/WAIT recommendation with clear reasoning and prioritized next steps</p>
                 </div>
               </div>
               
@@ -81,7 +81,7 @@ export function ExitClarityProcess() {
                 </div>
                 <div className="pt-8">
                   <h3 className="text-xl font-bold text-foreground mb-4 text-center">Follow Action Plan</h3>
-                  <p className="text-muted-foreground leading-relaxed text-center">Phased roadmap with 90-180 day preparation phases and measurable milestones</p>
+                  <p className="text-muted-foreground leading-relaxed text-center">Execute your custom 90-180 day action plan to maximize valuation and accelerate your exit timeline</p>
                 </div>
               </div>
             </div>
