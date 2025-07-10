@@ -87,145 +87,67 @@ export function ExitClarityProcess() {
             </div>
           </div>
 
-          {/* 11 Factors - Badge Style */}
-          <div className="bg-white rounded-3xl p-12 shadow-2xl border border-primary/10">
-            <div className="text-center mb-10">
-              <h3 className="text-3xl font-bold text-foreground mb-4">11 Critical Assessment Factors</h3>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
+          {/* 11 Factors - Compact Style */}
+          <div className="bg-white rounded-3xl p-8 shadow-xl border border-primary/10">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-foreground mb-3">11 Critical Assessment Factors</h3>
+              <div className="w-20 h-0.5 bg-gradient-to-r from-slate-400 to-slate-500 mx-auto"></div>
             </div>
             
-            {/* Flowing Layout with Visual Groupings */}
-            <div className="max-w-6xl mx-auto">
-              {/* Row 1: Foundation Factors */}
-              <div className="text-center mb-8">
-                <h4 className="text-lg font-semibold text-primary mb-4">Foundation Assessment</h4>
-                <div className="flex flex-wrap justify-center gap-3">
-                  {factors.slice(0, 4).map((factor, index) => (
-                    <div 
-                      key={index} 
-                      className="relative"
-                      onMouseEnter={() => setHoveredFactor(index)}
-                      onMouseLeave={() => setHoveredFactor(null)}
-                    >
-                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 px-4 py-3 rounded-2xl text-sm font-medium text-foreground hover:border-blue-400 hover:shadow-md transition-all duration-200 transform hover:scale-105 cursor-help flex items-center gap-2 max-w-xs">
-                        <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
-                          {index + 1}
-                        </div>
-                        <span className="leading-tight">{factor}</span>
-                        <Info className="h-3 w-3 text-blue-500 ml-1 flex-shrink-0" />
+            {/* Compact Single Row Layout */}
+            <div className="max-w-7xl mx-auto">
+              <div className="flex flex-wrap justify-center gap-2">
+                {factors.map((factor, index) => (
+                  <div 
+                    key={index} 
+                    className="relative"
+                    onMouseEnter={() => setHoveredFactor(index)}
+                    onMouseLeave={() => setHoveredFactor(null)}
+                  >
+                    <div className="bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg text-xs font-medium text-slate-700 hover:border-slate-300 hover:bg-slate-100 transition-all duration-200 cursor-help flex items-center gap-1.5">
+                      <div className="w-4 h-4 bg-slate-400 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                        {index + 1}
                       </div>
-                      
-                      {/* Tooltip */}
-                      {hoveredFactor === index && (
-                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-80 max-w-[90vw] bg-white border border-primary/20 rounded-xl shadow-2xl p-4 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
-                          <div className="text-sm text-foreground font-medium mb-2">
-                            {index + 1}. {factor}
-                          </div>
-                          <div className="text-xs text-muted-foreground leading-relaxed">
-                            {factorDescriptions[index as keyof typeof factorDescriptions]}
-                          </div>
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-white"></div>
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 translate-y-[-1px] w-0 h-0 border-l-[7px] border-r-[7px] border-t-[7px] border-l-transparent border-r-transparent border-t-primary/20"></div>
-                        </div>
-                      )}
+                      <span className="leading-tight">{factor}</span>
+                      <Info className="h-2.5 w-2.5 text-slate-400 ml-0.5 flex-shrink-0" />
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Row 2: Operational Factors */}
-              <div className="text-center mb-8">
-                <h4 className="text-lg font-semibold text-emerald-600 mb-4">Operational Readiness</h4>
-                <div className="flex flex-wrap justify-center gap-3">
-                  {factors.slice(4, 8).map((factor, index) => (
-                    <div 
-                      key={index + 4} 
-                      className="relative"
-                      onMouseEnter={() => setHoveredFactor(index + 4)}
-                      onMouseLeave={() => setHoveredFactor(null)}
-                    >
-                      <div className="bg-gradient-to-r from-emerald-50 to-green-50 border-2 border-emerald-200 px-4 py-3 rounded-2xl text-sm font-medium text-foreground hover:border-emerald-400 hover:shadow-md transition-all duration-200 transform hover:scale-105 cursor-help flex items-center gap-2 max-w-xs">
-                        <div className="w-6 h-6 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
-                          {index + 5}
+                    
+                    {/* Tooltip */}
+                    {hoveredFactor === index && (
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-80 max-w-[90vw] bg-white border border-slate-200 rounded-xl shadow-2xl p-4 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
+                        <div className="text-sm text-foreground font-medium mb-2">
+                          {index + 1}. {factor}
                         </div>
-                        <span className="leading-tight">{factor}</span>
-                        <Info className="h-3 w-3 text-emerald-500 ml-1 flex-shrink-0" />
+                        <div className="text-xs text-muted-foreground leading-relaxed">
+                          {factorDescriptions[index as keyof typeof factorDescriptions]}
+                        </div>
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-white"></div>
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 translate-y-[-1px] w-0 h-0 border-l-[7px] border-r-[7px] border-t-[7px] border-l-transparent border-r-transparent border-t-slate-200"></div>
                       </div>
-                      
-                      {/* Tooltip */}
-                      {hoveredFactor === (index + 4) && (
-                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-80 max-w-[90vw] bg-white border border-primary/20 rounded-xl shadow-2xl p-4 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
-                          <div className="text-sm text-foreground font-medium mb-2">
-                            {index + 5}. {factor}
-                          </div>
-                          <div className="text-xs text-muted-foreground leading-relaxed">
-                            {factorDescriptions[(index + 4) as keyof typeof factorDescriptions]}
-                          </div>
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-white"></div>
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 translate-y-[-1px] w-0 h-0 border-l-[7px] border-r-[7px] border-t-[7px] border-l-transparent border-r-transparent border-t-primary/20"></div>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Row 3: Strategic Factors */}
-              <div className="text-center">
-                <h4 className="text-lg font-semibold text-purple-600 mb-4">Strategic Execution</h4>
-                <div className="flex flex-wrap justify-center gap-3">
-                  {factors.slice(8, 11).map((factor, index) => (
-                    <div 
-                      key={index + 8} 
-                      className="relative"
-                      onMouseEnter={() => setHoveredFactor(index + 8)}
-                      onMouseLeave={() => setHoveredFactor(null)}
-                    >
-                      <div className="bg-gradient-to-r from-purple-50 to-violet-50 border-2 border-purple-200 px-4 py-3 rounded-2xl text-sm font-medium text-foreground hover:border-purple-400 hover:shadow-md transition-all duration-200 transform hover:scale-105 cursor-help flex items-center gap-2 max-w-xs">
-                        <div className="w-6 h-6 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
-                          {index + 9}
-                        </div>
-                        <span className="leading-tight">{factor}</span>
-                        <Info className="h-3 w-3 text-purple-500 ml-1 flex-shrink-0" />
-                      </div>
-                      
-                      {/* Tooltip */}
-                      {hoveredFactor === (index + 8) && (
-                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-80 max-w-[90vw] bg-white border border-primary/20 rounded-xl shadow-2xl p-4 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
-                          <div className="text-sm text-foreground font-medium mb-2">
-                            {index + 9}. {factor}
-                          </div>
-                          <div className="text-xs text-muted-foreground leading-relaxed">
-                            {factorDescriptions[(index + 8) as keyof typeof factorDescriptions]}
-                          </div>
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-white"></div>
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 translate-y-[-1px] w-0 h-0 border-l-[7px] border-r-[7px] border-t-[7px] border-l-transparent border-r-transparent border-t-primary/20"></div>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
             
             {/* CTA after 11 factors */}
-            <div className="text-center mt-12">
-              <p className="text-muted-foreground mb-6">Ready to assess your exit readiness?</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-center mt-8">
+              <p className="text-muted-foreground mb-4 text-sm">Ready to assess your exit readiness?</p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a 
                   href="https://calendly.com/exitclarity-info/30min" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm"
                 >
-                  <Calendar className="h-5 w-5 mr-2" />
+                  <Calendar className="h-4 w-4 mr-2" />
                   Schedule Demo
                 </a>
                 <Link 
                   href="/sample-report"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-foreground border-2 border-primary/20 font-semibold rounded-xl hover:border-primary hover:text-primary transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-foreground border-2 border-primary/20 font-semibold rounded-xl hover:border-primary hover:text-primary transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm"
                 >
-                  <FileText className="h-5 w-5 mr-2" />
+                  <FileText className="h-4 w-4 mr-2" />
                   View Sample Report
                 </Link>
               </div>
