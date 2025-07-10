@@ -1,4 +1,4 @@
-import { Target, BarChart3, TrendingUp, CheckCircle, Settings, Zap, Shield, DollarSign, Info } from "lucide-react";
+import { Target, BarChart3, TrendingUp, CheckCircle, Settings, Zap, Shield, DollarSign, Info, Award } from "lucide-react";
 import { useState } from "react";
 
 export function ExitClarityProcess() {
@@ -127,7 +127,7 @@ export function ExitClarityProcess() {
         </div>
       </section>
 
-      {/* Section 2: What You'll Receive - Split Layout Style */}
+      {/* Section 2: Transform Your Exit Journey - Outcome-Focused */}
       <section className="py-24 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-blue-700"></div>
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/5 to-transparent"></div>
@@ -135,44 +135,47 @@ export function ExitClarityProcess() {
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              What You'll Receive
+              Transform Your Exit Journey
             </h2>
             <p className="text-xl text-blue-100">
-              Comprehensive strategic analysis tailored specifically to your business situation and exit goals
+              Real business outcomes that position you for exit success
             </p>
           </div>
           
-          {/* Deliverables - Asymmetric Layout */}
-          <div className="max-w-7xl mx-auto">
-            {/* First Item - Full Width */}
-            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-10 mb-8 shadow-2xl border border-white/20">
-              <div className="flex items-start lg:items-center gap-8 flex-col lg:flex-row">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <Target className="h-10 w-10 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Strategic Direction</h3>
-                  <p className="text-muted-foreground leading-relaxed text-lg">Clear GO/FIX/WAIT recommendation with weighted scoring methodology, specific reasoning, and detailed preparation roadmap identifying exactly what needs to be addressed before going to market.</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Second & Third Items - Side by Side */}
-            <div className="grid lg:grid-cols-2 gap-8">
+          {/* Outcome Benefits - Clean Grid */}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Confidence & Clarity */}
               <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                  <BarChart3 className="h-8 w-8 text-white" />
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Shield className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-4">Confidence & Clarity</h3>
+                  <p className="text-muted-foreground leading-relaxed">Know exactly where you stand and what your realistic exit timeline looks like. No more guessing or wishful thinking about readiness.</p>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Market Reality Check</h3>
-                <p className="text-muted-foreground leading-relaxed">Market-appropriate valuation ranges using current industry multiples and comparable transactions. Multiple scenario analysis with Conservative, Base Case, and Optimistic projections.</p>
               </div>
               
+              {/* Strategic Advantage */}
               <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                  <TrendingUp className="h-8 w-8 text-white" />
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Target className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-4">Strategic Advantage</h3>
+                  <p className="text-muted-foreground leading-relaxed">Address deal-killing issues before buyers discover them. Enter negotiations from a position of strength with documented value drivers.</p>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Actionable Roadmap</h3>
-                <p className="text-muted-foreground leading-relaxed">Phase-by-phase preparation with specific investments and projected 3-5x ROI, success metrics, and timeline management to prevent delays and maintain business momentum.</p>
+              </div>
+              
+              {/* Maximized Value */}
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-300">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Award className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-4">Maximized Value</h3>
+                  <p className="text-muted-foreground leading-relaxed">Focus preparation efforts on the highest-impact improvements. Invest strategically in changes that deliver measurable valuation increases.</p>
+                </div>
               </div>
             </div>
           </div>
