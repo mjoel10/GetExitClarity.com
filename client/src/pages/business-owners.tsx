@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import { OwnerBenefitsSection } from "@/components/owner-benefits-section";
+import { ExitClarityProcess } from "@/components/exit-clarity-process";
 import { DualCTA } from "@/components/dual-cta";
 import Footer from "@/components/footer";
 import { useMeta } from "@/hooks/use-meta";
@@ -28,6 +29,8 @@ export default function BusinessOwners() {
         </div>
         
         <OwnerBenefitsSection />
+        
+        <ExitClarityProcess />
         
         <DualCTA />
       </div>
