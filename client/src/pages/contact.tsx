@@ -47,10 +47,25 @@ export default function Contact() {
         phone: null
       };
       
-      return apiRequest("/api/demo-request", {
+      console.log("Submitting form data:", formData);
+      
+      const response = await fetch("/api/demo-request", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(formData)
       });
+      
+      if (!response.ok) {
+        const errorData = await response.text();
+        console.error("API Error:", response.status, errorData);
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const result = await response.json();
+      console.log("API Response:", result);
+      return result;
     },
     onSuccess: () => {
       setIsSubmitted(true);
