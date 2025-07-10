@@ -159,7 +159,7 @@ export function ExitClarityProcess() {
             
             {/* Second & Third Items - Side by Side */}
             <div className="grid lg:grid-cols-2 gap-8">
-              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20 transform lg:-rotate-1 hover:rotate-0 transition-transform duration-300">
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                   <BarChart3 className="h-8 w-8 text-white" />
                 </div>
@@ -167,7 +167,7 @@ export function ExitClarityProcess() {
                 <p className="text-muted-foreground leading-relaxed">Market-appropriate valuation ranges using current industry multiples and comparable transactions. Multiple scenario analysis with Conservative, Base Case, and Optimistic projections.</p>
               </div>
               
-              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20 transform lg:rotate-1 hover:rotate-0 transition-transform duration-300">
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                   <TrendingUp className="h-8 w-8 text-white" />
                 </div>
