@@ -25,7 +25,7 @@ export function PracticeBenefits() {
   ];
 
   return (
-    <section className="py-20" style={{ backgroundColor: 'hsl(0, 0%, 100%)' }}>
+    <section className="pt-20 pb-8" style={{ backgroundColor: 'hsl(0, 0%, 100%)' }}>
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'hsl(218, 15%, 15%)' }}>
