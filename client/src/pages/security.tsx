@@ -356,9 +356,11 @@ export default function Security() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">General Inquiries</h3>
-                      <p>EntrepreneurXL, LLC</p>
-                      <p>Naples, FL</p>
-                      <p><a href="mailto:info@exitclarity.io" className="text-primary hover:underline">info@exitclarity.io</a></p>
+                      <div className="space-y-1">
+                        <p>EntrepreneurXL, LLC</p>
+                        <p>Naples, FL</p>
+                        <p><a href="mailto:info@exitclarity.io" className="text-primary hover:underline">info@exitclarity.io</a></p>
+                      </div>
                     </div>
                   </div>
                 </div>
