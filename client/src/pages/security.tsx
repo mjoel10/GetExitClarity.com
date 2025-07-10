@@ -100,22 +100,46 @@ export default function Security() {
                 
                 <div className="space-y-6">
                   <div className="border border-muted rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-foreground mb-3">Hosting Environment</h3>
-                    <ul className="space-y-2 text-sm">
-                      <li>• ExitClarity is hosted on <strong>SOC 2 Type II compliant</strong> cloud infrastructure providers with enterprise-grade security</li>
-                      <li>• Built-in redundancy and automatic failover capabilities</li>
-                      <li>• Advanced DDoS mitigation and network-level protection</li>
-                      <li>• 24/7 infrastructure monitoring and incident response</li>
+                    <h3 className="text-xl font-semibold text-foreground mb-4">Hosting Environment</h3>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>ExitClarity is hosted on <strong>SOC 2 Type II compliant</strong> cloud infrastructure providers with enterprise-grade security</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Built-in redundancy and automatic failover capabilities</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Advanced DDoS mitigation and network-level protection</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>24/7 infrastructure monitoring and incident response</span>
+                      </li>
                     </ul>
                   </div>
 
                   <div className="border border-muted rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-foreground mb-3">Network Security</h3>
-                    <ul className="space-y-2 text-sm">
-                      <li>• Automated security tools and real-time monitoring to detect unusual activity</li>
-                      <li>• Intrusion detection and prevention systems</li>
-                      <li>• Network segmentation to isolate sensitive systems</li>
-                      <li>• Regular penetration testing and vulnerability assessments</li>
+                    <h3 className="text-xl font-semibold text-foreground mb-4">Network Security</h3>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Automated security tools and real-time monitoring to detect unusual activity</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Intrusion detection and prevention systems</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Network segmentation to isolate sensitive systems</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Regular penetration testing and vulnerability assessments</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -129,22 +153,46 @@ export default function Security() {
                 
                 <div className="space-y-6">
                   <div className="border border-muted rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-foreground mb-3">Authentication & Access</h3>
-                    <ul className="space-y-2 text-muted-foreground text-sm">
-                      <li>• Secure user authentication with industry-standard password hashing (bcrypt)</li>
-                      <li>• <strong>Two-factor authentication (2FA)</strong> available for all user accounts</li>
-                      <li>• Session management with automatic timeout and secure session tokens</li>
-                      <li>• Account lockout protection against brute force attacks</li>
+                    <h3 className="text-xl font-semibold text-foreground mb-4">Authentication & Access</h3>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Secure user authentication with industry-standard password hashing (bcrypt)</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Two-factor authentication (2FA)</strong> available for all user accounts</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Session management with automatic timeout and secure session tokens</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Account lockout protection against brute force attacks</span>
+                      </li>
                     </ul>
                   </div>
 
                   <div className="border border-muted rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-foreground mb-3">Access Controls</h3>
-                    <ul className="space-y-2 text-muted-foreground text-sm">
-                      <li>• <strong>Role-based access control (RBAC)</strong> to ensure users only access information relevant to their role</li>
-                      <li>• Principle of least privilege - minimum necessary access granted</li>
-                      <li>• Regular access reviews and automatic deprovisioning</li>
-                      <li>• Audit trails for all data access and modifications</li>
+                    <h3 className="text-xl font-semibold text-foreground mb-4">Access Controls</h3>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span><strong>Role-based access control (RBAC)</strong> to ensure users only access information relevant to their role</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Principle of least privilege - minimum necessary access granted</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Regular access reviews and automatic deprovisioning</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span>Audit trails for all data access and modifications</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -155,12 +203,27 @@ export default function Security() {
                   <Users className="h-6 w-6 text-primary" />
                   Employee Security & Training
                 </h2>
-                <ul className="space-y-3">
-                  <li>• Background checks for all employees with access to customer data</li>
-                  <li>• Security awareness training for all team members</li>
-                  <li>• Regular security refresher training and phishing simulation tests</li>
-                  <li>• Immediate access revocation upon employee departure</li>
-                  <li>• Separation of duties for critical operations</li>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Background checks for all employees with access to customer data</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Security awareness training for all team members</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Regular security refresher training and phishing simulation tests</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Immediate access revocation upon employee departure</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Separation of duties for critical operations</span>
+                  </li>
                 </ul>
               </section>
 
