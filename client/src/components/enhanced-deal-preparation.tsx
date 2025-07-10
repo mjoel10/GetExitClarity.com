@@ -80,7 +80,7 @@ export function EnhancedDealPreparation() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="group px-8 py-4 text-lg border-white text-white hover:bg-white hover:text-blue-800" 
+              className="group px-8 py-4 text-lg border-white text-blue-800 bg-white hover:bg-blue-50 hover:text-blue-900" 
               onClick={handleViewSampleReport}
             >
               <FileText className="mr-3 h-5 w-5" />
