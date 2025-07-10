@@ -16,8 +16,8 @@ export default function Privacy() {
           <div className="max-w-4xl mx-auto prose prose-slate prose-lg">
             <h1 className="text-4xl font-bold text-foreground mb-8">Privacy Policy</h1>
             
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
-              <p className="text-blue-800 text-sm mb-0">
+            <div className="border-l-4 border-primary pl-4 mb-8">
+              <p className="text-muted-foreground text-sm mb-0">
                 <strong>Effective Date:</strong> July 10, 2025
               </p>
             </div>

@@ -16,8 +16,8 @@ export default function Terms() {
           <div className="max-w-4xl mx-auto prose prose-slate prose-lg">
             <h1 className="text-4xl font-bold text-foreground mb-8">Terms of Service</h1>
             
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
-              <p className="text-blue-800 text-sm mb-0">
+            <div className="border-l-4 border-primary pl-4 mb-8">
+              <p className="text-muted-foreground text-sm mb-0">
                 <strong>Effective Date:</strong> July 10, 2025
               </p>
             </div>
@@ -61,9 +61,9 @@ export default function Terms() {
               <p>
                 This report was prepared exclusively for the Subject Company by ExitClarity and contains confidential, proprietary information intended for authorized recipients only. Unauthorized distribution or reproduction is strictly prohibited.
               </p>
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 my-6">
-                <h3 className="text-lg font-semibold text-amber-800 mb-2">Important Disclaimers:</h3>
-                <ul className="text-amber-700 space-y-1">
+              <div className="border border-muted rounded-lg p-4 my-6">
+                <h3 className="text-lg font-semibold text-foreground mb-2">Important Disclaimers:</h3>
+                <ul className="text-muted-foreground space-y-1">
                   <li>All analysis and recommendations are based on information provided by the Subject Company and other sources believed to be reliable</li>
                   <li>ExitClarity makes no guarantees as to the accuracy or completeness of the information</li>
                   <li>This report is for strategic planning purposes only and does not constitute legal, financial, tax, or investment advice</li>
@@ -142,7 +142,7 @@ export default function Terms() {
             <section className="mb-10">
               <h2 className="text-2xl font-semibold text-foreground mb-4">12. Contact Us</h2>
               <p>If you have any questions about these Terms, please contact us at:</p>
-              <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 mt-4">
+              <div className="border border-muted rounded-lg p-4 mt-4">
                 <p className="mb-2"><strong>EntrepreneurXL, LLC</strong></p>
                 <p className="mb-2">Naples, FL</p>
                 <p className="mb-2"><a href="mailto:info@exitclarity.io" className="text-primary hover:underline">info@exitclarity.io</a></p>

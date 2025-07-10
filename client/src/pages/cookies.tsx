@@ -16,8 +16,8 @@ export default function Cookies() {
           <div className="max-w-4xl mx-auto prose prose-slate prose-lg">
             <h1 className="text-4xl font-bold text-foreground mb-8">Cookie Policy</h1>
             
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
-              <p className="text-blue-800 text-sm mb-0">
+            <div className="border-l-4 border-primary pl-4 mb-8">
+              <p className="text-muted-foreground text-sm mb-0">
                 <strong>Effective Date:</strong> July 10, 2025
               </p>
             </div>
@@ -45,10 +45,10 @@ export default function Cookies() {
               <p>We use both first-party and third-party cookies for the following purposes:</p>
               
               <div className="space-y-6 mt-6">
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-green-800 mb-2">Essential Cookies (Always Active)</h3>
-                  <p className="text-green-700 mb-2">These cookies are necessary for the Site to function and cannot be switched off. They are typically set in response to actions you take such as:</p>
-                  <ul className="text-green-700 space-y-1">
+                <div className="border border-muted rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Essential Cookies (Always Active)</h3>
+                  <p className="text-muted-foreground mb-2">These cookies are necessary for the Site to function and cannot be switched off. They are typically set in response to actions you take such as:</p>
+                  <ul className="text-muted-foreground space-y-1">
                     <li>Logging in to your account</li>
                     <li>Submitting assessment forms</li>
                     <li>Maintaining your session security</li>
@@ -56,23 +56,23 @@ export default function Cookies() {
                   </ul>
                 </div>
 
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-blue-800 mb-2">Performance & Analytics Cookies</h3>
-                  <p className="text-blue-700 mb-2">These cookies collect information about how users interact with the Site, such as:</p>
-                  <ul className="text-blue-700 space-y-1">
+                <div className="border border-muted rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Performance & Analytics Cookies</h3>
+                  <p className="text-muted-foreground mb-2">These cookies collect information about how users interact with the Site, such as:</p>
+                  <ul className="text-muted-foreground space-y-1">
                     <li>Pages visited and time spent on pages</li>
                     <li>Click patterns and user flow</li>
                     <li>Error messages and technical issues</li>
                     <li>Device and browser information</li>
                   </ul>
-                  <p className="text-blue-700 mt-2">This data helps us improve the functionality and performance of our platform.</p>
-                  <p className="text-blue-700 text-sm mt-2"><em>Example tools: Google Analytics, HubSpot Analytics</em></p>
+                  <p className="text-muted-foreground mt-2">This data helps us improve the functionality and performance of our platform.</p>
+                  <p className="text-muted-foreground text-sm mt-2"><em>Example tools: Google Analytics, HubSpot Analytics</em></p>
                 </div>
 
-                <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-purple-800 mb-2">Functionality Cookies</h3>
-                  <p className="text-purple-700 mb-2">These cookies allow the Site to remember your choices and preferences to provide a more personalized experience:</p>
-                  <ul className="text-purple-700 space-y-1">
+                <div className="border border-muted rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Functionality Cookies</h3>
+                  <p className="text-muted-foreground mb-2">These cookies allow the Site to remember your choices and preferences to provide a more personalized experience:</p>
+                  <ul className="text-muted-foreground space-y-1">
                     <li>Saved form fields and preferences</li>
                     <li>Language and region settings</li>
                     <li>Assessment progress and saved data</li>
@@ -80,10 +80,10 @@ export default function Cookies() {
                   </ul>
                 </div>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-orange-800 mb-2">Targeting & Marketing Cookies (Opt-in Required)</h3>
-                  <p className="text-orange-700 mb-2">Used only with your explicit consent to:</p>
-                  <ul className="text-orange-700 space-y-1">
+                <div className="border border-muted rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Targeting & Marketing Cookies (Opt-in Required)</h3>
+                  <p className="text-muted-foreground mb-2">Used only with your explicit consent to:</p>
+                  <ul className="text-muted-foreground space-y-1">
                     <li>Track browsing habits across sessions</li>
                     <li>Deliver relevant content recommendations</li>
                     <li>Enable retargeting ads via platforms like LinkedIn or Google Ads</li>
@@ -98,9 +98,9 @@ export default function Cookies() {
               <p>
                 Some cookies on our Site are placed by third-party services we use for analytics, hosting, customer support, and marketing. These providers may use their own cookies subject to their privacy policies.
               </p>
-              <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 mt-4">
-                <h3 className="text-lg font-semibold text-slate-800 mb-2">Current Third-Party Services:</h3>
-                <ul className="text-slate-700 space-y-1">
+              <div className="border border-muted rounded-lg p-4 mt-4">
+                <h3 className="text-lg font-semibold text-foreground mb-2">Current Third-Party Services:</h3>
+                <ul className="text-muted-foreground space-y-1">
                   <li><strong>Google Analytics</strong> - Website analytics and user behavior tracking</li>
                   <li><strong>HubSpot</strong> - Customer relationship management and marketing automation</li>
                   <li><strong>LinkedIn Insights Tag</strong> - Professional audience analytics and advertising</li>
@@ -139,8 +139,8 @@ export default function Cookies() {
                 </div>
               </div>
 
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-6">
-                <p className="text-amber-800">
+              <div className="border border-muted rounded-lg p-4 mt-6">
+                <p className="text-muted-foreground">
                   <strong>Important:</strong> Disabling essential cookies may affect certain features of the Site, including login functionality, form submissions, saved preferences, and security features.
                 </p>
               </div>
@@ -166,7 +166,7 @@ export default function Cookies() {
             <section className="mb-10">
               <h2 className="text-2xl font-semibold text-foreground mb-4">7. Contact Us</h2>
               <p>If you have any questions about this Cookie Policy, how we use cookies, or would like to exercise your rights regarding cookies, please contact us at:</p>
-              <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 mt-4">
+              <div className="border border-muted rounded-lg p-4 mt-4">
                 <p className="mb-2"><strong>EntrepreneurXL, LLC</strong></p>
                 <p className="mb-2">Naples, FL</p>
                 <p className="mb-2"><a href="mailto:info@exitclarity.io" className="text-primary hover:underline">info@exitclarity.io</a></p>
