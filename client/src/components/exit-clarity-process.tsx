@@ -42,46 +42,68 @@ export function ExitClarityProcess() {
             </p>
           </div>
 
-          {/* Process Steps - Clean Grid */}
-          <div className="max-w-6xl mx-auto mb-20">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">1</span>
-                </div>
-                <div className="pt-8">
-                  <h3 className="text-xl font-bold text-foreground mb-4 text-center">Complete Assessment</h3>
-                  <p className="text-muted-foreground leading-relaxed text-center">Answer strategic questions across 11 key factors in 30-45 minutes to reveal your exit readiness</p>
-                </div>
-              </div>
+          {/* Process Steps - Linear Timeline */}
+          <div className="max-w-5xl mx-auto mb-20">
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-green-500 via-amber-500 to-purple-500 rounded-full"></div>
               
-              <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">2</span>
+              {/* Timeline Steps */}
+              <div className="space-y-16">
+                {/* Step 1 */}
+                <div className="relative flex items-center">
+                  <div className="flex-1 pr-8 text-right">
+                    <div className="bg-white p-6 rounded-2xl shadow-xl border border-primary/10">
+                      <h3 className="text-xl font-bold text-foreground mb-3">Complete Assessment</h3>
+                      <p className="text-muted-foreground leading-relaxed">Answer strategic questions across 11 key factors in 30-45 minutes to reveal your exit readiness</p>
+                    </div>
+                  </div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center shadow-lg z-10">
+                    <span className="text-white font-bold text-lg">1</span>
+                  </div>
+                  <div className="flex-1 pl-8"></div>
                 </div>
-                <div className="pt-8">
-                  <h3 className="text-xl font-bold text-foreground mb-4 text-center">Receive Strategic Report</h3>
-                  <p className="text-muted-foreground leading-relaxed text-center">Get your personalized 15-20 page strategic report with valuation estimates, risk analysis, and roadmap</p>
+                
+                {/* Step 2 */}
+                <div className="relative flex items-center">
+                  <div className="flex-1 pr-8"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg z-10">
+                    <span className="text-white font-bold text-lg">2</span>
+                  </div>
+                  <div className="flex-1 pl-8">
+                    <div className="bg-white p-6 rounded-2xl shadow-xl border border-green-500/10">
+                      <h3 className="text-xl font-bold text-foreground mb-3">Receive Strategic Report</h3>
+                      <p className="text-muted-foreground leading-relaxed">Get your personalized 15-20 page strategic report with valuation estimates, risk analysis, and roadmap</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">3</span>
+                
+                {/* Step 3 */}
+                <div className="relative flex items-center">
+                  <div className="flex-1 pr-8 text-right">
+                    <div className="bg-white p-6 rounded-2xl shadow-xl border border-amber-500/10">
+                      <h3 className="text-xl font-bold text-foreground mb-3">Get Clear Recommendation</h3>
+                      <p className="text-muted-foreground leading-relaxed">Get a definitive GO/FIX/WAIT recommendation with clear reasoning and prioritized next steps</p>
+                    </div>
+                  </div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg z-10">
+                    <span className="text-white font-bold text-lg">3</span>
+                  </div>
+                  <div className="flex-1 pl-8"></div>
                 </div>
-                <div className="pt-8">
-                  <h3 className="text-xl font-bold text-foreground mb-4 text-center">Get Clear Recommendation</h3>
-                  <p className="text-muted-foreground leading-relaxed text-center">Get a definitive GO/FIX/WAIT recommendation with clear reasoning and prioritized next steps</p>
-                </div>
-              </div>
-              
-              <div className="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 group">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">4</span>
-                </div>
-                <div className="pt-8">
-                  <h3 className="text-xl font-bold text-foreground mb-4 text-center">Follow Your Action Plan</h3>
-                  <p className="text-muted-foreground leading-relaxed text-center">Execute your personalized action plan with prioritized improvements, timeline milestones, and ROI projections</p>
+                
+                {/* Step 4 */}
+                <div className="relative flex items-center">
+                  <div className="flex-1 pr-8"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center shadow-lg z-10">
+                    <span className="text-white font-bold text-lg">4</span>
+                  </div>
+                  <div className="flex-1 pl-8">
+                    <div className="bg-white p-6 rounded-2xl shadow-xl border border-purple-500/10">
+                      <h3 className="text-xl font-bold text-foreground mb-3">Follow Your Action Plan</h3>
+                      <p className="text-muted-foreground leading-relaxed">Execute your personalized action plan with prioritized improvements, timeline milestones, and ROI projections</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -225,7 +247,7 @@ export function ExitClarityProcess() {
           {/* Benefits - Clean Grid Layout */}
           <div className="max-w-6xl mx-auto">
             {/* Benefits Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
