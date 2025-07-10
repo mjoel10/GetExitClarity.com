@@ -13,25 +13,9 @@ export function CTASection() {
               Strategic Wins
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+          <p className="text-xl text-muted-foreground leading-relaxed">
             Whether you're advising or preparing to sell, ExitClarity brings structure, insight, and confidence to every step of the journey.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl" className="group" asChild>
-              <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
-                <Calendar className="mr-2 h-5 w-5" />
-                Schedule a Demo
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
-            
-            <Button variant="professional" size="xl" className="group">
-              <FileText className="mr-2 h-5 w-5" />
-              See Sample Report
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </div>
         </div>
 
         {/* Two-Column Value Props */}
