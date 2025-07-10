@@ -1,8 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, FileText, Play, ArrowRight } from "lucide-react";
-import { Link } from "wouter";
+import { useLocation } from "wouter";
 
 export function CTASection() {
+  const [, navigate] = useLocation();
+
+  const handleMAFirmsLearnMore = () => {
+    navigate("/ma-firms");
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
+  const handleBusinessOwnersLearnMore = () => {
+    navigate("/business-owners");
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <section className="py-24 bg-gradient-to-br from-primary/5 to-accent/5">
       <div className="container mx-auto px-6">
@@ -52,12 +68,10 @@ export function CTASection() {
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="group flex-1" asChild>
-                <Link href="/ma-firms">
-                  <FileText className="mr-2 h-5 w-5" />
-                  Learn More
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Link>
+              <Button variant="outline" size="lg" className="group flex-1" onClick={handleMAFirmsLearnMore}>
+                <FileText className="mr-2 h-5 w-5" />
+                Learn More
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </div>
@@ -93,12 +107,10 @@ export function CTASection() {
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="group flex-1" asChild>
-                <Link href="/business-owners">
-                  <FileText className="mr-2 h-5 w-5" />
-                  Learn More
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Link>
+              <Button variant="outline" size="lg" className="group flex-1" onClick={handleBusinessOwnersLearnMore}>
+                <FileText className="mr-2 h-5 w-5" />
+                Learn More
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </div>
