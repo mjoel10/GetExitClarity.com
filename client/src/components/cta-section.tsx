@@ -61,17 +61,17 @@ export function CTASection() {
               </li>
             </ul>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button variant="hero" size="lg" className="group flex-1 py-3 px-4 md:py-4 md:px-6 text-base md:text-lg" asChild>
+              <Button variant="hero" size="default" className="group flex-1 sm:py-4 sm:px-6 sm:text-lg" asChild>
                 <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
-                  <Calendar className="mr-2 h-5 w-5 md:h-6 md:w-6" />
+                  <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Get Started Today
-                  <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="group flex-1 py-3 px-4 md:py-4 md:px-6 text-base md:text-lg" onClick={handleMAFirmsLearnMore}>
-                <FileText className="mr-2 h-5 w-5 md:h-6 md:w-6" />
+              <Button variant="outline" size="default" className="group flex-1 sm:py-4 sm:px-6 sm:text-lg" onClick={handleMAFirmsLearnMore}>
+                <FileText className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Learn More
-                <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </div>
@@ -100,17 +100,17 @@ export function CTASection() {
               </li>
             </ul>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button variant="hero" size="lg" className="group flex-1 py-3 px-4 md:py-4 md:px-6 text-base md:text-lg" asChild>
+              <Button variant="hero" size="default" className="group flex-1 sm:py-4 sm:px-6 sm:text-lg" asChild>
                 <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
-                  <Calendar className="mr-2 h-5 w-5 md:h-6 md:w-6" />
+                  <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Get Started Today
-                  <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="group flex-1 py-3 px-4 md:py-4 md:px-6 text-base md:text-lg" onClick={handleBusinessOwnersLearnMore}>
-                <FileText className="mr-2 h-5 w-5 md:h-6 md:w-6" />
+              <Button variant="outline" size="default" className="group flex-1 sm:py-4 sm:px-6 sm:text-lg" onClick={handleBusinessOwnersLearnMore}>
+                <FileText className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Learn More
-                <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </div>
