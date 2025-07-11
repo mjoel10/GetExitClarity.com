@@ -50,7 +50,7 @@ export function BusinessCaseROI() {
         {/* Problem/Solution Flow */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-4 items-center mb-16">
           {/* Current State */}
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-10 relative order-1 lg:order-none">
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 lg:p-10 relative order-1 lg:order-none">
             <div style={{
               position: 'absolute',
               top: '-12px',
@@ -101,7 +101,7 @@ export function BusinessCaseROI() {
           </div>
 
           {/* Arrow */}
-          <div className="flex justify-center items-center order-2 lg:order-none">
+          <div className="flex justify-center items-center order-2 lg:order-none lg:px-4">
             <ArrowRight style={{ 
               width: '3rem', 
               height: '3rem', 
@@ -113,7 +113,7 @@ export function BusinessCaseROI() {
           </div>
 
           {/* Future State */}
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-10 relative order-3 lg:order-none">
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 lg:p-10 relative order-3 lg:order-none">
             <div style={{
               position: 'absolute',
               top: '-12px',
@@ -165,7 +165,7 @@ export function BusinessCaseROI() {
         </div>
 
         {/* Key Outcomes */}
-        <div className="bg-gray-100 rounded-2xl p-6 md:p-12 text-center">
+        <div className="bg-gray-100 rounded-2xl p-6 lg:p-12 text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
             What This Means for Your Practice
           </h3>
