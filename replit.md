@@ -17,6 +17,7 @@ This is a React-based landing page for ExitClarity, a B2B SaaS platform that hel
 - **Hero CTA Section**: Added professional hero CTA section to M&A Firms page matching Business Owners page style with M&A-specific messaging
 - **Lead Tracking**: Complete lead capture system operational for both sample report and contact form submissions
 - **OpenGraph Social Sharing**: Added comprehensive OpenGraph meta tags with professional platform interface image for enhanced social media sharing
+- **Responsive CTA Button Fix**: Fixed homepage CTA buttons to prevent overflow on medium screens by changing breakpoint from sm to lg, ensuring buttons stack vertically until large screens and stay within container boundaries
 
 ### January 2025 - Footer Navigation Enhancement and Resources Page Visual Fix
 - **Footer Scroll-to-Top**: Added smooth scroll-to-top functionality to all footer links (Navigation and Legal sections)
