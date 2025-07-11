@@ -2,44 +2,23 @@ import { TrendingUp, Clock, Target, Users, CheckCircle, ArrowRight } from 'lucid
 
 export function BusinessCaseROI() {
   return (
-    <section style={{ 
-      backgroundColor: 'hsl(210, 20%, 96%)',
-      padding: '5rem 0'
+    <section className="py-16 md:py-20" style={{ 
+      backgroundColor: 'hsl(210, 20%, 96%)'
     }}>
-      <div style={{ 
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '0 1.5rem'
-      }}>
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 style={{ 
-            fontSize: '2.5rem',
-            fontWeight: 'bold',
-            color: 'hsl(218, 15%, 15%)',
-            marginBottom: '1rem',
-            lineHeight: '1.1'
-          }}>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Transform Your Deal Pipeline
           </h2>
-          <p style={{ 
-            fontSize: '1.25rem',
-            color: 'hsl(218, 10%, 45%)',
-            maxWidth: '800px',
-            margin: '0 auto',
-            lineHeight: '1.6'
-          }}>
+          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Stop waiting years for prospects to get ready. Start building relationships and accelerating transactions today.
           </p>
         </div>
 
         {/* Main Value Proposition */}
-        <div style={{
+        <div className="rounded-2xl p-6 md:p-12 text-center mb-16" style={{
           background: 'linear-gradient(135deg, hsl(218, 100%, 25%), hsl(210, 100%, 50%))',
-          borderRadius: '1rem',
-          padding: '3rem 2rem',
-          textAlign: 'center',
-          marginBottom: '4rem',
           boxShadow: '0 20px 60px -12px hsl(218, 100%, 25%, 0.25)'
         }}>
           <div style={{ 
@@ -54,12 +33,7 @@ export function BusinessCaseROI() {
               color: 'white',
               marginRight: '0.75rem'
             }} />
-            <h3 style={{
-              fontSize: '2rem',
-              fontWeight: 'bold',
-              color: 'white',
-              margin: '0'
-            }}>
+            <h3 className="text-2xl md:text-3xl font-bold text-white m-0">
               One Additional Deal Per Year Pays for the Platform
             </h3>
           </div>
@@ -74,21 +48,9 @@ export function BusinessCaseROI() {
         </div>
 
         {/* Problem/Solution Flow */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr auto 1fr',
-          gap: '2rem',
-          alignItems: 'center',
-          marginBottom: '4rem'
-        }}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-4 items-center mb-16">
           {/* Current State */}
-          <div style={{
-            backgroundColor: 'hsl(0, 0%, 98%)',
-            border: '1px solid hsl(218, 20%, 90%)',
-            borderRadius: '1rem',
-            padding: '2.5rem',
-            position: 'relative'
-          }}>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-10 relative order-1 lg:order-none">
             <div style={{
               position: 'absolute',
               top: '-12px',
@@ -139,11 +101,7 @@ export function BusinessCaseROI() {
           </div>
 
           {/* Arrow */}
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}>
+          <div className="flex justify-center items-center order-2 lg:order-none">
             <ArrowRight style={{ 
               width: '3rem', 
               height: '3rem', 
@@ -155,13 +113,7 @@ export function BusinessCaseROI() {
           </div>
 
           {/* Future State */}
-          <div style={{
-            backgroundColor: 'hsl(0, 0%, 98%)',
-            border: '1px solid hsl(218, 20%, 90%)',
-            borderRadius: '1rem',
-            padding: '2.5rem',
-            position: 'relative'
-          }}>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-10 relative order-3 lg:order-none">
             <div style={{
               position: 'absolute',
               top: '-12px',
@@ -213,124 +165,44 @@ export function BusinessCaseROI() {
         </div>
 
         {/* Key Outcomes */}
-        <div style={{
-          backgroundColor: 'hsl(210, 20%, 96%)',
-          borderRadius: '1rem',
-          padding: '3rem 2rem',
-          textAlign: 'center'
-        }}>
-          <h3 style={{
-            fontSize: '1.75rem',
-            fontWeight: 'bold',
-            color: 'hsl(218, 15%, 15%)',
-            marginBottom: '2rem'
-          }}>
+        <div className="bg-gray-100 rounded-2xl p-6 md:p-12 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
             What This Means for Your Practice
           </h3>
           
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '2rem'
-          }}>
-            <div style={{
-              textAlign: 'center',
-              padding: '1.5rem'
-            }}>
-              <div style={{
-                width: '4rem',
-                height: '4rem',
-                backgroundColor: 'hsl(218, 100%, 25%, 0.1)',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 1.5rem'
-              }}>
-                <Clock style={{ width: '2rem', height: '2rem', color: 'hsl(218, 100%, 25%)' }} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="w-8 h-8 text-blue-700" />
               </div>
-              <h4 style={{
-                fontSize: '1.25rem',
-                fontWeight: '600',
-                color: 'hsl(218, 15%, 15%)',
-                marginBottom: '0.75rem'
-              }}>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">
                 Earlier Engagement
               </h4>
-              <p style={{
-                color: 'hsl(218, 10%, 45%)',
-                fontSize: '0.95rem',
-                lineHeight: '1.5',
-                margin: '0'
-              }}>
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Start building relationships and trust 2-3 years before traditional engagement
               </p>
             </div>
 
-            <div style={{
-              textAlign: 'center',
-              padding: '1.5rem'
-            }}>
-              <div style={{
-                width: '4rem',
-                height: '4rem',
-                backgroundColor: 'hsl(218, 100%, 25%, 0.1)',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 1.5rem'
-              }}>
-                <Target style={{ width: '2rem', height: '2rem', color: 'hsl(218, 100%, 25%)' }} />
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="w-8 h-8 text-blue-700" />
               </div>
-              <h4 style={{
-                fontSize: '1.25rem',
-                fontWeight: '600',
-                color: 'hsl(218, 15%, 15%)',
-                marginBottom: '0.75rem'
-              }}>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">
                 Higher Conversion
               </h4>
-              <p style={{
-                color: 'hsl(218, 10%, 45%)',
-                fontSize: '0.95rem',
-                lineHeight: '1.5',
-                margin: '0'
-              }}>
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Convert more prospects by guiding them through the readiness process
               </p>
             </div>
 
-            <div style={{
-              textAlign: 'center',
-              padding: '1.5rem'
-            }}>
-              <div style={{
-                width: '4rem',
-                height: '4rem',
-                backgroundColor: 'hsl(218, 100%, 25%, 0.1)',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 1.5rem'
-              }}>
-                <Users style={{ width: '2rem', height: '2rem', color: 'hsl(218, 100%, 25%)' }} />
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-blue-700" />
               </div>
-              <h4 style={{
-                fontSize: '1.25rem',
-                fontWeight: '600',
-                color: 'hsl(218, 15%, 15%)',
-                marginBottom: '0.75rem'
-              }}>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">
                 Stronger Relationships
               </h4>
-              <p style={{
-                color: 'hsl(218, 10%, 45%)',
-                fontSize: '0.95rem',
-                lineHeight: '1.5',
-                margin: '0'
-              }}>
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Become their trusted advisor through the preparation journey
               </p>
             </div>
