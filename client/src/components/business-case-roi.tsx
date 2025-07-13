@@ -48,7 +48,7 @@ export function BusinessCaseROI() {
         </div>
 
         {/* Problem/Solution Flow */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-2 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-8 items-center mb-16 lg:max-w-5xl lg:mx-auto">
           {/* Current State */}
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 lg:p-10 relative order-1 lg:order-none">
             <div style={{
@@ -101,7 +101,7 @@ export function BusinessCaseROI() {
           </div>
 
           {/* Arrow */}
-          <div className="flex justify-center items-center order-2 lg:order-none lg:px-2">
+          <div className="flex justify-center items-center order-2 lg:order-none lg:px-2 lg:flex-shrink-0">
             <ArrowRight style={{ 
               width: '2.5rem', 
               height: '2.5rem', 
