@@ -48,7 +48,7 @@ export function BusinessCaseROI() {
         </div>
 
         {/* Problem/Solution Flow */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-6 items-stretch mb-16 lg:max-w-4xl lg:mx-auto">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-6 items-stretch mb-16 lg:max-w-5xl lg:mx-auto">
           {/* Current State */}
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 lg:p-8 relative flex-1">
             <div style={{
