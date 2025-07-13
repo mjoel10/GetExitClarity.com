@@ -48,9 +48,9 @@ export function BusinessCaseROI() {
         </div>
 
         {/* Problem/Solution Flow */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-8 items-center mb-16 lg:max-w-5xl lg:mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-4 items-stretch mb-16 lg:max-w-6xl lg:mx-auto">
           {/* Current State */}
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 lg:p-10 relative order-1 lg:order-none">
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 lg:p-8 relative order-1 lg:order-none flex-1">
             <div style={{
               position: 'absolute',
               top: '-12px',
@@ -101,7 +101,7 @@ export function BusinessCaseROI() {
           </div>
 
           {/* Arrow */}
-          <div className="flex justify-center items-center order-2 lg:order-none lg:px-2 lg:flex-shrink-0">
+          <div className="flex justify-center items-center order-2 lg:order-none lg:px-1 lg:flex-shrink-0 lg:w-16">
             <ArrowRight style={{ 
               width: '2.5rem', 
               height: '2.5rem', 
@@ -113,7 +113,7 @@ export function BusinessCaseROI() {
           </div>
 
           {/* Future State */}
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 lg:p-10 relative order-3 lg:order-none">
+          <div className="bg-white border border-blue-200 rounded-2xl p-6 lg:p-8 relative order-3 lg:order-none flex-1">
             <div style={{
               position: 'absolute',
               top: '-12px',
