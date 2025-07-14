@@ -105,10 +105,13 @@ export function OwnerBenefitsSection() {
               </div>
 
               <div className="mt-8 text-center">
-                <div className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary/10 text-primary rounded-lg font-medium">
+                <Link 
+                  href="/sample-report"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary/10 text-primary rounded-lg font-medium hover:bg-primary/20 transition-all duration-200 cursor-pointer"
+                >
                   <span>Get Your Complete Assessment</span>
                   <ArrowRight className="h-4 w-4" />
-                </div>
+                </Link>
               </div>
             </div>
           </div>
