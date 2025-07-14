@@ -1,7 +1,16 @@
 import { Calendar, FileText, ArrowRight, CheckCircle, TrendingUp, Shield } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 export function OwnerBenefitsSection() {
+  const [, navigate] = useLocation();
+
+  const handleGetAssessment = () => {
+    navigate("/resources");
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <section className="pt-44 pb-24 bg-gradient-to-br from-primary/80 via-primary/85 to-primary/90 relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.03%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
@@ -105,13 +114,13 @@ export function OwnerBenefitsSection() {
               </div>
 
               <div className="mt-8 text-center">
-                <Link 
-                  href="/sample-report"
+                <button
+                  onClick={handleGetAssessment}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary/10 text-primary rounded-lg font-medium hover:bg-primary/20 transition-all duration-200 cursor-pointer"
                 >
                   <span>Get Your Complete Assessment</span>
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </button>
               </div>
             </div>
           </div>
