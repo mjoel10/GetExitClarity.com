@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
 
 export default function Header() {
@@ -9,6 +9,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isPlatformDropdownOpen, setIsPlatformDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const [, navigate] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,12 +30,13 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
     setIsMenuOpen(false);
+    setIsPlatformDropdownOpen(false);
   };
 
   return (
@@ -44,15 +46,15 @@ export default function Header() {
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between h-8">
           {/* Logo Section */}
-          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+          <button onClick={() => handleNavigation("/")} className="flex items-center hover:opacity-80 transition-opacity">
             <img src={exitClarityLogo} alt="ExitClarity" className="h-8 w-auto" />
-          </Link>
+          </button>
           
           {/* Desktop Navigation - Centered */}
           <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
-            <Link href="/" className="text-gray-600 hover:text-primary transition-colors font-medium">
+            <button onClick={() => handleNavigation("/")} className="text-gray-600 hover:text-primary transition-colors font-medium">
               Home
-            </Link>
+            </button>
             
             {/* Platform Dropdown */}
             <div className="relative" ref={dropdownRef}>
@@ -72,33 +74,31 @@ export default function Header() {
                   className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 nav-dropdown nav-dropdown-menu"
                   onMouseLeave={() => setIsPlatformDropdownOpen(false)}
                 >
-                  <Link 
-                    href="/ma-firms" 
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
-                    onClick={() => setIsPlatformDropdownOpen(false)}
+                  <button 
+                    onClick={() => handleNavigation("/ma-firms")}
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors w-full text-left"
                   >
                     For M&A Firms
-                  </Link>
-                  <Link 
-                    href="/business-owners" 
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
-                    onClick={() => setIsPlatformDropdownOpen(false)}
+                  </button>
+                  <button 
+                    onClick={() => handleNavigation("/business-owners")}
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors w-full text-left"
                   >
                     For Business Owners
-                  </Link>
+                  </button>
                 </div>
               )}
             </div>
             
-            <Link href="/about" className="text-gray-600 hover:text-primary transition-colors font-medium">
+            <button onClick={() => handleNavigation("/about")} className="text-gray-600 hover:text-primary transition-colors font-medium">
               About
-            </Link>
-            <Link href="/resources" className="text-gray-600 hover:text-primary transition-colors font-medium">
+            </button>
+            <button onClick={() => handleNavigation("/resources")} className="text-gray-600 hover:text-primary transition-colors font-medium">
               Resources
-            </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-primary transition-colors font-medium">
+            </button>
+            <button onClick={() => handleNavigation("/contact")} className="text-gray-600 hover:text-primary transition-colors font-medium">
               Contact
-            </Link>
+            </button>
           </div>
           
           {/* CTA Button */}
@@ -124,54 +124,48 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <Link 
-                href="/" 
+              <button 
+                onClick={() => handleNavigation("/")}
                 className="text-gray-600 hover:text-primary transition-colors font-medium text-left"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </Link>
+              </button>
               
               {/* Mobile Platform Submenu */}
               <div className="pl-4 space-y-2">
                 <div className="text-gray-800 font-medium">Platform</div>
-                <Link 
-                  href="/ma-firms" 
-                  className="block text-gray-600 hover:text-primary transition-colors pl-4"
-                  onClick={() => setIsMenuOpen(false)}
+                <button 
+                  onClick={() => handleNavigation("/ma-firms")}
+                  className="block text-gray-600 hover:text-primary transition-colors pl-4 text-left"
                 >
                   For M&A Firms
-                </Link>
-                <Link 
-                  href="/business-owners" 
-                  className="block text-gray-600 hover:text-primary transition-colors pl-4"
-                  onClick={() => setIsMenuOpen(false)}
+                </button>
+                <button 
+                  onClick={() => handleNavigation("/business-owners")}
+                  className="block text-gray-600 hover:text-primary transition-colors pl-4 text-left"
                 >
                   For Business Owners
-                </Link>
+                </button>
               </div>
               
-              <Link 
-                href="/about" 
+              <button 
+                onClick={() => handleNavigation("/about")}
                 className="text-gray-600 hover:text-primary transition-colors font-medium text-left"
-                onClick={() => setIsMenuOpen(false)}
               >
                 About
-              </Link>
-              <Link 
-                href="/resources" 
+              </button>
+              <button 
+                onClick={() => handleNavigation("/resources")}
                 className="text-gray-600 hover:text-primary transition-colors font-medium text-left"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Resources
-              </Link>
-              <Link 
-                href="/contact" 
+              </button>
+              <button 
+                onClick={() => handleNavigation("/contact")}
                 className="text-gray-600 hover:text-primary transition-colors font-medium text-left"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </Link>
+              </button>
               
               <Button 
                 onClick={() => {
