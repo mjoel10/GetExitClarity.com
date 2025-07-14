@@ -65,13 +65,13 @@ export function OwnerBenefitsSection() {
                 <Calendar className="h-5 w-5 mr-2" />
                 Schedule Demo
               </a>
-              <Link 
-                href="/sample-report"
+              <button
+                onClick={handleGetAssessment}
                 className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white border-2 border-white/20 font-semibold rounded-xl hover:bg-white/20 hover:border-white/40 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
               >
                 <FileText className="h-5 w-5 mr-2" />
                 View Sample Report
-              </Link>
+              </button>
             </div>
           </div>
 

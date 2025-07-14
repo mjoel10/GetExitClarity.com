@@ -21,6 +21,7 @@ This is a React-based landing page for ExitClarity, a B2B SaaS platform that hel
 - **Business Case ROI Component Layout Fix**: Resolved column spacing issues in M&A Firms page by converting from grid to flexbox layout, achieving optimal desktop spacing with lg:gap-6 and lg:max-w-5xl while maintaining mobile responsiveness
 - **Timeline Mobile Responsiveness**: Fixed ExitClarity Process timeline on Business Owners page by implementing dual layouts - mobile uses left-aligned vertical line with horizontal step cards, desktop preserves original alternating design with centered timeline
 - **Assessment CTA Button Integration**: Made "Get Your Complete Assessment" button in assessment visual clickable with proper navigation to resources page and smooth scroll-to-top functionality
+- **View Sample Report CTA Fix**: Fixed "View Sample Report" button to properly navigate to resources page instead of 404 error, ensuring both CTA buttons work seamlessly
 
 ### January 2025 - Footer Navigation Enhancement and Resources Page Visual Fix
 - **Footer Scroll-to-Top**: Added smooth scroll-to-top functionality to all footer links (Navigation and Legal sections)
