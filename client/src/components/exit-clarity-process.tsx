@@ -42,66 +42,130 @@ export function ExitClarityProcess() {
             </p>
           </div>
 
-          {/* Process Steps - Linear Timeline */}
+          {/* Process Steps - Responsive Timeline */}
           <div className="max-w-5xl mx-auto mb-20">
             <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-green-500 via-amber-500 to-purple-500 rounded-full"></div>
+              {/* Timeline line - Hidden on mobile */}
+              <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-green-500 via-amber-500 to-purple-500 rounded-full"></div>
               
               {/* Timeline Steps */}
-              <div className="space-y-16">
+              <div className="space-y-8 lg:space-y-16">
                 {/* Step 1 */}
-                <div className="relative flex items-center">
-                  <div className="flex-1 pr-8 text-right">
-                    <div className="bg-white p-6 rounded-2xl shadow-xl border border-primary/10">
-                      <h3 className="text-xl font-bold text-foreground mb-3">Complete Assessment</h3>
-                      <p className="text-muted-foreground leading-relaxed">Answer strategic questions across 11 key factors in 30-45 minutes to reveal your exit readiness</p>
+                <div className="relative">
+                  {/* Mobile Layout */}
+                  <div className="lg:hidden flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
+                      <span className="text-white font-bold text-lg">1</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="bg-white p-6 rounded-2xl shadow-xl border border-primary/10">
+                        <h3 className="text-xl font-bold text-foreground mb-3">Complete Assessment</h3>
+                        <p className="text-muted-foreground leading-relaxed">Answer strategic questions across 11 key factors in 30-45 minutes to reveal your exit readiness</p>
+                      </div>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center shadow-lg z-10">
-                    <span className="text-white font-bold text-lg">1</span>
+                  
+                  {/* Desktop Layout */}
+                  <div className="hidden lg:flex items-center">
+                    <div className="flex-1 pr-8 text-right">
+                      <div className="bg-white p-6 rounded-2xl shadow-xl border border-primary/10">
+                        <h3 className="text-xl font-bold text-foreground mb-3">Complete Assessment</h3>
+                        <p className="text-muted-foreground leading-relaxed">Answer strategic questions across 11 key factors in 30-45 minutes to reveal your exit readiness</p>
+                      </div>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center shadow-lg z-10">
+                      <span className="text-white font-bold text-lg">1</span>
+                    </div>
+                    <div className="flex-1 pl-8"></div>
                   </div>
-                  <div className="flex-1 pl-8"></div>
                 </div>
                 
                 {/* Step 2 */}
-                <div className="relative flex items-center">
-                  <div className="flex-1 pr-8"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg z-10">
-                    <span className="text-white font-bold text-lg">2</span>
+                <div className="relative">
+                  {/* Mobile Layout */}
+                  <div className="lg:hidden flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
+                      <span className="text-white font-bold text-lg">2</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="bg-white p-6 rounded-2xl shadow-xl border border-green-500/10">
+                        <h3 className="text-xl font-bold text-foreground mb-3">Receive Strategic Report</h3>
+                        <p className="text-muted-foreground leading-relaxed">Get your personalized 15-20 page strategic report with valuation estimates, risk analysis, and roadmap</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex-1 pl-8">
-                    <div className="bg-white p-6 rounded-2xl shadow-xl border border-green-500/10">
-                      <h3 className="text-xl font-bold text-foreground mb-3">Receive Strategic Report</h3>
-                      <p className="text-muted-foreground leading-relaxed">Get your personalized 15-20 page strategic report with valuation estimates, risk analysis, and roadmap</p>
+                  
+                  {/* Desktop Layout */}
+                  <div className="hidden lg:flex items-center">
+                    <div className="flex-1 pr-8"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg z-10">
+                      <span className="text-white font-bold text-lg">2</span>
+                    </div>
+                    <div className="flex-1 pl-8">
+                      <div className="bg-white p-6 rounded-2xl shadow-xl border border-green-500/10">
+                        <h3 className="text-xl font-bold text-foreground mb-3">Receive Strategic Report</h3>
+                        <p className="text-muted-foreground leading-relaxed">Get your personalized 15-20 page strategic report with valuation estimates, risk analysis, and roadmap</p>
+                      </div>
                     </div>
                   </div>
                 </div>
                 
                 {/* Step 3 */}
-                <div className="relative flex items-center">
-                  <div className="flex-1 pr-8 text-right">
-                    <div className="bg-white p-6 rounded-2xl shadow-xl border border-amber-500/10">
-                      <h3 className="text-xl font-bold text-foreground mb-3">Get Clear Recommendation</h3>
-                      <p className="text-muted-foreground leading-relaxed">Get a definitive GO/FIX/WAIT recommendation with clear reasoning and prioritized next steps</p>
+                <div className="relative">
+                  {/* Mobile Layout */}
+                  <div className="lg:hidden flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
+                      <span className="text-white font-bold text-lg">3</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="bg-white p-6 rounded-2xl shadow-xl border border-amber-500/10">
+                        <h3 className="text-xl font-bold text-foreground mb-3">Get Clear Recommendation</h3>
+                        <p className="text-muted-foreground leading-relaxed">Get a definitive GO/FIX/WAIT recommendation with clear reasoning and prioritized next steps</p>
+                      </div>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg z-10">
-                    <span className="text-white font-bold text-lg">3</span>
+                  
+                  {/* Desktop Layout */}
+                  <div className="hidden lg:flex items-center">
+                    <div className="flex-1 pr-8 text-right">
+                      <div className="bg-white p-6 rounded-2xl shadow-xl border border-amber-500/10">
+                        <h3 className="text-xl font-bold text-foreground mb-3">Get Clear Recommendation</h3>
+                        <p className="text-muted-foreground leading-relaxed">Get a definitive GO/FIX/WAIT recommendation with clear reasoning and prioritized next steps</p>
+                      </div>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg z-10">
+                      <span className="text-white font-bold text-lg">3</span>
+                    </div>
+                    <div className="flex-1 pl-8"></div>
                   </div>
-                  <div className="flex-1 pl-8"></div>
                 </div>
                 
                 {/* Step 4 */}
-                <div className="relative flex items-center">
-                  <div className="flex-1 pr-8"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center shadow-lg z-10">
-                    <span className="text-white font-bold text-lg">4</span>
+                <div className="relative">
+                  {/* Mobile Layout */}
+                  <div className="lg:hidden flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
+                      <span className="text-white font-bold text-lg">4</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="bg-white p-6 rounded-2xl shadow-xl border border-purple-500/10">
+                        <h3 className="text-xl font-bold text-foreground mb-3">Follow Your Action Plan</h3>
+                        <p className="text-muted-foreground leading-relaxed">Execute your personalized action plan with prioritized improvements, timeline milestones, and ROI projections</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex-1 pl-8">
-                    <div className="bg-white p-6 rounded-2xl shadow-xl border border-purple-500/10">
-                      <h3 className="text-xl font-bold text-foreground mb-3">Follow Your Action Plan</h3>
-                      <p className="text-muted-foreground leading-relaxed">Execute your personalized action plan with prioritized improvements, timeline milestones, and ROI projections</p>
+                  
+                  {/* Desktop Layout */}
+                  <div className="hidden lg:flex items-center">
+                    <div className="flex-1 pr-8"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center shadow-lg z-10">
+                      <span className="text-white font-bold text-lg">4</span>
+                    </div>
+                    <div className="flex-1 pl-8">
+                      <div className="bg-white p-6 rounded-2xl shadow-xl border border-purple-500/10">
+                        <h3 className="text-xl font-bold text-foreground mb-3">Follow Your Action Plan</h3>
+                        <p className="text-muted-foreground leading-relaxed">Execute your personalized action plan with prioritized improvements, timeline milestones, and ROI projections</p>
+                      </div>
                     </div>
                   </div>
                 </div>
