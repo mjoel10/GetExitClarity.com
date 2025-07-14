@@ -45,7 +45,10 @@ export function ExitClarityProcess() {
           {/* Process Steps - Responsive Timeline */}
           <div className="max-w-5xl mx-auto mb-20">
             <div className="relative">
-              {/* Timeline line - Hidden on mobile */}
+              {/* Timeline line - Mobile version (left side) */}
+              <div className="lg:hidden absolute left-6 top-12 bottom-12 w-1 bg-gradient-to-b from-primary via-green-500 via-amber-500 to-purple-500 rounded-full"></div>
+              
+              {/* Timeline line - Desktop version (center) */}
               <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-green-500 via-amber-500 to-purple-500 rounded-full"></div>
               
               {/* Timeline Steps */}
