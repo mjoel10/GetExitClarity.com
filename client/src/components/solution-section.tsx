@@ -71,7 +71,7 @@ export function SolutionSection() {
     {
       icon: Users,
       title: "Expert guidance on your terms",
-      description: "Access professional insights without contracts or commitments"
+      description: "Professional insights without initial contracts or commitments"
     }
   ];
 
