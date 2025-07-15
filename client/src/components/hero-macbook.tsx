@@ -22,7 +22,7 @@ export default function HeroMacBook() {
                   </div>
                   <div className="header-right">
                     <div className="time-remaining">
-                      <span className="time-text">Est. time remaining: 8 min</span>
+                      <span className="time-text">Est. 9 mins remaining</span>
                       <div className="time-indicator">
                         <div className="time-dot"></div>
                       </div>
