@@ -21,6 +21,12 @@ export default function HeroMacBook() {
                     <img src={exitClarityLogo} alt="ExitClarity" className="dashboard-logo" />
                   </div>
                   <div className="header-right">
+                    <div className="time-remaining">
+                      <span className="time-text">Est. time remaining: 8 min</span>
+                      <div className="time-indicator">
+                        <div className="time-dot"></div>
+                      </div>
+                    </div>
                     <div className="progress-bar">
                       <div className="progress-fill"></div>
                     </div>
@@ -97,6 +103,16 @@ export default function HeroMacBook() {
                       <div className="item-content">
                         <div className="item-title">Previous M&A Experience</div>
                         <div className="item-step">Step 8 of 11 • Previous experience & preparation approach</div>
+                        <div className="item-details">
+                          <div className="detail-row">
+                            <span className="detail-label">Experience Level:</span>
+                            <span className="detail-value">First-time seller</span>
+                          </div>
+                          <div className="detail-row">
+                            <span className="detail-label">Advisory Team:</span>
+                            <span className="detail-value warning">Not assembled</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
