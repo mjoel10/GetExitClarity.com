@@ -37,7 +37,7 @@ export default function HeroMacBook() {
                 {/* Content */}
                 <div className="interface-content">
                   <div className="content-header">
-                    <h2 className="main-title">Exit Readiness Assessment</h2>
+                    <h2 className="main-title">Exit Readiness Platform</h2>
                     <p className="subtitle">Comprehensive analysis across 11 critical factors</p>
                   </div>
 
