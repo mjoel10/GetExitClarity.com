@@ -1650,29 +1650,29 @@ All colors MUST be HSL.
 
   .interface-content {
     flex: 1;
-    padding: 20px 24px;
+    padding: 16px 24px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
   }
 
   .content-header {
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
 
   .main-title {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     background: linear-gradient(135deg, #1e40af, #3b82f6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   .subtitle {
     color: #6b7280;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .assessment-grid {
