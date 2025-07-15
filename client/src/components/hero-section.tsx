@@ -24,24 +24,8 @@ export function HeroSection() {
               </p>
             </div>
 
-            {/* MacBook Visual - Shows here on mobile only */}
-            <div className="hero-macbook-section xl:hidden">
-              <div className="relative">
-                {/* Subtle blue background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/8 to-accent/5 rounded-2xl blur-sm"></div>
-                
-                <div className="relative z-10">
-                  <HeroMacBook />
-                </div>
-                
-                {/* Background decorative elements */}
-                <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
-                <div className="absolute -bottom-4 -left-4 w-48 h-48 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-3xl"></div>
-              </div>
-            </div>
-            
-            {/* CTA Buttons */}
-            <div className="hero-cta-section">
+            {/* CTA Buttons - Shows above MacBook on mobile, below on desktop */}
+            <div className="hero-cta-section xl:order-3">
               <div className="flex flex-col sm:flex-row gap-4 justify-center xl:justify-start mb-12">
                 <Button variant="hero" size="xl" className="group" asChild>
                   <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
@@ -58,6 +42,22 @@ export function HeroSection() {
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
+              </div>
+            </div>
+
+            {/* MacBook Visual - Shows here on mobile only */}
+            <div className="hero-macbook-section xl:hidden">
+              <div className="relative">
+                {/* Subtle blue background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/8 to-accent/5 rounded-2xl blur-sm"></div>
+                
+                <div className="relative z-10">
+                  <HeroMacBook />
+                </div>
+                
+                {/* Background decorative elements */}
+                <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-4 -left-4 w-48 h-48 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-3xl"></div>
               </div>
             </div>
             
