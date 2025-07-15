@@ -24,8 +24,8 @@ export function HeroSection() {
               </p>
             </div>
 
-            {/* CTA Buttons - Shows above MacBook on mobile, below on desktop */}
-            <div className="hero-cta-section xl:order-3">
+            {/* CTA Buttons - Shows above MacBook on mobile, below headlines on desktop */}
+            <div className="hero-cta-section order-2 xl:order-3">
               <div className="flex flex-col sm:flex-row gap-4 justify-center xl:justify-start mb-12">
                 <Button variant="hero" size="xl" className="group" asChild>
                   <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
@@ -46,7 +46,7 @@ export function HeroSection() {
             </div>
 
             {/* MacBook Visual - Shows here on mobile only */}
-            <div className="hero-macbook-section xl:hidden">
+            <div className="hero-macbook-section xl:hidden order-3">
               <div className="relative">
                 {/* Subtle blue background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/8 to-accent/5 rounded-2xl blur-sm"></div>
@@ -62,7 +62,7 @@ export function HeroSection() {
             </div>
             
             {/* Key Stats */}
-            <div className="hero-stats-section xl:order-4">
+            <div className="hero-stats-section order-4 xl:order-4">
               <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto xl:mx-0">
                 <div className="text-center xl:text-left">
                   <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">30+</div>
