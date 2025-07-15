@@ -60,15 +60,15 @@ export function CTASection() {
                 <span>Close deals faster with better-prepared clients</span>
               </li>
             </ul>
-            <div className="flex flex-col lg:flex-row gap-3">
-              <Button variant="hero" size="default" className="group lg:flex-1 sm:py-4 sm:px-6 sm:text-lg" asChild>
+            <div className="flex flex-col xl:flex-row gap-3">
+              <Button variant="hero" size="default" className="group xl:flex-1 sm:py-4 sm:px-6 sm:text-lg" asChild>
                 <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
                   <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Get Started Today
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button variant="outline" size="default" className="group lg:flex-1 sm:py-4 sm:px-6 sm:text-lg" onClick={handleMAFirmsLearnMore}>
+              <Button variant="outline" size="default" className="group xl:flex-1 sm:py-4 sm:px-6 sm:text-lg" onClick={handleMAFirmsLearnMore}>
                 <FileText className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
@@ -99,15 +99,15 @@ export function CTASection() {
                 <span>Build confidence and control in your exit process</span>
               </li>
             </ul>
-            <div className="flex flex-col lg:flex-row gap-3">
-              <Button variant="hero" size="default" className="group lg:flex-1 sm:py-4 sm:px-6 sm:text-lg" asChild>
+            <div className="flex flex-col xl:flex-row gap-3">
+              <Button variant="hero" size="default" className="group xl:flex-1 sm:py-4 sm:px-6 sm:text-lg" asChild>
                 <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
                   <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Get Started Today
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button variant="outline" size="default" className="group lg:flex-1 sm:py-4 sm:px-6 sm:text-lg" onClick={handleBusinessOwnersLearnMore}>
+              <Button variant="outline" size="default" className="group xl:flex-1 sm:py-4 sm:px-6 sm:text-lg" onClick={handleBusinessOwnersLearnMore}>
                 <FileText className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
