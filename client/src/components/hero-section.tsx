@@ -62,7 +62,7 @@ export function HeroSection() {
             </div>
             
             {/* Key Stats */}
-            <div className="hero-stats-section">
+            <div className="hero-stats-section xl:order-4">
               <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto xl:mx-0">
                 <div className="text-center xl:text-left">
                   <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">30+</div>
