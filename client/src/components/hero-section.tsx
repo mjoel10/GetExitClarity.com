@@ -56,8 +56,8 @@ export function HeroSection() {
                 </div>
                 
                 {/* Background decorative elements */}
-                <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
-                <div className="absolute -bottom-4 -left-4 w-48 h-48 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-3xl"></div>
+                <div className="absolute -top-4 -right-4 w-32 h-32 md:w-48 md:h-48 lg:w-72 lg:h-72 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-4 -left-4 w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-3xl"></div>
               </div>
             </div>
             
@@ -91,8 +91,8 @@ export function HeroSection() {
               </div>
               
               {/* Background decorative elements */}
-              <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-48 h-48 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-3xl"></div>
+              <div className="absolute -top-4 -right-4 w-32 h-32 md:w-48 md:h-48 lg:w-72 lg:h-72 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-3xl"></div>
             </div>
           </div>
         </div>
