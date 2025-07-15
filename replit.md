@@ -25,6 +25,7 @@ This is a React-based landing page for ExitClarity, a B2B SaaS platform that hel
 - **Complete Sample Report Button Fix**: Fixed all remaining "View Sample Report" and "Download Sample Report" buttons throughout Business Owners page to properly navigate to resources page with smooth scroll-to-top
 - **Navigation Scroll-to-Top Fix**: Updated all header navigation elements (desktop, mobile, dropdown) to scroll to top of new page when clicked, ensuring seamless user experience
 - **CTA Button Responsive Fix**: Changed homepage CTA button breakpoint from lg to xl (1280px) to prevent cramping at narrow desktop widths, ensuring buttons stack properly until extra-large screens
+- **Solution Section CTA Addition**: Added dual CTA buttons to "A Readiness Engine That Works for Both Sides" section with same responsive behavior and navigation functionality
 
 ### January 2025 - Footer Navigation Enhancement and Resources Page Visual Fix
 - **Footer Scroll-to-Top**: Added smooth scroll-to-top functionality to all footer links (Navigation and Legal sections)
