@@ -102,7 +102,7 @@ export default function HeroMacBook() {
         <div className="assessment-complete-indicator">
           <div className="indicator-content">
             <div className="indicator-dot"></div>
-            <span>Assessment In-Progress</span>
+            <span>In-Progress</span>
           </div>
           <div className="indicator-subtitle">Almost Ready for Strategic Review</div>
         </div>
