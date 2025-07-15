@@ -1173,8 +1173,20 @@ All colors MUST be HSL.
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 20px;
+    padding: 8px 12px;
     border-bottom: 1px solid #e5e7eb;
+  }
+
+  @media (min-width: 768px) {
+    .dashboard-header {
+      padding: 10px 16px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .dashboard-header {
+      padding: 12px 20px;
+    }
   }
 
   .header-left {
@@ -1196,10 +1208,21 @@ All colors MUST be HSL.
   }
 
   .dashboard-logo {
-    width: 100px;
+    width: 80px;
     height: auto;
     margin: 0;
-    padding: 0;
+  }
+
+  @media (min-width: 768px) {
+    .dashboard-logo {
+      width: 90px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .dashboard-logo {
+      width: 100px;
+    }
   }
 
   .progress-text {
@@ -1650,10 +1673,24 @@ All colors MUST be HSL.
 
   .interface-content {
     flex: 1;
-    padding: 16px 24px;
+    padding: 8px 12px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
+  }
+
+  @media (min-width: 768px) {
+    .interface-content {
+      padding: 12px 18px;
+      gap: 10px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .interface-content {
+      padding: 16px 24px;
+      gap: 12px;
+    }
   }
 
   .content-header {
@@ -1663,7 +1700,7 @@ All colors MUST be HSL.
   }
 
   .main-title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     background: linear-gradient(135deg, #1e40af, #3b82f6);
     -webkit-background-clip: text;
@@ -1673,7 +1710,27 @@ All colors MUST be HSL.
 
   .subtitle {
     color: #6b7280;
-    font-size: 10px;
+    font-size: 9px;
+  }
+
+  @media (min-width: 768px) {
+    .main-title {
+      font-size: 15px;
+    }
+    
+    .subtitle {
+      font-size: 9.5px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .main-title {
+      font-size: 16px;
+    }
+    
+    .subtitle {
+      font-size: 10px;
+    }
   }
 
   .assessment-grid {
@@ -1686,14 +1743,30 @@ All colors MUST be HSL.
 
   .assessment-item {
     background: white;
-    border-radius: 8px;
-    padding: 8px 12px;
+    border-radius: 6px;
+    padding: 6px 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     border: 1px solid #f1f5f9;
     position: relative;
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 8px;
+  }
+
+  @media (min-width: 768px) {
+    .assessment-item {
+      border-radius: 7px;
+      padding: 7px 10px;
+      gap: 9px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .assessment-item {
+      border-radius: 8px;
+      padding: 8px 12px;
+      gap: 10px;
+    }
   }
 
   .assessment-item.current {
@@ -1770,7 +1843,7 @@ All colors MUST be HSL.
   }
 
   .item-title {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 600;
     color: #1f2937;
     line-height: 1.2;
@@ -1778,8 +1851,28 @@ All colors MUST be HSL.
   }
 
   .item-step {
-    font-size: 8px;
+    font-size: 7px;
     color: #6b7280;
+  }
+
+  @media (min-width: 768px) {
+    .item-title {
+      font-size: 9.5px;
+    }
+    
+    .item-step {
+      font-size: 7.5px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .item-title {
+      font-size: 10px;
+    }
+    
+    .item-step {
+      font-size: 8px;
+    }
   }
 
   .item-details {
