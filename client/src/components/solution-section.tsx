@@ -67,6 +67,11 @@ export function SolutionSection() {
       icon: Target,
       title: "Build clarity, confidence, and control into the process",
       description: "Take charge of your exit timeline and outcomes"
+    },
+    {
+      icon: Users,
+      title: "Access expert guidance without retainer fees",
+      description: "Professional insights when you need them most"
     }
   ];
 
