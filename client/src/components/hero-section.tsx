@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, FileText, ArrowRight } from "lucide-react";
-import HeroDashboard from "./hero-dashboard";
+import HeroMacBook from "./hero-macbook";
 import { Link } from "wouter";
 
 export function HeroSection() {
@@ -31,7 +31,7 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/8 to-accent/5 rounded-2xl blur-sm"></div>
                 
                 <div className="relative z-10">
-                  <HeroDashboard />
+                  <HeroMacBook />
                 </div>
                 
                 {/* Background decorative elements */}
@@ -87,7 +87,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/8 to-accent/5 rounded-2xl blur-sm"></div>
               
               <div className="relative z-10">
-                <HeroDashboard />
+                <HeroMacBook />
               </div>
               
               {/* Background decorative elements */}
