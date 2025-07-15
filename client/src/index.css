@@ -1680,8 +1680,7 @@ All colors MUST be HSL.
     grid-template-columns: 1fr;
     gap: 6px;
     flex: 1;
-    overflow-y: auto;
-    max-height: 320px;
+    overflow: hidden;
   }
 
   .assessment-item {
