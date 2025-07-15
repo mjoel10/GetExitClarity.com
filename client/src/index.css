@@ -1658,7 +1658,8 @@ All colors MUST be HSL.
 
   .content-header {
     text-align: center;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
+    padding: 0;
   }
 
   .main-title {
