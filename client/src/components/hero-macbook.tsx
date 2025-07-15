@@ -30,7 +30,7 @@ export default function HeroMacBook() {
                     <div className="progress-bar">
                       <div className="progress-fill"></div>
                     </div>
-                    <span className="progress-text">7 of 11</span>
+                    <span className="progress-text">8 of 11</span>
                   </div>
                 </div>
 

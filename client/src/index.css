@@ -1680,6 +1680,8 @@ All colors MUST be HSL.
     grid-template-columns: 1fr;
     gap: 6px;
     flex: 1;
+    overflow-y: auto;
+    max-height: 320px;
   }
 
   .assessment-item {
@@ -1690,8 +1692,15 @@ All colors MUST be HSL.
     border: 1px solid #f1f5f9;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
+  }
+
+  .assessment-item.current {
+    min-height: auto;
+    padding: 10px 12px;
+    background: rgba(59, 130, 246, 0.02);
+    border-color: #3b82f6;
   }
 
   .assessment-item::before {
