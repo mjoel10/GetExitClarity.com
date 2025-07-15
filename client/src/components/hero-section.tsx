@@ -12,20 +12,20 @@ export function HeroSection() {
           <div className="hero-content-container">
             {/* Headlines Section */}
             <div className="hero-headlines">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight text-center lg:text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight text-center md:text-left">
                 Turn Exit Readiness Into{" "}
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   High-Confidence Deals
                 </span>
               </h1>
               
-              <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed text-center lg:text-left">
+              <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed text-center md:text-left">
                 ExitClarity systematizes and scales early owner engagement by turning the overwhelming thought of selling into a clear, actionable process.
               </p>
             </div>
 
             {/* MacBook Visual - Shows here on mobile only */}
-            <div className="hero-macbook-section lg:hidden">
+            <div className="hero-macbook-section md:hidden">
               <div className="relative">
                 {/* Subtle blue background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/8 to-accent/5 rounded-2xl blur-sm"></div>
@@ -42,7 +42,7 @@ export function HeroSection() {
             
             {/* CTA Buttons */}
             <div className="hero-cta-section">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-12">
                 <Button variant="hero" size="xl" className="group" asChild>
                   <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
                     <Calendar className="mr-2 h-5 w-5" />
@@ -63,16 +63,16 @@ export function HeroSection() {
             
             {/* Key Stats */}
             <div className="hero-stats-section">
-              <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto lg:mx-0">
-                <div className="text-center lg:text-left">
+              <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto md:mx-0">
+                <div className="text-center md:text-left">
                   <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">30+</div>
                   <p className="text-sm text-muted-foreground">Years M&A Experience</p>
                 </div>
-                <div className="text-center lg:text-left">
+                <div className="text-center md:text-left">
                   <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">11</div>
                   <p className="text-sm text-muted-foreground">Readiness Factors</p>
                 </div>
-                <div className="text-center lg:text-left">
+                <div className="text-center md:text-left">
                   <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">500+</div>
                   <p className="text-sm text-muted-foreground">Deals Analyzed</p>
                 </div>
@@ -81,7 +81,7 @@ export function HeroSection() {
           </div>
 
           {/* MacBook Visual - Shows here on desktop only */}
-          <div className="hero-macbook-desktop hidden lg:block">
+          <div className="hero-macbook-desktop hidden md:block">
             <div className="relative">
               {/* Subtle blue background */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/8 to-accent/5 rounded-2xl blur-sm"></div>

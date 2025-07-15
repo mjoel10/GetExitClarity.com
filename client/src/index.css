@@ -2030,7 +2030,7 @@ All colors MUST be HSL.
   }
 
   /* Desktop Layout - Two Column Grid */
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .hero-content-wrapper {
       grid-template-columns: 1fr 1fr;
     }
