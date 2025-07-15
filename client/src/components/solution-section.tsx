@@ -70,8 +70,8 @@ export function SolutionSection() {
     },
     {
       icon: Users,
-      title: "Access expert guidance without retainer fees",
-      description: "Professional insights when you need them most"
+      title: "Expert guidance on your terms",
+      description: "Access professional insights without contracts or commitments"
     }
   ];
 
