@@ -2057,6 +2057,7 @@ All colors MUST be HSL.
     
     .hero-macbook-container {
       max-width: 600px;
+      margin: 0 auto;
     }
     
     .assessment-complete-wrapper {

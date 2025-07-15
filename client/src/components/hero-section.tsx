@@ -47,11 +47,11 @@ export function HeroSection() {
 
             {/* MacBook Visual - Shows here on mobile only */}
             <div className="hero-macbook-section xl:hidden order-3">
-              <div className="relative">
+              <div className="relative flex justify-center">
                 {/* Subtle blue background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/8 to-accent/5 rounded-2xl blur-sm"></div>
                 
-                <div className="relative z-10">
+                <div className="relative z-10 w-full max-w-lg">
                   <HeroMacBook />
                 </div>
                 
