@@ -748,7 +748,7 @@ All colors MUST be HSL.
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 32px 24px;
+    padding: 20px 24px 16px;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     border-bottom: 1px solid rgba(148, 163, 184, 0.2);
     position: relative;
@@ -816,25 +816,25 @@ All colors MUST be HSL.
   }
 
   .metrics-section {
-    padding: 32px;
+    padding: 24px;
     background: white;
   }
 
   .metrics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    margin-bottom: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
   }
 
   .metric-card {
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     border: 1px solid rgba(148, 163, 184, 0.2);
-    border-radius: 16px;
-    padding: 24px;
+    border-radius: 12px;
+    padding: 16px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -856,13 +856,13 @@ All colors MUST be HSL.
   }
 
   .metric-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   }
 
   .metric-content {
@@ -870,10 +870,10 @@ All colors MUST be HSL.
   }
 
   .metric-value {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
     color: #1e293b;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     letter-spacing: -0.025em;
   }
 
@@ -886,7 +886,7 @@ All colors MUST be HSL.
   }
 
   .assessment-overview {
-    padding: 0 32px 32px;
+    padding: 0 24px 20px;
     background: white;
   }
 
@@ -894,8 +894,8 @@ All colors MUST be HSL.
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
     border-bottom: 1px solid rgba(148, 163, 184, 0.15);
   }
 
@@ -938,19 +938,19 @@ All colors MUST be HSL.
 
   .assessment-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-    margin-bottom: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
   }
 
   .assessment-item {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 16px;
+    gap: 12px;
+    padding: 12px;
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     border: 1px solid rgba(148, 163, 184, 0.15);
-    border-radius: 12px;
+    border-radius: 8px;
     transition: all 0.3s ease;
   }
 
@@ -988,35 +988,35 @@ All colors MUST be HSL.
   }
 
   .executive-summary {
-    padding: 0 32px 32px;
+    padding: 0 24px 20px;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   }
 
   .summary-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
   }
 
   .summary-item {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 20px;
+    gap: 12px;
+    padding: 14px;
     background: white;
     border: 1px solid rgba(148, 163, 184, 0.15);
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
 
   .summary-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
 
   .summary-icon.go {
