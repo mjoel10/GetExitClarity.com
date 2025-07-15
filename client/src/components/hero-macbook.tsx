@@ -3,13 +3,13 @@ import exitClarityLogo from "@assets/Exit Clarity Logo_1752099881839.png";
 
 export default function HeroMacBook() {
   return (
-    <div className="hero-macbook-container" style={{ perspective: '1200px' }}>
+    <div className="hero-macbook-container">
       {/* Realistic MacBook */}
       <motion.div
         className="macbook"
-        initial={{ opacity: 0, rotateX: 0, rotateY: 0 }}
-        animate={{ opacity: 1, rotateX: 5, rotateY: -5, rotateZ: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div className="macbook-lid">
           <div className="macbook-screen">
