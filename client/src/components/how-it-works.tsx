@@ -23,7 +23,7 @@ export default function HowItWorks() {
     {
       number: "02",
       title: "Receive a Strategic Report",
-      description: "Each owner receives a 15–20 page personalized report with a GO/FIX/WAIT recommendation, risk analysis, valuation estimate, and action plan.",
+      description: "Each owner receives a 20 - 25 page customized report with a GO/FIX/WAIT recommendation, risk analysis, valuation estimate, and action plan.",
       features: [
         "GO/FIX/WAIT recommendation",
         "Detailed risk analysis",
@@ -49,7 +49,7 @@ export default function HowItWorks() {
   ];
 
   const stats = [
-    { value: "20-25", label: "Pages of strategic insights per report" },
+    { value: "15-20", label: "pages of strategic insights per report" },
     { value: "11", label: "Comprehensive readiness factors assessed" },
     { value: "30", label: "Minutes to complete full assessment" }
   ];
