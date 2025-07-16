@@ -31,7 +31,7 @@ export function FeaturesSection() {
     },
     {
       icon: Zap,
-      title: "Zero-Touch Nurturing Engine",
+      title: "Zero-Touch Nurturing",
       description: "Automated nurturing sequences that maintain engagement without manual effort"
     }
   ];
