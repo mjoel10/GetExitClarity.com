@@ -10,7 +10,7 @@ export function ProblemSection() {
     {
       icon: AlertTriangle,
       title: "Proactive Risk Management",
-      description: "Owners rarely see key-person risks or system weaknesses. By addressing these blind spots proactively, you position yourself as the advisor who truly has their back"
+      description: "Owners rarely see key-person risks or system weaknesses. By addressing these blind spots proactively, you position yourself as the advisor who truly has their back."
     },
     {
       icon: TrendingDown,
