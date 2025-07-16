@@ -1,0 +1,69 @@
+1. KEY FEATURES SECTION:
+CURRENT: "Scale Your Practice Instantly"
+REPLACE WITH: "Scale Your Firm Instantly"
+
+CURRENT: "professional-grade reporting"
+REPLACE WITH: "comprehensive reporting"
+
+CURRENT: "Deal Flow Intelligence"
+REPLACE WITH: "Centralized Tracking"
+
+CURRENT: "30+ Years of M&A Wisdom Expert analysis and commentary from experienced M&A professionals"
+REPLACE WITH: "Unbiased Value for Your Prospects Informed by 30+ Years of business ownership and M&A experience"
+
+CURRENT: "Client Success Accelerator Systematic preparation tools to improve client outcomes before market entry"
+REPLACE WITH: "Benchmarked Scoring Objective, data-backed readiness scoring with realistic valuation expectations"
+
+2. TRANSFORM SECTION:
+CURRENT: "Transform Your Deal Pipeline"
+REPLACE WITH: "Transform Your Deal Funnel"
+
+3. CURRENT REALITY SECTION:
+CURRENT: "Lost deals after years of relationship building"
+REPLACE WITH: "Lost deals after years of client relationship building"
+
+ADD: "We get so many buyer calls we've decided to 'rep' ourselves""
+
+4. WITH EXITCLARITY SECTION:
+CURRENT: "Immediate value through readiness assessment"
+REPLACE WITH: "Demonstrate immediate value to prospects through readiness assessment"
+
+CURRENT: "Regular engagement with clear progress milestones"
+REPLACE WITH: "Easy, regular engagement touchpoints with clear progress milestones"
+
+CURRENT: "Trusted advisor status before they're ready to sell"
+REPLACE WITH: "Gain trusted advisor status before they're ready to sell"
+
+CURRENT: "First call when they decide to move forward"
+REPLACE WITH: "Be their first call when they decide to move forward"
+
+5. WHAT THIS MEANS SECTION:
+CURRENT: "What This Means for Your Practice"
+REPLACE WITH: "What This Means for Your Firm"
+
+CURRENT: "2-3 years before traditional engagement"
+REPLACE WITH: "months and years before traditional engagement"
+
+6. ENHANCED DEAL PREPARATION:
+CURRENT: "Systematic documentation and preparation"
+REPLACE WITH: "Standardized documentation and preparation"
+
+7. KEY BENEFITS SECTION:
+CURRENT: "Key Benefits for Your Practice"
+REPLACE WITH: "Key Benefits"
+
+CURRENT: "systematic prospect evaluation"
+REPLACE WITH: "scalable prospect evaluation"
+
+CURRENT: "Larger Average Deal Sizes"
+REPLACE WITH: "Improved Deal Prep"
+
+CURRENT: "Reduced Development Costs"
+REPLACE WITH: "Lower Business Development Costs"
+
+CURRENT: "systematic lead qualification"
+REPLACE WITH: "scalable lead qualification"
+
+8. FINAL CALL TO ACTION:
+CURRENT: "systematized their prospect qualification"
+REPLACE WITH: "scaled their prospect qualification"

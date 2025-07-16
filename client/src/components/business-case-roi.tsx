@@ -9,7 +9,7 @@ export function BusinessCaseROI() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            Transform Your Deal Pipeline
+            Transform Your Deal Funnel
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Stop waiting years for prospects to get ready. Start building relationships and accelerating transactions today.
@@ -92,9 +92,13 @@ export function BusinessCaseROI() {
                   <span style={{ color: 'hsl(0, 100%, 45%)', marginRight: '0.75rem', fontSize: '1.25rem', marginTop: '0.125rem' }}>•</span>
                   <span>Prospects choose competitors who helped them prepare</span>
                 </li>
+                <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start' }}>
+                  <span style={{ color: 'hsl(0, 100%, 45%)', marginRight: '0.75rem', fontSize: '1.25rem', marginTop: '0.125rem' }}>•</span>
+                  <span>Lost deals after years of client relationship building</span>
+                </li>
                 <li style={{ display: 'flex', alignItems: 'flex-start' }}>
                   <span style={{ color: 'hsl(0, 100%, 45%)', marginRight: '0.75rem', fontSize: '1.25rem', marginTop: '0.125rem' }}>•</span>
-                  <span>Lost deals after years of relationship building</span>
+                  <span>"We get so many buyer calls we've decided to 'rep' ourselves"</span>
                 </li>
               </ul>
             </div>
@@ -145,19 +149,19 @@ export function BusinessCaseROI() {
               }}>
                 <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start' }}>
                   <CheckCircle style={{ width: '1.25rem', height: '1.25rem', color: 'hsl(218, 100%, 25%)', marginRight: '0.75rem', marginTop: '0.125rem', flexShrink: 0 }} />
-                  <span>Immediate value through readiness assessment</span>
+                  <span>Demonstrate immediate value to prospects through readiness assessment</span>
                 </li>
                 <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start' }}>
                   <CheckCircle style={{ width: '1.25rem', height: '1.25rem', color: 'hsl(218, 100%, 25%)', marginRight: '0.75rem', marginTop: '0.125rem', flexShrink: 0 }} />
-                  <span>Regular engagement with clear progress milestones</span>
+                  <span>Easy, regular engagement touchpoints with clear progress milestones</span>
                 </li>
                 <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start' }}>
                   <CheckCircle style={{ width: '1.25rem', height: '1.25rem', color: 'hsl(218, 100%, 25%)', marginRight: '0.75rem', marginTop: '0.125rem', flexShrink: 0 }} />
-                  <span>Trusted advisor status before they're ready to sell</span>
+                  <span>Gain trusted advisor status before they're ready to sell</span>
                 </li>
                 <li style={{ display: 'flex', alignItems: 'flex-start' }}>
                   <CheckCircle style={{ width: '1.25rem', height: '1.25rem', color: 'hsl(218, 100%, 25%)', marginRight: '0.75rem', marginTop: '0.125rem', flexShrink: 0 }} />
-                  <span>First call when they decide to move forward</span>
+                  <span>Be their first call when they decide to move forward</span>
                 </li>
               </ul>
             </div>
@@ -167,7 +171,7 @@ export function BusinessCaseROI() {
         {/* Key Outcomes */}
         <div className="bg-gray-100 rounded-2xl p-6 lg:p-12 text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
-            What This Means for Your Practice
+            What This Means for Your Firm
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-6">
@@ -179,7 +183,7 @@ export function BusinessCaseROI() {
                 Earlier Engagement
               </h4>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Start building relationships and trust 2-3 years before traditional engagement
+                Start building relationships and trust months and years before traditional engagement
               </p>
             </div>
 

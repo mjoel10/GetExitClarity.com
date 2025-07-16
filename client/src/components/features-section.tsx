@@ -6,18 +6,18 @@ export function FeaturesSection() {
   const features = [
     {
       icon: Target,
-      title: "Scale Your Practice Instantly",
-      description: "Unlimited client assessments with professional-grade reporting"
+      title: "Scale Your Firm Instantly",
+      description: "Unlimited client assessments with comprehensive reporting"
     },
     {
       icon: BarChart3,
-      title: "Deal Flow Intelligence",
+      title: "Centralized Tracking",
       description: "Pipeline visibility dashboard to track client readiness across your portfolio"
     },
     {
       icon: FileText,
-      title: "30+ Years of M&A Wisdom",
-      description: "Expert analysis and commentary from experienced M&A professionals"
+      title: "Unbiased Value for Your Prospects",
+      description: "Informed by 30+ Years of business ownership and M&A experience"
     },
     {
       icon: Settings,
@@ -26,8 +26,8 @@ export function FeaturesSection() {
     },
     {
       icon: Database,
-      title: "Client Success Accelerator",
-      description: "Systematic preparation tools to improve client outcomes before market entry"
+      title: "Benchmarked Scoring",
+      description: "Objective, data-backed readiness scoring with realistic valuation expectations"
     },
     {
       icon: Zap,

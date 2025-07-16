@@ -5,11 +5,11 @@ export function PracticeBenefits() {
     {
       icon: TrendingUp,
       title: "Higher Conversion Rates",
-      description: "Convert more prospects to engaged clients through systematic qualification and early relationship building."
+      description: "Convert more prospects to engaged clients through scalable qualification and early relationship building."
     },
     {
       icon: Target,
-      title: "Larger Average Deal Sizes", 
+      title: "Improved Deal Prep", 
       description: "Better-prepared companies command higher valuations and more favorable deal terms."
     },
     {
@@ -19,8 +19,8 @@ export function PracticeBenefits() {
     },
     {
       icon: Users,
-      title: "Reduced Development Costs",
-      description: "Lower acquisition costs through systematic lead qualification and automated nurturing."
+      title: "Lower Business Development Costs",
+      description: "Lower acquisition costs through scalable lead qualification and automated nurturing."
     }
   ];
 
@@ -29,10 +29,10 @@ export function PracticeBenefits() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'hsl(218, 15%, 15%)' }}>
-            Key Benefits for Your Practice
+            Key Benefits
           </h2>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: 'hsl(218, 10%, 45%)' }}>
-            Transform your business development with systematic prospect evaluation and relationship building.
+            Transform your business development with scalable prospect evaluation and relationship building.
           </p>
         </div>
 
