@@ -13,14 +13,14 @@ export function HeroSection() {
             {/* Headlines Section */}
             <div className="hero-headlines">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight text-center xl:text-left">
-                Turn Exit Readiness Into{" "}
+                Drive High Confidence Deals with{" "}
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  High-Confidence Deals
+                  Better Exit Readiness
                 </span>
               </h1>
               
               <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed text-center xl:text-left">
-                ExitClarity systematizes and scales early owner engagement by turning the overwhelming thought of selling into a clear, actionable process.
+                ExitClarity gives your prospects transparent, trust-building insights, so they feel informed, confident, and ready to engage with you as their trusted advisor.
               </p>
             </div>
 
@@ -65,7 +65,7 @@ export function HeroSection() {
             <div className="hero-stats-section order-4 xl:order-4">
               <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto xl:mx-0">
                 <div className="text-center xl:text-left">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">30+</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">20+</div>
                   <p className="text-sm text-muted-foreground">Years M&A Experience</p>
                 </div>
                 <div className="text-center xl:text-left">
@@ -73,7 +73,7 @@ export function HeroSection() {
                   <p className="text-sm text-muted-foreground">Readiness Factors</p>
                 </div>
                 <div className="text-center xl:text-left">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">500+</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">300+</div>
                   <p className="text-sm text-muted-foreground">Deals Analyzed</p>
                 </div>
               </div>

@@ -17,7 +17,7 @@ export function ProcessSection() {
     {
       number: "02", 
       title: "Receive a Strategic Report",
-      description: "Each owner receives a 15–20 page personalized report with a GO/FIX/WAIT recommendation, risk analysis, valuation estimate, and action plan.",
+      description: "Each owner receives a 20 - 25 page customized report with a GO/FIX/WAIT recommendation, risk analysis, valuation estimate, and action plan.",
       icon: FileText,
       details: [
         "GO/FIX/WAIT recommendation",
@@ -49,7 +49,7 @@ export function ProcessSection() {
             How ExitClarity Works
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Built on 30+ years of M&A experience, our 11-factor assessment delivers strategic clarity, risk analysis, and actionable guidance for every stakeholder.
+            The Exit Readiness Platform is powered by our proprietary algorithms, drawing on real-world lessons from 30+ years of business ownership and navigating successful (and failed) exits.
           </p>
         </div>
 

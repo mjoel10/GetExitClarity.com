@@ -40,7 +40,7 @@ export function CTASection() {
           <div className="bg-white p-8 rounded-2xl shadow-soft border">
             <h3 className="text-2xl font-bold text-foreground mb-4">For M&A Professionals</h3>
             <p className="text-muted-foreground mb-6">
-              Transform your practice with systematic prospect qualification, automated nurturing, and higher-quality deal flow.
+              Transform your firm with scalable prospect qualification, automated nurturing, and increased prospect conversions.
             </p>
             <ul className="space-y-3 text-sm text-muted-foreground mb-6">
               <li className="flex items-center space-x-2">

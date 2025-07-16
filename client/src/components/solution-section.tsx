@@ -22,7 +22,7 @@ export function SolutionSection() {
   const professionalFeatures = [
     {
       icon: Target,
-      title: "Systematize early-stage engagement",
+      title: "Scale early-stage engagement",
       description: "Structured approach to prospect qualification"
     },
     {
@@ -32,8 +32,8 @@ export function SolutionSection() {
     },
     {
       icon: TrendingUp,
-      title: "Track and prioritize your pipeline",
-      description: "CRM-integrated visibility into prospect progress"
+      title: "Track and prioritize your funnel",
+      description: "Real-time visibility into your best leads"
     },
     {
       icon: CheckCircle,
@@ -50,22 +50,22 @@ export function SolutionSection() {
   const ownerFeatures = [
     {
       icon: Shield,
-      title: "Understand if and when they're ready to sell",
-      description: "Clear GO/FIX/WAIT recommendations based on data"
+      title: "Understand if and when you're ready to sell",
+      description: "Clear GO/FIX/WAIT recommendations informed by decades of ownership and M&A experience"
     },
     {
       icon: TrendingUp,
-      title: "Personalized roadmap to improve valuation",
-      description: "Actionable steps with ROI forecasts"
+      title: "Leverage a personalized roadmap to improve valuation",
+      description: "Improve with step-by-step, ROI-focused guidance"
     },
     {
       icon: CheckCircle,
-      title: "Know their deal risks before a buyer does",
-      description: "Identify and address vulnerabilities early"
+      title: "Know your deal risks before a buyer does",
+      description: "Identify and fix weak spots before due diligence"
     },
     {
       icon: Target,
-      title: "Build clarity, confidence, and control into the process",
+      title: "Build clarity, confidence, and control into your exit",
       description: "Take charge of your exit timeline and outcomes"
     },
     {
@@ -81,9 +81,9 @@ export function SolutionSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            A Readiness Engine That Works for{" "}
+            A Readiness Engine That{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Both Sides
+              Builds Trust at Every Stage
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
@@ -97,7 +97,7 @@ export function SolutionSection() {
           <div className="bg-white rounded-2xl p-8 shadow-soft border">
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-foreground mb-2">For M&A Professionals</h3>
-              <p className="text-muted-foreground">Systematize early-stage engagement and build stronger pipelines</p>
+              <p className="text-muted-foreground">Scale early-stage engagement and build stronger funnels</p>
             </div>
             
             <div className="space-y-6">
@@ -138,7 +138,7 @@ export function SolutionSection() {
           <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 border">
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-foreground mb-2">For Business Owners</h3>
-              <p className="text-muted-foreground">Understand your readiness and maximize your exit value</p>
+              <p className="text-muted-foreground">Understand your exit-readiness and maximize your exit value</p>
             </div>
             
             <div className="space-y-6">

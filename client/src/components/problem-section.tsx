@@ -4,23 +4,23 @@ export function ProblemSection() {
   const problems = [
     {
       icon: DollarSign,
-      title: "Revenue ≠ Exit Ready",
-      description: "Top-line growth doesn't matter if financials aren't clean, predictable, and documented."
+      title: "Exit Ready Financials",
+      description: "Most owners think revenue alone makes them sale-ready. ExitClarity helps you show them the real gaps — transforming surface-level interest into genuine trust and engagement."
     },
     {
       icon: AlertTriangle,
-      title: "Operational Blind Spots",
-      description: "Key-person risk, poor systems, and undocumented processes stall deals in diligence."
+      title: "Proactive Risk Management",
+      description: "Owners rarely see key-person risks or system weaknesses. By addressing these blind spots proactively, you position yourself as the advisor who truly has their back"
     },
     {
       icon: TrendingDown,
-      title: "Unrealistic Expectations",
-      description: "Inflated valuations and short timelines kill trust before deals can even start."
+      title: "Realistic Valuation Guidance",
+      description: "When owners overvalue their business or underestimate timelines, trust erodes. ExitClarity equips you to reset expectations early, positioning you as the voice of clarity they can believe in."
     },
     {
       icon: Clock,
-      title: "Inadequate Representation",
-      description: "The wrong advisor (or no advisor) leads to costly mistakes in high-stakes negotiations."
+      title: "Confident Decision Making",
+      description: "Owners often delay or pick the wrong partner out of anxiety and inexperience. ExitClarity lets you step in early as their trusted guide, turning uncertainty into decisive, engaged clients."
     }
   ];
 
@@ -34,14 +34,14 @@ export function ProblemSection() {
             <span className="text-primary">Readiness Is Unclear</span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            M&A professionals waste time on prospects who aren't ready. Business owners wait too long, unprepared and overconfident. ExitClarity bridges that gap with structured, scalable intelligence that moves both sides forward.
+            Many owners believe they can sell on their own, overestimating value and underestimating complexities. ExitClarity bridges that gap with structured, scalable insights — moving owners from uncertain to engaged, and firms from prospects to mandates.
           </p>
         </div>
 
         {/* Why Deals Fall Apart */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-center text-foreground mb-12">
-            Why So Many Deals Fall Apart Before They Begin
+            Owners Don't Choose Service Providers. They Choose Trusted Partners.
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -67,16 +67,16 @@ export function ProblemSection() {
         <div className="bg-white rounded-2xl p-8 shadow-soft border">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">70%</div>
-              <p className="text-muted-foreground">of M&A conversations never progress to LOI</p>
+              <div className="text-3xl font-bold text-primary mb-2">95%</div>
+              <p className="text-muted-foreground">of business development outreach never succeeds</p>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary mb-2">6-18</div>
               <p className="text-muted-foreground">months wasted on unqualified prospects</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">40%</div>
-              <p className="text-muted-foreground">of deals fail during diligence</p>
+              <div className="text-3xl font-bold text-primary mb-2">1</div>
+              <p className="text-muted-foreground">deal pays for ExitClarity</p>
             </div>
           </div>
         </div>
