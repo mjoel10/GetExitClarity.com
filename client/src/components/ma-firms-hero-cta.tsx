@@ -21,7 +21,7 @@ export function MAFirmsHeroCTA() {
                 Ready to Transform Your M&A Practice?
               </h2>
               <p className="text-lg text-blue-100 mb-6 leading-relaxed">
-                Join successful M&A professionals who've scaled their prospect qualification and accelerated their deal cycles. 
+                Join successful M&A professionals who've scaled prospect qualification and accelerated deal cycles. 
                 Get your comprehensive strategic report and personalized recommendations today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
