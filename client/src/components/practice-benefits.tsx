@@ -5,7 +5,7 @@ export function PracticeBenefits() {
     {
       icon: TrendingUp,
       title: "Higher Conversion Rates",
-      description: "Convert more prospects to engaged clients through scalable qualification and early relationship building."
+      description: "Convert more prospects to engaged clients through systematic qualification and early relationship building."
     },
     {
       icon: Target,
