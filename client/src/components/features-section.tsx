@@ -17,7 +17,7 @@ export function FeaturesSection() {
     {
       icon: FileText,
       title: "Unbiased Value for Your Prospects",
-      description: "Informed by 30+ Years of business ownership and M&A experience"
+      description: "Informed by 30+ years of business ownership and M&A experience"
     },
     {
       icon: Settings,
