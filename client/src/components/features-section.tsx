@@ -22,7 +22,7 @@ export function FeaturesSection() {
     {
       icon: Settings,
       title: "White-Label Authority Building",
-      description: "Co-branded reports that position your firm alongside ExitClarity as trusted experts"
+      description: "Co-branded reports that position your firm alongside ExitClarity as trusted exit-readiness experts"
     },
     {
       icon: Database,

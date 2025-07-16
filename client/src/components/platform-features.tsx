@@ -19,7 +19,7 @@ export default function PlatformFeatures() {
       icon: FileText,
       title: "White-labeled Strategic Reports",
       description: "Professional, branded reports that position you as the trusted advisor",
-      benefit: "Co-branded reports that position your firm alongside ExitClarity as trusted experts"
+      benefit: "Co-branded reports that position your firm alongside ExitClarity as trusted exit-readiness experts"
     },
     {
       icon: Settings,
