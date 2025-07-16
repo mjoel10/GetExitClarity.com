@@ -52,6 +52,12 @@ export function OwnerBenefitsSection() {
                 </div>
                 <span className="text-blue-100 font-medium">Address deal-killing risks before they become problems</span>
               </div>
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                  <Shield className="h-4 w-4 text-white" />
+                </div>
+                <span className="text-blue-100 font-medium">Avoid making mistakes that will cost you money</span>
+              </div>
             </div>
             
             {/* CTA Buttons */}

@@ -46,7 +46,7 @@ export function ExitClarityProcess() {
               The ExitClarity Process
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Our comprehensive 11-factor assessment provides the strategic clarity you need to maximize your exit outcome
+              Our comprehensive 11-factor assessment is informed by 30+ years of business ownership and M&A experience and provides the strategic clarity you need to maximize your exit outcome
             </p>
           </div>
 
@@ -101,7 +101,7 @@ export function ExitClarityProcess() {
                     <div className="flex-1">
                       <div className="bg-white p-6 rounded-2xl shadow-xl border border-green-500/10">
                         <h3 className="text-xl font-bold text-foreground mb-3">Receive Strategic Report</h3>
-                        <p className="text-muted-foreground leading-relaxed">Get your personalized 15-20 page strategic report with valuation estimates, risk analysis, and roadmap</p>
+                        <p className="text-muted-foreground leading-relaxed">Get your personalized 20-25 page strategic report with valuation estimates, risk analysis, and roadmap</p>
                       </div>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ export function ExitClarityProcess() {
                     <div className="flex-1 pl-8">
                       <div className="bg-white p-6 rounded-2xl shadow-xl border border-green-500/10">
                         <h3 className="text-xl font-bold text-foreground mb-3">Receive Strategic Report</h3>
-                        <p className="text-muted-foreground leading-relaxed">Get your personalized 15-20 page strategic report with valuation estimates, risk analysis, and roadmap</p>
+                        <p className="text-muted-foreground leading-relaxed">Get your personalized 20-25 page strategic report with valuation estimates, risk analysis, and roadmap</p>
                       </div>
                     </div>
                   </div>
@@ -269,7 +269,7 @@ export function ExitClarityProcess() {
           
           {/* Challenge Cards */}
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -297,6 +297,16 @@ export function ExitClarityProcess() {
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-4">Poor Timing & Preparation</h3>
                   <p className="text-muted-foreground leading-relaxed">Rushing to market before addressing fundamental readiness issues, resulting in lower valuations and unfavorable deal terms.</p>
+                </div>
+              </div>
+              
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-4">Lack of Experience & Guidance</h3>
+                  <p className="text-muted-foreground leading-relaxed">Going it alone or relying on the wrong advisors leads to critical missteps, missed value drivers, and ultimately, lower valuations and failed or unfavorable outcomes.</p>
                 </div>
               </div>
             </div>
@@ -380,7 +390,7 @@ export function ExitClarityProcess() {
                     <Users className="h-8 w-8 text-white" />
                   </div>
                   <h4 className="text-xl font-bold text-foreground mb-4">Expert Guidance</h4>
-                  <p className="text-muted-foreground leading-relaxed">Access 30+ years of M&A expertise and proven methodologies without the cost of full consulting engagements</p>
+                  <p className="text-muted-foreground leading-relaxed">Access insights driven by 30+ years of business ownership and sell-side/buy-side M&A expertise before you commit to consulting engagements.</p>
                 </div>
               </div>
             </div>
