@@ -42,7 +42,11 @@ function Router() {
 function App() {
   // Initialize Google Analytics when app loads
   useEffect(() => {
-    initGA();
+    try {
+      initGA();
+    } catch (error) {
+      console.warn('Google Analytics initialization failed:', error);
+    }
   }, []);
 
   return (
