@@ -81,7 +81,7 @@ export function SolutionSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            A Readiness Engine That{" "}
+            The Solution: A Readiness Engine That{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Builds Trust at Every Stage
             </span>

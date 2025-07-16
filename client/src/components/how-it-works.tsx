@@ -49,7 +49,7 @@ export default function HowItWorks() {
   ];
 
   const stats = [
-    { value: "15-20", label: "Pages of strategic insights per report" },
+    { value: "20-25", label: "Pages of strategic insights per report" },
     { value: "11", label: "Comprehensive readiness factors assessed" },
     { value: "30", label: "Minutes to complete full assessment" }
   ];
@@ -66,7 +66,7 @@ export default function HowItWorks() {
         >
           <h2 className="text-5xl font-bold text-foreground mb-6">How ExitClarity Works</h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Built on 30+ years of M&A experience, our 11-factor assessment delivers strategic clarity, risk analysis, and actionable guidance for every stakeholder.
+            The Exit Readiness Platform is powered by our proprietary algorithms, drawing on real-world lessons from 30+ years of business ownership and navigating successful (and failed) exits.
           </p>
         </motion.div>
 

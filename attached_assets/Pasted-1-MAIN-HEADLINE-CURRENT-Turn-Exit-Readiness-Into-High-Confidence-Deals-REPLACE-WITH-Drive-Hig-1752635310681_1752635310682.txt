@@ -1,0 +1,93 @@
+1. MAIN HEADLINE:
+CURRENT: "Turn Exit Readiness Into High-Confidence Deals"
+REPLACE WITH: "Drive High Confidence Deals with Better Exit Readiness"
+
+2. DESCRIPTION PARAGRAPH:
+CURRENT: "ExitClarity systematizes and scales early owner engagement by turning the overwhelming thought of selling into a clear, actionable process."
+REPLACE WITH: "ExitClarity gives your prospects transparent, trust-building insights, so they feel informed, confident, and ready to engage with you as their trusted advisor."
+
+3. KEY STATS:
+CURRENT: "30+ Business Years M&A Experience"
+REPLACE WITH: "20+ Business Years M&A Experience"
+
+CURRENT: "500+ Deals Analyzed"
+REPLACE WITH: "300+ Deals Analyzed"
+
+4. PROBLEM SECTION DESCRIPTION:
+CURRENT: "M&A professionals waste time on prospects who aren't ready. Business owners wait too long, unprepared and overconfident. ExitClarity bridges that gap with structured, scalable intelligence that moves both sides forward."
+REPLACE WITH: "Many owners believe they can sell on their own, overestimating value and underestimating complexities. ExitClarity bridges that gap with structured, scalable insights — moving owners from uncertain to engaged, and firms from prospects to mandates."
+
+5. SECTION HEADER:
+CURRENT: "Why So Many Deals Fall Apart Before They Begin"
+REPLACE WITH: "Owners Don't Choose Service Providers. They Choose Trusted Partners."
+
+6. SUBSECTION CONTENT COMPLETE REWRITES:
+
+CURRENT: "Revenue ≠ Exit Ready Top-line growth doesn't matter if financials aren't clean, predictable, and documented."
+REPLACE WITH: "Exit Ready Financials Most owners think revenue alone makes them sale-ready. ExitClarity helps you show them the real gaps — transforming surface-level interest into genuine trust and engagement."
+
+CURRENT: "Operational Blind Spots Key-person risk, poor systems, and undocumented processes stall deals in diligence."
+REPLACE WITH: "Proactive Risk Management Owners rarely see key-person risks or system weaknesses. By addressing these blind spots proactively, you position yourself as the advisor who truly has their back"
+
+CURRENT: "Unrealistic Expectations Inflated valuations and short timelines kill trust before deals can even start."
+REPLACE WITH: "Realistic Valuation Guidance When owners overvalue their business or underestimate timelines, trust erodes. ExitClarity equips you to reset expectations early, positioning you as the voice of clarity they can believe in."
+
+CURRENT: "Inadequate Representation The wrong advisor (or no advisor) leads to costly mistakes in high-stakes negotiations."
+REPLACE WITH: "Confident Decision Making Owners often delay or pick the wrong partner out of anxiety and inexperience. ExitClarity lets you step in early as their trusted guide, turning uncertainty into decisive, engaged clients."
+
+7. THE NUMBERS SECTION:
+CURRENT:
+- 70% of M&A conversations never progress to LOI
+- 6-18 months wasted on unqualified prospects
+- 40% of deals fail during diligence
+
+REPLACE WITH:
+- 95% of business development outreach never succeeds
+- 6-18 months wasted on unqualified prospects
+- 1 deal pays for ExitClarity
+
+8. SOLUTION SECTION HEADER:
+CURRENT: "The Solution: A Readiness Engine That Works for Both Sides"
+REPLACE WITH: "The Solution: A Readiness Engine That Builds Trust at Every Stage"
+
+9. FOR M&A PROFESSIONALS SECTION:
+CURRENT: "Systematize early-stage engagement and build stronger pipelines"
+REPLACE WITH: "Scale early-stage engagement and build stronger funnels"
+
+CURRENT: "Systematize early-stage engagement"
+REPLACE WITH: "Scale early-stage engagement"
+
+CURRENT: "Track and prioritize your pipeline - CRM-integrated visibility into prospect progress"
+REPLACE WITH: "Track and prioritize your funnel - Real-time visibility into your best leads"
+
+10. FOR BUSINESS OWNERS SECTION:
+CURRENT: "Understand your readiness and maximize your exit value"
+REPLACE WITH: "Understand your exit-readiness and maximize your exit value"
+
+CURRENT: "Understand if and when they're ready to sell - Clear GO/FIX/WAIT recommendations based on data"
+REPLACE WITH: "Understand if and when you're're ready to sell - Clear GO/FIX/WAIT recommendations informed by decades of ownership and M&A experience"
+
+CURRENT: "Personalized roadmap to improve valuation - Actionable steps with ROI forecasts"
+REPLACE WITH: "Leverage a personalized roadmap to improve valuation - Improve with step-by-step, ROI-focused guidance"
+
+CURRENT: "Know their deal risks before a buyer does - Identify and address vulnerabilities early"
+REPLACE WITH: "Know your deal risks before a buyer does - Identify and fix weak spots before due diligence"
+
+CURRENT: "Build clarity, confidence, and control into the process"
+REPLACE WITH: "Build clarity, confidence, and control into your exit"
+
+11. HOW IT WORKS DESCRIPTION:
+CURRENT: "Built on 30+ years of M&A experience, our 11-factor assessment delivers strategic clarity, risk analysis, and actionable guidance for every stakeholder."
+REPLACE WITH: "The Exit Readiness Platform is powered by our proprietary algorithms, drawing on real-world lessons from 30+ years of business ownership and navigating successful (and failed) exits."
+
+12. EXIT GOALS & TIMELINE:
+CURRENT: "Your exit objectives and timeline"
+REPLACE WITH: "Exit objectives and timeline"
+
+13. REPORT LENGTH:
+CURRENT: "15–20 page personalized report"
+REPLACE WITH: "20 - 25 page customized report"
+
+14. FINAL BENEFITS FOR M&A PROFESSIONALS:
+CURRENT: "Transform your practice with systematic prospect qualification, automated nurturing, and higher-quality deal flow"
+REPLACE WITH: "Transform your firm with scalable prospect qualification, automated nurturing, and increased prospect conversions"
