@@ -3,7 +3,7 @@ import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Calendar, Clock, User, ArrowRight, TrendingUp, Target, Users } from "lucide-react";
+import { Calendar, Clock, User, ArrowRight, TrendingUp, Target, Users, BookOpen, BarChart3, Lightbulb } from "lucide-react";
 import { Link } from "wouter";
 import { useMeta } from "@/hooks/use-meta";
 
@@ -70,54 +70,96 @@ export default function Blog() {
                   </div>
                 </div>
                 
-                {/* Visual Column */}
+                {/* Visual Column - Abstract Knowledge Illustration */}
                 <div className="relative">
-                  <div className="bg-white rounded-2xl shadow-2xl p-8 relative">
-                    {/* Mock article preview */}
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
-                          Featured Article
-                        </span>
-                        <div className="flex items-center gap-1 text-xs text-gray-500">
-                          <Calendar className="w-3 h-3" />
-                          <span>Latest</span>
-                        </div>
-                      </div>
-                      
-                      <h3 className="text-lg font-bold text-gray-900 leading-tight">
-                        Why 87% of Business Sales Fail
-                      </h3>
-                      
-                      <div className="space-y-2">
-                        <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                          <div className="h-full w-3/4 bg-gradient-to-r from-primary to-blue-500 rounded-full"></div>
-                        </div>
-                        <p className="text-xs text-gray-500">5 min read • Exit Planning</p>
-                      </div>
-                      
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        The difference between a successful exit and a failed one isn't luck. It's preparation...
-                      </p>
-                      
-                      <div className="flex items-center justify-between pt-2">
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center">
-                            <User className="w-3 h-3 text-primary" />
+                  <div className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden">
+                    {/* Abstract content illustration */}
+                    <div className="space-y-6">
+                      {/* Top section - Knowledge nodes */}
+                      <div className="flex justify-between items-start">
+                        <div className="flex flex-col items-center space-y-2">
+                          <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-500 rounded-full flex items-center justify-center">
+                            <BookOpen className="w-6 h-6 text-white" />
                           </div>
-                          <span className="text-xs text-gray-500">ExitClarity Team</span>
+                          <div className="h-1 w-8 bg-primary/30 rounded-full"></div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-primary" />
+                        
+                        <div className="flex flex-col items-center space-y-2">
+                          <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center">
+                            <BarChart3 className="w-5 h-5 text-white" />
+                          </div>
+                          <div className="h-1 w-6 bg-green-300 rounded-full"></div>
+                        </div>
+                        
+                        <div className="flex flex-col items-center space-y-2">
+                          <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-orange-500 rounded-full flex items-center justify-center">
+                            <Lightbulb className="w-4 h-4 text-white" />
+                          </div>
+                          <div className="h-1 w-4 bg-orange-300 rounded-full"></div>
+                        </div>
+                      </div>
+                      
+                      {/* Connection lines */}
+                      <div className="relative h-8">
+                        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 32">
+                          <path 
+                            d="M20 16 Q100 8 180 16" 
+                            stroke="currentColor" 
+                            strokeWidth="2" 
+                            fill="none" 
+                            className="text-primary/30"
+                          />
+                          <path 
+                            d="M20 16 Q100 24 180 16" 
+                            stroke="currentColor" 
+                            strokeWidth="2" 
+                            fill="none" 
+                            className="text-green-300"
+                          />
+                        </svg>
+                      </div>
+                      
+                      {/* Content blocks */}
+                      <div className="space-y-3">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          <div className="h-2 bg-gray-100 rounded-full flex-1">
+                            <div className="h-full w-4/5 bg-gradient-to-r from-primary/60 to-primary/30 rounded-full"></div>
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                          <div className="h-2 bg-gray-100 rounded-full flex-1">
+                            <div className="h-full w-3/5 bg-gradient-to-r from-green-400/60 to-green-400/30 rounded-full"></div>
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
+                          <div className="h-2 bg-gray-100 rounded-full flex-1">
+                            <div className="h-full w-2/3 bg-gradient-to-r from-orange-400/60 to-orange-400/30 rounded-full"></div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Bottom insight indicator */}
+                      <div className="flex items-center justify-center pt-4">
+                        <div className="flex items-center space-x-2 text-sm text-gray-500">
+                          <Target className="w-4 h-4 text-primary" />
+                          <span>Strategic Insights</span>
+                          <div className="w-1 h-1 bg-primary rounded-full animate-pulse"></div>
+                        </div>
                       </div>
                     </div>
                     
-                    {/* Decorative elements */}
-                    <div className="absolute -top-2 -right-2 w-4 h-4 bg-primary rounded-full"></div>
-                    <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full"></div>
+                    {/* Floating elements */}
+                    <div className="absolute top-4 right-4 w-3 h-3 bg-primary/40 rounded-full"></div>
+                    <div className="absolute bottom-6 left-4 w-2 h-2 bg-green-400/40 rounded-full"></div>
+                    <div className="absolute top-1/2 right-2 w-1 h-1 bg-orange-400/60 rounded-full"></div>
                   </div>
                   
                   {/* Background decoration */}
-                  <div className="absolute -inset-4 bg-gradient-to-br from-primary/5 to-blue-100/20 rounded-2xl -z-10 transform rotate-2"></div>
+                  <div className="absolute -inset-2 bg-gradient-to-br from-primary/5 to-blue-100/10 rounded-2xl -z-10 transform rotate-1"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-tl from-green-100/10 to-transparent rounded-2xl -z-10 transform -rotate-1"></div>
                 </div>
               </div>
             </div>
