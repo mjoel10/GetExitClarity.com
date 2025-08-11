@@ -276,7 +276,7 @@ export default function SampleReport() {
                     </div>
                   </div>
 
-                  <div className="flex justify-center">
+                  <div className="flex justify-start">
                     <Button 
                       onClick={() => setIsModalOpen(true)}
                       size="lg" 

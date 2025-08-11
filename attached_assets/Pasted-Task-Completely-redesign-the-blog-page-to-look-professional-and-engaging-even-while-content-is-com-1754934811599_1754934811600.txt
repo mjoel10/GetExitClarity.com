@@ -1,0 +1,47 @@
+Task: Completely redesign the blog page to look professional and engaging, even while content is coming soon.
+
+Remove current design and replace with:
+
+1. Hero Section:
+- Keep title: "ExitClarity Blog"
+- Keep subtitle: "Insights and strategies for M&A professionals"
+- Add a subtle background gradient or pattern to add visual interest
+
+2. Replace the bland "Coming Soon" box with a Featured Article Preview:
+Create a mock featured article card that shows what content will look like:
+- Large hero image placeholder (use a professional gradient or abstract business image)
+- Article title: "The Complete Guide to Exit Readiness Assessment"
+- Meta info: "By ExitClarity Team • Coming January 2025 • 8 min read"
+- Preview text: "Discover how top M&A advisors are using data-driven assessments to identify exit-ready prospects and accelerate deal timelines..."
+- "Read More →" link (disabled/grayed out)
+- Add a subtle "Coming Soon" badge in the corner
+
+3. Recent Articles Grid (3 cards):
+Create 3 professional article preview cards with:
+- Thumbnail placeholder
+- Title (examples):
+  * "5 Signs Your Client Isn't Exit-Ready"
+  * "Maximizing Valuations in 2025"
+  * "The Hidden Costs of Poor Deal Preparation"
+- Date: "Coming Soon"
+- Category badge (Exit Planning, Valuations, M&A Trends)
+- Short excerpt
+- Make cards look finished but with "Coming Soon" indicators
+
+4. Newsletter Signup Section:
+- Headline: "Get First Access to New Content"
+- Subtext: "Be notified when we publish new insights for M&A professionals"
+- Email input field
+- "Notify Me" button
+- This makes the page useful even before content is live
+
+5. Remove the "Upcoming Content Categories" section entirely - it looks unprofessional
+
+Design requirements:
+- Use card-based design with subtle shadows
+- Add hover effects on cards
+- Use brand colors consistently
+- Ensure mobile responsive
+- Make it look like a real blog that's about to launch, not an empty placeholder
+
+The goal: Visitors should see what kind of high-quality content is coming and want to subscribe, not see an empty page.
