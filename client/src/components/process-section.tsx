@@ -9,7 +9,7 @@ export function ProcessSection() {
       icon: CheckCircle,
       details: [
         "11 comprehensive readiness factors",
-        "30-minute guided assessment",
+        "20-min guided assessment",
         "Confidential and secure process",
         "Industry-specific considerations"
       ]

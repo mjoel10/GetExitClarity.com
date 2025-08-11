@@ -13,7 +13,7 @@ export default function HowItWorks() {
       description: "Owners answer questions across 11 readiness categories—covering operational, financial, emotional, and strategic dimensions.",
       features: [
         "11 comprehensive readiness factors",
-        "30-minute guided assessment",
+        "20-min guided assessment",
         "Confidential and secure process",
         "Industry-specific considerations"
       ],
