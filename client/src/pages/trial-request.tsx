@@ -236,10 +236,12 @@ export default function TrialRequest() {
                               <SelectValue placeholder="Select your role" />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="Managing Partner">Managing Partner</SelectItem>
-                              <SelectItem value="Director/VP BD">Director/VP BD</SelectItem>
+                              <SelectItem value="CEO/Founder">CEO/Founder</SelectItem>
+                              <SelectItem value="Partner/Managing Partner">Partner/Managing Partner</SelectItem>
+                              <SelectItem value="Director/VP">Director/VP</SelectItem>
+                              <SelectItem value="Business Development">Business Development</SelectItem>
                               <SelectItem value="Associate/Analyst">Associate/Analyst</SelectItem>
-                              <SelectItem value="Operations">Operations</SelectItem>
+                              <SelectItem value="Operations/Marketing">Operations/Marketing</SelectItem>
                               <SelectItem value="Other">Other</SelectItem>
                             </SelectContent>
                           </Select>
