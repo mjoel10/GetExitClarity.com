@@ -10,6 +10,7 @@ import About from "@/pages/about";
 import Resources from "@/pages/resources";
 import SampleReport from "@/pages/sample-report";
 import Blog from "@/pages/blog";
+import BlogPost from "@/pages/blog-post";
 import TrialRequest from "@/pages/trial-request";
 import Contact from "@/pages/contact";
 import Privacy from "@/pages/privacy";
@@ -35,6 +36,7 @@ function Router() {
       <Route path="/sample-report" component={SampleReport} />
       <Route path="/resources" component={Resources} />
       <Route path="/blog" component={Blog} />
+      <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/trial-request" component={TrialRequest} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
