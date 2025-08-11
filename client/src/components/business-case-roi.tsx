@@ -34,7 +34,7 @@ export function BusinessCaseROI() {
               marginRight: '0.75rem'
             }} />
             <h3 className="text-2xl md:text-3xl font-bold text-white m-0">
-              1 closed deal pays for ExitClarity
+              One Additional Deal Per Year Pays for the Platform
             </h3>
           </div>
           <p style={{
