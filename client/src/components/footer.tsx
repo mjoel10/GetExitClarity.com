@@ -21,8 +21,8 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '3rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: '2.5rem',
           marginBottom: '3rem'
         }}>
           {/* Brand Column */}
@@ -49,15 +49,9 @@ export default function Footer() {
             }}>
               Empowering M&A professionals and business owners with intelligent exit strategy planning tools and data-driven insights.
             </p>
-            <p style={{
-              color: 'rgba(255, 255, 255, 0.6)',
-              fontSize: '0.875rem'
-            }}>
-              © 2025 ExitClarity. All rights reserved.
-            </p>
           </div>
 
-          {/* Navigation Column */}
+          {/* Platform Column */}
           <div>
             <h4 style={{
               fontSize: '1.125rem',
@@ -65,23 +59,9 @@ export default function Footer() {
               marginBottom: '1.5rem',
               color: 'white'
             }}>
-              Navigation
+              Platform
             </h4>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <Link 
-                href="/" 
-                onClick={scrollToTop}
-                style={{
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
-              >
-                Home
-              </Link>
               <Link 
                 href="/platform/ma-firms" 
                 onClick={scrollToTop}
@@ -98,6 +78,62 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/platform/business-owners" 
+                onClick={scrollToTop}
+                style={{
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+              >
+                For Business Owners
+              </Link>
+              <Link 
+                href="/sample-report" 
+                onClick={scrollToTop}
+                style={{
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+              >
+                Sample Report
+              </Link>
+            </nav>
+          </div>
+
+          {/* Resources Column */}
+          <div>
+            <h4 style={{
+              fontSize: '1.125rem',
+              fontWeight: '600',
+              marginBottom: '1.5rem',
+              color: 'white'
+            }}>
+              Resources
+            </h4>
+            <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              <Link 
+                href="/blog" 
+                onClick={scrollToTop}
+                style={{
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+              >
+                Blog
+              </Link>
+              <Link 
+                href="/resources" 
                 onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
@@ -264,28 +300,46 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Legal Column */}
-          <div>
-            <h4 style={{
-              fontSize: '1.125rem',
-              fontWeight: '600',
-              marginBottom: '1.5rem',
-              color: 'white'
+        </div>
+
+        {/* Bottom Border with Copyright and Legal Links */}
+        <div style={{
+          borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+          paddingTop: '2rem',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1rem'
+        }}>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '1rem'
+          }}>
+            <p style={{
+              color: 'rgba(255, 255, 255, 0.6)',
+              fontSize: '0.875rem',
+              margin: '0'
             }}>
-              Legal
-            </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              © 2025 ExitClarity. All rights reserved.
+            </p>
+            <div style={{
+              display: 'flex',
+              gap: '1.5rem',
+              flexWrap: 'wrap'
+            }}>
               <Link 
                 href="/privacy" 
                 onClick={scrollToTop}
                 style={{
-                  color: 'rgba(255, 255, 255, 0.8)',
+                  color: 'rgba(255, 255, 255, 0.6)',
                   textDecoration: 'none',
-                  fontSize: '0.95rem',
+                  fontSize: '0.875rem',
                   transition: 'color 0.2s ease'
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)'}
               >
                 Privacy Policy
               </Link>
@@ -293,13 +347,13 @@ export default function Footer() {
                 href="/terms" 
                 onClick={scrollToTop}
                 style={{
-                  color: 'rgba(255, 255, 255, 0.8)',
+                  color: 'rgba(255, 255, 255, 0.6)',
                   textDecoration: 'none',
-                  fontSize: '0.95rem',
+                  fontSize: '0.875rem',
                   transition: 'color 0.2s ease'
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)'}
               >
                 Terms of Service
               </Link>
@@ -307,13 +361,13 @@ export default function Footer() {
                 href="/cookies" 
                 onClick={scrollToTop}
                 style={{
-                  color: 'rgba(255, 255, 255, 0.8)',
+                  color: 'rgba(255, 255, 255, 0.6)',
                   textDecoration: 'none',
-                  fontSize: '0.95rem',
+                  fontSize: '0.875rem',
                   transition: 'color 0.2s ease'
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)'}
               >
                 Cookie Policy
               </Link>
@@ -321,30 +375,23 @@ export default function Footer() {
                 href="/security" 
                 onClick={scrollToTop}
                 style={{
-                  color: 'rgba(255, 255, 255, 0.8)',
+                  color: 'rgba(255, 255, 255, 0.6)',
                   textDecoration: 'none',
-                  fontSize: '0.95rem',
+                  fontSize: '0.875rem',
                   transition: 'color 0.2s ease'
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)'}
               >
                 Security
               </Link>
             </div>
           </div>
-        </div>
-
-        {/* Bottom Border */}
-        <div style={{
-          borderTop: '1px solid rgba(255, 255, 255, 0.2)',
-          paddingTop: '2rem',
-          textAlign: 'center'
-        }}>
           <p style={{
-            color: 'rgba(255, 255, 255, 0.6)',
-            fontSize: '0.875rem',
-            lineHeight: '1.5'
+            color: 'rgba(255, 255, 255, 0.5)',
+            fontSize: '0.8rem',
+            textAlign: 'center',
+            margin: '0'
           }}>
             Built for M&A professionals and business owners seeking clarity in their exit strategy.
           </p>
