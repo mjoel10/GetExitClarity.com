@@ -6,7 +6,7 @@ export default function ProgressDashboard() {
       {/* Main Dashboard Content */}
       <div className="dashboard-inner">
         {/* Floating Badges */}
-        <div className="floating-badge badge-clients">48 Reports</div>
+        <div className="floating-badge badge-clients">60 Reports</div>
 
         {/* Header */}
         <div className="dashboard-header">
