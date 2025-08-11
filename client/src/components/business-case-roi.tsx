@@ -180,10 +180,10 @@ export function BusinessCaseROI() {
                 <Clock className="w-8 h-8 text-blue-700" />
               </div>
               <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                Earlier Engagement
+                Enhanced Deal Preparation
               </h4>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Start building relationships and trust months and years before traditional engagement
+                Streamline your M&A process with a subscription platform that reduces risk and accelerates deal completion.
               </p>
             </div>
 
