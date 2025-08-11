@@ -6,7 +6,7 @@ export function EnhancedDealPreparation() {
   const [, navigate] = useLocation();
 
   const handleViewSampleReport = () => {
-    navigate("/resources");
+    navigate("/sample-report");
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 100);

@@ -1,24 +1,63 @@
 import { useEffect } from 'react';
 
-interface MetaData {
-  title: string;
-  description: string;
+interface MetaProps {
+  title?: string;
+  description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogType?: string;
+  ogUrl?: string;
+  ogImage?: string;
 }
 
-export const useMeta = (metaData: MetaData) => {
+export function useMeta({
+  title,
+  description,
+  ogTitle,
+  ogDescription,
+  ogType = 'website',
+  ogUrl,
+  ogImage
+}: MetaProps) {
   useEffect(() => {
-    // Update title
-    document.title = metaData.title;
-    
-    // Update or create meta description
-    let descriptionMeta = document.querySelector('meta[name="description"]');
-    if (descriptionMeta) {
-      descriptionMeta.setAttribute('content', metaData.description);
-    } else {
-      descriptionMeta = document.createElement('meta');
-      descriptionMeta.setAttribute('name', 'description');
-      descriptionMeta.setAttribute('content', metaData.description);
-      document.head.appendChild(descriptionMeta);
+    if (title) {
+      document.title = title;
     }
-  }, [metaData.title, metaData.description]);
-};
+
+    const updateMeta = (selector: string, content: string) => {
+      let element = document.querySelector(selector);
+      if (!element) {
+        element = document.createElement('meta');
+        const name = selector.includes('property') ? 'property' : 'name';
+        const value = selector.split('=')[1].replace(/['"]/g, '');
+        element.setAttribute(name, value);
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    if (description) {
+      updateMeta('meta[name="description"]', description);
+    }
+
+    if (ogTitle || title) {
+      updateMeta('meta[property="og:title"]', ogTitle || title || '');
+    }
+
+    if (ogDescription || description) {
+      updateMeta('meta[property="og:description"]', ogDescription || description || '');
+    }
+
+    if (ogType) {
+      updateMeta('meta[property="og:type"]', ogType);
+    }
+
+    if (ogUrl) {
+      updateMeta('meta[property="og:url"]', ogUrl);
+    }
+
+    if (ogImage) {
+      updateMeta('meta[property="og:image"]', ogImage);
+    }
+  }, [title, description, ogTitle, ogDescription, ogType, ogUrl, ogImage]);
+}

@@ -1,0 +1,84 @@
+Task: Create new page structure with updated navigation while preserving existing homepage and platform pages.
+
+IMPORTANT: Keep these pages exactly as they are:
+- Homepage (/)
+- For M&A Firms (/platform/ma-firms)
+- For Business Owners (/platform/business-owners)
+
+Step 1: Update Navigation Structure
+Top Nav:
+- Platform (dropdown)
+  → For M&A Firms (/platform/ma-firms)
+  → For Business Owners (/platform/business-owners)
+  → Sample Report (/sample-report) [NEW]
+- Resources (dropdown)
+  → Resource Center (/resources) [MODIFIED]
+  → Blog (/blog) [NEW]
+- About (/about)
+- Contact (/contact)
+- Get Started (button) → /trial-request [NEW]
+
+Footer: Mirror the top nav structure
+
+Step 2: Create Sample Report Page (/sample-report)
+SEO Metadata:
+- Title: ExitClarity | Sample Exit Readiness Report
+- Description: See how ExitClarity analyzes 11 critical factors to provide GO/FIX/WAIT recommendations for M&A prospects. View our sample exit readiness assessment report.
+- OG Image: Use the sample report preview image
+
+Page structure:
+- H1: See Our Sample Exit Readiness Report
+- Subhead: Discover how ExitClarity analyzes 11 critical factors to provide actionable GO/FIX/WAIT recommendations
+- Use existing bullet points and preview image from current resources page
+- Add "What's Inside" section with report preview
+- CTA buttons: "Request a Client Trial" → /trial-request
+- Social proof bar: 300+ Analyses | 11 Factors | 20+ Years M&A
+
+Step 3: Create Resource Center Page (/resources)
+SEO Metadata:
+- Title: ExitClarity | M&A Resources & Tools
+- Description: Free M&A resources including exit planning guides, valuation benchmarks, due diligence checklists, and market insights for advisors and business owners.
+
+Page structure:
+- H1: Resource Center
+- Subhead: Explore our comprehensive collection of guides, reports, and tools to support your M&A journey
+- Add notice at top: "Looking for our Sample Report? [View Sample Report →]" linking to /sample-report
+- Create grid layout with these resource cards (mark all as "Coming Soon" for now):
+  1. Exit Planning Guide
+  2. Valuation Benchmarks
+  3. M&A Market Trends
+  4. Due Diligence Checklist
+  5. Webinar Series
+  6. Case Studies
+- Reuse the card styling from current resources page
+
+Step 4: Create Blog Page Framework (/blog)
+SEO Metadata:
+- Title: ExitClarity | M&A Insights Blog
+- Description: Expert insights on exit planning, business valuations, M&A trends, and strategies for advisors preparing clients for successful exits.
+
+Page structure:
+- H1: ExitClarity Blog
+- Subhead: Insights and strategies for M&A professionals
+- Create blog listing component with:
+  - Grid/list layout for posts
+  - Sidebar with categories and recent posts
+  - Pagination component
+  - Individual blog post template at /blog/[slug]
+- Add placeholder "Coming Soon" message for now
+- Set up dynamic routing for future posts
+
+Blog Post Template SEO:
+- Title: ExitClarity | {Post Title}
+- Description: {Post excerpt or first 155 characters}
+- Author meta tag
+- Published date
+- OG Image: {Featured image or default blog OG image}
+
+Deliverables for Stage 1:
+✓ Updated navigation in header/footer
+✓ Sample Report page with existing content migrated + SEO
+✓ Resource Center page with 6 placeholder cards + SEO
+✓ Blog framework ready for content + SEO
+✓ All links working correctly
+✓ All meta tags properly implemented

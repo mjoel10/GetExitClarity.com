@@ -83,7 +83,7 @@ export default function Footer() {
                 Home
               </Link>
               <Link 
-                href="/ma-firms" 
+                href="/platform/ma-firms" 
                 onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
@@ -97,7 +97,7 @@ export default function Footer() {
                 For M&A Firms
               </Link>
               <Link 
-                href="/business-owners" 
+                href="/platform/business-owners" 
                 onClick={scrollToTop}
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',

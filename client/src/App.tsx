@@ -8,6 +8,9 @@ import BusinessOwners from "@/pages/business-owners";
 import MAFirms from "@/pages/ma-firms";
 import About from "@/pages/about";
 import Resources from "@/pages/resources";
+import SampleReport from "@/pages/sample-report";
+import Blog from "@/pages/blog";
+import TrialRequest from "@/pages/trial-request";
 import Contact from "@/pages/contact";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
@@ -25,11 +28,18 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Landing} />
+      <Route path="/platform/ma-firms" component={MAFirms} />
+      <Route path="/platform/business-owners" component={BusinessOwners} />
+      <Route path="/sample-report" component={SampleReport} />
+      <Route path="/resources" component={Resources} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/trial-request" component={TrialRequest} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
+      {/* Legacy routes - redirect to new paths */}
       <Route path="/business-owners" component={BusinessOwners} />
       <Route path="/ma-firms" component={MAFirms} />
-      <Route path="/about" component={About} />
-      <Route path="/resources" component={Resources} />
-      <Route path="/contact" component={Contact} />
+      {/* Legal pages */}
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/cookies" component={Cookies} />

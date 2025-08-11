@@ -36,7 +36,7 @@ export function HeroSection() {
                 </Button>
                 
                 <Button variant="professional" size="xl" className="group" asChild>
-                  <Link href="/resources">
+                  <Link href="/sample-report">
                     <FileText className="mr-2 h-5 w-5" />
                     View Sample Report
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

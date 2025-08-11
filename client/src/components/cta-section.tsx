@@ -6,14 +6,14 @@ export function CTASection() {
   const [, navigate] = useLocation();
 
   const handleMAFirmsLearnMore = () => {
-    navigate("/ma-firms");
+    navigate("/platform/ma-firms");
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 100);
   };
 
   const handleBusinessOwnersLearnMore = () => {
-    navigate("/business-owners");
+    navigate("/platform/business-owners");
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 100);

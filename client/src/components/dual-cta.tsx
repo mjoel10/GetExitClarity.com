@@ -11,7 +11,7 @@ export function DualCTA({ className = "", variant = 'centered' }: DualCTAProps) 
   const [, navigate] = useLocation();
 
   const handleViewSampleReport = () => {
-    navigate("/resources");
+    navigate("/sample-report");
     // Scroll to top after navigation
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
