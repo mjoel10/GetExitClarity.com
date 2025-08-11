@@ -17,7 +17,7 @@ export function ProcessSection() {
     {
       number: "02", 
       title: "Receive a Strategic Report",
-      description: "Each owner receives a 20 - 25 page customized report with a GO/FIX/WAIT recommendation, risk analysis, valuation estimate, and action plan.",
+      description: "Each owner receives a 20 - 30 page customized report with a GO/FIX/WAIT recommendation, risk analysis, valuation estimate, and action plan.",
       icon: FileText,
       details: [
         "GO/FIX/WAIT recommendation",
