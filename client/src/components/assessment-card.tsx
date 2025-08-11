@@ -60,7 +60,7 @@ export default function AssessmentCard() {
           <div className="stat-label">factors</div>
         </div>
         <div className="stat-item">
-          <div className="stat-number">23 min</div>
+          <div className="stat-number">9 min</div>
           <div className="stat-label">remaining</div>
         </div>
         <div className="stat-item">
