@@ -76,7 +76,7 @@ export function ProblemSection() {
             </div>
             <div>
               <div className="text-3xl font-bold text-primary mb-2">1</div>
-              <p className="text-muted-foreground">deal pays for ExitClarity</p>
+              <p className="text-muted-foreground">additional deal pays for ExitClarity</p>
             </div>
           </div>
         </div>
