@@ -27,7 +27,7 @@ export default function ProgressDashboard() {
             </div>
             <div className="stat-card success">
               <div className="stat-number">35</div>
-              <div className="stat-label">Delivered to Clients</div>
+              <div className="stat-label">Delivered Reports</div>
             </div>
             <div className="stat-card primary">
               <div className="stat-number">60</div>
