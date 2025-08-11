@@ -100,17 +100,17 @@ export function CTASection() {
               </li>
             </ul>
             <div className="flex flex-col xl:flex-row gap-3">
-              <Button variant="hero" size="default" className="group xl:flex-1 sm:py-4 sm:px-6 sm:text-lg" asChild>
-                <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
-                  <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  Get Started Today
-                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
+              <Button variant="hero" size="lg" className="group xl:flex-1 h-12 px-6 text-base" asChild>
+                <a href="/trial-request">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Try It with a Client
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button variant="outline" size="default" className="group xl:flex-1 sm:py-4 sm:px-6 sm:text-lg" onClick={handleBusinessOwnersLearnMore}>
-                <FileText className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+              <Button variant="outline" size="lg" className="group xl:flex-1 h-12 px-6 text-base" onClick={handleBusinessOwnersLearnMore}>
+                <FileText className="mr-2 h-5 w-5" />
                 Learn More
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </div>
