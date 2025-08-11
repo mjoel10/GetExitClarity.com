@@ -43,7 +43,7 @@ export function BusinessCaseROI() {
             margin: '0',
             lineHeight: '1.5'
           }}>
-            Turn your biggest challenge—unready prospects—into your competitive advantage
+            Turn unready prospects into your next closed deal — with a readiness system that works year-round.
           </p>
         </div>
 
