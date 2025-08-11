@@ -121,16 +121,16 @@ export default function Header() {
                   onMouseLeave={() => setIsResourcesDropdownOpen(false)}
                 >
                   <button 
-                    onClick={() => handleNavigation("/resources")}
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors w-full text-left"
-                  >
-                    Resource Center
-                  </button>
-                  <button 
                     onClick={() => handleNavigation("/blog")}
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors w-full text-left"
                   >
                     Blog
+                  </button>
+                  <button 
+                    onClick={() => handleNavigation("/resources")}
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors w-full text-left"
+                  >
+                    Resource Center
                   </button>
                 </div>
               )}
@@ -201,16 +201,16 @@ export default function Header() {
               <div className="pl-4 space-y-2">
                 <div className="text-gray-800 font-medium">Resources</div>
                 <button 
-                  onClick={() => handleNavigation("/resources")}
-                  className="block text-gray-600 hover:text-primary transition-colors pl-4 text-left"
-                >
-                  Resource Center
-                </button>
-                <button 
                   onClick={() => handleNavigation("/blog")}
                   className="block text-gray-600 hover:text-primary transition-colors pl-4 text-left"
                 >
                   Blog
+                </button>
+                <button 
+                  onClick={() => handleNavigation("/resources")}
+                  className="block text-gray-600 hover:text-primary transition-colors pl-4 text-left"
+                >
+                  Resource Center
                 </button>
               </div>
               
