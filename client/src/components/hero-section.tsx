@@ -30,7 +30,7 @@ export function HeroSection() {
                 <Button variant="hero" size="xl" className="group" asChild>
                   <a href="/trial-request">
                     <Users className="mr-2 h-5 w-5" />
-                    Try It with a Client
+                    Get Started
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </a>
                 </Button>
