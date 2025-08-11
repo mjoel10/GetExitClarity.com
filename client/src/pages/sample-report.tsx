@@ -289,13 +289,13 @@ export default function SampleReport() {
           </section>
 
           {/* Final CTA - Floating Card Design */}
-          <section className="py-16 sm:py-20 lg:py-24" style={{backgroundColor: '#f8f9fa'}}>
+          <section className="py-12 sm:py-16 lg:py-20" style={{backgroundColor: '#f8f9fa'}}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-              <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary to-blue-700 text-white rounded-3xl shadow-2xl p-8 sm:p-12 lg:p-16 text-center">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
+              <div className="max-w-6xl mx-auto bg-gradient-to-r from-primary to-blue-700 text-white rounded-2xl shadow-2xl px-8 sm:px-12 lg:px-16 py-8 sm:py-10 lg:py-12 text-center">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
                   Ready to Transform Your M&A Process?
                 </h2>
-                <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-8">
+                <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-7">
                   Join 300+ M&A professionals using ExitClarity to streamline deal preparation
                 </p>
                 <Button 
