@@ -85,7 +85,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
         email: validatedData.email,
         firmName: validatedData.firmName,
         role: validatedData.role,
-        prospectType: validatedData.prospectType,
         seenBefore: validatedData.seenBefore,
         timing: validatedData.timing,
         notes: validatedData.notes || undefined

@@ -20,7 +20,6 @@ interface TrialRequestData {
   email: string;
   firmName: string;
   role: string;
-  prospectType: string;
   seenBefore: string;
   timing: string;
   notes?: string;
@@ -95,8 +94,7 @@ export async function sendTrialRequestNotification(data: TrialRequestData): Prom
           <p><strong>Role:</strong> ${data.role}</p>
           
           <h3 style="color: #334155;">Request Details</h3>
-          <p><strong>Prospect Type:</strong> ${data.prospectType}</p>
-          <p><strong>Seen Before:</strong> ${data.seenBefore === 'yes' ? 'Yes' : 'No'}</p>
+          <p><strong>Seen Before:</strong> ${data.seenBefore}</p>
           <p><strong>Timing:</strong> ${data.timing}</p>
           
           ${data.notes ? `

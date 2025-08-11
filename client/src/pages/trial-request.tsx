@@ -22,7 +22,6 @@ const trialRequestSchema = z.object({
   email: z.string().email("Valid email is required"),
   firmName: z.string().min(1, "Firm name is required"),
   role: z.string().min(1, "Role is required"),
-  prospectType: z.string().min(1, "Prospect type is required"),
   seenBefore: z.string().min(1, "Please select an option"),
   timing: z.string().min(1, "Timing is required"),
   notes: z.string().optional(),
@@ -249,24 +248,7 @@ export default function TrialRequest() {
                           )}
                         </div>
 
-                        {/* Prospect Type */}
-                        <div className="space-y-2">
-                          <Label>Prospect Type *</Label>
-                          <Select onValueChange={(value) => setValue("prospectType", value)}>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select prospect type" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="Founder-led">Founder-led</SelectItem>
-                              <SelectItem value="PE-backed">PE-backed</SelectItem>
-                              <SelectItem value="Corporate carve-out">Corporate carve-out</SelectItem>
-                              <SelectItem value="Other">Other</SelectItem>
-                            </SelectContent>
-                          </Select>
-                          {errors.prospectType && (
-                            <p className="text-sm text-red-600">{errors.prospectType.message}</p>
-                          )}
-                        </div>
+
 
                         {/* Seen Before */}
                         <div className="space-y-3">
@@ -294,7 +276,8 @@ export default function TrialRequest() {
                               <SelectValue placeholder="When do you need this?" />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="0-3 months">0-3 months</SelectItem>
+                              <SelectItem value="ASAP">ASAP</SelectItem>
+                              <SelectItem value="1-3 months">1-3 months</SelectItem>
                               <SelectItem value="3-6 months">3-6 months</SelectItem>
                               <SelectItem value="6-12 months">6-12 months</SelectItem>
                               <SelectItem value="12+ months">12+ months</SelectItem>

@@ -85,6 +85,7 @@ export class DatabaseStorage implements IStorage {
         ...insertRequest,
         emailDomain,
         status,
+        prospectType: null, // No longer collected, set to null
         notes: insertRequest.notes || null,
         utmSource: insertRequest.utmSource || null,
         utmMedium: insertRequest.utmMedium || null,

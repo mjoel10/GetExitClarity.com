@@ -29,8 +29,8 @@ export const trialRequests = pgTable("trial_requests", {
   emailDomain: text("email_domain").notNull(),
   firmName: text("firm_name").notNull(),
   role: text("role").notNull(),
-  prospectType: text("prospect_type").notNull(),
-  seenBefore: text("seen_before").notNull(), // 'yes' or 'no'
+  prospectType: text("prospect_type"), // Keep but make optional for backward compatibility
+  seenBefore: text("seen_before").notNull(), // 'Yes' or 'No'
   timing: text("timing").notNull(),
   notes: text("notes"),
   utmSource: text("utm_source"),
@@ -58,6 +58,7 @@ export const insertTrialRequestSchema = createInsertSchema(trialRequests).omit({
   id: true,
   createdAt: true,
   emailDomain: true,
+  prospectType: true,
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
