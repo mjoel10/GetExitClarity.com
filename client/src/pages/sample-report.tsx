@@ -150,67 +150,88 @@ export default function SampleReport() {
                 {/* Left: Enhanced Report Visual */}
                 <div className="order-2 lg:order-1 relative lg:pr-8">
                   <div className="relative mx-auto max-w-md lg:max-w-none">
-                    {/* Clean Report Document Preview */}
-                    <div className="bg-white rounded-xl shadow-2xl border border-gray-200 p-8 max-w-md mx-auto">
+                    {/* Professional Report Document Preview */}
+                    <div className="bg-white rounded-xl shadow-2xl border border-gray-200 p-6 max-w-md mx-auto">
                       {/* Document Header */}
                       <div className="flex items-center justify-between mb-6">
                         <div>
                           <h3 className="font-semibold text-gray-900">ExitClarity Report</h3>
-                          <p className="text-sm text-gray-500">Sample</p>
+                        </div>
+                        <div className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                          Sample
                         </div>
                       </div>
 
-                      {/* Progress Bars - Abstract Representation */}
-                      <div className="space-y-4 mb-8">
-                        {/* Main progress bar */}
-                        <div className="space-y-2">
-                          <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
-                            <div className="h-full bg-gradient-to-r from-primary to-blue-600 rounded-full" style={{width: "82%"}}></div>
-                          </div>
+                      {/* Executive Summary Section */}
+                      <div className="border border-gray-300 rounded-lg p-3 mb-4">
+                        <div className="text-xs font-semibold text-gray-700 mb-2 bg-gray-100 px-2 py-1 rounded">
+                          EXECUTIVE SUMMARY
                         </div>
+                        <div className="space-y-2">
+                          <div className="h-1.5 bg-gray-300 rounded w-full"></div>
+                          <div className="h-1.5 bg-gray-300 rounded w-4/5"></div>
+                          <div className="h-1.5 bg-gray-300 rounded w-3/4"></div>
+                        </div>
+                      </div>
 
-                        {/* Secondary progress bars */}
+                      {/* Assessment Results Section */}
+                      <div className="border border-gray-300 rounded-lg p-3 mb-4">
+                        <div className="text-xs font-semibold text-gray-700 mb-3 bg-gray-100 px-2 py-1 rounded">
+                          KEY ASSESSMENTS
+                        </div>
                         <div className="space-y-3">
-                          <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                            <div className="h-full bg-green-500 rounded-full" style={{width: "78%"}}></div>
+                          {/* Status indicators with progress bars */}
+                          <div className="flex items-center justify-between">
+                            <div className="text-xs text-gray-600">Financial Performance</div>
+                            <div className="flex items-center gap-2">
+                              <div className="w-16 h-1.5 bg-gray-200 rounded-full">
+                                <div className="h-full bg-green-500 rounded-full" style={{width: "85%"}}></div>
+                              </div>
+                              <span className="text-xs font-semibold text-green-600">GO</span>
+                            </div>
                           </div>
-                          <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                            <div className="h-full bg-blue-400 rounded-full" style={{width: "85%"}}></div>
+                          <div className="flex items-center justify-between">
+                            <div className="text-xs text-gray-600">Market Position</div>
+                            <div className="flex items-center gap-2">
+                              <div className="w-16 h-1.5 bg-gray-200 rounded-full">
+                                <div className="h-full bg-blue-500 rounded-full" style={{width: "78%"}}></div>
+                              </div>
+                              <span className="text-xs font-semibold text-blue-600">GO</span>
+                            </div>
                           </div>
-                          <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                            <div className="h-full bg-cyan-400 rounded-full" style={{width: "71%"}}></div>
+                          <div className="flex items-center justify-between">
+                            <div className="text-xs text-gray-600">Operations</div>
+                            <div className="flex items-center gap-2">
+                              <div className="w-16 h-1.5 bg-gray-200 rounded-full">
+                                <div className="h-full bg-yellow-500 rounded-full" style={{width: "65%"}}></div>
+                              </div>
+                              <span className="text-xs font-semibold text-yellow-600">FIX</span>
+                            </div>
                           </div>
                         </div>
                       </div>
 
-                      {/* Abstract Content Lines */}
-                      <div className="space-y-3 mb-6">
-                        <div className="space-y-2">
-                          <div className="h-2 bg-gray-300 rounded w-full"></div>
-                          <div className="h-2 bg-gray-300 rounded w-5/6"></div>
-                          <div className="h-2 bg-gray-300 rounded w-4/5"></div>
+                      {/* Recommendations Section */}
+                      <div className="border border-gray-300 rounded-lg p-3 mb-4">
+                        <div className="text-xs font-semibold text-gray-700 mb-2 bg-gray-100 px-2 py-1 rounded">
+                          RECOMMENDATIONS
                         </div>
-                        
-                        <div className="space-y-2">
-                          <div className="h-2 bg-gray-300 rounded w-full"></div>
-                          <div className="h-2 bg-gray-300 rounded w-3/4"></div>
-                        </div>
-                        
-                        <div className="space-y-2">
-                          <div className="h-2 bg-gray-300 rounded w-5/6"></div>
-                          <div className="h-2 bg-gray-300 rounded w-full"></div>
-                          <div className="h-2 bg-gray-300 rounded w-2/3"></div>
+                        <div className="space-y-1.5">
+                          <div className="h-1.5 bg-gray-300 rounded w-full"></div>
+                          <div className="h-1.5 bg-gray-300 rounded w-5/6"></div>
+                          <div className="h-1.5 bg-gray-300 rounded w-4/5"></div>
+                          <div className="h-1.5 bg-gray-300 rounded w-3/4"></div>
                         </div>
                       </div>
 
-                      {/* Key Metrics - Minimal */}
-                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-200">
+                      {/* Bottom Summary */}
+                      <div className="flex items-center justify-between pt-3 border-t border-gray-200">
                         <div className="text-center">
-                          <div className="text-lg font-bold text-gray-900">7.4/10</div>
+                          <div className="text-base font-bold text-gray-900">7.4/10</div>
                           <div className="text-xs text-gray-500">Exit Readiness</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-lg font-bold text-green-600">GO</div>
+                          <div className="text-base font-bold text-green-600">GO</div>
                           <div className="text-xs text-gray-500">Recommendation</div>
                         </div>
                       </div>
