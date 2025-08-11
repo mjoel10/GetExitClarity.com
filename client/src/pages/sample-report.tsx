@@ -155,20 +155,29 @@ export default function SampleReport() {
                       {/* Document Header */}
                       <div className="mb-8 pb-6 border-b-2 border-gray-200">
                         <div className="text-center mb-4">
-                          <h3 className="font-bold text-xl text-gray-900 mb-1">EXIT READINESS ASSESSMENT</h3>
-                          <p className="text-sm text-gray-600 font-medium">COMPREHENSIVE ANALYSIS REPORT</p>
+                          <h3 className="font-bold text-lg text-gray-900 mb-1">EXITCLARITY STRATEGIC ANALYSIS</h3>
+                          <p className="text-sm text-gray-600 font-medium">COMPREHENSIVE EXIT READINESS & VALUATION REPORT</p>
+                          <p className="text-xs text-gray-500 italic">Confidential M&A Strategic Advisory Analysis</p>
                         </div>
-                        <div className="flex justify-between items-center text-sm">
-                          <div>
-                            <p className="text-gray-600"><span className="font-semibold">Company:</span> Sample Manufacturing Co.</p>
-                            <p className="text-gray-600"><span className="font-semibold">Industry:</span> Manufacturing Services</p>
-                          </div>
-                          <div className="text-right">
-                            <div className="bg-green-600 text-white px-4 py-2 rounded font-bold text-sm">
-                              GO RECOMMENDATION
+                        <div className="text-xs space-y-1 mb-4">
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <p><span className="font-semibold">Company:</span> WealthChannel Group</p>
+                              <p><span className="font-semibold">Industry:</span> Media/Entertainment</p>
+                              <p><span className="font-semibold">Revenue:</span> $6,500,000</p>
                             </div>
-                            <p className="text-xs text-gray-500 mt-1">Market Ready</p>
+                            <div>
+                              <p><span className="font-semibold">Adjusted EBITDA:</span> $1,850,000</p>
+                              <p><span className="font-semibold">Employees:</span> 18</p>
+                              <p><span className="font-semibold">Date:</span> 7/9/2025</p>
+                            </div>
                           </div>
+                        </div>
+                        <div className="text-center">
+                          <div className="bg-green-600 text-white px-4 py-2 rounded font-bold text-sm">
+                            GO RECOMMENDATION
+                          </div>
+                          <p className="text-xs text-gray-500 mt-1">Overall Exit Readiness Score: 7.4/10</p>
                         </div>
                       </div>
 
@@ -182,29 +191,34 @@ export default function SampleReport() {
                           {/* Scores Table */}
                           <div className="border border-gray-300">
                             <div className="grid grid-cols-3 gap-0 text-xs font-semibold bg-gray-50 border-b border-gray-300">
-                              <div className="p-3 border-r border-gray-300">ASSESSMENT AREA</div>
-                              <div className="p-3 border-r border-gray-300 text-center">SCORE</div>
-                              <div className="p-3 text-center">STATUS</div>
+                              <div className="p-2 border-r border-gray-300">ASSESSMENT AREA</div>
+                              <div className="p-2 border-r border-gray-300 text-center">SCORE</div>
+                              <div className="p-2 text-center">RATING</div>
                             </div>
                             <div className="grid grid-cols-3 gap-0 text-xs border-b border-gray-300">
-                              <div className="p-3 border-r border-gray-300">Financial Performance</div>
-                              <div className="p-3 border-r border-gray-300 text-center font-semibold">94/100</div>
-                              <div className="p-3 text-center text-green-600 font-semibold">STRONG</div>
+                              <div className="p-2 border-r border-gray-300">Business Overview</div>
+                              <div className="p-2 border-r border-gray-300 text-center font-semibold">8.2/10</div>
+                              <div className="p-2 text-center text-green-600 font-semibold">STRONG</div>
                             </div>
                             <div className="grid grid-cols-3 gap-0 text-xs border-b border-gray-300">
-                              <div className="p-3 border-r border-gray-300">Market Position</div>
-                              <div className="p-3 border-r border-gray-300 text-center font-semibold">89/100</div>
-                              <div className="p-3 text-center text-green-600 font-semibold">STRONG</div>
+                              <div className="p-2 border-r border-gray-300">Financial Performance</div>
+                              <div className="p-2 border-r border-gray-300 text-center font-semibold">7.8/10</div>
+                              <div className="p-2 text-center text-green-600 font-semibold">STRONG</div>
                             </div>
                             <div className="grid grid-cols-3 gap-0 text-xs border-b border-gray-300">
-                              <div className="p-3 border-r border-gray-300">Operational Readiness</div>
-                              <div className="p-3 border-r border-gray-300 text-center font-semibold">82/100</div>
-                              <div className="p-3 text-center text-blue-600 font-semibold">GOOD</div>
+                              <div className="p-2 border-r border-gray-300">Market Position</div>
+                              <div className="p-2 border-r border-gray-300 text-center font-semibold">7.5/10</div>
+                              <div className="p-2 text-center text-blue-600 font-semibold">GOOD</div>
+                            </div>
+                            <div className="grid grid-cols-3 gap-0 text-xs border-b border-gray-300">
+                              <div className="p-2 border-r border-gray-300">Management & Leadership</div>
+                              <div className="p-2 border-r border-gray-300 text-center font-semibold">6.9/10</div>
+                              <div className="p-2 text-center text-blue-600 font-semibold">GOOD</div>
                             </div>
                             <div className="grid grid-cols-3 gap-0 text-xs">
-                              <div className="p-3 border-r border-gray-300">Management Systems</div>
-                              <div className="p-3 border-r border-gray-300 text-center font-semibold">76/100</div>
-                              <div className="p-3 text-center text-orange-600 font-semibold">FAIR</div>
+                              <div className="p-2 border-r border-gray-300">Operational Systems</div>
+                              <div className="p-2 border-r border-gray-300 text-center font-semibold">6.4/10</div>
+                              <div className="p-2 text-center text-orange-600 font-semibold">FAIR</div>
                             </div>
                           </div>
                         </div>
@@ -212,14 +226,16 @@ export default function SampleReport() {
                         {/* Valuation Summary */}
                         <div className="border border-gray-300 bg-gray-50 p-4">
                           <h4 className="font-bold text-gray-900 mb-3 text-center text-sm">VALUATION ANALYSIS</h4>
-                          <div className="grid grid-cols-2 gap-6 text-center text-xs">
+                          <div className="grid grid-cols-2 gap-4 text-center text-xs">
                             <div>
-                              <div className="text-lg font-bold text-gray-900">$2.8M - $3.4M</div>
-                              <div className="text-gray-600">Estimated Market Value</div>
+                              <div className="text-base font-bold text-gray-900">$11.1M - $14.8M</div>
+                              <div className="text-gray-600">Estimated Range</div>
+                              <div className="text-gray-500">(6.0x - 8.0x EBITDA)</div>
                             </div>
                             <div>
-                              <div className="text-lg font-bold text-green-600">LOW RISK</div>
-                              <div className="text-gray-600">Exit Risk Assessment</div>
+                              <div className="text-base font-bold text-blue-600">70% Recurring</div>
+                              <div className="text-gray-600">Revenue Base</div>
+                              <div className="text-gray-500">28.5% EBITDA Margin</div>
                             </div>
                           </div>
                         </div>
@@ -231,21 +247,25 @@ export default function SampleReport() {
                           PRIORITY RECOMMENDATIONS
                         </h4>
                         <div className="space-y-2 text-xs">
-                          <div className="flex items-start gap-3">
+                          <div className="flex items-start gap-2">
                             <span className="font-semibold text-gray-900">1.</span>
-                            <span className="text-gray-700">Enhance customer diversification documentation to strengthen market position metrics</span>
+                            <span className="text-gray-700">Reduce owner dependence (currently 55%) through documented processes</span>
                           </div>
-                          <div className="flex items-start gap-3">
+                          <div className="flex items-start gap-2">
                             <span className="font-semibold text-gray-900">2.</span>
-                            <span className="text-gray-700">Develop comprehensive management succession planning and documentation</span>
+                            <span className="text-gray-700">Strengthen second-tier management depth beyond 1-2 key managers</span>
                           </div>
-                          <div className="flex items-start gap-3">
+                          <div className="flex items-start gap-2">
                             <span className="font-semibold text-gray-900">3.</span>
-                            <span className="text-gray-700">Optimize working capital structure to improve financial performance metrics</span>
+                            <span className="text-gray-700">Formalize SOPs for content production and campaign workflows</span>
+                          </div>
+                          <div className="flex items-start gap-2">
+                            <span className="font-semibold text-gray-900">4.</span>
+                            <span className="text-gray-700">Enhance key person insurance coverage beyond basic levels</span>
                           </div>
                         </div>
                         <div className="text-center text-xs text-gray-500 mt-3 italic">
-                          Full report contains 47 detailed recommendations across all 11 assessment areas
+                          Complete 28-page analysis with detailed action plan and timeline
                         </div>
                       </div>
                     </div>
