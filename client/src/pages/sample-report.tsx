@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -138,13 +138,6 @@ export default function SampleReport() {
 
   return (
     <>
-      <Helmet>
-        <title>ExitClarity | Sample Exit Readiness Report</title>
-        <meta name="description" content="See how ExitClarity analyzes 11 critical factors to provide GO/FIX/WAIT recommendations for M&A prospects. View our sample exit readiness assessment report." />
-        <meta property="og:title" content="ExitClarity | Sample Exit Readiness Report" />
-        <meta property="og:description" content="See how ExitClarity analyzes 11 critical factors to provide GO/FIX/WAIT recommendations for M&A prospects. View our sample exit readiness assessment report." />
-        <meta property="og:type" content="website" />
-      </Helmet>
 
       <div className="min-h-screen bg-white">
         <Header />
@@ -184,7 +177,7 @@ export default function SampleReport() {
                     className="bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
                   >
                     Request a Client Trial
-                    <ArrowRight className="ml-2 h-4 h-4 sm:h-5 sm:w-5" />
+                    <ArrowRight className="ml-2 w-4 h-4 sm:h-5 sm:w-5" />
                   </Button>
                   <Button 
                     variant="outline" 

@@ -17,17 +17,19 @@ import Terms from "@/pages/terms";
 import Cookies from "@/pages/cookies";
 import Security from "@/pages/security";
 import NotFound from "@/pages/not-found";
+import Test from "@/pages/test";
 import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
 
 function Router() {
   // Track page views when routes change
-  useAnalytics();
+  // useAnalytics(); // Temporarily disabled to debug runtime error
   
   return (
     <Switch>
       <Route path="/" component={Landing} />
+      <Route path="/test" component={Test} />
       <Route path="/platform/ma-firms" component={MAFirms} />
       <Route path="/platform/business-owners" component={BusinessOwners} />
       <Route path="/sample-report" component={SampleReport} />
@@ -53,8 +55,7 @@ function App() {
   // Initialize Google Analytics when app loads
   useEffect(() => {
     try {
-      // Temporarily disabled GA to resolve runtime error
-      // initGA();
+      initGA();
     } catch (error) {
       console.warn('Google Analytics initialization failed:', error);
     }

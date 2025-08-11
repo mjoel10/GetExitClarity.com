@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -35,13 +35,6 @@ export default function TrialRequest() {
 
   return (
     <>
-      <Helmet>
-        <title>ExitClarity | Request Client Trial</title>
-        <meta name="description" content="Request a trial of ExitClarity's exit readiness assessment platform. Perfect for M&A professionals looking to streamline client preparation." />
-        <meta property="og:title" content="ExitClarity | Request Client Trial" />
-        <meta property="og:description" content="Request a trial of ExitClarity's exit readiness assessment platform. Perfect for M&A professionals looking to streamline client preparation." />
-        <meta property="og:type" content="website" />
-      </Helmet>
 
       <div className="min-h-screen bg-white">
         <Header />

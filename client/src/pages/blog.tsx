@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
@@ -7,13 +7,6 @@ import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 export default function Blog() {
   return (
     <>
-      <Helmet>
-        <title>ExitClarity | M&A Insights Blog</title>
-        <meta name="description" content="Expert insights on exit planning, business valuations, M&A trends, and strategies for advisors preparing clients for successful exits." />
-        <meta property="og:title" content="ExitClarity | M&A Insights Blog" />
-        <meta property="og:description" content="Expert insights on exit planning, business valuations, M&A trends, and strategies for advisors preparing clients for successful exits." />
-        <meta property="og:type" content="website" />
-      </Helmet>
 
       <div className="min-h-screen bg-white">
         <Header />
