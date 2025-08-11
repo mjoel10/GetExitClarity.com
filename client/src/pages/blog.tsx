@@ -116,30 +116,111 @@ export default function Blog() {
             </div>
           </section>
 
-          {/* Recent Articles Grid */}
+          {/* Additional Resources Grid */}
           <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="text-center mb-12">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                  More Articles Coming Soon
+                  Additional Resources
                 </h3>
-                <p className="text-gray-600">We're preparing more valuable insights for M&A professionals</p>
+                <p className="text-gray-600">More insights coming soon to help you master the exit process</p>
               </div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                <div className="bg-white rounded-xl shadow-md p-12 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <Mail className="w-8 h-8 text-primary/60" />
+                {/* Article 1 */}
+                <div className="bg-white rounded-xl shadow-md transition-shadow duration-300 overflow-hidden">
+                  <div className="h-48 bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center">
+                    <div className="text-red-300 text-center">
+                      <div className="w-12 h-12 bg-red-200 rounded-full flex items-center justify-center mb-2 mx-auto">
+                        <ArrowRight className="w-6 h-6" />
+                      </div>
+                      <p className="text-sm font-medium">Article Thumbnail</p>
+                    </div>
                   </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">
-                    More Insights Coming Soon
-                  </h4>
-                  <p className="text-gray-600 mb-6">
-                    We're preparing comprehensive guides on exit planning, valuations, and M&A trends.
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    Subscribe below to be notified when new articles are published.
-                  </p>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <Badge variant="secondary" className="bg-red-100 text-red-700">Exit Planning</Badge>
+                      <Badge variant="outline" className="text-gray-500">Coming Soon</Badge>
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">
+                      The 30-Minute Assessment That Changes Everything
+                    </h4>
+                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                      <Calendar className="w-4 h-4" />
+                      <span>Coming Soon</span>
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      How modern technology is replacing weeks of manual evaluation with instant, actionable insights.
+                    </p>
+                    <div className="flex items-center text-gray-400 text-sm cursor-default">
+                      <span>Coming Soon</span>
+                      <ArrowRight className="ml-1 w-4 h-4" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Article 2 */}
+                <div className="bg-white rounded-xl shadow-md transition-shadow duration-300 overflow-hidden">
+                  <div className="h-48 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
+                    <div className="text-green-300 text-center">
+                      <div className="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center mb-2 mx-auto">
+                        <ArrowRight className="w-6 h-6" />
+                      </div>
+                      <p className="text-sm font-medium">Article Thumbnail</p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <Badge variant="secondary" className="bg-green-100 text-green-700">Valuations</Badge>
+                      <Badge variant="outline" className="text-gray-500">Coming Soon</Badge>
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">
+                      Why Timing Matters: The FIX vs WAIT Decision
+                    </h4>
+                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                      <Calendar className="w-4 h-4" />
+                      <span>Coming Soon</span>
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      Not every fixable issue should be fixed before market. Learn which improvements justify delay.
+                    </p>
+                    <div className="flex items-center text-gray-400 text-sm cursor-default">
+                      <span>Coming Soon</span>
+                      <ArrowRight className="ml-1 w-4 h-4" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Article 3 */}
+                <div className="bg-white rounded-xl shadow-md transition-shadow duration-300 overflow-hidden">
+                  <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center">
+                    <div className="text-blue-300 text-center">
+                      <div className="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center mb-2 mx-auto">
+                        <ArrowRight className="w-6 h-6" />
+                      </div>
+                      <p className="text-sm font-medium">Article Thumbnail</p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <Badge variant="secondary" className="bg-blue-100 text-blue-700">M&A Trends</Badge>
+                      <Badge variant="outline" className="text-gray-500">Coming Soon</Badge>
+                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">
+                      2025 M&A Outlook: What Sellers Need to Know
+                    </h4>
+                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                      <Calendar className="w-4 h-4" />
+                      <span>Coming Soon</span>
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      Market conditions, buyer preferences, and valuation trends shaping successful exits this year.
+                    </p>
+                    <div className="flex items-center text-gray-400 text-sm cursor-default">
+                      <span>Coming Soon</span>
+                      <ArrowRight className="ml-1 w-4 h-4" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
