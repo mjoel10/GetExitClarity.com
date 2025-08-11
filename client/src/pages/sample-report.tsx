@@ -305,10 +305,10 @@ export default function SampleReport() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="max-w-6xl mx-auto bg-gradient-to-r from-primary to-blue-700 text-white rounded-2xl shadow-2xl px-8 sm:px-12 lg:px-16 py-8 sm:py-10 lg:py-12 text-center">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
-                  Ready to Transform Your M&A Process?
+                  See How Your Clients Score
                 </h2>
                 <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-7">
-                  Join 300+ M&A professionals using ExitClarity to streamline deal preparation
+                  Run this same analysis on your prospects in under 30 minutes
                 </p>
                 <Button 
                   onClick={handleRequestTrial}
