@@ -54,15 +54,15 @@ If you check these boxes, you're in the elite 13% ready to achieve a successful 
 
 Some problems significantly impact valuation or kill deals entirely:
 
-**Financial Infrastructure (3-6 months to fix)**
+<strong>Financial Infrastructure (3-6 months to fix)</strong>
 
 Messy books are the fastest way to lose a buyer. If your monthly financials aren't GAAP-compliant or you can't produce a trailing twelve months P&L on demand, fix this first. Quality financial statements and improved internal controls are essential for successful exits.
 
-**Customer Concentration Risk (6-12 months to fix)**
+<strong>Customer Concentration Risk (6-12 months to fix)</strong>
 
 When one customer represents 30%+ of revenue, you're not selling a business—you're selling a hostage situation. Diversification takes time but can double your multiple.
 
-**Leadership Gaps (12-18 months to fix)**
+<strong>Leadership Gaps (12-18 months to fix)</strong>
 
 Owner dependence is a critical risk factor that must be addressed before sale. Building a management team that can operate without you isn't just about delegation—it's about creating institutional knowledge that survives your departure.
 
@@ -79,17 +79,17 @@ Sometimes the best move is no move:
 
 Every unprepared exit attempt carries compounding costs:
 
-**Direct Costs:**
+<strong>Direct Costs:</strong>
 - 40-80 hours of management time per failed process
 - $50,000-150,000 in advisory fees and due diligence
 - 6-12 months of distracted leadership
 
-**Opportunity Costs:**
+<strong>Opportunity Costs:</strong>
 - Missing better buyers while chasing bad ones
 - Burning out your best people with fire drills
 - Competitors gaining ground while you're distracted
 
-**Reputation Costs:**
+<strong>Reputation Costs:</strong>
 - Once you're "shopped," future buyers question why you didn't sell
 - Failed processes leak to employees, customers, and competitors
 - Your advisors lose credibility taking unprepared companies to market
@@ -100,22 +100,22 @@ Modern exit planning isn't about gut feelings—it's about systematic assessment
 
 The most successful exits follow this progression:
 
-**Phase 1: Assessment (Month 1)**
+<strong>Phase 1: Assessment (Month 1)</strong>
 - Objective evaluation across 11 critical factors
 - Benchmark against actual market comparables
 - Identify GO/FIX/WAIT status with clear rationale
 
-**Phase 2: Preparation (Months 2-12)**
+<strong>Phase 2: Preparation (Months 2-12)</strong>
 - Address identified gaps systematically
 - Build institutional strength beyond the owner
 - Create the value story buyers actually care about
 
-**Phase 3: Positioning (Months 13-15)**
+<strong>Phase 3: Positioning (Months 13-15)</strong>
 - Develop strategic buyer targeting
 - Prepare management for the process
 - Build the data room proactively, not reactively
 
-**Phase 4: Process (Months 16-24)**
+<strong>Phase 4: Process (Months 16-24)</strong>
 - Run competitive process with qualified buyers
 - Maintain business momentum during diligence
 - Close at maximum value with minimum friction
@@ -211,7 +211,7 @@ export default function BlogPost() {
           return (
             <ul key={index} className="list-disc list-inside space-y-2 mb-6 text-gray-700 leading-relaxed">
               {items.map((item, itemIndex) => (
-                <li key={itemIndex}>{item}</li>
+                <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }}></li>
               ))}
             </ul>
           );
@@ -221,7 +221,7 @@ export default function BlogPost() {
           return (
             <ol key={index} className="list-decimal list-inside space-y-2 mb-6 text-gray-700 leading-relaxed">
               {items.map((item, itemIndex) => (
-                <li key={itemIndex}>{item.replace(/^\d+\. /, '')}</li>
+                <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item.replace(/^\d+\. /, '') }}></li>
               ))}
             </ol>
           );
@@ -229,7 +229,7 @@ export default function BlogPost() {
         if (paragraph === '---') {
           return <hr key={index} className="my-8 border-gray-200" />;
         }
-        return <p key={index} className="mb-6 text-gray-700 leading-relaxed">{paragraph}</p>;
+        return <p key={index} className="mb-6 text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: paragraph }}></p>;
       });
   };
 
