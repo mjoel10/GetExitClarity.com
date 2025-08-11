@@ -45,6 +45,7 @@ Preferred communication style: Simple, everyday language.
   - Realistic placeholder articles with compelling titles and descriptions
   - Newsletter signup integration for lead capture
 - **Contact Forms**: Comprehensive contact form implementation with success screens, email notifications via SendGrid, and database integration for submissions. Supports multiple request types (demo, sample report, assessment, trial).
+- **Auto-Reply Email System**: SendGrid-powered auto-reply emails for sample report downloads with personalized templates, backup download links, and clear CTAs to trial requests and demo scheduling.
 - **Mobile Optimization**: All pages fully responsive with mobile-first design:
   - Responsive typography (text-3xl sm:text-4xl lg:text-5xl patterns)
   - Mobile-optimized spacing (py-12 sm:py-16 lg:py-20)
@@ -72,7 +73,7 @@ Preferred communication style: Simple, everyday language.
 - **@neondatabase/serverless**: PostgreSQL driver.
 - **connect-pg-simple**: PostgreSQL session store.
 - **zod**: Schema validation.
-- **SendGrid**: Email notification system.
+- **SendGrid**: Email notification system with auto-reply functionality for lead nurturing.
 
 ### Development & Deployment
 - **vite**: Frontend build tool and dev server.
