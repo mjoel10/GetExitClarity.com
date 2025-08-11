@@ -26,13 +26,11 @@ export function MAFirmsHeroCTA() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="https://calendly.com/exitclarity-info/30min" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                  href="/trial-request" 
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-lg"
                 >
                   <Calendar className="h-5 w-5 mr-3" />
-                  Schedule Your Demo
+                  Try It with a Client
                   <ArrowRight className="h-5 w-5 ml-3 transition-transform group-hover:translate-x-1" />
                 </a>
                 <button 
