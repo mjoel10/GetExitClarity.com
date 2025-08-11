@@ -87,7 +87,7 @@ export function SolutionSection() {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            ExitClarity creates alignment between M&A professionals and business owners through structured intelligence and actionable insights.
+            ExitClarity creates alignment between M&A professionals and business owners through our subscription-based platform, delivering structured intelligence and actionable insights.
           </p>
         </div>
 
