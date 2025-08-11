@@ -54,18 +54,69 @@ export default function Resources() {
         
         <main className="pt-20">
           {/* Hero Section */}
-          <section className="py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-white">
-            <div className="max-w-7xl mx-auto px-4 md:px-6">
-              <div className="text-center max-w-4xl mx-auto mb-12">
+          <section className="py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-indigo-50/30 to-white relative overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+              <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   Resource Center
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                <p className="text-xl text-gray-600 leading-relaxed mb-12">
                   Explore our comprehensive collection of guides, reports, and tools to support your M&A journey
                 </p>
                 
+                {/* Hero Visual Element */}
+                <div className="relative mb-12 flex justify-center">
+                  <svg
+                    width="400"
+                    height="200"
+                    viewBox="0 0 400 200"
+                    className="w-full max-w-md h-auto opacity-60"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    {/* Background shapes */}
+                    <circle cx="80" cy="60" r="40" fill="#1e40af" opacity="0.1" />
+                    <circle cx="320" cy="140" r="35" fill="#3b82f6" opacity="0.15" />
+                    <rect x="150" y="20" width="60" height="40" rx="8" fill="#6366f1" opacity="0.1" />
+                    <rect x="220" y="120" width="80" height="50" rx="10" fill="#1e40af" opacity="0.12" />
+                    
+                    {/* Document icons */}
+                    <rect x="50" y="100" width="45" height="60" rx="4" fill="#1e40af" opacity="0.2" stroke="#1e40af" strokeWidth="1" />
+                    <rect x="58" y="108" width="29" height="2" fill="#1e40af" opacity="0.4" />
+                    <rect x="58" y="118" width="24" height="2" fill="#1e40af" opacity="0.4" />
+                    <rect x="58" y="128" width="29" height="2" fill="#1e40af" opacity="0.4" />
+                    <rect x="58" y="138" width="20" height="2" fill="#1e40af" opacity="0.4" />
+                    
+                    <rect x="120" y="80" width="45" height="60" rx="4" fill="#3b82f6" opacity="0.2" stroke="#3b82f6" strokeWidth="1" />
+                    <rect x="128" y="88" width="29" height="2" fill="#3b82f6" opacity="0.4" />
+                    <rect x="128" y="98" width="24" height="2" fill="#3b82f6" opacity="0.4" />
+                    <rect x="128" y="108" width="29" height="2" fill="#3b82f6" opacity="0.4" />
+                    <rect x="128" y="118" width="20" height="2" fill="#3b82f6" opacity="0.4" />
+                    
+                    <rect x="270" y="40" width="45" height="60" rx="4" fill="#6366f1" opacity="0.2" stroke="#6366f1" strokeWidth="1" />
+                    <rect x="278" y="48" width="29" height="2" fill="#6366f1" opacity="0.4" />
+                    <rect x="278" y="58" width="24" height="2" fill="#6366f1" opacity="0.4" />
+                    <rect x="278" y="68" width="29" height="2" fill="#6366f1" opacity="0.4" />
+                    <rect x="278" y="78" width="20" height="2" fill="#6366f1" opacity="0.4" />
+                    
+                    {/* Chart/Graph elements */}
+                    <rect x="180" y="140" width="8" height="30" fill="#1e40af" opacity="0.3" />
+                    <rect x="192" y="125" width="8" height="45" fill="#3b82f6" opacity="0.3" />
+                    <rect x="204" y="135" width="8" height="35" fill="#6366f1" opacity="0.3" />
+                    <rect x="216" y="115" width="8" height="55" fill="#1e40af" opacity="0.3" />
+                    
+                    {/* Connecting lines */}
+                    <path d="M95 130 Q140 110 165 90" stroke="#1e40af" strokeWidth="1" fill="none" opacity="0.2" strokeDasharray="3,3" />
+                    <path d="M145 110 Q200 100 270 70" stroke="#3b82f6" strokeWidth="1" fill="none" opacity="0.2" strokeDasharray="3,3" />
+                    
+                    {/* Floating elements */}
+                    <circle cx="340" cy="50" r="3" fill="#6366f1" opacity="0.4" />
+                    <circle cx="30" cy="40" r="2" fill="#1e40af" opacity="0.4" />
+                    <circle cx="370" cy="180" r="2" fill="#3b82f6" opacity="0.4" />
+                  </svg>
+                </div>
+                
                 {/* Sample Report Notice */}
-                <div className="bg-blue-100 border border-blue-200 rounded-xl p-4 mb-8">
+                <div className="bg-blue-100 border border-blue-200 rounded-xl p-4 mb-8 backdrop-blur-sm bg-blue-50/80">
                   <p className="text-blue-800">
                     Looking for our Sample Report?{" "}
                     <Button variant="link" className="p-0 h-auto font-semibold text-blue-600 hover:text-blue-800" asChild>
@@ -77,6 +128,10 @@ export default function Resources() {
                 </div>
               </div>
             </div>
+            
+            {/* Background decorative elements */}
+            <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-200/20 to-indigo-200/20 rounded-full blur-xl"></div>
+            <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-indigo-200/20 to-purple-200/20 rounded-full blur-xl"></div>
           </section>
 
           {/* Resources Grid */}
