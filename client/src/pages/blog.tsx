@@ -99,25 +99,7 @@ export default function Blog() {
                         </div>
                       </div>
                       
-                      {/* Connection lines */}
-                      <div className="relative h-8">
-                        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 32">
-                          <path 
-                            d="M20 16 Q100 8 180 16" 
-                            stroke="currentColor" 
-                            strokeWidth="2" 
-                            fill="none" 
-                            className="text-primary/30"
-                          />
-                          <path 
-                            d="M20 16 Q100 24 180 16" 
-                            stroke="currentColor" 
-                            strokeWidth="2" 
-                            fill="none" 
-                            className="text-green-300"
-                          />
-                        </svg>
-                      </div>
+
                       
                       {/* Content blocks */}
                       <div className="space-y-3">
