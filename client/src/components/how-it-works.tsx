@@ -49,7 +49,7 @@ export default function HowItWorks() {
   ];
 
   const stats = [
-    { value: "20-25", label: "Pages of strategic insights per report" },
+    { value: "25", label: "Pages of strategic insights per report" },
     { value: "11", label: "Comprehensive readiness factors assessed" },
     { value: "20", label: "Minutes to complete full assessment" }
   ];
