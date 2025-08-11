@@ -150,122 +150,68 @@ export default function SampleReport() {
                 {/* Left: Enhanced Report Visual */}
                 <div className="order-2 lg:order-1 relative lg:pr-8">
                   <div className="relative mx-auto max-w-md lg:max-w-none">
-                    {/* Main Report Document */}
-                    <div className="bg-white rounded-lg shadow-xl border border-gray-300 p-8">
+                    {/* Clean Report Document Preview */}
+                    <div className="bg-white rounded-xl shadow-2xl border border-gray-200 p-8 max-w-md mx-auto">
                       {/* Document Header */}
-                      <div className="mb-8 pb-6 border-b-2 border-gray-200">
-                        <div className="text-center mb-4">
-                          <h3 className="font-bold text-lg text-gray-900 mb-1">EXITCLARITY STRATEGIC ANALYSIS</h3>
-                          <p className="text-sm text-gray-600 font-medium">COMPREHENSIVE EXIT READINESS & VALUATION REPORT</p>
-                          <p className="text-xs text-gray-500 italic">Confidential M&A Strategic Advisory Analysis</p>
+                      <div className="flex items-center justify-between mb-6">
+                        <div>
+                          <h3 className="font-semibold text-gray-900">ExitClarity Report</h3>
+                          <p className="text-sm text-gray-500">Sample</p>
                         </div>
-                        <div className="text-xs space-y-1 mb-4">
-                          <div className="grid grid-cols-2 gap-4">
-                            <div>
-                              <p><span className="font-semibold">Company:</span> WealthChannel Group</p>
-                              <p><span className="font-semibold">Industry:</span> Media/Entertainment</p>
-                              <p><span className="font-semibold">Revenue:</span> $6,500,000</p>
-                            </div>
-                            <div>
-                              <p><span className="font-semibold">Adjusted EBITDA:</span> $1,850,000</p>
-                              <p><span className="font-semibold">Employees:</span> 18</p>
-                              <p><span className="font-semibold">Date:</span> 7/9/2025</p>
-                            </div>
+                      </div>
+
+                      {/* Progress Bars - Abstract Representation */}
+                      <div className="space-y-4 mb-8">
+                        {/* Main progress bar */}
+                        <div className="space-y-2">
+                          <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+                            <div className="h-full bg-gradient-to-r from-primary to-blue-600 rounded-full" style={{width: "82%"}}></div>
                           </div>
+                        </div>
+
+                        {/* Secondary progress bars */}
+                        <div className="space-y-3">
+                          <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div className="h-full bg-green-500 rounded-full" style={{width: "78%"}}></div>
+                          </div>
+                          <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div className="h-full bg-blue-400 rounded-full" style={{width: "85%"}}></div>
+                          </div>
+                          <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div className="h-full bg-cyan-400 rounded-full" style={{width: "71%"}}></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Abstract Content Lines */}
+                      <div className="space-y-3 mb-6">
+                        <div className="space-y-2">
+                          <div className="h-2 bg-gray-300 rounded w-full"></div>
+                          <div className="h-2 bg-gray-300 rounded w-5/6"></div>
+                          <div className="h-2 bg-gray-300 rounded w-4/5"></div>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <div className="h-2 bg-gray-300 rounded w-full"></div>
+                          <div className="h-2 bg-gray-300 rounded w-3/4"></div>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <div className="h-2 bg-gray-300 rounded w-5/6"></div>
+                          <div className="h-2 bg-gray-300 rounded w-full"></div>
+                          <div className="h-2 bg-gray-300 rounded w-2/3"></div>
+                        </div>
+                      </div>
+
+                      {/* Key Metrics - Minimal */}
+                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-200">
+                        <div className="text-center">
+                          <div className="text-lg font-bold text-gray-900">7.4/10</div>
+                          <div className="text-xs text-gray-500">Exit Readiness</div>
                         </div>
                         <div className="text-center">
-                          <div className="bg-green-600 text-white px-4 py-2 rounded font-bold text-sm">
-                            GO RECOMMENDATION
-                          </div>
-                          <p className="text-xs text-gray-500 mt-1">Overall Exit Readiness Score: 7.4/10</p>
-                        </div>
-                      </div>
-
-                      {/* Executive Summary Table */}
-                      <div className="space-y-6 mb-8">
-                        <div>
-                          <h4 className="font-bold text-gray-900 mb-4 text-center bg-gray-100 py-2 text-sm">
-                            EXECUTIVE SUMMARY - KEY METRICS
-                          </h4>
-                          
-                          {/* Scores Table */}
-                          <div className="border border-gray-300">
-                            <div className="grid grid-cols-3 gap-0 text-xs font-semibold bg-gray-50 border-b border-gray-300">
-                              <div className="p-2 border-r border-gray-300">ASSESSMENT AREA</div>
-                              <div className="p-2 border-r border-gray-300 text-center">SCORE</div>
-                              <div className="p-2 text-center">RATING</div>
-                            </div>
-                            <div className="grid grid-cols-3 gap-0 text-xs border-b border-gray-300">
-                              <div className="p-2 border-r border-gray-300">Business Overview</div>
-                              <div className="p-2 border-r border-gray-300 text-center font-semibold">8.2/10</div>
-                              <div className="p-2 text-center text-green-600 font-semibold">STRONG</div>
-                            </div>
-                            <div className="grid grid-cols-3 gap-0 text-xs border-b border-gray-300">
-                              <div className="p-2 border-r border-gray-300">Financial Performance</div>
-                              <div className="p-2 border-r border-gray-300 text-center font-semibold">7.8/10</div>
-                              <div className="p-2 text-center text-green-600 font-semibold">STRONG</div>
-                            </div>
-                            <div className="grid grid-cols-3 gap-0 text-xs border-b border-gray-300">
-                              <div className="p-2 border-r border-gray-300">Market Position</div>
-                              <div className="p-2 border-r border-gray-300 text-center font-semibold">7.5/10</div>
-                              <div className="p-2 text-center text-blue-600 font-semibold">GOOD</div>
-                            </div>
-                            <div className="grid grid-cols-3 gap-0 text-xs border-b border-gray-300">
-                              <div className="p-2 border-r border-gray-300">Management & Leadership</div>
-                              <div className="p-2 border-r border-gray-300 text-center font-semibold">6.9/10</div>
-                              <div className="p-2 text-center text-blue-600 font-semibold">GOOD</div>
-                            </div>
-                            <div className="grid grid-cols-3 gap-0 text-xs">
-                              <div className="p-2 border-r border-gray-300">Operational Systems</div>
-                              <div className="p-2 border-r border-gray-300 text-center font-semibold">6.4/10</div>
-                              <div className="p-2 text-center text-orange-600 font-semibold">FAIR</div>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Valuation Summary */}
-                        <div className="border border-gray-300 bg-gray-50 p-4">
-                          <h4 className="font-bold text-gray-900 mb-3 text-center text-sm">VALUATION ANALYSIS</h4>
-                          <div className="grid grid-cols-2 gap-4 text-center text-xs">
-                            <div>
-                              <div className="text-base font-bold text-gray-900">$11.1M - $14.8M</div>
-                              <div className="text-gray-600">Estimated Range</div>
-                              <div className="text-gray-500">(6.0x - 8.0x EBITDA)</div>
-                            </div>
-                            <div>
-                              <div className="text-base font-bold text-blue-600">70% Recurring</div>
-                              <div className="text-gray-600">Revenue Base</div>
-                              <div className="text-gray-500">28.5% EBITDA Margin</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Action Items Preview */}
-                      <div className="space-y-2">
-                        <h4 className="font-bold text-gray-900 text-center bg-gray-100 py-2 text-sm">
-                          PRIORITY RECOMMENDATIONS
-                        </h4>
-                        <div className="space-y-2 text-xs">
-                          <div className="flex items-start gap-2">
-                            <span className="font-semibold text-gray-900">1.</span>
-                            <span className="text-gray-700">Reduce owner dependence (currently 55%) through documented processes</span>
-                          </div>
-                          <div className="flex items-start gap-2">
-                            <span className="font-semibold text-gray-900">2.</span>
-                            <span className="text-gray-700">Strengthen second-tier management depth beyond 1-2 key managers</span>
-                          </div>
-                          <div className="flex items-start gap-2">
-                            <span className="font-semibold text-gray-900">3.</span>
-                            <span className="text-gray-700">Formalize SOPs for content production and campaign workflows</span>
-                          </div>
-                          <div className="flex items-start gap-2">
-                            <span className="font-semibold text-gray-900">4.</span>
-                            <span className="text-gray-700">Enhance key person insurance coverage beyond basic levels</span>
-                          </div>
-                        </div>
-                        <div className="text-center text-xs text-gray-500 mt-3 italic">
-                          Complete 28-page analysis with detailed action plan and timeline
+                          <div className="text-lg font-bold text-green-600">GO</div>
+                          <div className="text-xs text-gray-500">Recommendation</div>
                         </div>
                       </div>
                     </div>
