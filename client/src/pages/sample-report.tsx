@@ -15,7 +15,7 @@ import { z } from "zod";
 import { FileText, ArrowRight, CheckCircle, Users, BarChart3, Shield, Target, Clock, TrendingUp, Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import sampleReportImage from "@assets/ExitClarity Sample Report_1752176673356.pdf";
+// PDF file available at /ExitClarity-Sample-Report.pdf
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
