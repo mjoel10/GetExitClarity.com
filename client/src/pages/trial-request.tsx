@@ -186,7 +186,7 @@ export default function TrialRequest() {
                         <Shield className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-medium text-gray-900">No obligation, no credit card</p>
-                          <p className="text-sm text-gray-600">Try it risk-free with your prospects</p>
+                          <p className="text-sm text-gray-600">Try it risk-free with one of your prospects</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
