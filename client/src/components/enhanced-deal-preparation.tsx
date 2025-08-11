@@ -71,9 +71,9 @@ export function EnhancedDealPreparation() {
               className="group px-8 py-4 text-lg bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700" 
               asChild
             >
-              <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
+              <a href="/trial-request">
                 <Calendar className="mr-3 h-5 w-5" />
-                Schedule Demo
+                Try It with a Client
                 <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
