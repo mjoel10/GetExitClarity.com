@@ -29,7 +29,7 @@ export function ProcessSection() {
     {
       number: "03",
       title: "Take Action & Track Progress",
-      description: "Advisors use the platform to nurture prospects, track improvement, and accelerate deals with better-prepared clients.",
+      description: "Advisors use the SaaS platform to nurture prospects, track improvement, and accelerate deals with better-prepared clients.",
       icon: TrendingUp,
       details: [
         "Progress tracking dashboard",
