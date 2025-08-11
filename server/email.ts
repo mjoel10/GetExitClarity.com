@@ -63,7 +63,7 @@ export async function sendNotificationEmail(data: EmailNotificationData): Promis
     `;
 
     const msg = {
-      to: 'info@exitclarity.io',
+      to: 'mjoel@exitclarity.io',
       from: 'notifications@exitclarity.io', // Using your domain
       subject: subject,
       html: htmlContent,
@@ -127,6 +127,102 @@ export async function sendTrialRequestNotification(data: TrialRequestData): Prom
     return true;
   } catch (error) {
     console.error('SendGrid trial request notification error:', error);
+    return false;
+  }
+}
+
+export async function sendSampleReportAutoReply(data: { name: string; email: string }): Promise<boolean> {
+  try {
+    const subject = `Your ExitClarity Sample Report + Next Steps`;
+    
+    const htmlContent = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff;">
+        <!-- Header with Logo -->
+        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0;">
+          <h1 style="color: #1e40af; font-size: 24px; margin: 0; font-weight: bold;">ExitClarity</h1>
+        </div>
+        
+        <h2 style="color: #1e40af; margin-bottom: 20px; font-size: 22px;">Your Sample Report + Next Steps</h2>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 16px;">Hi ${data.name},</p>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 16px;"><strong>Thanks for downloading our sample exit readiness report!</strong></p>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 16px;">
+          The report should have opened in your browser. If you had any issues accessing it, you can download it again here:
+        </p>
+        
+        <div style="text-align: center; margin: 24px 0;">
+          <a href="https://exitclarity.io/sample-report" 
+             style="display: inline-block; background-color: #1e40af; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600;">
+            Download Sample Report
+          </a>
+        </div>
+        
+        <div style="background-color: #f8fafc; padding: 24px; border-radius: 12px; margin: 24px 0;">
+          <h3 style="color: #1e40af; margin-top: 0; margin-bottom: 16px; font-size: 18px;">What you'll find inside:</h3>
+          <ul style="color: #334155; line-height: 1.6; margin: 0; padding-left: 20px;">
+            <li style="margin-bottom: 8px;">GO/FIX/WAIT assessment framework</li>
+            <li style="margin-bottom: 8px;">11 critical readiness factors we evaluate</li>
+            <li style="margin-bottom: 8px;">Real-world scoring examples</li>
+            <li style="margin-bottom: 8px;">Strategic recommendations for timing and preparation</li>
+          </ul>
+        </div>
+        
+        <h3 style="color: #1e40af; margin-bottom: 16px; font-size: 18px;">Ready to see how your clients score?</h3>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 24px;">
+          ExitClarity helps M&A advisors assess and track prospect readiness years before they're ready to sell.
+        </p>
+        
+        <!-- Action CTAs -->
+        <div style="margin: 24px 0;">
+          <div style="margin-bottom: 16px;">
+            <a href="https://exitclarity.io/trial-request" 
+               style="display: inline-block; background-color: #1e40af; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-right: 12px;">
+              Request a Client Trial →
+            </a>
+          </div>
+          
+          <div>
+            <a href="https://calendly.com/exitclarity-info/30min" 
+               style="display: inline-block; background-color: #ffffff; color: #1e40af; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; border: 2px solid #1e40af;">
+              Schedule a 15-Min Demo →
+            </a>
+          </div>
+        </div>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 24px;">
+          We'll be in touch soon to see how we can help streamline your deal flow.
+        </p>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 8px;">Best regards,</p>
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 24px; font-weight: 600;">The ExitClarity Team</p>
+        
+        <div style="background-color: #f1f5f9; padding: 16px; border-radius: 8px; margin-top: 30px;">
+          <p style="margin: 0; color: #64748b; font-size: 14px;">
+            <strong>P.S.</strong> Have questions about the report? Simply reply to this email.
+          </p>
+        </div>
+        
+        <div style="margin-top: 30px; text-align: center; color: #94a3b8; font-size: 12px; border-top: 1px solid #e2e8f0; padding-top: 20px;">
+          <p style="margin: 0;">© 2025 ExitClarity. All rights reserved.</p>
+        </div>
+      </div>
+    `;
+
+    const msg = {
+      to: data.email,
+      from: 'notifications@exitclarity.io',
+      subject: subject,
+      html: htmlContent,
+    };
+
+    await sgMail.send(msg);
+    console.log(`Sample report auto-reply sent to ${data.email}`);
+    return true;
+  } catch (error) {
+    console.error('SendGrid sample report auto-reply error:', error);
     return false;
   }
 }

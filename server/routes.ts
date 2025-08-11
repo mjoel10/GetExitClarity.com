@@ -3,7 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertDemoRequestSchema, insertTrialRequestSchema } from "@shared/schema";
 import { z } from "zod";
-import { sendNotificationEmail, sendTrialRequestNotification, sendTrialRequestAutoReply } from "./email";
+import { sendNotificationEmail, sendTrialRequestNotification, sendTrialRequestAutoReply, sendSampleReportAutoReply } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Demo request endpoint
@@ -20,6 +20,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
         requestType: validatedData.requestType as "demo" | "sample_report" | "assessment",
         message: validatedData.message || undefined
       });
+      
+      // Send auto-reply email for sample report downloads
+      if (validatedData.requestType === 'sample_report') {
+        console.log(`Sending auto-reply to: ${validatedData.email} for user: ${validatedData.name}`);
+        const autoReplyResult = await sendSampleReportAutoReply({
+          name: validatedData.name,
+          email: validatedData.email
+        });
+        console.log(`Auto-reply result: ${autoReplyResult}`);
+      }
       
       res.json({ success: true, data: demoRequest });
     } catch (error) {
