@@ -54,96 +54,96 @@ export default function Resources() {
         
         <main className="pt-20">
           {/* Hero Section */}
-          <section className="py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-indigo-50/30 to-white relative overflow-hidden">
+          <section className="py-12 lg:py-16 bg-gradient-to-br from-blue-50 via-indigo-50/30 to-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   Resource Center
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed mb-12">
+                <p className="text-xl text-gray-600 leading-relaxed mb-8">
                   Explore our comprehensive collection of guides, reports, and tools to support your M&A journey
                 </p>
                 
                 {/* Hero Visual Element */}
-                <div className="relative mb-8 flex justify-center">
+                <div className="relative mb-6 flex justify-center">
                   <svg
                     width="600"
-                    height="280"
-                    viewBox="0 0 600 280"
-                    className="w-full max-w-2xl h-auto opacity-70"
+                    height="220"
+                    viewBox="0 0 600 220"
+                    className="w-full max-w-xl h-auto opacity-90"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     {/* Large background elements */}
-                    <circle cx="120" cy="80" r="60" fill="#1e40af" opacity="0.08" />
-                    <circle cx="480" cy="200" r="50" fill="#3b82f6" opacity="0.12" />
-                    <rect x="220" y="30" width="90" height="60" rx="12" fill="#6366f1" opacity="0.1" />
-                    <rect x="350" y="180" width="120" height="80" rx="16" fill="#1e40af" opacity="0.08" />
+                    <circle cx="120" cy="60" r="45" fill="#1e40af" opacity="0.15" />
+                    <circle cx="480" cy="160" r="40" fill="#3b82f6" opacity="0.18" />
+                    <rect x="220" y="20" width="70" height="45" rx="10" fill="#6366f1" opacity="0.16" />
+                    <rect x="350" y="140" width="100" height="60" rx="12" fill="#1e40af" opacity="0.14" />
                     
                     {/* Central knowledge hub */}
-                    <circle cx="300" cy="140" r="80" fill="#1e40af" opacity="0.06" stroke="#1e40af" strokeWidth="2" strokeOpacity="0.15" />
-                    <circle cx="300" cy="140" r="50" fill="#3b82f6" opacity="0.08" />
-                    <circle cx="300" cy="140" r="20" fill="#6366f1" opacity="0.2" />
+                    <circle cx="300" cy="110" r="60" fill="#1e40af" opacity="0.12" stroke="#1e40af" strokeWidth="2" strokeOpacity="0.25" />
+                    <circle cx="300" cy="110" r="35" fill="#3b82f6" opacity="0.15" />
+                    <circle cx="300" cy="110" r="15" fill="#6366f1" opacity="0.3" />
                     
                     {/* Document clusters */}
-                    <g transform="translate(80,120)">
-                      <rect x="0" y="0" width="50" height="70" rx="6" fill="#1e40af" opacity="0.25" stroke="#1e40af" strokeWidth="1.5" />
-                      <rect x="8" y="10" width="34" height="3" fill="#1e40af" opacity="0.5" />
-                      <rect x="8" y="20" width="28" height="3" fill="#1e40af" opacity="0.5" />
-                      <rect x="8" y="30" width="34" height="3" fill="#1e40af" opacity="0.5" />
-                      <rect x="8" y="40" width="24" height="3" fill="#1e40af" opacity="0.5" />
-                      <rect x="8" y="50" width="30" height="3" fill="#1e40af" opacity="0.5" />
+                    <g transform="translate(80,90)">
+                      <rect x="0" y="0" width="40" height="55" rx="5" fill="#1e40af" opacity="0.35" stroke="#1e40af" strokeWidth="1.5" />
+                      <rect x="6" y="8" width="28" height="2" fill="#1e40af" opacity="0.7" />
+                      <rect x="6" y="16" width="22" height="2" fill="#1e40af" opacity="0.7" />
+                      <rect x="6" y="24" width="28" height="2" fill="#1e40af" opacity="0.7" />
+                      <rect x="6" y="32" width="18" height="2" fill="#1e40af" opacity="0.7" />
+                      <rect x="6" y="40" width="24" height="2" fill="#1e40af" opacity="0.7" />
                       
-                      <rect x="15" y="-15" width="50" height="70" rx="6" fill="#3b82f6" opacity="0.2" stroke="#3b82f6" strokeWidth="1.5" />
-                      <rect x="23" y="-5" width="34" height="3" fill="#3b82f6" opacity="0.4" />
-                      <rect x="23" y="5" width="28" height="3" fill="#3b82f6" opacity="0.4" />
-                      <rect x="23" y="15" width="34" height="3" fill="#3b82f6" opacity="0.4" />
-                      <rect x="23" y="25" width="24" height="3" fill="#3b82f6" opacity="0.4" />
+                      <rect x="12" y="-12" width="40" height="55" rx="5" fill="#3b82f6" opacity="0.3" stroke="#3b82f6" strokeWidth="1.5" />
+                      <rect x="18" y="-4" width="28" height="2" fill="#3b82f6" opacity="0.6" />
+                      <rect x="18" y="4" width="22" height="2" fill="#3b82f6" opacity="0.6" />
+                      <rect x="18" y="12" width="28" height="2" fill="#3b82f6" opacity="0.6" />
+                      <rect x="18" y="20" width="18" height="2" fill="#3b82f6" opacity="0.6" />
                     </g>
                     
-                    <g transform="translate(470,60)">
-                      <rect x="0" y="0" width="50" height="70" rx="6" fill="#6366f1" opacity="0.25" stroke="#6366f1" strokeWidth="1.5" />
-                      <rect x="8" y="10" width="34" height="3" fill="#6366f1" opacity="0.5" />
-                      <rect x="8" y="20" width="28" height="3" fill="#6366f1" opacity="0.5" />
-                      <rect x="8" y="30" width="34" height="3" fill="#6366f1" opacity="0.5" />
-                      <rect x="8" y="40" width="24" height="3" fill="#6366f1" opacity="0.5" />
+                    <g transform="translate(470,40)">
+                      <rect x="0" y="0" width="40" height="55" rx="5" fill="#6366f1" opacity="0.35" stroke="#6366f1" strokeWidth="1.5" />
+                      <rect x="6" y="8" width="28" height="2" fill="#6366f1" opacity="0.7" />
+                      <rect x="6" y="16" width="22" height="2" fill="#6366f1" opacity="0.7" />
+                      <rect x="6" y="24" width="28" height="2" fill="#6366f1" opacity="0.7" />
+                      <rect x="6" y="32" width="18" height="2" fill="#6366f1" opacity="0.7" />
                       
-                      <rect x="-15" y="15" width="50" height="70" rx="6" fill="#1e40af" opacity="0.2" stroke="#1e40af" strokeWidth="1.5" />
-                      <rect x="-7" y="25" width="34" height="3" fill="#1e40af" opacity="0.4" />
-                      <rect x="-7" y="35" width="28" height="3" fill="#1e40af" opacity="0.4" />
-                      <rect x="-7" y="45" width="34" height="3" fill="#1e40af" opacity="0.4" />
+                      <rect x="-12" y="12" width="40" height="55" rx="5" fill="#1e40af" opacity="0.3" stroke="#1e40af" strokeWidth="1.5" />
+                      <rect x="-6" y="20" width="28" height="2" fill="#1e40af" opacity="0.6" />
+                      <rect x="-6" y="28" width="22" height="2" fill="#1e40af" opacity="0.6" />
+                      <rect x="-6" y="36" width="28" height="2" fill="#1e40af" opacity="0.6" />
                     </g>
                     
                     {/* Analytics/Chart section */}
-                    <g transform="translate(160,200)">
-                      <rect x="0" y="0" width="100" height="60" rx="8" fill="#f8fafc" stroke="#1e40af" strokeWidth="1" opacity="0.3" />
-                      <rect x="15" y="35" width="12" height="15" fill="#1e40af" opacity="0.4" />
-                      <rect x="30" y="25" width="12" height="25" fill="#3b82f6" opacity="0.4" />
-                      <rect x="45" y="30" width="12" height="20" fill="#6366f1" opacity="0.4" />
-                      <rect x="60" y="20" width="12" height="30" fill="#1e40af" opacity="0.4" />
-                      <rect x="75" y="28" width="12" height="22" fill="#3b82f6" opacity="0.4" />
+                    <g transform="translate(160,160)">
+                      <rect x="0" y="0" width="80" height="45" rx="6" fill="#f8fafc" stroke="#1e40af" strokeWidth="1" opacity="0.4" />
+                      <rect x="12" y="28" width="8" height="12" fill="#1e40af" opacity="0.6" />
+                      <rect x="24" y="20" width="8" height="20" fill="#3b82f6" opacity="0.6" />
+                      <rect x="36" y="24" width="8" height="16" fill="#6366f1" opacity="0.6" />
+                      <rect x="48" y="16" width="8" height="24" fill="#1e40af" opacity="0.6" />
+                      <rect x="60" y="22" width="8" height="18" fill="#3b82f6" opacity="0.6" />
                     </g>
                     
                     {/* Knowledge flow lines */}
-                    <path d="M130 140 Q200 120 250 140" stroke="#1e40af" strokeWidth="2" fill="none" opacity="0.25" strokeDasharray="5,5" />
-                    <path d="M350 140 Q420 120 470 110" stroke="#3b82f6" strokeWidth="2" fill="none" opacity="0.25" strokeDasharray="5,5" />
-                    <path d="M280 200 Q240 220 210 230" stroke="#6366f1" strokeWidth="2" fill="none" opacity="0.25" strokeDasharray="5,5" />
+                    <path d="M120 110 Q180 100 240 110" stroke="#1e40af" strokeWidth="2" fill="none" opacity="0.35" strokeDasharray="4,4" />
+                    <path d="M360 110 Q420 100 470 80" stroke="#3b82f6" strokeWidth="2" fill="none" opacity="0.35" strokeDasharray="4,4" />
+                    <path d="M280 150 Q240 170 200 180" stroke="#6366f1" strokeWidth="2" fill="none" opacity="0.35" strokeDasharray="4,4" />
                     
                     {/* Floating insight elements */}
-                    <circle cx="150" cy="50" r="6" fill="#6366f1" opacity="0.4" />
-                    <circle cx="450" cy="40" r="4" fill="#1e40af" opacity="0.4" />
-                    <circle cx="50" cy="80" r="3" fill="#3b82f6" opacity="0.4" />
-                    <circle cx="550" cy="100" r="5" fill="#6366f1" opacity="0.4" />
-                    <circle cx="80" cy="250" r="4" fill="#1e40af" opacity="0.4" />
-                    <circle cx="520" cy="240" r="3" fill="#3b82f6" opacity="0.4" />
+                    <circle cx="140" cy="40" r="4" fill="#6366f1" opacity="0.6" />
+                    <circle cx="450" cy="30" r="3" fill="#1e40af" opacity="0.6" />
+                    <circle cx="50" cy="60" r="2" fill="#3b82f6" opacity="0.6" />
+                    <circle cx="550" cy="80" r="4" fill="#6366f1" opacity="0.6" />
+                    <circle cx="80" cy="200" r="3" fill="#1e40af" opacity="0.6" />
+                    <circle cx="520" cy="190" r="2" fill="#3b82f6" opacity="0.6" />
                     
                     {/* Growth arrows */}
-                    <path d="M380 100 L420 80 L415 85 M420 80 L415 75" stroke="#1e40af" strokeWidth="2" fill="none" opacity="0.3" />
-                    <path d="M200 180 L240 160 L235 165 M240 160 L235 155" stroke="#3b82f6" strokeWidth="2" fill="none" opacity="0.3" />
+                    <path d="M380 80 L410 65 L406 70 M410 65 L406 60" stroke="#1e40af" strokeWidth="2" fill="none" opacity="0.4" />
+                    <path d="M200 140 L230 125 L226 130 M230 125 L226 120" stroke="#3b82f6" strokeWidth="2" fill="none" opacity="0.4" />
                   </svg>
                 </div>
                 
                 {/* Sample Report Notice */}
-                <div className="bg-blue-100 border border-blue-200 rounded-xl p-4 mb-8 backdrop-blur-sm bg-blue-50/80">
+                <div className="bg-blue-100 border border-blue-200 rounded-xl p-4 backdrop-blur-sm bg-blue-50/80">
                   <p className="text-blue-800">
                     Looking for our Sample Report?{" "}
                     <Button variant="link" className="p-0 h-auto font-semibold text-blue-600 hover:text-blue-800" asChild>
