@@ -46,27 +46,27 @@ export default function TrialRequest() {
       <div className="min-h-screen bg-white">
         <Header />
         
-        <main className="pt-20">
+        <main className="pt-16 sm:pt-20">
           {/* Hero Section */}
-          <section className="py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-white">
-            <div className="max-w-7xl mx-auto px-4 md:px-6">
-              <div className="text-center max-w-4xl mx-auto mb-12">
-                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+              <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-12">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
                   Request Your Client Trial
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed px-2">
                   Experience how ExitClarity transforms M&A prospect preparation with your actual clients
                 </p>
               </div>
 
-              <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
                 {/* Form */}
-                <Card className="shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Get Started Today</CardTitle>
+                <Card className="shadow-lg order-2 lg:order-1">
+                  <CardHeader className="pb-4">
+                    <CardTitle className="text-xl sm:text-2xl">Get Started Today</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                       <div>
                         <Label htmlFor="name">Full Name *</Label>
                         <Input

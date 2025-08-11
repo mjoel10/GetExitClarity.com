@@ -149,20 +149,20 @@ export default function SampleReport() {
       <div className="min-h-screen bg-white">
         <Header />
         
-        <main className="pt-20">
+        <main className="pt-16 sm:pt-20">
           {/* Hero Section */}
-          <section className="py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-white">
-            <div className="max-w-7xl mx-auto px-4 md:px-6">
-              <div className="text-center max-w-4xl mx-auto mb-12">
-                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+              <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-12">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
                   See Our Sample Exit Readiness Report
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 px-2">
                   Discover how ExitClarity analyzes 11 critical factors to provide actionable GO/FIX/WAIT recommendations
                 </p>
                 
                 {/* Social Proof Bar */}
-                <div className="flex flex-wrap justify-center items-center gap-6 mb-8 text-sm text-gray-600">
+                <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 mb-6 sm:mb-8 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
                     <Users className="w-4 h-4 text-primary" />
                     <span className="font-semibold">300+ Analyses</span>
@@ -177,22 +177,22 @@ export default function SampleReport() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                   <Button 
                     onClick={handleRequestTrial}
                     size="lg" 
-                    className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg"
+                    className="bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
                   >
                     Request a Client Trial
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-4 h-4 sm:h-5 sm:w-5" />
                   </Button>
                   <Button 
                     variant="outline" 
                     size="lg" 
-                    className="px-8 py-4 text-lg"
+                    className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
                     onClick={() => setIsModalOpen(true)}
                   >
-                    <FileText className="mr-2 h-5 w-5" />
+                    <FileText className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                     View Sample Report
                   </Button>
                 </div>
@@ -201,25 +201,25 @@ export default function SampleReport() {
           </section>
 
           {/* What's Inside Section */}
-          <section className="py-16 lg:py-20">
-            <div className="max-w-7xl mx-auto px-4 md:px-6">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+          <section className="py-12 sm:py-16 lg:py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+              <div className="text-center mb-8 sm:mb-12">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
                   What's Inside the Report
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-2">
                   Our comprehensive 20-30 page assessment covers every aspect of exit readiness
                 </p>
               </div>
 
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 {/* Report Features */}
-                <div>
-                  <div className="grid sm:grid-cols-2 gap-4">
+                <div className="order-2 lg:order-1">
+                  <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
                     {reportFeatures.map((feature, index) => (
                       <div key={index} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                        <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm sm:text-base text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>

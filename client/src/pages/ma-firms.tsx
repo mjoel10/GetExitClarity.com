@@ -16,7 +16,7 @@ export default function MAFirms() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="pt-20">
+      <div className="pt-16 sm:pt-20">
         <FeaturesSection />
         <BusinessCaseROI />
         <EnhancedDealPreparation />

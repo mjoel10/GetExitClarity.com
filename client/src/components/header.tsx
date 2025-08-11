@@ -9,7 +9,8 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isPlatformDropdownOpen, setIsPlatformDropdownOpen] = useState(false);
   const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const platformDropdownRef = useRef<HTMLDivElement>(null);
+  const resourcesDropdownRef = useRef<HTMLDivElement>(null);
   const [, navigate] = useLocation();
 
   useEffect(() => {
@@ -22,8 +23,11 @@ export default function Header() {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (platformDropdownRef.current && !platformDropdownRef.current.contains(event.target as Node)) {
         setIsPlatformDropdownOpen(false);
+      }
+      if (resourcesDropdownRef.current && !resourcesDropdownRef.current.contains(event.target as Node)) {
+        setIsResourcesDropdownOpen(false);
       }
     };
 
@@ -38,6 +42,7 @@ export default function Header() {
     }, 100);
     setIsMenuOpen(false);
     setIsPlatformDropdownOpen(false);
+    setIsResourcesDropdownOpen(false);
   };
 
   return (
@@ -58,7 +63,7 @@ export default function Header() {
             </button>
             
             {/* Platform Dropdown */}
-            <div className="relative" ref={dropdownRef}>
+            <div className="relative" ref={platformDropdownRef}>
               <button
                 onClick={() => setIsPlatformDropdownOpen(!isPlatformDropdownOpen)}
                 onMouseEnter={() => setIsPlatformDropdownOpen(true)}
@@ -98,7 +103,7 @@ export default function Header() {
             </div>
             
             {/* Resources Dropdown */}
-            <div className="relative" ref={dropdownRef}>
+            <div className="relative" ref={resourcesDropdownRef}>
               <button
                 onClick={() => setIsResourcesDropdownOpen(!isResourcesDropdownOpen)}
                 onMouseEnter={() => setIsResourcesDropdownOpen(true)}
