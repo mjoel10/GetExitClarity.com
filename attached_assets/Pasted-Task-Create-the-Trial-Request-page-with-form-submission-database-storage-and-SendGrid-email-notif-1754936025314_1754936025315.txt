@@ -1,0 +1,61 @@
+Task: Create the Trial Request page with form submission, database storage, and SendGrid email notifications.
+Create Trial Request Page (/trial-request)
+Frontend:
+- H1: Request a Client Trial
+- Subhead: Run ExitClarity on one of your prospects and see the full report. We'll confirm access for your firm within 1-3 business days.
+- Left column bullets:
+  • No obligation, no credit card
+  • Enterprise-only access
+  • Works with your M&A workflow
+Form fields (all required unless noted):
+- First Name
+- Last Name
+- Business Email (validate format, block free domains)
+- Firm Name
+- Role (dropdown: Managing Partner, Director/VP BD, Associate/Analyst, Operations, Other)
+- Prospect Type (dropdown: Founder-led, PE-backed, Corporate carve-out, Other)
+- Have you seen ExitClarity used at your firm before? (Yes/No toggle)
+- Approximate Timing (dropdown: 0-3 months, 3-6 months, 6-12 months, 12+ months)
+- Notes (optional, textarea)
+- Submit button: "Request Access"
+Backend Setup:
+1. Database table: trial_requests
+Fields:
+- id (uuid primary key)
+- created_at (timestamp)
+- first_name, last_name, email, firm (text)
+- email_domain (derived from email)
+- role, prospect_type, timing, notes (text)
+- seen_before (boolean)
+- utm_source, utm_medium, utm_campaign, page_referrer (text, nullable)
+- status (text, default 'new')
+2. SendGrid Integration:
+On form submission:
+a) Send notification to mjoel@exitclarity.io
+   Subject: [Trial Request] {Firm} - {First Last}, {Role}
+   Body: All form fields formatted clearly
+b) Send auto-reply to user
+   Subject: Your ExitClarity Client Trial Request
+   Body: 
+   "Thanks for your request. We'll confirm access for your firm within 1-3 business days.
+   If others at your firm have already requested access, we'll connect you to that account.
+   In the meantime, view a sample report here: https://exitclarity.io/sample-report"
+3. Success State:
+After submission, show inline success message:
+"Thanks — we'll review and confirm access for your firm within 1-3 business days.
+In the meantime, you can [View a Sample Report]."
+4. Validation:
+- Check for duplicate email_domain in last 30 days
+- If duplicate, still accept but mark status as 'duplicate' and note in admin email
+- Add spam protection (Turnstile/hCaptcha)
+- Client + server-side validation
+Technical Requirements:
+- Use existing SendGrid API key from environment variables
+- Store form submissions in database
+- Track UTM parameters and referrer
+- Ensure mobile responsive
+- Match existing site styling
+Update CTAs across site:
+- Change homepage hero "Schedule Demo" to "Try It with a Client" → /trial-request
+- Ensure "Get Started" in nav → /trial-request
+- Add "Request Client Trial" as CTA on Sample Report page
