@@ -19,7 +19,7 @@ const featuredPost = {
   slug: "ultimate-exit-why-87-percent-fail",
   category: "Exit Planning",
   author: "ExitClarity Team",
-  publishedDate: "January 11, 2025",
+  publishedDate: "August 11, 2025",
   readTime: "5 min",
   excerpt: "The difference between a successful exit and a failed one isn't luck. It's preparation. And most owners aren't prepared at all.",
   featured: true,
