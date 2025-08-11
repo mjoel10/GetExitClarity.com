@@ -24,10 +24,10 @@ export default function Blog() {
   const [email, setEmail] = useState("");
 
   useMeta({
-    title: "ExitClarity Blog - Insights and Strategies for M&A Professionals",
-    description: "Expert insights on exit planning, M&A trends, and business valuation strategies from the ExitClarity team.",
-    ogTitle: "ExitClarity Blog - M&A Insights and Exit Planning Strategies",
-    ogDescription: "Expert insights on exit planning, M&A trends, and business valuation strategies from the ExitClarity team."
+    title: "ExitClarity Insights - Strategic Guidance for Business Owners and M&A Advisors",
+    description: "Expert insights on exit planning, M&A trends, and business valuation strategies for business owners and M&A advisors.",
+    ogTitle: "ExitClarity Insights - Strategic Guidance for Business Owners and M&A Advisors",
+    ogDescription: "Expert insights on exit planning, M&A trends, and business valuation strategies for business owners and M&A advisors."
   });
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
@@ -50,10 +50,10 @@ export default function Blog() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-                  ExitClarity Blog
+                  ExitClarity Insights
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-600 leading-relaxed px-2">
-                  Insights and strategies for M&A professionals
+                  Strategic guidance for business owners and M&A advisors
                 </p>
               </div>
             </div>
