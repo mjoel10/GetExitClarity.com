@@ -19,11 +19,7 @@ import { apiRequest } from "@/lib/queryClient";
 const trialRequestSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
   lastName: z.string().min(1, "Last name is required"),
-  email: z.string().email("Valid email is required").refine((email) => {
-    const domain = email.split('@')[1];
-    const freeEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com', 'icloud.com'];
-    return !freeEmailDomains.includes(domain);
-  }, "Please use your business email address"),
+  email: z.string().email("Valid email is required"),
   firmName: z.string().min(1, "Firm name is required"),
   role: z.string().min(1, "Role is required"),
   prospectType: z.string().min(1, "Prospect type is required"),
@@ -57,15 +53,12 @@ export default function TrialRequest() {
 
   const mutation = useMutation({
     mutationFn: async (data: TrialRequestForm) => {
-      return apiRequest('/api/trial-requests', {
-        method: 'POST',
-        body: JSON.stringify({
-          ...data,
-          utmSource: new URLSearchParams(window.location.search).get('utm_source'),
-          utmMedium: new URLSearchParams(window.location.search).get('utm_medium'),
-          utmCampaign: new URLSearchParams(window.location.search).get('utm_campaign'),
-          pageReferrer: document.referrer || null
-        })
+      return apiRequest('POST', '/api/trial-requests', {
+        ...data,
+        utmSource: new URLSearchParams(window.location.search).get('utm_source'),
+        utmMedium: new URLSearchParams(window.location.search).get('utm_medium'),
+        utmCampaign: new URLSearchParams(window.location.search).get('utm_campaign'),
+        pageReferrer: document.referrer || null
       });
     },
     onSuccess: () => {
@@ -280,11 +273,11 @@ export default function TrialRequest() {
                           <Label>Have you seen ExitClarity used at your firm before? *</Label>
                           <RadioGroup onValueChange={(value) => setValue("seenBefore", value)}>
                             <div className="flex items-center space-x-2">
-                              <RadioGroupItem value="yes" id="seen-yes" />
+                              <RadioGroupItem value="Yes" id="seen-yes" />
                               <Label htmlFor="seen-yes">Yes</Label>
                             </div>
                             <div className="flex items-center space-x-2">
-                              <RadioGroupItem value="no" id="seen-no" />
+                              <RadioGroupItem value="No" id="seen-no" />
                               <Label htmlFor="seen-no">No</Label>
                             </div>
                           </RadioGroup>
@@ -333,9 +326,12 @@ export default function TrialRequest() {
                         </Button>
 
                         {mutation.error && (
-                          <p className="text-sm text-red-600 text-center">
-                            There was an error submitting your request. Please try again.
-                          </p>
+                          <div className="text-sm text-red-600 text-center space-y-1">
+                            <p>There was an error submitting your request. Please try again.</p>
+                            {mutation.error instanceof Error && (
+                              <p className="text-xs">{mutation.error.message}</p>
+                            )}
+                          </div>
                         )}
                       </form>
                     </CardContent>
