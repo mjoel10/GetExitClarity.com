@@ -12,7 +12,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Building, Users, Clock, Shield } from "lucide-react";
+import { CheckCircle, Building, Users, Clock, Shield, BarChart3, Calendar, BookOpen } from "lucide-react";
 import { useMeta } from "@/hooks/use-meta";
 import { apiRequest } from "@/lib/queryClient";
 
@@ -77,25 +77,72 @@ export default function TrialRequest() {
           <Header />
           
           <main className="pt-16 sm:pt-20">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <CheckCircle className="w-8 h-8 text-green-600" />
                 </div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-4">
-                  Thank You for Your Request
+                <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                  Welcome to ExitClarity!
                 </h1>
-                <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                  We'll review and confirm access for your firm within 1-3 business days.
+                <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+                  We'll confirm access for your firm within 1-3 business days.
                 </p>
-                <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 max-w-xl mx-auto">
-                  <p className="text-blue-800 mb-4">
-                    In the meantime, you can explore what your clients will see:
-                  </p>
-                  <Button asChild>
-                    <a href="/sample-report">View Sample Report</a>
-                  </Button>
+
+                {/* Action Cards */}
+                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                  {/* Sample Report Card */}
+                  <Card className="p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+                    <CardContent className="space-y-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                        <BarChart3 className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900">View Sample Report</h3>
+                      <p className="text-gray-600">See exactly what your clients will receive</p>
+                      <Button asChild className="w-full">
+                        <a href="/sample-report">View Sample Report</a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+
+                  {/* Schedule Demo Card */}
+                  <Card className="p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+                    <CardContent className="space-y-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                        <Calendar className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900">Schedule a Quick Demo</h3>
+                      <p className="text-gray-600">Want to see ExitClarity in action sooner?</p>
+                      <Button asChild variant="outline" className="w-full">
+                        <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
+                          Book 15-min Overview
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+
+                  {/* Resources Card */}
+                  <Card className="p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+                    <CardContent className="space-y-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                        <BookOpen className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900">Explore Resources</h3>
+                      <p className="text-gray-600">Browse our exit planning insights</p>
+                      <Button asChild variant="outline" className="w-full">
+                        <a href="/resources">Visit Resource Center</a>
+                      </Button>
+                    </CardContent>
+                  </Card>
                 </div>
+
+                {/* Footer Text */}
+                <p className="text-sm text-gray-500 max-w-2xl mx-auto">
+                  Questions? Reply to your confirmation email or reach out at 
+                  <a href="mailto:support@exitclarity.io" className="text-primary hover:underline ml-1">
+                    support@exitclarity.io
+                  </a>
+                </p>
               </div>
             </div>
           </main>
