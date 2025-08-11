@@ -21,9 +21,9 @@ const featuredPost = {
 
 export default function Blog() {
   useMeta({
-    title: "ExitClarity Insights - Strategic Guidance for Business Owners and M&A Advisors",
+    title: "ExitClarity Blog - Strategic Guidance for Business Owners and M&A Advisors",
     description: "Expert insights on exit planning, M&A trends, and business valuation strategies for business owners and M&A advisors.",
-    ogTitle: "ExitClarity Insights - Strategic Guidance for Business Owners and M&A Advisors",
+    ogTitle: "ExitClarity Blog - Strategic Guidance for Business Owners and M&A Advisors",
     ogDescription: "Expert insights on exit planning, M&A trends, and business valuation strategies for business owners and M&A advisors."
   });
 
@@ -47,7 +47,7 @@ export default function Blog() {
                 {/* Content Column */}
                 <div className="text-center lg:text-left">
                   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-                    ExitClarity Insights
+                    ExitClarity Blog
                   </h1>
                   <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6">
                     Expert strategies, market insights, and actionable guidance for successful exits and strategic M&A decisions
