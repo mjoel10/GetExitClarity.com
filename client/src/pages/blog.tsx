@@ -60,7 +60,7 @@ export default function Blog() {
                   
                   <div className="p-6 sm:p-8">
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 leading-tight">
-                      The Complete Guide to Exit Readiness Assessment
+                      The Ultimate Exit Plan: Strategies to Assess, Enhance, and Maximize the Value of Your Company
                     </h2>
                     
                     {/* Meta Info */}
@@ -75,12 +75,12 @@ export default function Blog() {
                       </div>
                       <div className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
-                        <span>8 min read</span>
+                        <span>12 min read</span>
                       </div>
                     </div>
                     
                     <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                      Discover how top M&A advisors are using data-driven assessments to identify exit-ready prospects and accelerate deal timelines...
+                      Selling a business is one of the most significant decisions an owner will ever make, yet many entrepreneurs fail to prepare adequately for this transition. Learn the key strategies for proactive planning, understanding valuation metrics, and implementing approaches that enhance business value long before a sale is considered...
                     </p>
                     
                     <Button variant="outline" disabled className="text-gray-400 cursor-not-allowed">
