@@ -276,7 +276,7 @@ export default function SampleReport() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <div className="flex justify-center">
                     <Button 
                       onClick={() => setIsModalOpen(true)}
                       size="lg" 
@@ -285,14 +285,6 @@ export default function SampleReport() {
                       <FileText className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                       View Sample Report
                       <ArrowRight className="ml-2 w-4 h-4 sm:h-5 sm:w-5" />
-                    </Button>
-                    <Button 
-                      onClick={handleRequestTrial}
-                      variant="outline" 
-                      size="lg" 
-                      className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg border-primary text-primary hover:bg-primary/5"
-                    >
-                      Request a Client Trial
                     </Button>
                   </div>
                 </div>
