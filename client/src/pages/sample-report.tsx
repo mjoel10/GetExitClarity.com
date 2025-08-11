@@ -147,8 +147,124 @@ export default function SampleReport() {
           <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                {/* Left: Content */}
-                <div className="lg:pr-8">
+                {/* Left: Enhanced Report Visual */}
+                <div className="order-2 lg:order-1 relative lg:pr-8">
+                  <div className="relative mx-auto max-w-md lg:max-w-none">
+                    {/* Main Report Document */}
+                    <div className="bg-white rounded-xl shadow-2xl border border-gray-200 p-8 transform -rotate-2 hover:rotate-0 transition-all duration-500 hover:shadow-3xl">
+                      {/* Document Header */}
+                      <div className="flex items-center justify-between mb-8 pb-4 border-b border-gray-100">
+                        <div className="flex items-center gap-4">
+                          <div className="w-10 h-10 bg-gradient-to-r from-primary to-primary-light rounded-lg flex items-center justify-center shadow-lg">
+                            <FileText className="w-5 h-5 text-white" />
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-lg text-gray-900">ExitClarity Assessment</h3>
+                            <p className="text-sm text-gray-500">Comprehensive Exit Readiness Report</p>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <Badge className="bg-green-100 text-green-800 border-green-200 px-3 py-1 text-sm font-semibold">
+                            GO RECOMMENDATION
+                          </Badge>
+                          <p className="text-xs text-gray-500 mt-1">Ready for Market</p>
+                        </div>
+                      </div>
+
+                      {/* Key Findings Section */}
+                      <div className="space-y-6 mb-8">
+                        <div>
+                          <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                            <BarChart3 className="w-4 h-4 text-primary" />
+                            Exit Readiness Scores
+                          </h4>
+                          <div className="space-y-3">
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm text-gray-600">Financial Health</span>
+                              <div className="flex items-center gap-2">
+                                <div className="w-20 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                  <div className="h-full bg-gradient-to-r from-primary to-green-500 rounded-full" style={{width: "94%"}}></div>
+                                </div>
+                                <span className="text-sm font-semibold text-primary">94</span>
+                              </div>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm text-gray-600">Market Position</span>
+                              <div className="flex items-center gap-2">
+                                <div className="w-20 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                  <div className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full" style={{width: "89%"}}></div>
+                                </div>
+                                <span className="text-sm font-semibold text-green-600">89</span>
+                              </div>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm text-gray-600">Operations</span>
+                              <div className="flex items-center gap-2">
+                                <div className="w-20 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                  <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full" style={{width: "82%"}}></div>
+                                </div>
+                                <span className="text-sm font-semibold text-blue-600">82</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Valuation Summary */}
+                        <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-4">
+                          <div className="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                              <div className="text-xl font-bold text-gray-900">$2.8M - $3.4M</div>
+                              <div className="text-xs text-gray-600">Estimated Range</div>
+                            </div>
+                            <div>
+                              <div className="text-xl font-bold text-green-600">Low Risk</div>
+                              <div className="text-xs text-gray-600">Exit Profile</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Action Items Preview */}
+                      <div className="space-y-2">
+                        <h4 className="font-semibold text-gray-900 text-sm flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-500" />
+                          Priority Actions
+                        </h4>
+                        <div className="space-y-1">
+                          <div className="flex items-start gap-2 text-xs">
+                            <div className="w-1 h-1 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
+                            <span className="text-gray-600">Enhance customer diversification metrics</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-xs">
+                            <div className="w-1 h-1 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
+                            <span className="text-gray-600">Strengthen management team documentation</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-xs">
+                            <div className="w-1 h-1 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
+                            <span className="text-gray-600">Optimize working capital structure</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Floating Badges */}
+                    <div className="absolute -top-3 -right-3 bg-gradient-to-r from-primary to-primary-light text-white text-xs px-3 py-1.5 rounded-full font-semibold shadow-lg">
+                      20-30 Page Report
+                    </div>
+                    <div className="absolute -bottom-3 -left-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs px-3 py-1.5 rounded-full font-semibold shadow-lg">
+                      11 Critical Factors
+                    </div>
+                    
+                    {/* Background Elements */}
+                    <div className="absolute inset-0 -z-10">
+                      <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-2xl"></div>
+                      <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-full blur-xl"></div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right: Content */}
+                <div className="order-1 lg:order-2 lg:pl-8">
                   <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
                     Sample Report
                   </Badge>
@@ -162,19 +278,19 @@ export default function SampleReport() {
                   {/* Key Benefits List */}
                   <div className="space-y-3 mb-6 sm:mb-8">
                     <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">Complete exit readiness assessment across 11 key dimensions</span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">Strategic recommendations and optimization roadmap</span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">Valuation insights and market positioning analysis</span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">Risk assessment and mitigation strategies</span>
                     </div>
                   </div>
@@ -197,81 +313,6 @@ export default function SampleReport() {
                     >
                       Request a Client Trial
                     </Button>
-                  </div>
-                </div>
-
-                {/* Right: Report Visual Mockup */}
-                <div className="relative lg:pl-8">
-                  <div className="relative mx-auto max-w-md lg:max-w-none">
-                    {/* Report Container */}
-                    <div className="bg-white rounded-lg shadow-xl border border-gray-200 p-6 transform rotate-1 hover:rotate-0 transition-transform duration-300">
-                      {/* Report Header */}
-                      <div className="flex items-center justify-between mb-6">
-                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                            <FileText className="w-4 h-4 text-white" />
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-gray-900">ExitClarity Report</h3>
-                            <p className="text-sm text-gray-500">Sample</p>
-                          </div>
-                        </div>
-                        <Badge className="bg-green-100 text-green-800 border-green-200">
-                          GO
-                        </Badge>
-                      </div>
-
-                      {/* Progress Bars */}
-                      <div className="space-y-4 mb-6">
-                        <div>
-                          <div className="flex justify-between text-sm mb-1">
-                            <span className="text-gray-600">Financial Performance</span>
-                            <span className="text-primary font-medium">92%</span>
-                          </div>
-                          <div className="w-full bg-gray-200 rounded-full h-2">
-                            <div className="bg-primary h-2 rounded-full" style={{width: "92%"}}></div>
-                          </div>
-                        </div>
-                        <div>
-                          <div className="flex justify-between text-sm mb-1">
-                            <span className="text-gray-600">Market Position</span>
-                            <span className="text-green-600 font-medium">85%</span>
-                          </div>
-                          <div className="w-full bg-gray-200 rounded-full h-2">
-                            <div className="bg-green-500 h-2 rounded-full" style={{width: "85%"}}></div>
-                          </div>
-                        </div>
-                        <div>
-                          <div className="flex justify-between text-sm mb-1">
-                            <span className="text-gray-600">Operational Readiness</span>
-                            <span className="text-blue-600 font-medium">78%</span>
-                          </div>
-                          <div className="w-full bg-gray-200 rounded-full h-2">
-                            <div className="bg-blue-500 h-2 rounded-full" style={{width: "78%"}}></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Key Metrics */}
-                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
-                        <div className="text-center">
-                          <div className="text-lg font-bold text-gray-900">$2.4M - $3.1M</div>
-                          <div className="text-xs text-gray-500">Est. Valuation Range</div>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-lg font-bold text-green-600">Low Risk</div>
-                          <div className="text-xs text-gray-500">Exit Risk Level</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Floating Elements */}
-                    <div className="absolute -top-2 -right-2 bg-primary text-white text-xs px-2 py-1 rounded-full font-medium">
-                      20-30 Pages
-                    </div>
-                    <div className="absolute -bottom-2 -left-2 bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium">
-                      11 Factors Analyzed
-                    </div>
                   </div>
                 </div>
               </div>
