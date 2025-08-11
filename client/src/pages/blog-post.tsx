@@ -297,16 +297,24 @@ export default function BlogPost() {
               <div className="prose prose-lg max-w-none">
                 {formatContent(post.content)}
               </div>
-              
-              {/* CTA Section */}
-              <div className="mt-12 p-8 bg-gradient-to-r from-primary to-blue-700 rounded-2xl text-center text-white">
-                <h3 className="text-2xl font-bold mb-4">Ready to Get Your Exit Readiness Score?</h3>
-                <p className="text-blue-100 mb-6 text-lg">
-                  Get clarity on your GO/FIX/WAIT status in under 30 minutes
+            </div>
+            
+            {/* CTA Section - Full Width */}
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 mt-12">
+              <div className="p-8 sm:p-12 bg-gradient-to-r from-primary to-blue-700 rounded-2xl text-center text-white">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4">Ready to Discuss Your Exit Strategy?</h3>
+                <p className="text-blue-100 mb-6 text-lg sm:text-xl max-w-2xl mx-auto">
+                  Schedule a 30-minute consultation to explore your exit readiness options
                 </p>
-                <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                  Start Your Assessment →
-                </Button>
+                <a 
+                  href="https://calendly.com/exitclarity-info/30min" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                    Schedule Demo →
+                  </Button>
+                </a>
               </div>
             </div>
           </article>
