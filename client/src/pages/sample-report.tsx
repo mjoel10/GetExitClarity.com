@@ -288,175 +288,25 @@ export default function SampleReport() {
             </div>
           </section>
 
-          {/* What's Inside Section */}
-          <section className="py-12 sm:py-16 lg:py-20">
+          {/* Final CTA - Floating Card Design */}
+          <section className="py-16 sm:py-20 lg:py-24" style={{backgroundColor: '#f8f9fa'}}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-              <div className="text-center mb-8 sm:mb-12">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
-                  What's Inside the Report
+              <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary to-blue-700 text-white rounded-3xl shadow-2xl p-8 sm:p-12 lg:p-16 text-center">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
+                  Ready to Transform Your M&A Process?
                 </h2>
-                <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-2">
-                  Our comprehensive 20-30 page assessment covers every aspect of exit readiness
+                <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-8">
+                  Join 300+ M&A professionals using ExitClarity to streamline deal preparation
                 </p>
+                <Button 
+                  onClick={handleRequestTrial}
+                  size="lg" 
+                  className="bg-white text-primary hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
+                >
+                  Request a Client Trial
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                </Button>
               </div>
-
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                {/* Report Features */}
-                <div className="order-2 lg:order-1">
-                  <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
-                    {reportFeatures.map((feature, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm sm:text-base text-gray-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                      Clear Recommendations
-                    </h3>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
-                        GO - Ready to Proceed
-                      </Badge>
-                      <Badge variant="outline" className="bg-yellow-50 text-yellow-700 border-yellow-200">
-                        FIX - Address Issues First
-                      </Badge>
-                      <Badge variant="outline" className="bg-red-50 text-red-700 border-red-200">
-                        WAIT - Not Ready Yet
-                      </Badge>
-                    </div>
-                    <p className="text-sm text-gray-600">
-                      Every report concludes with a clear recommendation and actionable next steps.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Report Preview */}
-                <div className="text-center">
-                  <div className="relative inline-block">
-                    <div className="bg-white p-4 rounded-xl shadow-lg border-2 border-gray-200">
-                      <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 rounded-lg mb-4">
-                        <h4 className="text-lg font-semibold mb-2">Exit Readiness Assessment</h4>
-                        <p className="text-blue-100 text-sm">Comprehensive Business Analysis</p>
-                      </div>
-                      <div className="space-y-3 text-left">
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm text-gray-600">Financial Performance</span>
-                          <div className="flex gap-1">
-                            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                            <div className="w-3 h-3 bg-gray-200 rounded-full"></div>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm text-gray-600">Market Position</span>
-                          <div className="flex gap-1">
-                            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                            <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                            <div className="w-3 h-3 bg-gray-200 rounded-full"></div>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm text-gray-600">Management Team</span>
-                          <div className="flex gap-1">
-                            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="mt-6 pt-4 border-t border-gray-200">
-                        <div className="flex items-center justify-center gap-2">
-                          <Badge className="bg-green-100 text-green-800">GO</Badge>
-                          <span className="text-sm text-gray-600">Ready to Proceed</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <Button 
-                    className="mt-6"
-                    onClick={() => setIsModalOpen(true)}
-                  >
-                    <FileText className="mr-2 h-4 w-4" />
-                    Download Full Sample
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Key Benefits */}
-          <section className="py-16 lg:py-20 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 md:px-6">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                  Why Our Assessment Works
-                </h2>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <BarChart3 className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    Data-Driven Analysis
-                  </h3>
-                  <p className="text-gray-600">
-                    30+ years of M&A experience distilled into a systematic evaluation framework
-                  </p>
-                </div>
-
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Shield className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    Risk Mitigation
-                  </h3>
-                  <p className="text-gray-600">
-                    Identify and address potential deal breakers before they become problems
-                  </p>
-                </div>
-
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Clock className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    Time Efficient
-                  </h3>
-                  <p className="text-gray-600">
-                    20-minute assessment delivers insights that normally take weeks to uncover
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Final CTA */}
-          <section className="py-16 lg:py-20 bg-primary text-white">
-            <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-                Ready to Transform Your M&A Process?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8">
-                Join 300+ M&A professionals using ExitClarity to streamline deal preparation
-              </p>
-              <Button 
-                onClick={handleRequestTrial}
-                size="lg" 
-                className="bg-white text-primary hover:bg-gray-50 px-8 py-4 text-lg"
-              >
-                Request a Client Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
             </div>
           </section>
         </main>
