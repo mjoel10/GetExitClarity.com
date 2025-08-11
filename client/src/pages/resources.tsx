@@ -1,12 +1,19 @@
-import { Helmet } from "react-helmet-async";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, TrendingUp, BarChart3, CheckSquare, Video, BookOpen, ArrowRight } from "lucide-react";
+import { useMeta } from "@/hooks/use-meta";
 
 export default function Resources() {
+  useMeta({
+    title: "ExitClarity | M&A Resources & Tools",
+    description: "Free M&A resources including exit planning guides, valuation benchmarks, due diligence checklists, and market insights for advisors and business owners.",
+    ogTitle: "ExitClarity | M&A Resources & Tools",
+    ogDescription: "Free M&A resources including exit planning guides, valuation benchmarks, due diligence checklists, and market insights for advisors and business owners."
+  });
+
   const resourceCards = [
     {
       title: "Exit Planning Guide",
@@ -42,14 +49,6 @@ export default function Resources() {
 
   return (
     <>
-      <Helmet>
-        <title>ExitClarity | M&A Resources & Tools</title>
-        <meta name="description" content="Free M&A resources including exit planning guides, valuation benchmarks, due diligence checklists, and market insights for advisors and business owners." />
-        <meta property="og:title" content="ExitClarity | M&A Resources & Tools" />
-        <meta property="og:description" content="Free M&A resources including exit planning guides, valuation benchmarks, due diligence checklists, and market insights for advisors and business owners." />
-        <meta property="og:type" content="website" />
-      </Helmet>
-
       <div className="min-h-screen bg-white">
         <Header />
         

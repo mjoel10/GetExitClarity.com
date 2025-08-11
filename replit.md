@@ -30,13 +30,20 @@ Preferred communication style: Simple, everyday language.
   - `/platform/ma-firms` - Dedicated page for M&A professionals with specialized content
   - `/platform/business-owners` - Tailored content for business owners
   - `/sample-report` - Standalone sample report download with form integration
-  - `/blog` - Coming soon blog page with content category previews
+  - `/blog` - ExitClarity Insights blog with published content and realistic coming-soon previews
+  - `/blog/:slug` - Individual blog post pages with professional article layout
   - `/trial-request` - Client trial request form for M&A professionals
   - `/resources` - Resource center hub
 - **Navigation System**: Fixed header with organized dropdown menus:
-  - Platform dropdown (M&A Firms, Business Owners)
-  - Resources dropdown (Resource Center, Blog, Sample Report, Trial Request)
+  - Platform dropdown (M&A Firms, Business Owners, Sample Report)
+  - Resources dropdown (Blog, Resource Center) - Blog prioritized above Resource Center
   - Separate refs for proper dropdown functionality
+- **Blog System**: Complete blog implementation with:
+  - "ExitClarity Insights" branding targeting both business owners and M&A advisors
+  - Published article: "The Ultimate Exit: Why 87% of Business Sales Fail"
+  - Professional article page styling with clear typography and SEO optimization
+  - Realistic placeholder articles with compelling titles and descriptions
+  - Newsletter signup integration for lead capture
 - **Contact Forms**: Comprehensive contact form implementation with success screens, email notifications via SendGrid, and database integration for submissions. Supports multiple request types (demo, sample report, assessment, trial).
 - **Mobile Optimization**: All pages fully responsive with mobile-first design:
   - Responsive typography (text-3xl sm:text-4xl lg:text-5xl patterns)
