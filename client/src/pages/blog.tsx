@@ -3,8 +3,7 @@ import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Calendar, Clock, User, ArrowRight, Mail } from "lucide-react";
-import { useState } from "react";
+import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { useMeta } from "@/hooks/use-meta";
 
@@ -21,22 +20,12 @@ const featuredPost = {
 };
 
 export default function Blog() {
-  const [email, setEmail] = useState("");
-
   useMeta({
     title: "ExitClarity Insights - Strategic Guidance for Business Owners and M&A Advisors",
     description: "Expert insights on exit planning, M&A trends, and business valuation strategies for business owners and M&A advisors.",
     ogTitle: "ExitClarity Insights - Strategic Guidance for Business Owners and M&A Advisors",
     ogDescription: "Expert insights on exit planning, M&A trends, and business valuation strategies for business owners and M&A advisors."
   });
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Newsletter signup logic would go here
-    console.log("Newsletter signup:", email);
-    setEmail("");
-    alert("Thank you! We'll notify you when new content is available.");
-  };
 
   return (
     <>
@@ -226,34 +215,7 @@ export default function Blog() {
             </div>
           </section>
 
-          {/* Newsletter Signup Section */}
-          <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-primary to-blue-700">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6">
-              <div className="max-w-2xl mx-auto text-center">
-                <Mail className="w-12 h-12 text-white/80 mx-auto mb-6" />
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-                  Get First Access to New Content
-                </h3>
-                <p className="text-lg text-blue-100 mb-8">
-                  Be notified when we publish new insights for M&A professionals
-                </p>
-                
-                <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/60"
-                  />
-                  <Button type="submit" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                    Notify Me
-                  </Button>
-                </form>
-              </div>
-            </div>
-          </section>
+
         </main>
 
         <Footer />
