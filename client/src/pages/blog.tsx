@@ -3,7 +3,7 @@ import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Calendar, Clock, User, ArrowRight } from "lucide-react";
+import { Calendar, Clock, User, ArrowRight, TrendingUp, Target, Users } from "lucide-react";
 import { Link } from "wouter";
 import { useMeta } from "@/hooks/use-meta";
 
@@ -33,17 +33,92 @@ export default function Blog() {
         <Header />
         
         <main className="pt-16 sm:pt-20">
-          {/* Hero Section with gradient background */}
+          {/* Enhanced Hero Section */}
           <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/5 via-blue-50 to-white relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/3 to-transparent"></div>
+            
+            {/* Decorative background elements */}
+            <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl"></div>
+            <div className="absolute top-40 right-20 w-32 h-32 bg-blue-200/20 rounded-full blur-2xl"></div>
+            <div className="absolute bottom-10 left-1/4 w-24 h-24 bg-primary/5 rounded-full blur-xl"></div>
+            
             <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
-              <div className="text-center max-w-4xl mx-auto">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-                  ExitClarity Insights
-                </h1>
-                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed px-2">
-                  Strategic guidance for business owners and M&A advisors
-                </p>
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Content Column */}
+                <div className="text-center lg:text-left">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+                    ExitClarity Insights
+                  </h1>
+                  <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6">
+                    Expert strategies, market insights, and actionable guidance for successful exits and strategic M&A decisions
+                  </p>
+                  
+                  {/* Key highlights */}
+                  <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-gray-600">
+                    <div className="flex items-center gap-2">
+                      <Target className="w-4 h-4 text-primary" />
+                      <span>Exit Strategy</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <TrendingUp className="w-4 h-4 text-primary" />
+                      <span>Market Trends</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Users className="w-4 h-4 text-primary" />
+                      <span>M&A Insights</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Visual Column */}
+                <div className="relative">
+                  <div className="bg-white rounded-2xl shadow-2xl p-8 relative">
+                    {/* Mock article preview */}
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                          Featured Article
+                        </span>
+                        <div className="flex items-center gap-1 text-xs text-gray-500">
+                          <Calendar className="w-3 h-3" />
+                          <span>Latest</span>
+                        </div>
+                      </div>
+                      
+                      <h3 className="text-lg font-bold text-gray-900 leading-tight">
+                        Why 87% of Business Sales Fail
+                      </h3>
+                      
+                      <div className="space-y-2">
+                        <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                          <div className="h-full w-3/4 bg-gradient-to-r from-primary to-blue-500 rounded-full"></div>
+                        </div>
+                        <p className="text-xs text-gray-500">5 min read • Exit Planning</p>
+                      </div>
+                      
+                      <p className="text-sm text-gray-600 leading-relaxed">
+                        The difference between a successful exit and a failed one isn't luck. It's preparation...
+                      </p>
+                      
+                      <div className="flex items-center justify-between pt-2">
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center">
+                            <User className="w-3 h-3 text-primary" />
+                          </div>
+                          <span className="text-xs text-gray-500">ExitClarity Team</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-primary" />
+                      </div>
+                    </div>
+                    
+                    {/* Decorative elements */}
+                    <div className="absolute -top-2 -right-2 w-4 h-4 bg-primary rounded-full"></div>
+                    <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full"></div>
+                  </div>
+                  
+                  {/* Background decoration */}
+                  <div className="absolute -inset-4 bg-gradient-to-br from-primary/5 to-blue-100/20 rounded-2xl -z-10 transform rotate-2"></div>
+                </div>
               </div>
             </div>
           </section>
