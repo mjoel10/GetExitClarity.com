@@ -151,74 +151,75 @@ export default function SampleReport() {
                 <div className="order-2 lg:order-1 relative lg:pr-8">
                   <div className="relative mx-auto max-w-md lg:max-w-none">
                     {/* Main Report Document */}
-                    <div className="bg-white rounded-xl shadow-2xl border border-gray-200 p-8 transform -rotate-2 hover:rotate-0 transition-all duration-500 hover:shadow-3xl">
+                    <div className="bg-white rounded-lg shadow-xl border border-gray-300 p-8">
                       {/* Document Header */}
-                      <div className="flex items-center justify-between mb-8 pb-4 border-b border-gray-100">
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 bg-gradient-to-r from-primary to-primary-light rounded-lg flex items-center justify-center shadow-lg">
-                            <FileText className="w-5 h-5 text-white" />
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-lg text-gray-900">ExitClarity Assessment</h3>
-                            <p className="text-sm text-gray-500">Comprehensive Exit Readiness Report</p>
-                          </div>
+                      <div className="mb-8 pb-6 border-b-2 border-gray-200">
+                        <div className="text-center mb-4">
+                          <h3 className="font-bold text-xl text-gray-900 mb-1">EXIT READINESS ASSESSMENT</h3>
+                          <p className="text-sm text-gray-600 font-medium">COMPREHENSIVE ANALYSIS REPORT</p>
                         </div>
-                        <div className="text-right">
-                          <Badge className="bg-green-100 text-green-800 border-green-200 px-3 py-1 text-sm font-semibold">
-                            GO RECOMMENDATION
-                          </Badge>
-                          <p className="text-xs text-gray-500 mt-1">Ready for Market</p>
+                        <div className="flex justify-between items-center text-sm">
+                          <div>
+                            <p className="text-gray-600"><span className="font-semibold">Company:</span> Sample Manufacturing Co.</p>
+                            <p className="text-gray-600"><span className="font-semibold">Industry:</span> Manufacturing Services</p>
+                          </div>
+                          <div className="text-right">
+                            <div className="bg-green-600 text-white px-4 py-2 rounded font-bold text-sm">
+                              GO RECOMMENDATION
+                            </div>
+                            <p className="text-xs text-gray-500 mt-1">Market Ready</p>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Key Findings Section */}
+                      {/* Executive Summary Table */}
                       <div className="space-y-6 mb-8">
                         <div>
-                          <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                            <BarChart3 className="w-4 h-4 text-primary" />
-                            Exit Readiness Scores
+                          <h4 className="font-bold text-gray-900 mb-4 text-center bg-gray-100 py-2 text-sm">
+                            EXECUTIVE SUMMARY - KEY METRICS
                           </h4>
-                          <div className="space-y-3">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm text-gray-600">Financial Health</span>
-                              <div className="flex items-center gap-2">
-                                <div className="w-20 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                  <div className="h-full bg-gradient-to-r from-primary to-green-500 rounded-full" style={{width: "94%"}}></div>
-                                </div>
-                                <span className="text-sm font-semibold text-primary">94</span>
-                              </div>
+                          
+                          {/* Scores Table */}
+                          <div className="border border-gray-300">
+                            <div className="grid grid-cols-3 gap-0 text-xs font-semibold bg-gray-50 border-b border-gray-300">
+                              <div className="p-3 border-r border-gray-300">ASSESSMENT AREA</div>
+                              <div className="p-3 border-r border-gray-300 text-center">SCORE</div>
+                              <div className="p-3 text-center">STATUS</div>
                             </div>
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm text-gray-600">Market Position</span>
-                              <div className="flex items-center gap-2">
-                                <div className="w-20 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                  <div className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full" style={{width: "89%"}}></div>
-                                </div>
-                                <span className="text-sm font-semibold text-green-600">89</span>
-                              </div>
+                            <div className="grid grid-cols-3 gap-0 text-xs border-b border-gray-300">
+                              <div className="p-3 border-r border-gray-300">Financial Performance</div>
+                              <div className="p-3 border-r border-gray-300 text-center font-semibold">94/100</div>
+                              <div className="p-3 text-center text-green-600 font-semibold">STRONG</div>
                             </div>
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm text-gray-600">Operations</span>
-                              <div className="flex items-center gap-2">
-                                <div className="w-20 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                  <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full" style={{width: "82%"}}></div>
-                                </div>
-                                <span className="text-sm font-semibold text-blue-600">82</span>
-                              </div>
+                            <div className="grid grid-cols-3 gap-0 text-xs border-b border-gray-300">
+                              <div className="p-3 border-r border-gray-300">Market Position</div>
+                              <div className="p-3 border-r border-gray-300 text-center font-semibold">89/100</div>
+                              <div className="p-3 text-center text-green-600 font-semibold">STRONG</div>
+                            </div>
+                            <div className="grid grid-cols-3 gap-0 text-xs border-b border-gray-300">
+                              <div className="p-3 border-r border-gray-300">Operational Readiness</div>
+                              <div className="p-3 border-r border-gray-300 text-center font-semibold">82/100</div>
+                              <div className="p-3 text-center text-blue-600 font-semibold">GOOD</div>
+                            </div>
+                            <div className="grid grid-cols-3 gap-0 text-xs">
+                              <div className="p-3 border-r border-gray-300">Management Systems</div>
+                              <div className="p-3 border-r border-gray-300 text-center font-semibold">76/100</div>
+                              <div className="p-3 text-center text-orange-600 font-semibold">FAIR</div>
                             </div>
                           </div>
                         </div>
 
                         {/* Valuation Summary */}
-                        <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-4">
-                          <div className="grid grid-cols-2 gap-4 text-center">
+                        <div className="border border-gray-300 bg-gray-50 p-4">
+                          <h4 className="font-bold text-gray-900 mb-3 text-center text-sm">VALUATION ANALYSIS</h4>
+                          <div className="grid grid-cols-2 gap-6 text-center text-xs">
                             <div>
-                              <div className="text-xl font-bold text-gray-900">$2.8M - $3.4M</div>
-                              <div className="text-xs text-gray-600">Estimated Range</div>
+                              <div className="text-lg font-bold text-gray-900">$2.8M - $3.4M</div>
+                              <div className="text-gray-600">Estimated Market Value</div>
                             </div>
                             <div>
-                              <div className="text-xl font-bold text-green-600">Low Risk</div>
-                              <div className="text-xs text-gray-600">Exit Profile</div>
+                              <div className="text-lg font-bold text-green-600">LOW RISK</div>
+                              <div className="text-gray-600">Exit Risk Assessment</div>
                             </div>
                           </div>
                         </div>
@@ -226,23 +227,25 @@ export default function SampleReport() {
 
                       {/* Action Items Preview */}
                       <div className="space-y-2">
-                        <h4 className="font-semibold text-gray-900 text-sm flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-green-500" />
-                          Priority Actions
+                        <h4 className="font-bold text-gray-900 text-center bg-gray-100 py-2 text-sm">
+                          PRIORITY RECOMMENDATIONS
                         </h4>
-                        <div className="space-y-1">
-                          <div className="flex items-start gap-2 text-xs">
-                            <div className="w-1 h-1 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
-                            <span className="text-gray-600">Enhance customer diversification metrics</span>
+                        <div className="space-y-2 text-xs">
+                          <div className="flex items-start gap-3">
+                            <span className="font-semibold text-gray-900">1.</span>
+                            <span className="text-gray-700">Enhance customer diversification documentation to strengthen market position metrics</span>
                           </div>
-                          <div className="flex items-start gap-2 text-xs">
-                            <div className="w-1 h-1 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
-                            <span className="text-gray-600">Strengthen management team documentation</span>
+                          <div className="flex items-start gap-3">
+                            <span className="font-semibold text-gray-900">2.</span>
+                            <span className="text-gray-700">Develop comprehensive management succession planning and documentation</span>
                           </div>
-                          <div className="flex items-start gap-2 text-xs">
-                            <div className="w-1 h-1 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
-                            <span className="text-gray-600">Optimize working capital structure</span>
+                          <div className="flex items-start gap-3">
+                            <span className="font-semibold text-gray-900">3.</span>
+                            <span className="text-gray-700">Optimize working capital structure to improve financial performance metrics</span>
                           </div>
+                        </div>
+                        <div className="text-center text-xs text-gray-500 mt-3 italic">
+                          Full report contains 47 detailed recommendations across all 11 assessment areas
                         </div>
                       </div>
                     </div>
