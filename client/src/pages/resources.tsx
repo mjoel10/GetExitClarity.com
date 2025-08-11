@@ -74,71 +74,71 @@ export default function Resources() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     {/* Large background elements */}
-                    <circle cx="120" cy="60" r="45" fill="#1e40af" opacity="0.15" />
-                    <circle cx="480" cy="160" r="40" fill="#3b82f6" opacity="0.18" />
-                    <rect x="220" y="20" width="70" height="45" rx="10" fill="#6366f1" opacity="0.16" />
-                    <rect x="350" y="140" width="100" height="60" rx="12" fill="#1e40af" opacity="0.14" />
+                    <circle cx="120" cy="60" r="45" fill="#1d4ed8" opacity="0.25" />
+                    <circle cx="480" cy="160" r="40" fill="#2563eb" opacity="0.28" />
+                    <rect x="220" y="20" width="70" height="45" rx="10" fill="#7c3aed" opacity="0.26" />
+                    <rect x="350" y="140" width="100" height="60" rx="12" fill="#1e40af" opacity="0.24" />
                     
                     {/* Central knowledge hub */}
-                    <circle cx="300" cy="110" r="60" fill="#1e40af" opacity="0.12" stroke="#1e40af" strokeWidth="2" strokeOpacity="0.25" />
-                    <circle cx="300" cy="110" r="35" fill="#3b82f6" opacity="0.15" />
-                    <circle cx="300" cy="110" r="15" fill="#6366f1" opacity="0.3" />
+                    <circle cx="300" cy="110" r="60" fill="#1d4ed8" opacity="0.18" stroke="#1d4ed8" strokeWidth="2" strokeOpacity="0.35" />
+                    <circle cx="300" cy="110" r="35" fill="#2563eb" opacity="0.25" />
+                    <circle cx="300" cy="110" r="15" fill="#8b5cf6" opacity="0.45" />
                     
                     {/* Document clusters */}
                     <g transform="translate(80,90)">
-                      <rect x="0" y="0" width="40" height="55" rx="5" fill="#1e40af" opacity="0.35" stroke="#1e40af" strokeWidth="1.5" />
-                      <rect x="6" y="8" width="28" height="2" fill="#1e40af" opacity="0.7" />
-                      <rect x="6" y="16" width="22" height="2" fill="#1e40af" opacity="0.7" />
-                      <rect x="6" y="24" width="28" height="2" fill="#1e40af" opacity="0.7" />
-                      <rect x="6" y="32" width="18" height="2" fill="#1e40af" opacity="0.7" />
-                      <rect x="6" y="40" width="24" height="2" fill="#1e40af" opacity="0.7" />
+                      <rect x="0" y="0" width="40" height="55" rx="5" fill="#1d4ed8" opacity="0.45" stroke="#1d4ed8" strokeWidth="1.5" />
+                      <rect x="6" y="8" width="28" height="2" fill="#1d4ed8" opacity="0.8" />
+                      <rect x="6" y="16" width="22" height="2" fill="#1d4ed8" opacity="0.8" />
+                      <rect x="6" y="24" width="28" height="2" fill="#1d4ed8" opacity="0.8" />
+                      <rect x="6" y="32" width="18" height="2" fill="#1d4ed8" opacity="0.8" />
+                      <rect x="6" y="40" width="24" height="2" fill="#1d4ed8" opacity="0.8" />
                       
-                      <rect x="12" y="-12" width="40" height="55" rx="5" fill="#3b82f6" opacity="0.3" stroke="#3b82f6" strokeWidth="1.5" />
-                      <rect x="18" y="-4" width="28" height="2" fill="#3b82f6" opacity="0.6" />
-                      <rect x="18" y="4" width="22" height="2" fill="#3b82f6" opacity="0.6" />
-                      <rect x="18" y="12" width="28" height="2" fill="#3b82f6" opacity="0.6" />
-                      <rect x="18" y="20" width="18" height="2" fill="#3b82f6" opacity="0.6" />
+                      <rect x="12" y="-12" width="40" height="55" rx="5" fill="#2563eb" opacity="0.4" stroke="#2563eb" strokeWidth="1.5" />
+                      <rect x="18" y="-4" width="28" height="2" fill="#2563eb" opacity="0.75" />
+                      <rect x="18" y="4" width="22" height="2" fill="#2563eb" opacity="0.75" />
+                      <rect x="18" y="12" width="28" height="2" fill="#2563eb" opacity="0.75" />
+                      <rect x="18" y="20" width="18" height="2" fill="#2563eb" opacity="0.75" />
                     </g>
                     
                     <g transform="translate(470,40)">
-                      <rect x="0" y="0" width="40" height="55" rx="5" fill="#6366f1" opacity="0.35" stroke="#6366f1" strokeWidth="1.5" />
-                      <rect x="6" y="8" width="28" height="2" fill="#6366f1" opacity="0.7" />
-                      <rect x="6" y="16" width="22" height="2" fill="#6366f1" opacity="0.7" />
-                      <rect x="6" y="24" width="28" height="2" fill="#6366f1" opacity="0.7" />
-                      <rect x="6" y="32" width="18" height="2" fill="#6366f1" opacity="0.7" />
+                      <rect x="0" y="0" width="40" height="55" rx="5" fill="#7c3aed" opacity="0.45" stroke="#7c3aed" strokeWidth="1.5" />
+                      <rect x="6" y="8" width="28" height="2" fill="#7c3aed" opacity="0.8" />
+                      <rect x="6" y="16" width="22" height="2" fill="#7c3aed" opacity="0.8" />
+                      <rect x="6" y="24" width="28" height="2" fill="#7c3aed" opacity="0.8" />
+                      <rect x="6" y="32" width="18" height="2" fill="#7c3aed" opacity="0.8" />
                       
-                      <rect x="-12" y="12" width="40" height="55" rx="5" fill="#1e40af" opacity="0.3" stroke="#1e40af" strokeWidth="1.5" />
-                      <rect x="-6" y="20" width="28" height="2" fill="#1e40af" opacity="0.6" />
-                      <rect x="-6" y="28" width="22" height="2" fill="#1e40af" opacity="0.6" />
-                      <rect x="-6" y="36" width="28" height="2" fill="#1e40af" opacity="0.6" />
+                      <rect x="-12" y="12" width="40" height="55" rx="5" fill="#8b5cf6" opacity="0.4" stroke="#8b5cf6" strokeWidth="1.5" />
+                      <rect x="-6" y="20" width="28" height="2" fill="#8b5cf6" opacity="0.75" />
+                      <rect x="-6" y="28" width="22" height="2" fill="#8b5cf6" opacity="0.75" />
+                      <rect x="-6" y="36" width="28" height="2" fill="#8b5cf6" opacity="0.75" />
                     </g>
                     
                     {/* Analytics/Chart section */}
                     <g transform="translate(160,160)">
-                      <rect x="0" y="0" width="80" height="45" rx="6" fill="#f8fafc" stroke="#1e40af" strokeWidth="1" opacity="0.4" />
-                      <rect x="12" y="28" width="8" height="12" fill="#1e40af" opacity="0.6" />
-                      <rect x="24" y="20" width="8" height="20" fill="#3b82f6" opacity="0.6" />
-                      <rect x="36" y="24" width="8" height="16" fill="#6366f1" opacity="0.6" />
-                      <rect x="48" y="16" width="8" height="24" fill="#1e40af" opacity="0.6" />
-                      <rect x="60" y="22" width="8" height="18" fill="#3b82f6" opacity="0.6" />
+                      <rect x="0" y="0" width="80" height="45" rx="6" fill="#f8fafc" stroke="#1d4ed8" strokeWidth="1" opacity="0.5" />
+                      <rect x="12" y="28" width="8" height="12" fill="#1d4ed8" opacity="0.7" />
+                      <rect x="24" y="20" width="8" height="20" fill="#2563eb" opacity="0.7" />
+                      <rect x="36" y="24" width="8" height="16" fill="#7c3aed" opacity="0.7" />
+                      <rect x="48" y="16" width="8" height="24" fill="#8b5cf6" opacity="0.7" />
+                      <rect x="60" y="22" width="8" height="18" fill="#2563eb" opacity="0.7" />
                     </g>
                     
                     {/* Knowledge flow lines */}
-                    <path d="M120 110 Q180 100 240 110" stroke="#1e40af" strokeWidth="2" fill="none" opacity="0.35" strokeDasharray="4,4" />
-                    <path d="M360 110 Q420 100 470 80" stroke="#3b82f6" strokeWidth="2" fill="none" opacity="0.35" strokeDasharray="4,4" />
-                    <path d="M280 150 Q240 170 200 180" stroke="#6366f1" strokeWidth="2" fill="none" opacity="0.35" strokeDasharray="4,4" />
+                    <path d="M120 110 Q180 100 240 110" stroke="#1d4ed8" strokeWidth="2" fill="none" opacity="0.45" strokeDasharray="4,4" />
+                    <path d="M360 110 Q420 100 470 80" stroke="#2563eb" strokeWidth="2" fill="none" opacity="0.45" strokeDasharray="4,4" />
+                    <path d="M280 150 Q240 170 200 180" stroke="#7c3aed" strokeWidth="2" fill="none" opacity="0.45" strokeDasharray="4,4" />
                     
                     {/* Floating insight elements */}
-                    <circle cx="140" cy="40" r="4" fill="#6366f1" opacity="0.6" />
-                    <circle cx="450" cy="30" r="3" fill="#1e40af" opacity="0.6" />
-                    <circle cx="50" cy="60" r="2" fill="#3b82f6" opacity="0.6" />
-                    <circle cx="550" cy="80" r="4" fill="#6366f1" opacity="0.6" />
-                    <circle cx="80" cy="200" r="3" fill="#1e40af" opacity="0.6" />
-                    <circle cx="520" cy="190" r="2" fill="#3b82f6" opacity="0.6" />
+                    <circle cx="140" cy="40" r="4" fill="#8b5cf6" opacity="0.7" />
+                    <circle cx="450" cy="30" r="3" fill="#1d4ed8" opacity="0.7" />
+                    <circle cx="50" cy="60" r="2" fill="#2563eb" opacity="0.7" />
+                    <circle cx="550" cy="80" r="4" fill="#7c3aed" opacity="0.7" />
+                    <circle cx="80" cy="200" r="3" fill="#1d4ed8" opacity="0.7" />
+                    <circle cx="520" cy="190" r="2" fill="#8b5cf6" opacity="0.7" />
                     
                     {/* Growth arrows */}
-                    <path d="M380 80 L410 65 L406 70 M410 65 L406 60" stroke="#1e40af" strokeWidth="2" fill="none" opacity="0.4" />
-                    <path d="M200 140 L230 125 L226 130 M230 125 L226 120" stroke="#3b82f6" strokeWidth="2" fill="none" opacity="0.4" />
+                    <path d="M380 80 L410 65 L406 70 M410 65 L406 60" stroke="#1d4ed8" strokeWidth="2" fill="none" opacity="0.5" />
+                    <path d="M200 140 L230 125 L226 130 M230 125 L226 120" stroke="#2563eb" strokeWidth="2" fill="none" opacity="0.5" />
                   </svg>
                 </div>
                 
