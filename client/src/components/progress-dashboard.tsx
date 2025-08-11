@@ -18,19 +18,19 @@ export default function ProgressDashboard() {
           {/* Stats Grid */}
           <div className="stats-grid">
             <div className="stat-card warning">
-              <div className="stat-number">48</div>
+              <div className="stat-number">18</div>
               <div className="stat-label">Pending Review</div>
             </div>
             <div className="stat-card primary">
-              <div className="stat-number">0</div>
+              <div className="stat-number">7</div>
               <div className="stat-label">Under Review</div>
             </div>
             <div className="stat-card success">
-              <div className="stat-number">156</div>
-              <div className="stat-label">Expert Enhanced</div>
+              <div className="stat-number">35</div>
+              <div className="stat-label">Delivered</div>
             </div>
             <div className="stat-card primary">
-              <div className="stat-number">204</div>
+              <div className="stat-number">60</div>
               <div className="stat-label">Total Reports</div>
             </div>
           </div>
