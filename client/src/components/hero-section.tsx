@@ -65,7 +65,7 @@ export function HeroSection() {
             <div className="hero-stats-section order-4 xl:order-4">
               <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto xl:mx-0">
                 <div className="text-center xl:text-left">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">20+</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">30+</div>
                   <p className="text-sm text-muted-foreground">Years M&A Experience</p>
                 </div>
                 <div className="text-center xl:text-left">
