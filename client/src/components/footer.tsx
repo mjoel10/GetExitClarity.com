@@ -21,8 +21,8 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-          gap: '2.5rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+          gap: '2rem',
           marginBottom: '3rem'
         }}>
           {/* Brand Column */}
