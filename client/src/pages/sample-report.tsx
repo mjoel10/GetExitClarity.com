@@ -183,29 +183,20 @@ export default function SampleReport() {
                           {/* Status indicators with progress bars */}
                           <div className="flex items-center justify-between">
                             <div className="text-xs text-gray-600">Financial Performance</div>
-                            <div className="flex items-center gap-2">
-                              <div className="w-16 h-1.5 bg-gray-200 rounded-full">
-                                <div className="h-full bg-green-500 rounded-full" style={{width: "85%"}}></div>
-                              </div>
-                              <span className="text-xs font-semibold text-green-600">GO</span>
+                            <div className="w-16 h-1.5 bg-gray-200 rounded-full">
+                              <div className="h-full bg-green-500 rounded-full" style={{width: "85%"}}></div>
                             </div>
                           </div>
                           <div className="flex items-center justify-between">
                             <div className="text-xs text-gray-600">Market Position</div>
-                            <div className="flex items-center gap-2">
-                              <div className="w-16 h-1.5 bg-gray-200 rounded-full">
-                                <div className="h-full bg-blue-500 rounded-full" style={{width: "78%"}}></div>
-                              </div>
-                              <span className="text-xs font-semibold text-blue-600">GO</span>
+                            <div className="w-16 h-1.5 bg-gray-200 rounded-full">
+                              <div className="h-full bg-blue-500 rounded-full" style={{width: "78%"}}></div>
                             </div>
                           </div>
                           <div className="flex items-center justify-between">
                             <div className="text-xs text-gray-600">Operations</div>
-                            <div className="flex items-center gap-2">
-                              <div className="w-16 h-1.5 bg-gray-200 rounded-full">
-                                <div className="h-full bg-yellow-500 rounded-full" style={{width: "65%"}}></div>
-                              </div>
-                              <span className="text-xs font-semibold text-yellow-600">FIX</span>
+                            <div className="w-16 h-1.5 bg-gray-200 rounded-full">
+                              <div className="h-full bg-yellow-500 rounded-full" style={{width: "65%"}}></div>
                             </div>
                           </div>
                         </div>
