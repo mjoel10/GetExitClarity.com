@@ -1,243 +1,59 @@
 # ExitClarity Landing Page
 
 ## Overview
-
-This is a React-based landing page for ExitClarity, a B2B SaaS platform that helps M&A professionals and business owners assess exit readiness. The application features a modern, responsive design built with React, TypeScript, and Tailwind CSS, with a Node.js/Express backend for handling demo requests.
-
-## Recent Changes
-
-### January 2025 - M&A Firms Page Content Refinements and Messaging Updates
-- **Features Section Updates**: Changed "Scale Your Practice" to "Scale Your Firm", "professional-grade" to "comprehensive" reporting, "Deal Flow Intelligence" to "Centralized Tracking"
-- **Authority Messaging**: Updated "30+ Years of M&A Wisdom" to "Unbiased Value for Your Prospects" with refined experience positioning
-- **Scoring Enhancement**: Changed "Client Success Accelerator" to "Benchmarked Scoring" with emphasis on objective, data-backed assessments
-- **Pipeline Terminology**: Updated "Transform Your Deal Pipeline" to "Transform Your Deal Funnel" for improved conversion language
-- **Client Relationship Context**: Added specificity with "Lost deals after years of client relationship building" and added realistic prospect quote
-- **Engagement Language**: Enhanced "With ExitClarity" section with action-oriented verbs like "Demonstrate", "Gain", and "Be their first call"
-- **Firm Consistency**: Updated "What This Means for Your Practice" to "What This Means for Your Firm" throughout all components
-- **Timeline Messaging**: Changed "2-3 years" to "months and years" for more realistic engagement expectations
-- **Process Language**: Updated "Systematic" to "Standardized" documentation in Enhanced Deal Preparation section
-- **Benefits Optimization**: Changed "Larger Average Deal Sizes" to "Improved Deal Prep" and "Reduced Development Costs" to "Lower Business Development Costs"
-- **Scalability Focus**: Replaced "systematic" with "scalable" across prospect evaluation and qualification descriptions
-- **Final CTA Update**: Changed "systematized" to "scaled" in hero CTA section for consistent messaging throughout M&A Firms page
-
-### January 2025 - Business Owners Page Content Updates and M&A Firms Text Refinements
-- **Benefits List Enhancement**: Added "Avoid making mistakes that will cost you money" benefit to Business Owners hero section
-- **Process Description Update**: Enhanced ExitClarity process with "informed by 30+ years of business ownership and M&A experience" positioning
-- **Report Length Standardization**: Updated all references from "15-20 page" to "20-25 page" strategic report across Business Owners page
-- **Common Exit Challenges Addition**: Added new "Lack of Experience & Guidance" challenge card with specific messaging about advisor selection risks
-- **Expert Guidance Refinement**: Updated to "Access insights driven by 30+ years of business ownership and sell-side/buy-side M&A expertise before you commit to consulting engagements"
-- **M&A Firms CTA Cleanup**: Removed duplicate "their" from final CTA text for better flow
-- **White-Label Authority Building**: Updated sub-text to "Co-branded reports that position your firm alongside ExitClarity as trusted experts"
-
-### January 2025 - Complete Contact Form Implementation and CTA Enhancement
-- **Contact Form Success Screen**: Implemented thank you confirmation with green checkmark and "Send Another Message" option
-- **Email Notification System**: Full SendGrid integration with domain authentication for instant notifications to info@exitclarity.io
-- **CORS Resolution**: Fixed cross-origin requests between frontend and backend for seamless form submissions
-- **Database Integration**: All contact form submissions save to PostgreSQL with automatic email notifications
-- **CTA Button Enhancement**: Increased size and prominence of CTA buttons on M&A Firms page with larger padding and text
-- **Button Spacing Optimization**: Adjusted spacing between benefits section and CTAs, and between CTAs and footer for better visual hierarchy
-- **Blue Background Button Fix**: Resolved contrast issues in Enhanced Deal Preparation section with proper button styling for dark backgrounds
-- **Hero CTA Section**: Added professional hero CTA section to M&A Firms page matching Business Owners page style with M&A-specific messaging
-- **Lead Tracking**: Complete lead capture system operational for both sample report and contact form submissions
-- **OpenGraph Social Sharing**: Added comprehensive OpenGraph meta tags with professional platform interface image for enhanced social media sharing
-- **Responsive CTA Button Fix**: Fixed homepage CTA buttons to prevent overflow on medium screens by changing breakpoint from sm to lg, ensuring buttons stack vertically until large screens and stay within container boundaries
-- **Business Case ROI Component Layout Fix**: Resolved column spacing issues in M&A Firms page by converting from grid to flexbox layout, achieving optimal desktop spacing with lg:gap-6 and lg:max-w-5xl while maintaining mobile responsiveness
-- **Timeline Mobile Responsiveness**: Fixed ExitClarity Process timeline on Business Owners page by implementing dual layouts - mobile uses left-aligned vertical line with horizontal step cards, desktop preserves original alternating design with centered timeline
-- **Assessment CTA Button Integration**: Made "Get Your Complete Assessment" button in assessment visual clickable with proper navigation to resources page and smooth scroll-to-top functionality
-- **View Sample Report CTA Fix**: Fixed "View Sample Report" button to properly navigate to resources page instead of 404 error, ensuring both CTA buttons work seamlessly
-- **Complete Sample Report Button Fix**: Fixed all remaining "View Sample Report" and "Download Sample Report" buttons throughout Business Owners page to properly navigate to resources page with smooth scroll-to-top
-- **Navigation Scroll-to-Top Fix**: Updated all header navigation elements (desktop, mobile, dropdown) to scroll to top of new page when clicked, ensuring seamless user experience
-- **CTA Button Responsive Fix**: Changed homepage CTA button breakpoint from lg to xl (1280px) to prevent cramping at narrow desktop widths, ensuring buttons stack properly until extra-large screens
-- **Solution Section CTA Addition**: Added dual CTA buttons to "A Readiness Engine That Works for Both Sides" section with same responsive behavior and navigation functionality
-
-### January 2025 - Footer Navigation Enhancement and Resources Page Visual Fix
-- **Footer Scroll-to-Top**: Added smooth scroll-to-top functionality to all footer links (Navigation and Legal sections)
-- **Resources Page Visual Fix**: Removed crooked rotation effect from sample report preview for professional alignment
-- **User Experience**: All footer links now navigate to correct pages and automatically scroll to the top
-- **Visual Consistency**: Sample report preview displays straight and properly aligned across all devices
-
-### January 2025 - Security Page Complete Content Update and Icon Optimization
-- **Complete Content Restructuring**: Updated security page with new numbered format (1-10 sections) featuring concise, professional content structure
-- **Icon Diversity Enhancement**: Replaced repetitive Lock and Eye icons with diverse, contextually appropriate icons (Database, KeyRound, FileCheck, Globe, Mail, etc.)
-- **Visual Consistency**: Maintained professional blue dot bullet styling while eliminating formatting inconsistencies
-- **Content Optimization**: Streamlined security messaging with cleaner section headers and improved readability
-- **Layout Fix**: Resolved white space issue on business owners page by adjusting padding to create seamless header-to-hero flow
-
-### January 2025 - Hero MacBook Visual Enhancement and Assessment Interface Optimization
-- **Hero MacBook Tilt Removal**: Eliminated 3D tilt angle and entry spin animations for clean, professional flat appearance with simple fade-in
-- **Sophisticated Dashboard Elements**: Added time remaining indicator ("Est. time remaining: 8 min") with pulsing green dot animation
-- **Enhanced Assessment Details**: Integrated detailed information in current assessment item showing "Experience Level: First-time seller" and "Advisory Team: Not assembled" with color-coded status indicators
-- **Locked Assessment View**: Fixed assessment visual at optimal position showing progression from completed steps through current detailed analysis to upcoming steps
-- **Header Optimization**: Reduced Exit Readiness Assessment header size (20px to 16px) and spacing for maximum visual real estate
-- **Logo Sizing**: Optimized dashboard logo from 130px to 100px width for better visual balance in MacBook interface
-- **Visual Storytelling**: Created compelling narrative showing assessment progress, detailed insights, and professional interface without requiring scrolling
-
-### January 2025 - Interactive Assessment Features and Content Restructuring
-- **Interactive Tooltips**: Added hover tooltips to all 11 Critical Assessment Factors with detailed professional descriptions and smooth animations
-- **Content Flow Optimization**: Replaced "What You'll Receive" section with "Common Exit Challenges" section for better problem-solution flow
-- **Visual Contrast Enhancement**: Redesigned sections with alternating white and blue backgrounds for optimal visual hierarchy
-- **Layout Fixes**: Corrected wave effects and tilted cards across all three dynamic sections for professional appearance
-
-### January 2025 - ExitClarity Sample Report PDF Integration
-- **PDF Download Functionality**: Integrated actual ExitClarity Sample Report PDF file for download when users complete the sample report form
-- **Lead Capture Enhancement**: Users now provide contact information (name, email, company, audience type) before accessing the PDF download
-- **Database Persistence**: All sample report requests are saved to PostgreSQL database with audience type tracking
-- **User Experience**: Streamlined download process with immediate PDF download after form submission plus success notifications
-
-### January 2025 - Hero Section Mobile Responsive Implementation
-- **Mobile Layout Reordering**: Implemented different content flow for mobile vs desktop in hero section
-- **Desktop Layout**: Maintained original two-column grid (left: text content, right: MacBook visual)
-- **Mobile Layout**: Reordered to Headlines → MacBook Visual → CTAs → Stats for better engagement
-- **Conditional Rendering**: Used lg:hidden and hidden lg:block for platform-specific MacBook positioning
-- **Responsive MacBook Scaling**: Desktop 720px → Tablet 600px → Mobile 400px with aspect-ratio preservation
-- **Assessment Interface Optimization**: Scaled text, padding, and elements proportionally for mobile readability
-- **Assessment Complete Indicator**: Adjusted positioning across breakpoints for optimal mobile experience
-- **Content Flow Enhancement**: MacBook visual positioned between subtext and CTAs on mobile for visual engagement
-- **Badge Cleanup**: Removed duplicate "30+ Years M&A Experience" badge from hero section top for cleaner layout
-
-### January 2025 - Navigation System Implementation and Layout Refinements  
-- **Navigation Bar**: Implemented persistent fixed navigation with ExitClarity logo, centered menu items, and "Get Started" CTA
-- **Menu Structure**: Added Home, Platform (with dropdown for Business Owners/M&A Firms), About, Resources, and Contact
-- **Dropdown Functionality**: Created smooth Platform dropdown with hover/click interactions and click-outside closing
-- **Routing System**: Added complete routing with placeholder pages for all navigation sections
-- **Mobile Responsive**: Implemented hamburger menu for mobile devices with proper responsive behavior
-- **Calendly Integration**: "Get Started" button links to external Calendly booking page
-- **Logo Refinement**: Removed blue "ExitClarity" text from navigation, keeping only logo image
-- **Centered Layout**: Positioned navigation menu items in center of page with logo left, CTA right
-- **Layout Consistency**: Matched navigation container width to page content using consistent container class
-- **Logo Standardization**: Standardized ExitClarity logo sizing across all components to 24px height with auto width
-- **Strategic Report**: Removed purple "ExitClarity" text from strategic report header for cleaner appearance
-- **Dashboard Layout**: Optimized ProgressDashboard to be shorter and wider (720px vs 520px) for better space utilization
-- **Header Optimization**: Reduced strategic report header padding for more compact, professional appearance
-
-### January 2025 - Complete Content Integration and Styling Updates
-- **Content Integration**: Updated all components with exact messaging from user-provided content file
-- **Hero Section**: Implemented exact headlines "Turn Exit Readiness Into High-Confidence Deals" with proper subheading
-- **Solution Section**: Updated with comprehensive dual-audience messaging for M&A professionals and business owners
-- **CTA Section**: Enhanced with specific benefits lists and co-brand strategic reports messaging
-- **Testimonial Section**: Redesigned with professional styling using CSS variables and primary color scheme
-- **How It Works**: Added comprehensive 3-step process section with proper component integration
-- **Landing Page**: Complete component integration with proper ordering and background styling
-- **Color System**: Resolved black/white styling issue by fixing Tailwind configuration HSL format
-- **Result**: Professional blue color scheme displays correctly with primary color `hsl(218 100% 25%)`
+This project is a React-based landing page for ExitClarity, a B2B SaaS platform designed to assist M&A professionals and business owners in assessing exit readiness. It features a modern, responsive design built with React, TypeScript, and Tailwind CSS, complemented by a Node.js/Express backend for managing demo requests. The platform aims to provide unbiased value, standardized documentation, and improved deal preparation, ultimately transforming deal funnels and enhancing client relationships in the M&A space.
 
 ## User Preferences
-
 Preferred communication style: Simple, everyday language.
 
 ## System Architecture
 
 ### Frontend Architecture
 - **Framework**: React 18 with TypeScript
-- **Styling**: Tailwind CSS with shadcn/ui component library
-- **State Management**: TanStack Query for server state management
-- **Routing**: Wouter for lightweight client-side routing
-- **Animations**: Framer Motion for smooth transitions and interactions
-- **Build Tool**: Vite for fast development and optimized builds
+- **Styling**: Tailwind CSS with shadcn/ui component library, using a professional blue color scheme (hsl(218 100% 25%)).
+- **State Management**: TanStack Query for server state.
+- **Routing**: Wouter for lightweight client-side routing.
+- **Animations**: Framer Motion for smooth transitions and interactions, including scroll-triggered animations.
+- **Build Tool**: Vite for fast development and optimized builds.
+- **UI/UX Decisions**: Responsive design with a mobile-first approach, featuring clear visual hierarchy, alternating white and blue backgrounds for sections, professional alignment of visuals, and optimized element sizing for various screen sizes. Interactive elements like hover tooltips and animated assessment indicators are used.
 
 ### Backend Architecture
 - **Runtime**: Node.js with Express.js
 - **Language**: TypeScript with ESM modules
 - **Database**: PostgreSQL (configured) with Drizzle ORM
-- **Session Storage**: In-memory storage (development) with PostgreSQL session store support
-- **API**: RESTful endpoints for demo request handling
+- **Session Storage**: In-memory (development) with PostgreSQL session store support
+- **API**: RESTful endpoints for handling demo requests, including lead capture for sample reports and contact forms.
 
-## Key Components
-
-### Frontend Components
-1. **Landing Page Sections**:
-   - Hero section with primary CTAs
-   - Problem identification section
-   - Solution presentation (dual audience: M&A professionals and business owners)
-   - How it works (3-step process)
-   - Platform features showcase
-   - Owner benefits section
-   - Testimonials with success metrics
-   - Benefits comparison section
-   - Final CTA with form modal
-
-2. **UI Components**: Comprehensive shadcn/ui component library including:
-   - Forms with validation (react-hook-form + zod)
-   - Dialogs and modals
-   - Navigation components
-   - Data display components
-   - Interactive elements
-
-3. **Core Features**:
-   - Responsive design with mobile-first approach
-   - Smooth scrolling navigation
-   - Contact form with multiple request types (demo, sample report, assessment)
-   - Toast notifications for user feedback
-   - Animated sections with scroll-triggered animations
-
-### Backend Components
-1. **API Endpoints**:
-   - `POST /api/demo-request` - Create new demo requests
-   - `GET /api/demo-requests` - Retrieve all demo requests (admin)
-   - `PATCH /api/demo-request/:id/contacted` - Update contact status
-
-2. **Data Models**:
-   - Users table (basic authentication structure)
-   - Demo requests table with contact tracking
-   - Request types: demo, sample_report, assessment
-
-3. **Storage Layer**:
-   - Abstract storage interface for flexibility
-   - In-memory implementation for development
-   - PostgreSQL configuration ready for production
-
-## Data Flow
-
-1. **User Interaction**: Users interact with the landing page, scrolling through sections and accessing information
-2. **Form Submission**: Users submit demo requests through modal forms
-3. **API Processing**: Backend validates and stores requests using Zod schemas
-4. **Database Storage**: Requests are stored with timestamps and contact status
-5. **Admin Management**: Admin endpoints allow tracking and updating request status
+### Core Features
+- **Landing Page Sections**: Includes Hero, Problem Identification, Solution (dual audience), How It Works (3-step process), Platform Features, Owner Benefits, Testimonials, Benefits Comparison, and a Final CTA with form modal.
+- **UI Components**: Utilizes shadcn/ui for forms (with react-hook-form + zod validation), dialogs, navigation, and data display.
+- **Contact Forms**: Comprehensive contact form implementation with success screens, email notifications via SendGrid, and database integration for submissions. Supports multiple request types (demo, sample report, assessment).
+- **Navigation**: Persistent fixed navigation bar with logo, centered menu items, and "Get Started" CTA (linking to Calendly). Includes dropdowns and mobile hamburger menu.
+- **Visuals**: Enhanced hero section with professional, flat MacBook visual displaying assessment progress. Integration of actual ExitClarity Sample Report PDF for download after form submission.
+- **Security Page**: Structured content with diverse and contextually appropriate icons.
 
 ## External Dependencies
 
-### Frontend Dependencies
-- **@radix-ui/react-***: Headless UI components for accessibility
-- **@tanstack/react-query**: Server state management
-- **framer-motion**: Animation library
-- **react-hook-form**: Form handling and validation
-- **zod**: Schema validation
-- **tailwindcss**: Utility-first CSS framework
-- **lucide-react**: Icon library
+### Frontend
+- **@radix-ui/react-***: Headless UI components.
+- **@tanstack/react-query**: Server state management.
+- **framer-motion**: Animation library.
+- **react-hook-form**: Form handling and validation.
+- **zod**: Schema validation.
+- **tailwindcss**: CSS framework.
+- **lucide-react**: Icon library.
 
-### Backend Dependencies
-- **express**: Web framework
-- **drizzle-orm**: Type-safe ORM
-- **@neondatabase/serverless**: PostgreSQL driver
-- **connect-pg-simple**: PostgreSQL session store
-- **zod**: Schema validation (shared with frontend)
+### Backend
+- **express**: Web framework.
+- **drizzle-orm**: Type-safe ORM.
+- **@neondatabase/serverless**: PostgreSQL driver.
+- **connect-pg-simple**: PostgreSQL session store.
+- **zod**: Schema validation.
+- **SendGrid**: Email notification system.
 
-### Development Dependencies
-- **vite**: Build tool and dev server
-- **tsx**: TypeScript execution
-- **esbuild**: JavaScript bundler for production builds
-
-## Deployment Strategy
-
-### Build Process
-1. **Frontend Build**: Vite builds the React application to `dist/public`
-2. **Backend Build**: esbuild bundles the Express server to `dist/index.js`
-3. **Database**: Drizzle migrations manage schema changes
-
-### Environment Configuration
-- **Development**: Uses tsx for hot reloading and Vite dev server
-- **Production**: Serves built static files from Express server
-- **Database**: PostgreSQL connection via `DATABASE_URL` environment variable
-
-### Scripts
-- `dev`: Development server with hot reloading
-- `build`: Production build for both frontend and backend
-- `start`: Production server
-- `db:push`: Apply database schema changes
-
-### Platform Integration
-- **Replit**: Configured with custom plugins for development environment
-- **Neon Database**: PostgreSQL hosting integration
-- **Static Assets**: Served directly by Express in production
-
-The application is designed to be easily deployable to various platforms while maintaining a clean separation between frontend and backend concerns. The modular architecture allows for easy scaling and maintenance as the platform grows.
+### Development & Deployment
+- **vite**: Frontend build tool and dev server.
+- **tsx**: TypeScript execution.
+- **esbuild**: Backend bundler.
+- **Neon Database**: PostgreSQL hosting.
+- **Calendly**: External booking page integration for "Get Started" CTA.
