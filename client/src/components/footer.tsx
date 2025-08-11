@@ -387,14 +387,6 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <p style={{
-            color: 'rgba(255, 255, 255, 0.5)',
-            fontSize: '0.8rem',
-            textAlign: 'center',
-            margin: '0'
-          }}>
-            Built for M&A professionals and business owners seeking clarity in their exit strategy.
-          </p>
         </div>
       </div>
     </footer>
