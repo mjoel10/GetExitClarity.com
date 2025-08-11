@@ -53,7 +53,8 @@ function App() {
   // Initialize Google Analytics when app loads
   useEffect(() => {
     try {
-      initGA();
+      // Temporarily disabled GA to resolve runtime error
+      // initGA();
     } catch (error) {
       console.warn('Google Analytics initialization failed:', error);
     }
