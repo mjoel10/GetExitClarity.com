@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, FileText, ArrowRight } from "lucide-react";
+import { Calendar, FileText, ArrowRight, Users } from "lucide-react";
 import HeroMacBook from "./hero-macbook";
 import { Link } from "wouter";
 
@@ -28,9 +28,9 @@ export function HeroSection() {
             <div className="hero-cta-section order-2 xl:order-3">
               <div className="flex flex-col sm:flex-row gap-4 justify-center xl:justify-start mb-12">
                 <Button variant="hero" size="xl" className="group" asChild>
-                  <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
-                    <Calendar className="mr-2 h-5 w-5" />
-                    Schedule Demo
+                  <a href="/trial-request">
+                    <Users className="mr-2 h-5 w-5" />
+                    Try It with a Client
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </a>
                 </Button>

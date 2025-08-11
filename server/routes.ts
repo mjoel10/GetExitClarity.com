@@ -1,9 +1,9 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertDemoRequestSchema } from "@shared/schema";
+import { insertDemoRequestSchema, insertTrialRequestSchema } from "@shared/schema";
 import { z } from "zod";
-import { sendNotificationEmail } from "./email";
+import { sendNotificationEmail, sendTrialRequestNotification, sendTrialRequestAutoReply } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Demo request endpoint
@@ -17,9 +17,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         name: validatedData.name,
         email: validatedData.email,
         company: validatedData.company || 'Not provided',
-        requestType: validatedData.requestType,
-        audienceType: validatedData.audienceType,
-        message: validatedData.message
+        requestType: validatedData.requestType as "demo" | "sample_report" | "assessment",
+        message: validatedData.message || undefined
       });
       
       res.json({ success: true, data: demoRequest });
@@ -58,6 +57,62 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       res.json({ success: true, data: updatedRequest });
+    } catch (error) {
+      res.status(500).json({ success: false, error: "Internal server error" });
+    }
+  });
+
+  // Trial request endpoint
+  app.post("/api/trial-requests", async (req, res) => {
+    try {
+      const validatedData = insertTrialRequestSchema.parse(req.body);
+      
+      // Check for duplicates
+      const emailDomain = validatedData.email.split('@')[1];
+      const existingRequest = await storage.checkDuplicateTrialRequest(emailDomain, 30);
+      
+      let status = 'new';
+      if (existingRequest) {
+        status = 'duplicate';
+      }
+
+      const trialRequest = await storage.createTrialRequest(validatedData);
+      
+      // Send email notifications
+      const emailData = {
+        firstName: validatedData.firstName,
+        lastName: validatedData.lastName,
+        email: validatedData.email,
+        firmName: validatedData.firmName,
+        role: validatedData.role,
+        prospectType: validatedData.prospectType,
+        seenBefore: validatedData.seenBefore,
+        timing: validatedData.timing,
+        notes: validatedData.notes || undefined
+      };
+
+      // Send notification to admin
+      await sendTrialRequestNotification(emailData);
+      
+      // Send auto-reply to user
+      await sendTrialRequestAutoReply(emailData);
+      
+      res.json({ success: true, data: trialRequest });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        res.status(400).json({ success: false, error: "Invalid request data", details: error.errors });
+      } else {
+        console.error('Trial request error:', error);
+        res.status(500).json({ success: false, error: "Internal server error" });
+      }
+    }
+  });
+
+  // Get all trial requests (for admin purposes)
+  app.get("/api/trial-requests", async (req, res) => {
+    try {
+      const requests = await storage.getTrialRequests();
+      res.json({ success: true, data: requests });
     } catch (error) {
       res.status(500).json({ success: false, error: "Internal server error" });
     }

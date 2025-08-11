@@ -155,6 +155,67 @@ export default function Footer() {
             </nav>
           </div>
 
+          {/* Get Started Column */}
+          <div>
+            <h4 style={{
+              fontSize: '1.125rem',
+              fontWeight: '600',
+              marginBottom: '1.5rem',
+              color: 'white'
+            }}>
+              Get Started
+            </h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <Link 
+                href="/trial-request"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+              >
+                Try It with a Client
+              </Link>
+              <Link 
+                href="/sample-report"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+              >
+                View Sample Report
+              </Link>
+              <a 
+                href="https://calendly.com/exitclarity-info/30min" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+              >
+                Schedule Demo
+              </a>
+            </div>
+          </div>
+
           {/* Contact Column */}
           <div>
             <h4 style={{
@@ -181,24 +242,6 @@ export default function Footer() {
               >
                 <Mail style={{ width: '1rem', height: '1rem', marginRight: '0.5rem' }} />
                 info@exitclarity.io
-              </a>
-              <a 
-                href="https://calendly.com/exitclarity-info/30min" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
-              >
-                <Calendar style={{ width: '1rem', height: '1rem', marginRight: '0.5rem' }} />
-                Schedule a Call
               </a>
               <a 
                 href="https://linkedin.com/company/exitclarity" 

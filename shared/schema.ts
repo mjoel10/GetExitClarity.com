@@ -1,4 +1,4 @@
-import { pgTable, text, serial, timestamp, boolean } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, timestamp, boolean, uuid } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -20,6 +20,26 @@ export const demoRequests = pgTable("demo_requests", {
   contacted: boolean("contacted").default(false),
 });
 
+export const trialRequests = pgTable("trial_requests", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  firstName: text("first_name").notNull(),
+  lastName: text("last_name").notNull(),
+  email: text("email").notNull(),
+  emailDomain: text("email_domain").notNull(),
+  firmName: text("firm_name").notNull(),
+  role: text("role").notNull(),
+  prospectType: text("prospect_type").notNull(),
+  seenBefore: text("seen_before").notNull(), // 'yes' or 'no'
+  timing: text("timing").notNull(),
+  notes: text("notes"),
+  utmSource: text("utm_source"),
+  utmMedium: text("utm_medium"),
+  utmCampaign: text("utm_campaign"),
+  pageReferrer: text("page_referrer"),
+  status: text("status").notNull().default("new"), // 'new', 'duplicate', 'processed'
+});
+
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
@@ -34,7 +54,15 @@ export const insertDemoRequestSchema = createInsertSchema(demoRequests).pick({
   requestType: true,
 });
 
+export const insertTrialRequestSchema = createInsertSchema(trialRequests).omit({
+  id: true,
+  createdAt: true,
+  emailDomain: true,
+});
+
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type DemoRequest = typeof demoRequests.$inferSelect;
 export type InsertDemoRequest = z.infer<typeof insertDemoRequestSchema>;
+export type TrialRequest = typeof trialRequests.$inferSelect;
+export type InsertTrialRequest = z.infer<typeof insertTrialRequestSchema>;

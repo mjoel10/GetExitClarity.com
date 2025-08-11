@@ -1,209 +1,345 @@
 import { useState } from "react";
-// import { Helmet } from "react-helmet-async";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useMutation } from "@tanstack/react-query";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Users, Target, Shield } from "lucide-react";
+import { CheckCircle, Building, Users, Clock, Shield } from "lucide-react";
+import { useMeta } from "@/hooks/use-meta";
+import { apiRequest } from "@/lib/queryClient";
+
+const trialRequestSchema = z.object({
+  firstName: z.string().min(1, "First name is required"),
+  lastName: z.string().min(1, "Last name is required"),
+  email: z.string().email("Valid email is required").refine((email) => {
+    const domain = email.split('@')[1];
+    const freeEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com', 'icloud.com'];
+    return !freeEmailDomains.includes(domain);
+  }, "Please use your business email address"),
+  firmName: z.string().min(1, "Firm name is required"),
+  role: z.string().min(1, "Role is required"),
+  prospectType: z.string().min(1, "Prospect type is required"),
+  seenBefore: z.string().min(1, "Please select an option"),
+  timing: z.string().min(1, "Timing is required"),
+  notes: z.string().optional(),
+});
+
+type TrialRequestForm = z.infer<typeof trialRequestSchema>;
 
 export default function TrialRequest() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    role: "",
-    phone: "",
-    message: ""
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useMeta({
+    title: "Request a Client Trial - ExitClarity",
+    description: "Request enterprise access to run ExitClarity on one of your prospects. No obligation, no credit card required.",
+    ogTitle: "Request a Client Trial - ExitClarity",
+    ogDescription: "Request enterprise access to run ExitClarity on one of your prospects. No obligation, no credit card required."
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Trial request submitted:", formData);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue,
+    watch,
+    reset
+  } = useForm<TrialRequestForm>({
+    resolver: zodResolver(trialRequestSchema)
+  });
+
+  const mutation = useMutation({
+    mutationFn: async (data: TrialRequestForm) => {
+      return apiRequest('/api/trial-requests', {
+        method: 'POST',
+        body: JSON.stringify({
+          ...data,
+          utmSource: new URLSearchParams(window.location.search).get('utm_source'),
+          utmMedium: new URLSearchParams(window.location.search).get('utm_medium'),
+          utmCampaign: new URLSearchParams(window.location.search).get('utm_campaign'),
+          pageReferrer: document.referrer || null
+        })
+      });
+    },
+    onSuccess: () => {
+      setIsSubmitted(true);
+      reset();
+    }
+  });
+
+  const onSubmit = (data: TrialRequestForm) => {
+    mutation.mutate(data);
   };
 
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }));
-  };
+  if (isSubmitted) {
+    return (
+      <>
+        <div className="min-h-screen bg-white">
+          <Header />
+          
+          <main className="pt-16 sm:pt-20">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle className="w-8 h-8 text-green-600" />
+                </div>
+                <h1 className="text-3xl font-bold text-gray-900 mb-4">
+                  Thank You for Your Request
+                </h1>
+                <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                  We'll review and confirm access for your firm within 1-3 business days.
+                </p>
+                <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 max-w-xl mx-auto">
+                  <p className="text-blue-800 mb-4">
+                    In the meantime, you can explore what your clients will see:
+                  </p>
+                  <Button asChild>
+                    <a href="/sample-report">View Sample Report</a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </main>
+          
+          <Footer />
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
-
       <div className="min-h-screen bg-white">
         <Header />
         
         <main className="pt-16 sm:pt-20">
           {/* Hero Section */}
-          <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-white">
+          <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/5 via-blue-50 to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-              <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-12">
+              <div className="text-center max-w-4xl mx-auto mb-12">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-                  Request Your Client Trial
+                  Request a Client Trial
                 </h1>
-                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed px-2">
-                  Experience how ExitClarity transforms M&A prospect preparation with your actual clients
+                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                  Run ExitClarity on one of your prospects and see the full report. We'll confirm access for your firm within 1-3 business days.
                 </p>
               </div>
+            </div>
+          </section>
 
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-                {/* Form */}
-                <Card className="shadow-lg order-2 lg:order-1">
-                  <CardHeader className="pb-4">
-                    <CardTitle className="text-xl sm:text-2xl">Get Started Today</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-                      <div>
-                        <Label htmlFor="name">Full Name *</Label>
-                        <Input
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) => handleInputChange("name", e.target.value)}
-                          required
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="email">Email Address *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => handleInputChange("email", e.target.value)}
-                          required
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="company">Company *</Label>
-                        <Input
-                          id="company"
-                          value={formData.company}
-                          onChange={(e) => handleInputChange("company", e.target.value)}
-                          required
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="role">Role *</Label>
-                        <Select onValueChange={(value) => handleInputChange("role", value)}>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select your role" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="investment-banker">Investment Banker</SelectItem>
-                            <SelectItem value="business-broker">Business Broker</SelectItem>
-                            <SelectItem value="ma-advisor">M&A Advisor</SelectItem>
-                            <SelectItem value="financial-advisor">Financial Advisor</SelectItem>
-                            <SelectItem value="consultant">Management Consultant</SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="phone">Phone Number</Label>
-                        <Input
-                          id="phone"
-                          value={formData.phone}
-                          onChange={(e) => handleInputChange("phone", e.target.value)}
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="message">Tell us about your M&A practice</Label>
-                        <Textarea
-                          id="message"
-                          rows={4}
-                          value={formData.message}
-                          onChange={(e) => handleInputChange("message", e.target.value)}
-                          placeholder="How many deals do you typically work on per year? What's your average deal size? Any specific challenges you're facing with prospect preparation?"
-                        />
-                      </div>
-
-                      <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
-                        Request Trial Access
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
-
-                {/* Benefits */}
-                <div className="space-y-6">
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                      What You'll Get
-                    </h2>
-                    
+          {/* Form Section */}
+          <section className="py-12 sm:py-16 lg:py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+              <div className="grid lg:grid-cols-3 gap-12">
+                {/* Left Column - Benefits */}
+                <div className="lg:col-span-1">
+                  <div className="sticky top-8">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-6">What You Get</h3>
                     <div className="space-y-4">
                       <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                        <Shield className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                         <div>
-                          <h3 className="font-semibold text-gray-900">5 Free Client Assessments</h3>
-                          <p className="text-gray-600 text-sm">Test the platform with your actual prospects</p>
+                          <p className="font-medium text-gray-900">No obligation, no credit card</p>
+                          <p className="text-sm text-gray-600">Try it risk-free with your prospects</p>
                         </div>
                       </div>
-                      
                       <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                        <Building className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                         <div>
-                          <h3 className="font-semibold text-gray-900">Complete Report Generation</h3>
-                          <p className="text-gray-600 text-sm">20-30 page comprehensive assessments</p>
+                          <p className="font-medium text-gray-900">Enterprise-only access</p>
+                          <p className="text-sm text-gray-600">Full platform features and reporting</p>
                         </div>
                       </div>
-                      
                       <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                        <Users className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
                         <div>
-                          <h3 className="font-semibold text-gray-900">Personal Onboarding</h3>
-                          <p className="text-gray-600 text-sm">30-minute setup call with our team</p>
+                          <p className="font-medium text-gray-900">Works with your M&A workflow</p>
+                          <p className="text-sm text-gray-600">Seamlessly integrates with your process</p>
                         </div>
                       </div>
-                      
                       <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                        <Clock className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
                         <div>
-                          <h3 className="font-semibold text-gray-900">Full Platform Access</h3>
-                          <p className="text-gray-600 text-sm">Dashboard, tracking, and analytics tools</p>
+                          <p className="font-medium text-gray-900">Quick turnaround</p>
+                          <p className="text-sm text-gray-600">Access confirmed within 1-3 business days</p>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
 
-                  {/* Trust Indicators */}
-                  <div className="bg-blue-50 p-6 rounded-xl">
-                    <h3 className="font-semibold text-gray-900 mb-4">Trusted By M&A Professionals</h3>
-                    <div className="grid grid-cols-3 gap-4 text-center">
-                      <div>
-                        <div className="flex items-center justify-center mb-2">
-                          <Users className="w-6 h-6 text-blue-600" />
+                {/* Right Column - Form */}
+                <div className="lg:col-span-2">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Request Access</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                        {/* Name Fields */}
+                        <div className="grid sm:grid-cols-2 gap-4">
+                          <div className="space-y-2">
+                            <Label htmlFor="firstName">First Name *</Label>
+                            <Input
+                              id="firstName"
+                              {...register("firstName")}
+                              placeholder="John"
+                            />
+                            {errors.firstName && (
+                              <p className="text-sm text-red-600">{errors.firstName.message}</p>
+                            )}
+                          </div>
+                          <div className="space-y-2">
+                            <Label htmlFor="lastName">Last Name *</Label>
+                            <Input
+                              id="lastName"
+                              {...register("lastName")}
+                              placeholder="Smith"
+                            />
+                            {errors.lastName && (
+                              <p className="text-sm text-red-600">{errors.lastName.message}</p>
+                            )}
+                          </div>
                         </div>
-                        <div className="text-2xl font-bold text-gray-900">300+</div>
-                        <div className="text-xs text-gray-600">Assessments</div>
-                      </div>
-                      <div>
-                        <div className="flex items-center justify-center mb-2">
-                          <Target className="w-6 h-6 text-blue-600" />
+
+                        {/* Email */}
+                        <div className="space-y-2">
+                          <Label htmlFor="email">Business Email *</Label>
+                          <Input
+                            id="email"
+                            type="email"
+                            {...register("email")}
+                            placeholder="john.smith@yourfirm.com"
+                          />
+                          {errors.email && (
+                            <p className="text-sm text-red-600">{errors.email.message}</p>
+                          )}
                         </div>
-                        <div className="text-2xl font-bold text-gray-900">11</div>
-                        <div className="text-xs text-gray-600">Key Factors</div>
-                      </div>
-                      <div>
-                        <div className="flex items-center justify-center mb-2">
-                          <Shield className="w-6 h-6 text-blue-600" />
+
+                        {/* Firm Name */}
+                        <div className="space-y-2">
+                          <Label htmlFor="firmName">Firm Name *</Label>
+                          <Input
+                            id="firmName"
+                            {...register("firmName")}
+                            placeholder="Your M&A Firm"
+                          />
+                          {errors.firmName && (
+                            <p className="text-sm text-red-600">{errors.firmName.message}</p>
+                          )}
                         </div>
-                        <div className="text-2xl font-bold text-gray-900">30+</div>
-                        <div className="text-xs text-gray-600">Years Experience</div>
-                      </div>
-                    </div>
-                  </div>
+
+                        {/* Role */}
+                        <div className="space-y-2">
+                          <Label>Role *</Label>
+                          <Select onValueChange={(value) => setValue("role", value)}>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select your role" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="Managing Partner">Managing Partner</SelectItem>
+                              <SelectItem value="Director/VP BD">Director/VP BD</SelectItem>
+                              <SelectItem value="Associate/Analyst">Associate/Analyst</SelectItem>
+                              <SelectItem value="Operations">Operations</SelectItem>
+                              <SelectItem value="Other">Other</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          {errors.role && (
+                            <p className="text-sm text-red-600">{errors.role.message}</p>
+                          )}
+                        </div>
+
+                        {/* Prospect Type */}
+                        <div className="space-y-2">
+                          <Label>Prospect Type *</Label>
+                          <Select onValueChange={(value) => setValue("prospectType", value)}>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select prospect type" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="Founder-led">Founder-led</SelectItem>
+                              <SelectItem value="PE-backed">PE-backed</SelectItem>
+                              <SelectItem value="Corporate carve-out">Corporate carve-out</SelectItem>
+                              <SelectItem value="Other">Other</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          {errors.prospectType && (
+                            <p className="text-sm text-red-600">{errors.prospectType.message}</p>
+                          )}
+                        </div>
+
+                        {/* Seen Before */}
+                        <div className="space-y-3">
+                          <Label>Have you seen ExitClarity used at your firm before? *</Label>
+                          <RadioGroup onValueChange={(value) => setValue("seenBefore", value)}>
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="yes" id="seen-yes" />
+                              <Label htmlFor="seen-yes">Yes</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="no" id="seen-no" />
+                              <Label htmlFor="seen-no">No</Label>
+                            </div>
+                          </RadioGroup>
+                          {errors.seenBefore && (
+                            <p className="text-sm text-red-600">{errors.seenBefore.message}</p>
+                          )}
+                        </div>
+
+                        {/* Timing */}
+                        <div className="space-y-2">
+                          <Label>Approximate Timing *</Label>
+                          <Select onValueChange={(value) => setValue("timing", value)}>
+                            <SelectTrigger>
+                              <SelectValue placeholder="When do you need this?" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="0-3 months">0-3 months</SelectItem>
+                              <SelectItem value="3-6 months">3-6 months</SelectItem>
+                              <SelectItem value="6-12 months">6-12 months</SelectItem>
+                              <SelectItem value="12+ months">12+ months</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          {errors.timing && (
+                            <p className="text-sm text-red-600">{errors.timing.message}</p>
+                          )}
+                        </div>
+
+                        {/* Notes */}
+                        <div className="space-y-2">
+                          <Label htmlFor="notes">Notes (Optional)</Label>
+                          <Textarea
+                            id="notes"
+                            {...register("notes")}
+                            placeholder="Any additional details about your needs or timeline"
+                            rows={3}
+                          />
+                        </div>
+
+                        <Button 
+                          type="submit" 
+                          className="w-full" 
+                          size="lg"
+                          disabled={mutation.isPending}
+                        >
+                          {mutation.isPending ? "Submitting..." : "Request Access"}
+                        </Button>
+
+                        {mutation.error && (
+                          <p className="text-sm text-red-600 text-center">
+                            There was an error submitting your request. Please try again.
+                          </p>
+                        )}
+                      </form>
+                    </CardContent>
+                  </Card>
                 </div>
               </div>
             </div>
