@@ -96,7 +96,7 @@ export default function Header() {
                     onClick={() => handleNavigation("/sample-report")}
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors w-full text-left"
                   >
-                    Sample Report
+                    View Sample Report
                   </button>
                 </div>
               )}
@@ -193,7 +193,7 @@ export default function Header() {
                   onClick={() => handleNavigation("/sample-report")}
                   className="block text-gray-600 hover:text-primary transition-colors pl-4 text-left"
                 >
-                  Sample Report
+                  View Sample Report
                 </button>
               </div>
               
