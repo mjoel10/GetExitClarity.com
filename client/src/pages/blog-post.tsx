@@ -80,16 +80,19 @@ Sometimes the best move is no move:
 Every unprepared exit attempt carries compounding costs:
 
 <strong>Direct Costs:</strong>
+
 - 40-80 hours of management time per failed process
 - $50,000-150,000 in advisory fees and due diligence
 - 6-12 months of distracted leadership
 
 <strong>Opportunity Costs:</strong>
+
 - Missing better buyers while chasing bad ones
 - Burning out your best people with fire drills
 - Competitors gaining ground while you're distracted
 
 <strong>Reputation Costs:</strong>
+
 - Once you're "shopped," future buyers question why you didn't sell
 - Failed processes leak to employees, customers, and competitors
 - Your advisors lose credibility taking unprepared companies to market
@@ -101,21 +104,25 @@ Modern exit planning isn't about gut feelings—it's about systematic assessment
 The most successful exits follow this progression:
 
 <strong>Phase 1: Assessment (Month 1)</strong>
+
 - Objective evaluation across 11 critical factors
 - Benchmark against actual market comparables
 - Identify GO/FIX/WAIT status with clear rationale
 
 <strong>Phase 2: Preparation (Months 2-12)</strong>
+
 - Address identified gaps systematically
 - Build institutional strength beyond the owner
 - Create the value story buyers actually care about
 
 <strong>Phase 3: Positioning (Months 13-15)</strong>
+
 - Develop strategic buyer targeting
 - Prepare management for the process
 - Build the data room proactively, not reactively
 
 <strong>Phase 4: Process (Months 16-24)</strong>
+
 - Run competitive process with qualified buyers
 - Maintain business momentum during diligence
 - Close at maximum value with minimum friction
