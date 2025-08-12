@@ -1,4 +1,5 @@
 import { useParams } from "wouter";
+import { useEffect } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
@@ -13,7 +14,7 @@ const blogPosts = {
     slug: "ultimate-exit-why-87-percent-fail",
     category: "Exit Planning",
     author: "ExitClarity Team",
-    publishedDate: "January 11, 2025",
+    publishedDate: "August 11, 2025",
     readTime: "5 min",
     excerpt: "The difference between a successful exit and a failed one isn't luck. It's preparation. And most owners aren't prepared at all.",
     featured: true,
@@ -168,6 +169,11 @@ We've distilled 30+ years of M&A expertise into a platform that gives business o
 export default function BlogPost() {
   const { slug } = useParams();
   const post = blogPosts[slug as keyof typeof blogPosts];
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [slug]);
 
   useMeta({
     title: post ? `${post.title} | ExitClarity` : "Article Not Found | ExitClarity",
