@@ -167,7 +167,7 @@ export default function TrialRequest() {
                   Try ExitClarity for Free
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                  See ExitClarity in action with your next prospect. Access will be confirmed within 1-3 business days.
+                  See ExitClarity in action with your next prospect. Your access will be confirmed within 1-3 business days.
                 </p>
               </div>
             </div>
