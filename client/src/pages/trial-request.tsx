@@ -164,10 +164,10 @@ export default function TrialRequest() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="text-center max-w-4xl mx-auto mb-12">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-                  Request a Client Trial
+                  Try ExitClarity for Free
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                  Run ExitClarity on one of your prospects and see the full report. We'll confirm access for your firm within 1-3 business days.
+                  See ExitClarity in action with your next prospect. Access will be confirmed within 1-3 business days.
                 </p>
               </div>
             </div>
