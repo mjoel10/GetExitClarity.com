@@ -292,7 +292,7 @@ export default function SampleReport() {
                       variant="outline"
                       className="border-primary text-primary hover:bg-primary hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
                     >
-                      Try ExitClarity with Your Next Prospect
+                      Try with Your Client
                       <ArrowRight className="ml-2 w-4 h-4 sm:h-5 sm:w-5" />
                     </Button>
                   </div>
