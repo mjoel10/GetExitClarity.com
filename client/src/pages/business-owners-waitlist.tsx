@@ -1,128 +1,168 @@
 import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { apiRequest } from "@/lib/queryClient";
-import { Badge } from "@/components/ui/badge";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { CheckCircle, TrendingUp, Shield, FileText, Clock, Users, Target, BarChart3, ArrowRight, Star, ChevronRight, Building, Calendar, Heart, DollarSign, Settings, RefreshCw, Download } from "lucide-react";
+import { useMeta } from "@/hooks/use-meta";
+import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Clock, 
-  Shield, 
-  TrendingUp, 
-  Download,
-  FileText,
-  Building2,
-  DollarSign,
-  Users,
-  Target,
-  BarChart3,
-  Globe,
-  Settings,
-  BookOpen,
-  AlertTriangle,
-  Lightbulb,
-  PieChart
-} from "lucide-react";
+
+const sampleReportSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  company: z.string().min(2, "Company name must be at least 2 characters"),
+  audienceType: z.enum(["ma-firm", "business-owner"], {
+    required_error: "Please select your audience type",
+  }),
+});
 
 const waitlistSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
   lastName: z.string().min(1, "Last name is required"),
-  email: z.string().email("Please enter a valid email address"),
+  email: z.string().email("Valid business email is required"),
   companyName: z.string().min(1, "Company name is required"),
-  industry: z.string().min(1, "Please select an industry"),
-  annualRevenue: z.string().min(1, "Please select annual revenue range"),
-  ebitda: z.string().min(1, "Please select EBITDA range"),
-  exitTimeline: z.string().min(1, "Please select your exit timeline"),
-  biggestConcern: z.string().min(10, "Please provide more details about your concern (at least 10 characters)")
+  industry: z.string().min(1, "Please select your industry"),
+  annualRevenue: z.string().min(1, "Please select your annual revenue range"),
+  ebitda: z.string().min(1, "Please select your EBITDA range"),
+  exitTimeline: z.string().min(1, "Please select your expected exit timeline"),
+  biggestConcern: z.string().min(10, "Please describe your biggest concern (minimum 10 characters)"),
 });
 
-const reportSchema = z.object({
-  firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().min(1, "Last name is required"),
-  email: z.string().email("Please enter a valid email address"),
-  companyName: z.string().min(1, "Company name is required")
-});
-
-type WaitlistFormData = z.infer<typeof waitlistSchema>;
-type ReportFormData = z.infer<typeof reportSchema>;
+type WaitlistForm = z.infer<typeof waitlistSchema>;
+type SampleReportFormData = z.infer<typeof sampleReportSchema>;
 
 export default function BusinessOwnersWaitlist() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isReportModalOpen, setIsReportModalOpen] = useState(false);
   const [isReportSubmitted, setIsReportSubmitted] = useState(false);
   const { toast } = useToast();
+  const queryClient = useQueryClient();
 
-  const { register, handleSubmit, setValue, formState: { errors } } = useForm<WaitlistFormData>({
+  useMeta({
+    title: "Join Early Access - Professional Exit Analysis for Business Owners | ExitClarity",
+    description: "Be first to access professional-grade exit readiness analysis. Join 500+ business owners preparing for successful exits with comprehensive assessment tools.",
+    ogTitle: "Join Early Access - Professional Exit Analysis for Business Owners",
+    ogDescription: "Be first to access professional-grade exit readiness analysis. Join 500+ business owners preparing for successful exits."
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue,
+    watch,
+    reset
+  } = useForm<WaitlistForm>({
     resolver: zodResolver(waitlistSchema)
   });
 
-  const reportForm = useForm<ReportFormData>({
-    resolver: zodResolver(reportSchema)
-  });
-
   const mutation = useMutation({
-    mutationFn: (data: WaitlistFormData) => 
-      apiRequest("/api/business-owner-waitlist", {
-        method: "POST",
-        body: JSON.stringify(data)
-      }),
+    mutationFn: async (data: WaitlistForm) => {
+      return apiRequest('POST', '/api/demo-request', {
+        name: `${data.firstName} ${data.lastName}`,
+        email: data.email,
+        company: data.companyName,
+        requestType: "waitlist",
+        additionalData: JSON.stringify({
+          industry: data.industry,
+          annualRevenue: data.annualRevenue,
+          ebitda: data.ebitda,
+          exitTimeline: data.exitTimeline,
+          biggestConcern: data.biggestConcern
+        })
+      });
+    },
     onSuccess: () => {
       setIsSubmitted(true);
-    },
-    onError: () => {
-      toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
-        variant: "destructive",
-      });
+      reset();
     }
   });
 
-  const reportMutation = useMutation({
-    mutationFn: (data: ReportFormData) => 
-      apiRequest("/api/sample-report", {
+  const onSubmit = (data: WaitlistForm) => {
+    mutation.mutate(data);
+  };
+
+  // Sample Report Form
+  const reportForm = useForm<SampleReportFormData>({
+    resolver: zodResolver(sampleReportSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      company: "",
+      audienceType: undefined,
+    },
+  });
+
+  const createDemoRequestMutation = useMutation({
+    mutationFn: async (requestData: SampleReportFormData) => {
+      const response = await fetch("/api/demo-request", {
         method: "POST",
-        body: JSON.stringify(data)
-      }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: requestData.name,
+          email: requestData.email,
+          company: requestData.company,
+          requestType: "sample_report",
+          audienceType: requestData.audienceType,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit request");
+      }
+
+      return response.json();
+    },
     onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/demo-requests"] });
+    },
+  });
+
+  const downloadPDF = () => {
+    const link = document.createElement("a");
+    link.href = "/ExitClarity-Sample-Report.pdf";
+    link.download = "ExitClarity-Sample-Report.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const onReportSubmit = async (data: SampleReportFormData) => {
+    try {
+      await createDemoRequestMutation.mutateAsync(data);
+      downloadPDF();
       setIsReportSubmitted(true);
       toast({
-        title: "Sample Report Sent!",
-        description: "Check your email for the download link.",
+        title: "Success!",
+        description: "Your sample report is downloading now!",
       });
-      
+
       setTimeout(() => {
         setIsReportModalOpen(false);
         setIsReportSubmitted(false);
         reportForm.reset();
       }, 3000);
 
-    },
-    onError: () => {
+    } catch (error) {
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
         variant: "destructive",
       });
     }
-  });
-
-  const onSubmit = (data: WaitlistFormData) => {
-    mutation.mutate(data);
-  };
-
-  const onReportSubmit = (data: ReportFormData) => {
-    reportMutation.mutate(data);
   };
 
   const handleCloseReportModal = () => {
@@ -130,64 +170,6 @@ export default function BusinessOwnersWaitlist() {
     setIsReportSubmitted(false);
     reportForm.reset();
   };
-
-  const assessmentFactors = [
-    { 
-      title: "Financial Performance", 
-      icon: <DollarSign className="w-5 h-5" />, 
-      status: "completed" as const 
-    },
-    { 
-      title: "Market Position", 
-      icon: <Target className="w-5 h-5" />, 
-      status: "completed" as const 
-    },
-    { 
-      title: "Management Team", 
-      icon: <Users className="w-5 h-5" />, 
-      status: "active" as const 
-    },
-    { 
-      title: "Operations & Systems", 
-      icon: <Settings className="w-5 h-5" />, 
-      status: "pending" as const 
-    },
-    { 
-      title: "Legal Structure", 
-      icon: <FileText className="w-5 h-5" />, 
-      status: "pending" as const 
-    },
-    { 
-      title: "Customer Base", 
-      icon: <Building2 className="w-5 h-5" />, 
-      status: "pending" as const 
-    },
-    { 
-      title: "Intellectual Property", 
-      icon: <Lightbulb className="w-5 h-5" />, 
-      status: "pending" as const 
-    },
-    { 
-      title: "Financial Records", 
-      icon: <BarChart3 className="w-5 h-5" />, 
-      status: "pending" as const 
-    },
-    { 
-      title: "Risk Assessment", 
-      icon: <AlertTriangle className="w-5 h-5" />, 
-      status: "pending" as const 
-    },
-    { 
-      title: "Growth Potential", 
-      icon: <TrendingUp className="w-5 h-5" />, 
-      status: "pending" as const 
-    },
-    { 
-      title: "Exit Strategy", 
-      icon: <PieChart className="w-5 h-5" />, 
-      status: "pending" as const 
-    }
-  ];
 
   if (isSubmitted) {
     return (
@@ -254,7 +236,104 @@ export default function BusinessOwnersWaitlist() {
             </div>
           </div>
 
-          {/* Waitlist Form Section - Moved Up Here for Better Conversion */}
+          {/* Interactive Assessment Preview */}
+          <div className="max-w-5xl mx-auto mb-20">
+            <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">
+              See What You'll Experience
+            </h2>
+            <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 border border-gray-200">
+              <div className="assessment-preview">
+                {/* Assessment Header */}
+                <div className="flex items-center justify-between mb-8">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                      <Target className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900">Exit Readiness Assessment</h3>
+                      <p className="text-sm text-gray-600">Professional Analysis in Progress</p>
+                    </div>
+                  </div>
+                  <Badge className="bg-green-100 text-green-800 border-green-200">
+                    ⏱️ 15 min remaining
+                  </Badge>
+                </div>
+
+                {/* Progress Bar */}
+                <div className="mb-8">
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="text-sm font-semibold text-gray-700">Assessment Progress</span>
+                    <span className="text-sm font-bold text-gray-900">8 of 11 Complete</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div 
+                      className="bg-gradient-to-r from-primary to-blue-600 h-3 rounded-full relative overflow-hidden" 
+                      style={{ width: '72.7%' }}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Assessment Factors Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {[
+                    { title: "Business Overview", status: "completed", icon: <Building className="w-6 h-6" /> },
+                    { title: "Exit Goals & Timeline", status: "completed", icon: <Calendar className="w-6 h-6" /> },
+                    { title: "Personal & Emotional Readiness", status: "completed", icon: <Heart className="w-6 h-6" /> },
+                    { title: "Financial Quality", status: "completed", icon: <DollarSign className="w-6 h-6" /> },
+                    { title: "Operational Maturity", status: "completed", icon: <Settings className="w-6 h-6" /> },
+                    { title: "Documentation Preparedness", status: "completed", icon: <FileText className="w-6 h-6" /> },
+                    { title: "Team & Transition Risk", status: "completed", icon: <Users className="w-6 h-6" /> },
+                    { title: "Previous M&A Experience", status: "active", icon: <TrendingUp className="w-6 h-6" /> },
+                    { title: "Representation & Market Strategy", status: "pending", icon: <Target className="w-6 h-6" /> },
+                    { title: "Deal Structure & Risk", status: "pending", icon: <Shield className="w-6 h-6" /> },
+                    { title: "Business Continuity & Post-Sale", status: "pending", icon: <RefreshCw className="w-6 h-6" /> }
+                  ].map((factor, index) => (
+                    <div
+                      key={index}
+                      className={`p-4 rounded-xl border-2 transition-all duration-300 ${
+                        factor.status === 'completed' 
+                          ? 'bg-green-50 border-green-200' 
+                          : factor.status === 'active'
+                          ? 'bg-blue-50 border-blue-200 shadow-lg'
+                          : 'bg-gray-50 border-gray-200'
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className={`${
+                          factor.status === 'completed' ? 'text-green-600' :
+                          factor.status === 'active' ? 'text-blue-600' : 'text-gray-400'
+                        } ${factor.status === 'active' ? 'animate-pulse' : ''}`}>
+                          {factor.icon}
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-gray-900 text-sm">{factor.title}</h4>
+                          <div className="flex items-center gap-2 mt-1">
+                            {factor.status === 'completed' && (
+                              <CheckCircle className="w-4 h-4 text-green-600" />
+                            )}
+                            {factor.status === 'active' && (
+                              <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                            )}
+                            <span className={`text-xs font-medium ${
+                              factor.status === 'completed' ? 'text-green-600' :
+                              factor.status === 'active' ? 'text-blue-600' : 'text-gray-500'
+                            }`}>
+                              {factor.status === 'completed' ? 'Complete' :
+                               factor.status === 'active' ? 'In Progress' : 'Pending'}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Waitlist Form Section */}
           <div className="max-w-4xl mx-auto mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -447,177 +526,6 @@ export default function BusinessOwnersWaitlist() {
             </Card>
           </div>
 
-          {/* Interactive Assessment Preview */}
-          <div className="max-w-5xl mx-auto mb-20">
-            <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">
-              See What You'll Experience
-            </h2>
-            <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 border border-gray-200">
-              {/* Assessment Header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                    <Target className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">Exit Readiness Assessment</h3>
-                    <p className="text-gray-600">Professional Analysis in Progress</p>
-                  </div>
-                </div>
-                <Badge className="bg-green-100 text-green-800 border-green-200 px-3 py-1">
-                  <Clock className="w-3 h-3 mr-1" />
-                  15 min remaining
-                </Badge>
-              </div>
-
-              {/* Progress Bar */}
-              <div className="mb-6">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-700">Assessment Progress</span>
-                  <span className="text-sm font-bold text-gray-900">8 of 11 Complete</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-3">
-                  <div className="bg-primary h-3 rounded-full transition-all duration-500" style={{ width: '73%' }}></div>
-                </div>
-              </div>
-
-              {/* Assessment Cards Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {/* Business Overview - Complete */}
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Building2 className="w-5 h-5 text-green-600" />
-                    <span className="font-semibold text-gray-900">Business Overview</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-sm font-medium text-green-600">Complete</span>
-                  </div>
-                </div>
-
-                {/* Exit Goals & Timeline - Complete */}
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Target className="w-5 h-5 text-green-600" />
-                    <span className="font-semibold text-gray-900">Exit Goals & Timeline</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-sm font-medium text-green-600">Complete</span>
-                  </div>
-                </div>
-
-                {/* Personal & Emotional Readiness - Complete */}
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Users className="w-5 h-5 text-green-600" />
-                    <span className="font-semibold text-gray-900">Personal & Emotional Readiness</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-sm font-medium text-green-600">Complete</span>
-                  </div>
-                </div>
-
-                {/* Financial Quality - Complete */}
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <DollarSign className="w-5 h-5 text-green-600" />
-                    <span className="font-semibold text-gray-900">Financial Quality</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-sm font-medium text-green-600">Complete</span>
-                  </div>
-                </div>
-
-                {/* Operational Maturity - Complete */}
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Settings className="w-5 h-5 text-green-600" />
-                    <span className="font-semibold text-gray-900">Operational Maturity</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-sm font-medium text-green-600">Complete</span>
-                  </div>
-                </div>
-
-                {/* Documentation Preparedness - Complete */}
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <FileText className="w-5 h-5 text-green-600" />
-                    <span className="font-semibold text-gray-900">Documentation Preparedness</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-sm font-medium text-green-600">Complete</span>
-                  </div>
-                </div>
-
-                {/* Team & Transition Risk - Complete */}
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Users className="w-5 h-5 text-green-600" />
-                    <span className="font-semibold text-gray-900">Team & Transition Risk</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-sm font-medium text-green-600">Complete</span>
-                  </div>
-                </div>
-
-                {/* Previous M&A Experience - In Progress */}
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <TrendingUp className="w-5 h-5 text-blue-600" />
-                    <span className="font-semibold text-gray-900">Previous M&A Experience</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-                    <span className="text-sm font-medium text-blue-600">In Progress</span>
-                  </div>
-                </div>
-
-                {/* Representation & Market Strategy - Pending */}
-                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Globe className="w-5 h-5 text-gray-400" />
-                    <span className="font-semibold text-gray-900">Representation & Market Strategy</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded-full border-2 border-gray-300"></div>
-                    <span className="text-sm font-medium text-gray-500">Pending</span>
-                  </div>
-                </div>
-
-                {/* Deal Structure & Risk - Pending */}
-                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <AlertTriangle className="w-5 h-5 text-gray-400" />
-                    <span className="font-semibold text-gray-900">Deal Structure & Risk</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded-full border-2 border-gray-300"></div>
-                    <span className="text-sm font-medium text-gray-500">Pending</span>
-                  </div>
-                </div>
-
-                {/* Business Continuity & Post-Sale - Pending */}
-                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Shield className="w-5 h-5 text-gray-400" />
-                    <span className="font-semibold text-gray-900">Business Continuity & Post-Sale</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded-full border-2 border-gray-300"></div>
-                    <span className="text-sm font-medium text-gray-500">Pending</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Sample Report Preview */}
           <div className="max-w-5xl mx-auto mb-24">
             <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">
@@ -710,99 +618,98 @@ export default function BusinessOwnersWaitlist() {
               </div>
             </div>
           </div>
+
+
+        </div>
+      </section>
+
+      {/* Footer Message */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
+          <p className="text-lg text-gray-600">
+            Professional M&A analysis coming soon for business owners
+          </p>
+          <p className="text-sm text-gray-500 mt-2">
+            Join the waitlist to be notified when early access becomes available
+          </p>
         </div>
       </section>
 
       {/* Sample Report Modal */}
       <Dialog open={isReportModalOpen} onOpenChange={handleCloseReportModal}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="max-w-md mx-auto">
           <DialogHeader>
-            <DialogTitle className="text-xl font-semibold text-gray-900">
+            <DialogTitle className="text-xl font-bold text-center mb-2">
               Download Sample Report
             </DialogTitle>
           </DialogHeader>
           
-          {!isReportSubmitted ? (
-            <form onSubmit={reportForm.handleSubmit(onReportSubmit)} className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="modal-firstName">First Name *</Label>
-                  <Input
-                    {...reportForm.register("firstName")}
-                    placeholder="Enter first name"
-                    className={reportForm.formState.errors.firstName ? "border-red-500" : ""}
-                  />
-                  {reportForm.formState.errors.firstName && (
-                    <p className="text-red-500 text-sm mt-1">{reportForm.formState.errors.firstName.message}</p>
-                  )}
-                </div>
-                <div>
-                  <Label htmlFor="modal-lastName">Last Name *</Label>
-                  <Input
-                    {...reportForm.register("lastName")}
-                    placeholder="Enter last name"
-                    className={reportForm.formState.errors.lastName ? "border-red-500" : ""}
-                  />
-                  {reportForm.formState.errors.lastName && (
-                    <p className="text-red-500 text-sm mt-1">{reportForm.formState.errors.lastName.message}</p>
-                  )}
-                </div>
-              </div>
-              
-              <div>
-                <Label htmlFor="modal-email">Business Email *</Label>
-                <Input
-                  {...reportForm.register("email")}
-                  type="email"
-                  placeholder="Enter your business email"
-                  className={reportForm.formState.errors.email ? "border-red-500" : ""}
-                />
-                {reportForm.formState.errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{reportForm.formState.errors.email.message}</p>
-                )}
-              </div>
-
-              <div>
-                <Label htmlFor="modal-companyName">Company Name *</Label>
-                <Input
-                  {...reportForm.register("companyName")}
-                  placeholder="Enter your company name"
-                  className={reportForm.formState.errors.companyName ? "border-red-500" : ""}
-                />
-                {reportForm.formState.errors.companyName && (
-                  <p className="text-red-500 text-sm mt-1">{reportForm.formState.errors.companyName.message}</p>
-                )}
-              </div>
-
-              <Button 
-                type="submit" 
-                className="w-full bg-primary hover:bg-primary/90"
-                disabled={reportMutation.isPending}
-              >
-                {reportMutation.isPending ? (
-                  "Sending Report..."
-                ) : (
-                  <>
-                    <Download className="w-4 h-4 mr-2" />
-                    Get Sample Report
-                  </>
-                )}
-              </Button>
-
-              {reportMutation.error && (
-                <p className="text-red-500 text-sm text-center">
-                  Something went wrong. Please try again.
-                </p>
-              )}
-            </form>
-          ) : (
+          {isReportSubmitted ? (
             <div className="text-center py-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Report Sent!</h3>
-              <p className="text-gray-600">Check your email for the download link.</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Download Started!
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Your sample report should be downloading now.
+              </p>
             </div>
+          ) : (
+            <Form {...reportForm}>
+              <form onSubmit={reportForm.handleSubmit(onReportSubmit)} className="space-y-4">
+                <FormField
+                  control={reportForm.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Full Name *</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Enter your full name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={reportForm.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Business Email *</FormLabel>
+                      <FormControl>
+                        <Input type="email" placeholder="you@company.com" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={reportForm.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Company Name *</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your company name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <Button 
+                  type="submit" 
+                  className="w-full"
+                  disabled={createDemoRequestMutation.isPending}
+                >
+                  {createDemoRequestMutation.isPending ? "Sending..." : "Download Report"}
+                </Button>
+              </form>
+            </Form>
           )}
         </DialogContent>
       </Dialog>
