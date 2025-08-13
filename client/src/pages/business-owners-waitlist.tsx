@@ -230,7 +230,7 @@ export default function BusinessOwnersWaitlist() {
               <div className="flex flex-col lg:flex-row justify-center lg:justify-start gap-3 mb-8 lg:mb-0">
                 <Button 
                   onClick={() => setIsReportModalOpen(true)}
-                  className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 px-4 py-2 text-sm font-semibold rounded-lg shadow hover:shadow-lg"
+                  className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 px-6 py-2.5 text-base font-semibold rounded-lg shadow hover:shadow-lg"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Download Sample Report
@@ -240,7 +240,7 @@ export default function BusinessOwnersWaitlist() {
                     const waitlistSection = document.getElementById('waitlist-form');
                     waitlistSection?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="bg-primary text-white border-2 border-primary hover:bg-primary/90 transition-all duration-300 px-4 py-2 text-sm font-semibold rounded-lg shadow hover:shadow-lg"
+                  className="bg-primary text-white border-2 border-primary hover:bg-primary/90 transition-all duration-300 px-6 py-2.5 text-base font-semibold rounded-lg shadow hover:shadow-lg"
                 >
                   <UserPlus className="w-4 h-4 mr-2" />
                   Join Early Access Waitlist
