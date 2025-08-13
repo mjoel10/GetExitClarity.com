@@ -242,65 +242,64 @@ export default function BusinessOwnersWaitlist() {
             <div className="flex justify-center lg:justify-end">
               <div className="max-w-2xl w-full">
                 {/* MacBook Container */}
-                <div className="transform hover:scale-105 transition-transform duration-500 cursor-pointer"
-                     onClick={() => setIsReportModalOpen(true)}>
+                <div className="transform">
                   {/* Screen */}
-                  <div className="bg-gray-900 rounded-t-2xl p-2 shadow-2xl">
-                    <div className="bg-white rounded-lg overflow-hidden h-80">
+                  <div className="bg-gray-900 rounded-t-2xl p-1.5 shadow-2xl">
+                    <div className="bg-white rounded-lg overflow-hidden h-72">
                       {/* App Header */}
-                      <div className="bg-gray-900 text-white px-4 py-2 flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                            <FileText className="w-3 h-3 text-white" />
+                      <div className="bg-gray-900 text-white px-2 py-1.5 flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <div className="w-4 h-4 bg-primary rounded-full flex items-center justify-center">
+                            <FileText className="w-2 h-2 text-white" />
                           </div>
-                          <span className="text-sm font-semibold">ExitClarity</span>
+                          <span className="text-xs font-semibold">ExitClarity</span>
                         </div>
-                        <div className="flex gap-2">
-                          <button className="px-3 py-1 bg-primary text-white rounded text-xs">Export</button>
-                          <button className="px-3 py-1 border border-gray-600 text-gray-300 rounded text-xs">Share</button>
+                        <div className="flex gap-1.5">
+                          <button className="px-2 py-0.5 bg-primary text-white rounded text-xs">Export</button>
+                          <button className="px-2 py-0.5 border border-gray-600 text-gray-300 rounded text-xs">Share</button>
                         </div>
                       </div>
 
                       {/* Main Content */}
                       <div className="flex h-full">
                         {/* Sidebar */}
-                        <div className="w-48 bg-gray-50 border-r border-gray-200 p-3">
-                          <div className="bg-white rounded-lg p-3 mb-3 border">
-                            <div className="text-lg font-bold text-gray-900">#2024-001</div>
+                        <div className="w-40 bg-gray-50 border-r border-gray-200 p-2">
+                          <div className="bg-white rounded-lg p-2 mb-2 border">
+                            <div className="text-sm font-bold text-gray-900">#2024-001</div>
                             <div className="text-xs text-gray-600">TechVision Solutions</div>
                             <div className="text-xs text-gray-400">Dec 15, 2024</div>
                           </div>
                           
-                          <div className="space-y-1">
-                            <div className="text-xs font-semibold text-gray-500 uppercase mb-2">Sections</div>
-                            <div className="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-medium">
+                          <div className="space-y-0.5">
+                            <div className="text-xs font-semibold text-gray-500 uppercase mb-1">Sections</div>
+                            <div className="bg-primary/10 text-primary px-2 py-0.5 rounded text-xs font-medium">
                               Executive Summary
                             </div>
-                            <div className="text-gray-600 px-2 py-1 text-xs hover:bg-gray-100 rounded">
+                            <div className="text-gray-600 px-2 py-0.5 text-xs">
                               Financial Analysis
                             </div>
-                            <div className="text-gray-600 px-2 py-1 text-xs hover:bg-gray-100 rounded">
+                            <div className="text-gray-600 px-2 py-0.5 text-xs">
                               Market Position
                             </div>
-                            <div className="text-gray-600 px-2 py-1 text-xs hover:bg-gray-100 rounded">
+                            <div className="text-gray-600 px-2 py-0.5 text-xs">
                               Risk Assessment
                             </div>
-                            <div className="text-gray-600 px-2 py-1 text-xs hover:bg-gray-100 rounded">
+                            <div className="text-gray-600 px-2 py-0.5 text-xs">
                               Recommendations
                             </div>
                           </div>
                         </div>
 
                         {/* Content Area */}
-                        <div className="flex-1 p-4 overflow-hidden">
-                          <h2 className="text-xl font-bold text-gray-900 mb-3">Executive Summary</h2>
+                        <div className="flex-1 p-3 overflow-hidden">
+                          <h2 className="text-sm font-bold text-gray-900 mb-2">Executive Summary</h2>
                           
                           {/* Score Card */}
-                          <div className="bg-white border rounded-lg p-4 mb-4 shadow-sm">
-                            <div className="flex items-center gap-4">
+                          <div className="bg-white border rounded-lg p-3 mb-3 shadow-sm">
+                            <div className="flex items-center gap-3">
                               {/* Score Ring */}
-                              <div className="relative w-16 h-16">
-                                <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
+                              <div className="relative w-12 h-12">
+                                <svg className="w-12 h-12 transform -rotate-90" viewBox="0 0 36 36">
                                   <path
                                     d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                                     fill="none"
@@ -317,27 +316,27 @@ export default function BusinessOwnersWaitlist() {
                                   />
                                 </svg>
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                  <span className="text-lg font-bold text-gray-900">94%</span>
+                                  <span className="text-sm font-bold text-gray-900">94%</span>
                                 </div>
                               </div>
                               
                               <div className="flex-1">
-                                <div className="inline-flex items-center gap-2 bg-primary text-white px-3 py-1 rounded-lg text-sm font-semibold mb-2">
-                                  <TrendingUp className="w-4 h-4" />
+                                <div className="inline-flex items-center gap-1 bg-primary text-white px-2 py-1 rounded text-xs font-semibold mb-1">
+                                  <TrendingUp className="w-3 h-3" />
                                   Ready to Proceed
                                 </div>
-                                <div className="grid grid-cols-3 gap-3 text-xs">
+                                <div className="grid grid-cols-3 gap-2 text-xs">
                                   <div>
-                                    <div className="text-gray-500">Est. Value</div>
-                                    <div className="font-bold text-gray-900">$8.2M</div>
+                                    <div className="text-gray-500 text-xs">Est. Value</div>
+                                    <div className="font-bold text-gray-900 text-xs">$8.2M</div>
                                   </div>
                                   <div>
-                                    <div className="text-gray-500">Timeline</div>
-                                    <div className="font-bold text-gray-900">6-9 mo</div>
+                                    <div className="text-gray-500 text-xs">Timeline</div>
+                                    <div className="font-bold text-gray-900 text-xs">6-9 mo</div>
                                   </div>
                                   <div>
-                                    <div className="text-gray-500">Risk Level</div>
-                                    <div className="font-bold text-green-600">Low</div>
+                                    <div className="text-gray-500 text-xs">Risk Level</div>
+                                    <div className="font-bold text-green-600 text-xs">Low</div>
                                   </div>
                                 </div>
                               </div>
@@ -345,17 +344,17 @@ export default function BusinessOwnersWaitlist() {
                           </div>
 
                           {/* Key Findings */}
-                          <div className="space-y-2">
-                            <div className="flex items-center gap-2 text-sm">
-                              <CheckCircle className="w-4 h-4 text-green-500" />
+                          <div className="space-y-1">
+                            <div className="flex items-center gap-1.5 text-xs">
+                              <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
                               <span className="text-gray-700">Strong financial performance with 23% EBITDA margin</span>
                             </div>
-                            <div className="flex items-center gap-2 text-sm">
-                              <CheckCircle className="w-4 h-4 text-green-500" />
+                            <div className="flex items-center gap-1.5 text-xs">
+                              <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
                               <span className="text-gray-700">Diversified customer base reduces concentration risk</span>
                             </div>
-                            <div className="flex items-center gap-2 text-sm">
-                              <AlertTriangle className="w-4 h-4 text-yellow-500" />
+                            <div className="flex items-center gap-1.5 text-xs">
+                              <AlertTriangle className="w-3 h-3 text-yellow-500 flex-shrink-0" />
                               <span className="text-gray-700">Key person dependency requires transition planning</span>
                             </div>
                           </div>
@@ -365,7 +364,7 @@ export default function BusinessOwnersWaitlist() {
                   </div>
                   
                   {/* MacBook Base */}
-                  <div className="h-4 bg-gradient-to-b from-gray-300 to-gray-400 rounded-b-2xl mx-4 shadow-lg relative">
+                  <div className="h-3 bg-gradient-to-b from-gray-300 to-gray-400 rounded-b-2xl mx-3 shadow-lg relative">
                     <div className="absolute inset-x-0 top-1/2 h-px bg-gray-500/20"></div>
                   </div>
                 </div>
