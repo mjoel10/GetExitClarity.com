@@ -227,7 +227,7 @@ export default function BusinessOwnersWaitlist() {
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 mb-8 lg:mb-0">
+              <div className="flex flex-col lg:flex-row justify-center lg:justify-start gap-3 mb-8 lg:mb-0">
                 <Button 
                   onClick={() => setIsReportModalOpen(true)}
                   className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 px-4 py-2 text-sm font-semibold rounded-lg shadow hover:shadow-lg"
