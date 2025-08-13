@@ -240,12 +240,87 @@ export default function BusinessOwnersWaitlist() {
 
             {/* Right Visual */}
             <div className="flex justify-center lg:justify-end">
-              <div className="max-w-md w-full">
-                <img 
-                  src="/attached_assets/image_1755106239938.png" 
-                  alt="Exit Readiness Assessment Interface"
-                  className="w-full h-auto rounded-2xl shadow-xl"
-                />
+              <div className="max-w-lg w-full">
+                {/* Lightweight Assessment Visual */}
+                <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                        <Target className="w-4 h-4 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-900 text-sm">Exit Readiness Assessment</h3>
+                        <p className="text-xs text-gray-600">Professional Analysis in Progress</p>
+                      </div>
+                    </div>
+                    <Badge className="bg-green-100 text-green-800 border-green-200 text-xs">
+                      ⏱️ 15 min remaining
+                    </Badge>
+                  </div>
+
+                  {/* Progress */}
+                  <div className="mb-6">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-xs font-medium text-gray-700">Assessment Progress</span>
+                      <span className="text-xs font-semibold text-gray-900">8 of 11 Complete</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div 
+                        className="bg-gradient-to-r from-primary to-blue-600 h-2 rounded-full" 
+                        style={{ width: '72.7%' }}
+                      ></div>
+                    </div>
+                  </div>
+
+                  {/* Assessment Grid */}
+                  <div className="grid grid-cols-2 gap-3">
+                    {[
+                      { title: "Business Overview", status: "complete", icon: Building },
+                      { title: "Exit Goals & Timeline", status: "complete", icon: Calendar },
+                      { title: "Financial Quality", status: "complete", icon: DollarSign },
+                      { title: "Operational Maturity", status: "complete", icon: Settings },
+                      { title: "Team & Transition", status: "complete", icon: Users },
+                      { title: "Previous M&A Experience", status: "active", icon: TrendingUp },
+                      { title: "Market Strategy", status: "pending", icon: Target },
+                      { title: "Deal Structure", status: "pending", icon: Shield }
+                    ].map((item, index) => {
+                      const IconComponent = item.icon;
+                      return (
+                        <div
+                          key={index}
+                          className={`p-3 rounded-lg border text-center transition-all duration-200 ${
+                            item.status === 'complete' 
+                              ? 'bg-green-50 border-green-200' 
+                              : item.status === 'active'
+                              ? 'bg-blue-50 border-blue-200 ring-1 ring-blue-300'
+                              : 'bg-gray-50 border-gray-200'
+                          }`}
+                        >
+                          <div className={`w-6 h-6 mx-auto mb-2 ${
+                            item.status === 'complete' ? 'text-green-600' :
+                            item.status === 'active' ? 'text-blue-600' : 'text-gray-400'
+                          }`}>
+                            <IconComponent className="w-full h-full" />
+                          </div>
+                          <p className="text-xs font-medium text-gray-900 leading-tight">
+                            {item.title}
+                          </p>
+                          {item.status === 'complete' && (
+                            <div className="flex justify-center mt-1">
+                              <CheckCircle className="w-3 h-3 text-green-600" />
+                            </div>
+                          )}
+                          {item.status === 'active' && (
+                            <div className="flex justify-center mt-1">
+                              <div className="w-3 h-3 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
