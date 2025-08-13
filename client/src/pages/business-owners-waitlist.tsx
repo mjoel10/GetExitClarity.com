@@ -244,7 +244,7 @@ export default function BusinessOwnersWaitlist() {
                 {/* Tablet Container */}
                 <div className="transform">
                   {/* Tablet Frame */}
-                  <div className="bg-gray-800 rounded-3xl p-4 shadow-2xl">
+                  <div className="bg-gray-800 rounded-3xl p-2 shadow-2xl">
                     {/* Browser Chrome */}
                     <div className="bg-white rounded-2xl overflow-hidden">
                       {/* Browser Header - Minimal */}
@@ -274,8 +274,8 @@ export default function BusinessOwnersWaitlist() {
                         <div className="flex h-full bg-gray-50">
                           {/* Sidebar */}
                           <div className="w-28 bg-white border-r border-gray-200 p-2">
-                            <div className="space-y-2">
-                              <div className="h-2 bg-gray-300 rounded w-20"></div>
+                            <div className="space-y-1">
+                              <div className="h-2 bg-gray-300 rounded w-20 mb-1"></div>
                               <div className="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-medium">
                                 Executive Summary
                               </div>
@@ -283,6 +283,8 @@ export default function BusinessOwnersWaitlist() {
                               <div className="h-2 bg-gray-200 rounded w-20"></div>
                               <div className="h-2 bg-gray-200 rounded w-14"></div>
                               <div className="h-2 bg-gray-200 rounded w-16"></div>
+                              <div className="h-2 bg-gray-200 rounded w-18"></div>
+                              <div className="h-2 bg-gray-200 rounded w-12"></div>
                             </div>
                           </div>
 
