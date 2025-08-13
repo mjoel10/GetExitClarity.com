@@ -207,23 +207,23 @@ export default function BusinessOwnersWaitlist() {
                 Early Access Preview
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Discover Your True Exit Value <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Before the Market Decides</span>
+                Discover Your True Exit Value <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Before Buyers Do</span>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed mb-8">
-                Get an unbiased M&A-grade assessment that reveals your business's real valuation, flags deal risks, and gives you a clear action plan to sell for more.
+                Get an unbiased M&A-quality assessment that reveals your business's true valuation, flags deal risks, and gives you a clear action plan to sell for more.
               </p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-muted-foreground mb-8">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-blue-600" />
-                  <span>30-Minute Assessment</span>
+                  <span>Complete Assessment in 20 Minutes</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Shield className="w-4 h-4 text-green-600" />
-                  <span>Avoid Deal-Killing Surprises</span>
+                  <span>Identify Deal-Killers Before Buyers Do</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-yellow-500" />
-                  <span>Negotiate from Strength</span>
+                  <span>Enter Negotiations with Data, Not Hope</span>
                 </div>
               </div>
               
