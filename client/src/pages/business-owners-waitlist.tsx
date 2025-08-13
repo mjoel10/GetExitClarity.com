@@ -273,22 +273,16 @@ export default function BusinessOwnersWaitlist() {
                         {/* Main Content */}
                         <div className="flex h-full bg-gray-50">
                           {/* Sidebar */}
-                          <div className="w-32 bg-white border-r border-gray-200 p-2">
-                            <div className="bg-gray-50 rounded p-2 mb-3 border">
-                              <div className="text-sm font-bold text-gray-900">#2024-001</div>
-                              <div className="text-xs text-gray-600">TechVision Solutions</div>
-                              <div className="text-xs text-gray-400">Dec 15, 2024</div>
-                            </div>
-                            
-                            <div className="space-y-1">
-                              <div className="h-2 bg-gray-300 rounded w-20 mb-2"></div>
+                          <div className="w-28 bg-white border-r border-gray-200 p-2">
+                            <div className="space-y-2">
+                              <div className="h-2 bg-gray-300 rounded w-20"></div>
                               <div className="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-medium">
                                 Executive Summary
                               </div>
                               <div className="h-2 bg-gray-200 rounded w-16"></div>
                               <div className="h-2 bg-gray-200 rounded w-20"></div>
                               <div className="h-2 bg-gray-200 rounded w-14"></div>
-                              <div className="h-2 bg-gray-200 rounded w-18"></div>
+                              <div className="h-2 bg-gray-200 rounded w-16"></div>
                             </div>
                           </div>
 
