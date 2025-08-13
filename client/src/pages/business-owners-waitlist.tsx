@@ -601,7 +601,7 @@ export default function BusinessOwnersWaitlist() {
                 Ready to Get Started?
               </h3>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Join our exclusive early access list and be the first to experience professional exit analysis
+                Join our exclusive early access waitlist and be among the first business owners to experience professional exit analysis
               </p>
               <Button 
                 onClick={() => {
