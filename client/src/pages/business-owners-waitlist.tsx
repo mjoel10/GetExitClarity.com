@@ -248,17 +248,17 @@ export default function BusinessOwnersWaitlist() {
                 {/* Assessment Steps Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
                   {[
-                    { icon: "💰", title: "Financial Performance", description: "Revenue & growth metrics", completed: true },
-                    { icon: "📊", title: "Market Position", description: "Competitive landscape", completed: true },
-                    { icon: "⚙️", title: "Operations", description: "Systems & processes", completed: true },
-                    { icon: "👥", title: "Management Team", description: "Leadership & talent", completed: true },
-                    { icon: "📈", title: "Growth Potential", description: "Scalability & expansion", completed: true },
-                    { icon: "🛡️", title: "Risk Assessment", description: "Risk mitigation", completed: true },
-                    { icon: "⚖️", title: "Legal Structure", description: "Compliance & contracts", completed: true },
-                    { icon: "💻", title: "Technology Systems", description: "IT infrastructure", active: true },
-                    { icon: "🎯", title: "Customer Base", description: "Client diversification", upcoming: true },
-                    { icon: "🏆", title: "Competitive Advantage", description: "Market differentiation", upcoming: true },
-                    { icon: "🚀", title: "Exit Strategy", description: "Exit planning & timing", upcoming: true }
+                    { icon: "1", title: "Business Overview", description: "Contact information & business details", completed: true },
+                    { icon: "2", title: "Exit Goals & Timeline", description: "Your exit objectives and timeline", completed: true },
+                    { icon: "3", title: "Personal & Emotional Readiness", description: "Personal preparedness for exit", completed: true },
+                    { icon: "4", title: "Financial Quality", description: "Revenue stability & profitability", completed: true },
+                    { icon: "5", title: "Operational Maturity", description: "Systems, processes & scalability", completed: true },
+                    { icon: "6", title: "Documentation Preparedness", description: "Records, contracts & compliance", completed: true },
+                    { icon: "7", title: "Team & Transition Risk", description: "Employment & succession planning", completed: true },
+                    { icon: "8", title: "Previous M&A Experience", description: "Previous experience & preparation approach", active: true },
+                    { icon: "9", title: "Representation & Market Strategy", description: "Advisory experience & market knowledge", upcoming: true },
+                    { icon: "10", title: "Deal Structure & Risk", description: "Deal terms & risk preferences", upcoming: true },
+                    { icon: "11", title: "Business Continuity & Post-Sale", description: "Operations management & exit planning", upcoming: true }
                   ].map((step, index) => (
                     <div 
                       key={index}
@@ -283,7 +283,7 @@ export default function BusinessOwnersWaitlist() {
                             {step.title}
                           </div>
                           <div className={`text-xs ${step.completed ? 'text-green-600' : step.active ? 'text-blue-600' : 'text-gray-500'}`}>
-                            {step.completed ? 'Complete' : step.active ? 'In Progress' : 'Pending'}
+                            {step.description}
                           </div>
                         </div>
                       </div>
