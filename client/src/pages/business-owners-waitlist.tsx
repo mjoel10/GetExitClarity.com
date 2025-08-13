@@ -223,6 +223,97 @@ export default function BusinessOwnersWaitlist() {
             </div>
           </div>
 
+          {/* Assessment Preview */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">
+              11-Step Comprehensive Assessment
+            </h2>
+            <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl shadow-2xl p-6 lg:p-8">
+              <div className="bg-white rounded-xl p-6">
+                {/* Progress Header */}
+                <div className="flex items-center justify-between mb-6 p-4 bg-gray-50 rounded-lg">
+                  <div className="flex items-center gap-4">
+                    <div className="px-3 py-1 bg-blue-100 text-blue-800 rounded-lg text-sm font-medium">
+                      ⏱ 8 mins remaining
+                    </div>
+                  </div>
+                  <div className="text-xl font-bold text-gray-900">8 of 11</div>
+                </div>
+
+                {/* Progress Bar */}
+                <div className="w-full bg-gray-200 rounded-full h-3 mb-8">
+                  <div className="bg-blue-600 h-3 rounded-full" style={{ width: '73%' }}></div>
+                </div>
+
+                {/* Assessment Steps Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                  {[
+                    { icon: "💰", title: "Financial Performance", description: "Revenue & growth metrics", completed: true },
+                    { icon: "📊", title: "Market Position", description: "Competitive landscape", completed: true },
+                    { icon: "⚙️", title: "Operations", description: "Systems & processes", completed: true },
+                    { icon: "👥", title: "Management Team", description: "Leadership & talent", completed: true },
+                    { icon: "📈", title: "Growth Potential", description: "Scalability & expansion", completed: true },
+                    { icon: "🛡️", title: "Risk Assessment", description: "Risk mitigation", completed: true },
+                    { icon: "⚖️", title: "Legal Structure", description: "Compliance & contracts", completed: true },
+                    { icon: "💻", title: "Technology Systems", description: "IT infrastructure", active: true },
+                    { icon: "🎯", title: "Customer Base", description: "Client diversification", upcoming: true },
+                    { icon: "🏆", title: "Competitive Advantage", description: "Market differentiation", upcoming: true },
+                    { icon: "🚀", title: "Exit Strategy", description: "Exit planning & timing", upcoming: true }
+                  ].map((step, index) => (
+                    <div 
+                      key={index}
+                      className={`
+                        p-4 rounded-lg border transition-all duration-300
+                        ${step.completed ? 'bg-green-50 border-green-200' : 
+                          step.active ? 'bg-blue-50 border-blue-300 ring-2 ring-blue-200' : 
+                          'bg-gray-50 border-gray-200'}
+                      `}
+                    >
+                      <div className="flex items-center space-x-3">
+                        <div className={`
+                          w-8 h-8 rounded-full flex items-center justify-center font-semibold text-sm
+                          ${step.completed ? 'bg-green-500 text-white' : 
+                            step.active ? 'bg-blue-500 text-white animate-pulse' : 
+                            'bg-gray-300 text-gray-600'}
+                        `}>
+                          {step.completed ? '✓' : step.active ? '⏳' : step.icon}
+                        </div>
+                        <div className="min-w-0">
+                          <div className={`font-medium text-sm ${step.completed ? 'text-green-800' : step.active ? 'text-blue-800' : 'text-gray-700'}`}>
+                            {step.title}
+                          </div>
+                          <div className={`text-xs ${step.completed ? 'text-green-600' : step.active ? 'text-blue-600' : 'text-gray-500'}`}>
+                            {step.completed ? 'Complete' : step.active ? 'In Progress' : 'Pending'}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Assessment Stats */}
+                <div className="flex justify-center gap-8 p-4 bg-yellow-50 rounded-lg">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-gray-900">73%</div>
+                    <div className="text-sm text-gray-600">Complete</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-gray-900">8 of 11</div>
+                    <div className="text-sm text-gray-600">Factors</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-gray-900">22 min</div>
+                    <div className="text-sm text-gray-600">Time Elapsed</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-gray-900">SaaS</div>
+                    <div className="text-sm text-gray-600">Industry</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Value Propositions */}
           <div className="max-w-6xl mx-auto mb-16">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
