@@ -747,23 +747,7 @@ export default function BusinessOwnersWaitlist() {
             </div>
           </div>
 
-          {/* CTA after Assessment Preview */}
-          <div className="text-center mb-8 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-            <h3 className="text-xl font-bold text-white mb-3">Ready to See Your Business Through M&A Eyes?</h3>
-            <p className="text-base text-gray-300 mb-4 max-w-xl mx-auto">
-              Join our exclusive early access list and be the first to experience this comprehensive analysis
-            </p>
-            <Button 
-              onClick={() => {
-                const waitlistSection = document.getElementById('waitlist-form');
-                waitlistSection?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              size="lg"
-              className="bg-white hover:bg-gray-100 text-gray-900 px-12 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-            >
-              Get Early Access to This Analysis
-            </Button>
-          </div>
+
         </div>
       </section>
 
@@ -965,9 +949,23 @@ export default function BusinessOwnersWaitlist() {
             </Card>
           </div>
 
-
-
-
+          {/* CTA Banner Below Waitlist */}
+          <div className="text-center mt-16 bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700">
+            <h3 className="text-2xl font-bold text-white mb-4">Ready to See Your Business Through M&A Eyes?</h3>
+            <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
+              Join our exclusive early access list and be the first to experience this comprehensive analysis
+            </p>
+            <Button 
+              onClick={() => {
+                const waitlistSection = document.getElementById('waitlist-form');
+                waitlistSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              size="lg"
+              className="bg-white hover:bg-gray-100 text-gray-900 px-12 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+            >
+              Get Early Access to This Analysis
+            </Button>
+          </div>
         </div>
       </section>
 
