@@ -423,6 +423,17 @@ export default function BusinessOwnersWaitlist() {
         </div>
       </section>
 
+      {/* Social Proof Section */}
+      <section className="py-12 bg-background">
+        <div className="container max-w-4xl mx-auto px-4 lg:px-8">
+          <div className="text-center">
+            <p className="text-lg text-muted-foreground font-medium">
+              Trusted by 200+ business owners and M&A professionals
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* What is ExitClarity Section */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
@@ -447,12 +458,12 @@ export default function BusinessOwnersWaitlist() {
               </p>
             </div>
 
-            {/* 30-Minute Assessment */}
+            {/* 20-Minute Assessment */}
             <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border hover:border-primary/20">
               <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200 mx-auto">
                 <Clock className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3 text-center">30-Minute Assessment</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3 text-center">20-Minute Assessment</h3>
               <p className="text-muted-foreground leading-relaxed text-center">
                 Comprehensive evaluation across 11 critical factors—strategic, financial, operational, and personal readiness.
               </p>
@@ -465,7 +476,7 @@ export default function BusinessOwnersWaitlist() {
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3 text-center">Strategic Reports</h3>
               <p className="text-muted-foreground leading-relaxed text-center">
-                Receive a 20–25 page report with valuation analysis, risk audit, and a step-by-step action plan.
+                Receive a 25-page report with valuation analysis, risk audit, and a step-by-step action plan.
               </p>
             </div>
 
@@ -935,7 +946,7 @@ export default function BusinessOwnersWaitlist() {
                     )}
                   </Button>
                   <p className="text-sm text-gray-600 font-medium">
-                    Get notified first + exclusive early access pricing
+                    Get notified first + save 60% off launch pricing
                   </p>
                 </div>
 
