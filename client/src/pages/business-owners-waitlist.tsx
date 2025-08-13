@@ -416,29 +416,97 @@ export default function BusinessOwnersWaitlist() {
       </section>
 
       {/* What is ExitClarity Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               What is ExitClarity?
             </h2>
-            <div className="max-w-4xl mx-auto text-lg text-gray-600 space-y-6">
-              <p className="leading-relaxed">
-                <strong>Professional exit readiness platform used by M&A firms and business owners</strong> to systematically evaluate businesses before market entry.
-              </p>
-              <p className="leading-relaxed">
-                Our <strong>30-minute comprehensive assessment across 11 critical business factors</strong> analyzes everything from financial performance to operational readiness.
-              </p>
-              <p className="leading-relaxed">
-                <strong>Generates 20-25 page strategic report with valuation analysis and action plan</strong> that provides clear insights into your business's exit readiness and potential value.
-              </p>
-              <p className="leading-relaxed">
-                Uses the <strong>same methodology M&A professionals use to evaluate businesses</strong>, giving you insider knowledge typically reserved for advisors and investment bankers.
-              </p>
-              <p className="leading-relaxed">
-                Delivers a <strong>data-driven GO/FIX/WAIT recommendation</strong> based on your specific business profile, market conditions, and exit readiness across all critical dimensions.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              The professional exit readiness platform trusted by M&A firms and business owners
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* Professional Platform */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Building className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Professional Platform</h3>
+              <p className="text-gray-600 text-center leading-relaxed">
+                Used by M&A firms and business owners to systematically evaluate businesses before market entry
               </p>
             </div>
+
+            {/* 30-Minute Assessment */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">30-Minute Assessment</h3>
+              <p className="text-gray-600 text-center leading-relaxed">
+                Comprehensive evaluation across 11 critical business factors analyzing financial performance to operational readiness
+              </p>
+            </div>
+
+            {/* Strategic Reports */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FileText className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Strategic Reports</h3>
+              <p className="text-gray-600 text-center leading-relaxed">
+                Generates 20-25 page strategic report with valuation analysis and action plan for your exit readiness
+              </p>
+            </div>
+
+            {/* M&A Methodology */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">M&A Methodology</h3>
+              <p className="text-gray-600 text-center leading-relaxed">
+                Uses the same methodology M&A professionals use, giving you insider knowledge typically reserved for advisors
+              </p>
+            </div>
+
+            {/* Data-Driven Recommendations */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="w-8 h-8 text-red-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">GO/FIX/WAIT Recommendation</h3>
+              <p className="text-gray-600 text-center leading-relaxed">
+                Data-driven recommendations based on your business profile, market conditions, and exit readiness
+              </p>
+            </div>
+
+            {/* Expert Insights */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-indigo-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Expert Insights</h3>
+              <p className="text-gray-600 text-center leading-relaxed">
+                Access insights across all critical dimensions from 30+ years of M&A expertise and business ownership
+              </p>
+            </div>
+          </div>
+
+          {/* CTA after What is ExitClarity */}
+          <div className="text-center">
+            <Button 
+              onClick={() => {
+                const waitlistSection = document.getElementById('waitlist-form');
+                waitlistSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold"
+            >
+              Secure My Early Access Spot
+            </Button>
           </div>
         </div>
       </section>
