@@ -425,7 +425,7 @@ export default function BusinessOwnersWaitlist() {
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               What is ExitClarity?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               The professional exit readiness platform trusted by M&A firms and business owners
             </p>
           </div>
@@ -529,7 +529,7 @@ export default function BusinessOwnersWaitlist() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Why Business Owners Choose ExitClarity
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Get the insights you need to make informed decisions about your exit strategy
             </p>
           </div>
@@ -629,90 +629,119 @@ export default function BusinessOwnersWaitlist() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           {/* Interactive Assessment Preview */}
           <div className="max-w-4xl mx-auto mb-12">
-            <h2 className="text-4xl font-bold text-center text-white mb-6">
+            <h2 className="text-4xl font-bold text-center text-white mb-4">
               See What You'll Experience
             </h2>
-            <div className="text-center mb-12 max-w-3xl mx-auto">
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            <div className="text-center mb-8 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-300 mb-4 leading-relaxed">
                 Preview the comprehensive analysis you'll receive for your business
               </p>
-              
-              {/* Simplified Benefits */}
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <FileText className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Comprehensive Report</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    20-25 page strategic analysis with valuation insights
-                  </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-200">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                  <span>Get a comprehensive 20-25 page strategic report with valuation analysis</span>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Target className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Strategic Recommendations</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Data-driven GO/FIX/WAIT guidance for your exit
-                  </p>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                  <span>Receive specific GO/FIX/WAIT recommendations based on your business</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                  <span>Understand your true exit readiness before engaging expensive advisors</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                  <span>See exactly where you stand and what steps to take next</span>
                 </div>
               </div>
             </div>
-            {/* Clean Assessment Preview */}
-            <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 max-w-3xl mx-auto">
-              <div className="text-center">
+            <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 border border-gray-200">
+              <div className="assessment-preview">
                 {/* Assessment Header */}
-                <div className="mb-8">
-                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                    <BarChart3 className="w-10 h-10 text-white" />
+                <div className="flex items-center justify-between mb-8">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                      <Target className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900">Exit Readiness Assessment</h3>
+                      <p className="text-sm text-gray-600">Professional Analysis in Progress</p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Exit Readiness Assessment</h3>
-                  <p className="text-lg text-gray-600 leading-relaxed">
-                    Professional analysis across 11 critical business factors
-                  </p>
+                  <Badge className="bg-green-100 text-green-800 border-green-200">
+                    ⏱️ 15 min remaining
+                  </Badge>
                 </div>
 
-                {/* Progress Indicator */}
+                {/* Progress Bar */}
                 <div className="mb-8">
-                  <div className="w-32 h-32 mx-auto relative">
-                    <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 36 36">
-                      <path
-                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                        fill="none"
-                        stroke="#e5e7eb"
-                        strokeWidth="2"
-                      />
-                      <path
-                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                        fill="none"
-                        stroke="#2563eb"
-                        strokeWidth="2"
-                        strokeDasharray="85, 100"
-                        className="animate-pulse"
-                      />
-                    </svg>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="text-3xl font-bold text-primary">85%</div>
-                        <div className="text-sm text-gray-600">Complete</div>
-                      </div>
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="text-sm font-semibold text-gray-700">Assessment Progress</span>
+                    <span className="text-sm font-bold text-gray-900">8 of 11 Complete</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div 
+                      className="bg-gradient-to-r from-primary to-blue-600 h-3 rounded-full relative overflow-hidden" 
+                      style={{ width: '72.7%' }}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
                     </div>
                   </div>
                 </div>
 
-                {/* Key Areas */}
-                <div className="grid grid-cols-2 gap-6 text-center">
-                  <div className="bg-green-50 rounded-2xl p-6 border border-green-200">
-                    <CheckCircle className="w-8 h-8 text-green-600 mx-auto mb-3" />
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">Financial Readiness</h4>
-                    <p className="text-sm text-gray-600">Strong performance indicators</p>
-                  </div>
-                  <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200">
-                    <Clock className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">Market Analysis</h4>
-                    <p className="text-sm text-gray-600">In progress assessment</p>
-                  </div>
+                {/* Assessment Factors Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {[
+                    { title: "Business Overview", status: "completed", icon: <Building className="w-6 h-6" /> },
+                    { title: "Exit Goals & Timeline", status: "completed", icon: <Calendar className="w-6 h-6" /> },
+                    { title: "Personal & Emotional Readiness", status: "completed", icon: <Heart className="w-6 h-6" /> },
+                    { title: "Financial Quality", status: "completed", icon: <DollarSign className="w-6 h-6" /> },
+                    { title: "Operational Maturity", status: "completed", icon: <Settings className="w-6 h-6" /> },
+                    { title: "Documentation Preparedness", status: "completed", icon: <FileText className="w-6 h-6" /> },
+                    { title: "Team & Transition Risk", status: "completed", icon: <Users className="w-6 h-6" /> },
+                    { title: "Previous M&A Experience", status: "active", icon: <TrendingUp className="w-6 h-6" /> },
+                    { title: "Representation & Market Strategy", status: "pending", icon: <Target className="w-6 h-6" /> },
+                    { title: "Deal Structure & Risk", status: "pending", icon: <Shield className="w-6 h-6" /> },
+                    { title: "Business Continuity & Post-Sale", status: "pending", icon: <RefreshCw className="w-6 h-6" /> }
+                  ].map((factor, index) => (
+                    <div
+                      key={index}
+                      className={`p-4 rounded-xl border-2 transition-all duration-300 ${
+                        factor.status === 'completed' 
+                          ? 'bg-green-50 border-green-200' 
+                          : factor.status === 'active'
+                          ? 'bg-blue-50 border-blue-200 shadow-lg'
+                          : 'bg-gray-50 border-gray-200'
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className={`${
+                          factor.status === 'completed' ? 'text-green-600' :
+                          factor.status === 'active' ? 'text-blue-600' : 'text-gray-400'
+                        } ${factor.status === 'active' ? 'animate-pulse' : ''}`}>
+                          {factor.icon}
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-gray-900 text-sm">{factor.title}</h4>
+                          <div className="flex items-center gap-2 mt-1">
+                            {factor.status === 'completed' && (
+                              <CheckCircle className="w-4 h-4 text-green-600" />
+                            )}
+                            {factor.status === 'active' && (
+                              <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                            )}
+                            <span className={`text-xs font-medium ${
+                              factor.status === 'completed' ? 'text-green-600' :
+                              factor.status === 'active' ? 'text-blue-600' : 'text-gray-500'
+                            }`}>
+                              {factor.status === 'completed' ? 'Complete' :
+                               factor.status === 'active' ? 'In Progress' : 'Pending'}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -733,7 +762,7 @@ export default function BusinessOwnersWaitlist() {
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Join Early Access Waitlist
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 Be among the first business owners to access professional exit analysis
               </p>
             </div>
