@@ -226,14 +226,24 @@ export default function BusinessOwnersWaitlist() {
                 </div>
               </div>
               
-              {/* Sample Report CTA */}
-              <div className="flex justify-center lg:justify-start mb-8 lg:mb-0">
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-8 lg:mb-0">
                 <Button 
                   onClick={() => setIsReportModalOpen(true)}
                   className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl"
                 >
                   <Download className="w-5 h-5 mr-2" />
                   Download Sample Report
+                </Button>
+                <Button 
+                  onClick={() => {
+                    const waitlistSection = document.getElementById('waitlist-form');
+                    waitlistSection?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-primary text-white border-2 border-primary hover:bg-primary/90 transition-all duration-300 px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl"
+                >
+                  <UserPlus className="w-5 h-5 mr-2" />
+                  Join Early Access Waitlist
                 </Button>
               </div>
             </div>
