@@ -499,17 +499,22 @@ export default function BusinessOwnersWaitlist() {
           </div>
 
           {/* CTA after What is ExitClarity */}
-          <div className="text-center mt-12">
-            <Button 
-              onClick={() => {
-                const waitlistSection = document.getElementById('waitlist-form');
-                waitlistSection?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-            >
-              Secure My Early Access Spot
-            </Button>
+          <div className="bg-gray-100 rounded-2xl p-6 mt-12 border border-gray-200">
+            <div className="text-center">
+              <p className="text-base text-gray-600 mb-4">
+                Experience the professional platform trusted by M&A firms
+              </p>
+              <Button 
+                onClick={() => {
+                  const waitlistSection = document.getElementById('waitlist-form');
+                  waitlistSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              >
+                Secure My Early Access Spot
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -585,20 +590,28 @@ export default function BusinessOwnersWaitlist() {
           </div>
           
           {/* CTA after Benefits */}
-          <div className="text-center mt-8">
-            <Button 
-              onClick={() => {
-                const waitlistSection = document.getElementById('waitlist-form');
-                waitlistSection?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-            >
-              Secure My Early Access Spot
-            </Button>
-            <p className="text-sm text-gray-600 mt-3 font-medium">
-              Limited spots available for early access
-            </p>
+          <div className="bg-primary/5 rounded-3xl p-8 mt-16 border border-primary/10">
+            <div className="text-center max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                Ready to Get Started?
+              </h3>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Join our exclusive early access list and be the first to experience professional exit analysis
+              </p>
+              <Button 
+                onClick={() => {
+                  const waitlistSection = document.getElementById('waitlist-form');
+                  waitlistSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white px-12 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              >
+                Secure My Early Access Spot
+              </Button>
+              <p className="text-sm text-gray-600 mt-4 font-medium">
+                Limited spots available • No commitment required
+              </p>
+            </div>
           </div>
         </div>
       </section>
