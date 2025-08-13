@@ -17,6 +17,7 @@ import { CheckCircle, TrendingUp, Shield, FileText, Clock, Users, Target, BarCha
 import { useMeta } from "@/hooks/use-meta";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import Footer from "@/components/footer";
 
 const sampleReportSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -930,7 +931,7 @@ export default function BusinessOwnersWaitlist() {
         </div>
       </section>
 
-
+      <Footer />
 
       {/* Sample Report Modal */}
       <Dialog open={isReportModalOpen} onOpenChange={handleCloseReportModal}>
