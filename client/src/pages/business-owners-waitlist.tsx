@@ -452,111 +452,166 @@ export default function BusinessOwnersWaitlist() {
             <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">
               See What You'll Experience
             </h2>
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl p-6 lg:p-8">
-              {/* MacBook-style frame */}
-              <div className="bg-black rounded-lg p-2">
-                <div className="bg-white rounded-md overflow-hidden">
-                  {/* Assessment Header */}
-                  <div className="bg-gray-900 text-white p-4 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                        <Target className="w-4 h-4 text-white" />
-                      </div>
-                      <span className="font-semibold">ExitClarity Assessment</span>
-                    </div>
-                    <Badge className="bg-blue-600 text-white border-0">
-                      Step 3 of 11
-                    </Badge>
+            <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 border border-gray-200">
+              {/* Assessment Header */}
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                    <Target className="w-6 h-6 text-white" />
                   </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900">Exit Readiness Assessment</h3>
+                    <p className="text-gray-600">Professional Analysis in Progress</p>
+                  </div>
+                </div>
+                <Badge className="bg-green-100 text-green-800 border-green-200 px-3 py-1">
+                  <Clock className="w-3 h-3 mr-1" />
+                  15 min remaining
+                </Badge>
+              </div>
 
-                  {/* Assessment Content */}
-                  <div className="p-6">
-                    <div className="mb-6">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-lg font-semibold text-gray-900">Management Team Assessment</h3>
-                        <span className="text-sm text-gray-500">27% Complete</span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-primary h-2 rounded-full transition-all duration-500" style={{ width: '27%' }}></div>
-                      </div>
-                    </div>
+              {/* Progress Bar */}
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-700">Assessment Progress</span>
+                  <span className="text-sm font-bold text-gray-900">8 of 11 Complete</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-3">
+                  <div className="bg-primary h-3 rounded-full transition-all duration-500" style={{ width: '73%' }}></div>
+                </div>
+              </div>
 
-                    {/* Sample Question */}
-                    <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                      <h4 className="font-medium text-gray-900 mb-3">
-                        How many key management positions could continue operating if you were unavailable for 3 months?
-                      </h4>
-                      <div className="space-y-2">
-                        <label className="flex items-center p-3 bg-white rounded border hover:bg-blue-50 cursor-pointer transition-colors">
-                          <input type="radio" name="management" className="mr-3 text-primary" />
-                          <span className="text-gray-700">All positions have capable backup leadership</span>
-                        </label>
-                        <label className="flex items-center p-3 bg-blue-50 border-2 border-primary rounded cursor-pointer">
-                          <input type="radio" name="management" className="mr-3 text-primary" checked readOnly />
-                          <span className="text-gray-900 font-medium">Most positions covered, some gaps exist</span>
-                        </label>
-                        <label className="flex items-center p-3 bg-white rounded border hover:bg-blue-50 cursor-pointer transition-colors">
-                          <input type="radio" name="management" className="mr-3 text-primary" />
-                          <span className="text-gray-700">Few positions have backup plans</span>
-                        </label>
-                        <label className="flex items-center p-3 bg-white rounded border hover:bg-blue-50 cursor-pointer transition-colors">
-                          <input type="radio" name="management" className="mr-3 text-primary" />
-                          <span className="text-gray-700">Business heavily dependent on me personally</span>
-                        </label>
-                      </div>
-                    </div>
+              {/* Assessment Cards Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {/* Business Overview - Complete */}
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Building2 className="w-5 h-5 text-green-600" />
+                    <span className="font-semibold text-gray-900">Business Overview</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span className="text-sm font-medium text-green-600">Complete</span>
+                  </div>
+                </div>
 
-                    {/* Progress Indicators */}
-                    <div className="grid grid-cols-11 gap-2 mb-4">
-                      {assessmentFactors.map((factor, index) => (
-                        <div
-                          key={index}
-                          className={`h-8 rounded-md flex items-center justify-center text-xs font-medium transition-all ${
-                            factor.status === 'completed' ? 'bg-green-100 text-green-700 border-2 border-green-300' :
-                            factor.status === 'active' ? 'bg-blue-100 text-blue-700 border-2 border-blue-300 animate-pulse' : 
-                            'bg-gray-100 text-gray-500'
-                          }`}
-                          title={factor.title}
-                        >
-                          {factor.status === 'completed' ? (
-                            <CheckCircle className="w-4 h-4" />
-                          ) : factor.status === 'active' ? (
-                            <div className="w-3 h-3 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-                          ) : (
-                            factor.icon
-                          )}
-                        </div>
-                      ))}
-                    </div>
+                {/* Exit Goals & Timeline - Complete */}
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Target className="w-5 h-5 text-green-600" />
+                    <span className="font-semibold text-gray-900">Exit Goals & Timeline</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span className="text-sm font-medium text-green-600">Complete</span>
+                  </div>
+                </div>
 
-                    {/* Assessment Categories */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
-                      {assessmentFactors.slice(0, 6).map((factor, index) => (
-                        <div 
-                          key={index}
-                          className={`flex items-center gap-2 p-2 rounded ${
-                            factor.status === 'completed' ? 'bg-green-50 text-green-700' :
-                            factor.status === 'active' ? 'bg-blue-50 text-blue-700' : 
-                            'bg-gray-50 text-gray-500'
-                          }`}
-                        >
-                          <div className={factor.status === 'active' ? 'animate-pulse' : ''}>
-                            {factor.icon}
-                          </div>
-                          <span className="font-medium">{factor.title}</span>
-                        </div>
-                      ))}
-                    </div>
+                {/* Personal & Emotional Readiness - Complete */}
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Users className="w-5 h-5 text-green-600" />
+                    <span className="font-semibold text-gray-900">Personal & Emotional Readiness</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span className="text-sm font-medium text-green-600">Complete</span>
+                  </div>
+                </div>
 
-                    {/* Action Buttons */}
-                    <div className="flex gap-3 mt-6">
-                      <Button className="flex-1 bg-primary hover:bg-primary/90">
-                        Continue Assessment
-                      </Button>
-                      <Button variant="outline" className="px-6">
-                        Save & Exit
-                      </Button>
-                    </div>
+                {/* Financial Quality - Complete */}
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <DollarSign className="w-5 h-5 text-green-600" />
+                    <span className="font-semibold text-gray-900">Financial Quality</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span className="text-sm font-medium text-green-600">Complete</span>
+                  </div>
+                </div>
+
+                {/* Operational Maturity - Complete */}
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Settings className="w-5 h-5 text-green-600" />
+                    <span className="font-semibold text-gray-900">Operational Maturity</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span className="text-sm font-medium text-green-600">Complete</span>
+                  </div>
+                </div>
+
+                {/* Documentation Preparedness - Complete */}
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <FileText className="w-5 h-5 text-green-600" />
+                    <span className="font-semibold text-gray-900">Documentation Preparedness</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span className="text-sm font-medium text-green-600">Complete</span>
+                  </div>
+                </div>
+
+                {/* Team & Transition Risk - Complete */}
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Users className="w-5 h-5 text-green-600" />
+                    <span className="font-semibold text-gray-900">Team & Transition Risk</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span className="text-sm font-medium text-green-600">Complete</span>
+                  </div>
+                </div>
+
+                {/* Previous M&A Experience - In Progress */}
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <TrendingUp className="w-5 h-5 text-blue-600" />
+                    <span className="font-semibold text-gray-900">Previous M&A Experience</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                    <span className="text-sm font-medium text-blue-600">In Progress</span>
+                  </div>
+                </div>
+
+                {/* Representation & Market Strategy - Pending */}
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Globe className="w-5 h-5 text-gray-400" />
+                    <span className="font-semibold text-gray-900">Representation & Market Strategy</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 rounded-full border-2 border-gray-300"></div>
+                    <span className="text-sm font-medium text-gray-500">Pending</span>
+                  </div>
+                </div>
+
+                {/* Deal Structure & Risk - Pending */}
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <AlertTriangle className="w-5 h-5 text-gray-400" />
+                    <span className="font-semibold text-gray-900">Deal Structure & Risk</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 rounded-full border-2 border-gray-300"></div>
+                    <span className="text-sm font-medium text-gray-500">Pending</span>
+                  </div>
+                </div>
+
+                {/* Business Continuity & Post-Sale - Pending */}
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Shield className="w-5 h-5 text-gray-400" />
+                    <span className="font-semibold text-gray-900">Business Continuity & Post-Sale</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 rounded-full border-2 border-gray-300"></div>
+                    <span className="text-sm font-medium text-gray-500">Pending</span>
                   </div>
                 </div>
               </div>
