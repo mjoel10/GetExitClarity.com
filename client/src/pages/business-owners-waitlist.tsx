@@ -210,7 +210,7 @@ export default function BusinessOwnersWaitlist() {
                 Discover Your True Exit Value <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Before the Market Decides</span>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed mb-8">
-                Get an unbiased, M&A-grade assessment that reveals your business's real valuation, flags deal risks, and gives you a clear action plan to sell for more.
+                Get an unbiased M&A-grade assessment that reveals your business's real valuation, flags deal risks, and gives you a clear action plan to sell for more.
               </p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-muted-foreground mb-8">
                 <div className="flex items-center gap-2">
