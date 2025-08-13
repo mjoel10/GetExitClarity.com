@@ -949,10 +949,13 @@ export default function BusinessOwnersWaitlist() {
             </Card>
           </div>
 
-          {/* CTA Banner Below Waitlist */}
-          <div className="text-center mt-16 bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to See Your Business Through M&A Eyes?</h3>
-            <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
+        </div>
+        
+        {/* Full-Width CTA Banner Below Waitlist */}
+        <div className="mt-16 bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-12 border border-gray-700 mx-4 sm:mx-6">
+          <div className="text-center max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-white mb-4">Ready to See Your Business Through M&A Eyes?</h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Join our exclusive early access list and be the first to experience this comprehensive analysis
             </p>
             <Button 
@@ -961,11 +964,13 @@ export default function BusinessOwnersWaitlist() {
                 waitlistSection?.scrollIntoView({ behavior: 'smooth' });
               }}
               size="lg"
-              className="bg-white hover:bg-gray-100 text-gray-900 px-12 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              className="bg-white hover:bg-gray-100 text-gray-900 px-16 py-5 text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               Get Early Access to This Analysis
             </Button>
           </div>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
         </div>
       </section>
 
