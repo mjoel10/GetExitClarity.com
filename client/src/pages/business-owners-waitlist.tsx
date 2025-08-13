@@ -310,15 +310,15 @@ export default function BusinessOwnersWaitlist() {
                           </div>
 
                           {/* Content Area */}
-                          <div className="flex-1 p-3 overflow-hidden">
-                            <h1 className="text-sm font-bold text-gray-900 mb-2">Executive Summary</h1>
+                          <div className="flex-1 p-4 overflow-hidden">
+                            <h1 className="text-lg font-bold text-gray-900 mb-4">Executive Summary</h1>
                             
                             {/* Score Card */}
-                            <div className="bg-white border border-gray-200 rounded-lg p-3 mb-3 shadow-sm">
-                              <div className="flex items-center gap-3">
+                            <div className="bg-white border border-gray-200 rounded-xl p-4 mb-4 shadow-sm">
+                              <div className="flex items-center gap-4">
                                 {/* Score Ring */}
-                                <div className="relative w-12 h-12">
-                                  <svg className="w-12 h-12 transform -rotate-90" viewBox="0 0 36 36">
+                                <div className="relative w-16 h-16">
+                                  <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
                                     <path
                                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                                       fill="none"
@@ -335,35 +335,35 @@ export default function BusinessOwnersWaitlist() {
                                     />
                                   </svg>
                                   <div className="absolute inset-0 flex items-center justify-center">
-                                    <span className="text-sm font-bold text-gray-900">94%</span>
+                                    <span className="text-lg font-bold text-gray-900">94%</span>
                                   </div>
                                 </div>
                                 
                                 <div className="flex-1">
-                                  <div className="flex items-center justify-between mb-1">
-                                    <div className="inline-flex items-center gap-1 bg-primary text-white px-2 py-1 rounded text-xs font-semibold">
-                                      <TrendingUp className="w-3 h-3" />
+                                  <div className="flex items-center justify-between mb-3">
+                                    <div className="inline-flex items-center gap-2 bg-primary text-white px-3 py-1.5 rounded-lg text-sm font-semibold">
+                                      <TrendingUp className="w-4 h-4" />
                                       Ready to Proceed
                                     </div>
-                                    <div className="text-xs text-gray-500">Exit Readiness Score</div>
+                                    <div className="text-sm text-gray-500">Exit Readiness Score</div>
                                   </div>
                                   
                                   {/* Key Metrics Grid */}
-                                  <div className="grid grid-cols-4 gap-2 text-xs">
+                                  <div className="grid grid-cols-4 gap-3 text-sm">
                                     <div>
-                                      <div className="text-gray-500">Est. Value</div>
+                                      <div className="text-gray-500 text-xs mb-1">Est. Value</div>
                                       <div className="font-bold text-gray-900">$8.2M</div>
                                     </div>
                                     <div>
-                                      <div className="text-gray-500">Multiple</div>
+                                      <div className="text-gray-500 text-xs mb-1">Multiple</div>
                                       <div className="font-bold text-gray-900">4.2x</div>
                                     </div>
                                     <div>
-                                      <div className="text-gray-500">Timeline</div>
+                                      <div className="text-gray-500 text-xs mb-1">Timeline</div>
                                       <div className="font-bold text-gray-900">6-9 mo</div>
                                     </div>
                                     <div>
-                                      <div className="text-gray-500">Risk Level</div>
+                                      <div className="text-gray-500 text-xs mb-1">Risk Level</div>
                                       <div className="font-bold text-green-600">Low</div>
                                     </div>
                                   </div>
@@ -371,39 +371,39 @@ export default function BusinessOwnersWaitlist() {
                               </div>
                               
                               {/* Additional Data Points */}
-                              <div className="grid grid-cols-4 gap-2 mt-2 pt-2 border-t border-gray-100">
+                              <div className="grid grid-cols-4 gap-3 mt-4 pt-4 border-t border-gray-100">
                                 <div className="text-center">
-                                  <div className="text-xs text-gray-500">EBITDA</div>
-                                  <div className="text-sm font-bold text-green-600">23%</div>
+                                  <div className="text-xs text-gray-500 mb-1">EBITDA</div>
+                                  <div className="text-lg font-bold text-green-600">23%</div>
                                 </div>
                                 <div className="text-center">
-                                  <div className="text-xs text-gray-500">Revenue</div>
-                                  <div className="text-sm font-bold text-blue-600">18%</div>
+                                  <div className="text-xs text-gray-500 mb-1">Revenue</div>
+                                  <div className="text-lg font-bold text-blue-600">18%</div>
                                 </div>
                                 <div className="text-center">
-                                  <div className="text-xs text-gray-500">Market</div>
-                                  <div className="text-sm font-bold text-purple-600">12%</div>
+                                  <div className="text-xs text-gray-500 mb-1">Market</div>
+                                  <div className="text-lg font-bold text-purple-600">12%</div>
                                 </div>
                                 <div className="text-center">
-                                  <div className="text-xs text-gray-500">Deal</div>
-                                  <div className="text-sm font-bold text-indigo-600">High</div>
+                                  <div className="text-xs text-gray-500 mb-1">Deal</div>
+                                  <div className="text-lg font-bold text-indigo-600">High</div>
                                 </div>
                               </div>
                             </div>
 
                             {/* Key Findings */}
-                            <div className="space-y-1">
-                              <div className="text-xs font-semibold text-gray-800 mb-1">Key Findings</div>
-                              <div className="flex items-start gap-1 text-xs">
-                                <CheckCircle className="w-2.5 h-2.5 text-green-500 flex-shrink-0 mt-0.5" />
+                            <div className="space-y-2">
+                              <div className="text-sm font-semibold text-gray-800 mb-2">Key Findings</div>
+                              <div className="flex items-start gap-2 text-sm leading-relaxed">
+                                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
                                 <span className="text-gray-700">Strong financial performance with 23% EBITDA margin</span>
                               </div>
-                              <div className="flex items-start gap-1 text-xs">
-                                <CheckCircle className="w-2.5 h-2.5 text-green-500 flex-shrink-0 mt-0.5" />
+                              <div className="flex items-start gap-2 text-sm leading-relaxed">
+                                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
                                 <span className="text-gray-700">Diversified customer base reduces concentration risk</span>
                               </div>
-                              <div className="flex items-start gap-1 text-xs">
-                                <AlertTriangle className="w-2.5 h-2.5 text-yellow-500 flex-shrink-0 mt-0.5" />
+                              <div className="flex items-start gap-2 text-sm leading-relaxed">
+                                <AlertTriangle className="w-4 h-4 text-yellow-500 flex-shrink-0 mt-0.5" />
                                 <span className="text-gray-700">Key person dependency requires transition planning</span>
                               </div>
                             </div>
