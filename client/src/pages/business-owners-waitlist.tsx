@@ -273,33 +273,16 @@ export default function BusinessOwnersWaitlist() {
                         {/* Main Content */}
                         <div className="flex h-full bg-gray-50">
                           {/* Sidebar */}
-                          <div className="w-32 bg-white border-r border-gray-200 p-2">
-                            <div className="space-y-0.5">
-                              <div className="h-2 bg-gray-300 rounded w-20 mb-1"></div>
+                          <div className="w-28 bg-white border-r border-gray-200 p-2">
+                            <div className="space-y-1">
+                              <div className="h-2 bg-gray-300 rounded w-20 mb-2"></div>
                               <div className="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-medium">
                                 Executive Summary
                               </div>
-                              <div className="text-gray-600 px-2 py-1 text-xs rounded">
-                                Valuation Analysis
-                              </div>
-                              <div className="text-gray-600 px-2 py-1 text-xs rounded">
-                                Financial Performance
-                              </div>
-                              <div className="text-gray-600 px-2 py-1 text-xs rounded">
-                                Market Position
-                              </div>
-                              <div className="text-gray-600 px-2 py-1 text-xs rounded">
-                                Operational Analysis
-                              </div>
-                              <div className="text-gray-600 px-2 py-1 text-xs rounded">
-                                Risk Assessment
-                              </div>
-                              <div className="text-gray-600 px-2 py-1 text-xs rounded">
-                                Deal Structure
-                              </div>
-                              <div className="text-gray-600 px-2 py-1 text-xs rounded">
-                                Recommendations
-                              </div>
+                              <div className="h-2 bg-gray-200 rounded w-20"></div>
+                              <div className="h-2 bg-gray-200 rounded w-16"></div>
+                              <div className="h-2 bg-gray-200 rounded w-18"></div>
+                              <div className="h-2 bg-gray-200 rounded w-14"></div>
                             </div>
                           </div>
 
