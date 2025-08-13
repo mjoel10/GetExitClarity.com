@@ -423,16 +423,7 @@ export default function BusinessOwnersWaitlist() {
         </div>
       </section>
 
-      {/* Social Proof Section */}
-      <section className="py-12 bg-background">
-        <div className="container max-w-4xl mx-auto px-4 lg:px-8">
-          <div className="text-center">
-            <p className="text-lg text-muted-foreground font-medium">
-              Trusted by 200+ business owners and M&A professionals
-            </p>
-          </div>
-        </div>
-      </section>
+
 
       {/* What is ExitClarity Section */}
       <section className="py-24 bg-background">
@@ -442,7 +433,7 @@ export default function BusinessOwnersWaitlist() {
               What is ExitClarity?
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              The professional exit readiness platform trusted by M&A firms and business owners
+              The professional exit readiness platform trusted by M&A firms and business owners.
             </p>
           </div>
           
@@ -546,7 +537,7 @@ export default function BusinessOwnersWaitlist() {
               Why Business Owners Choose ExitClarity
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Get the insights you need to make informed decisions about your exit strategy
+              Get the insights you need to make informed decisions about your exit strategy.
             </p>
           </div>
           
@@ -647,7 +638,7 @@ export default function BusinessOwnersWaitlist() {
             </h2>
             <div className="text-center mb-8 max-w-3xl mx-auto">
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Preview the comprehensive analysis you'll receive for your business
+                Preview the comprehensive analysis you'll receive for your business.
               </p>
             </div>
             <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 border border-gray-200">
@@ -773,7 +764,7 @@ export default function BusinessOwnersWaitlist() {
                 Join Early Access Waitlist
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Be among the first business owners to access professional exit analysis
+                Be among the first business owners to access professional exit analysis.
               </p>
             </div>
 
