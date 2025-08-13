@@ -205,11 +205,11 @@ export default function BusinessOwnersWaitlist() {
               <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 text-sm px-4 py-2">
                 Early Access Preview
               </Badge>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Know Your Exit Value <span className="text-primary">Before You Hire Advisors</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 leading-tight">
+                Discover Your True Exit Value <span className="text-primary">Before the Market Decides</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8">
-                Built by Business Owners and M&A Professionals with 30+ Years Experience
+                Get an unbiased, M&A-grade assessment that reveals your business's real valuation, flags deal-killing risks, and gives you a clear action plan to sell for more—before you spend a dime on advisors.
               </p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-gray-500 mb-8">
                 <div className="flex items-center gap-2">
@@ -229,22 +229,23 @@ export default function BusinessOwnersWaitlist() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 mb-8 lg:mb-0">
                 <Button 
-                  onClick={() => setIsReportModalOpen(true)}
-                  className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 px-6 py-2.5 text-base font-semibold rounded-lg shadow hover:shadow-lg w-full sm:w-auto min-w-[200px]"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Sample Report
-                </Button>
-                <Button 
                   onClick={() => {
                     const waitlistSection = document.getElementById('waitlist-form');
                     waitlistSection?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="bg-primary text-white border-2 border-primary hover:bg-primary/90 transition-all duration-300 px-6 py-2.5 text-base font-semibold rounded-lg shadow hover:shadow-lg w-full sm:w-auto min-w-[200px]"
+                  className="bg-primary text-white border-2 border-primary hover:bg-primary/90 transition-all duration-300 px-8 py-4 text-lg font-semibold rounded-lg shadow hover:shadow-lg w-full sm:w-auto min-w-[240px]"
                 >
                   <UserPlus className="w-4 h-4 mr-2" />
                   Join Early Access Waitlist
                 </Button>
+                <div className="text-center lg:text-left">
+                  <p className="text-sm text-gray-500 mt-3">
+                    Be among the first business owners to access ExitClarity.
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Prefer a preview? <button onClick={() => setIsReportModalOpen(true)} className="text-primary hover:underline">View a sample report</button>.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -422,7 +423,7 @@ export default function BusinessOwnersWaitlist() {
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-6">
               What is ExitClarity?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -436,9 +437,9 @@ export default function BusinessOwnersWaitlist() {
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <Building className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Professional Platform</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Professional Platform</h3>
               <p className="text-base text-gray-600 text-center leading-relaxed">
-                Used by M&A firms and business owners to systematically evaluate businesses before market entry
+                Used by M&A firms and business owners to systematically evaluate businesses before market entry.
               </p>
             </div>
 
@@ -447,9 +448,9 @@ export default function BusinessOwnersWaitlist() {
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">30-Minute Assessment</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">30-Minute Assessment</h3>
               <p className="text-base text-gray-600 text-center leading-relaxed">
-                Comprehensive evaluation across 11 critical business factors analyzing financial performance to operational readiness
+                Comprehensive evaluation across 11 critical factors—strategic, financial, operational, and personal readiness.
               </p>
             </div>
 
@@ -458,9 +459,9 @@ export default function BusinessOwnersWaitlist() {
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <FileText className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Strategic Reports</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Strategic Reports</h3>
               <p className="text-base text-gray-600 text-center leading-relaxed">
-                Generates 20-25 page strategic report with valuation analysis and action plan for your exit readiness
+                Receive a 20–25 page report with valuation analysis, risk audit, and a step-by-step action plan.
               </p>
             </div>
 
@@ -469,9 +470,9 @@ export default function BusinessOwnersWaitlist() {
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">M&A Methodology</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">M&A Methodology</h3>
               <p className="text-base text-gray-600 text-center leading-relaxed">
-                Uses the same methodology M&A professionals use, giving you insider knowledge typically reserved for advisors
+                Insights built from decades of real buy-side and sell-side experience—no fluff, just what moves value.
               </p>
             </div>
 
@@ -480,9 +481,9 @@ export default function BusinessOwnersWaitlist() {
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">GO/FIX/WAIT Recommendation</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">GO/FIX/WAIT Recommendation</h3>
               <p className="text-base text-gray-600 text-center leading-relaxed">
-                Data-driven recommendations based on your business profile, market conditions, and exit readiness
+                Clear guidance on whether to sell now, fix first, or wait for a better window.
               </p>
             </div>
 
@@ -491,9 +492,9 @@ export default function BusinessOwnersWaitlist() {
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Expert Insights</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Expert Insights</h3>
               <p className="text-base text-gray-600 text-center leading-relaxed">
-                Access insights across all critical dimensions from 30+ years of M&A expertise and business ownership
+                Practical recommendations to increase valuation and buyer confidence before you engage advisors.
               </p>
             </div>
           </div>
