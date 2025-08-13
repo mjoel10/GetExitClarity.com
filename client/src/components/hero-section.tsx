@@ -13,9 +13,8 @@ export function HeroSection() {
             {/* Headlines Section */}
             <div className="hero-headlines">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight text-center xl:text-left">
-                Drive High Confidence Deals with{" "}
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Better Exit Readiness
+                  Discover Your True Exit Value Before Buyers Do
                 </span>
               </h1>
               
