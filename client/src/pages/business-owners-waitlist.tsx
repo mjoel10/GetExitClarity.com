@@ -228,7 +228,7 @@ export default function BusinessOwnersWaitlist() {
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 mb-8 lg:mb-0">
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-8 lg:mb-0">
                 <Button 
                   onClick={() => {
                     const waitlistSection = document.getElementById('waitlist-form');
@@ -242,14 +242,23 @@ export default function BusinessOwnersWaitlist() {
                   Join Early Access Waitlist
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
-                <div className="text-center lg:text-left">
-                  <p className="text-sm text-muted-foreground mt-3">
-                    Be among the first business owners to access ExitClarity.
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    Prefer a preview? <button onClick={() => setIsReportModalOpen(true)} className="text-primary hover:underline">View a sample report</button>.
-                  </p>
-                </div>
+                
+                <Button 
+                  onClick={() => setIsReportModalOpen(true)}
+                  variant="professional"
+                  size="xl"
+                  className="group"
+                >
+                  <FileText className="mr-2 h-5 w-5" />
+                  View Sample Report
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
+              
+              <div className="text-center lg:text-left">
+                <p className="text-sm text-muted-foreground">
+                  Be among the first business owners to access ExitClarity.
+                </p>
               </div>
             </div>
 
