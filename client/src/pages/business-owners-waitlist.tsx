@@ -254,12 +254,6 @@ export default function BusinessOwnersWaitlist() {
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </div>
-              
-              <div className="text-center lg:text-left">
-                <p className="text-sm text-muted-foreground">
-                  Be among the first business owners to access ExitClarity.
-                </p>
-              </div>
             </div>
 
             {/* Right Visual - Tablet Browser Interface */}
