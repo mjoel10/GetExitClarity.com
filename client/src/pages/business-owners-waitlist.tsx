@@ -416,13 +416,13 @@ export default function BusinessOwnersWaitlist() {
       </section>
 
       {/* What is ExitClarity Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 via-blue-50 to-white relative">
+      <section className="py-20 bg-white relative">
         {/* Subtle divider line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
               What is ExitClarity?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -432,9 +432,9 @@ export default function BusinessOwnersWaitlist() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {/* Professional Platform */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Building className="w-8 h-8 text-blue-600" />
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <Building className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">Professional Platform</h3>
               <p className="text-sm text-gray-600 text-center leading-relaxed">
@@ -443,9 +443,9 @@ export default function BusinessOwnersWaitlist() {
             </div>
 
             {/* 30-Minute Assessment */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="w-8 h-8 text-green-600" />
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">30-Minute Assessment</h3>
               <p className="text-sm text-gray-600 text-center leading-relaxed">
@@ -454,9 +454,9 @@ export default function BusinessOwnersWaitlist() {
             </div>
 
             {/* Strategic Reports */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FileText className="w-8 h-8 text-purple-600" />
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <FileText className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">Strategic Reports</h3>
               <p className="text-sm text-gray-600 text-center leading-relaxed">
@@ -465,9 +465,9 @@ export default function BusinessOwnersWaitlist() {
             </div>
 
             {/* M&A Methodology */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-8 h-8 text-orange-600" />
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">M&A Methodology</h3>
               <p className="text-sm text-gray-600 text-center leading-relaxed">
@@ -476,9 +476,9 @@ export default function BusinessOwnersWaitlist() {
             </div>
 
             {/* Data-Driven Recommendations */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Target className="w-8 h-8 text-red-600" />
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">GO/FIX/WAIT Recommendation</h3>
               <p className="text-sm text-gray-600 text-center leading-relaxed">
@@ -487,9 +487,9 @@ export default function BusinessOwnersWaitlist() {
             </div>
 
             {/* Expert Insights */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-indigo-600" />
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">Expert Insights</h3>
               <p className="text-sm text-gray-600 text-center leading-relaxed">
@@ -499,14 +499,14 @@ export default function BusinessOwnersWaitlist() {
           </div>
 
           {/* CTA after What is ExitClarity */}
-          <div className="text-center">
+          <div className="text-center mt-16">
             <Button 
               onClick={() => {
                 const waitlistSection = document.getElementById('waitlist-form');
                 waitlistSection?.scrollIntoView({ behavior: 'smooth' });
               }}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold"
+              className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               Secure My Early Access Spot
             </Button>
@@ -515,13 +515,13 @@ export default function BusinessOwnersWaitlist() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 bg-white relative">
+      <section className="py-24 bg-gray-50 relative">
         {/* Top divider line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Why Business Owners Choose ExitClarity
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -532,9 +532,9 @@ export default function BusinessOwnersWaitlist() {
           {/* Large Feature Cards - 2x2 Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Confidence & Clarity */}
-            <div className="group bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-300 border border-blue-100">
+            <div className="group bg-white rounded-3xl p-10 hover:shadow-2xl transition-all duration-300 border border-gray-200">
               <div className="flex items-start gap-6">
-                <div className="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <Target className="w-10 h-10 text-white" />
                 </div>
                 <div className="flex-1">
@@ -547,9 +547,9 @@ export default function BusinessOwnersWaitlist() {
             </div>
 
             {/* Cost Savings */}
-            <div className="group bg-gradient-to-br from-green-50 to-green-100/50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-300 border border-green-100">
+            <div className="group bg-white rounded-3xl p-10 hover:shadow-2xl transition-all duration-300 border border-gray-200">
               <div className="flex items-start gap-6">
-                <div className="w-20 h-20 bg-green-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <DollarSign className="w-10 h-10 text-white" />
                 </div>
                 <div className="flex-1">
@@ -562,9 +562,9 @@ export default function BusinessOwnersWaitlist() {
             </div>
 
             {/* Reduced Risk */}
-            <div className="group bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-300 border border-orange-100">
+            <div className="group bg-white rounded-3xl p-10 hover:shadow-2xl transition-all duration-300 border border-gray-200">
               <div className="flex items-start gap-6">
-                <div className="w-20 h-20 bg-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <Shield className="w-10 h-10 text-white" />
                 </div>
                 <div className="flex-1">
@@ -577,9 +577,9 @@ export default function BusinessOwnersWaitlist() {
             </div>
 
             {/* Expert Guidance */}
-            <div className="group bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-300 border border-purple-100">
+            <div className="group bg-white rounded-3xl p-10 hover:shadow-2xl transition-all duration-300 border border-gray-200">
               <div className="flex items-start gap-6">
-                <div className="w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-10 h-10 text-white" />
                 </div>
                 <div className="flex-1">
@@ -593,18 +593,18 @@ export default function BusinessOwnersWaitlist() {
           </div>
           
           {/* CTA after Benefits */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Button 
               onClick={() => {
                 const waitlistSection = document.getElementById('waitlist-form');
                 waitlistSection?.scrollIntoView({ behavior: 'smooth' });
               }}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold"
+              className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               Secure My Early Access Spot
             </Button>
-            <p className="text-sm text-gray-600 mt-2 font-medium">
+            <p className="text-base text-gray-600 mt-4 font-medium">
               Limited spots available for early access
             </p>
           </div>
@@ -612,18 +612,38 @@ export default function BusinessOwnersWaitlist() {
       </section>
 
       {/* Assessment Demo Section */}
-      <section className="py-24 bg-gray-900 relative">
+      <section className="py-24 bg-white relative">
         {/* Top divider line */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Interactive Assessment Preview */}
           <div className="max-w-5xl mx-auto mb-20">
-            <h2 className="text-3xl font-bold text-center text-white mb-8">
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">
               See What You'll Experience
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-              Preview the comprehensive analysis you'll receive for your business
-            </p>
+            <div className="text-center mb-12 max-w-4xl mx-auto">
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Preview the comprehensive analysis you'll receive for your business
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-base text-gray-700">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span>Get a comprehensive 20-25 page strategic report with valuation analysis</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span>Receive specific GO/FIX/WAIT recommendations based on your business</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span>Understand your true exit readiness before engaging expensive advisors</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span>See exactly where you stand and what steps to take next</span>
+                </div>
+              </div>
+            </div>
             <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 border border-gray-200">
               <div className="assessment-preview">
                 {/* Assessment Header */}
@@ -717,14 +737,18 @@ export default function BusinessOwnersWaitlist() {
           </div>
 
           {/* CTA after Assessment Preview */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-20 bg-primary/5 rounded-3xl p-12 border border-primary/10">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to See Your Business Through M&A Eyes?</h3>
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              Join our exclusive early access list and be the first to experience this comprehensive analysis
+            </p>
             <Button 
               onClick={() => {
                 const waitlistSection = document.getElementById('waitlist-form');
                 waitlistSection?.scrollIntoView({ behavior: 'smooth' });
               }}
               size="lg"
-              className="bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 text-lg font-semibold border border-gray-200 shadow-lg"
+              className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               Get Early Access to This Analysis
             </Button>
@@ -733,14 +757,14 @@ export default function BusinessOwnersWaitlist() {
       </section>
 
       {/* Waitlist Form Section */}
-      <section className="py-24 bg-gradient-to-br from-white via-gray-50 to-blue-50/30 relative">
+      <section className="py-24 bg-gray-50 relative">
         {/* Top divider line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div id="waitlist-form" className="max-w-4xl mx-auto mb-20">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Join Early Access Waitlist
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
