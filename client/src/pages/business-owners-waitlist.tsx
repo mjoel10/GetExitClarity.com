@@ -199,7 +199,7 @@ export default function BusinessOwnersWaitlist() {
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:items-start">
             {/* Left Content */}
             <div className="text-center lg:text-left">
               <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 text-sm px-4 py-2">
@@ -227,10 +227,10 @@ export default function BusinessOwnersWaitlist() {
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col lg:flex-row justify-center lg:justify-start gap-3 mb-8 lg:mb-0">
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 mb-8 lg:mb-0">
                 <Button 
                   onClick={() => setIsReportModalOpen(true)}
-                  className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 px-6 py-2.5 text-base font-semibold rounded-lg shadow hover:shadow-lg"
+                  className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 px-6 py-2.5 text-base font-semibold rounded-lg shadow hover:shadow-lg w-full sm:w-auto min-w-[200px]"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Download Sample Report
@@ -240,7 +240,7 @@ export default function BusinessOwnersWaitlist() {
                     const waitlistSection = document.getElementById('waitlist-form');
                     waitlistSection?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="bg-primary text-white border-2 border-primary hover:bg-primary/90 transition-all duration-300 px-6 py-2.5 text-base font-semibold rounded-lg shadow hover:shadow-lg"
+                  className="bg-primary text-white border-2 border-primary hover:bg-primary/90 transition-all duration-300 px-6 py-2.5 text-base font-semibold rounded-lg shadow hover:shadow-lg w-full sm:w-auto min-w-[200px]"
                 >
                   <UserPlus className="w-4 h-4 mr-2" />
                   Join Early Access Waitlist
@@ -249,7 +249,7 @@ export default function BusinessOwnersWaitlist() {
             </div>
 
             {/* Right Visual - Tablet Browser Interface */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end lg:mt-20">
               <div className="max-w-lg w-full">
                 {/* Tablet Container */}
                 <div className="transform">
