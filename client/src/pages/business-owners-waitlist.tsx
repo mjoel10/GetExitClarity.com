@@ -249,7 +249,7 @@ export default function BusinessOwnersWaitlist() {
             </div>
 
             {/* Right Visual - Tablet Browser Interface */}
-            <div className="flex justify-center lg:justify-end lg:mt-20">
+            <div className="flex justify-center lg:justify-end lg:mt-32">
               <div className="max-w-lg w-full">
                 {/* Tablet Container */}
                 <div className="transform">
