@@ -10,7 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, TrendingUp, Shield, FileText, Clock, Users, Target, BarChart3, ArrowRight, Star, ChevronRight } from "lucide-react";
+import { CheckCircle, TrendingUp, Shield, FileText, Clock, Users, Target, BarChart3, ArrowRight, Star, ChevronRight, Building, Calendar, Heart, DollarSign, Settings, RefreshCw } from "lucide-react";
 import { useMeta } from "@/hooks/use-meta";
 import { apiRequest } from "@/lib/queryClient";
 
@@ -171,17 +171,17 @@ export default function BusinessOwnersWaitlist() {
                 {/* Assessment Factors Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {[
-                    { title: "Financial Performance", status: "completed", icon: "💰" },
-                    { title: "Market Position", status: "completed", icon: "🎯" },
-                    { title: "Operations", status: "completed", icon: "⚙️" },
-                    { title: "Management Team", status: "completed", icon: "👥" },
-                    { title: "Growth Potential", status: "completed", icon: "📈" },
-                    { title: "Risk Assessment", status: "completed", icon: "🛡️" },
-                    { title: "Legal Structure", status: "completed", icon: "⚖️" },
-                    { title: "Technology Systems", status: "active", icon: "💻" },
-                    { title: "Customer Base", status: "pending", icon: "🤝" },
-                    { title: "Competitive Advantage", status: "pending", icon: "🏆" },
-                    { title: "Exit Strategy", status: "pending", icon: "🚀" }
+                    { title: "Business Overview", status: "completed", icon: <Building className="w-6 h-6" /> },
+                    { title: "Exit Goals & Timeline", status: "completed", icon: <Calendar className="w-6 h-6" /> },
+                    { title: "Personal & Emotional Readiness", status: "completed", icon: <Heart className="w-6 h-6" /> },
+                    { title: "Financial Quality", status: "completed", icon: <DollarSign className="w-6 h-6" /> },
+                    { title: "Operational Maturity", status: "completed", icon: <Settings className="w-6 h-6" /> },
+                    { title: "Documentation Preparedness", status: "completed", icon: <FileText className="w-6 h-6" /> },
+                    { title: "Team & Transition Risk", status: "completed", icon: <Users className="w-6 h-6" /> },
+                    { title: "Previous M&A Experience", status: "active", icon: <TrendingUp className="w-6 h-6" /> },
+                    { title: "Representation & Market Strategy", status: "pending", icon: <Target className="w-6 h-6" /> },
+                    { title: "Deal Structure & Risk", status: "pending", icon: <Shield className="w-6 h-6" /> },
+                    { title: "Business Continuity & Post-Sale", status: "pending", icon: <RefreshCw className="w-6 h-6" /> }
                   ].map((factor, index) => (
                     <div
                       key={index}
@@ -194,7 +194,10 @@ export default function BusinessOwnersWaitlist() {
                       }`}
                     >
                       <div className="flex items-center gap-3">
-                        <div className={`text-2xl ${factor.status === 'active' ? 'animate-pulse' : ''}`}>
+                        <div className={`${
+                          factor.status === 'completed' ? 'text-green-600' :
+                          factor.status === 'active' ? 'text-blue-600' : 'text-gray-400'
+                        } ${factor.status === 'active' ? 'animate-pulse' : ''}`}>
                           {factor.icon}
                         </div>
                         <div className="flex-1">
