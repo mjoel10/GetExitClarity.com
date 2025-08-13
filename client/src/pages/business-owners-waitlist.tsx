@@ -297,7 +297,7 @@ export default function BusinessOwnersWaitlist() {
 
                           {/* Content Area */}
                           <div className="flex-1 p-3 overflow-hidden">
-                            <div className="h-3 bg-gray-200 rounded mb-2 w-3/4"></div>
+                            <div className="h-2 bg-gray-200 rounded mb-2 w-3/4"></div>
                             
                             {/* Score Card */}
                             <div className="bg-white border border-gray-200 rounded-lg p-3 shadow-sm">
@@ -321,55 +321,55 @@ export default function BusinessOwnersWaitlist() {
                                     />
                                   </svg>
                                   <div className="absolute inset-0 flex items-center justify-center">
-                                    <span className="text-lg font-bold text-gray-900">94%</span>
+                                    <span className="text-sm font-bold text-gray-900">94%</span>
                                   </div>
                                 </div>
                                 
                                 <div className="flex-1">
                                   <div className="flex items-center justify-between mb-2">
-                                    <div className="inline-flex items-center gap-1 bg-primary text-white px-3 py-1 rounded text-sm font-semibold">
-                                      <TrendingUp className="w-3 h-3" />
+                                    <div className="inline-flex items-center gap-1 bg-primary text-white px-2 py-0.5 rounded text-xs font-semibold">
+                                      <TrendingUp className="w-2.5 h-2.5" />
                                       Ready to Proceed
                                     </div>
-                                    <div className="h-2 bg-gray-200 rounded w-20"></div>
+                                    <div className="h-1.5 bg-gray-200 rounded w-16"></div>
                                   </div>
                                   
                                   {/* Key Metrics Grid */}
-                                  <div className="grid grid-cols-4 gap-3 text-sm">
+                                  <div className="grid grid-cols-4 gap-2 text-xs">
                                     <div>
-                                      <div className="h-2 bg-gray-200 rounded mb-1 w-16"></div>
+                                      <div className="h-1.5 bg-gray-200 rounded mb-1 w-12"></div>
                                       <div className="font-bold text-gray-900">$8.2M</div>
                                     </div>
                                     <div>
-                                      <div className="h-2 bg-gray-200 rounded mb-1 w-12"></div>
+                                      <div className="h-1.5 bg-gray-200 rounded mb-1 w-8"></div>
                                       <div className="font-bold text-gray-900">4.2x</div>
                                     </div>
                                     <div>
-                                      <div className="h-2 bg-gray-200 rounded mb-1 w-14"></div>
+                                      <div className="h-1.5 bg-gray-200 rounded mb-1 w-10"></div>
                                       <div className="font-bold text-gray-900">6-9 mo</div>
                                     </div>
                                     <div>
-                                      <div className="h-2 bg-gray-200 rounded mb-1 w-12"></div>
+                                      <div className="h-1.5 bg-gray-200 rounded mb-1 w-8"></div>
                                       <div className="font-bold text-green-600">Low</div>
                                     </div>
                                   </div>
                                   
                                   {/* Bottom metrics row */}
-                                  <div className="grid grid-cols-4 gap-3 mt-3 pt-3 border-t border-gray-100 text-sm">
+                                  <div className="grid grid-cols-4 gap-2 mt-2 pt-2 border-t border-gray-100 text-xs">
                                     <div>
-                                      <div className="h-2 bg-gray-200 rounded mb-1 w-10"></div>
+                                      <div className="h-1.5 bg-gray-200 rounded mb-1 w-6"></div>
                                       <div className="font-bold text-green-600">23%</div>
                                     </div>
                                     <div>
-                                      <div className="h-2 bg-gray-200 rounded mb-1 w-12"></div>
+                                      <div className="h-1.5 bg-gray-200 rounded mb-1 w-8"></div>
                                       <div className="font-bold text-blue-600">18%</div>
                                     </div>
                                     <div>
-                                      <div className="h-2 bg-gray-200 rounded mb-1 w-10"></div>
+                                      <div className="h-1.5 bg-gray-200 rounded mb-1 w-6"></div>
                                       <div className="font-bold text-purple-600">12%</div>
                                     </div>
                                     <div>
-                                      <div className="h-2 bg-gray-200 rounded mb-1 w-8"></div>
+                                      <div className="h-1.5 bg-gray-200 rounded mb-1 w-5"></div>
                                       <div className="font-bold text-indigo-600">High</div>
                                     </div>
                                   </div>
