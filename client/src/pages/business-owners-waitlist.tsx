@@ -425,7 +425,7 @@ export default function BusinessOwnersWaitlist() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               What is ExitClarity?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               The professional exit readiness platform trusted by M&A firms and business owners
             </p>
           </div>
@@ -436,8 +436,8 @@ export default function BusinessOwnersWaitlist() {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Building className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Professional Platform</h3>
-              <p className="text-gray-600 text-center leading-relaxed">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">Professional Platform</h3>
+              <p className="text-sm text-gray-600 text-center leading-relaxed">
                 Used by M&A firms and business owners to systematically evaluate businesses before market entry
               </p>
             </div>
@@ -447,8 +447,8 @@ export default function BusinessOwnersWaitlist() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">30-Minute Assessment</h3>
-              <p className="text-gray-600 text-center leading-relaxed">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">30-Minute Assessment</h3>
+              <p className="text-sm text-gray-600 text-center leading-relaxed">
                 Comprehensive evaluation across 11 critical business factors analyzing financial performance to operational readiness
               </p>
             </div>
@@ -458,8 +458,8 @@ export default function BusinessOwnersWaitlist() {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <FileText className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Strategic Reports</h3>
-              <p className="text-gray-600 text-center leading-relaxed">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">Strategic Reports</h3>
+              <p className="text-sm text-gray-600 text-center leading-relaxed">
                 Generates 20-25 page strategic report with valuation analysis and action plan for your exit readiness
               </p>
             </div>
@@ -469,8 +469,8 @@ export default function BusinessOwnersWaitlist() {
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <TrendingUp className="w-8 h-8 text-orange-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">M&A Methodology</h3>
-              <p className="text-gray-600 text-center leading-relaxed">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">M&A Methodology</h3>
+              <p className="text-sm text-gray-600 text-center leading-relaxed">
                 Uses the same methodology M&A professionals use, giving you insider knowledge typically reserved for advisors
               </p>
             </div>
@@ -480,8 +480,8 @@ export default function BusinessOwnersWaitlist() {
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Target className="w-8 h-8 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">GO/FIX/WAIT Recommendation</h3>
-              <p className="text-gray-600 text-center leading-relaxed">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">GO/FIX/WAIT Recommendation</h3>
+              <p className="text-sm text-gray-600 text-center leading-relaxed">
                 Data-driven recommendations based on your business profile, market conditions, and exit readiness
               </p>
             </div>
@@ -491,8 +491,8 @@ export default function BusinessOwnersWaitlist() {
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Expert Insights</h3>
-              <p className="text-gray-600 text-center leading-relaxed">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">Expert Insights</h3>
+              <p className="text-sm text-gray-600 text-center leading-relaxed">
                 Access insights across all critical dimensions from 30+ years of M&A expertise and business ownership
               </p>
             </div>
@@ -524,7 +524,7 @@ export default function BusinessOwnersWaitlist() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Why Business Owners Choose ExitClarity
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Get the insights you need to make informed decisions about your exit strategy
             </p>
           </div>
@@ -538,8 +538,8 @@ export default function BusinessOwnersWaitlist() {
                   <Target className="w-10 h-10 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Confidence & Clarity</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Confidence & Clarity</h3>
+                  <p className="text-base text-gray-700 leading-relaxed">
                     Understand realistic estimated outcomes for your specific business and gain confidence about the entire exit process before engaging advisors.
                   </p>
                 </div>
@@ -553,8 +553,8 @@ export default function BusinessOwnersWaitlist() {
                   <DollarSign className="w-10 h-10 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Significant Cost Savings</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Significant Cost Savings</h3>
+                  <p className="text-base text-gray-700 leading-relaxed">
                     Save on professional fees through early preparation and efficient process management. Know your position before expensive engagements.
                   </p>
                 </div>
@@ -568,8 +568,8 @@ export default function BusinessOwnersWaitlist() {
                   <Shield className="w-10 h-10 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Minimize Exit Risk</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Minimize Exit Risk</h3>
+                  <p className="text-base text-gray-700 leading-relaxed">
                     Minimize process risk using lessons learned from hundreds of previous transactions and proven best practices from M&A professionals.
                   </p>
                 </div>
@@ -583,8 +583,8 @@ export default function BusinessOwnersWaitlist() {
                   <Users className="w-10 h-10 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">30+ Years M&A Expertise</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">30+ Years M&A Expertise</h3>
+                  <p className="text-base text-gray-700 leading-relaxed">
                     Access insights driven by decades of business ownership and sell-side/buy-side M&A expertise before you commit to consulting engagements.
                   </p>
                 </div>
@@ -621,7 +621,7 @@ export default function BusinessOwnersWaitlist() {
             <h2 className="text-3xl font-bold text-center text-white mb-8">
               See What You'll Experience
             </h2>
-            <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
               Preview the comprehensive analysis you'll receive for your business
             </p>
             <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 border border-gray-200">
@@ -743,7 +743,7 @@ export default function BusinessOwnersWaitlist() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Join Early Access Waitlist
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 Be among the first business owners to access professional exit analysis
               </p>
             </div>
