@@ -235,7 +235,72 @@ export default function BusinessOwnersWaitlist() {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
 
+      {/* Benefits Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why Business Owners Choose ExitClarity
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Get the insights you need to make informed decisions about your exit strategy
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Confidence & Clarity */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-200 transition-colors duration-300">
+                <Target className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Confidence & Clarity</h3>
+              <p className="text-gray-600">
+                Understand realistic estimated outcomes for your specific business and gain confidence about the entire exit process
+              </p>
+            </div>
+
+            {/* Cost Savings */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200 transition-colors duration-300">
+                <DollarSign className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Cost Savings</h3>
+              <p className="text-gray-600">
+                Save on professional fees through early preparation and efficient process management
+              </p>
+            </div>
+
+            {/* Reduced Risk */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-200 transition-colors duration-300">
+                <Shield className="w-8 h-8 text-red-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Reduced Risk</h3>
+              <p className="text-gray-600">
+                Minimize process risk using lessons learned from previous transactions and proven best practices
+              </p>
+            </div>
+
+            {/* Expert Guidance */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-200 transition-colors duration-300">
+                <Users className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Expert Guidance</h3>
+              <p className="text-gray-600">
+                Access insights driven by 30+ years of business ownership and sell-side/buy-side M&A expertise before you commit to consulting engagements
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Assessment Demo Section */}
+      <section className="py-16 bg-gradient-to-br from-primary/5 via-blue-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Interactive Assessment Preview */}
           <div className="max-w-5xl mx-auto mb-20">
             <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">
