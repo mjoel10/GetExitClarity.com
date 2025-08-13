@@ -926,39 +926,11 @@ export default function BusinessOwnersWaitlist() {
             </Card>
           </div>
 
-          {/* CTA Banner Below Waitlist - Matching Container Width */}
-          <div className="mt-16 bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700">
-            <div className="text-center max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to See Your Business Through M&A Eyes?</h3>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Join our exclusive early access list and be the first to experience this comprehensive analysis
-              </p>
-              <Button 
-                onClick={() => {
-                  const waitlistSection = document.getElementById('waitlist-form');
-                  waitlistSection?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                size="lg"
-                className="bg-white hover:bg-gray-100 text-gray-900 px-12 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-              >
-                Get Early Access to This Analysis
-              </Button>
-            </div>
-          </div>
+
         </div>
       </section>
 
-      {/* Footer Message */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-6xl mx-auto text-center px-4 sm:px-6">
-          <p className="text-lg text-gray-600">
-            Professional M&A analysis coming soon for business owners
-          </p>
-          <p className="text-sm text-gray-500 mt-2">
-            Join the waitlist to be notified when early access becomes available
-          </p>
-        </div>
-      </section>
+
 
       {/* Sample Report Modal */}
       <Dialog open={isReportModalOpen} onOpenChange={handleCloseReportModal}>
