@@ -452,55 +452,112 @@ export default function BusinessOwnersWaitlist() {
             <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">
               See What You'll Experience
             </h2>
-            <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 border border-gray-200">
-              <div className="assessment-preview">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    ExitClarity Assessment Progress
-                  </h3>
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-800">
-                    3 of 11 Completed
-                  </Badge>
-                </div>
-                
-                <div className="grid gap-3">
-                  {assessmentFactors.map((factor, index) => (
-                    <div 
-                      key={index}
-                      className={`p-4 border rounded-lg transition-colors ${
-                        factor.status === 'completed' ? 'bg-green-50 border-green-200' :
-                        factor.status === 'active' ? 'bg-blue-50 border-blue-200' : 
-                        'bg-gray-50 border-gray-200'
-                      }`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className={`${
-                          factor.status === 'completed' ? 'text-green-600' :
-                          factor.status === 'active' ? 'text-blue-600' : 'text-gray-400'
-                        } ${factor.status === 'active' ? 'animate-pulse' : ''}`}>
-                          {factor.icon}
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="font-semibold text-gray-900 text-sm">{factor.title}</h4>
-                          <div className="flex items-center gap-2 mt-1">
-                            {factor.status === 'completed' && (
-                              <CheckCircle className="w-4 h-4 text-green-600" />
-                            )}
-                            {factor.status === 'active' && (
-                              <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-                            )}
-                            <span className={`text-xs font-medium ${
-                              factor.status === 'completed' ? 'text-green-600' :
-                              factor.status === 'active' ? 'text-blue-600' : 'text-gray-500'
-                            }`}>
-                              {factor.status === 'completed' ? 'Complete' :
-                               factor.status === 'active' ? 'In Progress' : 'Pending'}
-                            </span>
-                          </div>
-                        </div>
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl p-6 lg:p-8">
+              {/* MacBook-style frame */}
+              <div className="bg-black rounded-lg p-2">
+                <div className="bg-white rounded-md overflow-hidden">
+                  {/* Assessment Header */}
+                  <div className="bg-gray-900 text-white p-4 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                        <Target className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="font-semibold">ExitClarity Assessment</span>
+                    </div>
+                    <Badge className="bg-blue-600 text-white border-0">
+                      Step 3 of 11
+                    </Badge>
+                  </div>
+
+                  {/* Assessment Content */}
+                  <div className="p-6">
+                    <div className="mb-6">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="text-lg font-semibold text-gray-900">Management Team Assessment</h3>
+                        <span className="text-sm text-gray-500">27% Complete</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div className="bg-primary h-2 rounded-full transition-all duration-500" style={{ width: '27%' }}></div>
                       </div>
                     </div>
-                  ))}
+
+                    {/* Sample Question */}
+                    <div className="bg-gray-50 rounded-lg p-4 mb-6">
+                      <h4 className="font-medium text-gray-900 mb-3">
+                        How many key management positions could continue operating if you were unavailable for 3 months?
+                      </h4>
+                      <div className="space-y-2">
+                        <label className="flex items-center p-3 bg-white rounded border hover:bg-blue-50 cursor-pointer transition-colors">
+                          <input type="radio" name="management" className="mr-3 text-primary" />
+                          <span className="text-gray-700">All positions have capable backup leadership</span>
+                        </label>
+                        <label className="flex items-center p-3 bg-blue-50 border-2 border-primary rounded cursor-pointer">
+                          <input type="radio" name="management" className="mr-3 text-primary" checked readOnly />
+                          <span className="text-gray-900 font-medium">Most positions covered, some gaps exist</span>
+                        </label>
+                        <label className="flex items-center p-3 bg-white rounded border hover:bg-blue-50 cursor-pointer transition-colors">
+                          <input type="radio" name="management" className="mr-3 text-primary" />
+                          <span className="text-gray-700">Few positions have backup plans</span>
+                        </label>
+                        <label className="flex items-center p-3 bg-white rounded border hover:bg-blue-50 cursor-pointer transition-colors">
+                          <input type="radio" name="management" className="mr-3 text-primary" />
+                          <span className="text-gray-700">Business heavily dependent on me personally</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    {/* Progress Indicators */}
+                    <div className="grid grid-cols-11 gap-2 mb-4">
+                      {assessmentFactors.map((factor, index) => (
+                        <div
+                          key={index}
+                          className={`h-8 rounded-md flex items-center justify-center text-xs font-medium transition-all ${
+                            factor.status === 'completed' ? 'bg-green-100 text-green-700 border-2 border-green-300' :
+                            factor.status === 'active' ? 'bg-blue-100 text-blue-700 border-2 border-blue-300 animate-pulse' : 
+                            'bg-gray-100 text-gray-500'
+                          }`}
+                          title={factor.title}
+                        >
+                          {factor.status === 'completed' ? (
+                            <CheckCircle className="w-4 h-4" />
+                          ) : factor.status === 'active' ? (
+                            <div className="w-3 h-3 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                          ) : (
+                            factor.icon
+                          )}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Assessment Categories */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+                      {assessmentFactors.slice(0, 6).map((factor, index) => (
+                        <div 
+                          key={index}
+                          className={`flex items-center gap-2 p-2 rounded ${
+                            factor.status === 'completed' ? 'bg-green-50 text-green-700' :
+                            factor.status === 'active' ? 'bg-blue-50 text-blue-700' : 
+                            'bg-gray-50 text-gray-500'
+                          }`}
+                        >
+                          <div className={factor.status === 'active' ? 'animate-pulse' : ''}>
+                            {factor.icon}
+                          </div>
+                          <span className="font-medium">{factor.title}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex gap-3 mt-6">
+                      <Button className="flex-1 bg-primary hover:bg-primary/90">
+                        Continue Assessment
+                      </Button>
+                      <Button variant="outline" className="px-6">
+                        Save & Exit
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
