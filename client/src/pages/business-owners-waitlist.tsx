@@ -333,8 +333,198 @@ export default function BusinessOwnersWaitlist() {
             </div>
           </div>
 
+          {/* Waitlist Form Section */}
+          <div className="max-w-4xl mx-auto mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                Join Early Access Waitlist
+              </h2>
+              <p className="text-lg text-gray-600">
+                Be among the first business owners to access professional exit analysis
+              </p>
+            </div>
 
+            <Card className="p-8 shadow-xl border border-gray-200">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                {/* Personal Information */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="firstName">First Name *</Label>
+                    <Input
+                      {...register("firstName")}
+                      placeholder="Enter your first name"
+                      className={errors.firstName ? "border-red-500" : ""}
+                    />
+                    {errors.firstName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>
+                    )}
+                  </div>
 
+                  <div>
+                    <Label htmlFor="lastName">Last Name *</Label>
+                    <Input
+                      {...register("lastName")}
+                      placeholder="Enter your last name"
+                      className={errors.lastName ? "border-red-500" : ""}
+                    />
+                    {errors.lastName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.lastName.message}</p>
+                    )}
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="email">Business Email *</Label>
+                    <Input
+                      {...register("email")}
+                      type="email"
+                      placeholder="Enter your business email"
+                      className={errors.email ? "border-red-500" : ""}
+                    />
+                    {errors.email && (
+                      <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <Label htmlFor="companyName">Company Name *</Label>
+                    <Input
+                      {...register("companyName")}
+                      placeholder="Enter your company name"
+                      className={errors.companyName ? "border-red-500" : ""}
+                    />
+                    {errors.companyName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.companyName.message}</p>
+                    )}
+                  </div>
+                </div>
+
+                {/* Business Information */}
+                <div>
+                  <Label htmlFor="industry">Industry *</Label>
+                  <Select onValueChange={(value) => setValue("industry", value)}>
+                    <SelectTrigger className={errors.industry ? "border-red-500" : ""}>
+                      <SelectValue placeholder="Select your industry" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="technology">Technology</SelectItem>
+                      <SelectItem value="healthcare">Healthcare</SelectItem>
+                      <SelectItem value="manufacturing">Manufacturing</SelectItem>
+                      <SelectItem value="retail">Retail</SelectItem>
+                      <SelectItem value="financial-services">Financial Services</SelectItem>
+                      <SelectItem value="real-estate">Real Estate</SelectItem>
+                      <SelectItem value="professional-services">Professional Services</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  {errors.industry && (
+                    <p className="text-red-500 text-sm mt-1">{errors.industry.message}</p>
+                  )}
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="annualRevenue">Annual Revenue *</Label>
+                    <Select onValueChange={(value) => setValue("annualRevenue", value)}>
+                      <SelectTrigger className={errors.annualRevenue ? "border-red-500" : ""}>
+                        <SelectValue placeholder="Select revenue range" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="under-1m">Under $1M</SelectItem>
+                        <SelectItem value="1m-5m">$1M - $5M</SelectItem>
+                        <SelectItem value="5m-10m">$5M - $10M</SelectItem>
+                        <SelectItem value="10m-25m">$10M - $25M</SelectItem>
+                        <SelectItem value="25m-50m">$25M - $50M</SelectItem>
+                        <SelectItem value="50m-plus">$50M+</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    {errors.annualRevenue && (
+                      <p className="text-red-500 text-sm mt-1">{errors.annualRevenue.message}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <Label htmlFor="ebitda">EBITDA Range *</Label>
+                    <Select onValueChange={(value) => setValue("ebitda", value)}>
+                      <SelectTrigger className={errors.ebitda ? "border-red-500" : ""}>
+                        <SelectValue placeholder="Select EBITDA range" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="negative">Negative</SelectItem>
+                        <SelectItem value="0-500k">$0 - $500K</SelectItem>
+                        <SelectItem value="500k-1m">$500K - $1M</SelectItem>
+                        <SelectItem value="1m-2m">$1M - $2M</SelectItem>
+                        <SelectItem value="2m-5m">$2M - $5M</SelectItem>
+                        <SelectItem value="5m-plus">$5M+</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    {errors.ebitda && (
+                      <p className="text-red-500 text-sm mt-1">{errors.ebitda.message}</p>
+                    )}
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="exitTimeline">Expected Exit Timeline *</Label>
+                  <Select onValueChange={(value) => setValue("exitTimeline", value)}>
+                    <SelectTrigger className={errors.exitTimeline ? "border-red-500" : ""}>
+                      <SelectValue placeholder="Select your timeline" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="0-1-year">0-1 year</SelectItem>
+                      <SelectItem value="1-3-years">1-3 years</SelectItem>
+                      <SelectItem value="3-5-years">3-5 years</SelectItem>
+                      <SelectItem value="5-plus-years">5+ years</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  {errors.exitTimeline && (
+                    <p className="text-red-500 text-sm mt-1">{errors.exitTimeline.message}</p>
+                  )}
+                </div>
+
+                <div>
+                  <Label htmlFor="biggestConcern">What's your biggest concern about selling your business? *</Label>
+                  <Textarea
+                    {...register("biggestConcern")}
+                    placeholder="Tell us about your main concerns, challenges, or questions regarding your exit..."
+                    rows={4}
+                    className={errors.biggestConcern ? "border-red-500" : ""}
+                  />
+                  {errors.biggestConcern && (
+                    <p className="text-red-500 text-sm mt-1">{errors.biggestConcern.message}</p>
+                  )}
+                </div>
+
+                <div className="text-center">
+                  <Button 
+                    type="submit" 
+                    size="lg"
+                    className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-4 mb-3"
+                    disabled={mutation.isPending}
+                  >
+                    {mutation.isPending ? (
+                      "Securing Your Spot..."
+                    ) : (
+                      <>
+                        Secure My Early Access Spot
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </>
+                    )}
+                  </Button>
+                  <p className="text-sm text-gray-600 font-medium">
+                    Get notified first + exclusive early access pricing
+                  </p>
+                </div>
+
+                {mutation.error && (
+                  <p className="text-red-500 text-sm text-center">
+                    Something went wrong. Please try again.
+                  </p>
+                )}
+              </form>
+            </Card>
+          </div>
 
           {/* Sample Report Preview */}
           <div className="max-w-5xl mx-auto mb-24">
@@ -433,205 +623,6 @@ export default function BusinessOwnersWaitlist() {
         </div>
       </section>
 
-      {/* Waitlist Form Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Join Early Access Waitlist
-            </h2>
-            <p className="text-lg text-gray-600">
-              Be among the first business owners to access professional exit analysis
-            </p>
-          </div>
-
-          <Card className="p-8 shadow-xl border border-gray-200">
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              {/* Personal Information */}
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="firstName">First Name *</Label>
-                  <Input
-                    {...register("firstName")}
-                    placeholder="Enter your first name"
-                    className={errors.firstName ? "border-red-500" : ""}
-                  />
-                  {errors.firstName && (
-                    <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <Label htmlFor="lastName">Last Name *</Label>
-                  <Input
-                    {...register("lastName")}
-                    placeholder="Enter your last name"
-                    className={errors.lastName ? "border-red-500" : ""}
-                  />
-                  {errors.lastName && (
-                    <p className="text-red-500 text-sm mt-1">{errors.lastName.message}</p>
-                  )}
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="email">Business Email *</Label>
-                  <Input
-                    {...register("email")}
-                    type="email"
-                    placeholder="Enter your business email"
-                    className={errors.email ? "border-red-500" : ""}
-                  />
-                  {errors.email && (
-                    <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <Label htmlFor="companyName">Company Name *</Label>
-                  <Input
-                    {...register("companyName")}
-                    placeholder="Enter your company name"
-                    className={errors.companyName ? "border-red-500" : ""}
-                  />
-                  {errors.companyName && (
-                    <p className="text-red-500 text-sm mt-1">{errors.companyName.message}</p>
-                  )}
-                </div>
-              </div>
-
-              {/* Business Information */}
-              <div>
-                <Label htmlFor="industry">Industry *</Label>
-                <Select onValueChange={(value) => setValue("industry", value)}>
-                  <SelectTrigger className={errors.industry ? "border-red-500" : ""}>
-                    <SelectValue placeholder="Select your industry" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="technology">Technology</SelectItem>
-                    <SelectItem value="manufacturing">Manufacturing</SelectItem>
-                    <SelectItem value="healthcare">Healthcare</SelectItem>
-                    <SelectItem value="professional-services">Professional Services</SelectItem>
-                    <SelectItem value="retail">Retail</SelectItem>
-                    <SelectItem value="construction">Construction</SelectItem>
-                    <SelectItem value="financial-services">Financial Services</SelectItem>
-                    <SelectItem value="food-beverage">Food & Beverage</SelectItem>
-                    <SelectItem value="transportation">Transportation</SelectItem>
-                    <SelectItem value="real-estate">Real Estate</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
-                  </SelectContent>
-                </Select>
-                {errors.industry && (
-                  <p className="text-red-500 text-sm mt-1">{errors.industry.message}</p>
-                )}
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="annualRevenue">Annual Revenue Range *</Label>
-                  <Select onValueChange={(value) => setValue("annualRevenue", value)}>
-                    <SelectTrigger className={errors.annualRevenue ? "border-red-500" : ""}>
-                      <SelectValue placeholder="Select revenue range" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="under-1m">Under $1M</SelectItem>
-                      <SelectItem value="1m-3m">$1M - $3M</SelectItem>
-                      <SelectItem value="3m-7m">$3M - $7M</SelectItem>
-                      <SelectItem value="7m-15m">$7M - $15M</SelectItem>
-                      <SelectItem value="15m-30m">$15M - $30M</SelectItem>
-                      <SelectItem value="30m-plus">$30M+</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  {errors.annualRevenue && (
-                    <p className="text-red-500 text-sm mt-1">{errors.annualRevenue.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <Label htmlFor="ebitda">Adjusted EBITDA Range *</Label>
-                  <Select onValueChange={(value) => setValue("ebitda", value)}>
-                    <SelectTrigger className={errors.ebitda ? "border-red-500" : ""}>
-                      <SelectValue placeholder="Select EBITDA range" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="under-250k">Under $250K</SelectItem>
-                      <SelectItem value="250k-750k">$250K - $750K</SelectItem>
-                      <SelectItem value="750k-1.5m">$750K - $1.5M</SelectItem>
-                      <SelectItem value="1.5m-3m">$1.5M - $3M</SelectItem>
-                      <SelectItem value="3m-7m">$3M - $7M</SelectItem>
-                      <SelectItem value="7m-plus">$7M+</SelectItem>
-                      <SelectItem value="not-sure">Not Sure</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  {errors.ebitda && (
-                    <p className="text-red-500 text-sm mt-1">{errors.ebitda.message}</p>
-                  )}
-                </div>
-              </div>
-
-              <div>
-                <Label htmlFor="exitTimeline">Expected Exit Timeline *</Label>
-                <Select onValueChange={(value) => setValue("exitTimeline", value)}>
-                  <SelectTrigger className={errors.exitTimeline ? "border-red-500" : ""}>
-                    <SelectValue placeholder="Select your timeline" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="0-1-year">0-1 year</SelectItem>
-                    <SelectItem value="1-3-years">1-3 years</SelectItem>
-                    <SelectItem value="3-5-years">3-5 years</SelectItem>
-                    <SelectItem value="5-plus-years">5+ years</SelectItem>
-                  </SelectContent>
-                </Select>
-                {errors.exitTimeline && (
-                  <p className="text-red-500 text-sm mt-1">{errors.exitTimeline.message}</p>
-                )}
-              </div>
-
-              <div>
-                <Label htmlFor="biggestConcern">What's your biggest concern about selling your business? *</Label>
-                <Textarea
-                  {...register("biggestConcern")}
-                  placeholder="Tell us about your main concerns, challenges, or questions regarding your exit..."
-                  rows={4}
-                  className={errors.biggestConcern ? "border-red-500" : ""}
-                />
-                {errors.biggestConcern && (
-                  <p className="text-red-500 text-sm mt-1">{errors.biggestConcern.message}</p>
-                )}
-              </div>
-
-              <div className="text-center">
-                <Button 
-                  type="submit" 
-                  size="lg"
-                  className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-4 mb-3"
-                  disabled={mutation.isPending}
-                >
-                  {mutation.isPending ? (
-                    "Securing Your Spot..."
-                  ) : (
-                    <>
-                      Secure My Early Access Spot
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </>
-                  )}
-                </Button>
-                <p className="text-sm text-gray-600 font-medium">
-                  Get notified first + exclusive early access pricing
-                </p>
-              </div>
-
-              {mutation.error && (
-                <p className="text-red-500 text-sm text-center">
-                  Something went wrong. Please try again.
-                </p>
-              )}
-            </form>
-          </Card>
-        </div>
-      </section>
-
       {/* Footer Message */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
@@ -709,51 +700,13 @@ export default function BusinessOwnersWaitlist() {
                     </FormItem>
                   )}
                 />
-                
-                <FormField
-                  control={reportForm.control}
-                  name="audienceType"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>I am a: *</FormLabel>
-                      <FormControl>
-                        <RadioGroup
-                          onValueChange={field.onChange}
-                          value={field.value}
-                          className="flex flex-col space-y-2 pt-2"
-                        >
-                          <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="business-owner" id="business-owner" />
-                            <Label htmlFor="business-owner" className="text-sm font-normal">
-                              Business Owner
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="ma-firm" id="ma-firm" />
-                            <Label htmlFor="ma-firm" className="text-sm font-normal">
-                              M&A Professional
-                            </Label>
-                          </div>
-                        </RadioGroup>
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
+
                 <Button 
                   type="submit" 
-                  className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 mt-6"
+                  className="w-full"
                   disabled={createDemoRequestMutation.isPending}
                 >
-                  {createDemoRequestMutation.isPending ? (
-                    "Preparing Download..."
-                  ) : (
-                    <>
-                      <Download className="w-4 h-4 mr-2" />
-                      Download Sample Report
-                    </>
-                  )}
+                  {createDemoRequestMutation.isPending ? "Sending..." : "Download Report"}
                 </Button>
               </form>
             </Form>
