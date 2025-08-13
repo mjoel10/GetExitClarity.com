@@ -12,6 +12,7 @@ import SampleReport from "@/pages/sample-report";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
 import TrialRequest from "@/pages/trial-request";
+import BusinessOwnersWaitlist from "@/pages/business-owners-waitlist";
 import Contact from "@/pages/contact";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
@@ -38,6 +39,7 @@ function Router() {
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/trial-request" component={TrialRequest} />
+      <Route path="/business-owners-waitlist" component={BusinessOwnersWaitlist} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       {/* Legacy routes - redirect to new paths */}

@@ -3,7 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertDemoRequestSchema, insertTrialRequestSchema } from "@shared/schema";
 import { z } from "zod";
-import { sendNotificationEmail, sendTrialRequestNotification, sendTrialRequestAutoReply, sendSampleReportAutoReply } from "./email";
+import { sendNotificationEmail, sendTrialRequestNotification, sendTrialRequestAutoReply, sendSampleReportAutoReply, sendWaitlistConfirmation } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Demo request endpoint
@@ -17,8 +17,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         name: validatedData.name,
         email: validatedData.email,
         company: validatedData.company || 'Not provided',
-        requestType: validatedData.requestType as "demo" | "sample_report" | "assessment",
-        message: validatedData.message || undefined
+        requestType: validatedData.requestType as "demo" | "sample_report" | "assessment" | "waitlist",
+        message: validatedData.message || undefined,
+        additionalData: validatedData.additionalData ? JSON.parse(validatedData.additionalData) : undefined
       });
       
       // Send auto-reply email for sample report downloads
@@ -29,6 +30,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
           email: validatedData.email
         });
         console.log(`Auto-reply result: ${autoReplyResult}`);
+      }
+
+      // Send waitlist confirmation email for business owner waitlist signups
+      if (validatedData.requestType === 'waitlist') {
+        console.log(`Sending waitlist confirmation to: ${validatedData.email} for user: ${validatedData.name}`);
+        const confirmationResult = await sendWaitlistConfirmation({
+          name: validatedData.name,
+          email: validatedData.email,
+          company: validatedData.company
+        });
+        console.log(`Waitlist confirmation result: ${confirmationResult}`);
       }
       
       res.json({ success: true, data: demoRequest });

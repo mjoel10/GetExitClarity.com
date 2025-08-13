@@ -33,6 +33,7 @@ Preferred communication style: Simple, everyday language.
   - `/blog` - ExitClarity Insights blog with published content and realistic coming-soon previews
   - `/blog/:slug` - Individual blog post pages with professional article layout
   - `/trial-request` - Client trial request form for M&A professionals
+  - `/business-owners-waitlist` - Early access waitlist landing page for business owners (not in main navigation)
   - `/resources` - Resource center hub
 - **Navigation System**: Fixed header with organized dropdown menus:
   - Platform dropdown (M&A Firms, Business Owners, Sample Report)
@@ -44,8 +45,9 @@ Preferred communication style: Simple, everyday language.
   - Professional article page styling with clear typography and SEO optimization
   - Realistic placeholder articles with compelling titles and descriptions
   - Newsletter signup integration for lead capture
-- **Contact Forms**: Comprehensive contact form implementation with success screens, email notifications via SendGrid, and database integration for submissions. Supports multiple request types (demo, sample report, assessment, trial).
+- **Contact Forms**: Comprehensive contact form implementation with success screens, email notifications via SendGrid, and database integration for submissions. Supports multiple request types (demo, sample report, assessment, trial, waitlist).
 - **Auto-Reply Email System**: SendGrid-powered auto-reply emails for sample report downloads with personalized templates, backup download links, and clear CTAs to trial requests and demo scheduling.
+- **Business Owner Waitlist**: Dedicated early access waitlist page with interactive assessment and report previews, comprehensive form capturing business details (revenue, EBITDA, exit timeline, concerns), and integrated SendGrid email confirmations for both admin notifications and user confirmations.
 - **Mobile Optimization**: All pages fully responsive with mobile-first design:
   - Responsive typography (text-3xl sm:text-4xl lg:text-5xl patterns)
   - Mobile-optimized spacing (py-12 sm:py-16 lg:py-20)

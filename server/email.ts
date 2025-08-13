@@ -10,8 +10,9 @@ interface EmailNotificationData {
   name: string;
   email: string;
   company: string;
-  requestType: 'demo' | 'sample_report' | 'assessment';
+  requestType: 'demo' | 'sample_report' | 'assessment' | 'waitlist';
   message?: string;
+  additionalData?: any;
 }
 
 interface TrialRequestData {
@@ -30,7 +31,8 @@ export async function sendNotificationEmail(data: EmailNotificationData): Promis
     const requestTypeLabels = {
       demo: 'Demo Request',
       sample_report: 'Sample Report Download',
-      assessment: 'Assessment Request'
+      assessment: 'Assessment Request',
+      waitlist: 'Business Owner Waitlist Signup'
     };
 
     const subject = `New ${requestTypeLabels[data.requestType]} - ${data.name}`;
@@ -44,6 +46,19 @@ export async function sendNotificationEmail(data: EmailNotificationData): Promis
           <p><strong>Name:</strong> ${data.name}</p>
           <p><strong>Email:</strong> ${data.email}</p>
           <p><strong>Company:</strong> ${data.company}</p>
+          
+          ${data.requestType === 'waitlist' && data.additionalData ? `
+            <h3 style="color: #334155;">Business Details</h3>
+            <p><strong>Industry:</strong> ${data.additionalData.industry}</p>
+            <p><strong>Annual Revenue:</strong> ${data.additionalData.annualRevenue}</p>
+            <p><strong>EBITDA Range:</strong> ${data.additionalData.ebitda}</p>
+            <p><strong>Exit Timeline:</strong> ${data.additionalData.exitTimeline}</p>
+            ${data.additionalData.biggestConcern ? `
+              <h3 style="color: #334155;">Biggest Concern</h3>
+              <p style="background-color: white; padding: 15px; border-radius: 4px; border: 1px solid #e2e8f0;">${data.additionalData.biggestConcern}</p>
+            ` : ''}
+          ` : ''}
+          
           ${data.message ? `
             <h3 style="color: #334155;">Message</h3>
             <p style="background-color: white; padding: 15px; border-radius: 4px; border: 1px solid #e2e8f0;">${data.message}</p>
@@ -52,7 +67,7 @@ export async function sendNotificationEmail(data: EmailNotificationData): Promis
         
         <div style="margin-top: 20px; padding: 15px; background-color: #ecfdf5; border-radius: 8px;">
           <p style="margin: 0; color: #166534;">
-            <strong>Next Steps:</strong> Please follow up with this lead within 24 hours for optimal conversion.
+            <strong>Next Steps:</strong> ${data.requestType === 'waitlist' ? 'Business owner added to early access waitlist. Follow up when platform is ready.' : 'Please follow up with this lead within 24 hours for optimal conversion.'}
           </p>
         </div>
         
@@ -301,6 +316,99 @@ export async function sendTrialRequestAutoReply(data: TrialRequestData): Promise
     return true;
   } catch (error) {
     console.error('SendGrid auto-reply error:', error);
+    return false;
+  }
+}
+
+interface WaitlistConfirmationData {
+  name: string;
+  email: string;
+  company: string;
+}
+
+export async function sendWaitlistConfirmation(data: WaitlistConfirmationData): Promise<boolean> {
+  try {
+    const subject = `Welcome to ExitClarity Early Access - We'll Be In Touch Soon`;
+    
+    const htmlContent = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff;">
+        <!-- Header with Logo -->
+        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0;">
+          <h1 style="color: #1e40af; font-size: 24px; margin: 0; font-weight: bold;">ExitClarity</h1>
+          <p style="color: #64748b; font-size: 14px; margin: 5px 0 0 0;">Professional Exit Analysis Platform</p>
+        </div>
+        
+        <h2 style="color: #1e40af; margin-bottom: 20px; font-size: 22px;">Welcome to Early Access!</h2>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 16px;">Hi ${data.name},</p>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 16px;">
+          <strong>Thank you for joining the ExitClarity waitlist!</strong> You're now positioned to be among the first business owners to access our professional-grade exit readiness platform.
+        </p>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 24px;">
+          We've received your information for <strong>${data.company}</strong> and added you to our early access queue. Here's what happens next:
+        </p>
+        
+        <!-- Next Steps -->
+        <div style="background-color: #f8fafc; padding: 24px; border-radius: 12px; margin: 24px 0; border-left: 4px solid #1e40af;">
+          <h3 style="color: #1e40af; margin-top: 0; margin-bottom: 16px; font-size: 18px;">What to Expect:</h3>
+          <ul style="color: #334155; line-height: 1.6; margin: 0; padding-left: 20px;">
+            <li style="margin-bottom: 12px;"><strong>Platform Development:</strong> We're currently building the business owner version of our professional exit analysis platform</li>
+            <li style="margin-bottom: 12px;"><strong>Early Access Invitation:</strong> You'll receive priority access when we launch the beta program</li>
+            <li style="margin-bottom: 12px;"><strong>Exclusive Resources:</strong> We'll share valuable exit planning insights and resources while you wait</li>
+            <li style="margin-bottom: 12px;"><strong>Personal Consultation:</strong> Direct access to discuss your specific exit planning needs</li>
+          </ul>
+        </div>
+        
+        <div style="background-color: #ecfdf5; padding: 20px; border-radius: 12px; margin: 24px 0;">
+          <h3 style="color: #166534; margin-top: 0; margin-bottom: 12px; font-size: 16px;">✨ You're in great company!</h3>
+          <p style="color: #166534; line-height: 1.6; margin: 0;">
+            Over 500 business owners have already joined our early access program. You'll be notified as soon as spots become available.
+          </p>
+        </div>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 16px;">
+          In the meantime, if you have any questions about exit planning or want to discuss your specific situation, 
+          feel free to reach out by replying to this email.
+        </p>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 8px;">Best regards,</p>
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 24px; font-weight: 600;">The ExitClarity Team</p>
+        
+        <!-- Contact Information -->
+        <div style="background-color: #f1f5f9; padding: 20px; border-radius: 8px; margin-top: 30px;">
+          <h4 style="color: #334155; margin-top: 0; margin-bottom: 12px;">Contact Information:</h4>
+          <p style="margin: 0 0 8px 0; color: #64748b; font-size: 14px;">
+            <strong>Email:</strong> support@exitclarity.io
+          </p>
+          <p style="margin: 0 0 8px 0; color: #64748b; font-size: 14px;">
+            <strong>Website:</strong> exitclarity.io
+          </p>
+          <p style="margin: 0; color: #64748b; font-size: 14px;">
+            <strong>Response Time:</strong> We typically respond within 24 hours
+          </p>
+        </div>
+        
+        <div style="margin-top: 30px; text-align: center; color: #94a3b8; font-size: 12px; border-top: 1px solid #e2e8f0; padding-top: 20px;">
+          <p style="margin: 0;">© 2025 ExitClarity. All rights reserved.</p>
+          <p style="margin: 8px 0 0 0;">Professional M&A analysis coming soon for business owners</p>
+        </div>
+      </div>
+    `;
+
+    const msg = {
+      to: data.email,
+      from: 'notifications@exitclarity.io',
+      subject: subject,
+      html: htmlContent,
+    };
+
+    await sgMail.send(msg);
+    console.log(`Waitlist confirmation sent to ${data.email}`);
+    return true;
+  } catch (error) {
+    console.error('SendGrid waitlist confirmation error:', error);
     return false;
   }
 }

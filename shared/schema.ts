@@ -15,7 +15,9 @@ export const demoRequests = pgTable("demo_requests", {
   company: text("company").notNull(),
   phone: text("phone"),
   message: text("message"),
-  requestType: text("request_type").notNull(), // 'demo', 'sample_report', 'assessment'
+  requestType: text("request_type").notNull(), // 'demo', 'sample_report', 'assessment', 'waitlist'
+  audienceType: text("audience_type"), // 'ma-firm', 'business-owner'
+  additionalData: text("additional_data"), // JSON string for flexible data storage
   createdAt: timestamp("created_at").defaultNow().notNull(),
   contacted: boolean("contacted").default(false),
 });
@@ -52,6 +54,8 @@ export const insertDemoRequestSchema = createInsertSchema(demoRequests).pick({
   phone: true,
   message: true,
   requestType: true,
+  audienceType: true,
+  additionalData: true,
 });
 
 export const insertTrialRequestSchema = createInsertSchema(trialRequests).omit({
