@@ -283,6 +283,15 @@ export default function BusinessOwnersWaitlist() {
                               <div className="h-2 bg-gray-200 rounded w-16"></div>
                               <div className="h-2 bg-gray-200 rounded w-18"></div>
                               <div className="h-2 bg-gray-200 rounded w-14"></div>
+                              <div className="h-2 bg-gray-200 rounded w-22"></div>
+                              <div className="h-2 bg-gray-200 rounded w-16"></div>
+                              <div className="h-2 bg-gray-200 rounded w-20"></div>
+                              <div className="h-2 bg-gray-200 rounded w-18"></div>
+                              <div className="h-2 bg-gray-200 rounded w-14"></div>
+                              <div className="h-2 bg-gray-200 rounded w-16"></div>
+                              <div className="h-2 bg-gray-200 rounded w-12"></div>
+                              <div className="h-2 bg-gray-200 rounded w-20"></div>
+                              <div className="h-2 bg-gray-200 rounded w-18"></div>
                             </div>
                           </div>
 
