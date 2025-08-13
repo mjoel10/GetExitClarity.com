@@ -240,7 +240,7 @@ export default function BusinessOwnersWaitlist() {
 
             {/* Right Visual - Tablet Browser Interface */}
             <div className="flex justify-center lg:justify-end">
-              <div className="max-w-2xl w-full">
+              <div className="max-w-lg w-full">
                 {/* Tablet Container */}
                 <div className="transform">
                   {/* Tablet Frame */}
@@ -259,7 +259,7 @@ export default function BusinessOwnersWaitlist() {
                       </div>
 
                       {/* App Interface */}
-                      <div className="h-56">
+                      <div className="h-80">
                         {/* App Header */}
                         <div className="bg-gray-900 text-white px-4 py-2 flex items-center">
                           <div className="flex items-center gap-2">
