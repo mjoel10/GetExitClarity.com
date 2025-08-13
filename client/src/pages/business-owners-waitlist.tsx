@@ -529,66 +529,58 @@ export default function BusinessOwnersWaitlist() {
             </p>
           </div>
           
-          {/* Single Column Layout with Side-by-Side Features */}
-          <div className="space-y-8">
+          {/* Clean Vertical Stack Layout */}
+          <div className="space-y-12 max-w-4xl mx-auto">
             {/* Confidence & Clarity */}
-            <div className="flex flex-col lg:flex-row items-center gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center">
-                  <Target className="w-10 h-10 text-white" />
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                  <Target className="w-6 h-6 text-white" />
                 </div>
+                <h3 className="text-2xl font-bold text-gray-900">Confidence & Clarity</h3>
               </div>
-              <div className="flex-1 text-center lg:text-left">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Confidence & Clarity</h3>
-                <p className="text-base text-gray-700 leading-relaxed max-w-xl">
-                  Understand realistic estimated outcomes for your specific business and gain confidence about the entire exit process before engaging advisors.
-                </p>
-              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Understand realistic estimated outcomes for your specific business and gain confidence about the entire exit process before engaging advisors. Know exactly where you stand and what to expect.
+              </p>
             </div>
 
             {/* Cost Savings */}
-            <div className="flex flex-col lg:flex-row-reverse items-center gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center">
-                  <DollarSign className="w-10 h-10 text-white" />
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                  <DollarSign className="w-6 h-6 text-white" />
                 </div>
+                <h3 className="text-2xl font-bold text-gray-900">Significant Cost Savings</h3>
               </div>
-              <div className="flex-1 text-center lg:text-right">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Significant Cost Savings</h3>
-                <p className="text-base text-gray-700 leading-relaxed max-w-xl lg:ml-auto">
-                  Save on professional fees through early preparation and efficient process management. Know your position before expensive engagements.
-                </p>
-              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Save on professional fees through early preparation and efficient process management. Know your position before expensive engagements and avoid costly mistakes.
+              </p>
             </div>
 
             {/* Reduced Risk */}
-            <div className="flex flex-col lg:flex-row items-center gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center">
-                  <Shield className="w-10 h-10 text-white" />
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-white" />
                 </div>
+                <h3 className="text-2xl font-bold text-gray-900">Minimize Exit Risk</h3>
               </div>
-              <div className="flex-1 text-center lg:text-left">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Minimize Exit Risk</h3>
-                <p className="text-base text-gray-700 leading-relaxed max-w-xl">
-                  Minimize process risk using lessons learned from hundreds of previous transactions and proven best practices from M&A professionals.
-                </p>
-              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Minimize process risk using lessons learned from hundreds of previous transactions and proven best practices from M&A professionals. Avoid common pitfalls that derail deals.
+              </p>
             </div>
 
             {/* Expert Guidance */}
-            <div className="flex flex-col lg:flex-row-reverse items-center gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center">
-                  <Users className="w-10 h-10 text-white" />
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                  <Users className="w-6 h-6 text-white" />
                 </div>
+                <h3 className="text-2xl font-bold text-gray-900">30+ Years M&A Expertise</h3>
               </div>
-              <div className="flex-1 text-center lg:text-right">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">30+ Years M&A Expertise</h3>
-                <p className="text-base text-gray-700 leading-relaxed max-w-xl lg:ml-auto">
-                  Access insights driven by decades of business ownership and sell-side/buy-side M&A expertise before you commit to consulting engagements.
-                </p>
-              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Access insights driven by decades of business ownership and sell-side/buy-side M&A expertise before you commit to consulting engagements. Get the insider perspective.
+              </p>
             </div>
           </div>
           
