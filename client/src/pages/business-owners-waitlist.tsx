@@ -631,23 +631,9 @@ export default function BusinessOwnersWaitlist() {
               See What You'll Experience
             </h2>
             <div className="text-center mb-8 max-w-3xl mx-auto">
-              <p className="text-xl text-gray-300 mb-4 leading-relaxed">
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Preview the comprehensive analysis you'll receive for your business
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-200">
-                <div className="text-center md:text-left">
-                  <span>Get a comprehensive 20-25 page strategic report with valuation analysis</span>
-                </div>
-                <div className="text-center md:text-left">
-                  <span>Receive specific GO/FIX/WAIT recommendations based on your business</span>
-                </div>
-                <div className="text-center md:text-left">
-                  <span>Understand your true exit readiness before engaging expensive advisors</span>
-                </div>
-                <div className="text-center md:text-left">
-                  <span>See exactly where you stand and what steps to take next</span>
-                </div>
-              </div>
             </div>
             <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 border border-gray-200">
               <div className="assessment-preview">
