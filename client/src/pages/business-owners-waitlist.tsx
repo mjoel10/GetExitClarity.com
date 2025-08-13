@@ -199,40 +199,54 @@ export default function BusinessOwnersWaitlist() {
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center max-w-4xl mx-auto mb-12">
-            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 text-sm px-4 py-2">
-              Early Access Preview
-            </Badge>
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Know Your Exit Value <span className="text-primary">Before You Hire Advisors</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8">
-              Built by Business Owners and M&A Professionals with 30+ Years Experience
-            </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-gray-500 mb-8">
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-blue-600" />
-                <span>30-Minute Assessment</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-center lg:text-left">
+              <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 text-sm px-4 py-2">
+                Early Access Preview
+              </Badge>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Know Your Exit Value <span className="text-primary">Before You Hire Advisors</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8">
+                Built by Business Owners and M&A Professionals with 30+ Years Experience
+              </p>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-gray-500 mb-8">
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-blue-600" />
+                  <span>30-Minute Assessment</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Shield className="w-4 h-4 text-green-600" />
+                  <span>Avoid Deal-Killing Surprises</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="w-4 h-4 text-yellow-500" />
+                  <span>Negotiate from Strength</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-green-600" />
-                <span>Avoid Deal-Killing Surprises</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-yellow-500" />
-                <span>Negotiate from Strength</span>
+              
+              {/* Sample Report CTA */}
+              <div className="flex justify-center lg:justify-start mb-8 lg:mb-0">
+                <Button 
+                  onClick={() => setIsReportModalOpen(true)}
+                  className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl"
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Sample Report
+                </Button>
               </div>
             </div>
-            
-            {/* Sample Report CTA */}
-            <div className="flex justify-center mb-12">
-              <Button 
-                onClick={() => setIsReportModalOpen(true)}
-                className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl"
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Download Sample Report
-              </Button>
+
+            {/* Right Visual */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="max-w-md w-full">
+                <img 
+                  src="/attached_assets/image_1755106239938.png" 
+                  alt="Exit Readiness Assessment Interface"
+                  className="w-full h-auto rounded-2xl shadow-xl"
+                />
+              </div>
             </div>
           </div>
         </div>
