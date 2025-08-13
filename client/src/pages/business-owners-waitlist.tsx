@@ -240,92 +240,89 @@ export default function BusinessOwnersWaitlist() {
 
             {/* Right Visual - Tablet Browser Interface */}
             <div className="flex justify-center lg:justify-end">
-              <div className="max-w-3xl w-full">
+              <div className="max-w-2xl w-full">
                 {/* Tablet Container */}
                 <div className="transform">
                   {/* Tablet Frame */}
-                  <div className="bg-gray-800 rounded-2xl p-3 shadow-2xl">
+                  <div className="bg-gray-800 rounded-2xl p-2 shadow-2xl">
                     {/* Browser Chrome */}
                     <div className="bg-gray-100 rounded-xl overflow-hidden">
-                      {/* Browser Header */}
-                      <div className="bg-white border-b border-gray-200 px-4 py-2">
-                        <div className="flex items-center gap-3">
-                          <div className="flex gap-1.5">
-                            <div className="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
-                            <div className="w-2.5 h-2.5 bg-yellow-400 rounded-full"></div>
-                            <div className="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
-                          </div>
-                          <div className="flex-1 bg-gray-50 rounded-lg px-3 py-1 text-xs text-gray-600">
-                            https://app.exitclarity.com/reports/2024-001
+                      {/* Browser Header - Minimal */}
+                      <div className="bg-white border-b border-gray-200 px-3 py-1.5">
+                        <div className="flex items-center gap-2">
+                          <div className="flex gap-1">
+                            <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                            <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                           </div>
                         </div>
                       </div>
 
                       {/* App Interface */}
-                      <div className="h-80">
+                      <div className="h-64">
                         {/* App Header */}
-                        <div className="bg-gray-900 text-white px-4 py-3 flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <div className="w-6 h-6 bg-primary rounded-lg flex items-center justify-center">
-                              <FileText className="w-3 h-3 text-white" />
+                        <div className="bg-gray-900 text-white px-3 py-2 flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <div className="w-5 h-5 bg-primary rounded flex items-center justify-center">
+                              <FileText className="w-2.5 h-2.5 text-white" />
                             </div>
-                            <span className="text-sm font-semibold">ExitClarity</span>
+                            <span className="text-xs font-semibold">ExitClarity</span>
                           </div>
-                          <div className="flex gap-2">
-                            <button className="px-3 py-1 bg-primary text-white rounded text-xs font-medium">Export</button>
-                            <button className="px-3 py-1 border border-gray-600 text-gray-300 rounded text-xs">Share</button>
+                          <div className="flex gap-1.5">
+                            <button className="px-2 py-0.5 bg-primary text-white rounded text-xs">Export</button>
+                            <button className="px-2 py-0.5 border border-gray-600 text-gray-300 rounded text-xs">Share</button>
                           </div>
                         </div>
 
                         {/* Main Content */}
                         <div className="flex h-full bg-gray-50">
                           {/* Sidebar */}
-                          <div className="w-56 bg-white border-r border-gray-200 p-4">
-                            <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-3 mb-4 border border-gray-200">
-                              <div className="text-lg font-bold text-gray-900">#2024-001</div>
-                              <div className="text-sm text-gray-600">TechVision Solutions</div>
+                          <div className="w-40 bg-white border-r border-gray-200 p-2">
+                            <div className="bg-gradient-to-br from-gray-50 to-white rounded-lg p-2 mb-2 border border-gray-200">
+                              <div className="text-sm font-bold text-gray-900">#2024-001</div>
+                              <div className="text-xs text-gray-600">TechVision Solutions</div>
                               <div className="text-xs text-gray-400">Dec 15, 2024</div>
                             </div>
                             
-                            <div className="space-y-1">
-                              <div className="text-xs font-semibold text-gray-500 uppercase mb-2">Report Sections</div>
-                              <div className="bg-primary/10 text-primary px-3 py-2 rounded-lg text-sm font-medium">
+                            <div className="space-y-0.5">
+                              <div className="text-xs font-semibold text-gray-500 uppercase mb-1">Report Sections</div>
+                              <div className="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-medium">
                                 Executive Summary
                               </div>
-                              <div className="text-gray-600 px-3 py-2 text-sm hover:bg-gray-100 rounded-lg cursor-pointer transition-colors">
+                              <div className="text-gray-600 px-2 py-1 text-xs hover:bg-gray-100 rounded cursor-pointer">
                                 Valuation Analysis
                               </div>
-                              <div className="text-gray-600 px-3 py-2 text-sm hover:bg-gray-100 rounded-lg cursor-pointer transition-colors">
+                              <div className="text-gray-600 px-2 py-1 text-xs hover:bg-gray-100 rounded cursor-pointer">
                                 Financial Performance
                               </div>
-                              <div className="text-gray-600 px-3 py-2 text-sm hover:bg-gray-100 rounded-lg cursor-pointer transition-colors">
+                              <div className="text-gray-600 px-2 py-1 text-xs hover:bg-gray-100 rounded cursor-pointer">
                                 Market Position
                               </div>
-                              <div className="text-gray-600 px-3 py-2 text-sm hover:bg-gray-100 rounded-lg cursor-pointer transition-colors">
+                              <div className="text-gray-600 px-2 py-1 text-xs hover:bg-gray-100 rounded cursor-pointer">
                                 Operational Analysis
                               </div>
-                              <div className="text-gray-600 px-3 py-2 text-sm hover:bg-gray-100 rounded-lg cursor-pointer transition-colors">
+                              <div className="text-gray-600 px-2 py-1 text-xs hover:bg-gray-100 rounded cursor-pointer">
                                 Risk Assessment
                               </div>
-                              <div className="text-gray-600 px-3 py-2 text-sm hover:bg-gray-100 rounded-lg cursor-pointer transition-colors">
+                              <div className="text-gray-600 px-2 py-1 text-xs hover:bg-gray-100 rounded cursor-pointer">
                                 Deal Structure
                               </div>
-                              <div className="text-gray-600 px-3 py-2 text-sm hover:bg-gray-100 rounded-lg cursor-pointer transition-colors">
+                              <div className="text-gray-600 px-2 py-1 text-xs hover:bg-gray-100 rounded cursor-pointer">
                                 Recommendations
                               </div>
                             </div>
                           </div>
 
                           {/* Content Area */}
-                          <div className="flex-1 p-6 overflow-hidden">
-                            <h1 className="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h1>
+                          <div className="flex-1 p-3 overflow-hidden">
+                            <h1 className="text-sm font-bold text-gray-900 mb-2">Executive Summary</h1>
                             
                             {/* Score Card */}
-                            <div className="bg-white border border-gray-200 rounded-2xl p-6 mb-6 shadow-sm">
-                              <div className="flex items-center gap-6">
+                            <div className="bg-white border border-gray-200 rounded-lg p-3 mb-3 shadow-sm">
+                              <div className="flex items-center gap-3">
                                 {/* Score Ring */}
-                                <div className="relative w-20 h-20">
-                                  <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
+                                <div className="relative w-12 h-12">
+                                  <svg className="w-12 h-12 transform -rotate-90" viewBox="0 0 36 36">
                                     <path
                                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                                       fill="none"
@@ -342,35 +339,35 @@ export default function BusinessOwnersWaitlist() {
                                     />
                                   </svg>
                                   <div className="absolute inset-0 flex items-center justify-center">
-                                    <span className="text-xl font-bold text-gray-900">94%</span>
+                                    <span className="text-sm font-bold text-gray-900">94%</span>
                                   </div>
                                 </div>
                                 
                                 <div className="flex-1">
-                                  <div className="flex items-center justify-between mb-3">
-                                    <div className="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">
-                                      <TrendingUp className="w-4 h-4" />
+                                  <div className="flex items-center justify-between mb-1">
+                                    <div className="inline-flex items-center gap-1 bg-primary text-white px-2 py-1 rounded text-xs font-semibold">
+                                      <TrendingUp className="w-3 h-3" />
                                       Ready to Proceed
                                     </div>
-                                    <div className="text-sm text-gray-500">Exit Readiness Score</div>
+                                    <div className="text-xs text-gray-500">Exit Readiness Score</div>
                                   </div>
                                   
                                   {/* Key Metrics Grid */}
-                                  <div className="grid grid-cols-4 gap-4 text-sm">
+                                  <div className="grid grid-cols-4 gap-2 text-xs">
                                     <div>
-                                      <div className="text-gray-500 text-xs">Est. Value</div>
+                                      <div className="text-gray-500">Est. Value</div>
                                       <div className="font-bold text-gray-900">$8.2M</div>
                                     </div>
                                     <div>
-                                      <div className="text-gray-500 text-xs">Multiple</div>
+                                      <div className="text-gray-500">Multiple</div>
                                       <div className="font-bold text-gray-900">4.2x</div>
                                     </div>
                                     <div>
-                                      <div className="text-gray-500 text-xs">Timeline</div>
+                                      <div className="text-gray-500">Timeline</div>
                                       <div className="font-bold text-gray-900">6-9 mo</div>
                                     </div>
                                     <div>
-                                      <div className="text-gray-500 text-xs">Risk Level</div>
+                                      <div className="text-gray-500">Risk Level</div>
                                       <div className="font-bold text-green-600">Low</div>
                                     </div>
                                   </div>
@@ -378,44 +375,40 @@ export default function BusinessOwnersWaitlist() {
                               </div>
                               
                               {/* Additional Data Points */}
-                              <div className="grid grid-cols-4 gap-4 mt-4 pt-4 border-t border-gray-100">
+                              <div className="grid grid-cols-4 gap-2 mt-2 pt-2 border-t border-gray-100">
                                 <div className="text-center">
-                                  <div className="text-xs text-gray-500 mb-1">EBITDA Margin</div>
-                                  <div className="text-lg font-bold text-green-600">23%</div>
+                                  <div className="text-xs text-gray-500">EBITDA</div>
+                                  <div className="text-sm font-bold text-green-600">23%</div>
                                 </div>
                                 <div className="text-center">
-                                  <div className="text-xs text-gray-500 mb-1">Revenue Growth</div>
-                                  <div className="text-lg font-bold text-blue-600">18%</div>
+                                  <div className="text-xs text-gray-500">Revenue</div>
+                                  <div className="text-sm font-bold text-blue-600">18%</div>
                                 </div>
                                 <div className="text-center">
-                                  <div className="text-xs text-gray-500 mb-1">Market Share</div>
-                                  <div className="text-lg font-bold text-purple-600">12%</div>
+                                  <div className="text-xs text-gray-500">Market</div>
+                                  <div className="text-sm font-bold text-purple-600">12%</div>
                                 </div>
                                 <div className="text-center">
-                                  <div className="text-xs text-gray-500 mb-1">Deal Certainty</div>
-                                  <div className="text-lg font-bold text-indigo-600">High</div>
+                                  <div className="text-xs text-gray-500">Deal</div>
+                                  <div className="text-sm font-bold text-indigo-600">High</div>
                                 </div>
                               </div>
                             </div>
 
                             {/* Key Findings */}
-                            <div className="space-y-2">
-                              <div className="text-sm font-semibold text-gray-800 mb-3">Key Findings & Recommendations</div>
-                              <div className="flex items-start gap-2 text-sm">
-                                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                                <span className="text-gray-700">Strong financial performance with consistent profitability and healthy margins</span>
+                            <div className="space-y-1">
+                              <div className="text-xs font-semibold text-gray-800 mb-1">Key Findings</div>
+                              <div className="flex items-start gap-1 text-xs">
+                                <CheckCircle className="w-2.5 h-2.5 text-green-500 flex-shrink-0 mt-0.5" />
+                                <span className="text-gray-700">Strong financial performance with 23% EBITDA margin</span>
                               </div>
-                              <div className="flex items-start gap-2 text-sm">
-                                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                                <span className="text-gray-700">Diversified customer base significantly reduces concentration risk</span>
+                              <div className="flex items-start gap-1 text-xs">
+                                <CheckCircle className="w-2.5 h-2.5 text-green-500 flex-shrink-0 mt-0.5" />
+                                <span className="text-gray-700">Diversified customer base reduces concentration risk</span>
                               </div>
-                              <div className="flex items-start gap-2 text-sm">
-                                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                                <span className="text-gray-700">Scalable technology platform provides sustainable competitive advantage</span>
-                              </div>
-                              <div className="flex items-start gap-2 text-sm">
-                                <AlertTriangle className="w-4 h-4 text-yellow-500 flex-shrink-0 mt-0.5" />
-                                <span className="text-gray-700">Key person dependency requires comprehensive transition planning</span>
+                              <div className="flex items-start gap-1 text-xs">
+                                <AlertTriangle className="w-2.5 h-2.5 text-yellow-500 flex-shrink-0 mt-0.5" />
+                                <span className="text-gray-700">Key person dependency requires transition planning</span>
                               </div>
                             </div>
                           </div>
