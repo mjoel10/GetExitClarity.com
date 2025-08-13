@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -10,9 +10,22 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, TrendingUp, Shield, FileText, Clock, Users, Target, BarChart3, ArrowRight, Star, ChevronRight, Building, Calendar, Heart, DollarSign, Settings, RefreshCw } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { CheckCircle, TrendingUp, Shield, FileText, Clock, Users, Target, BarChart3, ArrowRight, Star, ChevronRight, Building, Calendar, Heart, DollarSign, Settings, RefreshCw, Download } from "lucide-react";
 import { useMeta } from "@/hooks/use-meta";
 import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
+
+const sampleReportSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  company: z.string().min(2, "Company name must be at least 2 characters"),
+  audienceType: z.enum(["ma-firm", "business-owner"], {
+    required_error: "Please select your audience type",
+  }),
+});
 
 const waitlistSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -27,9 +40,14 @@ const waitlistSchema = z.object({
 });
 
 type WaitlistForm = z.infer<typeof waitlistSchema>;
+type SampleReportFormData = z.infer<typeof sampleReportSchema>;
 
 export default function BusinessOwnersWaitlist() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isReportModalOpen, setIsReportModalOpen] = useState(false);
+  const [isReportSubmitted, setIsReportSubmitted] = useState(false);
+  const { toast } = useToast();
+  const queryClient = useQueryClient();
 
   useMeta({
     title: "Join Early Access - Professional Exit Analysis for Business Owners | ExitClarity",
@@ -73,6 +91,84 @@ export default function BusinessOwnersWaitlist() {
 
   const onSubmit = (data: WaitlistForm) => {
     mutation.mutate(data);
+  };
+
+  // Sample Report Form
+  const reportForm = useForm<SampleReportFormData>({
+    resolver: zodResolver(sampleReportSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      company: "",
+      audienceType: undefined,
+    },
+  });
+
+  const createDemoRequestMutation = useMutation({
+    mutationFn: async (requestData: SampleReportFormData) => {
+      const response = await fetch("/api/demo-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: requestData.name,
+          email: requestData.email,
+          company: requestData.company,
+          requestType: "sample_report",
+          audienceType: requestData.audienceType,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit request");
+      }
+
+      return response.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/demo-requests"] });
+    },
+  });
+
+  const downloadPDF = () => {
+    const link = document.createElement("a");
+    link.href = "/ExitClarity-Sample-Report.pdf";
+    link.download = "ExitClarity-Sample-Report.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const onReportSubmit = async (data: SampleReportFormData) => {
+    try {
+      await createDemoRequestMutation.mutateAsync(data);
+      downloadPDF();
+      setIsReportSubmitted(true);
+      toast({
+        title: "Success!",
+        description: "Your sample report is downloading now!",
+      });
+
+      setTimeout(() => {
+        setIsReportModalOpen(false);
+        setIsReportSubmitted(false);
+        reportForm.reset();
+      }, 3000);
+
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const handleCloseReportModal = () => {
+    setIsReportModalOpen(false);
+    setIsReportSubmitted(false);
+    reportForm.reset();
   };
 
   if (isSubmitted) {
@@ -126,6 +222,17 @@ export default function BusinessOwnersWaitlist() {
                 <Clock className="w-4 h-4 text-blue-600" />
                 <span>30-Minute Assessment</span>
               </div>
+            </div>
+            
+            {/* Sample Report CTA */}
+            <div className="flex justify-center mb-12">
+              <Button 
+                onClick={() => setIsReportModalOpen(true)}
+                className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl"
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download Sample Report
+              </Button>
             </div>
           </div>
 
@@ -624,6 +731,123 @@ export default function BusinessOwnersWaitlist() {
           </p>
         </div>
       </section>
+
+      {/* Sample Report Modal */}
+      <Dialog open={isReportModalOpen} onOpenChange={handleCloseReportModal}>
+        <DialogContent className="max-w-md mx-auto">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-center mb-2">
+              Download Sample Report
+            </DialogTitle>
+          </DialogHeader>
+          
+          {isReportSubmitted ? (
+            <div className="text-center py-6">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Download Started!
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Your sample report should be downloading now.
+              </p>
+            </div>
+          ) : (
+            <Form {...reportForm}>
+              <form onSubmit={reportForm.handleSubmit(onReportSubmit)} className="space-y-4">
+                <FormField
+                  control={reportForm.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Full Name *</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Enter your full name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={reportForm.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Business Email *</FormLabel>
+                      <FormControl>
+                        <Input type="email" placeholder="you@company.com" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={reportForm.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Company Name *</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your company name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={reportForm.control}
+                  name="audienceType"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>I am a: *</FormLabel>
+                      <FormControl>
+                        <RadioGroup
+                          onValueChange={field.onChange}
+                          value={field.value}
+                          className="flex flex-col space-y-2 pt-2"
+                        >
+                          <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="business-owner" id="business-owner" />
+                            <Label htmlFor="business-owner" className="text-sm font-normal">
+                              Business Owner
+                            </Label>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="ma-firm" id="ma-firm" />
+                            <Label htmlFor="ma-firm" className="text-sm font-normal">
+                              M&A Professional
+                            </Label>
+                          </div>
+                        </RadioGroup>
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 mt-6"
+                  disabled={createDemoRequestMutation.isPending}
+                >
+                  {createDemoRequestMutation.isPending ? (
+                    "Preparing Download..."
+                  ) : (
+                    <>
+                      <Download className="w-4 h-4 mr-2" />
+                      Download Sample Report
+                    </>
+                  )}
+                </Button>
+              </form>
+            </Form>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
