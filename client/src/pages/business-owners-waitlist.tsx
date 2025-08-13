@@ -733,12 +733,9 @@ export default function BusinessOwnersWaitlist() {
 
           {/* CTA Banner Below Assessment */}
           <div className="text-center mt-12 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-semibold text-white mb-4">
+            <h3 className="text-2xl font-semibold text-white mb-6">
               Ready to Get Your Exit Readiness Assessment?
             </h3>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              Join our waitlist to be the first to access this comprehensive analysis for your business
-            </p>
             <Button 
               onClick={() => {
                 const waitlistSection = document.getElementById('waitlist-form');
