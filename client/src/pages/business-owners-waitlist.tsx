@@ -197,30 +197,30 @@ export default function BusinessOwnersWaitlist() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-blue-50 to-white">
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      <section className="py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-4xl mx-auto mb-12">
             <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 text-sm px-4 py-2">
               Early Access Preview
             </Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Be First to Access <span className="text-primary">Professional Exit Analysis</span>
+              Know Your Exit Value <span className="text-primary">Before You Hire Advisors</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8">
-              Join 500+ business owners preparing for successful exits with comprehensive assessment tools designed by M&A professionals.
+              Built by Business Owners and M&A Professionals with 30+ Years Experience
             </p>
             <div className="flex items-center justify-center gap-6 text-sm text-gray-500 mb-8">
               <div className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                <span>Professional Grade</span>
+                <Clock className="w-4 h-4 text-blue-600" />
+                <span>30-Minute Assessment</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4 text-green-600" />
-                <span>Confidential & Secure</span>
+                <span>Avoid Deal-Killing Surprises</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-blue-600" />
-                <span>30-Minute Assessment</span>
+                <TrendingUp className="w-4 h-4 text-yellow-500" />
+                <span>Negotiate from Strength</span>
               </div>
             </div>
             
@@ -237,7 +237,7 @@ export default function BusinessOwnersWaitlist() {
           </div>
 
           {/* Interactive Assessment Preview */}
-          <div className="max-w-5xl mx-auto mb-16">
+          <div className="max-w-5xl mx-auto mb-20">
             <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">
               See What You'll Experience
             </h2>
@@ -334,46 +334,10 @@ export default function BusinessOwnersWaitlist() {
           </div>
 
 
-          {/* Value Propositions */}
-          <div className="max-w-6xl mx-auto mb-16">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  icon: <TrendingUp className="w-8 h-8" />,
-                  title: "Maximize Valuation",
-                  description: "Identify value drivers and optimization opportunities before going to market"
-                },
-                {
-                  icon: <Shield className="w-8 h-8" />,
-                  title: "Risk Mitigation", 
-                  description: "Uncover and address potential deal-breakers early in the process"
-                },
-                {
-                  icon: <Target className="w-8 h-8" />,
-                  title: "Strategic Positioning",
-                  description: "Position your business competitively for the best possible outcome"
-                },
-                {
-                  icon: <Clock className="w-8 h-8" />,
-                  title: "Faster Process",
-                  description: "Streamlined due diligence with organized documentation and data"
-                }
-              ].map((item, index) => (
-                <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-0">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
-                      {item.icon}
-                    </div>
-                    <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                    <p className="text-gray-600 text-sm">{item.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+
 
           {/* Sample Report Preview */}
-          <div className="max-w-5xl mx-auto mb-16">
+          <div className="max-w-5xl mx-auto mb-24">
             <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">
               Your Comprehensive Exit Readiness Report
             </h2>
@@ -465,69 +429,12 @@ export default function BusinessOwnersWaitlist() {
             </div>
           </div>
 
-          {/* Social Proof */}
-          <div className="text-center mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-3xl mx-auto">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Users className="w-6 h-6 text-primary" />
-                <span className="text-2xl font-bold text-gray-900">500+</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Business Owners on Early Access
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Join successful entrepreneurs who are already preparing for their exit with professional-grade analysis
-              </p>
-              <div className="flex items-center justify-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-                <span className="ml-2 text-gray-600 font-medium">Based on early user feedback</span>
-              </div>
-            </div>
-          </div>
 
-          {/* Process Overview */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <h2 className="text-2xl font-bold text-center text-gray-900 mb-12">
-              Simple 3-Step Process
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  step: "1",
-                  title: "Complete Assessment",
-                  description: "30-minute comprehensive evaluation covering all critical business factors"
-                },
-                {
-                  step: "2", 
-                  title: "Receive Analysis",
-                  description: "Professional report with valuation insights, risks, and optimization recommendations"
-                },
-                {
-                  step: "3",
-                  title: "Optimize & Execute",
-                  description: "Implement recommended improvements and proceed with confidence to market"
-                }
-              ].map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                    {item.step}
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm">{item.description}</p>
-                  {index < 2 && (
-                    <ChevronRight className="w-6 h-6 text-gray-400 mx-auto mt-6 hidden md:block" />
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Waitlist Form Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -694,21 +601,26 @@ export default function BusinessOwnersWaitlist() {
                 )}
               </div>
 
-              <Button 
-                type="submit" 
-                size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-4"
-                disabled={mutation.isPending}
-              >
-                {mutation.isPending ? (
-                  "Joining Waitlist..."
-                ) : (
-                  <>
-                    Join Early Access Waitlist
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </>
-                )}
-              </Button>
+              <div className="text-center">
+                <Button 
+                  type="submit" 
+                  size="lg"
+                  className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-4 mb-3"
+                  disabled={mutation.isPending}
+                >
+                  {mutation.isPending ? (
+                    "Securing Your Spot..."
+                  ) : (
+                    <>
+                      Secure My Early Access Spot
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </>
+                  )}
+                </Button>
+                <p className="text-sm text-gray-600 font-medium">
+                  Get notified first + exclusive early access pricing
+                </p>
+              </div>
 
               {mutation.error && (
                 <p className="text-red-500 text-sm text-center">
