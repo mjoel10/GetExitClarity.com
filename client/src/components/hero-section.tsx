@@ -12,14 +12,14 @@ export function HeroSection() {
           <div className="hero-content-container">
             {/* Headlines Section */}
             <div className="hero-headlines">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight text-center xl:text-left">
+              <h1 className="text-h1 text-foreground heading-spacing text-center xl:text-left">
                 Drive High Confidence Deals with{" "}
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Better Exit Readiness
                 </span>
               </h1>
               
-              <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed text-center xl:text-left">
+              <p className="text-body-large text-muted-foreground text-button-spacing text-center xl:text-left">
                 ExitClarity gives your prospects transparent, trust-building insights, so they feel informed, confident, and ready to engage with you as their trusted advisor.
               </p>
             </div>
@@ -63,18 +63,18 @@ export function HeroSection() {
             
             {/* Key Stats */}
             <div className="hero-stats-section order-4 xl:order-4">
-              <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto xl:mx-0">
+              <div className="grid grid-cols-3 column-gap max-w-lg mx-auto xl:mx-0">
                 <div className="text-center xl:text-left">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">30+</div>
-                  <p className="text-sm text-muted-foreground">Years M&A Experience</p>
+                  <div className="text-h2 text-primary mb-2">30+</div>
+                  <p className="text-small text-muted-foreground">Years M&A Experience</p>
                 </div>
                 <div className="text-center xl:text-left">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">11</div>
-                  <p className="text-sm text-muted-foreground">Readiness Factors</p>
+                  <div className="text-h2 text-primary mb-2">11</div>
+                  <p className="text-small text-muted-foreground">Readiness Factors</p>
                 </div>
                 <div className="text-center xl:text-left">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">300+</div>
-                  <p className="text-sm text-muted-foreground">Deals Analyzed</p>
+                  <div className="text-h2 text-primary mb-2">300+</div>
+                  <p className="text-small text-muted-foreground">Deals Analyzed</p>
                 </div>
               </div>
             </div>
