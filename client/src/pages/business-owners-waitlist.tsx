@@ -227,12 +227,12 @@ export default function BusinessOwnersWaitlist() {
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-8 lg:mb-0">
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 mb-8 lg:mb-0">
                 <Button 
                   onClick={() => setIsReportModalOpen(true)}
-                  className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl"
+                  className="bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 px-4 py-2 text-sm font-semibold rounded-lg shadow hover:shadow-lg"
                 >
-                  <Download className="w-5 h-5 mr-2" />
+                  <Download className="w-4 h-4 mr-2" />
                   Download Sample Report
                 </Button>
                 <Button 
@@ -240,9 +240,9 @@ export default function BusinessOwnersWaitlist() {
                     const waitlistSection = document.getElementById('waitlist-form');
                     waitlistSection?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="bg-primary text-white border-2 border-primary hover:bg-primary/90 transition-all duration-300 px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl"
+                  className="bg-primary text-white border-2 border-primary hover:bg-primary/90 transition-all duration-300 px-4 py-2 text-sm font-semibold rounded-lg shadow hover:shadow-lg"
                 >
-                  <UserPlus className="w-5 h-5 mr-2" />
+                  <UserPlus className="w-4 h-4 mr-2" />
                   Join Early Access Waitlist
                 </Button>
               </div>
