@@ -416,13 +416,16 @@ export default function BusinessOwnersWaitlist() {
       </section>
 
       {/* What is ExitClarity Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-blue-50 to-white relative">
+        {/* Subtle divider line */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
               What is ExitClarity?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               The professional exit readiness platform trusted by M&A firms and business owners
             </p>
           </div>
@@ -512,60 +515,80 @@ export default function BusinessOwnersWaitlist() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="py-24 bg-white relative">
+        {/* Top divider line */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+        
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Why Business Owners Choose ExitClarity
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Get the insights you need to make informed decisions about your exit strategy
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Large Feature Cards - 2x2 Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Confidence & Clarity */}
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-200 transition-colors duration-300">
-                <Target className="w-8 h-8 text-blue-600" />
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-300 border border-blue-100">
+              <div className="flex items-start gap-6">
+                <div className="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <Target className="w-10 h-10 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Confidence & Clarity</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Understand realistic estimated outcomes for your specific business and gain confidence about the entire exit process before engaging advisors.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Confidence & Clarity</h3>
-              <p className="text-gray-600">
-                Understand realistic estimated outcomes for your specific business and gain confidence about the entire exit process
-              </p>
             </div>
 
             {/* Cost Savings */}
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200 transition-colors duration-300">
-                <DollarSign className="w-8 h-8 text-green-600" />
+            <div className="group bg-gradient-to-br from-green-50 to-green-100/50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-300 border border-green-100">
+              <div className="flex items-start gap-6">
+                <div className="w-20 h-20 bg-green-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <DollarSign className="w-10 h-10 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Significant Cost Savings</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Save on professional fees through early preparation and efficient process management. Know your position before expensive engagements.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Cost Savings</h3>
-              <p className="text-gray-600">
-                Save on professional fees through early preparation and efficient process management
-              </p>
             </div>
 
             {/* Reduced Risk */}
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-200 transition-colors duration-300">
-                <Shield className="w-8 h-8 text-red-600" />
+            <div className="group bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-300 border border-orange-100">
+              <div className="flex items-start gap-6">
+                <div className="w-20 h-20 bg-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-10 h-10 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Minimize Exit Risk</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Minimize process risk using lessons learned from hundreds of previous transactions and proven best practices from M&A professionals.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Reduced Risk</h3>
-              <p className="text-gray-600">
-                Minimize process risk using lessons learned from previous transactions and proven best practices
-              </p>
             </div>
 
             {/* Expert Guidance */}
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-200 transition-colors duration-300">
-                <Users className="w-8 h-8 text-purple-600" />
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-300 border border-purple-100">
+              <div className="flex items-start gap-6">
+                <div className="w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-10 h-10 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">30+ Years M&A Expertise</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Access insights driven by decades of business ownership and sell-side/buy-side M&A expertise before you commit to consulting engagements.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Expert Guidance</h3>
-              <p className="text-gray-600">
-                Access insights driven by 30+ years of business ownership and sell-side/buy-side M&A expertise before you commit to consulting engagements
-              </p>
             </div>
           </div>
           
@@ -589,13 +612,18 @@ export default function BusinessOwnersWaitlist() {
       </section>
 
       {/* Assessment Demo Section */}
-      <section className="py-16 bg-gradient-to-br from-primary/5 via-blue-50 to-white">
+      <section className="py-24 bg-gray-900 relative">
+        {/* Top divider line */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Interactive Assessment Preview */}
           <div className="max-w-5xl mx-auto mb-20">
-            <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">
+            <h2 className="text-3xl font-bold text-center text-white mb-8">
               See What You'll Experience
             </h2>
+            <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              Preview the comprehensive analysis you'll receive for your business
+            </p>
             <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 border border-gray-200">
               <div className="assessment-preview">
                 {/* Assessment Header */}
@@ -696,19 +724,26 @@ export default function BusinessOwnersWaitlist() {
                 waitlistSection?.scrollIntoView({ behavior: 'smooth' });
               }}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold"
+              className="bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 text-lg font-semibold border border-gray-200 shadow-lg"
             >
               Get Early Access to This Analysis
             </Button>
           </div>
+        </div>
+      </section>
 
-          {/* Waitlist Form Section */}
+      {/* Waitlist Form Section */}
+      <section className="py-24 bg-gradient-to-br from-white via-gray-50 to-blue-50/30 relative">
+        {/* Top divider line */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div id="waitlist-form" className="max-w-4xl mx-auto mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Join Early Access Waitlist
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 Be among the first business owners to access professional exit analysis
               </p>
             </div>
