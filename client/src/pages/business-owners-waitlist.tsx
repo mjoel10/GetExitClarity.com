@@ -13,7 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { CheckCircle, TrendingUp, Shield, FileText, Clock, Users, Target, BarChart3, ArrowRight, Star, ChevronRight, Building, Calendar, Heart, DollarSign, Settings, RefreshCw, Download, AlertTriangle } from "lucide-react";
+import { CheckCircle, TrendingUp, Shield, FileText, Clock, Users, Target, BarChart3, ArrowRight, Star, ChevronRight, Building, Calendar, Heart, DollarSign, Settings, RefreshCw, Download, AlertTriangle, UserPlus } from "lucide-react";
 import { useMeta } from "@/hooks/use-meta";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -576,7 +576,7 @@ export default function BusinessOwnersWaitlist() {
           </div>
 
           {/* Waitlist Form Section */}
-          <div className="max-w-4xl mx-auto mb-20">
+          <div id="waitlist-form" className="max-w-4xl mx-auto mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 Join Early Access Waitlist
