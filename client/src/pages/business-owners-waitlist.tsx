@@ -198,7 +198,7 @@ export default function BusinessOwnersWaitlist() {
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-blue-50 to-white">
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:items-start">
             {/* Left Content */}
             <div className="text-center lg:text-left">
@@ -420,7 +420,7 @@ export default function BusinessOwnersWaitlist() {
         {/* Subtle divider line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               What is ExitClarity?
@@ -756,7 +756,7 @@ export default function BusinessOwnersWaitlist() {
         {/* Top divider line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
         
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div id="waitlist-form" className="max-w-4xl mx-auto mb-12">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -973,7 +973,7 @@ export default function BusinessOwnersWaitlist() {
 
       {/* Footer Message */}
       <section className="py-12 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto text-center px-4 sm:px-6">
           <p className="text-lg text-gray-600">
             Professional M&A analysis coming soon for business owners
           </p>
