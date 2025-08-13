@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExitClarity Assessment Platform - 16:9</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #0a4f4f 0%, #1a7575 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* 16:9 Container */
+        .video-frame {
+            width: 1920px;
+            height: 1080px;
+            max-width: 100vw;
+            max-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+            position: relative;
+            perspective: 1500px;
+        }
+
+        /* Animated particles background */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(110, 127, 255, 0.3);
+            border-radius: 50%;
+            animation: float-up 20s linear infinite;
+        }
+
+        @keyframes float-up {
+            from {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 15s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 18s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 20s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 6s; animation-duration: 16s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 8s; animation-duration: 22s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 10s; animation-duration: 19s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 12s; animation-duration: 17s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 14s; animation-duration: 21s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 16s; animation-duration: 15s; }
+
+        /* Single Centered Platform Card - zoom with blur */
+        .platform-card {
+            background: linear-gradient(160deg, #ffffff 0%, #f3f4f6 50%, #ffffff 100%);
+            border-radius: 40px;
+            padding: 70px 90px;
+            box-shadow: 
+                0 60px 180px rgba(0, 0, 0, 0.5),
+                0 30px 90px rgba(110, 127, 255, 0.2),
+                inset 0 -1px 0 rgba(0,0,0,0.1);
+            max-width: 1400px;
+            width: 100%;
+            animation: zoomFocus 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+            will-change: transform, opacity, filter;
+        }
+
+        @keyframes zoomFocus {
+            0% {
+                opacity: 0;
+                transform: scale(0.85) translateZ(0);
+                filter: blur(8px);
+            }
+            60% {
+                opacity: 1;
+                filter: blur(0);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateZ(0);
+                filter: blur(0);
+            }
+        }
+
+        .platform-header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .platform-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #6e7fff 0%, #4a5f8f 100%);
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: logoRotate 1.2s ease-out 0.5s backwards;
+            box-shadow: 0 10px 30px rgba(110, 127, 255, 0.3);
+        }
+
+        .platform-logo svg {
+            width: 48px;
+            height: 48px;
+        }
+
+        @keyframes logoRotate {
+            from {
+                opacity: 0;
+                transform: rotate(-360deg) scale(0);
+            }
+            to {
+                opacity: 1;
+                transform: rotate(0) scale(1);
+            }
+        }
+
+        .platform-title {
+            font-size: 52px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #6e7fff 0%, #4a5f8f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% {
+                filter: brightness(1);
+                transform: scale(1);
+            }
+            50% {
+                filter: brightness(1.2);
+                transform: scale(1.02);
+            }
+        }
+
+        .platform-subtitle {
+            color: #6b7280;
+            font-size: 22px;
+            animation: fadeIn 1.2s ease-out 0.8s backwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            border-radius: 20px;
+            padding: 35px 40px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+            animation: slideInLeft 1.2s ease-out 1.5s backwards;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .progress-text {
+            font-size: 18px;
+            color: #4a5f8f;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .time-badge {
+            background: rgba(110, 127, 255, 0.1);
+            padding: 6px 16px;
+            border-radius: 10px;
+            font-size: 16px;
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .progress-steps {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 14px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 7px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #6e7fff 0%, #4a5f8f 100%);
+            border-radius: 7px;
+            width: 72.7%;
+            animation: progressGrow 3s ease-out 2s backwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes progressGrow {
+            from { width: 0; }
+            to { width: 72.7%; }
+        }
+
+        .progress-bar-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.5) 50%, transparent 100%);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Factor Grid */
+        .factor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .factor-item {
+            background: #f9fafb;
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            animation: factorSlide 0.8s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+            position: relative;
+            overflow: hidden;
+            will-change: transform, opacity;
+        }
+
+        .factor-item:nth-child(1) { animation-delay: 3s; }
+        .factor-item:nth-child(2) { animation-delay: 3.3s; }
+        .factor-item:nth-child(3) { animation-delay: 3.6s; }
+        .factor-item:nth-child(4) { animation-delay: 3.9s; }
+        .factor-item:nth-child(5) { animation-delay: 4.2s; }
+        .factor-item:nth-child(6) { animation-delay: 4.5s; }
+
+        @keyframes factorSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px) translateZ(0);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) translateZ(0);
+            }
+        }
+
+        .factor-item:hover {
+            transform: translateY(-5px);
+            border-color: #6e7fff;
+            box-shadow: 0 15px 50px rgba(110, 127, 255, 0.2);
+        }
+
+        .factor-item.completed {
+            background: linear-gradient(135deg, rgba(110, 127, 255, 0.05) 0%, rgba(110, 127, 255, 0.02) 100%);
+            border-color: #6e7fff;
+        }
+
+        .factor-item.active {
+            background: linear-gradient(135deg, #f5f4e8 0%, #fffef5 100%);
+            border-color: #6e7fff;
+            animation: pulse 2s infinite, factorSlide 0.8s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                box-shadow: 0 0 0 0 rgba(110, 127, 255, 0.4);
+            }
+            50% { 
+                box-shadow: 0 0 0 15px rgba(110, 127, 255, 0);
+            }
+        }
+
+        .factor-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: 700;
+            flex-shrink: 0;
+            animation: iconRotate 0.6s ease-out;
+        }
+
+        @keyframes iconRotate {
+            from {
+                transform: rotate(-360deg) scale(0);
+            }
+            to {
+                transform: rotate(0) scale(1);
+            }
+        }
+
+        .factor-icon.completed {
+            background: #6e7fff;
+            color: white;
+        }
+
+        .factor-icon.active {
+            background: #4a5f8f;
+            color: white;
+            animation: iconPulse 2s ease-in-out infinite, iconRotate 0.6s ease-out;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .factor-icon.pending {
+            background: #f5f4e8;
+            color: #4a5f8f;
+        }
+
+        .factor-content {
+            flex: 1;
+        }
+
+        .factor-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 6px;
+        }
+
+        .factor-description {
+            font-size: 15px;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        .checkmark {
+            color: #6e7fff;
+            font-size: 32px;
+            animation: checkPop 0.4s ease-out;
+            margin-left: auto;
+        }
+
+        @keyframes checkPop {
+            from {
+                transform: scale(0) rotate(-180deg);
+            }
+            to {
+                transform: scale(1) rotate(0);
+            }
+        }
+
+        /* Bottom Stats */
+        .bottom-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding: 35px;
+            background: linear-gradient(135deg, #f5f4e8 0%, #e8e6d4 100%);
+            border-radius: 20px;
+            animation: slideUp 1.2s ease-out 6s backwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Status indicator */
+        .status-indicator {
+            position: absolute;
+            top: 70px;
+            right: 90px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 14px 28px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            animation: fadeIn 1s ease-out 4.5s backwards;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .status-dot {
+            width: 16px;
+            height: 16px;
+            background: #6e7fff;
+            border-radius: 50%;
+            animation: statusPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes statusPulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.3);
+                opacity: 0.7;
+            }
+        }
+
+        .status-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #4a5f8f;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-frame">
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="platform-card">
+            <div class="platform-header">
+                <div class="platform-logo">
+                    <svg viewBox="0 0 100 100" fill="white">
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="white" stroke-width="5"/>
+                        <circle cx="50" cy="50" r="20" fill="none" stroke="white" stroke-width="5"/>
+                        <circle cx="50" cy="50" r="8" fill="white"/>
+                        <path d="M 50 8 L 55 18 L 45 18 Z" fill="white" transform="rotate(-45 50 50)"/>
+                        <rect x="48" y="8" width="4" height="25" fill="white" transform="rotate(-45 50 50)"/>
+                    </svg>
+                </div>
+                <h1 class="platform-title">Exit Readiness Platform</h1>
+                <p class="platform-subtitle">Comprehensive analysis across 11 critical factors</p>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-header">
+                    <span class="progress-text">
+                        <span class="time-badge" id="timeRemaining">⏱ 9 mins remaining</span>
+                    </span>
+                    <span class="progress-steps" id="stepsProgress">8 of 11</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+            </div>
+            
+            <div class="factor-grid">
+                <div class="factor-item completed">
+                    <div class="factor-icon completed">✓</div>
+                    <div class="factor-content">
+                        <div class="factor-title">Financial Performance</div>
+                        <div class="factor-description">Revenue & growth metrics</div>
+                    </div>
+                    <span class="checkmark">✓</span>
+                </div>
+                
+                <div class="factor-item completed">
+                    <div class="factor-icon completed">✓</div>
+                    <div class="factor-content">
+                        <div class="factor-title">Documentation</div>
+                        <div class="factor-description">Records & compliance</div>
+                    </div>
+                    <span class="checkmark">✓</span>
+                </div>
+                
+                <div class="factor-item completed">
+                    <div class="factor-icon completed">✓</div>
+                    <div class="factor-content">
+                        <div class="factor-title">Team & Transition</div>
+                        <div class="factor-description">Succession planning</div>
+                    </div>
+                    <span class="checkmark">✓</span>
+                </div>
+                
+                <div class="factor-item active" id="activeItem">
+                    <div class="factor-icon active">8</div>
+                    <div class="factor-content">
+                        <div class="factor-title">M&A Experience</div>
+                        <div class="factor-description">Previous experience</div>
+                    </div>
+                </div>
+                
+                <div class="factor-item" id="nextItem1">
+                    <div class="factor-icon pending">9</div>
+                    <div class="factor-content">
+                        <div class="factor-title">Market Strategy</div>
+                        <div class="factor-description">Market knowledge</div>
+                    </div>
+                </div>
+                
+                <div class="factor-item" id="nextItem2">
+                    <div class="factor-icon pending">10</div>
+                    <div class="factor-content">
+                        <div class="factor-title">Strategic Planning</div>
+                        <div class="factor-description">Growth positioning</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottom-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="completionPercentage">73%</div>
+                    <div class="stat-label">Complete</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="factorsCompleted">8 of 11</div>
+                    <div class="stat-label">Factors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="timeElapsed">23 min</div>
+                    <div class="stat-label">Time Elapsed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">SaaS</div>
+                    <div class="stat-label">Industry</div>
+                </div>
+            </div>
+            
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span class="status-text">In Progress</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulate progress completion
+        let currentStep = 8;
+        let timeRemaining = 9;
+        let timeElapsed = 23;
+        
+        function simulateProgress() {
+            if (currentStep < 11) {
+                // Update time
+                timeRemaining = Math.max(0, timeRemaining - 3);
+                timeElapsed += 3;
+                document.getElementById('timeRemaining').textContent = `⏱ ${timeRemaining} mins remaining`;
+                document.getElementById('timeElapsed').textContent = `${timeElapsed} min`;
+                
+                // Complete current step
+                const activeItem = document.getElementById('activeItem');
+                const nextItem1 = document.getElementById('nextItem1');
+                
+                if (activeItem && currentStep < 10) {
+                    activeItem.classList.remove('active');
+                    activeItem.classList.add('completed');
+                    activeItem.querySelector('.factor-icon').classList.remove('active');
+                    activeItem.querySelector('.factor-icon').classList.add('completed');
+                    activeItem.querySelector('.factor-icon').textContent = '✓';
+                    
+                    // Add checkmark
+                    const checkmark = document.createElement('span');
+                    checkmark.className = 'checkmark';
+                    checkmark.textContent = '✓';
+                    activeItem.appendChild(checkmark);
+                    
+                    // Move to next step
+                    if (nextItem1) {
+                        nextItem1.classList.add('active');
+                        nextItem1.id = 'activeItem';
+                        nextItem1.querySelector('.factor-icon').classList.remove('pending');
+                        nextItem1.querySelector('.factor-icon').classList.add('active');
+                        
+                        // Update next items IDs
+                        const nextItem2 = document.getElementById('nextItem2');
+                        if (nextItem2) {
+                            nextItem2.id = 'nextItem1';
+                        }
+                    }
+                }
+                
+                currentStep++;
+                const percentage = Math.round((currentStep / 11) * 100);
+                document.getElementById('stepsProgress').textContent = `${currentStep} of 11`;
+                document.getElementById('factorsCompleted').textContent = `${currentStep} of 11`;
+                document.getElementById('completionPercentage').textContent = `${percentage}%`;
+                
+                // Update progress bar
+                document.getElementById('progressBar').style.width = `${percentage}%`;
+            }
+        }
+        
+        // Auto-advance progress after initial animation completes
+        setTimeout(() => {
+            setInterval(simulateProgress, 8000);
+        }, 7000);
+    </script>
+</body>
+</html>

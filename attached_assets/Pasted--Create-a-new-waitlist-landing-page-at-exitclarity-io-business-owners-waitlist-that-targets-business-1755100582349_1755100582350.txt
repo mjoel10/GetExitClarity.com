@@ -1,0 +1,45 @@
+"Create a new waitlist landing page at exitclarity.io/business-owners-waitlist that targets business owners directly (separate from our M&A firm enterprise product).
+
+REQUIREMENTS:
+1. New route: /business-owners-waitlist
+2. Leverage existing content from main site but rewrite for business owners
+3. Simple waitlist form 
+4. Should NOT be accessible from the main site navigation, this will be for ad traffic
+5. Professional design matching current ExitClarity branding
+6. Clear value proposition for business owners considering exit
+7. Include interactive visuals to demonstrate the platform experience
+
+VISUAL ELEMENTS TO INCLUDE:
+- Hero section with assessment progress visual (using assessment-platform code)
+- Sample report preview (using comprehensive-report code)
+- Both visuals should be embedded as interactive demonstrations
+
+FORM FIELDS NEEDED:
+- First Name
+- Last Name  
+- Business Email
+- Company Name
+- Industry (dropdown)
+- Annual Revenue Range (dropdown: Under $1M, $1M-$3M, $3M-$7M, $7M-$15M, $15M-$30M, $30M+)
+- Adjusted EBITDA Range (dropdown: Under $250K, $250K-$750K, $750K-$1.5M, $1.5M-$3M, $3M-$7M, $7M+, Not Sure)
+- Expected Exit Timeline (dropdown: 0-1 year, 1-3 years, 3-5 years, 5+ years)
+- Biggest Exit Concern (text area)
+
+CONTENT STRUCTURE:
+- Hero: 'Be First to Access Professional Exit Analysis'
+- Interactive assessment preview (scaled down from assessment-platform.html)
+- Value props from main site but business-owner focused
+- Sample report preview (scaled down from comprehensive-report.html)
+- Social proof: 'Join 500+ Business Owners on Early Access'
+- Process overview (simplified)
+- Waitlist form with CTA: 'Join Early Access Waitlist'
+- Footer: 'Professional M&A analysis coming soon for business owners'
+
+DESIGN:
+- Same ExitClarity branding and color scheme
+- Professional but approachable tone
+- Mobile-responsive
+- Form saves to database with 'waitlist' status
+- Embed the visual demos as smaller, contained sections
+
+Please rewrite the main site copy to speak directly to business owners instead of M&A firms, focusing on lower middle market businesses ($1M-$30M revenue range), and integrate the assessment and report visuals as compelling demonstrations of what they'll receive."
