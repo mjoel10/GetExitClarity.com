@@ -415,6 +415,34 @@ export default function BusinessOwnersWaitlist() {
         </div>
       </section>
 
+      {/* What is ExitClarity Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              What is ExitClarity?
+            </h2>
+            <div className="max-w-4xl mx-auto text-lg text-gray-600 space-y-6">
+              <p className="leading-relaxed">
+                <strong>Professional exit readiness platform used by M&A firms and business owners</strong> to systematically evaluate businesses before market entry.
+              </p>
+              <p className="leading-relaxed">
+                Our <strong>30-minute comprehensive assessment across 11 critical business factors</strong> analyzes everything from financial performance to operational readiness.
+              </p>
+              <p className="leading-relaxed">
+                <strong>Generates 20-25 page strategic report with valuation analysis and action plan</strong> that provides clear insights into your business's exit readiness and potential value.
+              </p>
+              <p className="leading-relaxed">
+                Uses the <strong>same methodology M&A professionals use to evaluate businesses</strong>, giving you insider knowledge typically reserved for advisors and investment bankers.
+              </p>
+              <p className="leading-relaxed">
+                Delivers a <strong>data-driven GO/FIX/WAIT recommendation</strong> based on your specific business profile, market conditions, and exit readiness across all critical dimensions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -471,6 +499,23 @@ export default function BusinessOwnersWaitlist() {
                 Access insights driven by 30+ years of business ownership and sell-side/buy-side M&A expertise before you commit to consulting engagements
               </p>
             </div>
+          </div>
+          
+          {/* CTA after Benefits */}
+          <div className="text-center mt-12">
+            <Button 
+              onClick={() => {
+                const waitlistSection = document.getElementById('waitlist-form');
+                waitlistSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold"
+            >
+              Secure My Early Access Spot
+            </Button>
+            <p className="text-sm text-gray-600 mt-2 font-medium">
+              Limited spots available for early access
+            </p>
           </div>
         </div>
       </section>
@@ -573,6 +618,20 @@ export default function BusinessOwnersWaitlist() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* CTA after Assessment Preview */}
+          <div className="text-center mb-20">
+            <Button 
+              onClick={() => {
+                const waitlistSection = document.getElementById('waitlist-form');
+                waitlistSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold"
+            >
+              Get Early Access to This Analysis
+            </Button>
           </div>
 
           {/* Waitlist Form Section */}
