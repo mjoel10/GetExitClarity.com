@@ -316,14 +316,14 @@ export default function BlogPost() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   {/* M&A Firms CTA - Primary */}
                   <a href="/trial-request">
-                    <Button size="lg" variant="hero" className="bg-blue-800 hover:bg-blue-900 text-white">
+                    <Button size="lg" className="bg-white text-blue-700 font-semibold hover:bg-gray-50 border-2 border-white shadow-lg">
                       M&A Firms → Test with one prospect
                     </Button>
                   </a>
                   
                   {/* Business Owners CTA - Secondary */}
                   <a href="/business-owners-waitlist">
-                    <Button size="lg" variant="professional" className="bg-white text-primary hover:bg-white/90">
+                    <Button size="lg" className="bg-transparent text-white font-semibold hover:bg-white/10 border-2 border-white">
                       Business Owners → Check your readiness
                     </Button>
                   </a>
