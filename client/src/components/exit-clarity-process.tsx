@@ -71,7 +71,7 @@ export function ExitClarityProcess() {
                     <div className="flex-1">
                       <div className="bg-white p-6 rounded-2xl shadow-xl border border-primary/10">
                         <h3 className="text-xl font-bold text-foreground mb-3">Complete Assessment</h3>
-                        <p className="text-muted-foreground leading-relaxed">Answer strategic questions across 11 key factors in 20 minutes to reveal your exit readiness</p>
+                        <p className="text-muted-foreground leading-relaxed">Answer strategic questions across 11 key factors in<br />20 minutes to reveal your exit readiness</p>
                       </div>
                     </div>
                   </div>
@@ -81,7 +81,7 @@ export function ExitClarityProcess() {
                     <div className="flex-1 pr-8 text-right">
                       <div className="bg-white p-6 rounded-2xl shadow-xl border border-primary/10">
                         <h3 className="text-xl font-bold text-foreground mb-3">Complete Assessment</h3>
-                        <p className="text-muted-foreground leading-relaxed">Answer strategic questions across 11 key factors in 20 minutes to reveal your exit readiness</p>
+                        <p className="text-muted-foreground leading-relaxed">Answer strategic questions across 11 key factors in<br />20 minutes to reveal your exit readiness</p>
                       </div>
                     </div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center shadow-lg z-10">
