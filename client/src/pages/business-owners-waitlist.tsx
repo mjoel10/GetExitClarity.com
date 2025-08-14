@@ -204,7 +204,7 @@ export default function BusinessOwnersWaitlist() {
             {/* Left Content */}
             <div className="text-center lg:text-left">
               <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 text-sm px-4 py-2">
-                Early Access Preview
+                Early Access Signup
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Discover Your True Exit Value <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Before Buyers Do</span>
