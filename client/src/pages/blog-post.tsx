@@ -313,32 +313,20 @@ export default function BlogPost() {
                   ExitClarity is an exit readiness platform for M&A professionals and business owners preparing for exit.
                 </p>
                 
-                <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-                  {/* M&A Firms CTA */}
-                  <div className="text-center">
-                    <h4 className="font-semibold text-white mb-2">M&A Firms: Test it with one prospect free</h4>
-                    <a 
-                      href="/trial-request"
-                      className="inline-block"
-                    >
-                      <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 w-full">
-                        Start Free Assessment
-                      </Button>
-                    </a>
-                  </div>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  {/* M&A Firms CTA - Primary */}
+                  <a href="/trial-request">
+                    <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                      M&A Firms → Test with one prospect
+                    </Button>
+                  </a>
                   
-                  {/* Business Owners CTA */}
-                  <div className="text-center">
-                    <h4 className="font-semibold text-white mb-2">Business Owners: See where you stand</h4>
-                    <a 
-                      href="/business-owners-waitlist"
-                      className="inline-block"
-                    >
-                      <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 w-full">
-                        Check Your Readiness
-                      </Button>
-                    </a>
-                  </div>
+                  {/* Business Owners CTA - Secondary */}
+                  <a href="/business-owners-waitlist">
+                    <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                      Business Owners → Check your readiness
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
