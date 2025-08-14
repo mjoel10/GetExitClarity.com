@@ -308,19 +308,38 @@ export default function BlogPost() {
             {/* CTA Section - Full Width */}
             <div className="max-w-5xl mx-auto px-4 sm:px-6 mt-12">
               <div className="p-8 sm:p-12 bg-gradient-to-r from-primary to-blue-700 rounded-2xl text-center text-white">
-                <h3 className="text-2xl sm:text-3xl font-bold mb-4">Ready to Discuss Your Exit Strategy?</h3>
-                <p className="text-blue-100 mb-6 text-lg sm:text-xl max-w-2xl mx-auto">
-                  Schedule a 30-minute consultation to explore your exit readiness options
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4">Ready to Get Started?</h3>
+                <p className="text-blue-100 mb-8 text-lg sm:text-xl max-w-2xl mx-auto">
+                  ExitClarity is an exit readiness platform for M&A professionals and business owners preparing for exit.
                 </p>
-                <a 
-                  href="https://calendly.com/exitclarity-info/30min" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                    Schedule Demo →
-                  </Button>
-                </a>
+                
+                <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                  {/* M&A Firms CTA */}
+                  <div className="text-center">
+                    <h4 className="font-semibold text-white mb-2">M&A Firms: Test it with one prospect free</h4>
+                    <a 
+                      href="/trial-request"
+                      className="inline-block"
+                    >
+                      <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 w-full">
+                        Start Free Assessment
+                      </Button>
+                    </a>
+                  </div>
+                  
+                  {/* Business Owners CTA */}
+                  <div className="text-center">
+                    <h4 className="font-semibold text-white mb-2">Business Owners: See where you stand</h4>
+                    <a 
+                      href="/business-owners-waitlist"
+                      className="inline-block"
+                    >
+                      <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 w-full">
+                        Check Your Readiness
+                      </Button>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
