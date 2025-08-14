@@ -474,7 +474,7 @@ export default function BusinessOwnersWaitlist() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {/* Professional Platform */}
             <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border hover:border-primary/20">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200 mx-auto">
+              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <Building className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3 text-center">Professional Platform</h3>
@@ -485,7 +485,7 @@ export default function BusinessOwnersWaitlist() {
 
             {/* 20-Minute Assessment */}
             <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border hover:border-primary/20">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200 mx-auto">
+              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <Clock className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3 text-center">20-Minute Assessment</h3>
@@ -496,7 +496,7 @@ export default function BusinessOwnersWaitlist() {
 
             {/* Strategic Reports */}
             <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border hover:border-primary/20">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200 mx-auto">
+              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <FileText className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3 text-center">Strategic Reports</h3>
@@ -507,7 +507,7 @@ export default function BusinessOwnersWaitlist() {
 
             {/* M&A Methodology */}
             <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border hover:border-primary/20">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200 mx-auto">
+              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <TrendingUp className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3 text-center">M&A Methodology</h3>
@@ -518,7 +518,7 @@ export default function BusinessOwnersWaitlist() {
 
             {/* Data-Driven Recommendations */}
             <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border hover:border-primary/20">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200 mx-auto">
+              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <Target className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3 text-center">GO/FIX/WAIT Recommendation</h3>
@@ -529,7 +529,7 @@ export default function BusinessOwnersWaitlist() {
 
             {/* Expert Insights */}
             <div className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 border border-border hover:border-primary/20">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200 mx-auto">
+              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <Users className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3 text-center">Expert Insights</h3>
@@ -741,7 +741,7 @@ export default function BusinessOwnersWaitlist() {
                         <div className={`flex-shrink-0 ${
                           factor.status === 'completed' ? 'text-green-600' :
                           factor.status === 'active' ? 'text-blue-600' : 'text-gray-400'
-                        } ${factor.status === 'active' ? 'animate-pulse' : ''}`}>
+                        }`}>
                           <div className="w-5 h-5 sm:w-6 sm:h-6">
                             {factor.icon}
                           </div>
@@ -753,7 +753,7 @@ export default function BusinessOwnersWaitlist() {
                               <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
                             )}
                             {factor.status === 'active' && (
-                              <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin flex-shrink-0"></div>
+                              <div className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-600 rounded-full flex-shrink-0"></div>
                             )}
                             <span className={`text-xs font-medium truncate ${
                               factor.status === 'completed' ? 'text-green-600' :
