@@ -467,7 +467,7 @@ export default function BusinessOwnersWaitlist() {
               What is ExitClarity?
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              The professional exit readiness platform trusted by M&A firms and business owners.
+              Comprehensive 11-factor assessment informed by 30+ years of business ownership and M&A experience to provide the strategic clarity needed to maximize your exit outcome
             </p>
           </div>
           
