@@ -316,22 +316,22 @@ export default function BlogPost() {
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   {/* M&A Firms CTA */}
                   <div className="text-center">
-                    <p className="text-white/80 text-sm mb-3 font-medium">For M&A Firms</p>
                     <a href="/trial-request">
                       <Button size="lg" className="!bg-blue-500 !text-white hover:!bg-blue-600 font-semibold">
                         Test with one prospect →
                       </Button>
                     </a>
+                    <p className="text-white/70 text-xs mt-2 italic">For M&A Firms</p>
                   </div>
                   
                   {/* Business Owners CTA */}
                   <div className="text-center">
-                    <p className="text-white/80 text-sm mb-3 font-medium">For Business Owners</p>
                     <a href="/business-owners-waitlist">
                       <Button size="lg" className="!bg-white !text-blue-700 hover:!bg-gray-50 font-semibold">
                         Check your readiness →
                       </Button>
                     </a>
+                    <p className="text-white/70 text-xs mt-2 italic">For Business Owners</p>
                   </div>
                 </div>
               </div>
