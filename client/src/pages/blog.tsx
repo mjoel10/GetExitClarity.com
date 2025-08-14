@@ -288,6 +288,15 @@ export default function Blog() {
                   </div>
                 ))}
               </div>
+              
+              {/* View All Articles Button */}
+              <div className="text-center mt-12">
+                <Link href="/blog/archive">
+                  <Button variant="outline" size="lg" className="px-8 py-3 text-primary border-primary hover:bg-primary hover:text-white transition-colors">
+                    View All Articles
+                  </Button>
+                </Link>
+              </div>
             </div>
           </section>
 

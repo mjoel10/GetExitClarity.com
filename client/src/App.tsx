@@ -11,6 +11,7 @@ import Resources from "@/pages/resources";
 import SampleReport from "@/pages/sample-report";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
+import BlogArchive from "@/pages/blog-archive";
 import TrialRequest from "@/pages/trial-request";
 import BusinessOwnersWaitlist from "@/pages/business-owners-waitlist";
 import Contact from "@/pages/contact";
@@ -37,6 +38,7 @@ function Router() {
       <Route path="/sample-report" component={SampleReport} />
       <Route path="/resources" component={Resources} />
       <Route path="/blog" component={Blog} />
+      <Route path="/blog/archive" component={BlogArchive} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/trial-request" component={TrialRequest} />
       <Route path="/business-owners-waitlist" component={BusinessOwnersWaitlist} />
