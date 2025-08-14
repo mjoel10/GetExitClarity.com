@@ -174,7 +174,7 @@ export default function TrialRequest() {
                 </div>
                 
                 {/* Readiness Assessment Preview */}
-                <div className="flex justify-center lg:justify-end">
+                <div className="flex justify-center lg:justify-center lg:pl-8">
                   <div className="max-w-sm w-full">
                     <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-4">
                       {/* Document Header */}
