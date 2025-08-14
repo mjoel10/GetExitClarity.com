@@ -364,7 +364,7 @@ export async function sendWaitlistConfirmation(data: WaitlistConfirmationData): 
         <div style="background-color: #ecfdf5; padding: 20px; border-radius: 12px; margin: 24px 0;">
           <h3 style="color: #166534; margin-top: 0; margin-bottom: 12px; font-size: 16px;">✨ You're in great company!</h3>
           <p style="color: #166534; line-height: 1.6; margin: 0;">
-            Over 500 business owners have already joined our early access program. You'll be notified as soon as spots become available.
+            Over 200 business owners have already joined our early access program. You'll be notified as soon as spots become available.
           </p>
         </div>
         
