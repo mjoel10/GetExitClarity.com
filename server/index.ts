@@ -92,7 +92,7 @@ app.use((req, res, next) => {
   <meta property="og:url" content="https://exitclarity.io/blog/${post.slug}" />
   <meta property="og:title" content="${post.title}" />
   <meta property="og:description" content="${post.excerpt}" />
-  <meta property="og:image" content="https://exitclarity.io/api/og-image/blog-handshake.jpg" />
+  <meta property="og:image" content="https://exitclarity.io/src/assets/AdobeStock_454297497_1754937961456.jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="article:author" content="${post.author}" />
@@ -103,7 +103,7 @@ app.use((req, res, next) => {
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="${post.title}" />
   <meta property="twitter:description" content="${post.excerpt}" />
-  <meta property="twitter:image" content="https://exitclarity.io/api/og-image/blog-handshake.jpg" />
+  <meta property="twitter:image" content="https://exitclarity.io/src/assets/AdobeStock_454297497_1754937961456.jpeg" />
 </head>
 <body>
   <div id="root"></div>
