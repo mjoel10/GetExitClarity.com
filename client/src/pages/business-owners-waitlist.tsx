@@ -508,9 +508,12 @@ export default function BusinessOwnersWaitlist() {
           {/* CTA after What is ExitClarity */}
           <div className="bg-primary/5 rounded-2xl p-6 mt-12 border border-primary/10">
             <div className="text-center">
-              <h3 className="text-lg font-semibold text-foreground mb-4">
+              <h3 className="text-lg font-semibold text-foreground mb-2">
                 Experience the Professional Platform Trusted by M&A Firms
               </h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Get the same insights M&A professionals use to evaluate businesses before you go to market
+              </p>
               <Button 
                 onClick={() => {
                   const waitlistSection = document.getElementById('waitlist-form');
