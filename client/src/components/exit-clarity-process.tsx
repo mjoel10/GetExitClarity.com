@@ -1,4 +1,4 @@
-import { Target, BarChart3, TrendingUp, CheckCircle, Settings, Zap, Shield, DollarSign, Info, AlertTriangle, TrendingDown, Clock, Calendar, FileText, Users } from "lucide-react";
+import { Target, BarChart3, TrendingUp, CheckCircle, Settings, Zap, Shield, DollarSign, Info, AlertTriangle, TrendingDown, Clock, UserPlus, FileText, Users } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 
@@ -232,15 +232,13 @@ export function ExitClarityProcess() {
             <div className="text-center mt-8">
               <p className="text-muted-foreground mb-4 text-sm">Ready to assess your exit readiness?</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <a 
-                  href="https://calendly.com/exitclarity-info/30min" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <Link 
+                  href="/business-owners-waitlist"
                   className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm"
                 >
-                  <Calendar className="h-4 w-4 mr-2" />
-                  Schedule Demo
-                </a>
+                  <UserPlus className="h-4 w-4 mr-2" />
+                  Join Our Waitlist
+                </Link>
                 <button
                   onClick={handleViewSampleReport}
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-foreground border-2 border-primary/20 font-semibold rounded-xl hover:border-primary hover:text-primary transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm"
@@ -407,15 +405,13 @@ export function ExitClarityProcess() {
                     Get your comprehensive strategic report and personalized recommendations today.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a 
-                      href="https://calendly.com/exitclarity-info/30min" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
+                    <Link 
+                      href="/business-owners-waitlist"
                       className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-lg"
                     >
-                      <Calendar className="h-5 w-5 mr-3" />
-                      Schedule Your Demo
-                    </a>
+                      <UserPlus className="h-5 w-5 mr-3" />
+                      Join Our Waitlist
+                    </Link>
                     <button
                       onClick={handleViewSampleReport}
                       className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white border-2 border-white/30 font-bold rounded-xl hover:bg-white/20 hover:border-white/50 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-lg"

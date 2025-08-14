@@ -1,4 +1,4 @@
-import { Calendar, FileText, ArrowRight, CheckCircle, TrendingUp, Shield } from "lucide-react";
+import { UserPlus, FileText, ArrowRight, CheckCircle, TrendingUp, Shield } from "lucide-react";
 import { Link, useLocation } from "wouter";
 
 export function OwnerBenefitsSection() {
@@ -62,15 +62,13 @@ export function OwnerBenefitsSection() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="https://calendly.com/exitclarity-info/30min" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link 
+                href="/business-owners-waitlist"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-xl hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-                <Calendar className="h-5 w-5 mr-2" />
-                Schedule Demo
-              </a>
+                <UserPlus className="h-5 w-5 mr-2" />
+                Join Our Waitlist
+              </Link>
               <button
                 onClick={handleGetAssessment}
                 className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white border-2 border-white/20 font-semibold rounded-xl hover:bg-white/20 hover:border-white/40 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"

@@ -1,6 +1,6 @@
-import { CheckCircle, Users, Target, BarChart3, TrendingUp, Shield, Calendar, FileText, ArrowRight } from "lucide-react";
+import { CheckCircle, Users, Target, BarChart3, TrendingUp, Shield, UserPlus, FileText, ArrowRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 
 export function SolutionSection() {
   const [, navigate] = useLocation();
@@ -161,11 +161,11 @@ export function SolutionSection() {
             {/* CTA Buttons for Business Owners */}
             <div className="mt-8 flex flex-col xl:flex-row gap-3">
               <Button variant="hero" size="default" className="group xl:flex-1 sm:py-4 sm:px-6 sm:text-lg" asChild>
-                <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
-                  <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  Get Started Today
+                <Link href="/business-owners-waitlist">
+                  <UserPlus className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                  Join Our Waitlist
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
-                </a>
+                </Link>
               </Button>
               <Button variant="outline" size="default" className="group xl:flex-1 sm:py-4 sm:px-6 sm:text-lg" onClick={handleBusinessOwnersLearnMore}>
                 <FileText className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
