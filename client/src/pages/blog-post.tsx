@@ -313,20 +313,26 @@ export default function BlogPost() {
                   ExitClarity is an exit readiness platform for M&A professionals and business owners preparing for exit.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  {/* M&A Firms CTA - Primary */}
-                  <a href="/trial-request">
-                    <Button size="lg" className="!bg-blue-500 !text-white hover:!bg-blue-600 font-semibold">
-                      M&A Firms → Test with one prospect
-                    </Button>
-                  </a>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                  {/* M&A Firms CTA */}
+                  <div className="text-center">
+                    <p className="text-white/80 text-sm mb-3 font-medium">For M&A Firms</p>
+                    <a href="/trial-request">
+                      <Button size="lg" className="!bg-blue-500 !text-white hover:!bg-blue-600 font-semibold">
+                        Test with one prospect →
+                      </Button>
+                    </a>
+                  </div>
                   
-                  {/* Business Owners CTA - Secondary */}
-                  <a href="/business-owners-waitlist">
-                    <Button size="lg" className="!bg-white !text-blue-700 hover:!bg-gray-50 font-semibold">
-                      Business Owners → Check your readiness
-                    </Button>
-                  </a>
+                  {/* Business Owners CTA */}
+                  <div className="text-center">
+                    <p className="text-white/80 text-sm mb-3 font-medium">For Business Owners</p>
+                    <a href="/business-owners-waitlist">
+                      <Button size="lg" className="!bg-white !text-blue-700 hover:!bg-gray-50 font-semibold">
+                        Check your readiness →
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
