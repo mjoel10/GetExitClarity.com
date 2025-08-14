@@ -6,8 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Calendar, Clock, User, ArrowRight, TrendingUp, Target, Users, BookOpen, BarChart3, Lightbulb } from "lucide-react";
 import { Link } from "wouter";
 import { useMeta } from "@/hooks/use-meta";
-import { useQuery } from "@tanstack/react-query";
-import type { BlogPost } from "@shared/schema";
 
 // Import thumbnail images for fallback
 import thumbnail2 from "@assets/AdobeStock_629687249_1754937961457.jpeg";
