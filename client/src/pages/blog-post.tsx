@@ -7,6 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Clock, User, ArrowLeft, Share2 } from "lucide-react";
 import { useMeta } from "@/hooks/use-meta";
 
+// Import the handshake image for Open Graph
+import handshakeImage from "@assets/AdobeStock_454297497_1754937961456.jpeg";
+
 // Blog post data - in a real app, this would come from a CMS or database
 const blogPosts = {
   "ultimate-exit-why-87-percent-fail": {
@@ -180,7 +183,8 @@ export default function BlogPost() {
     description: post ? post.excerpt : "Article not found",
     ogTitle: post ? post.title : "Article Not Found",
     ogDescription: post ? post.excerpt : "Article not found",
-    ogType: "article"
+    ogType: "article",
+    ogImage: post ? handshakeImage : undefined
   });
 
   if (!post) {
