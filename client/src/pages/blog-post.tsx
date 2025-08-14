@@ -24,7 +24,7 @@ And most owners aren't prepared at all.
 
 ## The Brutal Truth About Business Exits
 
-Recent data shows that exit preparation typically begins 12-18 months before engaging advisors, yet most business owners start thinking about their exit just 6 months before they want to close. That gap—between when preparation should start and when it actually does—costs millions in lost value.
+Recent data shows that exit preparation typically begins 12-18 months before engaging advisors, yet most business owners start thinking about their exit just 6 months before they want to close. That gap, between when preparation should start and when it actually does, costs millions in lost value.
 
 Consider these realities:
 
@@ -44,8 +44,8 @@ Not every business that wants to sell should sell now. And not every fixable iss
 Your business is ready for market when:
 
 - Financial performance is consistent with 3+ years of clean, auditable financials
-- Owner dependency is minimal—the business runs without you for 30+ days
-- Customer concentration is balanced—no single customer exceeds 20% of revenue
+- Owner dependency is minimal, the business runs without you for 30+ days
+- Customer concentration is balanced, no single customer exceeds 20% of revenue
 - Management team is proven and incentivized to stay post-sale
 - Growth trajectory is clear with documented systems and processes
 
@@ -61,11 +61,11 @@ Messy books are the fastest way to lose a buyer. If your monthly financials aren
 
 <strong>Customer Concentration Risk (6-12 months to fix)</strong>
 
-When one customer represents 30%+ of revenue, you're not selling a business—you're selling a hostage situation. Diversification takes time but can double your multiple.
+When one customer represents 30%+ of revenue, you're not selling a business, you're selling a hostage situation. Diversification takes time but can double your multiple.
 
 <strong>Leadership Gaps (12-18 months to fix)</strong>
 
-Owner dependence is a critical risk factor that must be addressed before sale. Building a management team that can operate without you isn't just about delegation—it's about creating institutional knowledge that survives your departure.
+Owner dependence is a critical risk factor that must be addressed before sale. Building a management team that can operate without you isn't just about delegation, it's about creating institutional knowledge that survives your departure.
 
 ### WAIT: When Patience Pays
 
@@ -74,7 +74,7 @@ Sometimes the best move is no move:
 - Market timing is unfavorable (industry downturn, regulatory uncertainty)
 - Major contracts are renewing within 6 months
 - Strategic initiatives are mid-flight with value not yet realized
-- Personal readiness isn't there—and that's okay
+- Personal readiness isn't there, and that's okay
 
 ## The Hidden Costs of Poor Preparation
 
@@ -100,7 +100,7 @@ Every unprepared exit attempt carries compounding costs:
 
 ## The Data-Driven Path to Exit Success
 
-Modern exit planning isn't about gut feelings—it's about systematic assessment across proven dimensions. An exit-readiness assessment involves a comprehensive review of current business functions, historical performance, and future projections.
+Modern exit planning isn't about gut feelings, it's about systematic assessment across proven dimensions. An exit-readiness assessment involves a comprehensive review of current business functions, historical performance, and future projections.
 
 The most successful exits follow this progression:
 
@@ -137,7 +137,7 @@ The traditional approach to exit planning is fundamentally broken:
 - Owners operate on emotion rather than data
 - Preparation is reactive rather than strategic
 
-The modern approach—the one that actually works—is different:
+The modern approach, the one that actually works, is different:
 
 - Start with data, not opinions
 - Fix strategically, not comprehensively
@@ -146,7 +146,7 @@ The modern approach—the one that actually works—is different:
 
 ## Your Next Move
 
-If you're thinking about an exit—whether in 1 year or 5—you have three choices:
+If you're thinking about an exit, whether in 1 year or 5, you have three choices:
 
 1. Hope for the best and join the 87% of failed exits
 2. Hire expensive advisors who bill whether you're ready or not
