@@ -374,51 +374,51 @@ export default function BusinessOwnersWaitlist() {
                                 
                                 <div className="flex-1 min-w-0">
                                   <div className="flex items-center justify-between mb-1 sm:mb-2">
-                                    <div className="inline-flex items-center gap-0.5 sm:gap-1 bg-primary text-white px-1.5 sm:px-2 py-0.5 rounded text-xs font-semibold">
-                                      <TrendingUp className="w-2 h-2 sm:w-2.5 sm:h-2.5" />
+                                    <div className="inline-flex items-center gap-0.5 sm:gap-1 bg-primary text-white px-1 sm:px-2 py-0.5 rounded text-xs font-semibold">
+                                      <TrendingUp className="w-1.5 h-1.5 sm:w-2.5 sm:h-2.5" />
                                       <span className="hidden sm:inline">Ready to Proceed</span>
-                                      <span className="sm:hidden">Ready</span>
+                                      <span className="sm:hidden text-xs">Ready</span>
                                     </div>
                                     <div className="h-1 sm:h-1.5 bg-gray-200 rounded w-8 sm:w-16"></div>
                                   </div>
                                   
                                   {/* Key Metrics Grid */}
-                                  <div className="grid grid-cols-4 gap-1 sm:gap-2 text-xs">
+                                  <div className="grid grid-cols-4 gap-0.5 sm:gap-2 text-xs">
                                     <div>
-                                      <div className="h-1 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-6 sm:w-12"></div>
-                                      <div className="font-bold text-gray-900 text-xs">$8.2M</div>
+                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-4 sm:w-12"></div>
+                                      <div className="font-bold text-gray-900 text-xs leading-tight">$8.2M</div>
                                     </div>
                                     <div>
-                                      <div className="h-1 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-4 sm:w-8"></div>
-                                      <div className="font-bold text-gray-900 text-xs">4.2x</div>
+                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-3 sm:w-8"></div>
+                                      <div className="font-bold text-gray-900 text-xs leading-tight">4.2x</div>
                                     </div>
                                     <div>
-                                      <div className="h-1 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-5 sm:w-10"></div>
-                                      <div className="font-bold text-gray-900 text-xs">6-9mo</div>
+                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-4 sm:w-10"></div>
+                                      <div className="font-bold text-gray-900 text-xs leading-tight">6-9mo</div>
                                     </div>
                                     <div>
-                                      <div className="h-1 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-4 sm:w-8"></div>
-                                      <div className="font-bold text-green-600 text-xs">Low</div>
+                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-3 sm:w-8"></div>
+                                      <div className="font-bold text-green-600 text-xs leading-tight">Low</div>
                                     </div>
                                   </div>
                                   
                                   {/* Bottom metrics row */}
-                                  <div className="grid grid-cols-4 gap-1 sm:gap-2 mt-1 sm:mt-2 pt-1 sm:pt-2 border-t border-gray-100 text-xs">
+                                  <div className="grid grid-cols-4 gap-0.5 sm:gap-2 mt-1 sm:mt-2 pt-0.5 sm:pt-2 border-t border-gray-100 text-xs">
                                     <div>
-                                      <div className="h-1 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-3 sm:w-6"></div>
-                                      <div className="font-bold text-green-600 text-xs">23%</div>
+                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-2 sm:w-6"></div>
+                                      <div className="font-bold text-green-600 text-xs leading-tight">23%</div>
                                     </div>
                                     <div>
-                                      <div className="h-1 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-4 sm:w-8"></div>
-                                      <div className="font-bold text-blue-600 text-xs">18%</div>
+                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-3 sm:w-8"></div>
+                                      <div className="font-bold text-blue-600 text-xs leading-tight">18%</div>
                                     </div>
                                     <div>
-                                      <div className="h-1 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-3 sm:w-6"></div>
-                                      <div className="font-bold text-purple-600 text-xs">12%</div>
+                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-2 sm:w-6"></div>
+                                      <div className="font-bold text-purple-600 text-xs leading-tight">12%</div>
                                     </div>
                                     <div>
-                                      <div className="h-1 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-2.5 sm:w-5"></div>
-                                      <div className="font-bold text-indigo-600 text-xs">High</div>
+                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-2 sm:w-5"></div>
+                                      <div className="font-bold text-indigo-600 text-xs leading-tight">High</div>
                                     </div>
                                   </div>
                                 </div>
@@ -426,19 +426,23 @@ export default function BusinessOwnersWaitlist() {
                             </div>
 
                             {/* Key Findings - Stylized */}
-                            <div className="mt-2 sm:mt-3 space-y-1 sm:space-y-2">
-                              <div className="h-1.5 sm:h-2 bg-gray-300 rounded w-12 sm:w-20"></div>
-                              <div className="flex items-center gap-1.5 sm:gap-2">
-                                <CheckCircle className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-green-500 flex-shrink-0" />
-                                <div className="h-1.5 sm:h-2 bg-gray-200 rounded flex-1"></div>
+                            <div className="mt-1.5 sm:mt-3 space-y-0.5 sm:space-y-2">
+                              <div className="h-1 sm:h-2 bg-gray-300 rounded w-8 sm:w-20 mb-0.5 sm:mb-1"></div>
+                              <div className="flex items-center gap-1 sm:gap-2">
+                                <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-500 flex-shrink-0" />
+                                <div className="h-1 sm:h-2 bg-gray-200 rounded flex-1"></div>
                               </div>
-                              <div className="flex items-center gap-1.5 sm:gap-2">
-                                <CheckCircle className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-green-500 flex-shrink-0" />
-                                <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-4/5"></div>
+                              <div className="flex items-center gap-1 sm:gap-2">
+                                <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-500 flex-shrink-0" />
+                                <div className="h-1 sm:h-2 bg-gray-200 rounded w-4/5"></div>
                               </div>
-                              <div className="flex items-center gap-1.5 sm:gap-2">
-                                <AlertTriangle className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-yellow-500 flex-shrink-0" />
-                                <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-3/4"></div>
+                              <div className="flex items-center gap-1 sm:gap-2">
+                                <AlertTriangle className="w-2 h-2 sm:w-3 sm:h-3 text-yellow-500 flex-shrink-0" />
+                                <div className="h-1 sm:h-2 bg-gray-200 rounded w-3/4"></div>
+                              </div>
+                              <div className="flex items-center gap-1 sm:gap-2">
+                                <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-500 flex-shrink-0" />
+                                <div className="h-1 sm:h-2 bg-gray-200 rounded w-2/3"></div>
                               </div>
                             </div>
                           </div>
