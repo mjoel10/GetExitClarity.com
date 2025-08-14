@@ -55,22 +55,12 @@ app.use((req, res, next) => {
   const server = await registerRoutes(app);
 
   // Handle dynamic meta tags for blog posts before catch-all
-  app.get('/blog/:slug', (req, res, next) => {
+  app.get('/blog/:slug', async (req, res, next) => {
     const { slug } = req.params;
     
-    // Blog post data - should match the data in BlogPost component
-    const blogPosts: Record<string, any> = {
-      "ultimate-exit-why-87-percent-fail": {
-        title: "The Ultimate Exit: Why 87% of Business Sales Fail (And How to Be in the 13% That Don't)",
-        slug: "ultimate-exit-why-87-percent-fail",
-        category: "Exit Planning",
-        author: "ExitClarity Team",
-        publishedDate: "August 11, 2025",
-        excerpt: "The difference between a successful exit and a failed one isn't luck. It's preparation. And most owners aren't prepared at all."
-      }
-    };
-
-    const post = blogPosts[slug];
+    // Import centralized blog data
+    const { getBlogPost } = await import("../shared/blog-data.js");
+    const post = getBlogPost(slug);
     
     if (post) {
       // For social media crawlers, serve a simplified HTML with proper meta tags
@@ -92,9 +82,7 @@ app.use((req, res, next) => {
   <meta property="og:url" content="https://exitclarity.io/blog/${post.slug}" />
   <meta property="og:title" content="${post.title}" />
   <meta property="og:description" content="${post.excerpt}" />
-  <meta property="og:image" content="https://exitclarity.io/src/assets/AdobeStock_454297497_1754937961456.jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+
   <meta property="article:author" content="${post.author}" />
   <meta property="article:published_time" content="${new Date(post.publishedDate).toISOString()}" />
   <meta property="article:section" content="${post.category}" />
@@ -103,7 +91,7 @@ app.use((req, res, next) => {
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="${post.title}" />
   <meta property="twitter:description" content="${post.excerpt}" />
-  <meta property="twitter:image" content="https://exitclarity.io/src/assets/AdobeStock_454297497_1754937961456.jpeg" />
+
 </head>
 <body>
   <div id="root"></div>

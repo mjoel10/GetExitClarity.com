@@ -10,8 +10,11 @@ import { useMeta } from "@/hooks/use-meta";
 // Import the handshake image for Open Graph
 import handshakeImage from "@assets/AdobeStock_454297497_1754937961456.jpeg";
 
-// Blog post data - in a real app, this would come from a CMS or database
-const blogPosts = {
+// Import centralized blog data
+import { getBlogPost } from "@shared/blog-data";
+
+// Legacy blog posts data - will be removed after migration
+const legacyBlogPosts = {
   "ultimate-exit-why-87-percent-fail": {
     title: "The Ultimate Exit: Why 87% of Business Sales Fail (And How to Be in the 13% That Don't)",
     slug: "ultimate-exit-why-87-percent-fail",
