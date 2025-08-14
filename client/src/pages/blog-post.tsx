@@ -316,7 +316,7 @@ export default function BlogPost() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   {/* M&A Firms CTA - Primary */}
                   <a href="/trial-request">
-                    <Button size="lg" variant="hero" className="bg-blue-600 hover:bg-blue-700 text-white">
+                    <Button size="lg" variant="hero" className="bg-blue-500 hover:bg-blue-600 text-white">
                       M&A Firms → Test with one prospect
                     </Button>
                   </a>
