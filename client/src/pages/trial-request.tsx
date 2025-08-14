@@ -160,9 +160,9 @@ export default function TrialRequest() {
         
         <main className="pt-16 sm:pt-20">
           {/* Hero Section */}
-          <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/5 via-blue-50 to-white">
+          <section className="pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-12 lg:pb-16 bg-gradient-to-br from-primary/5 via-blue-50 to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 {/* Text Content */}
                 <div className="text-center lg:text-left">
                   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
