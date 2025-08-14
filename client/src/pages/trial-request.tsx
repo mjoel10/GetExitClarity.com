@@ -12,7 +12,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Building, Users, Clock, Shield, BarChart3, Calendar, BookOpen } from "lucide-react";
+import { CheckCircle, Building, Users, Clock, Shield, BarChart3, Calendar, BookOpen, FileText, Target } from "lucide-react";
 import { useMeta } from "@/hooks/use-meta";
 import { apiRequest } from "@/lib/queryClient";
 
@@ -164,10 +164,10 @@ export default function TrialRequest() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="text-center max-w-4xl mx-auto mb-12">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-                  Try ExitClarity for Free
+                  Find Out Which Prospects Are Actually Ready to Sell
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                  See ExitClarity in action with your next prospect. Your access will be confirmed within 1-3 business days.
+                  Get a complete readiness assessment delivered the same day your prospect completes it. Try it free with one of your current prospects.
                 </p>
               </div>
             </div>
@@ -183,31 +183,31 @@ export default function TrialRequest() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-6">What You Get</h3>
                     <div className="space-y-4">
                       <div className="flex items-start gap-3">
-                        <Shield className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                        <Clock className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                         <div>
-                          <p className="font-medium text-gray-900">No obligation, no credit card</p>
-                          <p className="text-sm text-gray-600">Try it risk-free with one of your prospects</p>
+                          <p className="font-medium text-gray-900">Same-Day Readiness Report</p>
+                          <p className="text-sm text-gray-600">Complete assessment within hours of prospect completion</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Building className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <Target className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                         <div>
-                          <p className="font-medium text-gray-900">Enterprise-only access</p>
-                          <p className="text-sm text-gray-600">Full platform features and reporting</p>
+                          <p className="font-medium text-gray-900">GO/FIX/WAIT Classification</p>
+                          <p className="text-sm text-gray-600">Instantly know if they're worth pursuing now</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Users className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                        <FileText className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
                         <div>
-                          <p className="font-medium text-gray-900">Works with your M&A workflow</p>
-                          <p className="text-sm text-gray-600">Seamlessly integrates with your process</p>
+                          <p className="font-medium text-gray-900">25-Page Detailed Analysis</p>
+                          <p className="text-sm text-gray-600">Covers 11 deal-critical factors buyers care about</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Clock className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                        <Shield className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
                         <div>
-                          <p className="font-medium text-gray-900">Quick turnaround</p>
-                          <p className="text-sm text-gray-600">Access confirmed within 1-3 business days</p>
+                          <p className="font-medium text-gray-900">Zero Risk Test</p>
+                          <p className="text-sm text-gray-600">No credit card, no obligation, one free assessment</p>
                         </div>
                       </div>
                     </div>
@@ -354,7 +354,7 @@ export default function TrialRequest() {
                           size="lg"
                           disabled={mutation.isPending}
                         >
-                          {mutation.isPending ? "Submitting..." : "Request Access"}
+                          {mutation.isPending ? "Submitting..." : "Request Free Assessment"}
                         </Button>
 
                         {mutation.error && (
