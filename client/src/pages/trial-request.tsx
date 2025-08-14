@@ -166,9 +166,70 @@ export default function TrialRequest() {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
                   Find Out Which Prospects Are Actually Ready to Sell
                 </h1>
-                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8">
                   Get a complete readiness assessment delivered the same day your prospect completes it. Try it free with one of your current prospects.
                 </p>
+                
+                {/* Readiness Assessment Preview */}
+                <div className="max-w-sm mx-auto">
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-4">
+                    {/* Document Header */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div>
+                        <h3 className="text-sm font-semibold text-gray-900">Prospect Readiness Report</h3>
+                      </div>
+                      <div className="text-xs text-white bg-primary px-2 py-1 rounded">
+                        Same Day
+                      </div>
+                    </div>
+
+                    {/* Readiness Score */}
+                    <div className="border border-gray-300 rounded-lg p-3 mb-3">
+                      <div className="text-xs font-semibold text-gray-700 mb-2 bg-gray-100 px-2 py-1 rounded">
+                        READINESS CLASSIFICATION
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="text-lg font-bold text-green-600">GO</div>
+                        <div className="text-xs text-gray-600">Ready to Proceed</div>
+                      </div>
+                    </div>
+
+                    {/* Key Factors */}
+                    <div className="border border-gray-300 rounded-lg p-3 mb-3">
+                      <div className="text-xs font-semibold text-gray-700 mb-3 bg-gray-100 px-2 py-1 rounded">
+                        CRITICAL FACTORS
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between">
+                          <div className="text-xs text-gray-600">Financial Quality</div>
+                          <div className="w-12 h-1 bg-gray-200 rounded-full">
+                            <div className="h-full bg-green-500 rounded-full" style={{width: "90%"}}></div>
+                          </div>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <div className="text-xs text-gray-600">Market Position</div>
+                          <div className="w-12 h-1 bg-gray-200 rounded-full">
+                            <div className="h-full bg-blue-500 rounded-full" style={{width: "75%"}}></div>
+                          </div>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <div className="text-xs text-gray-600">Exit Readiness</div>
+                          <div className="w-12 h-1 bg-gray-200 rounded-full">
+                            <div className="h-full bg-yellow-500 rounded-full" style={{width: "65%"}}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Recommendation */}
+                    <div className="text-center">
+                      <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-medium">
+                        <Target className="w-3 h-3" />
+                        Worth Pursuing Now
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
