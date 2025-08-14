@@ -2,15 +2,21 @@ import {
   users,
   demoRequests,
   trialRequests,
+  blogPosts,
+  blogViews,
   type User,
   type InsertUser,
   type DemoRequest,
   type InsertDemoRequest,
   type TrialRequest,
   type InsertTrialRequest,
+  type BlogPost,
+  type InsertBlogPost,
+  type BlogView,
+  type InsertBlogView,
 } from "@shared/schema";
 import { db } from "./db";
-import { eq } from "drizzle-orm";
+import { eq, desc, sql } from "drizzle-orm";
 
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
@@ -22,6 +28,15 @@ export interface IStorage {
   createTrialRequest(request: InsertTrialRequest): Promise<TrialRequest>;
   getTrialRequests(): Promise<TrialRequest[]>;
   checkDuplicateTrialRequest(emailDomain: string, days: number): Promise<TrialRequest | undefined>;
+  
+  // Blog functionality
+  getAllBlogPosts(): Promise<BlogPost[]>;
+  getLatestBlogPost(): Promise<BlogPost | undefined>;
+  getTopBlogPostsByViews(limit: number): Promise<BlogPost[]>;
+  getBlogPostBySlug(slug: string): Promise<BlogPost | undefined>;
+  createBlogPost(post: InsertBlogPost): Promise<BlogPost>;
+  incrementBlogPostViews(slug: string): Promise<void>;
+  recordBlogView(view: InsertBlogView): Promise<BlogView>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -116,6 +131,70 @@ export class DatabaseStorage implements IStorage {
       .limit(1);
     
     return existing || undefined;
+  }
+
+  // Blog functionality
+  async getAllBlogPosts(): Promise<BlogPost[]> {
+    const posts = await db
+      .select()
+      .from(blogPosts)
+      .where(eq(blogPosts.published, true))
+      .orderBy(desc(blogPosts.createdAt));
+    return posts;
+  }
+
+  async getLatestBlogPost(): Promise<BlogPost | undefined> {
+    const [latest] = await db
+      .select()
+      .from(blogPosts)
+      .where(eq(blogPosts.published, true))
+      .orderBy(desc(blogPosts.createdAt))
+      .limit(1);
+    return latest || undefined;
+  }
+
+  async getTopBlogPostsByViews(limit: number): Promise<BlogPost[]> {
+    const posts = await db
+      .select()
+      .from(blogPosts)
+      .where(eq(blogPosts.published, true))
+      .orderBy(desc(blogPosts.viewCount))
+      .limit(limit);
+    return posts;
+  }
+
+  async getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
+    const [post] = await db
+      .select()
+      .from(blogPosts)
+      .where(eq(blogPosts.slug, slug));
+    return post || undefined;
+  }
+
+  async createBlogPost(insertPost: InsertBlogPost): Promise<BlogPost> {
+    const [post] = await db
+      .insert(blogPosts)
+      .values(insertPost)
+      .returning();
+    return post;
+  }
+
+  async incrementBlogPostViews(slug: string): Promise<void> {
+    await db
+      .update(blogPosts)
+      .set({ 
+        viewCount: sql`${blogPosts.viewCount} + 1`,
+        updatedAt: new Date()
+      })
+      .where(eq(blogPosts.slug, slug));
+  }
+
+  async recordBlogView(insertView: InsertBlogView): Promise<BlogView> {
+    const [view] = await db
+      .insert(blogViews)
+      .values(insertView)
+      .returning();
+    return view;
   }
 }
 
