@@ -321,7 +321,7 @@ export default function BlogPost() {
                         Test With One Prospect →
                       </Button>
                     </a>
-                    <p className="text-white text-sm mt-3 italic font-medium">For M&A Firms</p>
+                    <p className="text-white text-sm mt-1.5 font-medium">For M&A Firms</p>
                   </div>
                   
                   {/* Business Owners CTA */}
@@ -331,7 +331,7 @@ export default function BlogPost() {
                         Check Your Readiness →
                       </Button>
                     </a>
-                    <p className="text-white text-sm mt-3 italic font-medium">For Business Owners</p>
+                    <p className="text-white text-sm mt-1.5 font-medium">For Business Owners</p>
                   </div>
                 </div>
               </div>
