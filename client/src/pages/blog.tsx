@@ -240,9 +240,9 @@ export default function Blog() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="text-center mb-12">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                  Additional Resources
+                  Additional Articles
                 </h3>
-                <p className="text-gray-600">More insights coming soon to help you master the exit process</p>
+                <p className="text-gray-600">Take a look at our other articles about exit planning, valuations, sale strategies, timing, and more.</p>
               </div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
