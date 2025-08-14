@@ -184,7 +184,11 @@ export default function BlogPost() {
     ogTitle: post ? post.title : "Article Not Found",
     ogDescription: post ? post.excerpt : "Article not found",
     ogType: "article",
-    ogImage: post ? handshakeImage : undefined
+    ogImage: post ? handshakeImage : undefined,
+    ogUrl: post ? `https://exitclarity.io/blog/${post.slug}` : undefined,
+    articleAuthor: post ? post.author : undefined,
+    articlePublishedTime: post ? new Date(post.publishedDate).toISOString() : undefined,
+    articleSection: post ? post.category : undefined
   });
 
   if (!post) {

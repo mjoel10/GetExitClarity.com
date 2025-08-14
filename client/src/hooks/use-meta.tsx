@@ -8,6 +8,9 @@ interface MetaProps {
   ogType?: string;
   ogUrl?: string;
   ogImage?: string;
+  articleAuthor?: string;
+  articlePublishedTime?: string;
+  articleSection?: string;
 }
 
 export function useMeta({
@@ -17,7 +20,10 @@ export function useMeta({
   ogDescription,
   ogType = 'website',
   ogUrl,
-  ogImage
+  ogImage,
+  articleAuthor,
+  articlePublishedTime,
+  articleSection
 }: MetaProps) {
   useEffect(() => {
     if (title) {
@@ -59,5 +65,17 @@ export function useMeta({
     if (ogImage) {
       updateMeta('meta[property="og:image"]', ogImage);
     }
-  }, [title, description, ogTitle, ogDescription, ogType, ogUrl, ogImage]);
+
+    if (articleAuthor) {
+      updateMeta('meta[property="article:author"]', articleAuthor);
+    }
+
+    if (articlePublishedTime) {
+      updateMeta('meta[property="article:published_time"]', articlePublishedTime);
+    }
+
+    if (articleSection) {
+      updateMeta('meta[property="article:section"]', articleSection);
+    }
+  }, [title, description, ogTitle, ogDescription, ogType, ogUrl, ogImage, articleAuthor, articlePublishedTime, articleSection]);
 }
