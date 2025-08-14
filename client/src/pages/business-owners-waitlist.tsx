@@ -512,7 +512,7 @@ export default function BusinessOwnersWaitlist() {
                 Experience the Professional Platform Trusted by M&A Firms
               </h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Get the same insights M&A professionals use to evaluate businesses before you go to market
+                Get the same insights M&A professionals use to evaluate businesses before you go to market.
               </p>
               <Button 
                 onClick={() => {
