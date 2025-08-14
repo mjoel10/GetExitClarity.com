@@ -176,14 +176,14 @@ export default function BusinessOwnersWaitlist() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-primary/5 via-blue-50 to-white flex items-center justify-center p-4">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-xl border border-gray-100">
-            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-10 h-10 text-green-600" />
+          <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-12 shadow-xl border border-gray-100">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-green-600" />
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               You're In! Welcome to Early Access
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed">
               Thanks for joining our exclusive waitlist! You'll be among the first to access professional exit analysis when we launch. We'll notify you with early access details and your 60% launch discount.
             </p>
             
@@ -194,25 +194,25 @@ export default function BusinessOwnersWaitlist() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <div className="flex flex-col gap-3 sm:gap-4 justify-center mb-6">
               <Button 
                 onClick={() => window.location.href = '/'}
                 variant="hero"
                 size="lg"
-                className="group"
+                className="group w-full sm:w-auto px-6 py-3"
               >
                 Explore ExitClarity Platform
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
               </Button>
               
               <Button 
                 onClick={() => window.location.href = '/blog'}
                 variant="professional"
                 size="lg"
-                className="group"
+                className="group w-full sm:w-auto px-6 py-3"
               >
                 Read Expert Insights
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
 
@@ -258,7 +258,7 @@ export default function BusinessOwnersWaitlist() {
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-8 lg:mb-0">
+              <div className="flex flex-col justify-center lg:justify-start gap-3 sm:gap-4 mb-8 lg:mb-0">
                 <Button 
                   onClick={() => {
                     const waitlistSection = document.getElementById('waitlist-form');
@@ -266,7 +266,7 @@ export default function BusinessOwnersWaitlist() {
                   }}
                   variant="hero"
                   size="xl"
-                  className="group"
+                  className="group w-full sm:w-auto px-6 py-4 text-base sm:text-lg"
                 >
                   <UserPlus className="mr-2 h-5 w-5" />
                   Join Early Access Waitlist
@@ -277,7 +277,7 @@ export default function BusinessOwnersWaitlist() {
                   onClick={() => setIsReportModalOpen(true)}
                   variant="professional"
                   size="xl"
-                  className="group"
+                  className="group w-full sm:w-auto px-6 py-4 text-base sm:text-lg"
                 >
                   <FileText className="mr-2 h-5 w-5" />
                   Download Sample Report
@@ -288,26 +288,26 @@ export default function BusinessOwnersWaitlist() {
 
             {/* Right Visual - Tablet Browser Interface */}
             <div className="flex justify-center lg:justify-end lg:mt-32">
-              <div className="max-w-lg w-full">
+              <div className="max-w-sm sm:max-w-md lg:max-w-lg w-full px-4 sm:px-0">
                 {/* Tablet Container */}
-                <div className="transform">
+                <div className="transform scale-90 sm:scale-100 origin-center">
                   {/* Tablet Frame */}
-                  <div className="bg-gray-800 rounded-3xl p-2 shadow-2xl">
+                  <div className="bg-gray-800 rounded-2xl sm:rounded-3xl p-1.5 sm:p-2 shadow-2xl">
                     {/* Browser Chrome */}
-                    <div className="bg-white rounded-2xl overflow-hidden">
+                    <div className="bg-white rounded-xl sm:rounded-2xl overflow-hidden">
                       {/* Browser Header - Minimal */}
-                      <div className="bg-white px-4 py-2.5">
-                        <div className="flex items-center gap-3">
-                          <div className="flex gap-1.5">
-                            <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                            <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                      <div className="bg-white px-3 sm:px-4 py-2 sm:py-2.5">
+                        <div className="flex items-center gap-2 sm:gap-3">
+                          <div className="flex gap-1 sm:gap-1.5">
+                            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-red-400 rounded-full"></div>
+                            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-yellow-400 rounded-full"></div>
+                            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-400 rounded-full"></div>
                           </div>
                         </div>
                       </div>
 
                       {/* App Interface */}
-                      <div className="h-80">
+                      <div className="h-64 sm:h-72 lg:h-80">
                         {/* App Header */}
                         <div className="bg-gray-900 text-white px-4 py-2 flex items-center">
                           <div className="flex items-center gap-2">
@@ -551,7 +551,7 @@ export default function BusinessOwnersWaitlist() {
                 }}
                 variant="hero"
                 size="xl"
-                className="group"
+                className="group w-full sm:w-auto px-6 py-4"
               >
                 <UserPlus className="mr-2 h-5 w-5" />
                 Secure My Early Access Spot
@@ -645,7 +645,7 @@ export default function BusinessOwnersWaitlist() {
                 }}
                 variant="hero"
                 size="xl"
-                className="group"
+                className="group w-full sm:w-auto px-6 py-4"
               >
                 <UserPlus className="mr-2 h-5 w-5" />
                 Secure My Early Access Spot
@@ -709,7 +709,7 @@ export default function BusinessOwnersWaitlist() {
                 </div>
 
                 {/* Assessment Factors Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                   {[
                     { title: "Business Overview", status: "completed", icon: <Building className="w-6 h-6" /> },
                     { title: "Exit Goals & Timeline", status: "completed", icon: <Calendar className="w-6 h-6" /> },
@@ -725,7 +725,7 @@ export default function BusinessOwnersWaitlist() {
                   ].map((factor, index) => (
                     <div
                       key={index}
-                      className={`p-4 rounded-xl border-2 transition-all duration-300 ${
+                      className={`p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 transition-all duration-300 ${
                         factor.status === 'completed' 
                           ? 'bg-green-50 border-green-200' 
                           : factor.status === 'active'
@@ -733,23 +733,25 @@ export default function BusinessOwnersWaitlist() {
                           : 'bg-gray-50 border-gray-200'
                       }`}
                     >
-                      <div className="flex items-center gap-3">
-                        <div className={`${
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <div className={`flex-shrink-0 ${
                           factor.status === 'completed' ? 'text-green-600' :
                           factor.status === 'active' ? 'text-blue-600' : 'text-gray-400'
                         } ${factor.status === 'active' ? 'animate-pulse' : ''}`}>
-                          {factor.icon}
+                          <div className="w-5 h-5 sm:w-6 sm:h-6">
+                            {factor.icon}
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <h4 className="font-semibold text-gray-900 text-sm">{factor.title}</h4>
-                          <div className="flex items-center gap-2 mt-1">
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-semibold text-gray-900 text-xs sm:text-sm leading-tight">{factor.title}</h4>
+                          <div className="flex items-center gap-1.5 sm:gap-2 mt-1">
                             {factor.status === 'completed' && (
-                              <CheckCircle className="w-4 h-4 text-green-600" />
+                              <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
                             )}
                             {factor.status === 'active' && (
-                              <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                              <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin flex-shrink-0"></div>
                             )}
-                            <span className={`text-xs font-medium ${
+                            <span className={`text-xs font-medium truncate ${
                               factor.status === 'completed' ? 'text-green-600' :
                               factor.status === 'active' ? 'text-blue-600' : 'text-gray-500'
                             }`}>
@@ -777,7 +779,7 @@ export default function BusinessOwnersWaitlist() {
                 waitlistSection?.scrollIntoView({ behavior: 'smooth' });
               }}
               size="xl"
-              className="bg-white hover:bg-gray-100 text-gray-900 font-semibold group"
+              className="bg-white hover:bg-gray-100 text-gray-900 font-semibold group w-full sm:w-auto px-6 py-4"
             >
               <UserPlus className="mr-2 h-5 w-5" />
               Join Early Access Waitlist
@@ -801,10 +803,10 @@ export default function BusinessOwnersWaitlist() {
               </p>
             </div>
 
-            <Card className="p-8 shadow-xl border border-gray-200">
+            <Card className="p-6 sm:p-8 shadow-xl border border-gray-200">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Personal Information */}
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <Label htmlFor="firstName">First Name *</Label>
                     <Input
@@ -830,7 +832,7 @@ export default function BusinessOwnersWaitlist() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <Label htmlFor="email">Business Email *</Label>
                     <Input
@@ -880,7 +882,7 @@ export default function BusinessOwnersWaitlist() {
                   )}
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <Label htmlFor="annualRevenue">Annual Revenue *</Label>
                     <Select onValueChange={(value) => setValue("annualRevenue", value)}>
@@ -957,19 +959,20 @@ export default function BusinessOwnersWaitlist() {
                   <Button 
                     type="submit" 
                     size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-4 mb-3"
+                    className="w-full bg-primary hover:bg-primary/90 text-white text-base sm:text-lg py-3 sm:py-4 mb-3"
                     disabled={mutation.isPending}
                   >
                     {mutation.isPending ? (
                       "Securing Your Spot..."
                     ) : (
                       <>
-                        Secure My Early Access Spot
-                        <ArrowRight className="ml-2 h-5 w-5" />
+                        <span className="sm:hidden">Secure Early Access</span>
+                        <span className="hidden sm:inline">Secure My Early Access Spot</span>
+                        <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                       </>
                     )}
                   </Button>
-                  <p className="text-sm text-gray-600 font-medium">
+                  <p className="text-xs sm:text-sm text-gray-600 font-medium">
                     Get notified first + save 60% off launch pricing
                   </p>
                 </div>
