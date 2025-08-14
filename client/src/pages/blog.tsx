@@ -247,7 +247,7 @@ export default function Blog() {
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 {upcomingPosts.map((post, index) => (
-                  <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                  <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col h-full">
                     <div className="h-48 relative overflow-hidden">
                       <img 
                         src={post.thumbnail} 
@@ -256,7 +256,7 @@ export default function Blog() {
                       />
                       <div className="absolute inset-0 bg-black/20"></div>
                     </div>
-                    <div className="p-6">
+                    <div className="p-6 flex flex-col h-full">
                       <div className="flex items-center justify-between mb-3">
                         <Badge 
                           variant="secondary" 
@@ -277,10 +277,10 @@ export default function Blog() {
                         <Calendar className="w-4 h-4" />
                         <span>Coming Soon</span>
                       </div>
-                      <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
                         {post.excerpt}
                       </p>
-                      <div className="flex items-center text-gray-400 text-sm cursor-default">
+                      <div className="flex items-center text-gray-400 text-sm cursor-default mt-auto">
                         <span>Coming Soon</span>
                         <ArrowRight className="ml-1 w-4 h-4" />
                       </div>
