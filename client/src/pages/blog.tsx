@@ -41,14 +41,16 @@ const fallbackUpcomingPosts = [
 
 export default function Blog() {
   // Fetch latest blog post for featured section  
-  const { data: latestPost, isLoading: latestLoading } = useQuery<BlogPost>({
+  const { data: latestPostResponse, isLoading: latestLoading } = useQuery({
     queryKey: ['/api/blog-posts/latest'],
   });
+  const latestPost = (latestPostResponse as any)?.data as BlogPost | undefined;
 
   // Fetch top posts by views for additional articles
-  const { data: topPosts, isLoading: topLoading } = useQuery<BlogPost[]>({
-    queryKey: ['/api/blog-posts/top-views', { limit: 3 }],
+  const { data: topPostsResponse, isLoading: topLoading } = useQuery({
+    queryKey: ['/api/blog-posts/top-views?limit=3'],
   });
+  const topPosts = (topPostsResponse as any)?.data as BlogPost[] | undefined;
 
   useMeta({
     title: "ExitClarity Blog - Strategic Guidance for Business Owners and M&A Advisors",

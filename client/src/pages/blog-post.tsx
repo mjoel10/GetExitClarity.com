@@ -17,10 +17,11 @@ export default function BlogPost() {
   const { slug } = useParams();
 
   // Fetch blog post data
-  const { data: post, isLoading, error } = useQuery<BlogPost>({
+  const { data: postResponse, isLoading, error } = useQuery({
     queryKey: ['/api/blog-posts', slug],
     enabled: !!slug,
   });
+  const post = (postResponse as any)?.data as BlogPost | undefined;
 
   // View tracking mutation
   const viewMutation = useMutation({
