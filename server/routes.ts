@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertDemoRequestSchema, insertTrialRequestSchema, insertBlogPostSchema, insertBlogViewSchema } from "@shared/schema";
+import { insertDemoRequestSchema, insertTrialRequestSchema } from "@shared/schema";
 import { z } from "zod";
 import { sendNotificationEmail, sendTrialRequestNotification, sendTrialRequestAutoReply, sendSampleReportAutoReply, sendWaitlistConfirmation } from "./email";
 
@@ -134,91 +134,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const requests = await storage.getTrialRequests();
       res.json({ success: true, data: requests });
-    } catch (error) {
-      res.status(500).json({ success: false, error: "Internal server error" });
-    }
-  });
-
-  // Blog API routes
-  
-  // Get all blog posts (for blog listing)
-  app.get("/api/blog-posts", async (req, res) => {
-    try {
-      const posts = await storage.getAllBlogPosts();
-      res.json({ success: true, data: posts });
-    } catch (error) {
-      res.status(500).json({ success: false, error: "Internal server error" });
-    }
-  });
-
-  // Get latest blog post (for featured section)
-  app.get("/api/blog-posts/latest", async (req, res) => {
-    try {
-      const post = await storage.getLatestBlogPost();
-      res.json({ success: true, data: post });
-    } catch (error) {
-      res.status(500).json({ success: false, error: "Internal server error" });
-    }
-  });
-
-  // Get top blog posts by views (for popular section)
-  app.get("/api/blog-posts/top-views", async (req, res) => {
-    try {
-      const limit = parseInt(req.query.limit as string) || 3;
-      const posts = await storage.getTopBlogPostsByViews(limit);
-      res.json({ success: true, data: posts });
-    } catch (error) {
-      res.status(500).json({ success: false, error: "Internal server error" });
-    }
-  });
-
-  // Get single blog post by slug
-  app.get("/api/blog-posts/:slug", async (req, res) => {
-    try {
-      const post = await storage.getBlogPostBySlug(req.params.slug);
-      if (!post) {
-        return res.status(404).json({ success: false, error: "Blog post not found" });
-      }
-      res.json({ success: true, data: post });
-    } catch (error) {
-      res.status(500).json({ success: false, error: "Internal server error" });
-    }
-  });
-
-  // Create new blog post
-  app.post("/api/blog-posts", async (req, res) => {
-    try {
-      const validatedData = insertBlogPostSchema.parse(req.body);
-      const post = await storage.createBlogPost(validatedData);
-      res.json({ success: true, data: post });
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        res.status(400).json({ success: false, error: "Invalid request data", details: error.errors });
-      } else {
-        res.status(500).json({ success: false, error: "Internal server error" });
-      }
-    }
-  });
-
-  // Track blog post view
-  app.post("/api/blog-posts/:slug/view", async (req, res) => {
-    try {
-      const { slug } = req.params;
-      const { userAgent, referrer } = req.body;
-      const ipAddress = req.ip || req.socket.remoteAddress || 'unknown';
-
-      // Record the view
-      await storage.recordBlogView({
-        postSlug: slug,
-        userAgent,
-        ipAddress,
-        referrer
-      });
-
-      // Increment view count
-      await storage.incrementBlogPostViews(slug);
-
-      res.json({ success: true });
     } catch (error) {
       res.status(500).json({ success: false, error: "Internal server error" });
     }

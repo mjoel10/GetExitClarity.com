@@ -1,4 +1,4 @@
-import { pgTable, text, serial, timestamp, boolean, uuid, integer } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, timestamp, boolean, uuid } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -42,32 +42,6 @@ export const trialRequests = pgTable("trial_requests", {
   status: text("status").notNull().default("new"), // 'new', 'duplicate', 'processed'
 });
 
-export const blogPosts = pgTable("blog_posts", {
-  id: serial("id").primaryKey(),
-  slug: text("slug").notNull().unique(),
-  title: text("title").notNull(),
-  excerpt: text("excerpt").notNull(),
-  content: text("content").notNull(),
-  category: text("category").notNull(),
-  author: text("author").notNull(),
-  readTime: text("read_time").notNull(),
-  thumbnail: text("thumbnail").notNull(),
-  featured: boolean("featured").default(false),
-  published: boolean("published").default(true),
-  viewCount: integer("view_count").default(0).notNull(),
-  createdAt: timestamp("created_at").defaultNow().notNull(),
-  updatedAt: timestamp("updated_at").defaultNow().notNull(),
-});
-
-export const blogViews = pgTable("blog_views", {
-  id: serial("id").primaryKey(),
-  postSlug: text("post_slug").notNull(),
-  userAgent: text("user_agent"),
-  ipAddress: text("ip_address"),
-  referrer: text("referrer"),
-  viewedAt: timestamp("viewed_at").defaultNow().notNull(),
-});
-
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
@@ -91,25 +65,9 @@ export const insertTrialRequestSchema = createInsertSchema(trialRequests).omit({
   prospectType: true,
 });
 
-export const insertBlogPostSchema = createInsertSchema(blogPosts).omit({
-  id: true,
-  viewCount: true,
-  createdAt: true,
-  updatedAt: true,
-});
-
-export const insertBlogViewSchema = createInsertSchema(blogViews).omit({
-  id: true,
-  viewedAt: true,
-});
-
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type DemoRequest = typeof demoRequests.$inferSelect;
 export type InsertDemoRequest = z.infer<typeof insertDemoRequestSchema>;
 export type TrialRequest = typeof trialRequests.$inferSelect;
 export type InsertTrialRequest = z.infer<typeof insertTrialRequestSchema>;
-export type BlogPost = typeof blogPosts.$inferSelect;
-export type InsertBlogPost = z.infer<typeof insertBlogPostSchema>;
-export type BlogView = typeof blogViews.$inferSelect;
-export type InsertBlogView = z.infer<typeof insertBlogViewSchema>;

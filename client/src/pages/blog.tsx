@@ -7,13 +7,26 @@ import { Calendar, Clock, User, ArrowRight, TrendingUp, Target, Users, BookOpen,
 import { Link } from "wouter";
 import { useMeta } from "@/hooks/use-meta";
 
-// Import thumbnail images for fallback
+// Import thumbnail images
+import thumbnail1 from "@assets/AdobeStock_454297497_1754937961456.jpeg";
 import thumbnail2 from "@assets/AdobeStock_629687249_1754937961457.jpeg";
 import thumbnail3 from "@assets/AdobeStock_724350667_1754937961457.jpeg";
 import thumbnail4 from "@assets/AdobeStock_864896666_1754937961457.jpeg";
 
-// Fallback upcoming posts (will be replaced when more posts are added to database)
-const fallbackUpcomingPosts = [
+// Blog post data
+const featuredPost = {
+  title: "The Ultimate Exit: Why 87% of Business Sales Fail (And How to Be in the 13% That Don't)",
+  slug: "ultimate-exit-why-87-percent-fail",
+  category: "Exit Planning",
+  author: "ExitClarity Team",
+  publishedDate: "August 11, 2025",
+  readTime: "5 min",
+  excerpt: "The difference between a successful exit and a failed one isn't luck. It's preparation. And most owners aren't prepared at all.",
+  featured: true,
+  thumbnail: thumbnail1
+};
+
+const upcomingPosts = [
   {
     title: "The Ultimate Exit Plan: Strategies to Assess, Enhance, and Maximize the Value of Your Company",
     category: "Exit Planning",
@@ -38,18 +51,6 @@ const fallbackUpcomingPosts = [
 ];
 
 export default function Blog() {
-  // Fetch latest blog post for featured section  
-  const { data: latestPostResponse, isLoading: latestLoading } = useQuery({
-    queryKey: ['/api/blog-posts/latest'],
-  });
-  const latestPost = (latestPostResponse as any)?.data as BlogPost | undefined;
-
-  // Fetch top posts by views for additional articles
-  const { data: topPostsResponse, isLoading: topLoading } = useQuery({
-    queryKey: ['/api/blog-posts/top-views?limit=3'],
-  });
-  const topPosts = (topPostsResponse as any)?.data as BlogPost[] | undefined;
-
   useMeta({
     title: "ExitClarity Blog - Strategic Guidance for Business Owners and M&A Advisors",
     description: "Expert insights on exit planning, M&A trends, and business valuation strategies for business owners and M&A advisors.",
@@ -181,71 +182,55 @@ export default function Blog() {
           <section className="py-12 sm:py-16 lg:py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="max-w-4xl mx-auto">
-                {latestLoading ? (
-                  <div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden animate-pulse">
-                    <div className="h-64 sm:h-80 bg-gray-200"></div>
+                <Link href={`/blog/${featuredPost.slug}`}>
+                  <div className="bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden relative cursor-pointer group">
+                    {/* Featured Badge */}
+                    <div className="absolute top-4 right-4 z-10">
+                      <Badge className="bg-primary text-white">Featured</Badge>
+                    </div>
+                    
+                    {/* Hero Image */}
+                    <div className="h-64 sm:h-80 relative overflow-hidden">
+                      <img 
+                        src={featuredPost.thumbnail} 
+                        alt={featuredPost.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
+                    </div>
+                    
                     <div className="p-6 sm:p-8">
-                      <div className="h-8 bg-gray-200 rounded mb-4"></div>
-                      <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                      <div className="h-4 bg-gray-200 rounded mb-6 w-3/4"></div>
-                      <div className="h-4 bg-gray-200 rounded w-1/4"></div>
-                    </div>
-                  </div>
-                ) : latestPost ? (
-                  <Link href={`/blog/${latestPost.slug}`}>
-                    <div className="bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden relative cursor-pointer group">
-                      {/* Featured Badge */}
-                      <div className="absolute top-4 right-4 z-10">
-                        <Badge className="bg-primary text-white">Featured</Badge>
-                      </div>
+                      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-primary transition-colors">
+                        {featuredPost.title}
+                      </h2>
                       
-                      {/* Hero Image */}
-                      <div className="h-64 sm:h-80 relative overflow-hidden">
-                        <img 
-                          src={latestPost.thumbnail} 
-                          alt={latestPost.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-                      </div>
-                      
-                      <div className="p-6 sm:p-8">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-primary transition-colors">
-                          {latestPost.title}
-                        </h2>
-                        
-                        {/* Meta Info */}
-                        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
-                          <div className="flex items-center gap-1">
-                            <User className="w-4 h-4" />
-                            <span>{latestPost.author}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Calendar className="w-4 h-4" />
-                            <span>{new Date(latestPost.publishedAt || latestPost.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
-                            <span>{latestPost.readTime} read</span>
-                          </div>
+                      {/* Meta Info */}
+                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
+                        <div className="flex items-center gap-1">
+                          <User className="w-4 h-4" />
+                          <span>{featuredPost.author}</span>
                         </div>
-                        
-                        <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                          {latestPost.excerpt}
-                        </p>
-                        
-                        <div className="flex items-center text-primary font-medium group-hover:text-primary/80 transition-colors">
-                          Read Full Article
-                          <ArrowRight className="ml-2 w-4 h-4" />
+                        <div className="flex items-center gap-1">
+                          <Calendar className="w-4 h-4" />
+                          <span>{featuredPost.publishedDate}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{featuredPost.readTime} read</span>
                         </div>
                       </div>
+                      
+                      <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                        {featuredPost.excerpt}
+                      </p>
+                      
+                      <div className="flex items-center text-primary font-medium group-hover:text-primary/80 transition-colors">
+                        Read Full Article
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </div>
                     </div>
-                  </Link>
-                ) : (
-                  <div className="text-center py-12">
-                    <p className="text-gray-500">No featured article available at this time.</p>
                   </div>
-                )}
+                </Link>
               </div>
             </div>
           </section>
@@ -261,114 +246,47 @@ export default function Blog() {
               </div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                {topLoading ? (
-                  // Loading skeleton for 3 articles
-                  [...Array(3)].map((_, index) => (
-                    <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden animate-pulse">
-                      <div className="h-48 bg-gray-200"></div>
-                      <div className="p-6">
-                        <div className="h-6 bg-gray-200 rounded mb-3"></div>
-                        <div className="h-5 bg-gray-200 rounded mb-2"></div>
-                        <div className="h-4 bg-gray-200 rounded mb-4 w-3/4"></div>
-                        <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+                {upcomingPosts.map((post, index) => (
+                  <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div className="h-48 relative overflow-hidden">
+                      <img 
+                        src={post.thumbnail} 
+                        alt={post.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <Badge 
+                          variant="secondary" 
+                          className={
+                            post.category === "Exit Planning" ? "bg-red-100 text-red-700" :
+                            post.category === "Valuations" ? "bg-green-100 text-green-700" :
+                            "bg-blue-100 text-blue-700"
+                          }
+                        >
+                          {post.category}
+                        </Badge>
+                        <Badge variant="outline" className="text-gray-500">Coming Soon</Badge>
+                      </div>
+                      <h4 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        {post.title}
+                      </h4>
+                      <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                        <Calendar className="w-4 h-4" />
+                        <span>Coming Soon</span>
+                      </div>
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center text-gray-400 text-sm cursor-default">
+                        <span>Coming Soon</span>
+                        <ArrowRight className="ml-1 w-4 h-4" />
                       </div>
                     </div>
-                  ))
-                ) : topPosts && topPosts.length > 0 ? (
-                  topPosts.map((post, index) => (
-                    <Link key={post.id} href={`/blog/${post.slug}`}>
-                      <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden cursor-pointer group">
-                        <div className="h-48 relative overflow-hidden">
-                          <img 
-                            src={post.thumbnail} 
-                            alt={post.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          />
-                          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-                        </div>
-                        <div className="p-6">
-                          <div className="flex items-center justify-between mb-3">
-                            <Badge 
-                              variant="secondary" 
-                              className={
-                                post.category === "Exit Planning" ? "bg-red-100 text-red-700" :
-                                post.category === "Valuations" ? "bg-green-100 text-green-700" :
-                                post.category === "M&A Trends" ? "bg-purple-100 text-purple-700" :
-                                "bg-blue-100 text-blue-700"
-                              }
-                            >
-                              {post.category}
-                            </Badge>
-                            {post.viewCount > 0 && (
-                              <Badge variant="outline" className="text-gray-500">
-                                {post.viewCount} views
-                              </Badge>
-                            )}
-                          </div>
-                          <h4 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-primary transition-colors">
-                            {post.title}
-                          </h4>
-                          <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
-                            <Calendar className="w-4 h-4" />
-                            <span>{new Date(post.publishedAt || post.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                            <Clock className="w-4 h-4 ml-2" />
-                            <span>{post.readTime} read</span>
-                          </div>
-                          <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                            {post.excerpt}
-                          </p>
-                          <div className="flex items-center text-primary font-medium group-hover:text-primary/80 transition-colors">
-                            Read Article
-                            <ArrowRight className="ml-1 w-4 h-4" />
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  ))
-                ) : (
-                  // Fallback to hardcoded upcoming posts if no API data available
-                  fallbackUpcomingPosts.map((post, index) => (
-                    <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                      <div className="h-48 relative overflow-hidden">
-                        <img 
-                          src={post.thumbnail} 
-                          alt={post.title}
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black/20"></div>
-                      </div>
-                      <div className="p-6">
-                        <div className="flex items-center justify-between mb-3">
-                          <Badge 
-                            variant="secondary" 
-                            className={
-                              post.category === "Exit Planning" ? "bg-red-100 text-red-700" :
-                              post.category === "Valuations" ? "bg-green-100 text-green-700" :
-                              "bg-blue-100 text-blue-700"
-                            }
-                          >
-                            {post.category}
-                          </Badge>
-                          <Badge variant="outline" className="text-gray-500">Coming Soon</Badge>
-                        </div>
-                        <h4 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
-                          {post.title}
-                        </h4>
-                        <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
-                          <Calendar className="w-4 h-4" />
-                          <span>Coming Soon</span>
-                        </div>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                          {post.excerpt}
-                        </p>
-                        <div className="flex items-center text-gray-400 text-sm cursor-default">
-                          <span>Coming Soon</span>
-                          <ArrowRight className="ml-1 w-4 h-4" />
-                        </div>
-                      </div>
-                    </div>
-                  ))
-                )}
+                  </div>
+                ))}
               </div>
             </div>
           </section>
