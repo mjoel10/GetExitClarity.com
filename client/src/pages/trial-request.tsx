@@ -172,7 +172,7 @@ export default function TrialRequest() {
                     </span>
                   </h1>
                   <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                    Get a complete readiness assessment for one prospect - at no cost. See exactly where they stand and how to move them forward.
+                    Get a complete readiness assessment for one prospect at no cost. See exactly where they stand and how to move them forward.
                   </p>
                 </div>
                 
