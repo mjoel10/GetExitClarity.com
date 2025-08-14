@@ -39,10 +39,12 @@ Preferred communication style: Simple, everyday language.
   - Platform dropdown (M&A Firms, Business Owners, Sample Report)
   - Resources dropdown (Blog, Resource Center) - Blog prioritized above Resource Center
   - Separate refs for proper dropdown functionality
-- **Blog System**: Complete blog implementation with:
+- **Blog System**: Complete blog implementation with centralized data management:
   - "ExitClarity Insights" branding targeting both business owners and M&A advisors
   - Published article: "The Ultimate Exit: Why 87% of Business Sales Fail"
   - Professional article page styling with clear typography and SEO optimization
+  - Centralized blog data system in shared/blog-data.ts for unified client/server management
+  - Server-side meta tag rendering for proper social media sharing without images
   - Realistic placeholder articles with compelling titles and descriptions
   - Newsletter signup integration for lead capture
 - **Contact Forms**: Comprehensive contact form implementation with success screens, email notifications via SendGrid, and database integration for submissions. Supports multiple request types (demo, sample report, assessment, trial, waitlist).
