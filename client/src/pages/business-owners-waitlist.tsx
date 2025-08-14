@@ -175,19 +175,49 @@ export default function BusinessOwnersWaitlist() {
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-primary/5 via-blue-50 to-white flex items-center justify-center p-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-xl border border-gray-100">
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-10 h-10 text-green-600" />
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Welcome to Early Access!
+              You're In! Welcome to Early Access
             </h1>
-            <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-              You're now on the waitlist for ExitClarity's business owner platform. We'll notify you as soon as early access becomes available.
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              Thanks for joining our exclusive waitlist! You'll be among the first to access professional exit analysis when we launch. We'll notify you with early access details and your 60% launch discount.
             </p>
+            
+            <div className="bg-primary/5 rounded-xl p-6 mb-8 border border-primary/10">
+              <p className="text-lg font-semibold text-foreground mb-2">What's Next?</p>
+              <p className="text-muted-foreground">
+                While you wait, explore our insights and learn from M&A experts about maximizing your business value.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <Button 
+                onClick={() => window.location.href = '/'}
+                variant="hero"
+                size="lg"
+                className="group"
+              >
+                Explore ExitClarity Platform
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+              
+              <Button 
+                onClick={() => window.location.href = '/blog'}
+                variant="professional"
+                size="lg"
+                className="group"
+              >
+                Read Expert Insights
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
+
             <Badge className="bg-primary/10 text-primary border-primary/20 text-sm px-4 py-2">
-              Position secured in early access queue
+              Early access secured • 60% discount reserved
             </Badge>
           </div>
         </div>
