@@ -139,6 +139,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Serve the handshake image for social media previews
+  app.get("/api/og-image/blog-handshake.jpg", (req, res) => {
+    // Serve the handshake image from the assets
+    res.redirect(301, '/src/assets/AdobeStock_454297497_1754937961456.jpeg');
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
