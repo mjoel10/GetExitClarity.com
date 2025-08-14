@@ -270,7 +270,7 @@ export default function Blog() {
                         </Badge>
                         <Badge variant="outline" className="text-gray-500">Coming Soon</Badge>
                       </div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                      <h4 className="text-xl font-bold text-gray-900 mb-3 leading-tight min-h-[84px] flex items-start">
                         {post.title}
                       </h4>
                       <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
