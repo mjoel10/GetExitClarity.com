@@ -5,22 +5,22 @@ export function ProblemSection() {
     {
       icon: DollarSign,
       title: "Exit Ready Financials",
-      description: "ExitClarity pinpoints gaps in financial documentation, contracts, and revenue quality — showing owners what truly drives readiness and positioning you as the advisor who sees beyond topline numbers."
+      description: "Go beyond topline revenue. ExitClarity surfaces gaps in documentation, contracts, and quality so you walk in with facts that build instant credibility."
     },
     {
       icon: AlertTriangle,
       title: "Proactive Risk Management",
-      description: "Our platform flags transition and team risks early, helping you step in before they become deal-killers — and positioning you as the advisor who protects value, not just chases it."
+      description: "Catch key-person risks, weak systems, and process gaps before diligence derails the deal, and show owners how to fix them."
     },
     {
       icon: TrendingDown,
       title: "Realistic Valuation Guidance",
-      description: "ExitClarity benchmarks owners against realistic valuation ranges by buyer type, allowing you to reset expectations early and keep trust intact — no more surprises mid-process."
+      description: "Anchor owners to conservative, buyer-type ranges early, resetting expectations without losing trust or momentum."
     },
     {
       icon: Clock,
       title: "Confident Decision Making",
-      description: "With clear GO / FIX / WAIT guidance, ExitClarity turns owner uncertainty into actionable next steps — letting you guide sellers decisively and keep momentum moving forward."
+      description: "GO / FIX / WAIT guidance turns hesitation into clear next steps, keeping sellers engaged and you in control."
     }
   ];
 
@@ -30,11 +30,10 @@ export function ProblemSection() {
         {/* Main Problem Statement */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Most Exit Conversations Stall Because{" "}
-            <span className="text-primary">Readiness Is Unclear</span>
+            <span className="text-primary">Clarity That Turns Sellers Into Clients</span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Many owners overestimate value and underestimate complexity. ExitClarity makes the blind spots visible with structured, repeatable assessments — moving owners from "not ready" to clear roadmaps, and firms from stalled conversations to signed mandates.
+            ExitClarity shows where owners stand today, and gives them a clear path forward, so you can focus on mandates that close now while nurturing tomorrow's pipeline.
           </p>
         </div>
 
