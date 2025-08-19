@@ -14,7 +14,7 @@ export function HeroSection() {
             <div className="hero-headlines">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight text-center xl:text-left">
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Convert Who's Ready. Nurture Who's Not.
+                  Know Who's Ready. Know Who's Not.
                 </span>
               </h1>
               
