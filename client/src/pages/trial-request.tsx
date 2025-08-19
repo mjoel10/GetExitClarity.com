@@ -172,7 +172,7 @@ export default function TrialRequest() {
                     </span>
                   </h1>
                   <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                    Get a complete readiness assessment for one prospect - at no cost. See exactly where they stand and how to move them forward.
+                    Test ExitClarity on one prospect—at no cost. Get a deal-grade readiness report that shows if they're GO, FIX, or WAIT, and the roadmap to move them forward.
                   </p>
                 </div>
                 
