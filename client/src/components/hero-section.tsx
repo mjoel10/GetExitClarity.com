@@ -19,7 +19,7 @@ export function HeroSection() {
               </h1>
               
               <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed text-center xl:text-left">
-                ExitClarity gives M&A firms a 25-page readiness report on any owner in 20 minutes. You'll know if they're GO, FIX, or WAIT—before partners sink hours into the wrong deal.
+                ExitClarity gives M&A firms a 25-page readiness report on any owner in 20 minutes. You'll know if they're a GO, FIX, or WAIT—before partners sink hours into the wrong deal.
               </p>
             </div>
 
