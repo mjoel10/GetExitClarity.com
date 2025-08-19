@@ -19,7 +19,7 @@ export function HeroSection() {
               </h1>
               
               <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed text-center xl:text-left">
-                ExitClarity gives M&A firms a 25-page readiness report in 20 minutes, showing if a prospect is GO, FIX, or WAIT — and a roadmap to nurture them into future deal flow.
+                ExitClarity distills decades of buy-side and sell-side expertise into a readiness system that shows if a seller is GO, FIX, or WAIT—so your team qualifies faster and avoids wasted deals.
               </p>
             </div>
 
