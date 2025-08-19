@@ -423,7 +423,7 @@ export default function TrialRequest() {
                           size="lg"
                           disabled={mutation.isPending}
                         >
-                          {mutation.isPending ? "Submitting..." : "Request Free Assessment"}
+                          {mutation.isPending ? "Submitting..." : "Request Access"}
                         </Button>
 
                         {mutation.error && (
