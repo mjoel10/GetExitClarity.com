@@ -14,12 +14,12 @@ export function HeroSection() {
             <div className="hero-headlines">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight text-center xl:text-left">
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Stop Wasting Time on Sellers Who Aren't Ready
+                  Clarity on Every Seller — Ready Now or Ready Later
                 </span>
               </h1>
               
               <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed text-center xl:text-left">
-                ExitClarity gives M&A firms a 25-page readiness report on any owner in 20 minutes. You'll know if they're a GO, FIX, or WAIT—before partners sink hours into the wrong deal.
+                ExitClarity provides M&A firms a 25-page readiness report in just 20 minutes. Instantly see if an owner is a GO, FIX, or WAIT — and keep them engaged with a roadmap that builds trust and future pipeline.
               </p>
             </div>
 
