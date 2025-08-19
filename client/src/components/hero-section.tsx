@@ -14,12 +14,12 @@ export function HeroSection() {
             <div className="hero-headlines">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight text-center xl:text-left">
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Discover Your True Exit Value Before Buyers Do
+                  Stop Wasting Time on Sellers Who Aren't Ready
                 </span>
               </h1>
               
               <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed text-center xl:text-left">
-                ExitClarity gives your prospects transparent, trust-building insights, so they feel informed, confident, and ready to engage with you as their trusted advisor.
+                ExitClarity gives M&A firms a 25-page readiness report on any owner in 20 minutes. You'll know if they're GO, FIX, or WAIT—before partners sink hours into the wrong deal.
               </p>
             </div>
 
@@ -29,7 +29,7 @@ export function HeroSection() {
                 <Button variant="hero" size="xl" className="group" asChild>
                   <a href="/trial-request">
                     <Users className="mr-2 h-5 w-5" />
-                    Try It Out Today
+                    Run Your First Seller Report Free
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </a>
                 </Button>
@@ -37,7 +37,7 @@ export function HeroSection() {
                 <Button variant="professional" size="xl" className="group" asChild>
                   <Link href="/sample-report">
                     <FileText className="mr-2 h-5 w-5" />
-                    View Sample Report
+                    See Sample Report
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
