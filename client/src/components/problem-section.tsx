@@ -5,22 +5,22 @@ export function ProblemSection() {
     {
       icon: DollarSign,
       title: "Exit Ready Financials",
-      description: "Most owners think revenue alone makes them sale-ready. ExitClarity helps you show them the real gaps — transforming surface-level interest into genuine trust and engagement."
+      description: "ExitClarity pinpoints gaps in financial documentation, contracts, and revenue quality — showing owners what truly drives readiness and positioning you as the advisor who sees beyond topline numbers."
     },
     {
       icon: AlertTriangle,
       title: "Proactive Risk Management",
-      description: "Owners rarely see key-person risks or system weaknesses. By addressing these blind spots proactively, you position yourself as the advisor who truly has their back."
+      description: "Our platform flags transition and team risks early, helping you step in before they become deal-killers — and positioning you as the advisor who protects value, not just chases it."
     },
     {
       icon: TrendingDown,
       title: "Realistic Valuation Guidance",
-      description: "When owners overvalue their business or underestimate timelines, trust erodes. ExitClarity equips you to reset expectations early, positioning you as the voice of clarity they can believe in."
+      description: "ExitClarity benchmarks owners against realistic valuation ranges by buyer type, allowing you to reset expectations early and keep trust intact — no more surprises mid-process."
     },
     {
       icon: Clock,
       title: "Confident Decision Making",
-      description: "Owners often delay or pick the wrong partner out of anxiety and inexperience. ExitClarity lets you step in early as their trusted guide, turning uncertainty into decisive, engaged clients."
+      description: "With clear GO / FIX / WAIT guidance, ExitClarity turns owner uncertainty into actionable next steps — letting you guide sellers decisively and keep momentum moving forward."
     }
   ];
 
@@ -34,7 +34,7 @@ export function ProblemSection() {
             <span className="text-primary">Readiness Is Unclear</span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Many owners believe they can sell on their own, overestimating value and underestimating complexities. ExitClarity bridges that gap with structured, scalable insights — moving owners from uncertain to engaged, and firms from prospects to mandates.
+            Many owners overestimate value and underestimate complexity. ExitClarity makes the blind spots visible with structured, repeatable assessments — moving owners from "not ready" to clear roadmaps, and firms from stalled conversations to signed mandates.
           </p>
         </div>
 
