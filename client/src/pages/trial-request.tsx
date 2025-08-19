@@ -166,9 +166,9 @@ export default function TrialRequest() {
                 {/* Text Content */}
                 <div className="text-center lg:text-left">
                   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-                    Know Which Sellers to Pursue{" "}
+                    Stop Guessing Seller Readiness.{" "}
                     <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                      – And Which to Nurture
+                      Know in One Report.
                     </span>
                   </h1>
                   <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
