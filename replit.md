@@ -56,7 +56,7 @@ Preferred communication style: Simple, everyday language.
   - Touch-friendly button sizing and spacing
   - Proper mobile navigation with hamburger menu
 - **UI Components**: Utilizes shadcn/ui for forms (with react-hook-form + zod validation), dialogs, navigation, and data display.
-- **Visuals**: Enhanced hero section with professional, flat MacBook visual displaying assessment progress. Integration of actual ExitClarity Sample Report PDF for download after form submission.
+- **Visuals**: Enhanced hero section with professional, flat MacBook visual displaying assessment progress. Integration of actual ExitClarity Sample Report PDF for download after form submission (updated August 2025 with comprehensive WealthChannel Group case study).
 - **Security Page**: Structured content with diverse and contextually appropriate icons.
 - **Enhanced Footer**: Comprehensive 5-column footer layout with Platform, Resources, Get Started, and Contact sections. Legal links positioned on same line as copyright for professional appearance. Optimized grid layout (180px minimum columns) ensures all sections fit on desktop.
 
