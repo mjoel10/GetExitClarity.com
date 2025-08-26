@@ -224,19 +224,23 @@ The pattern is predictable: businesses that obtain licenses, certifications, or 
 
 After analyzing hundreds of transactions, clear patterns emerge in what buyers actually evaluate versus what sellers think they evaluate:
 
-**What Sellers Think Matters Most:**
-- Last year's revenue
-- Current EBITDA
-- Growth rate
-- Market share
-- Customer testimonials
+<strong>What Sellers Think Matters Most:</strong>
+<ul>
+<li>Last year's revenue</li>
+<li>Current EBITDA</li>
+<li>Growth rate</li>
+<li>Market share</li>
+<li>Customer testimonials</li>
+</ul>
 
-**What Actually Drives Premiums:**
-- Revenue predictability over 3+ years
-- EBITDA consistency through cycles
-- Growth without owner involvement
-- Defensible market position
-- Customer concentration risk
+<strong>What Actually Drives Premiums:</strong>
+<ul>
+<li>Revenue predictability over 3+ years</li>
+<li>EBITDA consistency through cycles</li>
+<li>Growth without owner involvement</li>
+<li>Defensible market position</li>
+<li>Customer concentration risk</li>
+</ul>
 
 The gap between these lists is where early planning pays off. You can't fake three-year consistency in three months. You can't eliminate customer concentration overnight. You can't build management depth in a quarter.
 
@@ -250,16 +254,20 @@ A pattern we see repeatedly: businesses that rush to market when competitors sel
 
 Here's what early planners understand that late planners don't: strategic assets multiply value, while operational improvements merely add to it.
 
-**Operational improvements are additive—they typically boost value by 10–15%:**
-- Cost reductions
-- Price increases
-- Margin improvements
+<strong>Operational improvements are additive—they typically boost value by 10–15%:</strong>
+<ul>
+<li>Cost reductions</li>
+<li>Price increases</li>
+<li>Margin improvements</li>
+</ul>
 
-**Strategic assets are multiplicative—they can increase valuation by 1–3x:**
-- Proprietary technology
-- Recurring revenue models
-- Multi-year contracts
-- Geographic monopolies
+<strong>Strategic assets are multiplicative—they can increase valuation by 1–3x:</strong>
+<ul>
+<li>Proprietary technology</li>
+<li>Recurring revenue models</li>
+<li>Multi-year contracts</li>
+<li>Geographic monopolies</li>
+</ul>
 
 The development pattern is consistent: strategic assets require 2-3 years minimum to build, validate, and demonstrate value. Attempting to create them in the final months before sale appears desperate and rarely convinces buyers.
 
@@ -270,48 +278,60 @@ The ultimate irony of exit planning: the less your business needs you, the more 
 Building independence requires systematic elimination from operations. You must train people to replace you, document your decision-making, and transfer relationships. It feels counterintuitive, even dangerous.
 
 The metrics we observe across industries are remarkably consistent:
-- Owner works 60+ hours/week: businesses trade at 3-4x multiple
-- Owner works 40 hours/week: 4-5x multiple
-- Owner works 20 hours/week: 5-7x multiple
-- Owner is optional: 7-10x multiple
+<ul>
+<li>Owner works 60+ hours/week: businesses trade at 3-4x multiple</li>
+<li>Owner works 40 hours/week: 4-5x multiple</li>
+<li>Owner works 20 hours/week: 5-7x multiple</li>
+<li>Owner is optional: 7-10x multiple</li>
+</ul>
 
 Every hour you remove yourself from operations adds measurable value. But building the infrastructure that makes you unnecessary typically takes 24-36 months minimum.
 
 ## The Four-Quarter Exit Planning Blueprint
 
-**Quarter 1: Diagnostic Reality Check**
-- Obtain professional valuation to establish baseline
-- Identify top 5 value detractors through objective assessment
-- Calculate ROI on fixing each gap
-- Select 2-3 to address in first year
+<strong>Quarter 1: Diagnostic Reality Check</strong>
+<ul>
+<li>Obtain professional valuation to establish baseline</li>
+<li>Identify top 5 value detractors through objective assessment</li>
+<li>Calculate ROI on fixing each gap</li>
+<li>Select 2-3 to address in first year</li>
+</ul>
 
-**Quarter 2: Foundation Building**
-- Implement proper financial controls and reporting
-- Begin comprehensive process documentation
-- Start leadership development programs
-- Address legal and corporate structure issues
+<strong>Quarter 2: Foundation Building</strong>
+<ul>
+<li>Implement proper financial controls and reporting</li>
+<li>Begin comprehensive process documentation</li>
+<li>Start leadership development programs</li>
+<li>Address legal and corporate structure issues</li>
+</ul>
 
-**Quarter 3: Strategic Development**
-- Map potential buyer universe and their acquisition criteria
-- Identify strategic assets worth building
-- Begin customer diversification initiatives
-- Establish KPI tracking systems
+<strong>Quarter 3: Strategic Development</strong>
+<ul>
+<li>Map potential buyer universe and their acquisition criteria</li>
+<li>Identify strategic assets worth building</li>
+<li>Begin customer diversification initiatives</li>
+<li>Establish KPI tracking systems</li>
+</ul>
 
-**Quarter 4: Progress Validation**
-- Reassess value gaps against baseline
-- Measure improvement in key metrics
-- Adjust strategy based on results
-- Set specific milestones for year 2
+<strong>Quarter 4: Progress Validation</strong>
+<ul>
+<li>Reassess value gaps against baseline</li>
+<li>Measure improvement in key metrics</li>
+<li>Adjust strategy based on results</li>
+<li>Set specific milestones for year 2</li>
+</ul>
 
 ## The Conversation Successful Exits Start With
 
 The best exits begin with uncomfortable truths delivered years before selling. Smart advisors engage early, not because they want quick fees, but because they know transformation takes time.
 
 These conversations reveal gaps owners have normalized:
-- Customer concentration that will cut value in half
-- Financial statements no buyer will trust
-- Key employees who could destroy deals
-- Market windows that are closing
+<ul>
+<li>Customer concentration that will cut value in half</li>
+<li>Financial statements no buyer will trust</li>
+<li>Key employees who could destroy deals</li>
+<li>Market windows that are closing</li>
+</ul>
 
 Hearing this three years out provides time to fix issues. Hearing it three months out means accepting discounted offers or walking away.
 
