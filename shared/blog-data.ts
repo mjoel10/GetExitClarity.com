@@ -182,7 +182,7 @@ We've distilled 30+ years of M&A expertise into a platform that gives business o
     slug: "compound-effect-exit-planning",
     category: "Strategic Planning",
     author: "ExitClarity Team",
-    publishedDate: "August 19, 2025",
+    publishedDate: "August 26, 2025",
     readTime: "7 min",
     excerpt: "The businesses that command premium valuations share a pattern: they started preparing years before they needed to. The ones that scramble in the final months? They consistently leave millions on the table.",
     featured: true,
