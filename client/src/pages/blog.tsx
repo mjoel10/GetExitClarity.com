@@ -13,19 +13,28 @@ import thumbnail2 from "@assets/AdobeStock_629687249_1754937961457.jpeg";
 import thumbnail3 from "@assets/AdobeStock_724350667_1754937961457.jpeg";
 import thumbnail4 from "@assets/AdobeStock_864896666_1754937961457.jpeg";
 
-// Blog post data
-const featuredPost = {
-  title: "The Ultimate Exit: Why 87% of Business Sales Fail (And How to Be in the 13% That Don't)",
-  slug: "ultimate-exit-why-87-percent-fail",
-  category: "Exit Planning",
-  author: "ExitClarity Team",
-  publishedDate: "August 11, 2025",
-  readTime: "5 min",
-  excerpt: "The difference between a successful exit and a failed one isn't luck. It's preparation. And most owners aren't prepared at all.",
-  featured: true,
+// Import centralized blog data
+import { getFeaturedBlogPosts, getAllBlogPosts } from "../../../shared/blog-data";
+
+// Get featured post dynamically
+const featuredPosts = getFeaturedBlogPosts();
+const featuredPost = featuredPosts[0] ? {
+  ...featuredPosts[0],
+  thumbnail: thumbnail1
+} : {
+  title: "No Featured Articles Yet",
+  slug: "",
+  category: "",
+  author: "",
+  publishedDate: "",
+  readTime: "",
+  excerpt: "",
   thumbnail: thumbnail1
 };
 
+// Get non-featured published posts for additional articles
+const allPosts = getAllBlogPosts();
+const nonFeaturedPosts = allPosts.filter(post => !post.featured && !post.comingSoon);
 const upcomingPosts = [
   {
     title: "The Ultimate Exit Plan: Strategies to Assess, Enhance, and Maximize the Value of Your Company",
@@ -48,6 +57,16 @@ const upcomingPosts = [
     thumbnail: thumbnail4,
     comingSoon: true
   }
+];
+
+// Combine published non-featured posts with upcoming posts
+const additionalArticles = [
+  ...nonFeaturedPosts.map((post, index) => ({
+    ...post,
+    thumbnail: [thumbnail2, thumbnail3, thumbnail4][index % 3],
+    comingSoon: false
+  })),
+  ...upcomingPosts
 ];
 
 export default function Blog() {
@@ -246,7 +265,7 @@ export default function Blog() {
               </div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-                {upcomingPosts.map((post, index) => (
+                {additionalArticles.map((post, index) => (
                   <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div className="h-48 relative overflow-hidden">
                       <img 
@@ -262,30 +281,39 @@ export default function Blog() {
                           variant="secondary" 
                           className={
                             post.category === "Exit Planning" ? "bg-red-100 text-red-700" :
+                            post.category === "Strategic Planning" ? "bg-purple-100 text-purple-700" :
                             post.category === "Valuations" ? "bg-green-100 text-green-700" :
                             "bg-blue-100 text-blue-700"
                           }
                         >
                           {post.category}
                         </Badge>
-                        <Badge variant="outline" className="text-gray-500">Coming Soon</Badge>
+                        {post.comingSoon && <Badge variant="outline" className="text-gray-500">Coming Soon</Badge>}
+                        {!post.comingSoon && post.readTime && <Badge variant="outline" className="text-gray-500">{post.readTime} read</Badge>}
                       </div>
                       <h4 className="text-xl font-bold text-gray-900 mb-3 leading-tight min-h-[84px] flex items-start">
                         {post.title}
                       </h4>
                       <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
                         <Calendar className="w-4 h-4" />
-                        <span>Coming Soon</span>
+                        <span>{post.comingSoon ? "Coming Soon" : post.publishedDate}</span>
                       </div>
                       <div className="flex-1 mb-4">
                         <p className="text-gray-600 text-sm leading-relaxed">
                           {post.excerpt}
                         </p>
                       </div>
-                      <div className="flex items-center text-gray-400 text-sm cursor-default">
-                        <span>Coming Soon</span>
-                        <ArrowRight className="ml-1 w-4 h-4" />
-                      </div>
+                      {post.comingSoon ? (
+                        <div className="flex items-center text-gray-400 text-sm cursor-default">
+                          <span>Coming Soon</span>
+                          <ArrowRight className="ml-1 w-4 h-4" />
+                        </div>
+                      ) : (
+                        <Link href={`/blog/${post.slug}`} className="flex items-center text-primary text-sm hover:text-primary/80 transition-colors">
+                          <span>Read Article</span>
+                          <ArrowRight className="ml-1 w-4 h-4" />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 ))}
