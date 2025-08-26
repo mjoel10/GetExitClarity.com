@@ -8,10 +8,11 @@ import { Link } from "wouter";
 import { useMeta } from "@/hooks/use-meta";
 
 // Import thumbnail images
-import thumbnail1 from "@assets/AdobeStock_454297497_1754937961456.jpeg";
+import thumbnail1 from "@assets/AdobeStock_454297497_1754937961456.jpeg"; // Handshake image
 import thumbnail2 from "@assets/AdobeStock_629687249_1754937961457.jpeg";
 import thumbnail3 from "@assets/AdobeStock_724350667_1754937961457.jpeg";
 import thumbnail4 from "@assets/AdobeStock_864896666_1754937961457.jpeg";
+import compoundEffectImage from "@assets/AdobeStock_487776534_1756231203462.jpeg"; // New compound effect image
 
 // Import centralized blog data
 import { getFeaturedBlogPosts, getAllBlogPosts } from "../../../shared/blog-data";
@@ -20,7 +21,7 @@ import { getFeaturedBlogPosts, getAllBlogPosts } from "../../../shared/blog-data
 const featuredPosts = getFeaturedBlogPosts();
 const featuredPost = featuredPosts[0] ? {
   ...featuredPosts[0],
-  thumbnail: thumbnail1
+  thumbnail: featuredPosts[0].slug === "compound-effect-exit-planning" ? compoundEffectImage : thumbnail1
 } : {
   title: "No Featured Articles Yet",
   slug: "",
