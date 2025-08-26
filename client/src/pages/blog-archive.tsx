@@ -1,8 +1,8 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 import { Calendar, Clock, ArrowRight, ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
 import { useMeta } from "@/hooks/use-meta";
