@@ -24,7 +24,7 @@ export const blogPosts: Record<string, BlogPost> = {
     publishedDate: "August 11, 2025",
     readTime: "5 min",
     excerpt: "The difference between a successful exit and a failed one isn't luck. It's preparation. And most owners aren't prepared at all.",
-    featured: true,
+    featured: false,
     content: `You've built something remarkable. Years of early mornings, late nights, and countless decisions have created a business that matters—to customers, employees, and the market. But here's what no one tells you about selling that business: The difference between a successful exit and a failed one isn't luck. It's preparation.
 
 And most owners aren't prepared at all.
@@ -185,7 +185,7 @@ We've distilled 30+ years of M&A expertise into a platform that gives business o
     publishedDate: "August 19, 2025",
     readTime: "7 min",
     excerpt: "The businesses that command premium valuations share a pattern: they started preparing years before they needed to. The ones that scramble in the final months? They consistently leave millions on the table.",
-    featured: false,
+    featured: true,
     content: `The businesses that command premium valuations share a pattern: they started preparing years before they needed to. The ones that scramble in the final months? They consistently leave millions on the table.
 
 The parallel to retirement savings is almost perfect. Start investing at 30, and modest contributions compound into wealth. Start at 55, and you're scrambling to catch up with massive deposits that still can't match the early starter's returns.
