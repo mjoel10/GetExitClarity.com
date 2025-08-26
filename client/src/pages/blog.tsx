@@ -33,9 +33,28 @@ const featuredPost = featuredPosts[0] ? {
   thumbnail: thumbnail1
 };
 
-// Get non-featured published posts for additional articles
+// Get the 3 most recent non-featured published posts
 const allPosts = getAllBlogPosts();
-const nonFeaturedPosts = allPosts.filter(post => !post.featured && !post.comingSoon);
+const publishedPosts = allPosts.filter(post => !post.comingSoon);
+const nonFeaturedPosts = publishedPosts.filter(post => !post.featured);
+
+// Sort by date and take the 3 most recent
+const sortedPosts = nonFeaturedPosts.sort((a, b) => {
+  const dateA = new Date(a.publishedDate || '');
+  const dateB = new Date(b.publishedDate || '');
+  return dateB.getTime() - dateA.getTime();
+});
+
+const recentArticles = sortedPosts.slice(0, 3);
+
+// Assign thumbnails to the recent articles
+const additionalArticles = recentArticles.map((post, index) => ({
+  ...post,
+  thumbnail: post.slug === "ultimate-exit-why-87-percent-fail" ? thumbnail1 : [thumbnail2, thumbnail3, thumbnail4][index % 3],
+  comingSoon: false
+}));
+
+// If we need to fill up to 3 articles and don't have enough published ones, add placeholders
 const upcomingPosts = [
   {
     title: "The Ultimate Exit Plan: Strategies to Assess, Enhance, and Maximize the Value of Your Company",
@@ -60,14 +79,10 @@ const upcomingPosts = [
   }
 ];
 
-// Combine published non-featured posts with upcoming posts
-const additionalArticles = [
-  ...nonFeaturedPosts.map((post, index) => ({
-    ...post,
-    thumbnail: post.slug === "ultimate-exit-why-87-percent-fail" ? thumbnail1 : [thumbnail2, thumbnail3, thumbnail4][index % 3],
-    comingSoon: false
-  })),
-  ...upcomingPosts
+// Fill remaining slots with upcoming posts if needed
+const finalAdditionalArticles = [
+  ...additionalArticles,
+  ...upcomingPosts.slice(0, Math.max(0, 3 - additionalArticles.length))
 ];
 
 export default function Blog() {
@@ -266,7 +281,7 @@ export default function Blog() {
               </div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-                {additionalArticles.map((post, index) => (
+                {finalAdditionalArticles.map((post, index) => (
                   <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div className="h-48 relative overflow-hidden">
                       <img 
