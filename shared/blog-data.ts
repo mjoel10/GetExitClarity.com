@@ -184,7 +184,7 @@ We've distilled 30+ years of M&A expertise into a platform that gives business o
     author: "ExitClarity Team",
     publishedDate: "August 26, 2025",
     readTime: "7 min",
-    excerpt: "The businesses that earn premium valuations didn't get lucky—they got serious early. They built leverage years before they needed it. They planned before the pressure. And when the time came to sell, they dictated terms.\n\nThe ones that wait? They rush into diligence half-prepared and leave millions behind every single time.\n\nThink of exit planning like retirement savings. Start at 30, and your modest investments compound into real wealth. Wait until 55, and no matter how much you throw in, you'll never catch the early mover's curve.\n\nThe same merciless math applies here. Exit timing rewards the patient and punishes the reactive. Delay doesn't cost you linearly. It bleeds exponential value.",
+    excerpt: "The businesses that command premium valuations share a pattern: they started preparing years before they needed to. The ones that scramble in the final months? They consistently leave millions on the table.",
     featured: true,
     content: `The businesses that command premium valuations share a pattern: they started preparing years before they needed to. The ones that scramble in the final months? They consistently leave millions on the table.
 
