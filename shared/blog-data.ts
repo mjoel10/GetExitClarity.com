@@ -184,13 +184,15 @@ We've distilled 30+ years of M&A expertise into a platform that gives business o
     author: "ExitClarity Team",
     publishedDate: "August 26, 2025",
     readTime: "7 min",
-    excerpt: "The businesses that command premium valuations share a pattern: they started preparing years before they needed to. The ones that scramble in the final months? They consistently leave millions on the table.",
+    excerpt: "The businesses that earn premium valuations didn't get lucky—they got serious early. They built leverage years before they needed it. They planned before the pressure. And when the time came to sell, they dictated terms.",
     featured: true,
-    content: `The businesses that command premium valuations share a pattern: they started preparing years before they needed to. The ones that scramble in the final months? They consistently leave millions on the table.
+    content: `The businesses that earn premium valuations didn't get lucky—they got serious early. They built leverage years before they needed it. They planned before the pressure. And when the time came to sell, they dictated terms.
 
-The parallel to retirement savings is almost perfect. Start investing at 30, and modest contributions compound into wealth. Start at 55, and you're scrambling to catch up with massive deposits that still can't match the early starter's returns.
+The ones that wait? They rush into diligence half-prepared and leave millions behind every single time.
 
-Exit planning follows the same merciless math. Every year you delay costs compounding value. Not linear loss, but exponential.
+Think of exit planning like retirement savings. Start at 30, and your modest investments compound into real wealth. Wait until 55, and no matter how much you throw in, you'll never catch the early mover's curve.
+
+The same merciless math applies here. Exit timing rewards the patient and punishes the reactive. Delay doesn't cost you linearly. It bleeds exponential value.
 
 ## The Hidden Architecture of Premium Exits
 
