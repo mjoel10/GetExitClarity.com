@@ -17,11 +17,26 @@ import compoundEffectImage from "@assets/AdobeStock_487776534_1756231203462.jpeg
 // Import centralized blog data
 import { getFeaturedBlogPosts, getAllBlogPosts } from "../../../shared/blog-data";
 
-// Get featured post dynamically
-const featuredPosts = getFeaturedBlogPosts();
-const featuredPost = featuredPosts[0] ? {
-  ...featuredPosts[0],
-  thumbnail: featuredPosts[0].slug === "compound-effect-exit-planning" ? compoundEffectImage : thumbnail1
+// Get all published posts and sort by date (newest first)
+const allPosts = getAllBlogPosts();
+const publishedPosts = allPosts.filter(post => !post.comingSoon);
+const sortedPublishedPosts = publishedPosts.sort((a, b) => {
+  const dateA = new Date(a.publishedDate || '');
+  const dateB = new Date(b.publishedDate || '');
+  return dateB.getTime() - dateA.getTime();
+});
+
+// Function to get the correct thumbnail for each article
+const getArticleThumbnail = (post: any, fallbackIndex: number) => {
+  if (post.slug === "compound-effect-exit-planning") return compoundEffectImage;
+  if (post.slug === "ultimate-exit-why-87-percent-fail") return thumbnail1;
+  return [thumbnail2, thumbnail3, thumbnail4][fallbackIndex % 3];
+};
+
+// Featured post is the newest published article
+const featuredPost = sortedPublishedPosts[0] ? {
+  ...sortedPublishedPosts[0],
+  thumbnail: getArticleThumbnail(sortedPublishedPosts[0], 0)
 } : {
   title: "No Featured Articles Yet",
   slug: "",
@@ -33,28 +48,14 @@ const featuredPost = featuredPosts[0] ? {
   thumbnail: thumbnail1
 };
 
-// Get the 3 most recent non-featured published posts
-const allPosts = getAllBlogPosts();
-const publishedPosts = allPosts.filter(post => !post.comingSoon);
-const nonFeaturedPosts = publishedPosts.filter(post => !post.featured);
-
-// Sort by date and take the 3 most recent
-const sortedPosts = nonFeaturedPosts.sort((a, b) => {
-  const dateA = new Date(a.publishedDate || '');
-  const dateB = new Date(b.publishedDate || '');
-  return dateB.getTime() - dateA.getTime();
-});
-
-const recentArticles = sortedPosts.slice(0, 3);
-
-// Assign thumbnails to the recent articles
-const additionalArticles = recentArticles.map((post, index) => ({
+// Additional articles are the next 3 most recent (positions 2-4)
+const additionalPublishedArticles = sortedPublishedPosts.slice(1, 4).map((post, index) => ({
   ...post,
-  thumbnail: post.slug === "ultimate-exit-why-87-percent-fail" ? thumbnail1 : [thumbnail2, thumbnail3, thumbnail4][index % 3],
+  thumbnail: getArticleThumbnail(post, index + 1),
   comingSoon: false
 }));
 
-// If we need to fill up to 3 articles and don't have enough published ones, add placeholders
+// Placeholder articles for empty slots
 const upcomingPosts = [
   {
     title: "The Ultimate Exit Plan: Strategies to Assess, Enhance, and Maximize the Value of Your Company",
@@ -79,10 +80,10 @@ const upcomingPosts = [
   }
 ];
 
-// Fill remaining slots with upcoming posts if needed
+// Fill up to 3 slots total, using published articles first, then placeholders
 const finalAdditionalArticles = [
-  ...additionalArticles,
-  ...upcomingPosts.slice(0, Math.max(0, 3 - additionalArticles.length))
+  ...additionalPublishedArticles,
+  ...upcomingPosts.slice(0, Math.max(0, 3 - additionalPublishedArticles.length))
 ];
 
 export default function Blog() {
