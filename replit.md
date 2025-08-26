@@ -41,7 +41,7 @@ Preferred communication style: Simple, everyday language.
   - Separate refs for proper dropdown functionality
 - **Blog System**: Complete blog implementation with centralized data management:
   - "ExitClarity Insights" branding targeting both business owners and M&A advisors
-  - Published article: "The Ultimate Exit: Why 87% of Business Sales Fail"
+  - Two published articles: "The Ultimate Exit: Why 87% of Business Sales Fail" and "The Compound Effect: Why Exit Planning is Like Retirement Saving"
   - Professional article page styling with clear typography and SEO optimization
   - Centralized blog data system in shared/blog-data.ts for unified client/server management
   - Server-side meta tag rendering for proper social media sharing without images
