@@ -63,7 +63,7 @@ const upcomingPosts = [
 const additionalArticles = [
   ...nonFeaturedPosts.map((post, index) => ({
     ...post,
-    thumbnail: [thumbnail2, thumbnail3, thumbnail4][index % 3],
+    thumbnail: post.slug === "ultimate-exit-why-87-percent-fail" ? thumbnail1 : [thumbnail2, thumbnail3, thumbnail4][index % 3],
     comingSoon: false
   })),
   ...upcomingPosts
@@ -289,14 +289,14 @@ export default function Blog() {
                           {post.category}
                         </Badge>
                         {post.comingSoon && <Badge variant="outline" className="text-gray-500">Coming Soon</Badge>}
-                        {!post.comingSoon && post.readTime && <Badge variant="outline" className="text-gray-500">{post.readTime} read</Badge>}
+                        {!post.comingSoon && 'readTime' in post && post.readTime && <Badge variant="outline" className="text-gray-500">{post.readTime} read</Badge>}
                       </div>
                       <h4 className="text-xl font-bold text-gray-900 mb-3 leading-tight min-h-[84px] flex items-start">
                         {post.title}
                       </h4>
                       <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
                         <Calendar className="w-4 h-4" />
-                        <span>{post.comingSoon ? "Coming Soon" : post.publishedDate}</span>
+                        <span>{post.comingSoon ? "Coming Soon" : ('publishedDate' in post ? post.publishedDate : "")}</span>
                       </div>
                       <div className="flex-1 mb-4">
                         <p className="text-gray-600 text-sm leading-relaxed">
@@ -309,7 +309,7 @@ export default function Blog() {
                           <ArrowRight className="ml-1 w-4 h-4" />
                         </div>
                       ) : (
-                        <Link href={`/blog/${post.slug}`} className="flex items-center text-primary text-sm hover:text-primary/80 transition-colors">
+                        <Link href={`/blog/${'slug' in post ? post.slug : ''}`} className="flex items-center text-primary text-sm hover:text-primary/80 transition-colors">
                           <span>Read Article</span>
                           <ArrowRight className="ml-1 w-4 h-4" />
                         </Link>
