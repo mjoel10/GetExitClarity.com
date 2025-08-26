@@ -295,18 +295,7 @@ export default function Blog() {
                           <div className="absolute inset-0 bg-black/20"></div>
                         </div>
                         <div className="p-6 flex flex-col flex-1">
-                          <div className="flex items-center justify-between mb-3">
-                            <Badge 
-                              variant="secondary" 
-                              className={
-                                post.category === "Exit Planning" ? "bg-red-100 text-red-700" :
-                                post.category === "Strategic Planning" ? "bg-purple-100 text-purple-700" :
-                                post.category === "Valuations" ? "bg-green-100 text-green-700" :
-                                "bg-blue-100 text-blue-700"
-                              }
-                            >
-                              {post.category}
-                            </Badge>
+                          <div className="flex items-center justify-end mb-3">
                             <Badge variant="outline" className="text-gray-500">Coming Soon</Badge>
                           </div>
                           <h4 className="text-xl font-bold text-gray-900 mb-3 leading-tight min-h-[84px] flex items-start">
@@ -339,18 +328,7 @@ export default function Blog() {
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
                           </div>
                           <div className="p-6 flex flex-col flex-1">
-                            <div className="flex items-center justify-between mb-3">
-                              <Badge 
-                                variant="secondary" 
-                                className={
-                                  post.category === "Exit Planning" ? "bg-red-100 text-red-700" :
-                                  post.category === "Strategic Planning" ? "bg-purple-100 text-purple-700" :
-                                  post.category === "Valuations" ? "bg-green-100 text-green-700" :
-                                  "bg-blue-100 text-blue-700"
-                                }
-                              >
-                                {post.category}
-                              </Badge>
+                            <div className="flex items-center justify-end mb-3">
                               {'readTime' in post && post.readTime && <Badge variant="outline" className="text-gray-500">{post.readTime} read</Badge>}
                             </div>
                             <h4 className="text-xl font-bold text-gray-900 mb-3 leading-tight min-h-[84px] flex items-start group-hover:text-primary transition-colors">
