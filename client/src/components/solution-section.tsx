@@ -100,7 +100,7 @@ export function SolutionSection() {
               <p className="text-muted-foreground">Scale early-stage engagement and build stronger funnels</p>
             </div>
             
-            <div className="space-y-8 flex-1">
+            <div className="space-y-5 flex-1">
               {professionalFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
@@ -141,7 +141,7 @@ export function SolutionSection() {
               <p className="text-muted-foreground">Understand your exit-readiness and maximize your exit value</p>
             </div>
             
-            <div className="space-y-8 flex-1">
+            <div className="space-y-5 flex-1">
               {ownerFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
