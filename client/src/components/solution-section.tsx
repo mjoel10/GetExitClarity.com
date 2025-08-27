@@ -100,17 +100,17 @@ export function SolutionSection() {
               <p className="text-muted-foreground">Scale early-stage engagement and build stronger funnels</p>
             </div>
             
-            <div className="space-y-6 flex-1">
+            <div className="space-y-8 flex-1">
               {professionalFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={index} className="flex items-start space-x-4">
+                  <div key={index} className="flex items-start space-x-4 min-h-[60px]">
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon className="h-5 w-5 text-primary" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
-                      <p className="text-sm text-muted-foreground">{feature.description}</p>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-foreground mb-1 leading-tight">{feature.title}</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
                 );
@@ -141,17 +141,17 @@ export function SolutionSection() {
               <p className="text-muted-foreground">Understand your exit-readiness and maximize your exit value</p>
             </div>
             
-            <div className="space-y-6 flex-1">
+            <div className="space-y-8 flex-1">
               {ownerFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={index} className="flex items-start space-x-4">
+                  <div key={index} className="flex items-start space-x-4 min-h-[60px]">
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon className="h-5 w-5 text-primary" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
-                      <p className="text-sm text-muted-foreground">{feature.description}</p>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-foreground mb-1 leading-tight">{feature.title}</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
                 );
