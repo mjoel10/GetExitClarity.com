@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, FileText, Play, ArrowRight } from "lucide-react";
+import { Calendar, FileText, Play, ArrowRight, UserPlus } from "lucide-react";
 import { useLocation } from "wouter";
 
 export function CTASection() {
@@ -101,9 +101,9 @@ export function CTASection() {
             </ul>
             <div className="flex flex-col xl:flex-row gap-3">
               <Button variant="hero" size="lg" className="group xl:flex-1 h-12 px-6 text-base" asChild>
-                <a href="/trial-request">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Try It with a Client
+                <a href="/business-owners-waitlist">
+                  <UserPlus className="mr-2 h-5 w-5" />
+                  Join Our Waitlist
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
