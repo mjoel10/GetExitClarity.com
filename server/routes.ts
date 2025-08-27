@@ -107,7 +107,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         email: validatedData.email,
         firmName: validatedData.firmName,
         role: validatedData.role,
-        seenBefore: validatedData.seenBefore,
+        seenBefore: validatedData.seenBefore || undefined,
         timing: validatedData.timing,
         notes: validatedData.notes || undefined
       };

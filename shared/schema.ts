@@ -32,7 +32,7 @@ export const trialRequests = pgTable("trial_requests", {
   firmName: text("firm_name").notNull(),
   role: text("role").notNull(),
   prospectType: text("prospect_type"), // Keep but make optional for backward compatibility
-  seenBefore: text("seen_before").notNull(), // 'Yes' or 'No'
+  seenBefore: text("seen_before"), // Optional - legacy field
   timing: text("timing").notNull(),
   notes: text("notes"),
   utmSource: text("utm_source"),

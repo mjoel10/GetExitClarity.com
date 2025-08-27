@@ -22,7 +22,6 @@ const trialRequestSchema = z.object({
   email: z.string().email("Valid email is required"),
   firmName: z.string().min(1, "Firm name is required"),
   role: z.string().min(1, "Role is required"),
-  seenBefore: z.string().min(1, "Please select an option"),
   timing: z.string().min(1, "Timing is required"),
   notes: z.string().optional(),
 });
@@ -368,23 +367,7 @@ export default function TrialRequest() {
 
 
 
-                        {/* Seen Before */}
-                        <div className="space-y-3">
-                          <Label>Have you seen ExitClarity used at your firm before? *</Label>
-                          <RadioGroup onValueChange={(value) => setValue("seenBefore", value)}>
-                            <div className="flex items-center space-x-2">
-                              <RadioGroupItem value="Yes" id="seen-yes" />
-                              <Label htmlFor="seen-yes">Yes</Label>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                              <RadioGroupItem value="No" id="seen-no" />
-                              <Label htmlFor="seen-no">No</Label>
-                            </div>
-                          </RadioGroup>
-                          {errors.seenBefore && (
-                            <p className="text-sm text-red-600">{errors.seenBefore.message}</p>
-                          )}
-                        </div>
+
 
                         {/* Timing */}
                         <div className="space-y-2">
