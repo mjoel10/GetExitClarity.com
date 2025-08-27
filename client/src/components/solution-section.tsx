@@ -94,13 +94,13 @@ export function SolutionSection() {
         {/* Two Column Layout */}
         <div className="grid lg:grid-cols-2 gap-12">
           {/* For M&A Professionals */}
-          <div className="bg-white rounded-2xl p-8 shadow-soft border">
+          <div className="bg-white rounded-2xl p-8 shadow-soft border flex flex-col h-full">
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-foreground mb-2">For M&A Professionals</h3>
               <p className="text-muted-foreground">Scale early-stage engagement and build stronger funnels</p>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-6 flex-1">
               {professionalFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
@@ -118,7 +118,7 @@ export function SolutionSection() {
             </div>
             
             {/* CTA Buttons for M&A Professionals */}
-            <div className="mt-8 flex flex-col xl:flex-row gap-3">
+            <div className="mt-8 flex flex-col xl:flex-row gap-3 mt-auto">
               <Button variant="hero" size="default" className="group xl:flex-1 sm:py-4 sm:px-6 sm:text-lg" asChild>
                 <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
                   <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -135,13 +135,13 @@ export function SolutionSection() {
           </div>
 
           {/* For Business Owners */}
-          <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 border">
+          <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 border flex flex-col h-full">
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-foreground mb-2">For Business Owners</h3>
               <p className="text-muted-foreground">Understand your exit-readiness and maximize your exit value</p>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-6 flex-1">
               {ownerFeatures.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
@@ -159,7 +159,7 @@ export function SolutionSection() {
             </div>
             
             {/* CTA Buttons for Business Owners */}
-            <div className="mt-8 flex flex-col xl:flex-row gap-3">
+            <div className="mt-8 flex flex-col xl:flex-row gap-3 mt-auto">
               <Button variant="hero" size="default" className="group xl:flex-1 sm:py-4 sm:px-6 sm:text-lg" asChild>
                 <Link href="/business-owners-waitlist">
                   <UserPlus className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
