@@ -118,7 +118,7 @@ export function SolutionSection() {
             </div>
             
             {/* CTA Buttons for M&A Professionals */}
-            <div className="mt-20 flex flex-col xl:flex-row gap-3 mt-auto">
+            <div className="mt-20 flex flex-col xl:flex-row gap-3">
               <Button variant="hero" size="default" className="group xl:flex-1 sm:py-4 sm:px-6 sm:text-lg" asChild>
                 <a href="https://calendly.com/exitclarity-info/30min" target="_blank" rel="noopener noreferrer">
                   <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -159,7 +159,7 @@ export function SolutionSection() {
             </div>
             
             {/* CTA Buttons for Business Owners */}
-            <div className="mt-20 flex flex-col xl:flex-row gap-3 mt-auto">
+            <div className="mt-20 flex flex-col xl:flex-row gap-3">
               <Button variant="hero" size="default" className="group xl:flex-1 sm:py-4 sm:px-6 sm:text-lg" asChild>
                 <Link href="/business-owners-waitlist">
                   <UserPlus className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
