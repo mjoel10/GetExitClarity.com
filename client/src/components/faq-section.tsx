@@ -7,7 +7,7 @@ export function FAQSection() {
   const faqs = [
     {
       question: "How long does the assessment take?",
-      answer: "The assessment takes about 20 minutes to complete. It's designed to be thorough yet efficient, covering all 11 critical readiness factors without being overwhelming."
+      answer: "The assessment takes about 20 minutes to complete. It's designed to be thorough yet efficient, covering all 11 deal critical readiness factors without being overwhelming."
     },
     {
       question: "Is it really free?",
