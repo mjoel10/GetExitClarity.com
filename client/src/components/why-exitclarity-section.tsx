@@ -66,18 +66,13 @@ export function WhyExitClaritySection() {
               </div>
 
               {/* Enhanced Header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-lg">
-                    <span className="text-white text-lg font-bold">E</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-lg">ExitClarity Report</h4>
-                    <p className="text-xs text-gray-500 font-medium">Professional Assessment</p>
-                  </div>
+              <div className="flex items-center gap-4 mb-5">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-lg">
+                  <span className="text-white text-base font-bold">E</span>
                 </div>
-                <div className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-semibold">
-                  Sample
+                <div>
+                  <h4 className="font-bold text-gray-900 text-base">ExitClarity Report</h4>
+                  <p className="text-xs text-gray-500 font-medium">Professional Assessment</p>
                 </div>
               </div>
 
