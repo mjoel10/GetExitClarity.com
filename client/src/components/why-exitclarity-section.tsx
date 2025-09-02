@@ -186,7 +186,7 @@ export function WhyExitClaritySection() {
           </div>
           
           {/* What You'll Receive */}
-          <div className="space-y-6 text-center xl:text-left">
+          <div className="space-y-6 text-center xl:text-left mt-12 xl:mt-0 bg-gradient-to-br from-slate-50 to-white xl:bg-none rounded-2xl p-8 xl:p-0 border xl:border-none border-slate-200/50">
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-4 leading-tight">
                 This is what you'll receive
