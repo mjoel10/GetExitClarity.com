@@ -192,7 +192,7 @@ export function WhyExitClaritySection() {
                 This is what you'll receive
               </h3>
               
-              <ul className="space-y-3 inline-block text-left">
+              <div className="space-y-4 inline-block text-left">
                 {[
                   "Comprehensive exit readiness score (0-100)",
                   "Realistic valuation ranges based on your industry", 
@@ -200,14 +200,19 @@ export function WhyExitClaritySection() {
                   "Detailed analysis across 11 critical factors",
                   "Prioritized action plan with ROI estimates"
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start group">
-                    <div className="w-3 h-3 bg-gradient-to-br from-primary to-blue-600 rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-200"></div>
-                    <span className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-200">
-                      {item}
-                    </span>
-                  </li>
+                  <div key={index} className="group relative">
+                    <div className="absolute -inset-2 bg-gradient-to-r from-primary/5 to-blue-600/5 rounded-xl blur-sm group-hover:blur-md transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+                    <div className="relative flex items-center p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-white/60 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:transform group-hover:scale-[1.02]">
+                      <div className="w-8 h-8 bg-gradient-to-br from-primary to-blue-600 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 shadow-md group-hover:shadow-lg transition-all duration-300">
+                        <CheckCircle className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-foreground font-medium leading-relaxed">
+                        {item}
+                      </span>
+                    </div>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
             
             <div className="relative inline-block">
