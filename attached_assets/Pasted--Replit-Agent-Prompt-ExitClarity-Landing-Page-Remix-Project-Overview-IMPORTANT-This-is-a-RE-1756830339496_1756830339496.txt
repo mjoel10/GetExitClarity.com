@@ -1,0 +1,312 @@
+# Replit Agent Prompt: ExitClarity Landing Page Remix
+
+## Project Overview
+**IMPORTANT: This is a REMIX of the existing exitclarity.io website.** Take the existing exitclarity.io Replit project and repurpose it into a single, high-converting landing page at getexitclarity.com. Delete all other pages and routes. Reuse the existing brand assets, components, styles, and code where applicable. The focus is exclusively on getting business owners to take the exit readiness assessment.
+
+## Starting Point
+- Begin with the existing exitclarity.io codebase
+- **DELETE all pages/routes except the landing page**
+- Preserve brand assets, logos, colors, fonts, and component styles
+- **Keep ONLY the footer structure from the original site**
+- Reuse existing React components and Tailwind classes where useful
+- Create a fresh, conversion-focused header specifically for this landing page
+
+## Core Requirements
+
+### 1. Technical Stack
+- Use React with TailwindCSS
+- Ensure full mobile responsiveness
+- Implement smooth scroll animations
+- Add hover effects and micro-interactions
+- Optimize for fast loading (lazy load images)
+- **IMPORTANT: This is a remix of the existing exitclarity.io website - reuse all existing brand assets, colors, and components**
+
+### 2. Design System (Reuse from existing exitclarity.io)
+- **USE THE EXISTING EXITCLARITY.IO BRAND ASSETS:**
+  - Copy all logos, icons, and brand elements directly from the current site
+  - Maintain exact color palette from exitclarity.io
+  - Use the same fonts and typography system
+  - Keep consistent spacing and component styles
+- **Extracted from visuals:**
+  - Primary gradient: #6e7fff to #4a5f8f (for accents)
+  - Success green: #00B67A (for CTAs and checkmarks)
+  - Dark backgrounds: #18181b, #1A2C56
+  - Light backgrounds: #f9fafb, #f3f4f6
+- **Maintain consistency:** This is a remix, not a redesign - keep brand continuity
+
+### 3. Assets to Reuse
+- **Assessment Platform Visual (assessment-platform.html)**: Use the animated progress interface showing "8 of 11 factors" with the progress bar and factor grid
+- **Comprehensive Report Visual (comprehensive-report.html)**: Use the Executive Summary view with the 70/100 score gauge and "GO - Proceed to Market" recommendation
+- **Progress Card Visual (Image 1)**: Use the clean progress indicator showing "85% Assessment Progress" with categories completed
+- **Platform Interface Visual (Image 2)**: Use the ExitClarity platform interface showing the step-by-step assessment flow
+- Extract color schemes: Purple/blue gradients (#6e7fff to #4a5f8f), green accents (#00B67A), navy (#1A2C56)
+- DO NOT use any M&A dashboard visuals
+
+## Page Structure
+
+### Header/Navigation
+```
+- Create a NEW simplified header for the landing page:
+  - ExitClarity logo (left) - use existing logo from the project
+  - Single CTA button (right): "Start Free Assessment" - green background (#00B67A)
+  - Clean, minimal design focused on conversion
+  - Sticky behavior on scroll with subtle shadow
+  - No navigation menu items - just logo and CTA
+```
+
+### Section 1: Hero
+```
+Layout: Split screen (60/40)
+Left side:
+- Headline: "Are You Ready to Sell Your Business?"
+- Subheadline: "Get a free personalized exit readiness report in 20 minutes"
+- Bullet points:
+  ✓ Realistic business valuation ranges
+  ✓ Clear timeline for optimal sale
+  ✓ GO / FIX / WAIT recommendations across 11 categories
+- CTA Button: "Create Your Free ExitClarity Account" (large, green)
+- Trust indicator: "Join 500+ business owners who've discovered their exit readiness"
+
+Right side:
+- Use the assessment platform visual showing the "8 of 11" progress interface
+- Or the progress card showing "85% Assessment Progress" 
+- Include subtle animation to draw attention to the progress indicators
+```
+
+### Section 2: The Problem (light gray background)
+```
+Center-aligned content:
+- Headline: "Most Business Owners Aren't Ready When Opportunity Knocks"
+- Three statistics in cards:
+  - "75% of owners regret selling when they did"
+  - "Only 20% of businesses that go to market actually sell"
+  - "Average prep time: 2-5 years for maximum value"
+- Closing text: "Don't leave millions on the table. Know where you stand today."
+```
+
+### Section 3: Ross's Story (white background)
+```
+Two-column layout:
+Left:
+- Headline: "Built by an Owner Who Learned the Hard Way"
+- Body text: "Ross Joel failed to sell his company three times before finally succeeding on the fourth attempt. After selling to private equity in 2020, he helped grow that business 10X post-sale. He built ExitClarity to give owners the unbiased advice and insights he wishes he'd had earlier."
+- Signature or quote styling for authenticity
+
+Right:
+- Professional headshot placeholder (rounded corners)
+- Small testimonial card below photo
+```
+
+### Section 4: The Assessment Process (white background)
+```
+Headline: "Your Personalized Exit Readiness Report"
+Three-step process with connecting line:
+
+Step 1: Take Assessment (5-7 min)
+- Icon: Clipboard
+- "Answer questions about your business operations, financials, and goals"
+
+Step 2: Get Instant Analysis (automated)
+- Icon: Chart/Graph
+- "Our algorithm analyzes your responses against 1000+ successful exits"
+
+Step 3: Receive Your Report (immediate)
+- Icon: Report/Document
+- "Get your detailed report with valuation ranges and action plan"
+
+Below: Display the comprehensive report visual showing:
+- The Executive Summary with 70/100 score gauge
+- "GO - Proceed to Market" recommendation badge
+- Enterprise Value ranges ($12M-$18M)
+- Use this as a "preview" of what users will receive
+```
+
+### Section 5: What's Included (light gray background)
+```
+Headline: "Everything You Need to Make Informed Decisions"
+4x2 grid of features:
+
+1. Exit Readiness Score
+   - Visual: Use the score gauge from the report (70/100)
+   - "See how buyers will evaluate your business"
+
+2. Valuation Range
+   - Visual: Show the "$12M-$18M" range from the report
+   - "Realistic estimates based on your industry and performance"
+
+3. Risk Assessment
+   - Visual: Use the factor grid showing completed/pending items
+   - "Identify deal-killers before they cost you"
+
+4. Timeline Projection
+   - Visual: Show "8 of 11" progress indicator
+   - "Know the optimal time to maximize value"
+
+5. Action Plan
+   - Visual: Use the categories from the progress card
+   - "Prioritized improvements with ROI estimates"
+
+6. 11 Category Analysis
+   - Visual: Show the factor grid layout from assessment platform
+   - "GO / FIX / WAIT recommendations for each area"
+
+7. Industry Benchmarks
+   - Visual: Reference the "SaaS Industry" badge from platform
+   - "See how you stack up against similar businesses"
+
+8. Next Steps Roadmap
+   - Visual: Use the platform's step-by-step interface
+   - "Clear guidance on what to do next"
+```
+
+### Section 6: Why ExitClarity (white background)
+```
+Headline: "Unbiased Advice You Can Trust"
+Three columns:
+
+Owner-First Approach:
+- Icon: Handshake
+- "No hidden agenda. We don't broker deals or take commissions."
+
+30+ Years Experience:
+- Icon: Badge/Award
+- "Built on decades of real business ownership and M&A expertise"
+
+Private & Secure:
+- Icon: Lock/Shield
+- "Your report is confidential. Never shared without your explicit approval."
+```
+
+### Section 7: Social Proof (white background)
+```
+Headline: "Join Hundreds of Prepared Business Owners"
+- 3-4 testimonial cards with:
+  - Quote
+  - Name, Title, Company
+  - Industry tag
+  - Star rating (5 stars)
+- Include variety: different industries, company sizes
+```
+
+### Section 8: FAQ (light gray background)
+```
+Headline: "Common Questions"
+Accordion-style FAQ:
+1. How long does the assessment take? (20 minutes)
+2. Is it really free? (Yes, no credit card required)
+3. Will you share my information? (Never without permission)
+4. How accurate is the valuation? (Based on 1000+ real transactions)
+5. What if I'm not ready to sell? (Perfect - that's why you should take it now)
+6. Can I retake the assessment? (Yes, track progress over time)
+```
+
+### Section 9: Final CTA (navy background, white text)
+```
+Center-aligned:
+- Headline: "Stop Guessing. Start Knowing."
+- Subheadline: "Get your free exit readiness report in the next 20 minutes"
+- Large CTA button: "Create Your Free ExitClarity Account" (green)
+- Below button: "No credit card required • 100% confidential"
+```
+
+### Footer
+```
+COPY THE EXACT FOOTER FROM EXITCLARITY.IO:
+- Use the complete footer structure from the existing site
+- Include all footer links, sections, and layout
+- Maintain the same footer styling and colors
+- Keep all legal links (Privacy Policy, Terms of Service)
+- Include any newsletter signup if present
+- Preserve social media links
+- Keep the copyright notice format
+- Maintain the same responsive behavior
+```
+
+## Interaction Details
+
+### Animations
+- Subtle fade-in animations on scroll (AOS or Framer Motion)
+- Button hover states: slight scale and shadow increase
+- Smooth scroll to sections when clicking CTAs
+- Progress indicator animation in the process section
+
+### CTAs
+- All "Create Your Free ExitClarity Account" buttons link to: https://app.exitclarity.io/signupdirect
+- Make buttons large and prominent (padding: 16px 32px minimum)
+- Use consistent green color with darker green on hover
+
+### Mobile Optimizations
+- Stack columns on mobile
+- Ensure touch targets are at least 44x44px
+- Simplify navigation to just logo + CTA
+- Adjust font sizes for readability
+
+## Copy Guidelines
+- Use clear, benefit-focused language
+- Address pain points: uncertainty, leaving money on the table, not being prepared
+- Emphasize speed (20 minutes) and value (free, personalized)
+- Use "you" and "your" throughout
+- Include urgency without being pushy
+
+## Performance Requirements
+- Implement lazy loading for images
+- Minimize CSS/JS bundles
+- Aim for 90+ PageSpeed score
+- Use WebP format for images where possible
+
+## Testing Checklist
+- [ ] All CTAs link correctly to signup
+- [ ] Mobile responsive at all breakpoints
+- [ ] Forms work (if any)
+- [ ] Images load properly
+- [ ] Animations are smooth
+- [ ] Page loads in under 3 seconds
+- [ ] Text is readable on all backgrounds
+- [ ] No broken links
+
+## Additional Visual Integration Notes
+
+### Specific Visual Assets to Include:
+
+1. **Hero Section Visual**
+   - Recreate the clean assessment progress interface from the provided visuals
+   - Show "8 of 11 factors" with animated progress bar filling to 73%
+   - Include the purple/blue gradient progress bar with shimmer effect
+   - Display completed checkmarks in green (#00B67A)
+
+2. **Report Preview Section**
+   - Recreate the Executive Summary view with:
+     - Circular score gauge showing 70/100
+     - "GO - Proceed to Market" badge in gradient blue
+     - Three metric cards showing valuation ranges
+     - Professional dark header with ExitClarity branding
+
+3. **Assessment Categories Grid**
+   - Use the factor grid layout showing:
+     - Financial Performance ✓
+     - Documentation ✓
+     - Team & Transition ✓
+     - M&A Experience (in progress)
+     - Strategic Planning (pending)
+   - Apply hover animations and completion states
+
+4. **Color Palette (extracted from visuals)**
+   - Primary gradient: #6e7fff to #4a5f8f
+   - Success green: #00B67A (for checkmarks)
+   - Dark navy: #18181b (from report header)
+   - Background grays: #f9fafb, #f3f4f6
+   - Text colors: #1f2937 (headings), #6b7280 (body)
+
+5. **Animation Effects to Replicate**
+   - Progress bar shimmer effect
+   - Factor cards slide-in animation
+   - Score gauge fill animation
+   - Pulse effect on active items
+   - Smooth hover transitions
+
+### Visual Implementation Guidelines:
+- Maintain the professional, enterprise-grade aesthetic from the report visual
+- Use the clean, modern card-based design from the assessment platform
+- Include subtle shadows and gradients for depth
+- Ensure all progress indicators are prominent and engaging
+- Keep the "9 mins remaining" timer visible to emphasize speed
