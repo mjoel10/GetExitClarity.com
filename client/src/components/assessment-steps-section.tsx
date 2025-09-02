@@ -24,8 +24,8 @@ export function AssessmentStepsSection() {
 
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden">
-      {/* Premium Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-blue-50/30"></div>
+      {/* Subtle Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-100 via-gray-50 to-slate-100"></div>
       
       {/* Decorative Elements */}
       <div className="absolute top-32 left-10 w-40 h-40 bg-gradient-to-br from-primary/10 to-blue-200/20 rounded-full blur-3xl opacity-60"></div>
