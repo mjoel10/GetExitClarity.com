@@ -1,0 +1,64 @@
+Looking at the current version, the copy improvements are working well, but there are layout issues to fix:
+1. Fix "Most Business Owners Aren't Ready" Section Layout
+
+The 3 statistics need proper spacing and alignment
+Ensure they're in a clean 3-column grid on desktop
+Stack them vertically on mobile
+The blue background looks good but needs padding adjustments
+
+2. Fix Ross's Story Section Layout
+Current issue: The layout feels cramped and the two quotes are confusing
+Changes needed:
+
+Replace the "RJ" initials circle with Ross's actual photo (the one provided showing him at the beach)
+Remove the second testimonial quote - keep only Ross's main founder quote
+Better layout structure:
+
+Left side (60%): Ross's story text + his single quote
+Right side (40%): Ross's photo with name/title/experience below
+
+
+Add more breathing room between elements
+Ensure the quote stands out with proper styling
+
+3. Additional Quick Fixes
+
+Make sure the "Your Personalized Exit Readiness Report" section that follows has proper spacing from Ross's section
+Verify all CTAs are consistently styled with the blue color
+Check that the page flows smoothly between sections
+
+The content is much improved with the new statistics and cleaner copy - now we just need to fix these layout regressions to make it visually polished.RetryMI also feel like the text size is too big on the 3 column grid, and it has a weird almost subheadline below itEditYou're right on both counts. Here's what to tell the Replit agent:
+Fix the Statistics Section Typography and Layout
+The Problem:
+
+The text under each statistic is too large and overwhelming
+There's an unnecessary subheadline below the main headline that creates awkward spacing
+
+Specific Fixes:
+1. Remove the subheadline
+
+Delete "of business owners have no exit strategy" / "average value left on the table" / "months typical prep time needed"
+These are redundant and making the section feel cluttered
+
+2. Adjust the layout to:
+80%
+of business owners have no exit strategy
+
+$10M+
+average value left on the table  
+
+18-24
+months typical prep time needed
+3. Typography adjustments:
+
+Keep the large numbers (80%, $10M+, 18-24) as they are - they need impact
+Make the descriptive text underneath MUCH smaller - maybe 14-16px instead of current size
+This creates better visual hierarchy where the numbers pop and the explanations support
+
+4. Spacing:
+
+Add more padding between the three columns
+Reduce the line height between the number and its description
+The section needs to breathe but not feel disconnected
+
+The goal is for viewers to immediately see "80% - $10M+ - 18-24" at a glance, with the supporting text there if they want details but not competing for attention.

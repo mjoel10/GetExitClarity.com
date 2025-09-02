@@ -7,7 +7,7 @@ export function AssessmentProcessSection() {
   };
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-12">
