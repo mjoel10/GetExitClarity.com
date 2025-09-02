@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Clipboard, BarChart3, FileText } from "lucide-react";
+import { Clipboard, BarChart3, FileText, CheckCircle } from "lucide-react";
 
 export function AssessmentProcessSection() {
   const handleCTAClick = () => {
