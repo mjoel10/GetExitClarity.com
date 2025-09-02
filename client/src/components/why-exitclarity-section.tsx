@@ -50,7 +50,7 @@ export function WhyExitClaritySection() {
         </div>
 
         {/* Report Preview + What You'll Receive */}
-        <div className="grid xl:grid-cols-2 gap-8 xl:gap-12 items-center mb-16 sm:mb-20">
+        <div className="grid xl:grid-cols-2 gap-12 xl:gap-20 items-center mb-16 sm:mb-20">
           {/* Premium Report Visual */}
           <div className="relative">
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-200/30 to-primary/20 rounded-full blur-2xl"></div>
