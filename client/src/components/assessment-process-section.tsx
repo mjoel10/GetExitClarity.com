@@ -49,92 +49,91 @@ export function AssessmentProcessSection() {
         {/* Report Preview */}
         <div className="bg-white rounded-2xl p-8 shadow-lg border">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Simplified Report Visual */}
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 border shadow-lg max-w-lg mx-auto">
+            {/* Comprehensive Report Visual */}
+            <div className="bg-white rounded-2xl p-8 border shadow-lg max-w-lg mx-auto relative">
+              {/* Page Count Badge */}
+              <div className="absolute -top-3 -right-3 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                20-30 Page Report
+              </div>
+
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: '#0B5FFF' }}>
                     <span className="text-white text-sm font-bold">E</span>
                   </div>
-                  <span className="font-bold text-gray-900">Exit Readiness Report</span>
+                  <span className="font-bold text-gray-900">ExitClarity Report</span>
+                </div>
+                <span className="text-gray-400 text-sm">Sample</span>
+              </div>
+
+              {/* Executive Summary Section */}
+              <div className="bg-gray-50 rounded-xl p-4 mb-4 border">
+                <h4 className="font-bold text-gray-800 mb-3 text-sm uppercase tracking-wide">Executive Summary</h4>
+                <div className="space-y-2">
+                  <div className="h-2 bg-gray-300 rounded w-full"></div>
+                  <div className="h-2 bg-gray-300 rounded w-4/5"></div>
+                  <div className="h-2 bg-gray-300 rounded w-3/4"></div>
                 </div>
               </div>
 
-              {/* Main Score */}
-              <div className="bg-white rounded-xl p-6 shadow-sm border mb-6">
-                <div className="flex items-center gap-6">
-                  {/* Score Circle */}
-                  <div className="relative w-20 h-20 flex-shrink-0">
-                    <svg className="w-20 h-20 transform -rotate-90">
-                      <circle cx="40" cy="40" r="32" stroke="#e5e7eb" strokeWidth="6" fill="none" />
-                      <circle 
-                        cx="40" 
-                        cy="40" 
-                        r="32" 
-                        stroke="#0B5FFF" 
-                        strokeWidth="6" 
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeDasharray="201"
-                        strokeDashoffset="60"
-                      />
-                    </svg>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-2xl font-bold text-gray-900">85</div>
+              {/* Key Assessments Section */}
+              <div className="bg-gray-50 rounded-xl p-4 mb-4 border">
+                <h4 className="font-bold text-gray-800 mb-4 text-sm uppercase tracking-wide">Key Assessments</h4>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-700">Financial Performance</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-16 h-2 bg-gray-200 rounded-full">
+                        <div className="w-14 h-2 bg-green-500 rounded-full"></div>
+                      </div>
                     </div>
                   </div>
-
-                  {/* Score Details */}
-                  <div className="flex-1">
-                    <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-3 py-1 rounded-full mb-3">
-                      <CheckCircle className="w-4 h-4" />
-                      <span className="font-semibold text-sm">Ready to Exit</span>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="text-center">
-                        <div className="text-lg font-bold text-gray-900">$12M-$18M</div>
-                        <div className="text-xs text-gray-500 uppercase">Est. Value</div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-700">Market Position</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-16 h-2 bg-gray-200 rounded-full">
+                        <div className="w-10 h-2 bg-blue-500 rounded-full"></div>
                       </div>
-                      <div className="text-center">
-                        <div className="text-lg font-bold text-gray-900">4.2x</div>
-                        <div className="text-xs text-gray-500 uppercase">Multiple</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-700">Operations</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-16 h-2 bg-gray-200 rounded-full">
+                        <div className="w-8 h-2 bg-yellow-500 rounded-full"></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Report Sections Preview */}
-              <div className="space-y-3">
-                <h4 className="font-semibold text-gray-900 mb-3">11 Critical Areas Analyzed:</h4>
-                <div className="grid grid-cols-2 gap-2 text-sm">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-700">Financial Performance</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-700">Market Position</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                    <span className="text-gray-700">Team & Management</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-700">Customer Base</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <span className="text-gray-700">Documentation</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-700">Operations</span>
-                  </div>
+              {/* Recommendations Section */}
+              <div className="bg-gray-50 rounded-xl p-4 mb-6 border">
+                <h4 className="font-bold text-gray-800 mb-3 text-sm uppercase tracking-wide">Recommendations</h4>
+                <div className="space-y-2">
+                  <div className="h-2 bg-gray-300 rounded w-full"></div>
+                  <div className="h-2 bg-gray-300 rounded w-5/6"></div>
+                  <div className="h-2 bg-gray-300 rounded w-4/5"></div>
+                  <div className="h-2 bg-gray-300 rounded w-3/4"></div>
                 </div>
+              </div>
+
+              {/* Bottom Score & Recommendation */}
+              <div className="flex items-center justify-between">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-gray-900">8.5/10</div>
+                  <div className="text-gray-500 text-sm">Exit Readiness</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">GO</div>
+                  <div className="text-gray-500 text-sm">Recommendation</div>
+                </div>
+              </div>
+
+              {/* 11 Critical Factors Badge */}
+              <div className="absolute -bottom-3 -left-3 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                11 Critical Factors
               </div>
             </div>
             
