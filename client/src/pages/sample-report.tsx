@@ -230,7 +230,7 @@ export default function SampleReport() {
 
                     {/* Floating Badges */}
                     <div className="absolute -top-3 -right-3 bg-gradient-to-r from-primary to-primary-light text-white text-xs px-3 py-1.5 rounded-full font-semibold shadow-lg">
-                      20-30 Page Report
+                      25-page Report
                     </div>
                     <div className="absolute -bottom-3 -left-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs px-3 py-1.5 rounded-full font-semibold shadow-lg">
                       11 Critical Factors

@@ -166,7 +166,7 @@ export function WhyExitClaritySection() {
               <div className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-2xl text-sm font-bold shadow-xl">
                 <div className="flex items-center gap-2">
                   <FileText className="w-4 h-4" />
-                  20-30 Page Report
+                  25-page Report
                 </div>
               </div>
 
