@@ -5,7 +5,6 @@ import { RossStorySection } from "@/components/ross-story-section";
 import { AssessmentStepsSection } from "@/components/assessment-steps-section";
 import { WhyExitClaritySection } from "@/components/why-exitclarity-section";
 import { FAQSection } from "@/components/faq-section";
-import { FinalCTASection } from "@/components/final-cta-section";
 import Footer from "@/components/footer";
 import { useMeta } from "@/hooks/use-meta";
 
@@ -25,7 +24,6 @@ export default function Landing() {
         <AssessmentStepsSection />
         <WhyExitClaritySection />
         <FAQSection />
-        <FinalCTASection />
       </div>
       <Footer />
     </div>
