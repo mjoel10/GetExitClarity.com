@@ -33,10 +33,11 @@ function AssessmentProgress() {
         {/* Platform Card */}
         <div className="relative z-10">
           {/* Visual Header */}
-          <div className="text-center mb-6">
-            <div className="w-8 h-8 rounded-xl mx-auto bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-sm">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-sm">
               <CheckCircle className="w-4 h-4 text-white" />
             </div>
+            <span className="text-lg font-semibold text-primary">ExitClarity</span>
           </div>
 
           {/* Enhanced Progress Section */}
