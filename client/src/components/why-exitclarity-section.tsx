@@ -200,16 +200,13 @@ export function WhyExitClaritySection() {
                   "Detailed analysis across 11 critical factors",
                   "Prioritized action plan with ROI estimates"
                 ].map((item, index) => (
-                  <div key={index} className="group relative">
-                    <div className="absolute -inset-2 bg-gradient-to-r from-primary/5 to-blue-600/5 rounded-xl blur-sm group-hover:blur-md transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
-                    <div className="relative flex items-center p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-white/60 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:transform group-hover:scale-[1.02]">
-                      <div className="w-8 h-8 bg-gradient-to-br from-primary to-blue-600 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 shadow-md group-hover:shadow-lg transition-all duration-300">
-                        <CheckCircle className="w-4 h-4 text-white" />
-                      </div>
-                      <span className="text-foreground font-medium leading-relaxed">
-                        {item}
-                      </span>
+                  <div key={index} className="flex items-center group">
+                    <div className="w-6 h-6 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
+                      <CheckCircle className="w-3.5 h-3.5 text-white" />
                     </div>
+                    <span className="text-foreground leading-relaxed group-hover:text-primary transition-colors duration-200">
+                      {item}
+                    </span>
                   </div>
                 ))}
               </div>
