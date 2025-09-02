@@ -8,7 +8,12 @@ declare global {
 
 // Initialize Google Analytics
 export const initGA = () => {
-  const measurementId = 'G-LT18BK9LX8';
+  const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+
+  if (!measurementId) {
+    console.warn('Missing required Google Analytics key: VITE_GA_MEASUREMENT_ID');
+    return;
+  }
 
   // Add Google Analytics script to the head
   const script1 = document.createElement('script');
@@ -31,7 +36,8 @@ export const initGA = () => {
 export const trackPageView = (url: string) => {
   if (typeof window === 'undefined' || !window.gtag) return;
   
-  const measurementId = 'G-LT18BK9LX8';
+  const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+  if (!measurementId) return;
   
   window.gtag('config', measurementId, {
     page_path: url
