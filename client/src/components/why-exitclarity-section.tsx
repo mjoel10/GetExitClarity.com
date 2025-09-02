@@ -36,11 +36,6 @@ export function WhyExitClaritySection() {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-primary/10 backdrop-blur-sm text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/20">
-            <FileText className="w-4 h-4" />
-            Your Comprehensive Report
-          </div>
-          
           <h2 className="text-4xl lg:text-5xl font-extrabold text-foreground mb-6 leading-tight">
             Get Your{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
