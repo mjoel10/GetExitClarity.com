@@ -4,7 +4,7 @@ export function RossStorySection() {
   return (
     <section className="pt-24 pb-24 bg-white">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
+        <div className="grid lg:grid-cols-5 gap-12 items-center">
           {/* Left Side - Content (60%) */}
           <div className="lg:col-span-3">
             <h2 className="text-4xl font-extrabold text-foreground mb-8 mt-20" style={{ lineHeight: '1.3' }}>
@@ -36,9 +36,9 @@ export function RossStorySection() {
                 <img 
                   src={rossPhoto} 
                   alt="Ross Joel, Founder of ExitClarity" 
-                  className="w-64 h-64 object-cover rounded-xl shadow-lg mx-auto"
+                  className="w-48 h-48 object-cover rounded-xl shadow-lg mx-auto"
                 />
-                <div className="mt-6 text-center">
+                <div className="mt-4 text-center">
                   <h3 className="text-lg font-bold text-foreground mb-2">Ross Joel</h3>
                   <p className="text-sm text-muted-foreground font-medium">Founder & CEO, ExitClarity</p>
                   <p className="text-sm text-muted-foreground mt-1">30+ Years M&A Experience</p>
