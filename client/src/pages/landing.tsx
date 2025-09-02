@@ -2,7 +2,7 @@ import Header from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
 import { ProblemSection } from "@/components/problem-section";
 import { RossStorySection } from "@/components/ross-story-section";
-import { AssessmentProcessSection } from "@/components/assessment-process-section";
+import { AssessmentStepsSection } from "@/components/assessment-steps-section";
 import { WhyExitClaritySection } from "@/components/why-exitclarity-section";
 import { FAQSection } from "@/components/faq-section";
 import { FinalCTASection } from "@/components/final-cta-section";
@@ -22,7 +22,7 @@ export default function Landing() {
         <HeroSection />
         <ProblemSection />
         <RossStorySection />
-        <AssessmentProcessSection />
+        <AssessmentStepsSection />
         <WhyExitClaritySection />
         <FAQSection />
         <FinalCTASection />
