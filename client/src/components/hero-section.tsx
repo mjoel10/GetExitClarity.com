@@ -115,8 +115,8 @@ function AssessmentProgress() {
               <div className="text-xs text-gray-600 font-medium">Complete</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-900 mb-1">8:47</div>
-              <div className="text-xs text-gray-600 font-medium">Remaining</div>
+              <div className="text-2xl font-bold text-gray-900 mb-1">GO</div>
+              <div className="text-xs text-gray-600 font-medium">Trending</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-gray-900 mb-1">11</div>
