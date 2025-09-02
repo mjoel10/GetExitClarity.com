@@ -10,7 +10,7 @@ export function WhyExitClaritySection() {
     {
       icon: Handshake,
       title: "Owner-First Approach",
-      description: "No hidden agenda. We don't broker deals or take commissions."
+      description: "No hidden agenda. Unbiased analysis from owners who've been there."
     },
     {
       icon: Award,
