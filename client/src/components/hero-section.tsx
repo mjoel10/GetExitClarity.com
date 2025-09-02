@@ -134,21 +134,21 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative py-16 lg:py-20 bg-white">
+    <section className="relative py-20 lg:py-32 bg-white">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Content */}
           <div className="order-2 lg:order-1">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4" style={{ lineHeight: '1.5' }}>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6" style={{ lineHeight: '1.4' }}>
               Are You Ready to Sell Your Business?
             </h1>
             
-            <p className="text-lg lg:text-xl text-muted-foreground mb-6" style={{ lineHeight: '1.5' }}>
+            <p className="text-lg lg:text-xl text-muted-foreground mb-10" style={{ lineHeight: '1.6' }}>
               Get a free personalized exit readiness report in 20 minutes
             </p>
             
             {/* Value Propositions */}
-            <div className="space-y-3 mb-6">
+            <div className="space-y-4 mb-8" style={{ lineHeight: '1.7' }}>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
                 <span className="text-base text-foreground">Realistic business valuation ranges</span>
@@ -164,7 +164,7 @@ export function HeroSection() {
             </div>
             
             {/* CTA Button */}
-            <div className="mb-4">
+            <div className="mb-6">
               <Button 
                 onClick={handleCTAClick}
                 variant="hero"

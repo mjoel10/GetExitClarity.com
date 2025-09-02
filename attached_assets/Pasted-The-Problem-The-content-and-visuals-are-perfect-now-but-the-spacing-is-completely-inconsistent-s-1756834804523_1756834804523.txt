@@ -1,0 +1,117 @@
+The Problem:
+The content and visuals are perfect now, but the spacing is completely inconsistent - some sections are cramped, others have massive gaps, and mobile is a disaster. We need to rebuild the spacing system from scratch while keeping all current content and visuals.
+Create a Consistent Spacing System:
+1. Establish Clear Section Boundaries:
+
+Between major sections: 80-100px on desktop, 60px on mobile
+Hero to Stats section: This needs MORE space (currently cramped)
+Stats to Ross section: Needs consistent padding
+Between all other sections: Use the SAME spacing consistently
+
+2. Fix Hero Section Spacing FIRST:
+
+Move the entire left content block UP by 40-60px - it's sitting too low
+Headline to subheadline: 20-24px gap (currently too tight)
+Subheadline to bullet points: 40px gap minimum (currently cramped)
+Bullet points to CTA button: 30px gap
+CTA button to "Join 500+" text: 20px gap
+Vertically center the left content with the right visual (currently bottom-heavy)
+Add padding around the right visual - it needs breathing room
+
+3. Fix Internal Section Spacing:
+Statistics Section:
+
+Cards need more internal padding (at least 30px)
+Add more space between the cards themselves
+"Know where you stand today" needs 40px margin above it
+Ensure even distribution across the blue background
+
+Ross's Section:
+
+Photo needs 40px+ gap from text
+Add subtle background to the quote with 20px padding
+Space between paragraphs: 20px
+Name/title under photo needs proper spacing
+
+3-Step Process Section:
+
+Icons need 20px from their titles
+Report visual needs 30px padding around it
+Bullet points need 1.8 line-height
+Each step needs consistent spacing
+
+Report Preview Section:
+
+Center-align the visual properly
+"This is what you'll receive" needs 30px from visual
+Bullet points need 1.6 line-height and 10px between items
+Add padding around the entire report card
+
+Trust Signals Section:
+
+Each item needs 40px vertical padding
+Icons need 20px from text
+Consistent spacing between the three columns
+
+FAQ Section:
+
+Each question needs 20px padding
+Increase clickable area to full width
+15px gap between question and answer
+
+4. Mobile-Specific Fixes:
+
+Stack EVERYTHING vertically on mobile
+Hero visual goes BELOW text on mobile
+Ross's photo centers above his bio
+Report preview becomes full-width
+Reduce all spacing by 30% on mobile but keep consistent
+Ensure smooth transitions at breakpoints
+
+5. Typography Line-Height Fixes:
+
+Body text: 1.6-1.8 line-height everywhere
+Headlines: Consistent 30-40px margin-bottom
+Lists: 1.6 line-height with 8px between items
+
+Implementation Approach:
+
+Create CSS variables for consistency:
+
+css:root {
+  --section-gap: 100px;
+  --section-gap-mobile: 60px;
+  --content-padding: 40px;
+  --content-padding-mobile: 20px;
+  --heading-margin: 35px;
+  --text-line-height: 1.7;
+}
+
+Apply systematically to every section
+Test at all breakpoints:
+
+Mobile: 320px, 375px, 414px
+Tablet: 768px, 1024px
+Desktop: 1280px, 1440px, 1920px
+
+
+Ensure NO content changes - only spacing/layout
+
+Critical Areas to Fix:
+
+Hero content is too low and cramped
+Inconsistent gaps between sections
+Mobile layout is broken
+Line-heights are too tight
+Internal padding is inconsistent
+
+Success Criteria:
+
+Every section has room to breathe
+Consistent spacing throughout
+Perfect mobile experience
+No cramped text anywhere
+Professional, scannable layout
+Content remains exactly as is
+
+The goal: Transform the current cramped, inconsistent layout into a professional, well-spaced page that works perfectly on all devices while keeping all content and visuals unchanged.

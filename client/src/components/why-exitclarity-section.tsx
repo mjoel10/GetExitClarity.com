@@ -20,17 +20,17 @@ export function WhyExitClaritySection() {
   ];
 
   return (
-    <section className="pt-24 pb-24 bg-white">
+    <section className="py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-4xl font-extrabold text-foreground mb-8 mt-20" style={{ lineHeight: '1.3' }}>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-4xl font-extrabold text-foreground mb-8" style={{ lineHeight: '1.3' }}>
             Unbiased Advice You Can Trust
           </h2>
         </div>
 
         {/* Three Columns */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
             return (
@@ -39,7 +39,7 @@ export function WhyExitClaritySection() {
                   <Icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-foreground mb-3">{reason.title}</h3>
-                <p className="text-sm text-muted-foreground" style={{ lineHeight: '1.6' }}>{reason.description}</p>
+                <p className="text-sm text-muted-foreground" style={{ lineHeight: '1.7' }}>{reason.description}</p>
               </div>
             );
           })}
