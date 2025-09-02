@@ -25,17 +25,17 @@ export function WhyExitClaritySection() {
   ];
 
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden">
+    <section className="relative py-16 lg:py-20 overflow-hidden">
       {/* Premium Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/30 to-slate-50"></div>
       
       {/* Decorative Elements */}
-      <div className="absolute top-20 right-10 w-48 h-48 bg-gradient-to-br from-blue-100/40 to-primary/10 rounded-full blur-2xl opacity-40"></div>
-      <div className="absolute bottom-10 left-10 w-32 h-32 bg-gradient-to-tr from-primary/30 to-blue-300/20 rounded-full blur-xl opacity-60"></div>
+      <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-blue-100/40 to-primary/10 rounded-full blur-2xl opacity-40"></div>
+      <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-tr from-primary/30 to-blue-300/20 rounded-full blur-xl opacity-60"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Report Preview + What You'll Receive */}
-        <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
           {/* Premium Report Visual */}
           <div className="relative">
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-200/30 to-primary/20 rounded-full blur-2xl"></div>
@@ -171,13 +171,13 @@ export function WhyExitClaritySection() {
           </div>
           
           {/* What You'll Receive */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             <div>
-              <h3 className="text-3xl font-bold text-foreground mb-6 leading-tight">
+              <h3 className="text-3xl font-bold text-foreground mb-4 leading-tight">
                 This is what you'll receive
               </h3>
               
-              <ul className="space-y-5">
+              <ul className="space-y-3">
                 {[
                   "Comprehensive exit readiness score (0-100)",
                   "Realistic valuation ranges based on your industry", 
@@ -213,30 +213,30 @@ export function WhyExitClaritySection() {
         {/* Cohesive Unbiased Advice Section - Different Visual Treatment */}
         <div className="relative">
           {/* Connecting visual element */}
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-16 bg-gradient-to-b from-primary/40 to-transparent"></div>
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-8 bg-gradient-to-b from-primary/40 to-transparent"></div>
           
           {/* Content Card */}
-          <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-12 lg:p-16 shadow-2xl border border-slate-700/50 relative overflow-hidden">
+          <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-8 lg:p-10 shadow-2xl border border-slate-700/50 relative overflow-hidden">
             {/* Dark theme decorative elements */}
-            <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-primary/20 rounded-full blur-2xl"></div>
-            <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-tr from-primary/20 to-blue-400/20 rounded-full blur-xl"></div>
+            <div className="absolute top-6 right-6 w-24 h-24 bg-gradient-to-br from-blue-400/20 to-primary/20 rounded-full blur-2xl"></div>
+            <div className="absolute bottom-6 left-6 w-20 h-20 bg-gradient-to-tr from-primary/20 to-blue-400/20 rounded-full blur-xl"></div>
             
             <div className="relative z-10">
               {/* Header */}
-              <div className="text-center mb-12">
-                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-white/20">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-white/20">
                   <Star className="w-4 h-4" />
                   Built by Business Owners
                 </div>
                 
-                <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-4 leading-tight">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                     Unbiased Advice
                   </span>{" "}
                   You Can Trust
                 </h2>
                 
-                <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
+                <p className="text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
                   Built by business owners, for business owners. Get the insights you need without hidden agendas.
                 </p>
               </div>
