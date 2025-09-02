@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Target, TrendingUp } from "lucide-react";
 
 // Professional Assessment Visual Component
 function AssessmentProgress() {
@@ -93,7 +93,9 @@ function AssessmentProgress() {
                         ? 'bg-yellow-400 text-white' 
                         : 'bg-gray-300 text-gray-600'
                   }`}>
-                    {factor.completed ? '✓' : factor.active ? '⏳' : '○'}
+                    {factor.completed ? '✓' : 
+                     factor.active ? <Target className="w-3 h-3" /> : 
+                     factor.name === 'Market Position' ? <TrendingUp className="w-3 h-3" /> : '○'}
                   </div>
                   <h4 className="font-medium text-gray-900 text-xs leading-tight">{factor.name}</h4>
                 </div>
