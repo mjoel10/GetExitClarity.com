@@ -5,127 +5,124 @@ import { CheckCircle } from "lucide-react";
 function AssessmentProgress() {
   return (
     <div 
-      className="max-w-2xl mx-auto rounded-3xl p-8 shadow-2xl relative overflow-hidden"
+      className="max-w-lg mx-auto rounded-3xl p-6 shadow-2xl relative overflow-hidden"
       style={{ 
         background: 'linear-gradient(135deg, #0a4f4f 0%, #1a7575 100%)'
       }}
     >
       {/* Animated particles background */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(6)].map((_, i) => (
+        {[...Array(8)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
+            className="absolute w-1 h-1 bg-white/30 rounded-full"
             style={{
-              left: `${10 + i * 15}%`,
-              top: `${20 + (i % 3) * 30}%`,
-              animationDelay: `${i * 0.5}s`,
-              animationDuration: `${3 + i}s`
+              left: `${15 + i * 12}%`,
+              top: `${10 + (i % 4) * 25}%`,
+              animationDelay: `${i * 0.3}s`
             }}
+            className="animate-bounce"
           />
         ))}
       </div>
 
       {/* Platform Card */}
-      <div className="bg-white rounded-3xl p-8 relative z-10 shadow-xl">
+      <div className="bg-white rounded-2xl p-6 relative z-10 shadow-xl">
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
-            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
+        <div className="text-center mb-6">
+          <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-3 flex items-center justify-center shadow-lg">
+            <CheckCircle className="w-6 h-6 text-white" />
           </div>
-          <h3 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+          <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
             ExitClarity
           </h3>
-          <p className="text-gray-600 text-lg">Exit Readiness Assessment</p>
+          <p className="text-gray-600 text-sm">Exit Readiness Assessment</p>
         </div>
 
         {/* Progress Section */}
-        <div className="bg-gray-50 rounded-2xl p-6 mb-8">
-          <div className="flex justify-between items-center mb-4">
-            <span className="text-lg text-primary font-semibold flex items-center gap-2">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              Assessment Progress
-            </span>
-            <div className="flex items-center gap-2">
-              <span className="bg-primary/10 text-primary px-3 py-1 rounded-lg text-sm font-medium">
-                8 mins remaining
-              </span>
-            </div>
-          </div>
+        <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 mb-6 border border-blue-200">
           <div className="flex justify-between items-center mb-3">
-            <span className="text-2xl font-bold text-gray-900">8 of 11 factors</span>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-primary" />
+              <span className="text-sm font-semibold text-primary">Assessment Progress</span>
+            </div>
+            <span className="bg-primary/10 text-primary px-2 py-1 rounded-md text-xs font-medium">
+              8 mins remaining
+            </span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
+          
+          <div className="mb-2">
+            <span className="text-lg font-bold text-gray-900">8 of 11 factors</span>
+          </div>
+          
+          <div className="w-full bg-white rounded-full h-2 mb-1 shadow-inner">
             <div 
-              className="bg-gradient-to-r from-primary to-accent h-3 rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
+              className="bg-gradient-to-r from-primary to-accent h-2 rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
               style={{ width: '72.7%' }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-pulse"></div>
             </div>
           </div>
         </div>
 
-        {/* Factor Grid */}
-        <div className="grid grid-cols-2 gap-4">
+        {/* Factor Grid - Improved Layout */}
+        <div className="grid grid-cols-2 gap-3 mb-6">
           {[
-            { name: "Financial Performance", completed: true, icon: "💰" },
-            { name: "Documentation", completed: true, icon: "📄" },
-            { name: "Team & Transition", completed: true, icon: "👥" },
-            { name: "Strategic Planning", completed: false, icon: "🎯" },
-            { name: "Operations", completed: true, icon: "⚙️" },
-            { name: "Market Position", completed: false, icon: "📈" },
+            { name: "Financial Performance", completed: true },
+            { name: "Documentation", completed: true },
+            { name: "Team & Transition", completed: true },
+            { name: "Strategic Planning", completed: false, active: true },
+            { name: "Operations", completed: true },
+            { name: "Market Position", completed: false },
           ].map((factor, i) => (
             <div 
               key={i}
-              className={`p-4 rounded-xl border-2 transition-all duration-300 ${
+              className={`p-3 rounded-lg border transition-all duration-300 ${
                 factor.completed 
-                  ? 'bg-primary/5 border-primary/20' 
-                  : i === 3 
-                    ? 'bg-yellow-50 border-yellow-200 shadow-lg ring-2 ring-yellow-400/50' 
+                  ? 'bg-blue-50 border-blue-200' 
+                  : factor.active 
+                    ? 'bg-yellow-50 border-yellow-300 shadow-md ring-1 ring-yellow-400/30' 
                     : 'bg-gray-50 border-gray-200'
               }`}
             >
-              <div className="flex items-center gap-3">
-                <div className={`w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold ${
-                  factor.completed 
-                    ? 'bg-primary text-white' 
-                    : i === 3 
-                      ? 'bg-yellow-400 text-white animate-pulse' 
-                      : 'bg-gray-300 text-gray-600'
-                }`}>
-                  {factor.completed ? '✓' : factor.icon}
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold text-gray-900 text-sm">{factor.name}</h4>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className={`w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold ${
+                    factor.completed 
+                      ? 'bg-primary text-white' 
+                      : factor.active 
+                        ? 'bg-yellow-400 text-white' 
+                        : 'bg-gray-300 text-gray-600'
+                  }`}>
+                    {factor.completed ? '✓' : factor.active ? '⏳' : '○'}
+                  </div>
+                  <h4 className="font-medium text-gray-900 text-xs leading-tight">{factor.name}</h4>
                 </div>
                 {factor.completed && (
-                  <CheckCircle className="w-5 h-5 text-primary" />
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
                 )}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom Stats */}
-        <div className="flex justify-center gap-8 mt-8 p-6 bg-yellow-50 rounded-2xl">
+        {/* Bottom Stats - Cleaner Design */}
+        <div className="grid grid-cols-3 gap-4 p-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl border">
           <div className="text-center">
-            <div className="text-2xl font-bold text-gray-900">73%</div>
-            <div className="text-sm text-gray-600">Complete</div>
+            <div className="text-xl font-bold text-gray-900">73%</div>
+            <div className="text-xs text-gray-600">Complete</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-gray-900">8:47</div>
-            <div className="text-sm text-gray-600">Remaining</div>
+            <div className="text-xl font-bold text-gray-900">8:47</div>
+            <div className="text-xs text-gray-600">Remaining</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-gray-900">11</div>
-            <div className="text-sm text-gray-600">Total Factors</div>
+            <div className="text-xl font-bold text-gray-900">11</div>
+            <div className="text-xs text-gray-600">Total Factors</div>
           </div>
         </div>
       </div>
+
     </div>
   );
 }
