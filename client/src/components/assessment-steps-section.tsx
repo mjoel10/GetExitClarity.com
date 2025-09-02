@@ -56,17 +56,17 @@ export function AssessmentStepsSection() {
               <div className="inline-flex items-center gap-3 text-sm text-muted-foreground">
                 <div className="flex items-center gap-1">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>5-7 minutes</span>
+                  <span>11-deal categories</span>
                 </div>
                 <div className="w-px h-4 bg-muted"></div>
                 <div className="flex items-center gap-1">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span>Instant results</span>
+                  <span>Straight to your inbox</span>
                 </div>
                 <div className="w-px h-4 bg-muted"></div>
                 <div className="flex items-center gap-1">
                   <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                  <span>20-30 page report</span>
+                  <span>25 page strategic report</span>
                 </div>
               </div>
             </div>
