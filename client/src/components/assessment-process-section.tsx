@@ -7,11 +7,11 @@ export function AssessmentProcessSection() {
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" style={{ lineHeight: '1.5' }}>
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4" style={{ lineHeight: '1.4' }}>
             Your Personalized Exit Readiness Report
           </h2>
         </div>

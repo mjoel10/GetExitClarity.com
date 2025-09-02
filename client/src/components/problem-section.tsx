@@ -4,7 +4,7 @@ export function ProblemSection() {
       <div className="container mx-auto px-6">
         {/* Main Problem Statement */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8" style={{ lineHeight: '1.5' }}>
+          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-6" style={{ lineHeight: '1.4' }}>
             Most Business Owners Aren't Ready When Opportunity Knocks
           </h2>
         </div>

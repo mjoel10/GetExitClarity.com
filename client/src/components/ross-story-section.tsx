@@ -2,12 +2,12 @@ import rossPhoto from "@assets/DSC09365_1756833269930.jpg";
 
 export function RossStorySection() {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* Left Side - Content (60%) */}
           <div className="lg:col-span-3">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" style={{ lineHeight: '1.5' }}>
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4" style={{ lineHeight: '1.4' }}>
               Built by an Owner Who Learned the Hard Way
             </h2>
             
