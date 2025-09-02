@@ -151,12 +151,6 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
           {/* Left Side - Enhanced Content */}
           <div className="order-1 lg:order-1 space-y-8">
-            {/* Hero Badge */}
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
-              <Sparkles className="w-4 h-4" />
-              Free Exit Readiness Assessment
-            </div>
-            
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 Are You Ready to{" "}
@@ -199,21 +193,26 @@ export function HeroSection() {
                   size="xl"
                   className="relative font-semibold transition-all duration-300 hover:shadow-2xl hover:scale-105 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-lg px-8 py-4"
                 >
-                  Create Your Free ExitClarity Account
+                  Start Your Assessment
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>
               
-              {/* Enhanced Trust Indicator */}
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-2">
-                  {[...Array(4)].map((_, i) => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-blue-600 border-2 border-white shadow-sm"></div>
-                  ))}
-                </div>
-                <p className="text-muted-foreground font-medium">
-                  Join 500+ business owners who've discovered their exit readiness
+              {/* Trust Indicator with Free Messaging */}
+              <div className="space-y-3">
+                <p className="text-sm text-muted-foreground font-medium">
+                  No credit card required
                 </p>
+                <div className="flex items-center gap-3">
+                  <div className="flex -space-x-2">
+                    {[...Array(4)].map((_, i) => (
+                      <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-blue-600 border-2 border-white shadow-sm"></div>
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground font-medium">
+                    Join 500+ business owners who've discovered their exit readiness
+                  </p>
+                </div>
               </div>
             </div>
           </div>
