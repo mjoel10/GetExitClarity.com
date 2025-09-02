@@ -7,11 +7,11 @@ export function AssessmentProcessSection() {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="pt-24 pb-24 bg-gray-50">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4" style={{ lineHeight: '1.4' }}>
+          <h2 className="text-4xl font-extrabold text-foreground mb-8 mt-20" style={{ lineHeight: '1.3' }}>
             Your Personalized Exit Readiness Report
           </h2>
         </div>
@@ -23,8 +23,8 @@ export function AssessmentProcessSection() {
             <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#0B5FFF' }}>
               <Clipboard className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-lg font-bold text-foreground mb-2">Take Assessment</h3>
-            <p className="text-muted-foreground" style={{ lineHeight: '1.5' }}>Answer questions about your business in 5-7 minutes</p>
+            <h3 className="text-lg font-bold text-foreground mb-3">Take Assessment</h3>
+            <p className="text-sm text-muted-foreground" style={{ lineHeight: '1.5' }}>Answer questions about your business in 5-7 minutes</p>
           </div>
 
           {/* Step 2 */}
@@ -32,8 +32,8 @@ export function AssessmentProcessSection() {
             <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#0B5FFF' }}>
               <BarChart3 className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-lg font-bold text-foreground mb-2">Get Instant Analysis</h3>
-            <p className="text-muted-foreground" style={{ lineHeight: '1.5' }}>Algorithm analyzes against 1000+ successful exits</p>
+            <h3 className="text-lg font-bold text-foreground mb-3">Get Instant Analysis</h3>
+            <p className="text-sm text-muted-foreground" style={{ lineHeight: '1.5' }}>Algorithm analyzes against 1000+ successful exits</p>
           </div>
 
           {/* Step 3 */}
@@ -41,8 +41,8 @@ export function AssessmentProcessSection() {
             <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#0B5FFF' }}>
               <FileText className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-lg font-bold text-foreground mb-2">Receive Your Report</h3>
-            <p className="text-muted-foreground" style={{ lineHeight: '1.5' }}>Detailed report with valuation and action plan</p>
+            <h3 className="text-lg font-bold text-foreground mb-3">Receive Your Report</h3>
+            <p className="text-sm text-muted-foreground" style={{ lineHeight: '1.5' }}>Detailed report with valuation and action plan</p>
           </div>
         </div>
 
@@ -189,10 +189,10 @@ export function AssessmentProcessSection() {
             
             {/* Description */}
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-xl font-bold text-foreground mb-6">
                 This is what you'll receive
               </h3>
-              <ul className="space-y-3 text-muted-foreground">
+              <ul className="space-y-4 text-sm text-muted-foreground" style={{ lineHeight: '1.6' }}>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span>Comprehensive exit readiness score (0-100)</span>

@@ -11,17 +11,17 @@ export function ProblemSection() {
 
         {/* Statistics Cards */}
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-2xl p-8 shadow-lg border text-center">
-            <div className="text-5xl font-bold text-red-600 mb-3">80%</div>
-            <p className="text-gray-700 font-medium">of business owners have no exit strategy</p>
+          <div className="bg-white rounded-2xl p-10 shadow-lg border text-center">
+            <div className="text-5xl font-bold text-red-600 mb-4">80%</div>
+            <p className="text-gray-700 text-sm">of business owners have no exit strategy</p>
           </div>
-          <div className="bg-white rounded-2xl p-8 shadow-lg border text-center">
-            <div className="text-5xl font-bold text-red-600 mb-3">$10M+</div>
-            <p className="text-gray-700 font-medium">average value left on the table</p>
+          <div className="bg-white rounded-2xl p-10 shadow-lg border text-center">
+            <div className="text-5xl font-bold text-red-600 mb-4">$10M+</div>
+            <p className="text-gray-700 text-sm">average value left on the table</p>
           </div>
-          <div className="bg-white rounded-2xl p-8 shadow-lg border text-center">
-            <div className="text-5xl font-bold text-blue-600 mb-3">18-24</div>
-            <p className="text-gray-700 font-medium">months typical prep time needed</p>
+          <div className="bg-white rounded-2xl p-10 shadow-lg border text-center">
+            <div className="text-5xl font-bold text-blue-600 mb-4">18-24</div>
+            <p className="text-gray-700 text-sm">months typical prep time needed</p>
           </div>
         </div>
       </div>
