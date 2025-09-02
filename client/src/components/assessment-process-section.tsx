@@ -71,45 +71,19 @@ export function AssessmentProcessSection() {
         <div className="bg-white rounded-2xl p-8 shadow-lg border">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Report Visual */}
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 text-white">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-bold">Executive Summary</h3>
-                <div className="text-xs bg-white/20 px-2 py-1 rounded">ExitClarity</div>
-              </div>
-              
-              {/* Score Gauge */}
-              <div className="text-center mb-6">
-                <div className="relative w-24 h-24 mx-auto mb-4">
-                  <div className="w-24 h-24 rounded-full border-8 border-gray-600 relative">
-                    <div 
-                      className="absolute top-0 left-0 w-24 h-24 rounded-full border-8 border-transparent border-t-blue-400 border-r-blue-400"
-                      style={{ transform: 'rotate(252deg)' }}
-                    ></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-2xl font-bold">70</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="inline-block bg-gradient-to-r from-primary to-accent px-4 py-2 rounded-lg">
-                  <span className="font-bold">GO - Proceed to Market</span>
-                </div>
-              </div>
-              
-              {/* Metrics */}
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div className="bg-white/10 rounded p-3">
-                  <div className="text-xs text-gray-300">Enterprise Value</div>
-                  <div className="text-sm font-bold">$12M-$18M</div>
-                </div>
-                <div className="bg-white/10 rounded p-3">
-                  <div className="text-xs text-gray-300">Multiple</div>
-                  <div className="text-sm font-bold">4.2x</div>
-                </div>
-                <div className="bg-white/10 rounded p-3">
-                  <div className="text-xs text-gray-300">Readiness</div>
-                  <div className="text-sm font-bold">94%</div>
-                </div>
-              </div>
+            <div className="bg-white rounded-xl p-2 shadow-2xl border">
+              <iframe 
+                src="/attached_assets/comprehensive-report.html"
+                className="w-full h-[400px] rounded-xl border-0"
+                title="ExitClarity Comprehensive Report"
+                style={{ 
+                  background: 'linear-gradient(135deg, #1a1f2e 0%, #2d3748 100%)',
+                  transform: 'scale(0.6)',
+                  transformOrigin: 'top left',
+                  width: '166.667%',
+                  height: '667px'
+                }}
+              />
             </div>
             
             {/* Description */}

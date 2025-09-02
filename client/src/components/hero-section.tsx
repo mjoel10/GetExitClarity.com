@@ -1,55 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 
-// Assessment Progress Visual Component
+// Professional Assessment Visual Component
 function AssessmentProgress() {
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-lg border max-w-md mx-auto">
-      {/* Header */}
-      <div className="text-center mb-6">
-        <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
-          <CheckCircle className="w-8 h-8 text-white" />
-        </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">Exit Readiness Assessment</h3>
-        <p className="text-gray-600 text-sm">See exactly where you stand</p>
-      </div>
-      
-      {/* Progress Bar */}
-      <div className="mb-6">
-        <div className="flex justify-between items-center mb-2">
-          <span className="text-sm font-medium text-gray-700">Assessment Progress</span>
-          <span className="text-sm font-bold text-primary">8 of 11 factors</span>
-        </div>
-        <div className="w-full bg-gray-200 rounded-full h-3">
-          <div 
-            className="bg-gradient-to-r from-primary to-accent h-3 rounded-full transition-all duration-1000 ease-out"
-            style={{ width: '73%' }}
-          ></div>
-        </div>
-        <p className="text-xs text-gray-500 mt-1">9 mins remaining</p>
-      </div>
-      
-      {/* Categories */}
-      <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-700">Financial Performance</span>
-          <CheckCircle className="w-5 h-5 text-primary" />
-        </div>
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-700">Documentation</span>
-          <CheckCircle className="w-5 h-5 text-primary" />
-        </div>
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-700">Team & Transition</span>
-          <CheckCircle className="w-5 h-5 text-primary" />
-        </div>
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-700">Strategic Planning</span>
-          <div className="w-5 h-5 border-2 border-primary rounded-full flex items-center justify-center">
-            <div className="w-2 h-2 bg-primary rounded-full"></div>
-          </div>
-        </div>
-      </div>
+    <div className="bg-white rounded-2xl p-2 shadow-2xl border max-w-2xl mx-auto">
+      <iframe 
+        src="/attached_assets/assessment-platform.html"
+        className="w-full h-[500px] rounded-xl border-0"
+        title="ExitClarity Assessment Platform"
+        style={{ 
+          background: 'linear-gradient(135deg, #0a4f4f 0%, #1a7575 100%)',
+          transform: 'scale(0.7)',
+          transformOrigin: 'top left',
+          width: '142.857%',
+          height: '714px'
+        }}
+      />
     </div>
   );
 }
