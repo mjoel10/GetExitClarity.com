@@ -139,7 +139,7 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Side - Content */}
           <div className="order-2 lg:order-1">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4" style={{ lineHeight: '1.5' }}>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4" style={{ lineHeight: '1.2' }}>
               Are You Ready to Sell Your Business?
             </h1>
             

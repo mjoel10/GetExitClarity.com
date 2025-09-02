@@ -36,7 +36,7 @@ export function RossStorySection() {
                 <img 
                   src={rossPhoto} 
                   alt="Ross Joel, Founder of ExitClarity" 
-                  className="w-48 h-48 object-cover rounded-xl shadow-lg mx-auto"
+                  className="w-48 h-64 object-cover rounded-xl shadow-lg mx-auto"
                 />
                 <div className="mt-4 text-center">
                   <h3 className="text-lg font-bold text-foreground mb-2">Ross Joel</h3>
