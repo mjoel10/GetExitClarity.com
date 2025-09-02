@@ -66,7 +66,7 @@ export function FAQSection() {
           
           <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
             Common{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-500">
               Questions
             </span>
           </h2>
