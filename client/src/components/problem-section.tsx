@@ -6,17 +6,17 @@ export function ProblemSection() {
       icon: AlertTriangle,
       value: "80%",
       description: "of business owners have no exit strategy",
-      color: "from-red-500 to-red-600",
-      bgColor: "from-red-50 to-red-100/50",
-      borderColor: "border-red-200/50"
+      color: "from-slate-600 to-slate-700",
+      bgColor: "from-slate-50 to-slate-100/50",
+      borderColor: "border-slate-200/50"
     },
     {
       icon: TrendingDown,
       value: "$10M+",
       description: "average value left on the table",
-      color: "from-red-500 to-red-600",
-      bgColor: "from-red-50 to-red-100/50",
-      borderColor: "border-red-200/50"
+      color: "from-slate-600 to-slate-700",
+      bgColor: "from-slate-50 to-slate-100/50",
+      borderColor: "border-slate-200/50"
     },
     {
       icon: Clock,
@@ -29,7 +29,7 @@ export function ProblemSection() {
   ];
 
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden">
+    <section className="relative py-16 lg:py-24 overflow-hidden">
       {/* Premium Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800"></div>
       
@@ -55,7 +55,7 @@ export function ProblemSection() {
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Enhanced Problem Statement */}
-        <div className="text-center max-w-5xl mx-auto mb-16">
+        <div className="text-center max-w-5xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-white/20">
             <AlertTriangle className="w-4 h-4" />
             The Reality Check
