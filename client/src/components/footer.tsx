@@ -59,7 +59,7 @@ export default function Footer() {
             </h4>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <a 
-                href="https://exitclarity.io/platform/ma-firms" 
+                href="https://www.exitclarity.io/platform/ma-firms" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -74,7 +74,7 @@ export default function Footer() {
                 For M&A Firms
               </a>
               <a 
-                href="https://exitclarity.io/platform/business-owners" 
+                href="https://www.exitclarity.io/platform/business-owners" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -89,7 +89,7 @@ export default function Footer() {
                 For Business Owners
               </a>
               <a 
-                href="https://exitclarity.io/sample-report" 
+                href="https://www.exitclarity.io/sample-report" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -118,7 +118,7 @@ export default function Footer() {
             </h4>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <a 
-                href="https://exitclarity.io/blog" 
+                href="https://www.exitclarity.io/blog" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -133,7 +133,7 @@ export default function Footer() {
                 Blog
               </a>
               <a 
-                href="https://exitclarity.io/resources" 
+                href="https://www.exitclarity.io/resources" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -148,7 +148,7 @@ export default function Footer() {
                 For Business Owners
               </a>
               <a 
-                href="https://exitclarity.io/about" 
+                href="https://www.exitclarity.io/about" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -163,7 +163,7 @@ export default function Footer() {
                 About
               </a>
               <a 
-                href="https://exitclarity.io/resources" 
+                href="https://www.exitclarity.io/resources" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -178,7 +178,7 @@ export default function Footer() {
                 Resources
               </a>
               <a 
-                href="https://exitclarity.io/contact" 
+                href="https://www.exitclarity.io/contact" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -207,7 +207,7 @@ export default function Footer() {
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <a 
-                href="https://exitclarity.io/trial-request"
+                href="https://www.exitclarity.io/trial-request"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -224,7 +224,7 @@ export default function Footer() {
                 Try It with a Client
               </a>
               <a 
-                href="https://exitclarity.io/sample-report"
+                href="https://www.exitclarity.io/sample-report"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -338,7 +338,7 @@ export default function Footer() {
               flexWrap: 'wrap'
             }}>
               <a 
-                href="https://exitclarity.io/privacy" 
+                href="https://www.exitclarity.io/privacy" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -353,7 +353,7 @@ export default function Footer() {
                 Privacy Policy
               </a>
               <a 
-                href="https://exitclarity.io/terms" 
+                href="https://www.exitclarity.io/terms" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -368,7 +368,7 @@ export default function Footer() {
                 Terms of Service
               </a>
               <a 
-                href="https://exitclarity.io/cookies" 
+                href="https://www.exitclarity.io/cookies" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -383,7 +383,7 @@ export default function Footer() {
                 Cookie Policy
               </a>
               <a 
-                href="https://exitclarity.io/security" 
+                href="https://www.exitclarity.io/security" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
