@@ -20,26 +20,26 @@ export function WhyExitClaritySection() {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8">
+        <div className="text-center max-w-4xl mx-auto mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" style={{ lineHeight: '1.5' }}>
             Unbiased Advice You Can Trust
           </h2>
         </div>
 
         {/* Three Columns */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
             return (
               <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Icon className="w-10 h-10 text-white" />
+                <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ backgroundColor: '#0B5FFF' }}>
+                  <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">{reason.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{reason.description}</p>
+                <h3 className="text-lg font-bold text-foreground mb-3">{reason.title}</h3>
+                <p className="text-muted-foreground" style={{ lineHeight: '1.5' }}>{reason.description}</p>
               </div>
             );
           })}

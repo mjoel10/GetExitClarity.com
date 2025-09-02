@@ -5,9 +5,9 @@ import { CheckCircle } from "lucide-react";
 function AssessmentProgress() {
   return (
     <div 
-      className="max-w-lg mx-auto rounded-3xl p-6 shadow-2xl relative overflow-hidden"
+      className="max-w-lg mx-auto rounded-2xl p-4 shadow-xl relative overflow-hidden"
       style={{ 
-        background: 'linear-gradient(135deg, #0a4f4f 0%, #1a7575 100%)'
+        backgroundColor: '#f8fafc'
       }}
     >
       {/* Animated particles background */}
@@ -15,13 +15,12 @@ function AssessmentProgress() {
         {[...Array(8)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-white/30 rounded-full"
+            className="absolute w-1 h-1 bg-white/30 rounded-full animate-pulse"
             style={{
               left: `${15 + i * 12}%`,
               top: `${10 + (i % 4) * 25}%`,
               animationDelay: `${i * 0.3}s`
             }}
-            className="animate-bounce"
           />
         ))}
       </div>
@@ -30,17 +29,17 @@ function AssessmentProgress() {
       <div className="bg-white rounded-2xl p-6 relative z-10 shadow-xl">
         {/* Header */}
         <div className="text-center mb-6">
-          <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-3 flex items-center justify-center shadow-lg">
-            <CheckCircle className="w-6 h-6 text-white" />
+          <div className="w-10 h-10 rounded-full mx-auto mb-2 flex items-center justify-center" style={{ backgroundColor: '#0B5FFF' }}>
+            <CheckCircle className="w-5 h-5 text-white" />
           </div>
-          <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
+          <h3 className="text-lg font-bold mb-1" style={{ color: '#0B5FFF' }}>
             ExitClarity
           </h3>
-          <p className="text-gray-600 text-sm">Exit Readiness Assessment</p>
+          <p className="text-gray-600 text-xs">Exit Readiness Assessment</p>
         </div>
 
         {/* Progress Section */}
-        <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 mb-6 border border-blue-200">
+        <div className="bg-blue-50 rounded-lg p-3 mb-4 border border-blue-200">
           <div className="flex justify-between items-center mb-3">
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-primary" />
@@ -66,7 +65,7 @@ function AssessmentProgress() {
         </div>
 
         {/* Factor Grid - Improved Layout */}
-        <div className="grid grid-cols-2 gap-3 mb-6">
+        <div className="grid grid-cols-2 gap-2 mb-4">
           {[
             { name: "Financial Performance", completed: true },
             { name: "Documentation", completed: true },
@@ -107,7 +106,7 @@ function AssessmentProgress() {
         </div>
 
         {/* Bottom Stats - Cleaner Design */}
-        <div className="grid grid-cols-3 gap-4 p-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl border">
+        <div className="grid grid-cols-3 gap-3 p-3 bg-gray-50 rounded-lg border">
           <div className="text-center">
             <div className="text-xl font-bold text-gray-900">73%</div>
             <div className="text-xs text-gray-600">Complete</div>
@@ -133,37 +132,37 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative py-20 lg:py-28 bg-gradient-to-br from-background to-muted/20">
+    <section className="relative py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Side - Content */}
           <div className="order-2 lg:order-1">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4" style={{ lineHeight: '1.5' }}>
               Are You Ready to Sell Your Business?
             </h1>
             
-            <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg lg:text-xl text-muted-foreground mb-6" style={{ lineHeight: '1.5' }}>
               Get a free personalized exit readiness report in 20 minutes
             </p>
             
             {/* Value Propositions */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                <span className="text-lg text-foreground">Realistic business valuation ranges</span>
+                <span className="text-base text-foreground">Realistic business valuation ranges</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                <span className="text-lg text-foreground">Clear timeline for optimal sale</span>
+                <span className="text-base text-foreground">Clear timeline for optimal sale</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                <span className="text-lg text-foreground">GO / FIX / WAIT recommendations across 11 categories</span>
+                <span className="text-base text-foreground">GO / FIX / WAIT recommendations across 11 categories</span>
               </div>
             </div>
             
             {/* CTA Button */}
-            <div className="mb-6">
+            <div className="mb-4">
               <Button 
                 onClick={handleCTAClick}
                 variant="hero"

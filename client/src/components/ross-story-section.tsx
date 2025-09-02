@@ -1,11 +1,11 @@
 export function RossStorySection() {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Side - Content */}
           <div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4" style={{ lineHeight: '1.5' }}>
               Built by an Owner Who Learned the Hard Way
             </h2>
             

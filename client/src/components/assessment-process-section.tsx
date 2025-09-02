@@ -7,63 +7,42 @@ export function AssessmentProcessSection() {
   };
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8">
+        <div className="text-center max-w-4xl mx-auto mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" style={{ lineHeight: '1.5' }}>
             Your Personalized Exit Readiness Report
           </h2>
         </div>
 
-        {/* Three-step process */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        {/* Simplified Three-step process */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
           {/* Step 1 */}
           <div className="text-center">
-            <div className="relative mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto flex items-center justify-center mb-4">
-                <Clipboard className="w-10 h-10 text-white" />
-              </div>
-              <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">1</span>
-              </div>
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#0B5FFF' }}>
+              <Clipboard className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-4">Take Assessment (5-7 min)</h3>
-            <p className="text-muted-foreground">
-              Answer questions about your business operations, financials, and goals
-            </p>
+            <h3 className="text-lg font-bold text-foreground mb-2">Take Assessment</h3>
+            <p className="text-muted-foreground" style={{ lineHeight: '1.5' }}>Answer questions about your business in 5-7 minutes</p>
           </div>
 
           {/* Step 2 */}
           <div className="text-center">
-            <div className="relative mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto flex items-center justify-center mb-4">
-                <BarChart3 className="w-10 h-10 text-white" />
-              </div>
-              <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">2</span>
-              </div>
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#0B5FFF' }}>
+              <BarChart3 className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-4">Get Instant Analysis (automated)</h3>
-            <p className="text-muted-foreground">
-              Our algorithm analyzes your responses against 1000+ successful exits
-            </p>
+            <h3 className="text-lg font-bold text-foreground mb-2">Get Instant Analysis</h3>
+            <p className="text-muted-foreground" style={{ lineHeight: '1.5' }}>Algorithm analyzes against 1000+ successful exits</p>
           </div>
 
           {/* Step 3 */}
           <div className="text-center">
-            <div className="relative mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto flex items-center justify-center mb-4">
-                <FileText className="w-10 h-10 text-white" />
-              </div>
-              <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">3</span>
-              </div>
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#0B5FFF' }}>
+              <FileText className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-4">Receive Your Report (immediate)</h3>
-            <p className="text-muted-foreground">
-              Get your detailed report with valuation ranges and action plan
-            </p>
+            <h3 className="text-lg font-bold text-foreground mb-2">Receive Your Report</h3>
+            <p className="text-muted-foreground" style={{ lineHeight: '1.5' }}>Detailed report with valuation and action plan</p>
           </div>
         </div>
 

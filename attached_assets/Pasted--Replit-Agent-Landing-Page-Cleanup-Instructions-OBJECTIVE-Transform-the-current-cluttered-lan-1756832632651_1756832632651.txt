@@ -1,0 +1,139 @@
+# Replit Agent: Landing Page Cleanup Instructions
+
+## OBJECTIVE: Transform the current cluttered landing page into a high-converting, streamlined experience
+
+The current landing page is too long and visually overwhelming. Follow these organized instructions to create a focused, professional page that drives conversions.
+
+---
+
+## PART 1: CONTENT CHANGES
+
+### Sections to DELETE Completely
+Remove these sections entirely from the page:
+- **"Everything You Need to Make Informed Decisions" 8-grid section** - Redundant with report preview
+- **Business owner testimonials section** - Ross's story provides sufficient credibility
+- **Bottom stats section with completion percentages** - Unnecessary
+- **All decorative visual elements** - Particles, animations that don't serve a purpose
+
+### Sections to KEEP and IMPROVE
+
+#### "Most Business Owners Aren't Ready" Statistics Section
+**Current Problems:** Weak stats, poor visual separation, small text
+
+**Improvements:**
+- Change background to mid-blue (#1e40af) with white text for contrast
+- Replace with these 3 powerful statistics:
+  - **"80%** of business owners have no exit strategy"
+  - **"$10M+** average value left on the table"  
+  - **"18-24** months typical prep time needed"
+- Make numbers 64px bold, descriptions 18px
+- Add closing line: "Know where you stand today."
+
+#### Ross's Story Section
+**Keep this section but refine:**
+- Maintain all content (crucial for credibility)
+- Improve layout with better spacing
+- Simplify testimonial card design
+- Make photo/initials smaller and cleaner
+
+#### 3-Step Process Section
+**Simplify dramatically:**
+- Horizontal layout (not stacked)
+- Icons + titles + one line description only
+- Keep device frames if they help show the report professionally
+- Show the key report elements clearly: score gauge, GO badge, valuation range
+
+---
+
+## PART 2: VISUAL & DESIGN CLEANUP
+
+### Hero Section
+- Remove heavy teal laptop frame on right side
+- Choose ONE visual: either progress interface OR simplified report
+- Tighten left side content spacing
+- Reduce line height
+
+### Color Consistency
+- **Primary blue:** #0B5FFF for all CTAs
+- **Mid-blue:** #1e40af for stats section background
+- **Backgrounds:** White or light gray (#F8F9FA) only
+- Remove ALL gradients except hero
+- Pick either blue OR teal theme (not both)
+
+### Visual Standardization
+- Keep device frames if they add context and professionalism
+- Standardize card styles (consistent radius, padding, shadows)
+- Delete only decorative elements that serve no purpose
+- Keep current font sizes and typography (they're working well)
+
+---
+
+## PART 3: LAYOUT & SPACING
+
+### Vertical Spacing Reductions
+- Cut section padding by 40%
+- Reduce card internal padding by 30%
+- Tighten line-height to 1.5
+- Remove excessive white space between elements
+
+### Mobile Optimization
+- Single column for all content
+- Full-width CTAs
+- Hide complex visuals, show simplified versions
+- Appropriate font size reductions
+
+---
+
+## PART 4: FINAL PAGE STRUCTURE
+
+**Streamlined 9-section flow:**
+
+1. **Header** - Sticky, minimal (logo + CTA)
+2. **Hero** - One viewport height max
+3. **Problem Stats** - Mid-blue background, 3 large stats
+4. **Ross's Story** - Founder credibility
+5. **3-Step Process + Report Preview** - Horizontal, simplified
+6. **Trust Signals** - 3 icons: Owner-First, 30+ Years, Private & Secure
+7. **FAQ** - 4-6 questions, collapsed by default
+8. **Final CTA** - Navy background, centered
+9. **Footer** - Keep existing
+
+---
+
+## PART 5: PERFORMANCE & TESTING
+
+### Technical Optimizations
+- Lazy load images below fold
+- Remove unused CSS classes
+- Compress all images
+- Minimize JavaScript
+- Limit animations to essential elements
+
+### Success Metrics
+- **Page length:** 3-4 viewport heights max
+- **Read time:** Under 2 minutes
+- **Load time:** Under 2 seconds
+- **CTA visibility:** Always one in viewport
+
+### Testing Checklist
+- [ ] Page under 4 scroll lengths on desktop
+- [ ] Every section has clear purpose
+- [ ] No redundant information
+- [ ] Consistent CTA styling throughout
+- [ ] Clean mobile experience
+- [ ] Clear path to conversion
+
+---
+
+## CONVERSION PRINCIPLES
+
+Every element must answer one of these questions:
+1. **What is this?** Exit readiness assessment
+2. **What do I get?** Personalized report with valuation
+3. **How long?** 20 minutes
+4. **Can I trust this?** Ross's story + credentials
+5. **How do I start?** Clear CTAs
+
+**If an element doesn't support these, DELETE IT.**
+
+Remember: The goal is to get visitors to click "Start Free Assessment." Everything else is secondary. When in doubt, remove it.

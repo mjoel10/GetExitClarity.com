@@ -32,22 +32,22 @@ export function FAQSection() {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8">
+        <div className="text-center max-w-4xl mx-auto mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" style={{ lineHeight: '1.5' }}>
             Common Questions
           </h2>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="max-w-3xl mx-auto space-y-3">
           {faqs.map((faq, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg border overflow-hidden">
               <button
                 onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
-                className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
               >
                 <h3 className="text-lg font-semibold text-foreground pr-4">{faq.question}</h3>
                 {openFAQ === index ? (
@@ -58,8 +58,8 @@ export function FAQSection() {
               </button>
               
               {openFAQ === index && (
-                <div className="px-8 pb-6">
-                  <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                <div className="px-6 pb-4">
+                  <p className="text-muted-foreground" style={{ lineHeight: '1.5' }}>{faq.answer}</p>
                 </div>
               )}
             </div>
