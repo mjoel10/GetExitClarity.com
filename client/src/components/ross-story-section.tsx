@@ -10,8 +10,8 @@ export function RossStorySection() {
       <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-blue-100/30 to-blue-200/20 rounded-full blur-3xl opacity-60"></div>
       <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-tr from-primary/10 to-blue-200/20 rounded-full blur-2xl opacity-40"></div>
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-5 gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-16 items-center">
           {/* Left Side - Content (60%) */}
           <div className="lg:col-span-3">
             <div className="space-y-8">
@@ -35,7 +35,7 @@ export function RossStorySection() {
               {/* Enhanced Quote Design */}
               <div className="relative mt-12">
                 <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-full blur-xl"></div>
-                <div className="relative bg-white/80 backdrop-blur-sm border border-white/60 rounded-2xl p-8 shadow-xl">
+                <div className="relative bg-white/80 backdrop-blur-sm border border-white/60 rounded-2xl p-6 sm:p-8 shadow-xl">
                   <div className="absolute -top-3 -left-3 w-6 h-6 bg-primary rounded-full"></div>
                   <div className="absolute top-4 left-4 text-primary/20 text-4xl font-serif">"</div>
                   

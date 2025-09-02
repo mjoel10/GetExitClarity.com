@@ -6,6 +6,7 @@ import { AssessmentStepsSection } from "@/components/assessment-steps-section";
 import { WhyExitClaritySection } from "@/components/why-exitclarity-section";
 import { FAQSection } from "@/components/faq-section";
 import Footer from "@/components/footer";
+import { SectionSeparator } from "@/components/section-separator";
 import { useMeta } from "@/hooks/use-meta";
 
 export default function Landing() {
@@ -19,10 +20,15 @@ export default function Landing() {
       <Header />
       <div className="pt-20">
         <HeroSection />
+        <SectionSeparator />
         <ProblemSection />
+        <SectionSeparator />
         <RossStorySection />
+        <SectionSeparator />
         <AssessmentStepsSection />
+        <SectionSeparator />
         <WhyExitClaritySection />
+        <SectionSeparator />
         <FAQSection />
       </div>
       <Footer />

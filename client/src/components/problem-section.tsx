@@ -53,7 +53,7 @@ export function ProblemSection() {
         ))}
       </div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Enhanced Problem Statement */}
         <div className="text-center max-w-5xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-white/20">
@@ -74,7 +74,7 @@ export function ProblemSection() {
         </div>
 
         {/* Enhanced Statistics Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -83,7 +83,7 @@ export function ProblemSection() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-white/10 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-300 opacity-75"></div>
                 
                 {/* Card */}
-                <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl p-8 lg:p-10 shadow-2xl border border-white/60 text-center group-hover:transform group-hover:scale-105 transition-all duration-300">
+                <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-white/60 text-center group-hover:transform group-hover:scale-105 transition-all duration-300">
                   {/* Icon */}
                   <div className="relative mb-6">
                     <div className={`absolute inset-0 bg-gradient-to-br ${stat.bgColor} rounded-2xl blur-sm`}></div>

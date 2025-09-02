@@ -147,10 +147,10 @@ export function HeroSection() {
       <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-primary/10 to-blue-200/20 rounded-full blur-3xl opacity-60"></div>
       <div className="absolute bottom-20 right-10 w-48 h-48 bg-gradient-to-tr from-blue-100/40 to-primary/10 rounded-full blur-2xl opacity-40"></div>
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
           {/* Left Side - Enhanced Content */}
-          <div className="order-2 lg:order-1 space-y-8">
+          <div className="order-1 lg:order-1 space-y-8">
             {/* Hero Badge */}
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
               <Sparkles className="w-4 h-4" />
@@ -219,7 +219,7 @@ export function HeroSection() {
           </div>
           
           {/* Right Side - Enhanced Assessment Visual */}
-          <div className="order-1 lg:order-2">
+          <div className="order-2 lg:order-2">
             <AssessmentProgress />
           </div>
         </div>

@@ -33,7 +33,7 @@ export function WhyExitClaritySection() {
       <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-blue-100/40 to-primary/10 rounded-full blur-2xl opacity-40"></div>
       <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-tr from-primary/30 to-blue-300/20 rounded-full blur-xl opacity-60"></div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-extrabold text-foreground mb-6 leading-tight">
@@ -50,13 +50,13 @@ export function WhyExitClaritySection() {
         </div>
 
         {/* Report Preview + What You'll Receive */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 sm:mb-20">
           {/* Premium Report Visual */}
           <div className="relative">
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-200/30 to-primary/20 rounded-full blur-2xl"></div>
             <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-tr from-primary/30 to-blue-300/20 rounded-full blur-xl"></div>
             
-            <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/60 w-full max-w-2xl mx-auto">
+            <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-4 sm:p-8 shadow-2xl border border-white/60 w-full max-w-2xl mx-auto">
               {/* Premium Page Count Badge */}
               <div className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-2xl text-sm font-bold shadow-xl">
                 <div className="flex items-center gap-2">
@@ -231,7 +231,7 @@ export function WhyExitClaritySection() {
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-8 bg-gradient-to-b from-primary/40 to-transparent"></div>
           
           {/* Content Card */}
-          <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-8 lg:p-10 shadow-2xl border border-slate-700/50 relative overflow-hidden">
+          <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-slate-700/50 relative overflow-hidden">
             {/* Dark theme decorative elements */}
             <div className="absolute top-6 right-6 w-24 h-24 bg-gradient-to-br from-blue-400/20 to-primary/20 rounded-full blur-2xl"></div>
             <div className="absolute bottom-6 left-6 w-20 h-20 bg-gradient-to-tr from-primary/20 to-blue-400/20 rounded-full blur-xl"></div>
