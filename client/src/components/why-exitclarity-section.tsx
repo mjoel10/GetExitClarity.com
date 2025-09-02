@@ -312,8 +312,8 @@ export function WhyExitClaritySection() {
               </div>
             </div>
             
-            <div className="relative space-y-4">
-              <div className="relative inline-block">
+            <div className="relative space-y-3">
+              <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-600/10 rounded-2xl blur-xl"></div>
                 <Button 
                   onClick={handleCTAClick}
@@ -326,7 +326,7 @@ export function WhyExitClaritySection() {
                 </Button>
               </div>
               
-              <div className="relative inline-block">
+              <div className="relative">
                 <Button 
                   onClick={() => setIsModalOpen(true)}
                   variant="outline"
