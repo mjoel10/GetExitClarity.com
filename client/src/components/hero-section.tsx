@@ -1,98 +1,115 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, FileText, ArrowRight, Users } from "lucide-react";
-import HeroMacBook from "./hero-macbook";
-import { Link } from "wouter";
+import { CheckCircle } from "lucide-react";
+
+// Assessment Progress Visual Component
+function AssessmentProgress() {
+  return (
+    <div className="bg-white rounded-2xl p-8 shadow-lg border max-w-md mx-auto">
+      {/* Header */}
+      <div className="text-center mb-6">
+        <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+          <CheckCircle className="w-8 h-8 text-white" />
+        </div>
+        <h3 className="text-xl font-bold text-gray-900 mb-2">Exit Readiness Assessment</h3>
+        <p className="text-gray-600 text-sm">See exactly where you stand</p>
+      </div>
+      
+      {/* Progress Bar */}
+      <div className="mb-6">
+        <div className="flex justify-between items-center mb-2">
+          <span className="text-sm font-medium text-gray-700">Assessment Progress</span>
+          <span className="text-sm font-bold text-primary">8 of 11 factors</span>
+        </div>
+        <div className="w-full bg-gray-200 rounded-full h-3">
+          <div 
+            className="bg-gradient-to-r from-primary to-accent h-3 rounded-full transition-all duration-1000 ease-out"
+            style={{ width: '73%' }}
+          ></div>
+        </div>
+        <p className="text-xs text-gray-500 mt-1">9 mins remaining</p>
+      </div>
+      
+      {/* Categories */}
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <span className="text-sm text-gray-700">Financial Performance</span>
+          <CheckCircle className="w-5 h-5 text-primary" />
+        </div>
+        <div className="flex items-center justify-between">
+          <span className="text-sm text-gray-700">Documentation</span>
+          <CheckCircle className="w-5 h-5 text-primary" />
+        </div>
+        <div className="flex items-center justify-between">
+          <span className="text-sm text-gray-700">Team & Transition</span>
+          <CheckCircle className="w-5 h-5 text-primary" />
+        </div>
+        <div className="flex items-center justify-between">
+          <span className="text-sm text-gray-700">Strategic Planning</span>
+          <div className="w-5 h-5 border-2 border-primary rounded-full flex items-center justify-center">
+            <div className="w-2 h-2 bg-primary rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function HeroSection() {
+  const handleCTAClick = () => {
+    window.open('https://app.exitclarity.io/signupdirect', '_blank');
+  };
+
   return (
     <section className="relative py-20 lg:py-28 bg-gradient-to-br from-background to-muted/20">
       <div className="container mx-auto px-6">
-        <div className="hero-content-wrapper">
-          {/* Text Content Container */}
-          <div className="hero-content-container">
-            {/* Headlines Section */}
-            <div className="hero-headlines">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight text-center xl:text-left">
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Know Who's Ready. Know Who's Not.
-                </span>
-              </h1>
-              
-              <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed text-center xl:text-left">
-                ExitClarity distills decades of buy and sell-side M&A expertise into a readiness platform that shows if a seller is GO, FIX, or WAIT—so your team qualifies faster and avoids wasted deals.
-              </p>
-            </div>
-
-            {/* CTA Buttons - Shows above MacBook on mobile, below headlines on desktop */}
-            <div className="hero-cta-section order-2 xl:order-3">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center xl:justify-start mb-12">
-                <Button variant="hero" size="xl" className="group" asChild>
-                  <a href="/trial-request">
-                    <Users className="mr-2 h-5 w-5" />
-                    Try ExitClarity with a Seller
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </a>
-                </Button>
-                
-                <Button variant="professional" size="xl" className="group" asChild>
-                  <Link href="/sample-report">
-                    <FileText className="mr-2 h-5 w-5" />
-                    See Sample Report
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                </Button>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Content */}
+          <div className="order-2 lg:order-1">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Are You Ready to Sell Your Business?
+            </h1>
+            
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed">
+              Get a free personalized exit readiness report in 20 minutes
+            </p>
+            
+            {/* Value Propositions */}
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center space-x-3">
+                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                <span className="text-lg text-foreground">Realistic business valuation ranges</span>
               </div>
-            </div>
-
-            {/* MacBook Visual - Shows here on mobile only */}
-            <div className="hero-macbook-section xl:hidden order-3">
-              <div className="relative flex justify-center">
-                {/* Subtle blue background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/8 to-accent/5 rounded-2xl blur-sm"></div>
-                
-                <div className="relative z-10 w-full max-w-lg">
-                  <HeroMacBook />
-                </div>
-                
-                {/* Background decorative elements */}
-                <div className="absolute -top-4 -right-4 w-32 h-32 md:w-48 md:h-48 lg:w-72 lg:h-72 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
-                <div className="absolute -bottom-4 -left-4 w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-3xl"></div>
+              <div className="flex items-center space-x-3">
+                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                <span className="text-lg text-foreground">Clear timeline for optimal sale</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                <span className="text-lg text-foreground">GO / FIX / WAIT recommendations across 11 categories</span>
               </div>
             </div>
             
-            {/* Key Stats */}
-            <div className="hero-stats-section order-4 xl:order-4">
-              <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto xl:mx-0">
-                <div className="text-center xl:text-left">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">30+</div>
-                  <p className="text-sm text-muted-foreground">Years M&A Experience</p>
-                </div>
-                <div className="text-center xl:text-left">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">11</div>
-                  <p className="text-sm text-muted-foreground">Readiness Factors</p>
-                </div>
-                <div className="text-center xl:text-left">
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">300+</div>
-                  <p className="text-sm text-muted-foreground">Deals Analyzed</p>
-                </div>
-              </div>
+            {/* CTA Button */}
+            <div className="mb-6">
+              <Button 
+                onClick={handleCTAClick}
+                variant="hero"
+                size="xl"
+                className="font-semibold transition-all duration-200 hover:shadow-lg hover:scale-105"
+              >
+                Create Your Free ExitClarity Account
+              </Button>
             </div>
+            
+            {/* Trust Indicator */}
+            <p className="text-sm text-muted-foreground">
+              Join 500+ business owners who've discovered their exit readiness
+            </p>
           </div>
-
-          {/* MacBook Visual - Shows here on desktop only */}
-          <div className="hero-macbook-desktop hidden xl:block">
-            <div className="relative">
-              {/* Subtle blue background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/8 to-accent/5 rounded-2xl blur-sm"></div>
-              
-              <div className="relative z-10">
-                <HeroMacBook />
-              </div>
-              
-              {/* Background decorative elements */}
-              <div className="absolute -top-4 -right-4 w-32 h-32 md:w-48 md:h-48 lg:w-72 lg:h-72 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-3xl"></div>
-            </div>
+          
+          {/* Right Side - Assessment Visual */}
+          <div className="order-1 lg:order-2">
+            <AssessmentProgress />
           </div>
         </div>
       </div>

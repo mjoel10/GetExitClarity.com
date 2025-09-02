@@ -1,10 +1,14 @@
 import sgMail from '@sendgrid/mail';
 
-if (!process.env.SENDGRID_API_KEY) {
-  throw new Error("SENDGRID_API_KEY environment variable must be set");
-}
+const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
+const SENDGRID_ENABLED = !!SENDGRID_API_KEY;
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+if (SENDGRID_ENABLED && SENDGRID_API_KEY) {
+  sgMail.setApiKey(SENDGRID_API_KEY);
+  console.log('SendGrid email service initialized');
+} else {
+  console.log('SendGrid API key not found - email notifications disabled');
+}
 
 interface EmailNotificationData {
   name: string;
@@ -27,6 +31,11 @@ interface TrialRequestData {
 }
 
 export async function sendNotificationEmail(data: EmailNotificationData): Promise<boolean> {
+  if (!SENDGRID_ENABLED) {
+    console.log('SendGrid disabled - notification email not sent:', data.requestType, data.name);
+    return false;
+  }
+  
   try {
     const requestTypeLabels = {
       demo: 'Demo Request',
@@ -94,6 +103,11 @@ export async function sendNotificationEmail(data: EmailNotificationData): Promis
 }
 
 export async function sendTrialRequestNotification(data: TrialRequestData): Promise<boolean> {
+  if (!SENDGRID_ENABLED) {
+    console.log('SendGrid disabled - trial request notification not sent:', data.firmName);
+    return false;
+  }
+  
   try {
     const subject = `[Trial Request] ${data.firmName} - ${data.firstName} ${data.lastName}, ${data.role}`;
     
@@ -147,6 +161,11 @@ export async function sendTrialRequestNotification(data: TrialRequestData): Prom
 }
 
 export async function sendSampleReportAutoReply(data: { name: string; email: string }): Promise<boolean> {
+  if (!SENDGRID_ENABLED) {
+    console.log('SendGrid disabled - sample report auto-reply not sent:', data.email);
+    return false;
+  }
+  
   try {
     const subject = `Your ExitClarity Sample Report + Next Steps`;
     
@@ -243,6 +262,11 @@ export async function sendSampleReportAutoReply(data: { name: string; email: str
 }
 
 export async function sendTrialRequestAutoReply(data: TrialRequestData): Promise<boolean> {
+  if (!SENDGRID_ENABLED) {
+    console.log('SendGrid disabled - trial request auto-reply not sent:', data.email);
+    return false;
+  }
+  
   try {
     const subject = `Welcome to ExitClarity - Next Steps Inside`;
     
@@ -327,6 +351,11 @@ interface WaitlistConfirmationData {
 }
 
 export async function sendWaitlistConfirmation(data: WaitlistConfirmationData): Promise<boolean> {
+  if (!SENDGRID_ENABLED) {
+    console.log('SendGrid disabled - waitlist confirmation not sent:', data.email);
+    return false;
+  }
+  
   try {
     const subject = `Welcome to ExitClarity Early Access - We'll Be In Touch Soon`;
     
