@@ -330,11 +330,11 @@ export function WhyExitClaritySection() {
                 <Button 
                   onClick={() => setIsModalOpen(true)}
                   variant="outline"
-                  size="lg"
+                  size="xl"
                   className="font-semibold transition-all duration-300 hover:shadow-lg border-2 border-primary text-primary hover:bg-primary hover:text-white"
                 >
                   See a Sample Report
-                  <Download className="w-4 h-4 ml-2" />
+                  <Download className="w-5 h-5 ml-2" />
                 </Button>
               </div>
             </div>
