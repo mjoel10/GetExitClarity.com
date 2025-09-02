@@ -38,7 +38,7 @@ function AssessmentProgress() {
               <CheckCircle className="w-4 h-4 text-white" />
             </div>
             <span className="text-lg text-primary">
-              <span className="font-medium">Exit</span><span className="font-bold">Clarity</span>
+              <span className="font-normal">Exit</span><span className="font-bold">Clarity</span>
             </span>
           </div>
 
