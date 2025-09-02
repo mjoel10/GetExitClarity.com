@@ -83,14 +83,12 @@ export function ProblemSection() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-white/10 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-300 opacity-75"></div>
                 
                 {/* Card */}
-                <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-white/60 text-center group-hover:transform group-hover:scale-105 transition-all duration-300">
+                <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-white/60 text-center group-hover:transform group-hover:scale-105 transition-all duration-300 h-full flex flex-col justify-center">
                   {/* Icon */}
                   <div className="relative mb-6">
                     <div className={`absolute inset-0 bg-gradient-to-br ${stat.bgColor} rounded-2xl blur-sm`}></div>
                     <div className={`relative w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br ${stat.bgColor} border ${stat.borderColor} flex items-center justify-center shadow-lg`}>
-                      <Icon className={`w-8 h-8 bg-gradient-to-br ${stat.color} bg-clip-text text-transparent`} style={{
-                        filter: `drop-shadow(0 0 0 ${stat.color.includes('red') ? '#dc2626' : '#2563eb'})`
-                      }} />
+                      <Icon className={`w-8 h-8 ${stat.color.includes('blue') ? 'text-blue-600' : 'text-slate-600'}`} />
                     </div>
                   </div>
                   
