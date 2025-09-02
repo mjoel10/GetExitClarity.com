@@ -1,6 +1,10 @@
-import { Clipboard, BarChart3, FileText, TrendingUp, ArrowDown } from "lucide-react";
+import { Clipboard, BarChart3, FileText, TrendingUp, ArrowDown, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function AssessmentStepsSection() {
+  const handleCTAClick = () => {
+    window.open('https://app.exitclarity.io/signupdirect', '_blank');
+  };
   const steps = [
     {
       icon: Clipboard,
@@ -52,7 +56,7 @@ export function AssessmentStepsSection() {
               Get professional insights in minutes with our simple 3-step process
             </p>
             
-            <div className="pt-4">
+            <div className="pt-4 space-y-6">
               <div className="inline-flex items-center gap-3 text-sm text-muted-foreground">
                 <div className="flex items-center gap-1">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -68,6 +72,20 @@ export function AssessmentStepsSection() {
                   <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
                   <span>25 page strategic report</span>
                 </div>
+              </div>
+              
+              {/* CTA Button */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-600/10 rounded-2xl blur-xl"></div>
+                <Button 
+                  onClick={handleCTAClick}
+                  variant="hero"
+                  size="lg"
+                  className="relative font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90"
+                >
+                  Start Your Assessment
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
               </div>
             </div>
           </div>
