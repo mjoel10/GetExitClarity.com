@@ -27,7 +27,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         console.log(`Sending auto-reply to: ${validatedData.email} for user: ${validatedData.name}`);
         const autoReplyResult = await sendSampleReportAutoReply({
           name: validatedData.name,
-          email: validatedData.email
+          email: validatedData.email,
+          audienceType: validatedData.audienceType
         });
         console.log(`Auto-reply result: ${autoReplyResult}`);
       }
