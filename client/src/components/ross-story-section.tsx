@@ -46,7 +46,7 @@ export function RossStorySection() {
                     <footer className="flex items-center gap-3">
                       <div className="w-8 h-0.5 bg-gradient-to-r from-primary to-blue-600"></div>
                       <cite className="text-sm font-semibold text-muted-foreground not-italic">
-                        Ross Joel, Founder
+                        Ross Joel, Founding Partner
                       </cite>
                     </footer>
                   </blockquote>
@@ -76,8 +76,8 @@ export function RossStorySection() {
                   <div className="mt-6 text-center">
                     <h3 className="text-xl font-bold text-foreground mb-2">Ross Joel</h3>
                     <div className="space-y-1">
-                      <p className="text-sm font-semibold text-primary">Founder & CEO, ExitClarity</p>
-                      <p className="text-sm text-muted-foreground">30+ Years M&A Experience</p>
+                      <p className="text-sm font-semibold text-primary">Founding Partner, ExitClarity</p>
+                      <p className="text-sm text-muted-foreground">30+ Years of Business Experience</p>
                     </div>
                     
                     {/* Achievement badges */}
