@@ -32,17 +32,6 @@ function AssessmentProgress() {
 
         {/* Platform Card */}
         <div className="relative z-10">
-          {/* Enhanced Header */}
-          <div className="text-center mb-8">
-            <div className="w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #0B5FFF 0%, #3B82F6 100%)' }}>
-              <CheckCircle className="w-7 h-7 text-white" />
-            </div>
-            <h3 className="text-2xl font-bold mb-2" style={{ color: '#0B5FFF' }}>
-              ExitClarity
-            </h3>
-            <p className="text-gray-600 text-sm font-medium">Exit Readiness Assessment</p>
-          </div>
-
           {/* Enhanced Progress Section */}
           <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl p-5 mb-6 border border-blue-200/50 shadow-sm">
             <div className="flex justify-between items-center mb-4">
