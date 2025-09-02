@@ -1,11 +1,7 @@
-import { Link } from "wouter";
 import { Mail, Phone, Calendar, Linkedin } from "lucide-react";
 import exitClarityLogo from "@assets/Exit Clarity Logo White_1752106228914.png";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <footer style={{
@@ -62,9 +58,10 @@ export default function Footer() {
               Platform
             </h4>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <Link 
-                href="/platform/ma-firms" 
-                onClick={scrollToTop}
+              <a 
+                href="https://exitclarity.io/platform/ma-firms" 
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -75,10 +72,11 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 For M&A Firms
-              </Link>
-              <Link 
-                href="/platform/business-owners" 
-                onClick={scrollToTop}
+              </a>
+              <a 
+                href="https://exitclarity.io/platform/business-owners" 
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -89,10 +87,11 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 For Business Owners
-              </Link>
-              <Link 
-                href="/sample-report" 
-                onClick={scrollToTop}
+              </a>
+              <a 
+                href="https://exitclarity.io/sample-report" 
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -103,7 +102,7 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 Sample Report
-              </Link>
+              </a>
             </nav>
           </div>
 
@@ -118,9 +117,10 @@ export default function Footer() {
               Resources
             </h4>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <Link 
-                href="/blog" 
-                onClick={scrollToTop}
+              <a 
+                href="https://exitclarity.io/blog" 
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -131,10 +131,11 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 Blog
-              </Link>
-              <Link 
-                href="/resources" 
-                onClick={scrollToTop}
+              </a>
+              <a 
+                href="https://exitclarity.io/resources" 
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -145,10 +146,11 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 For Business Owners
-              </Link>
-              <Link 
-                href="/about" 
-                onClick={scrollToTop}
+              </a>
+              <a 
+                href="https://exitclarity.io/about" 
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -159,10 +161,11 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 About
-              </Link>
-              <Link 
-                href="/resources" 
-                onClick={scrollToTop}
+              </a>
+              <a 
+                href="https://exitclarity.io/resources" 
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -173,10 +176,11 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 Resources
-              </Link>
-              <Link 
-                href="/contact" 
-                onClick={scrollToTop}
+              </a>
+              <a 
+                href="https://exitclarity.io/contact" 
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -187,7 +191,7 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 Contact
-              </Link>
+              </a>
             </nav>
           </div>
 
@@ -202,8 +206,10 @@ export default function Footer() {
               Get Started
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <Link 
-                href="/trial-request"
+              <a 
+                href="https://exitclarity.io/trial-request"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -216,9 +222,11 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 Try It with a Client
-              </Link>
-              <Link 
-                href="/sample-report"
+              </a>
+              <a 
+                href="https://exitclarity.io/sample-report"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -231,7 +239,7 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 View Sample Report
-              </Link>
+              </a>
               <a 
                 href="https://calendly.com/exitclarity-info/30min" 
                 target="_blank" 
@@ -329,9 +337,10 @@ export default function Footer() {
               gap: '1.5rem',
               flexWrap: 'wrap'
             }}>
-              <Link 
-                href="/privacy" 
-                onClick={scrollToTop}
+              <a 
+                href="https://exitclarity.io/privacy" 
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'rgba(255, 255, 255, 0.6)',
                   textDecoration: 'none',
@@ -342,10 +351,11 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)'}
               >
                 Privacy Policy
-              </Link>
-              <Link 
-                href="/terms" 
-                onClick={scrollToTop}
+              </a>
+              <a 
+                href="https://exitclarity.io/terms" 
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'rgba(255, 255, 255, 0.6)',
                   textDecoration: 'none',
@@ -356,10 +366,11 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)'}
               >
                 Terms of Service
-              </Link>
-              <Link 
-                href="/cookies" 
-                onClick={scrollToTop}
+              </a>
+              <a 
+                href="https://exitclarity.io/cookies" 
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'rgba(255, 255, 255, 0.6)',
                   textDecoration: 'none',
@@ -370,10 +381,11 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)'}
               >
                 Cookie Policy
-              </Link>
-              <Link 
-                href="/security" 
-                onClick={scrollToTop}
+              </a>
+              <a 
+                href="https://exitclarity.io/security" 
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'rgba(255, 255, 255, 0.6)',
                   textDecoration: 'none',
@@ -384,7 +396,7 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)'}
               >
                 Security
-              </Link>
+              </a>
             </div>
           </div>
         </div>
