@@ -63,7 +63,7 @@ export function ProblemSection() {
           
           <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
             Most Business Owners Aren't Ready When{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-teal-100">
               The Opportunity Knocks
             </span>
           </h2>
