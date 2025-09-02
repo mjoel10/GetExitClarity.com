@@ -1,9 +1,114 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Handshake, Award, Shield, FileText, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Handshake, Award, Shield, FileText, CheckCircle, ArrowRight, Star, Download } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+
+const formSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  company: z.string().min(2, "Company name must be at least 2 characters"),
+  audienceType: z.enum(["business-owner", "ma-firm"], {
+    required_error: "Please select your audience type",
+  }),
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 export function WhyExitClaritySection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const { toast } = useToast();
+  const queryClient = useQueryClient();
+
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      company: "",
+      audienceType: undefined,
+    },
+  });
+
   const handleCTAClick = () => {
     window.open('https://app.exitclarity.io/signupdirect', '_blank');
+  };
+
+  const createDemoRequestMutation = useMutation({
+    mutationFn: async (requestData: FormData) => {
+      const response = await fetch("/api/demo-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: requestData.name,
+          email: requestData.email,
+          company: requestData.company,
+          requestType: "sample_report",
+          audienceType: requestData.audienceType,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit request");
+      }
+
+      return response.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/demo-requests"] });
+    },
+  });
+
+  const downloadPDF = () => {
+    const link = document.createElement("a");
+    link.href = "/ExitClarity-Sample-Report.pdf";
+    link.download = "ExitClarity-Sample-Report.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      await createDemoRequestMutation.mutateAsync(data);
+      downloadPDF();
+      setIsSubmitted(true);
+      
+      toast({
+        title: "Success!",
+        description: "Your sample report is downloading now!",
+      });
+
+      setTimeout(() => {
+        setIsModalOpen(false);
+        setIsSubmitted(false);
+        form.reset();
+      }, 3000);
+
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setIsSubmitted(false);
+    form.reset();
   };
 
   const reasons = [
@@ -207,17 +312,31 @@ export function WhyExitClaritySection() {
               </div>
             </div>
             
-            <div className="relative inline-block">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-600/10 rounded-2xl blur-xl"></div>
-              <Button 
-                onClick={handleCTAClick}
-                variant="hero"
-                size="xl"
-                className="relative font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90"
-              >
-                Get Your Free Report Now
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+            <div className="relative space-y-4">
+              <div className="relative inline-block">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-600/10 rounded-2xl blur-xl"></div>
+                <Button 
+                  onClick={handleCTAClick}
+                  variant="hero"
+                  size="xl"
+                  className="relative font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90"
+                >
+                  Get Your Free Analysis Now
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </div>
+              
+              <div className="relative inline-block">
+                <Button 
+                  onClick={() => setIsModalOpen(true)}
+                  variant="outline"
+                  size="lg"
+                  className="font-semibold transition-all duration-300 hover:shadow-lg border-2 border-primary text-primary hover:bg-primary hover:text-white"
+                >
+                  See a Sample Report
+                  <Download className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -279,6 +398,109 @@ export function WhyExitClaritySection() {
           </div>
         </div>
       </div>
+
+      {/* Sample Report Modal */}
+      <Dialog open={isModalOpen} onOpenChange={handleCloseModal}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-center">
+              Get Your Sample Report
+            </DialogTitle>
+          </DialogHeader>
+          
+          {!isSubmitted ? (
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name *</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Enter your full name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email *</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Enter your email address" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Company *</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Enter your company name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="audienceType"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>I am a: *</FormLabel>
+                      <FormControl>
+                        <RadioGroup onValueChange={field.onChange} value={field.value}>
+                          <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="business-owner" id="business-owner" />
+                            <Label htmlFor="business-owner">Business Owner</Label>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="ma-firm" id="ma-firm" />
+                            <Label htmlFor="ma-firm">M&A Firm Professional</Label>
+                          </div>
+                        </RadioGroup>
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primary hover:bg-primary/90 text-white" 
+                  disabled={createDemoRequestMutation.isPending}
+                >
+                  {createDemoRequestMutation.isPending ? (
+                    "Downloading..."
+                  ) : (
+                    <>
+                      <Download className="w-4 h-4 mr-2" />
+                      Download Sample Report
+                    </>
+                  )}
+                </Button>
+              </form>
+            </Form>
+          ) : (
+            <div className="text-center py-8">
+              <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Download Started!</h3>
+              <p className="text-muted-foreground">Your sample report should be downloading now.</p>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
