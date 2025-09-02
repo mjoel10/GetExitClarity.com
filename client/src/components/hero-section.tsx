@@ -32,6 +32,11 @@ function AssessmentProgress() {
 
         {/* Platform Card */}
         <div className="relative z-10">
+          {/* Subtle Header */}
+          <div className="text-center mb-6">
+            <h3 className="text-lg font-semibold text-gray-700">Exit Readiness Assessment</h3>
+          </div>
+
           {/* Enhanced Progress Section */}
           <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl p-5 mb-6 border border-blue-200/50 shadow-sm">
             <div className="flex justify-between items-center mb-4">
