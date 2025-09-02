@@ -138,7 +138,7 @@ export function AssessmentProcessSection() {
                                 cx="40" 
                                 cy="40" 
                                 r="32" 
-                                stroke="url(#scoreGradient)" 
+                                stroke="url(#reportScoreGradient)" 
                                 strokeWidth="6" 
                                 fill="none"
                                 strokeLinecap="round"
@@ -146,7 +146,7 @@ export function AssessmentProcessSection() {
                                 strokeDashoffset="60"
                               />
                               <defs>
-                                <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <linearGradient id="reportScoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                                   <stop offset="0%" stopColor="#6e7fff" />
                                   <stop offset="100%" stopColor="#4a5f8f" />
                                 </linearGradient>
