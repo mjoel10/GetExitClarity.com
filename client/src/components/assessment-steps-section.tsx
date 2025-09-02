@@ -6,19 +6,19 @@ export function AssessmentStepsSection() {
       icon: Clipboard,
       number: 1,
       title: "Take Assessment",
-      description: "Answer questions about your business in 5-7 minutes"
+      description: "Answer questions about your business in 20-30 minutes"
     },
     {
       icon: BarChart3,
       number: 2,
       title: "Get Instant Analysis",
-      description: "Algorithm analyzes against 1000+ successful exits"
+      description: "Algorithm analyzes against 500+ successful exits and past mistakes"
     },
     {
       icon: FileText,
       number: 3,
       title: "Receive Your Report",
-      description: "Detailed report with valuation and action plan"
+      description: "Valuation ranges, realistic timeline for when to sell, an action plan with ROI paybacks, and a clear GO / FIX / WAIT recommendation"
     }
   ];
 
