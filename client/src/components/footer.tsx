@@ -59,21 +59,6 @@ export default function Footer() {
             </h4>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <a 
-                href="https://www.exitclarity.io/platform/ma-firms" 
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
-              >
-                For M&A Firms
-              </a>
-              <a 
                 href="https://www.exitclarity.io/platform/business-owners" 
                 target="_blank"
                 rel="noopener noreferrer"
@@ -87,6 +72,21 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 For Business Owners
+              </a>
+              <a 
+                href="https://www.exitclarity.io/platform/ma-firms" 
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+              >
+                For M&A Firms
               </a>
               <a 
                 href="https://www.exitclarity.io/sample-report" 
@@ -131,21 +131,6 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 Blog
-              </a>
-              <a 
-                href="https://www.exitclarity.io/resources" 
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
-              >
-                For Business Owners
               </a>
               <a 
                 href="https://www.exitclarity.io/about" 
@@ -195,70 +180,6 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Get Started Column */}
-          <div>
-            <h4 style={{
-              fontSize: '1.125rem',
-              fontWeight: '600',
-              marginBottom: '1.5rem',
-              color: 'white'
-            }}>
-              Get Started
-            </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <a 
-                href="https://www.exitclarity.io/trial-request"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
-              >
-                Try It with a Client
-              </a>
-              <a 
-                href="https://www.exitclarity.io/sample-report"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
-              >
-                View Sample Report
-              </a>
-              <a 
-                href="https://calendly.com/exitclarity-info/30min" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
-              >
-                Schedule Demo
-              </a>
-            </div>
-          </div>
 
           {/* Contact Column */}
           <div>
