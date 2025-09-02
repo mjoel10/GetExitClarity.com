@@ -192,7 +192,7 @@ export function WhyExitClaritySection() {
                 This is what you'll receive
               </h3>
               
-              <ul className="space-y-3">
+              <ul className="space-y-3 inline-block text-left">
                 {[
                   "Comprehensive exit readiness score (0-100)",
                   "Realistic valuation ranges based on your industry", 
@@ -210,7 +210,7 @@ export function WhyExitClaritySection() {
               </ul>
             </div>
             
-            <div className="relative">
+            <div className="relative inline-block">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-600/10 rounded-2xl blur-xl"></div>
               <Button 
                 onClick={handleCTAClick}
