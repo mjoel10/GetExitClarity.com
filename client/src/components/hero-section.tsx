@@ -37,7 +37,9 @@ function AssessmentProgress() {
             <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-sm">
               <CheckCircle className="w-4 h-4 text-white" />
             </div>
-            <span className="text-lg font-semibold text-primary">ExitClarity</span>
+            <span className="text-lg text-primary">
+              <span className="font-medium">Exit</span><span className="font-bold">Clarity</span>
+            </span>
           </div>
 
           {/* Enhanced Progress Section */}
