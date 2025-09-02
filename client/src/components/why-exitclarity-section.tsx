@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Handshake, Award, Shield, FileText, CheckCircle, ArrowRight } from "lucide-react";
+import { Handshake, Award, Shield, FileText, CheckCircle, ArrowRight, Star } from "lucide-react";
 
 export function WhyExitClaritySection() {
   const handleCTAClick = () => {
@@ -34,8 +34,8 @@ export function WhyExitClaritySection() {
       <div className="absolute bottom-10 left-10 w-32 h-32 bg-gradient-to-tr from-primary/30 to-blue-300/20 rounded-full blur-xl opacity-60"></div>
       
       <div className="container mx-auto px-6 relative z-10">
-        {/* Combined Report Preview and Unbiased Advice */}
-        <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">
+        {/* Report Preview + What You'll Receive */}
+        <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
           {/* Premium Report Visual */}
           <div className="relative">
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-200/30 to-primary/20 rounded-full blur-2xl"></div>
@@ -170,7 +170,7 @@ export function WhyExitClaritySection() {
             </div>
           </div>
           
-          {/* Enhanced Description */}
+          {/* What You'll Receive */}
           <div className="space-y-8">
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-6 leading-tight">
@@ -210,39 +210,60 @@ export function WhyExitClaritySection() {
           </div>
         </div>
 
-        {/* Unbiased Advice Section */}
-        <div className="text-center">
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-foreground mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-              Unbiased Advice
-            </span>{" "}
-            You Can Trust
-          </h2>
-          <p className="text-lg text-muted-foreground mb-16 leading-relaxed max-w-3xl mx-auto">
-            Built by business owners, for business owners. Get the insights you need without hidden agendas.
-          </p>
-
-          {/* Enhanced Three Columns */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {reasons.map((reason, index) => {
-              const Icon = reason.icon;
-              return (
-                <div key={index} className="text-center group">
-                  <div className="relative mb-6">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                    <div className="relative w-20 h-20 rounded-full mx-auto flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 bg-gradient-to-br from-primary to-blue-600">
-                      <Icon className="w-9 h-9 text-white" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
-                    {reason.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
-                    {reason.description}
-                  </p>
+        {/* Cohesive Unbiased Advice Section - Different Visual Treatment */}
+        <div className="relative">
+          {/* Connecting visual element */}
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-16 bg-gradient-to-b from-primary/40 to-transparent"></div>
+          
+          {/* Content Card */}
+          <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-12 lg:p-16 shadow-2xl border border-slate-700/50 relative overflow-hidden">
+            {/* Dark theme decorative elements */}
+            <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-primary/20 rounded-full blur-2xl"></div>
+            <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-tr from-primary/20 to-blue-400/20 rounded-full blur-xl"></div>
+            
+            <div className="relative z-10">
+              {/* Header */}
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-white/20">
+                  <Star className="w-4 h-4" />
+                  Built by Business Owners
                 </div>
-              );
-            })}
+                
+                <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                    Unbiased Advice
+                  </span>{" "}
+                  You Can Trust
+                </h2>
+                
+                <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
+                  Built by business owners, for business owners. Get the insights you need without hidden agendas.
+                </p>
+              </div>
+
+              {/* Trust Points - Horizontal Layout */}
+              <div className="grid md:grid-cols-3 gap-8">
+                {reasons.map((reason, index) => {
+                  const Icon = reason.icon;
+                  return (
+                    <div key={index} className="text-center group">
+                      <div className="relative mb-6">
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-cyan-400/30 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                        <div className="relative w-16 h-16 rounded-2xl mx-auto flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 bg-gradient-to-br from-slate-700 to-slate-800 border border-slate-600">
+                          <Icon className="w-8 h-8 text-blue-400" />
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
+                        {reason.title}
+                      </h3>
+                      <p className="text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors duration-300">
+                        {reason.description}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
