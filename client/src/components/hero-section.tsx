@@ -85,7 +85,7 @@ function AssessmentProgress() {
                   factor.completed 
                     ? 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200 shadow-sm' 
                     : factor.active 
-                      ? 'bg-gradient-to-br from-yellow-50 to-yellow-100/50 border-yellow-300 shadow-md ring-1 ring-yellow-400/30' 
+                      ? 'bg-gradient-to-br from-teal-50 to-teal-100/50 border-teal-300 shadow-md ring-1 ring-teal-400/30' 
                       : 'bg-gradient-to-br from-gray-50 to-gray-100/50 border-gray-200'
                 }`}
               >
@@ -95,7 +95,7 @@ function AssessmentProgress() {
                       factor.completed 
                         ? 'bg-gradient-to-br from-primary to-blue-600 text-white' 
                         : factor.active 
-                          ? 'bg-gradient-to-br from-yellow-400 to-yellow-500 text-white' 
+                          ? 'bg-gradient-to-br from-teal-400 to-teal-500 text-white' 
                           : 'bg-gradient-to-br from-gray-300 to-gray-400 text-gray-600'
                     }`}>
                       {factor.completed ? '✓' : 
