@@ -28,7 +28,7 @@ export function RossStorySection() {
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  He built ExitClarity to give owners the unbiased advice and insights he wishes he'd had earlier.
+                  We built ExitClarity to give owners the unbiased advice and insights he wishes he'd had earlier.
                 </p>
               </div>
               
