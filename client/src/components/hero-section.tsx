@@ -266,8 +266,13 @@ export function HeroSection() {
               </p>
             </div>
             
+            {/* Mobile Assessment Visual - appears after subhead on mobile only */}
+            <div className="lg:hidden order-2">
+              <AssessmentProgress />
+            </div>
+            
             {/* Enhanced Value Propositions */}
-            <div className="space-y-4">
+            <div className="space-y-4 order-3 lg:order-2">
               {[
                 "Realistic business valuation ranges",
                 "Clear timeline for optimal sale", 
@@ -286,7 +291,7 @@ export function HeroSection() {
             </div>
             
             {/* Enhanced CTA Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 order-4 lg:order-3">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-blue-600/20 rounded-2xl blur-xl"></div>
                 <Button 
@@ -322,8 +327,8 @@ export function HeroSection() {
             </div>
           </div>
           
-          {/* Right Side - Enhanced Assessment Visual */}
-          <div className="order-2 lg:order-2">
+          {/* Right Side - Enhanced Assessment Visual - Desktop only */}
+          <div className="hidden lg:block order-2 lg:order-2">
             <AssessmentProgress />
           </div>
         </div>
