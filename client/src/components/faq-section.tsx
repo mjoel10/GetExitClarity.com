@@ -19,7 +19,7 @@ export function FAQSection() {
     },
     {
       question: "How accurate is the valuation?",
-      answer: "Our valuation ranges are based on the analysis of real transactions and comps across industries. While every business is unique, our estimates provide realistic ranges that align with what buyers typically pay in today's market."
+      answer: "Our valuation ranges are grounded in real transaction data and industry comps, tailored to your performance and business type, and aligned with what buyers are paying in today's market."
     },
     {
       question: "What if I'm not ready to sell?",
