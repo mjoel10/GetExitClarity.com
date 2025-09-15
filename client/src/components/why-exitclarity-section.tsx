@@ -114,18 +114,18 @@ export function WhyExitClaritySection() {
   const reasons = [
     {
       icon: Handshake,
-      title: "Owner-First Approach",
-      description: "No hidden agenda. Unbiased analysis from owners who've been there."
+      title: "Owner-First, No Agenda",
+      description: "We're not a broker, banker, or buyer. No hidden fees or pitches."
     },
     {
       icon: Award,
-      title: "30+ Years Experience",
-      description: "Built on decades of real business ownership and M&A expertise"
+      title: "30+ Years of Experience",
+      description: "Forged through failed exits, successful sales, and decades of buy- and sell-side M&A lessons."
     },
     {
       icon: Shield,
       title: "Private & Secure",
-      description: "Your report is confidential. Never shared without your explicit approval."
+      description: "Your report is confidential. It's yours alone—and never shared without permission."
     }
   ];
 
@@ -357,7 +357,7 @@ export function WhyExitClaritySection() {
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-white/20">
                   <Star className="w-4 h-4" />
-                  Built by Business Owners
+                  Why Owners Trust ExitClarity
                 </div>
                 
                 <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-4 leading-tight">
