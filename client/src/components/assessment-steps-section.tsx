@@ -10,19 +10,19 @@ export function AssessmentStepsSection() {
       icon: Clipboard,
       number: 1,
       title: "Take the Assessment",
-      description: "Answer focused questions about your business in minutes—covering the factors that drive valuation, buyer confidence, and exit timing."
+      description: "Answer focused questions in minutes on valuation, risks, and readiness."
     },
     {
       icon: BarChart3,
       number: 2,
       title: "Get Expert Analysis",
-      description: "Your answers are scored by our exit readiness model built from decades of buy- and sell-side experience, then reviewed by our team of M&A experts to deliver clear, unbiased guidance."
+      description: "Our readiness model and team of M&A experts turn your inputs into clear, unbiased guidance."
     },
     {
       icon: FileText,
       number: 3,
       title: "Receive Your Report",
-      description: "See your valuation range, exit timeline, risks, and action plan, complete with a GO / FIX / WAIT recommendation you can trust. Delivered securely to your inbox within 24 hours."
+      description: "Get valuation ranges, timelines, risks, and a GO / FIX / WAIT call—delivered to your inbox within 24 hours."
     }
   ];
 
