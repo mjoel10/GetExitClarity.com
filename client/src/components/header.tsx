@@ -105,14 +105,6 @@ export default function Header() {
             >
               Get Started
             </Button>
-            <Button 
-              onClick={handleSignInClick}
-              variant="outline"
-              className="font-semibold text-gray-700 hover:text-primary border-gray-300 transition-all duration-200 px-4 py-2"
-            >
-              <Lock className="mr-2 h-4 w-4" />
-              Sign in
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -161,14 +153,6 @@ export default function Header() {
                   className="bg-primary text-white font-semibold px-6 py-2 rounded-md hover:bg-primary/90 transition-all duration-200"
                 >
                   Get Started
-                </Button>
-                <Button 
-                  onClick={handleSignInClick}
-                  variant="outline"
-                  className="justify-start font-semibold text-gray-700 hover:text-primary border-gray-300"
-                >
-                  <Lock className="mr-2 h-4 w-4" />
-                  Sign in
                 </Button>
               </div>
             </div>
