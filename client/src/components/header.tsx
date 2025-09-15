@@ -31,7 +31,7 @@ export default function Header() {
       hasDropdown: true,
       dropdownItems: [
         { label: "Business Owners", href: "https://www.exitclarity.io/platform/business-owners" },
-        { label: "M&A Professionals", href: "https://www.exitclarity.io/platform/ma-firms" },
+        { label: "M&A Professionals", href: "https://www.exitclarity.io/platform/ma-professionals" },
         { label: "Sample Report", href: "https://exitclarity.io/sample-report" }
       ]
     },
