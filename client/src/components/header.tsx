@@ -20,7 +20,7 @@ export default function Header() {
   };
 
   const handleSignInClick = () => {
-    window.location.href = 'https://app.exitclarity.io/login';
+    window.location.href = 'https://app.exitclarity.io/auth';
   };
 
   const navItems = [
