@@ -100,18 +100,18 @@ export default function Header() {
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <Button 
+              onClick={handleGetStartedClick}
+              className="bg-primary text-white font-semibold px-6 py-2 rounded-md hover:bg-primary/90 transition-all duration-200"
+            >
+              Get Started
+            </Button>
+            <Button 
               onClick={handleSignInClick}
               variant="outline"
               className="font-semibold text-gray-700 hover:text-primary border-gray-300 transition-all duration-200 px-4 py-2"
             >
               <Lock className="mr-2 h-4 w-4" />
               Sign in
-            </Button>
-            <Button 
-              onClick={handleGetStartedClick}
-              className="bg-primary text-white font-semibold px-6 py-2 rounded-md hover:bg-primary/90 transition-all duration-200"
-            >
-              Get Started
             </Button>
           </div>
 
@@ -157,18 +157,18 @@ export default function Header() {
               ))}
               <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
                 <Button 
+                  onClick={handleGetStartedClick}
+                  className="bg-primary text-white font-semibold px-6 py-2 rounded-md hover:bg-primary/90 transition-all duration-200"
+                >
+                  Get Started
+                </Button>
+                <Button 
                   onClick={handleSignInClick}
                   variant="outline"
                   className="justify-start font-semibold text-gray-700 hover:text-primary border-gray-300"
                 >
                   <Lock className="mr-2 h-4 w-4" />
                   Sign in
-                </Button>
-                <Button 
-                  onClick={handleGetStartedClick}
-                  className="bg-primary text-white font-semibold px-6 py-2 rounded-md hover:bg-primary/90 transition-all duration-200"
-                >
-                  Get Started
                 </Button>
               </div>
             </div>
