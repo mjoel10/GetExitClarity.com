@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { ChevronDown, Menu, X } from "lucide-react";
 import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,9 +15,38 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleCTAClick = () => {
+  const handleGetStartedClick = () => {
     window.open('https://app.exitclarity.io/signupdirect', '_blank');
   };
+
+  const handleSignInClick = () => {
+    window.open('https://app.exitclarity.io/login', '_blank');
+  };
+
+  const navItems = [
+    { label: "Home", href: "/" },
+    { 
+      label: "Platform", 
+      href: "#",
+      hasDropdown: true,
+      dropdownItems: [
+        { label: "For M&A Firms", href: "/platform/ma-firms" },
+        { label: "For Business Owners", href: "/platform/business-owners" }
+      ]
+    },
+    { label: "Pricing", href: "https://exitclarity.io/pricing" },
+    { 
+      label: "Resources", 
+      href: "#",
+      hasDropdown: true,
+      dropdownItems: [
+        { label: "Blog", href: "/blog" },
+        { label: "Resource Center", href: "/resources" }
+      ]
+    },
+    { label: "About", href: "https://exitclarity.io/about" },
+    { label: "Contact", href: "https://exitclarity.io/contact" }
+  ];
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -25,18 +56,119 @@ export default function Header() {
         <nav className="flex items-center justify-between h-8">
           {/* Logo Section */}
           <div className="flex items-center">
-            <img src={exitClarityLogo} alt="ExitClarity" className="h-8 w-auto" />
+            <a href="/" className="flex items-center">
+              <img src={exitClarityLogo} alt="ExitClarity" className="h-8 w-auto" />
+            </a>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navItems.map((item, index) => (
+              <div key={index} className="relative group">
+                <a 
+                  href={item.href}
+                  className="flex items-center text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+                  target={item.href.startsWith('http') ? '_blank' : undefined}
+                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                >
+                  {item.label}
+                  {item.hasDropdown && <ChevronDown className="ml-1 h-4 w-4" />}
+                </a>
+                
+                {item.hasDropdown && item.dropdownItems && (
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
+                      {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
+                        <a
+                          key={dropdownIndex}
+                          href={dropdownItem.href}
+                          className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors duration-200"
+                        >
+                          {dropdownItem.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
           
-          {/* CTA Button */}
-          <Button 
-            onClick={handleCTAClick}
-            variant="hero"
-            className="font-semibold px-6 py-3 transition-all duration-200 hover:shadow-lg hover:scale-105"
+          {/* Desktop CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Button 
+              onClick={handleSignInClick}
+              variant="ghost"
+              className="font-semibold text-gray-700 hover:text-primary transition-all duration-200"
+            >
+              Sign In
+            </Button>
+            <Button 
+              onClick={handleGetStartedClick}
+              variant="hero"
+              className="font-semibold px-6 py-3 transition-all duration-200 hover:shadow-lg hover:scale-105"
+            >
+              Get Started
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            Get Started
-          </Button>
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </nav>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden mt-4 pb-4 border-t border-gray-100">
+            <div className="flex flex-col space-y-4 pt-4">
+              {navItems.map((item, index) => (
+                <div key={index}>
+                  <a 
+                    href={item.href}
+                    className="block text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+                    target={item.href.startsWith('http') ? '_blank' : undefined}
+                    rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  >
+                    {item.label}
+                  </a>
+                  {item.hasDropdown && item.dropdownItems && (
+                    <div className="ml-4 mt-2 space-y-2">
+                      {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
+                        <a
+                          key={dropdownIndex}
+                          href={dropdownItem.href}
+                          className="block text-gray-600 hover:text-primary transition-colors duration-200"
+                        >
+                          {dropdownItem.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+              <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
+                <Button 
+                  onClick={handleSignInClick}
+                  variant="ghost"
+                  className="justify-start font-semibold text-gray-700 hover:text-primary"
+                >
+                  Sign In
+                </Button>
+                <Button 
+                  onClick={handleGetStartedClick}
+                  variant="hero"
+                  className="font-semibold"
+                >
+                  Get Started
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
