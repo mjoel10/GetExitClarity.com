@@ -11,7 +11,7 @@ import { useMeta } from "@/hooks/use-meta";
 export default function Landing() {
   useMeta({
     title: "Are You Ready to Sell Your Business? | ExitClarity",
-    description: "Get a free personalized exit readiness report in 20 minutes. Realistic business valuation ranges, clear timeline for optimal sale, and GO/FIX/WAIT recommendations across 11 categories."
+    description: "Assess your exit readiness in minutes. Get valuation ranges, buyer risk factors, and a clear action plan to maximize value before you sell. Delivered within 24 hours."
   });
 
   return (
