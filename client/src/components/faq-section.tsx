@@ -15,7 +15,7 @@ export function FAQSection() {
     },
     {
       question: "Will you share my information?",
-      answer: "Never without your permission. Your business information and report are kept strictly confidential. We don't share your data and details with brokers, investment banks, or other M&A professionals unless you ask us to."
+      answer: "Never. Your business information and report are kept strictly confidential. We don't share your data and details with brokers, investment banks, or other M&A professionals unless you ask us to."
     },
     {
       question: "How accurate is the valuation?",
