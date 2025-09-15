@@ -23,7 +23,7 @@ export function FAQSection() {
     },
     {
       question: "What if I'm not ready to sell?",
-      answer: "Perfect - that's exactly why you should take the assessment now. Most business owners who maximize their exit value start preparing 2-5 years before selling. The report will show you exactly what to improve and when."
+      answer: "That's exactly why ExitClarity exists. Most owners who maximize their exit value start preparing years in advance. The assessment shows what to fix now so you can sell on your terms later."
     },
     {
       question: "Can I retake the assessment?",
