@@ -11,7 +11,7 @@ export function FAQSection() {
     },
     {
       question: "How much does it cost?",
-      answer: "Yes, the assessment and your personalized exit readiness report are completely free. No credit card required, no hidden charges. We believe every business owner deserves to know where they stand."
+      answer: "Start for free. The full 25-page Exit Readiness Report costs $999 and is delivered within 24 hours — a fraction of the $15K+ consultants often charge without ever having lived an exit."
     },
     {
       question: "Will you share my information?",
