@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Lock } from "lucide-react";
 import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
 
 export default function Header() {
@@ -97,15 +97,15 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <Button 
               onClick={handleSignInClick}
-              variant="ghost"
-              className="font-semibold text-gray-700 hover:text-primary transition-all duration-200"
+              variant="outline"
+              className="font-semibold text-gray-700 hover:text-primary border-gray-300 transition-all duration-200 px-4 py-2"
             >
-              Sign In
+              <Lock className="mr-2 h-4 w-4" />
+              Sign in
             </Button>
             <Button 
               onClick={handleGetStartedClick}
-              variant="hero"
-              className="font-semibold px-6 py-3 transition-all duration-200 hover:shadow-lg hover:scale-105"
+              className="bg-primary text-white font-semibold px-6 py-2 rounded-md hover:bg-primary/90 transition-all duration-200"
             >
               Get Started
             </Button>
@@ -150,15 +150,15 @@ export default function Header() {
               <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
                 <Button 
                   onClick={handleSignInClick}
-                  variant="ghost"
-                  className="justify-start font-semibold text-gray-700 hover:text-primary"
+                  variant="outline"
+                  className="justify-start font-semibold text-gray-700 hover:text-primary border-gray-300"
                 >
-                  Sign In
+                  <Lock className="mr-2 h-4 w-4" />
+                  Sign in
                 </Button>
                 <Button 
                   onClick={handleGetStartedClick}
-                  variant="hero"
-                  className="font-semibold"
+                  className="bg-primary text-white font-semibold px-6 py-2 rounded-md hover:bg-primary/90 transition-all duration-200"
                 >
                   Get Started
                 </Button>
