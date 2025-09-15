@@ -16,22 +16,23 @@ export default function Header() {
   }, []);
 
   const handleGetStartedClick = () => {
-    window.open('https://app.exitclarity.io/signupdirect', '_blank');
+    window.location.href = 'https://app.exitclarity.io/signupdirect';
   };
 
   const handleSignInClick = () => {
-    window.open('https://app.exitclarity.io/login', '_blank');
+    window.location.href = 'https://app.exitclarity.io/login';
   };
 
   const navItems = [
-    { label: "Home", href: "/" },
+    { label: "Home", href: "https://exitclarity.io" },
     { 
       label: "Platform", 
       href: "#",
       hasDropdown: true,
       dropdownItems: [
-        { label: "For M&A Firms", href: "/platform/ma-firms" },
-        { label: "For Business Owners", href: "/platform/business-owners" }
+        { label: "For Business Owners", href: "https://exitclarity.io/for-business-owners" },
+        { label: "For M&A Firms", href: "https://exitclarity.io/for-ma-firms" },
+        { label: "View Sample Report", href: "https://exitclarity.io/sample-report" }
       ]
     },
     { label: "Pricing", href: "https://exitclarity.io/pricing" },
@@ -40,8 +41,8 @@ export default function Header() {
       href: "#",
       hasDropdown: true,
       dropdownItems: [
-        { label: "Blog", href: "/blog" },
-        { label: "Resource Center", href: "/resources" }
+        { label: "Blog", href: "https://exitclarity.io/blog" },
+        { label: "Resource Center", href: "https://exitclarity.io/resources" }
       ]
     },
     { label: "About", href: "https://exitclarity.io/about" },
@@ -68,8 +69,6 @@ export default function Header() {
                 <a 
                   href={item.href}
                   className="flex items-center text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
-                  target={item.href.startsWith('http') ? '_blank' : undefined}
-                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 >
                   {item.label}
                   {item.hasDropdown && <ChevronDown className="ml-1 h-4 w-4" />}
@@ -130,8 +129,6 @@ export default function Header() {
                   <a 
                     href={item.href}
                     className="block text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
-                    target={item.href.startsWith('http') ? '_blank' : undefined}
-                    rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   >
                     {item.label}
                   </a>
