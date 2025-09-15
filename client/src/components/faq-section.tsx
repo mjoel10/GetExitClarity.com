@@ -10,7 +10,7 @@ export function FAQSection() {
       answer: "The assessment typically takes about 20–30 minutes. It's designed to be thorough but efficient, covering all 11 deal-critical readiness factors without being overwhelming."
     },
     {
-      question: "Is it really free?",
+      question: "How much does it cost?",
       answer: "Yes, the assessment and your personalized exit readiness report are completely free. No credit card required, no hidden charges. We believe every business owner deserves to know where they stand."
     },
     {
