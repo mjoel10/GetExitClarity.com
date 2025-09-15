@@ -15,8 +15,8 @@ export function AssessmentStepsSection() {
     {
       icon: BarChart3,
       number: 2,
-      title: "Get Expert-Reviewed Analysis",
-      description: "Your answers are scored by exit models built from decades of buy- and sell-side successes and failures, then reviewed by M&A experts to deliver clear, unbiased guidance."
+      title: "Get Expert Analysis",
+      description: "Your answers are scored by our exit readiness model built from decades of buy- and sell-side experience, then reviewed by our team of M&A experts to deliver clear, unbiased guidance."
     },
     {
       icon: FileText,
