@@ -103,6 +103,21 @@ export default function Footer() {
               >
                 Sample Report
               </a>
+              <a 
+                href="https://www.exitclarity.io/pricing" 
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+              >
+                Pricing
+              </a>
             </nav>
           </div>
 
