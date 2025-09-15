@@ -69,7 +69,7 @@ export function ProblemSection() {
           </h2>
           
           <p className="text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
-            The statistics reveal a critical gap in exit readiness that costs business owners millions
+            The data is brutal and it costs entrepreneurs millions
           </p>
         </div>
 
