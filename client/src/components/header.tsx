@@ -34,7 +34,7 @@ export default function Header() {
             variant="hero"
             className="font-semibold px-6 py-3 transition-all duration-200 hover:shadow-lg hover:scale-105"
           >
-            Start Free Assessment
+            Get Started
           </Button>
         </nav>
       </div>
