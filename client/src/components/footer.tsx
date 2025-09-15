@@ -148,6 +148,21 @@ export default function Footer() {
                 Blog
               </a>
               <a 
+                href="https://www.exitclarity.io/resources" 
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+              >
+                Resource Center
+              </a>
+              <a 
                 href="https://www.exitclarity.io/about" 
                 target="_blank"
                 rel="noopener noreferrer"
@@ -161,36 +176,6 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
                 About
-              </a>
-              <a 
-                href="https://www.exitclarity.io/resources" 
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
-              >
-                Resources
-              </a>
-              <a 
-                href="https://www.exitclarity.io/contact" 
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
-              >
-                Contact
               </a>
             </nav>
           </div>
@@ -240,6 +225,21 @@ export default function Footer() {
               >
                 <Linkedin style={{ width: '1rem', height: '1rem', marginRight: '0.5rem' }} />
                 LinkedIn
+              </a>
+              <a 
+                href="https://www.exitclarity.io/contact" 
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
+              >
+                Contact Us
               </a>
             </div>
           </div>
