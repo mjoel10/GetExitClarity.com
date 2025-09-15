@@ -24,11 +24,11 @@ export function RossStorySection() {
               
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Ross Joel failed to sell his company three times before finally succeeding on the fourth attempt. After selling to private equity in 2020, he helped grow that business 10X post-sale.
+                  Ross failed to sell his company three times before finally getting it right on the fourth. After selling to private equity in 2020, he grew the business 10X post-sale.
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We built ExitClarity to give owners the unbiased advice and insights Ross wishes he'd had earlier.
+                  We built ExitClarity to be the tool he wishes he had back then—an unbiased, owner-first readiness check grounded in real scars, not theory.
                 </p>
               </div>
               
