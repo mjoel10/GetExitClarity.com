@@ -288,137 +288,137 @@ export default function BusinessOwnersWaitlist() {
 
             {/* Right Visual - Tablet Browser Interface */}
             <div className="flex justify-center lg:justify-end lg:mt-32">
-              <div className="max-w-sm sm:max-w-md lg:max-w-lg w-full px-4 sm:px-0">
+              <div className="max-w-xs sm:max-w-md lg:max-w-lg w-full px-2 sm:px-0">
                 {/* Tablet Container */}
-                <div className="transform scale-90 sm:scale-100 origin-center">
+                <div className="transform scale-95 sm:scale-100 origin-center">
                   {/* Tablet Frame */}
-                  <div className="bg-gray-800 rounded-2xl sm:rounded-3xl p-1.5 sm:p-2 shadow-2xl">
+                  <div className="bg-gray-800 rounded-xl sm:rounded-2xl lg:rounded-3xl p-1 sm:p-1.5 lg:p-2 shadow-2xl">
                     {/* Browser Chrome */}
-                    <div className="bg-white rounded-xl sm:rounded-2xl overflow-hidden">
+                    <div className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden">
                       {/* Browser Header - Minimal */}
-                      <div className="bg-white px-3 sm:px-4 py-2 sm:py-2.5">
-                        <div className="flex items-center gap-2 sm:gap-3">
+                      <div className="bg-white px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 lg:py-2.5">
+                        <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
                           <div className="flex gap-1 sm:gap-1.5">
-                            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-red-400 rounded-full"></div>
-                            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-yellow-400 rounded-full"></div>
-                            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-400 rounded-full"></div>
+                            <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 lg:w-3 lg:h-3 bg-red-400 rounded-full"></div>
+                            <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 lg:w-3 lg:h-3 bg-yellow-400 rounded-full"></div>
+                            <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 lg:w-3 lg:h-3 bg-green-400 rounded-full"></div>
                           </div>
                         </div>
                       </div>
 
                       {/* App Interface */}
-                      <div className="h-64 sm:h-72 lg:h-80">
+                      <div className="h-72 sm:h-80 lg:h-96">
                         {/* App Header */}
-                        <div className="bg-gray-900 text-white px-4 py-2 flex items-center">
-                          <div className="flex items-center gap-2">
-                            <div className="w-6 h-6 bg-primary rounded flex items-center justify-center">
-                              <FileText className="w-3 h-3 text-white" />
+                        <div className="bg-gray-900 text-white px-3 sm:px-4 py-2 sm:py-2.5 flex items-center">
+                          <div className="flex items-center gap-2 sm:gap-2.5">
+                            <div className="w-5 h-5 sm:w-6 sm:h-6 bg-primary rounded flex items-center justify-center">
+                              <FileText className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
                             </div>
-                            <span className="text-sm font-semibold">ExitClarity</span>
+                            <span className="text-xs sm:text-sm font-semibold">ExitClarity</span>
                           </div>
                         </div>
 
                         {/* Main Content */}
                         <div className="flex h-full bg-gray-50">
                           {/* Sidebar */}
-                          <div className="w-20 sm:w-28 bg-white border-r border-gray-200 p-1.5 sm:p-2">
-                            <div className="space-y-1">
-                              <div className="h-1.5 sm:h-2 bg-gray-300 rounded w-16 sm:w-20 mb-1 sm:mb-2"></div>
-                              <div className="bg-primary/10 text-primary px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-xs font-medium">
+                          <div className="w-24 sm:w-28 lg:w-32 bg-white border-r border-gray-200 p-1.5 sm:p-2">
+                            <div className="space-y-1 sm:space-y-1.5">
+                              <div className="h-2 sm:h-2.5 bg-gray-300 rounded w-18 sm:w-20 mb-1.5 sm:mb-2"></div>
+                              <div className="bg-primary/10 text-primary px-1.5 sm:px-2 py-1 sm:py-1.5 rounded text-xs font-medium">
                                 <span className="hidden sm:inline">Executive Summary</span>
                                 <span className="sm:hidden text-xs">Exec</span>
                               </div>
-                              <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-12 sm:w-20"></div>
-                              <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-10 sm:w-16"></div>
-                              <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-14 sm:w-18"></div>
-                              <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-8 sm:w-14"></div>
-                              <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-16 sm:w-22"></div>
-                              <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-12 sm:w-16"></div>
-                              <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-14 sm:w-20"></div>
-                              <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-10 sm:w-18"></div>
-                              <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-8 sm:w-14"></div>
-                              <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-12 sm:w-16"></div>
-                              <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-6 sm:w-12"></div>
+                              <div className="h-2 sm:h-2.5 bg-gray-200 rounded w-16 sm:w-20"></div>
+                              <div className="h-2 sm:h-2.5 bg-gray-200 rounded w-14 sm:w-16"></div>
+                              <div className="h-2 sm:h-2.5 bg-gray-200 rounded w-18 sm:w-22"></div>
+                              <div className="h-2 sm:h-2.5 bg-gray-200 rounded w-12 sm:w-14"></div>
+                              <div className="h-2 sm:h-2.5 bg-gray-200 rounded w-20 sm:w-24"></div>
+                              <div className="h-2 sm:h-2.5 bg-gray-200 rounded w-16 sm:w-18"></div>
+                              <div className="h-2 sm:h-2.5 bg-gray-200 rounded w-18 sm:w-20"></div>
+                              <div className="h-2 sm:h-2.5 bg-gray-200 rounded w-14 sm:w-16"></div>
+                              <div className="h-2 sm:h-2.5 bg-gray-200 rounded w-12 sm:w-14"></div>
+                              <div className="h-2 sm:h-2.5 bg-gray-200 rounded w-16 sm:w-18"></div>
+                              <div className="h-2 sm:h-2.5 bg-gray-200 rounded w-10 sm:w-12"></div>
                             </div>
                           </div>
 
                           {/* Content Area */}
-                          <div className="flex-1 p-2 sm:p-3 overflow-hidden">
-                            <div className="h-1.5 sm:h-2 bg-gray-200 rounded mb-1.5 sm:mb-2 w-3/4"></div>
+                          <div className="flex-1 p-2.5 sm:p-3 lg:p-4 overflow-hidden">
+                            <div className="h-2 sm:h-2.5 bg-gray-200 rounded mb-2 sm:mb-2.5 w-3/4"></div>
                             
                             {/* Score Card */}
-                            <div className="bg-white border border-gray-200 rounded-md sm:rounded-lg p-2 sm:p-3 shadow-sm">
-                              <div className="flex items-center gap-2 sm:gap-3">
+                            <div className="bg-white border border-gray-200 rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-sm">
+                              <div className="flex items-center gap-3 sm:gap-4">
                                 {/* Score Ring */}
-                                <div className="relative w-10 h-10 sm:w-14 sm:h-14 flex-shrink-0">
-                                  <svg className="w-10 h-10 sm:w-14 sm:h-14 transform -rotate-90" viewBox="0 0 36 36">
+                                <div className="relative w-12 h-12 sm:w-16 sm:h-16 lg:w-18 lg:h-18 flex-shrink-0">
+                                  <svg className="w-12 h-12 sm:w-16 sm:h-16 lg:w-18 lg:h-18 transform -rotate-90" viewBox="0 0 36 36">
                                     <path
                                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                                       fill="none"
                                       stroke="#e5e7eb"
-                                      strokeWidth="2"
+                                      strokeWidth="2.5"
                                     />
                                     <path
                                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                                       fill="none"
                                       stroke="#22c55e"
-                                      strokeWidth="2"
+                                      strokeWidth="2.5"
                                       strokeDasharray="94, 100"
                                       strokeLinecap="round"
                                     />
                                   </svg>
                                   <div className="absolute inset-0 flex items-center justify-center">
-                                    <span className="text-xs sm:text-sm font-bold text-gray-900">94%</span>
+                                    <span className="text-sm sm:text-base lg:text-lg font-bold text-gray-900">94%</span>
                                   </div>
                                 </div>
                                 
                                 <div className="flex-1 min-w-0">
-                                  <div className="flex items-center justify-between mb-1 sm:mb-2">
-                                    <div className="inline-flex items-center gap-0.5 sm:gap-1 bg-primary text-white px-1 sm:px-2 py-0.5 rounded text-xs font-semibold">
-                                      <TrendingUp className="w-1.5 h-1.5 sm:w-2.5 sm:h-2.5" />
+                                  <div className="flex items-center justify-between mb-2 sm:mb-3">
+                                    <div className="inline-flex items-center gap-1 sm:gap-1.5 bg-primary text-white px-2 sm:px-2.5 py-1 sm:py-1.5 rounded text-xs sm:text-sm font-semibold">
+                                      <TrendingUp className="w-2 h-2 sm:w-3 sm:h-3" />
                                       <span className="hidden sm:inline">Ready to Proceed</span>
-                                      <span className="sm:hidden text-xs">Ready</span>
+                                      <span className="sm:hidden">Ready</span>
                                     </div>
-                                    <div className="h-1 sm:h-1.5 bg-gray-200 rounded w-8 sm:w-16"></div>
+                                    <div className="h-1.5 sm:h-2 bg-gray-200 rounded w-12 sm:w-20"></div>
                                   </div>
                                   
                                   {/* Key Metrics Grid */}
-                                  <div className="grid grid-cols-4 gap-0.5 sm:gap-2 text-xs">
+                                  <div className="grid grid-cols-4 gap-1.5 sm:gap-3 text-xs sm:text-sm">
                                     <div>
-                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-4 sm:w-12"></div>
-                                      <div className="font-bold text-gray-900 text-xs leading-tight">$8.2M</div>
+                                      <div className="h-1 sm:h-2 bg-gray-200 rounded mb-1 sm:mb-1.5 w-6 sm:w-14"></div>
+                                      <div className="font-bold text-gray-900 leading-tight">$8.2M</div>
                                     </div>
                                     <div>
-                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-3 sm:w-8"></div>
-                                      <div className="font-bold text-gray-900 text-xs leading-tight">4.2x</div>
+                                      <div className="h-1 sm:h-2 bg-gray-200 rounded mb-1 sm:mb-1.5 w-4 sm:w-10"></div>
+                                      <div className="font-bold text-gray-900 leading-tight">4.2x</div>
                                     </div>
                                     <div>
-                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-4 sm:w-10"></div>
-                                      <div className="font-bold text-gray-900 text-xs leading-tight">6-9mo</div>
+                                      <div className="h-1 sm:h-2 bg-gray-200 rounded mb-1 sm:mb-1.5 w-6 sm:w-12"></div>
+                                      <div className="font-bold text-gray-900 leading-tight">6-9mo</div>
                                     </div>
                                     <div>
-                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-3 sm:w-8"></div>
-                                      <div className="font-bold text-green-600 text-xs leading-tight">Low</div>
+                                      <div className="h-1 sm:h-2 bg-gray-200 rounded mb-1 sm:mb-1.5 w-4 sm:w-10"></div>
+                                      <div className="font-bold text-green-600 leading-tight">Low</div>
                                     </div>
                                   </div>
                                   
                                   {/* Bottom metrics row */}
-                                  <div className="grid grid-cols-4 gap-0.5 sm:gap-2 mt-1 sm:mt-2 pt-0.5 sm:pt-2 border-t border-gray-100 text-xs">
+                                  <div className="grid grid-cols-4 gap-1.5 sm:gap-3 mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-gray-100 text-xs sm:text-sm">
                                     <div>
-                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-2 sm:w-6"></div>
-                                      <div className="font-bold text-green-600 text-xs leading-tight">23%</div>
+                                      <div className="h-1 sm:h-2 bg-gray-200 rounded mb-1 sm:mb-1.5 w-3 sm:w-8"></div>
+                                      <div className="font-bold text-green-600 leading-tight">23%</div>
                                     </div>
                                     <div>
-                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-3 sm:w-8"></div>
-                                      <div className="font-bold text-blue-600 text-xs leading-tight">18%</div>
+                                      <div className="h-1 sm:h-2 bg-gray-200 rounded mb-1 sm:mb-1.5 w-4 sm:w-10"></div>
+                                      <div className="font-bold text-blue-600 leading-tight">18%</div>
                                     </div>
                                     <div>
-                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-2 sm:w-6"></div>
-                                      <div className="font-bold text-purple-600 text-xs leading-tight">12%</div>
+                                      <div className="h-1 sm:h-2 bg-gray-200 rounded mb-1 sm:mb-1.5 w-3 sm:w-8"></div>
+                                      <div className="font-bold text-purple-600 leading-tight">12%</div>
                                     </div>
                                     <div>
-                                      <div className="h-0.5 sm:h-1.5 bg-gray-200 rounded mb-0.5 sm:mb-1 w-2 sm:w-5"></div>
-                                      <div className="font-bold text-indigo-600 text-xs leading-tight">High</div>
+                                      <div className="h-1 sm:h-2 bg-gray-200 rounded mb-1 sm:mb-1.5 w-3 sm:w-7"></div>
+                                      <div className="font-bold text-indigo-600 leading-tight">High</div>
                                     </div>
                                   </div>
                                 </div>
@@ -426,23 +426,23 @@ export default function BusinessOwnersWaitlist() {
                             </div>
 
                             {/* Key Findings - Stylized */}
-                            <div className="mt-1.5 sm:mt-3 space-y-0.5 sm:space-y-2">
-                              <div className="h-1 sm:h-2 bg-gray-300 rounded w-8 sm:w-20 mb-0.5 sm:mb-1"></div>
-                              <div className="flex items-center gap-1 sm:gap-2">
-                                <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-500 flex-shrink-0" />
-                                <div className="h-1 sm:h-2 bg-gray-200 rounded flex-1"></div>
+                            <div className="mt-3 sm:mt-4 space-y-1.5 sm:space-y-2.5">
+                              <div className="h-1.5 sm:h-2.5 bg-gray-300 rounded w-12 sm:w-24 mb-1.5 sm:mb-2"></div>
+                              <div className="flex items-center gap-1.5 sm:gap-2.5">
+                                <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" />
+                                <div className="h-1.5 sm:h-2.5 bg-gray-200 rounded flex-1"></div>
                               </div>
-                              <div className="flex items-center gap-1 sm:gap-2">
-                                <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-500 flex-shrink-0" />
-                                <div className="h-1 sm:h-2 bg-gray-200 rounded w-4/5"></div>
+                              <div className="flex items-center gap-1.5 sm:gap-2.5">
+                                <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" />
+                                <div className="h-1.5 sm:h-2.5 bg-gray-200 rounded w-4/5"></div>
                               </div>
-                              <div className="flex items-center gap-1 sm:gap-2">
-                                <AlertTriangle className="w-2 h-2 sm:w-3 sm:h-3 text-yellow-500 flex-shrink-0" />
-                                <div className="h-1 sm:h-2 bg-gray-200 rounded w-3/4"></div>
+                              <div className="flex items-center gap-1.5 sm:gap-2.5">
+                                <AlertTriangle className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500 flex-shrink-0" />
+                                <div className="h-1.5 sm:h-2.5 bg-gray-200 rounded w-3/4"></div>
                               </div>
-                              <div className="flex items-center gap-1 sm:gap-2">
-                                <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-500 flex-shrink-0" />
-                                <div className="h-1 sm:h-2 bg-gray-200 rounded w-2/3"></div>
+                              <div className="flex items-center gap-1.5 sm:gap-2.5">
+                                <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" />
+                                <div className="h-1.5 sm:h-2.5 bg-gray-200 rounded w-2/3"></div>
                               </div>
                             </div>
                           </div>
