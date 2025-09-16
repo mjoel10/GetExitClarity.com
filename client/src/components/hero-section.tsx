@@ -83,8 +83,8 @@ function AssessmentProgress() {
               { name: "Financial Performance", completed: true },
               { name: "Documentation", completed: true },
               { name: "Team & Transition", completed: true },
-              { name: "Strategic Planning", completed: false, active: true },
               { name: "Operations", completed: true },
+              { name: "Strategic Planning", completed: false, active: true },
               { name: "Market Position", completed: false },
             ].map((factor, i) => (
               <div 
