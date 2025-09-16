@@ -218,17 +218,17 @@ export function WhyExitClaritySection() {
                       <span className="font-semibold">Ready to Exit</span>
                     </div>
                     
-                    <div className="grid grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6">
                       <div className="text-center">
-                        <div className="text-xl font-bold text-gray-900 mb-1">$12M-$18M</div>
+                        <div className="text-sm sm:text-xl font-bold text-gray-900 mb-1">$12M-$18M</div>
                         <div className="text-xs text-gray-500 uppercase font-semibold tracking-wide">Est. Value</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-xl font-bold text-gray-900 mb-1">4.2x</div>
+                        <div className="text-sm sm:text-xl font-bold text-gray-900 mb-1">4.2x</div>
                         <div className="text-xs text-gray-500 uppercase font-semibold tracking-wide">Multiple</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-xl font-bold text-gray-900 mb-1">94%</div>
+                        <div className="text-sm sm:text-xl font-bold text-gray-900 mb-1">94%</div>
                         <div className="text-xs text-gray-500 uppercase font-semibold tracking-wide">Readiness</div>
                       </div>
                     </div>
@@ -236,10 +236,10 @@ export function WhyExitClaritySection() {
                 </div>
               </div>
 
-              {/* Enhanced Content Preview */}
-              <div className="grid grid-cols-3 gap-4">
-                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-4 border border-gray-200">
-                  <h4 className="font-bold text-gray-800 mb-3 text-xs uppercase tracking-wide">Executive Summary</h4>
+              {/* Enhanced Content Preview - Mobile Optimized */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-4">
+                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-3 lg:p-4 border border-gray-200">
+                  <h4 className="font-bold text-gray-800 mb-2 lg:mb-3 text-xs uppercase tracking-wide">Executive Summary</h4>
                   <div className="space-y-2">
                     <div className="h-2 bg-gradient-to-r from-gray-300 to-gray-200 rounded w-full"></div>
                     <div className="h-2 bg-gradient-to-r from-gray-300 to-gray-200 rounded w-4/5"></div>
@@ -247,26 +247,26 @@ export function WhyExitClaritySection() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-4 border border-gray-200">
-                  <h4 className="font-bold text-gray-800 mb-3 text-xs uppercase tracking-wide">11 Assessments</h4>
-                  <div className="space-y-3">
+                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-3 lg:p-4 border border-gray-200">
+                  <h4 className="font-bold text-gray-800 mb-2 lg:mb-3 text-xs uppercase tracking-wide">11 Assessments</h4>
+                  <div className="space-y-2 lg:space-y-3">
                     <div className="flex items-center justify-between text-xs">
                       <span className="text-gray-700 font-medium">Financial</span>
-                      <div className="w-10 h-2 bg-gradient-to-r from-green-500 to-green-400 rounded-full"></div>
+                      <div className="w-8 lg:w-10 h-2 bg-gradient-to-r from-green-500 to-green-400 rounded-full"></div>
                     </div>
                     <div className="flex items-center justify-between text-xs">
                       <span className="text-gray-700 font-medium">Market</span>
-                      <div className="w-8 h-2 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+                      <div className="w-6 lg:w-8 h-2 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
                     </div>
                     <div className="flex items-center justify-between text-xs">
                       <span className="text-gray-700 font-medium">Operations</span>
-                      <div className="w-6 h-2 bg-gradient-to-r from-yellow-500 to-yellow-400 rounded-full"></div>
+                      <div className="w-5 lg:w-6 h-2 bg-gradient-to-r from-yellow-500 to-yellow-400 rounded-full"></div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-4 border border-gray-200">
-                  <h4 className="font-bold text-gray-800 mb-3 text-xs uppercase tracking-wide">Recommendations</h4>
+                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-3 lg:p-4 border border-gray-200">
+                  <h4 className="font-bold text-gray-800 mb-2 lg:mb-3 text-xs uppercase tracking-wide">Recommendations</h4>
                   <div className="space-y-2">
                     <div className="h-2 bg-gradient-to-r from-gray-300 to-gray-200 rounded w-full"></div>
                     <div className="h-2 bg-gradient-to-r from-gray-300 to-gray-200 rounded w-5/6"></div>

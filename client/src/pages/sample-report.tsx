@@ -179,10 +179,10 @@ export default function SampleReport() {
                           </div>
                         </div>
                         
-                        <div className="flex items-center justify-center gap-3 lg:gap-6 mb-4">
+                        <div className="flex items-center justify-center gap-6 sm:gap-8 mb-4 sm:mb-6">
                           {/* Circular Score */}
-                          <div className="relative flex-shrink-0">
-                            <svg className="w-16 h-16 lg:w-20 lg:h-20 transform -rotate-90" viewBox="0 0 36 36">
+                          <div className="relative">
+                            <svg className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 transform -rotate-90" viewBox="0 0 36 36">
                               <path
                                 d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                                 fill="none"
@@ -199,59 +199,59 @@ export default function SampleReport() {
                               />
                             </svg>
                             <div className="absolute inset-0 flex items-center justify-center">
-                              <span className="text-lg lg:text-xl font-bold text-gray-900">85</span>
+                              <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">85</span>
                             </div>
                           </div>
                           
                           {/* Value and Readiness */}
-                          <div className="text-center space-y-2">
+                          <div className="text-center space-y-2 sm:space-y-3">
                             <div>
-                              <div className="text-xs lg:text-sm font-bold text-gray-900">$12M-$18M</div>
-                              <div className="text-xs text-gray-600">EST. VALUE</div>
+                              <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">$12M-$18M</div>
+                              <div className="text-xs sm:text-sm text-gray-600">EST. VALUE</div>
                             </div>
                             <div>
-                              <div className="text-xs lg:text-sm font-bold text-gray-900">94%</div>
-                              <div className="text-xs text-gray-600">MULTIPLE READINESS</div>
+                              <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">94%</div>
+                              <div className="text-xs sm:text-sm text-gray-600">MULTIPLE READINESS</div>
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      {/* Three Sections Grid - Mobile Optimized */}
-                      <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-3 mb-4">
+                      {/* Three Sections Grid */}
+                      <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4 sm:mb-6">
                         {/* Executive Summary */}
-                        <div className="bg-gray-50 rounded-lg p-2">
-                          <div className="text-xs font-semibold text-gray-700 mb-1 text-center">
+                        <div className="bg-gray-50 rounded-lg p-2 sm:p-3">
+                          <div className="text-xs sm:text-sm font-semibold text-gray-700 mb-2 text-center">
                             EXECUTIVE SUMMARY
                           </div>
-                          <div className="space-y-1.5">
-                            <div className="h-1.5 bg-gray-300 rounded w-full"></div>
-                            <div className="h-1.5 bg-gray-300 rounded w-4/5"></div>
-                            <div className="h-1.5 bg-gray-300 rounded w-3/4"></div>
+                          <div className="space-y-1 sm:space-y-1.5">
+                            <div className="h-1 sm:h-1.5 bg-gray-300 rounded w-full"></div>
+                            <div className="h-1 sm:h-1.5 bg-gray-300 rounded w-4/5"></div>
+                            <div className="h-1 sm:h-1.5 bg-gray-300 rounded w-3/4"></div>
                           </div>
                         </div>
 
                         {/* 11 Assessments */}
-                        <div className="bg-gray-50 rounded-lg p-2">
-                          <div className="text-xs font-semibold text-gray-700 mb-1 text-center">
+                        <div className="bg-gray-50 rounded-lg p-2 sm:p-3">
+                          <div className="text-xs sm:text-sm font-semibold text-gray-700 mb-2 text-center">
                             11 ASSESSMENTS
                           </div>
-                          <div className="space-y-1.5">
+                          <div className="space-y-1.5 sm:space-y-2">
                             <div className="flex items-center justify-between">
                               <div className="text-xs text-gray-600">Financial</div>
-                              <div className="w-10 h-1.5 bg-gray-200 rounded-full">
+                              <div className="w-8 sm:w-12 h-1 sm:h-1.5 bg-gray-200 rounded-full">
                                 <div className="h-full bg-green-500 rounded-full" style={{width: "85%"}}></div>
                               </div>
                             </div>
                             <div className="flex items-center justify-between">
                               <div className="text-xs text-gray-600">Market</div>
-                              <div className="w-10 h-1.5 bg-gray-200 rounded-full">
+                              <div className="w-8 sm:w-12 h-1 sm:h-1.5 bg-gray-200 rounded-full">
                                 <div className="h-full bg-blue-500 rounded-full" style={{width: "78%"}}></div>
                               </div>
                             </div>
                             <div className="flex items-center justify-between">
                               <div className="text-xs text-gray-600">Operations</div>
-                              <div className="w-10 h-1.5 bg-gray-200 rounded-full">
+                              <div className="w-8 sm:w-12 h-1 sm:h-1.5 bg-gray-200 rounded-full">
                                 <div className="h-full bg-yellow-500 rounded-full" style={{width: "65%"}}></div>
                               </div>
                             </div>
@@ -259,15 +259,15 @@ export default function SampleReport() {
                         </div>
 
                         {/* Recommendations */}
-                        <div className="bg-gray-50 rounded-lg p-2">
-                          <div className="text-xs font-semibold text-gray-700 mb-1 text-center">
+                        <div className="bg-gray-50 rounded-lg p-2 sm:p-3">
+                          <div className="text-xs sm:text-sm font-semibold text-gray-700 mb-2 text-center">
                             RECOMMENDATIONS
                           </div>
-                          <div className="space-y-1.5">
-                            <div className="h-1.5 bg-gray-300 rounded w-full"></div>
-                            <div className="h-1.5 bg-gray-300 rounded w-5/6"></div>
-                            <div className="h-1.5 bg-gray-300 rounded w-4/5"></div>
-                            <div className="h-1.5 bg-gray-300 rounded w-3/4"></div>
+                          <div className="space-y-1 sm:space-y-1.5">
+                            <div className="h-1 sm:h-1.5 bg-gray-300 rounded w-full"></div>
+                            <div className="h-1 sm:h-1.5 bg-gray-300 rounded w-5/6"></div>
+                            <div className="h-1 sm:h-1.5 bg-gray-300 rounded w-4/5"></div>
+                            <div className="h-1 sm:h-1.5 bg-gray-300 rounded w-3/4"></div>
                           </div>
                         </div>
                       </div>
