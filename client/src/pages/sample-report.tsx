@@ -149,69 +149,126 @@ export default function SampleReport() {
               <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 {/* Left: Enhanced Report Visual */}
                 <div className="order-2 lg:order-1 relative lg:pr-8">
-                  <div className="relative mx-auto max-w-md lg:max-w-none">
+                  <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
                     {/* Professional Report Document Preview */}
-                    <div className="bg-white rounded-xl shadow-2xl border border-gray-200 p-6 max-w-md mx-auto">
+                    <div className="bg-white rounded-xl shadow-2xl border border-gray-200 p-4 sm:p-6 lg:p-8 max-w-sm sm:max-w-md mx-auto">
                       {/* Document Header */}
-                      <div className="flex items-center justify-between mb-6">
+                      <div className="flex items-center justify-between mb-4 sm:mb-6">
                         <div>
-                          <h3 className="font-semibold text-gray-900">ExitClarity Report</h3>
+                          <div className="flex items-center gap-2 mb-1">
+                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary rounded-full flex items-center justify-center">
+                              <span className="text-white font-bold text-xs sm:text-sm">E</span>
+                            </div>
+                            <div>
+                              <h3 className="font-semibold text-gray-900 text-sm sm:text-base">ExitClarity Report</h3>
+                              <p className="text-xs sm:text-sm text-gray-600">Professional Assessment</p>
+                            </div>
+                          </div>
                         </div>
-                        <div className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                        <div className="text-xs sm:text-sm text-gray-500 bg-gray-100 px-2 sm:px-3 py-1 sm:py-1.5 rounded">
                           Sample
                         </div>
                       </div>
 
-                      {/* Executive Summary Section */}
-                      <div className="border border-gray-300 rounded-lg p-3 mb-4">
-                        <div className="text-xs font-semibold text-gray-700 mb-2 bg-gray-100 px-2 py-1 rounded">
-                          EXECUTIVE SUMMARY
+                      {/* Ready to Exit Badge and Scores */}
+                      <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-4 sm:p-6 mb-4 sm:mb-6">
+                        <div className="flex items-center justify-center mb-3 sm:mb-4">
+                          <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
+                            <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4" />
+                            Ready to Exit
+                          </div>
                         </div>
-                        <div className="space-y-2">
-                          <div className="h-1.5 bg-gray-300 rounded w-full"></div>
-                          <div className="h-1.5 bg-gray-300 rounded w-4/5"></div>
-                          <div className="h-1.5 bg-gray-300 rounded w-3/4"></div>
+                        
+                        <div className="flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 mb-6">
+                          {/* Circular Score */}
+                          <div className="relative flex-shrink-0">
+                            <svg className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 transform -rotate-90" viewBox="0 0 36 36">
+                              <path
+                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                fill="none"
+                                stroke="#e5e7eb"
+                                strokeWidth="3"
+                              />
+                              <path
+                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                fill="none"
+                                stroke="#3b82f6"
+                                strokeWidth="3"
+                                strokeDasharray="85, 100"
+                                strokeLinecap="round"
+                              />
+                            </svg>
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">85</span>
+                            </div>
+                          </div>
+                          
+                          {/* Value and Readiness */}
+                          <div className="text-center space-y-3 sm:space-y-4">
+                            <div>
+                              <div className="text-base sm:text-lg lg:text-xl font-bold text-gray-900">$12M-$18M</div>
+                              <div className="text-xs sm:text-sm text-gray-600 font-medium">EST. VALUE</div>
+                            </div>
+                            <div>
+                              <div className="text-base sm:text-lg lg:text-xl font-bold text-gray-900">94%</div>
+                              <div className="text-xs sm:text-sm text-gray-600 font-medium">MULTIPLE READINESS</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Assessment Results Section */}
-                      <div className="border border-gray-300 rounded-lg p-3 mb-4">
-                        <div className="text-xs font-semibold text-gray-700 mb-3 bg-gray-100 px-2 py-1 rounded">
-                          KEY ASSESSMENTS
-                        </div>
-                        <div className="space-y-3">
-                          {/* Status indicators with progress bars */}
-                          <div className="flex items-center justify-between">
-                            <div className="text-xs text-gray-600">Financial Performance</div>
-                            <div className="w-16 h-1.5 bg-gray-200 rounded-full">
-                              <div className="h-full bg-green-500 rounded-full" style={{width: "85%"}}></div>
-                            </div>
+                      {/* Three Sections Grid - Mobile Optimized */}
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
+                        {/* Executive Summary */}
+                        <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
+                          <div className="text-sm sm:text-sm font-semibold text-gray-700 mb-3 text-center">
+                            EXECUTIVE SUMMARY
                           </div>
-                          <div className="flex items-center justify-between">
-                            <div className="text-xs text-gray-600">Market Position</div>
-                            <div className="w-16 h-1.5 bg-gray-200 rounded-full">
-                              <div className="h-full bg-blue-500 rounded-full" style={{width: "78%"}}></div>
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="text-xs text-gray-600">Operations</div>
-                            <div className="w-16 h-1.5 bg-gray-200 rounded-full">
-                              <div className="h-full bg-yellow-500 rounded-full" style={{width: "65%"}}></div>
-                            </div>
+                          <div className="space-y-2">
+                            <div className="h-2 bg-gray-300 rounded w-full"></div>
+                            <div className="h-2 bg-gray-300 rounded w-4/5"></div>
+                            <div className="h-2 bg-gray-300 rounded w-3/4"></div>
                           </div>
                         </div>
-                      </div>
 
-                      {/* Recommendations Section */}
-                      <div className="border border-gray-300 rounded-lg p-3 mb-4">
-                        <div className="text-xs font-semibold text-gray-700 mb-2 bg-gray-100 px-2 py-1 rounded">
-                          RECOMMENDATIONS
+                        {/* 11 Assessments */}
+                        <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
+                          <div className="text-sm sm:text-sm font-semibold text-gray-700 mb-3 text-center">
+                            11 ASSESSMENTS
+                          </div>
+                          <div className="space-y-2.5">
+                            <div className="flex items-center justify-between">
+                              <div className="text-sm text-gray-600 font-medium">Financial</div>
+                              <div className="w-12 sm:w-16 h-2 bg-gray-200 rounded-full">
+                                <div className="h-full bg-green-500 rounded-full" style={{width: "85%"}}></div>
+                              </div>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <div className="text-sm text-gray-600 font-medium">Market</div>
+                              <div className="w-12 sm:w-16 h-2 bg-gray-200 rounded-full">
+                                <div className="h-full bg-blue-500 rounded-full" style={{width: "78%"}}></div>
+                              </div>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <div className="text-sm text-gray-600 font-medium">Operations</div>
+                              <div className="w-12 sm:w-16 h-2 bg-gray-200 rounded-full">
+                                <div className="h-full bg-yellow-500 rounded-full" style={{width: "65%"}}></div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div className="space-y-1.5">
-                          <div className="h-1.5 bg-gray-300 rounded w-full"></div>
-                          <div className="h-1.5 bg-gray-300 rounded w-5/6"></div>
-                          <div className="h-1.5 bg-gray-300 rounded w-4/5"></div>
-                          <div className="h-1.5 bg-gray-300 rounded w-3/4"></div>
+
+                        {/* Recommendations */}
+                        <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
+                          <div className="text-sm sm:text-sm font-semibold text-gray-700 mb-3 text-center">
+                            RECOMMENDATIONS
+                          </div>
+                          <div className="space-y-2">
+                            <div className="h-2 bg-gray-300 rounded w-full"></div>
+                            <div className="h-2 bg-gray-300 rounded w-5/6"></div>
+                            <div className="h-2 bg-gray-300 rounded w-4/5"></div>
+                            <div className="h-2 bg-gray-300 rounded w-3/4"></div>
+                          </div>
                         </div>
                       </div>
 

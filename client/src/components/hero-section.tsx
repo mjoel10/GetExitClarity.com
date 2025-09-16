@@ -21,7 +21,7 @@ function AssessmentProgress() {
       <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-tr from-primary/30 to-blue-300/20 rounded-full blur-xl"></div>
       
       <div 
-        className="relative max-w-lg mx-auto rounded-3xl p-6 shadow-2xl border border-white/60 backdrop-blur-sm"
+        className="relative max-w-sm sm:max-w-md lg:max-w-lg mx-auto rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-white/60 backdrop-blur-sm"
         style={{ 
           background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.95) 100%)'
         }}
