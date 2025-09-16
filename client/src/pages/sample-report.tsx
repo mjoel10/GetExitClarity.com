@@ -206,11 +206,11 @@ export default function SampleReport() {
                           {/* Value and Readiness */}
                           <div className="text-center space-y-2">
                             <div>
-                              <div className="text-sm lg:text-base font-bold text-gray-900">$12M-$18M</div>
+                              <div className="text-xs lg:text-sm font-bold text-gray-900">$12M-$18M</div>
                               <div className="text-xs text-gray-600">EST. VALUE</div>
                             </div>
                             <div>
-                              <div className="text-sm lg:text-base font-bold text-gray-900">94%</div>
+                              <div className="text-xs lg:text-sm font-bold text-gray-900">94%</div>
                               <div className="text-xs text-gray-600">MULTIPLE READINESS</div>
                             </div>
                           </div>
@@ -221,7 +221,7 @@ export default function SampleReport() {
                       <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-3 mb-4">
                         {/* Executive Summary */}
                         <div className="bg-gray-50 rounded-lg p-2">
-                          <div className="text-xs font-semibold text-gray-700 mb-2 text-center">
+                          <div className="text-xs font-semibold text-gray-700 mb-1 text-center">
                             EXECUTIVE SUMMARY
                           </div>
                           <div className="space-y-1.5">
@@ -233,7 +233,7 @@ export default function SampleReport() {
 
                         {/* 11 Assessments */}
                         <div className="bg-gray-50 rounded-lg p-2">
-                          <div className="text-xs font-semibold text-gray-700 mb-2 text-center">
+                          <div className="text-xs font-semibold text-gray-700 mb-1 text-center">
                             11 ASSESSMENTS
                           </div>
                           <div className="space-y-1.5">
@@ -260,7 +260,7 @@ export default function SampleReport() {
 
                         {/* Recommendations */}
                         <div className="bg-gray-50 rounded-lg p-2">
-                          <div className="text-xs font-semibold text-gray-700 mb-2 text-center">
+                          <div className="text-xs font-semibold text-gray-700 mb-1 text-center">
                             RECOMMENDATIONS
                           </div>
                           <div className="space-y-1.5">
