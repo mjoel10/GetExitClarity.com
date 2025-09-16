@@ -217,7 +217,7 @@ export default function SampleReport() {
                         </div>
                       </div>
 
-                      {/* Three Sections Grid - Mobile Optimized */}
+                      {/* Three Sections Grid - Mobile Optimized - Force Reload */}
                       <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-3 mb-4">
                         {/* Executive Summary */}
                         <div className="bg-gray-50 rounded-lg p-2">
