@@ -77,8 +77,8 @@ function AssessmentProgress() {
             </div>
           </div>
 
-          {/* Enhanced Factor Grid */}
-          <div className="grid grid-cols-2 gap-3 mb-6">
+          {/* Enhanced Factor Grid - Mobile Optimized */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-6">
             {[
               { name: "Financial Performance", completed: true },
               { name: "Documentation", completed: true },
@@ -89,7 +89,7 @@ function AssessmentProgress() {
             ].map((factor, i) => (
               <div 
                 key={i}
-                className={`p-4 rounded-xl border transition-all duration-300 ${
+                className={`p-3 sm:p-4 rounded-xl border transition-all duration-300 ${
                   factor.completed 
                     ? 'bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200 shadow-sm' 
                     : factor.active 
@@ -98,8 +98,8 @@ function AssessmentProgress() {
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className={`w-7 h-7 rounded-xl flex items-center justify-center text-xs font-bold shadow-sm ${
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-xl flex items-center justify-center text-xs font-bold shadow-sm ${
                       factor.completed 
                         ? 'bg-gradient-to-br from-primary to-blue-600 text-white' 
                         : factor.active 
@@ -107,31 +107,31 @@ function AssessmentProgress() {
                           : 'bg-gradient-to-br from-gray-300 to-gray-400 text-gray-600'
                     }`}>
                       {factor.completed ? '✓' : 
-                       factor.active ? <Target className="w-4 h-4" /> : 
-                       factor.name === 'Market Position' ? <TrendingUp className="w-4 h-4" /> : '○'}
+                       factor.active ? <Target className="w-3 h-3 sm:w-4 sm:h-4" /> : 
+                       factor.name === 'Market Position' ? <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4" /> : '○'}
                     </div>
-                    <h4 className="font-semibold text-gray-900 text-xs leading-tight">{factor.name}</h4>
+                    <h4 className="font-semibold text-gray-900 text-xs sm:text-sm leading-tight">{factor.name}</h4>
                   </div>
                   {factor.completed && (
-                    <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                    <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
                   )}
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Enhanced Bottom Stats */}
-          <div className="grid grid-cols-3 gap-4 p-4 bg-gradient-to-br from-gray-50 to-gray-100/50 rounded-2xl border border-gray-200 shadow-sm">
+          {/* Enhanced Bottom Stats - Mobile Optimized */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 p-3 sm:p-4 bg-gradient-to-br from-gray-50 to-gray-100/50 rounded-2xl border border-gray-200 shadow-sm">
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-900 mb-1">73%</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">73%</div>
               <div className="text-xs text-gray-600 font-medium">Complete</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-900 mb-1">GO</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">GO</div>
               <div className="text-xs text-gray-600 font-medium">Trending</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-900 mb-1">11</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">11</div>
               <div className="text-xs text-gray-600 font-medium">Total Factors</div>
             </div>
           </div>
