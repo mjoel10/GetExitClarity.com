@@ -69,8 +69,6 @@ export default function Header() {
                 <a 
                   href={item.href}
                   className="flex items-center text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   {item.label}
                   {item.hasDropdown && <ChevronDown className="ml-1 h-4 w-4" />}
@@ -84,8 +82,6 @@ export default function Header() {
                           key={dropdownIndex}
                           href={dropdownItem.href}
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors duration-200"
-                          target="_blank"
-                          rel="noopener noreferrer"
                         >
                           {dropdownItem.label}
                         </a>
@@ -125,8 +121,6 @@ export default function Header() {
                   <a 
                     href={item.href}
                     className="block text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
                     {item.label}
                   </a>

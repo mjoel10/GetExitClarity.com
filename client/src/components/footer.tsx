@@ -59,9 +59,7 @@ export default function Footer() {
             </h4>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <a 
-                href="https://www.exitclarity.io/platform/business-owners" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.exitclarity.io/platform/business-owners"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -74,9 +72,7 @@ export default function Footer() {
                 For Business Owners
               </a>
               <a 
-                href="https://www.exitclarity.io/platform/ma-firms" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.exitclarity.io/platform/ma-firms"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -89,9 +85,7 @@ export default function Footer() {
                 For M&A Firms
               </a>
               <a 
-                href="https://www.exitclarity.io/sample-report" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.exitclarity.io/sample-report"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -104,9 +98,7 @@ export default function Footer() {
                 Sample Report
               </a>
               <a 
-                href="https://www.exitclarity.io/pricing" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.exitclarity.io/pricing"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -133,9 +125,7 @@ export default function Footer() {
             </h4>
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <a 
-                href="https://www.exitclarity.io/blog" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.exitclarity.io/blog"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -148,9 +138,7 @@ export default function Footer() {
                 Blog
               </a>
               <a 
-                href="https://www.exitclarity.io/resources" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.exitclarity.io/resources"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -163,9 +151,7 @@ export default function Footer() {
                 Resource Center
               </a>
               <a 
-                href="https://www.exitclarity.io/about" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.exitclarity.io/about"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -209,9 +195,7 @@ export default function Footer() {
                 info@exitclarity.io
               </a>
               <a 
-                href="https://linkedin.com/company/exitclarity" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="https://linkedin.com/company/exitclarity"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -227,9 +211,7 @@ export default function Footer() {
                 LinkedIn
               </a>
               <a 
-                href="https://www.exitclarity.io/contact" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.exitclarity.io/contact"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   textDecoration: 'none',
@@ -274,9 +256,7 @@ export default function Footer() {
               flexWrap: 'wrap'
             }}>
               <a 
-                href="https://www.exitclarity.io/privacy" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.exitclarity.io/privacy"
                 style={{
                   color: 'rgba(255, 255, 255, 0.6)',
                   textDecoration: 'none',
@@ -289,9 +269,7 @@ export default function Footer() {
                 Privacy Policy
               </a>
               <a 
-                href="https://www.exitclarity.io/terms" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.exitclarity.io/terms"
                 style={{
                   color: 'rgba(255, 255, 255, 0.6)',
                   textDecoration: 'none',
@@ -304,9 +282,7 @@ export default function Footer() {
                 Terms of Service
               </a>
               <a 
-                href="https://www.exitclarity.io/cookies" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.exitclarity.io/cookies"
                 style={{
                   color: 'rgba(255, 255, 255, 0.6)',
                   textDecoration: 'none',
@@ -319,9 +295,7 @@ export default function Footer() {
                 Cookie Policy
               </a>
               <a 
-                href="https://www.exitclarity.io/security" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://www.exitclarity.io/security"
                 style={{
                   color: 'rgba(255, 255, 255, 0.6)',
                   textDecoration: 'none',
