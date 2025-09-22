@@ -261,7 +261,7 @@ export function HeroSection() {
                 </span>
               </h1>
               
-              <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed">
+              <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
                 ExitClarity is an exit readiness platform that shows in minutes whether you should sell now, fix first, or wait—so you know exactly what's on the line in your biggest decision.
               </p>
             </div>
