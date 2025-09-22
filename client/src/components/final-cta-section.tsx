@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export function FinalCTASection() {
   const handleCTAClick = () => {
-    window.open('https://app.exitclarity.io/signupdirect', '_blank');
+    window.location.href = 'https://app.exitclarity.io/signupdirect';
   };
 
   return (

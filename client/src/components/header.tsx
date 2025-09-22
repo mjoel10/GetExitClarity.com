@@ -16,11 +16,11 @@ export default function Header() {
   }, []);
 
   const handleGetStartedClick = () => {
-    window.open('https://app.exitclarity.io/signupdirect', '_blank');
+    window.location.href = 'https://app.exitclarity.io/signupdirect';
   };
 
   const handleSignInClick = () => {
-    window.open('https://app.exitclarity.io/auth', '_blank');
+    window.location.href = 'https://app.exitclarity.io/auth';
   };
 
   const navItems = [

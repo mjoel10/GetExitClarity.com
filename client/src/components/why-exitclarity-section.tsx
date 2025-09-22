@@ -40,7 +40,7 @@ export function WhyExitClaritySection() {
   });
 
   const handleCTAClick = () => {
-    window.open('https://app.exitclarity.io/signupdirect', '_blank');
+    window.location.href = 'https://app.exitclarity.io/signupdirect';
   };
 
   const createDemoRequestMutation = useMutation({
