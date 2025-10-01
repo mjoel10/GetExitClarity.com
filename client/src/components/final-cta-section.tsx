@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { TalkToAdvisorModal } from "./talk-to-advisor-modal";
 
 export function FinalCTASection() {
+  const [isAdvisorModalOpen, setIsAdvisorModalOpen] = useState(false);
+
   const handleCTAClick = () => {
-    window.location.href = 'https://app.exitclarity.io/signupdirect';
+    setIsAdvisorModalOpen(true);
   };
 
   return (
@@ -25,7 +29,7 @@ export function FinalCTASection() {
               onClick={handleCTAClick}
               className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-12 py-4 rounded-lg transition-all duration-200 hover:shadow-xl hover:scale-105"
             >
-              Create Your Free ExitClarity Account
+              Talk to Your Advisor
             </Button>
           </div>
           
@@ -35,6 +39,12 @@ export function FinalCTASection() {
           </p>
         </div>
       </div>
+
+      {/* Talk to Advisor Modal */}
+      <TalkToAdvisorModal 
+        isOpen={isAdvisorModalOpen}
+        onClose={() => setIsAdvisorModalOpen(false)}
+      />
     </section>
   );
 }

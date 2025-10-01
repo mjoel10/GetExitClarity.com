@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X, Lock } from "lucide-react";
 import exitClarityLogo from "@assets/Exit Clarity Logo_1752080496814.png";
+import { TalkToAdvisorModal } from "./talk-to-advisor-modal";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isAdvisorModalOpen, setIsAdvisorModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,7 +18,7 @@ export default function Header() {
   }, []);
 
   const handleGetStartedClick = () => {
-    window.location.href = 'https://app.exitclarity.io/signupdirect';
+    setIsAdvisorModalOpen(true);
   };
 
   const handleSignInClick = () => {
@@ -99,7 +101,7 @@ export default function Header() {
               onClick={handleGetStartedClick}
               className="bg-primary text-white font-semibold px-6 py-2 rounded-md hover:bg-primary/90 transition-all duration-200"
             >
-              Get Started
+              Talk to Your Advisor
             </Button>
           </div>
 
@@ -146,13 +148,19 @@ export default function Header() {
                   onClick={handleGetStartedClick}
                   className="bg-primary text-white font-semibold px-6 py-2 rounded-md hover:bg-primary/90 transition-all duration-200"
                 >
-                  Get Started
+                  Talk to Your Advisor
                 </Button>
               </div>
             </div>
           </div>
         )}
       </div>
+
+      {/* Talk to Advisor Modal */}
+      <TalkToAdvisorModal 
+        isOpen={isAdvisorModalOpen}
+        onClose={() => setIsAdvisorModalOpen(false)}
+      />
     </header>
   );
 }

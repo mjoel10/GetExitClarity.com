@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { Clipboard, BarChart3, FileText, TrendingUp, ArrowDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { TalkToAdvisorModal } from "./talk-to-advisor-modal";
 
 export function AssessmentStepsSection() {
+  const [isAdvisorModalOpen, setIsAdvisorModalOpen] = useState(false);
+
   const handleCTAClick = () => {
-    window.location.href = 'https://app.exitclarity.io/signupdirect';
+    setIsAdvisorModalOpen(true);
   };
   const steps = [
     {
@@ -83,7 +87,7 @@ export function AssessmentStepsSection() {
                   size="lg"
                   className="relative font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90"
                 >
-                  Start Your Assessment
+                  Talk to Your Advisor
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>
@@ -134,6 +138,12 @@ export function AssessmentStepsSection() {
           </div>
         </div>
       </div>
+
+      {/* Talk to Advisor Modal */}
+      <TalkToAdvisorModal 
+        isOpen={isAdvisorModalOpen}
+        onClose={() => setIsAdvisorModalOpen(false)}
+      />
     </section>
   );
 }

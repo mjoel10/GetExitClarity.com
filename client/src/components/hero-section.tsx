@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { CheckCircle, Target, TrendingUp, Sparkles, ArrowRight, Download } from "lucide-react";
+import { TalkToAdvisorModal } from "./talk-to-advisor-modal";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
@@ -168,8 +169,10 @@ export function HeroSection() {
     },
   });
 
+  const [isAdvisorModalOpen, setIsAdvisorModalOpen] = useState(false);
+  
   const handleCTAClick = () => {
-    window.location.href = 'https://app.exitclarity.io/signupdirect';
+    setIsAdvisorModalOpen(true);
   };
 
   const createDemoRequestMutation = useMutation({
@@ -300,7 +303,7 @@ export function HeroSection() {
                   size="xl"
                   className="relative font-semibold transition-all duration-300 hover:shadow-2xl hover:scale-105 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-lg px-8 py-4"
                 >
-                  Start Your Assessment
+                  Talk to Your Advisor
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>
@@ -436,6 +439,12 @@ export function HeroSection() {
           )}
         </DialogContent>
       </Dialog>
+
+      {/* Talk to Advisor Modal */}
+      <TalkToAdvisorModal 
+        isOpen={isAdvisorModalOpen}
+        onClose={() => setIsAdvisorModalOpen(false)}
+      />
     </section>
   );
 }

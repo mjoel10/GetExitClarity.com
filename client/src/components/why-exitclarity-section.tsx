@@ -11,6 +11,7 @@ import { z } from "zod";
 import { Handshake, Award, Shield, FileText, CheckCircle, ArrowRight, Star, Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { TalkToAdvisorModal } from "./talk-to-advisor-modal";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -39,8 +40,10 @@ export function WhyExitClaritySection() {
     },
   });
 
+  const [isAdvisorModalOpen, setIsAdvisorModalOpen] = useState(false);
+
   const handleCTAClick = () => {
-    window.location.href = 'https://app.exitclarity.io/signupdirect';
+    setIsAdvisorModalOpen(true);
   };
 
   const createDemoRequestMutation = useMutation({
@@ -321,7 +324,7 @@ export function WhyExitClaritySection() {
                   size="xl"
                   className="relative font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90"
                 >
-                  Get Your Exit Report Now
+                  Talk to Your Advisor
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>
@@ -501,6 +504,12 @@ export function WhyExitClaritySection() {
           )}
         </DialogContent>
       </Dialog>
+
+      {/* Talk to Advisor Modal */}
+      <TalkToAdvisorModal 
+        isOpen={isAdvisorModalOpen}
+        onClose={() => setIsAdvisorModalOpen(false)}
+      />
     </section>
   );
 }
