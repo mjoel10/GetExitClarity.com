@@ -7,27 +7,31 @@ export function FAQSection() {
   const faqs = [
     {
       question: "How long does the assessment take?",
-      answer: "The assessment typically takes about 20–30 minutes. It's designed to be thorough but efficient, covering all 11 deal-critical readiness factors without being overwhelming."
+      answer: "The assessment typically takes about 15–30 minutes. It's designed to be efficient while covering all 11 deal-critical readiness factors. Your advisor then reviews the results with you to provide context, recommendations, and next steps."
     },
     {
       question: "How much does it cost?",
-      answer: "Start for free. The full 25-page Exit Readiness Report costs $999 and is delivered within 24 hours — a fraction of the $15K+ consultants often charge without ever having lived an exit."
+      answer: "ExitClarity is delivered through trusted advisors, wealth managers, and M&A professionals. Pricing may vary depending on your advisor relationship, but the goal is the same, to give you unbiased, actionable insights that strengthen your readiness and deal value."
     },
     {
       question: "Will you share my information?",
-      answer: "Never. Your business information and report are kept strictly confidential. We don't share your data and details with brokers, investment banks, or other M&A professionals unless you ask us to."
+      answer: "No. Your information remains private and is only shared with the advisor you choose to work with. ExitClarity does not sell or distribute your data."
     },
     {
       question: "How accurate is the valuation?",
-      answer: "Our valuation ranges are grounded in real transaction data and industry comps, tailored to your performance and business type, and aligned with what buyers are paying in today's market."
+      answer: "ExitClarity provides valuation ranges based on conservative EBITDA multiples and relevant market comps. These insights create a clear, fact-based baseline of what buyers are likely to pay. Your advisor then layers their deal expertise and knowledge of your industry and buyer pool to refine the picture."
     },
     {
       question: "What if I'm not ready to sell?",
-      answer: "That's exactly why ExitClarity exists. Most owners who maximize their exit value start preparing years in advance. The assessment shows what to fix now so you can sell on your terms later."
+      answer: "That's exactly what ExitClarity is built for. Many owners aren't ready on the first try. Your advisor can use your results to highlight key gaps, set priorities, and create a plan to improve valuation and reduce risk before you go to market."
     },
     {
       question: "Can I retake the assessment?",
-      answer: "Absolutely. We encourage you to retake the assessment as you make improvements to your business. Track your progress over time and see how your readiness score and valuation estimates improve."
+      answer: "Yes. Owners often retake the assessment to measure progress and update readiness. Your advisor can guide when and how to revisit it, so improvements are tracked and your timing stays on target."
+    },
+    {
+      question: "Do I still need an advisor if I have ExitClarity?",
+      answer: "Yes. ExitClarity doesn't replace your advisor, it enhances their ability to guide you. The platform delivers objective data and unbiased insights rooted in real owner sell-side experience, while your advisor applies deal expertise, strategy, and negotiation to turn those insights into a stronger exit outcome."
     }
   ];
 
