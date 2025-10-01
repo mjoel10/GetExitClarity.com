@@ -69,7 +69,7 @@ export default function Footer() {
                 onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(210, 100%, 70%)'}
                 onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
               >
-                For M&A Firms
+                For M&A Professionals
               </a>
               <a 
                 href="https://www.exitclarity.io/platform/business-owners"
