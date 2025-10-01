@@ -303,7 +303,7 @@ export function HeroSection() {
                   size="xl"
                   className="relative font-semibold transition-all duration-300 hover:shadow-2xl hover:scale-105 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-lg px-8 py-4"
                 >
-                  Get Matched with an Advisor
+                  Match with an Advisor
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>

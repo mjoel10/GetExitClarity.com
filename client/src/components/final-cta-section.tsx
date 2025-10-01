@@ -29,7 +29,7 @@ export function FinalCTASection() {
               onClick={handleCTAClick}
               className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-12 py-4 rounded-lg transition-all duration-200 hover:shadow-xl hover:scale-105"
             >
-              Get Matched with an Advisor
+              Match with an Advisor
             </Button>
           </div>
           
