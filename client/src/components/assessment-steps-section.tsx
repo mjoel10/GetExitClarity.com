@@ -87,7 +87,7 @@ export function AssessmentStepsSection() {
                   size="lg"
                   className="relative font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90"
                 >
-                  Match With an Advisor
+                  Get Connected with a Trusted Advisor in Our Network
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>
