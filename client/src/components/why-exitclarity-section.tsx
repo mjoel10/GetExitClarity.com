@@ -324,7 +324,7 @@ export function WhyExitClaritySection() {
                   size="xl"
                   className="relative font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90"
                 >
-                  Talk to Your Advisor
+                  Get Matched with an Advisor
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>
