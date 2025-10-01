@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { CheckCircle, X } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -84,18 +84,9 @@ export function TalkToAdvisorModal({ isOpen, onClose }: TalkToAdvisorModalProps)
         {!isSubmitted ? (
           <>
             <DialogHeader>
-              <div className="flex items-center justify-between">
-                <DialogTitle className="text-xl font-bold text-gray-900">
-                  Get Matched with the Right Guidance
-                </DialogTitle>
-                <button
-                  onClick={handleClose}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
-                  data-testid="button-close-modal"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
+              <DialogTitle className="text-xl font-bold text-gray-900">
+                Get Matched with the Right Guidance
+              </DialogTitle>
               <p className="text-sm text-gray-600 mt-2">
                 Share a few details and we'll connect you with a trusted advisor in our network who specializes in owners like you.
               </p>
