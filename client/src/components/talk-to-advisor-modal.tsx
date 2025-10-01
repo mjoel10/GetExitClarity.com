@@ -191,7 +191,7 @@ export function TalkToAdvisorModal({ isOpen, onClose }: TalkToAdvisorModalProps)
                       <FormLabel>Notes (Optional)</FormLabel>
                       <FormControl>
                         <Textarea 
-                          placeholder="Anything we should know (e.g., goals, challenges, industry)?"
+                          placeholder="Anything we should know (e.g. goals, challenges, industry)?"
                           className="resize-none h-24"
                           {...field}
                           data-testid="textarea-notes"
