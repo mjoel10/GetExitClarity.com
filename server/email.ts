@@ -516,3 +516,151 @@ export async function sendWaitlistConfirmation(data: WaitlistConfirmationData): 
     return false;
   }
 }
+
+interface AdvisorRequestData {
+  name: string;
+  email: string;
+  company?: string;
+  annualRevenue?: string;
+  notes?: string;
+}
+
+export async function sendAdvisorRequestConfirmation(data: AdvisorRequestData): Promise<boolean> {
+  if (!SENDGRID_ENABLED) {
+    console.log('SendGrid disabled - advisor request confirmation not sent:', data.email);
+    return false;
+  }
+  
+  try {
+    const subject = `We're Connecting You with a Trusted Advisor`;
+    
+    const htmlContent = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff;">
+        <!-- Header with Logo -->
+        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0;">
+          <h1 style="color: #1e40af; font-size: 24px; margin: 0; font-weight: bold;">ExitClarity</h1>
+        </div>
+        
+        <h2 style="color: #1e40af; margin-bottom: 20px; font-size: 22px;">Thanks — we'll be in touch shortly</h2>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 16px;">Hi ${data.name},</p>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 16px;">
+          <strong>Thank you for reaching out!</strong> We've received your request and we're reviewing the details you shared about your business.
+        </p>
+        
+        <!-- What Happens Next -->
+        <div style="background-color: #f8fafc; padding: 24px; border-radius: 12px; margin: 24px 0; border-left: 4px solid #1e40af;">
+          <h3 style="color: #1e40af; margin-top: 0; margin-bottom: 16px; font-size: 18px;">What happens next:</h3>
+          <ul style="color: #334155; line-height: 1.8; margin: 0; padding-left: 20px;">
+            <li style="margin-bottom: 8px;">We'll review your information and match you with an advisor who specializes in businesses like yours</li>
+            <li style="margin-bottom: 8px;">You'll receive an introduction email within 1–2 business days</li>
+            <li style="margin-bottom: 8px;">The advisor will reach out to schedule an initial conversation at a time that works for you</li>
+          </ul>
+        </div>
+        
+        <!-- In the Meantime -->
+        <div style="background-color: #ecfdf5; padding: 20px; border-radius: 12px; margin: 24px 0;">
+          <h3 style="color: #166534; margin-top: 0; margin-bottom: 12px; font-size: 16px;">In the meantime:</h3>
+          <p style="color: #166534; line-height: 1.6; margin-bottom: 16px;">
+            You can explore our sample exit readiness report to see what a professional M&A analysis looks like.
+          </p>
+          <div style="text-align: center;">
+            <a href="https://exitclarity.io/sample-report" 
+               style="display: inline-block; background-color: #166534; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600;">
+              View Sample Report →
+            </a>
+          </div>
+        </div>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 16px;">
+          If you have any questions or want to add more details to your request, feel free to reply to this email.
+        </p>
+        
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 8px;">Best regards,</p>
+        <p style="color: #334155; line-height: 1.6; margin-bottom: 24px; font-weight: 600;">The ExitClarity Team</p>
+        
+        <!-- Footer Note -->
+        <div style="background-color: #f1f5f9; padding: 16px; border-radius: 8px; margin-top: 30px;">
+          <p style="margin: 0; color: #64748b; font-size: 13px; text-align: center;">
+            Your information is confidential and only shared with vetted advisors in our trusted network.
+          </p>
+        </div>
+        
+        <div style="margin-top: 30px; text-align: center; color: #94a3b8; font-size: 12px; border-top: 1px solid #e2e8f0; padding-top: 20px;">
+          <p style="margin: 0;">© 2025 ExitClarity. All rights reserved.</p>
+        </div>
+      </div>
+    `;
+
+    const msg = {
+      to: data.email,
+      from: 'notifications@exitclarity.io',
+      subject: subject,
+      html: htmlContent,
+    };
+
+    await sgMail.send(msg);
+    console.log(`Advisor request confirmation sent to ${data.email}`);
+    return true;
+  } catch (error) {
+    console.error('SendGrid advisor request confirmation error:', error);
+    return false;
+  }
+}
+
+export async function sendAdvisorRequestNotification(data: AdvisorRequestData): Promise<boolean> {
+  if (!SENDGRID_ENABLED) {
+    console.log('SendGrid disabled - advisor request notification not sent:', data.name);
+    return false;
+  }
+  
+  try {
+    const subject = `[Talk to Advisor] ${data.name}`;
+    
+    const htmlContent = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <h2 style="color: #1e40af; margin-bottom: 20px;">New Talk to Advisor Request</h2>
+        
+        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #1e40af;">
+          <h3 style="margin-top: 0; color: #334155;">Contact Information</h3>
+          <p><strong>Name:</strong> ${data.name}</p>
+          <p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
+          <p><strong>Company:</strong> ${data.company || 'Not provided'}</p>
+          
+          <h3 style="color: #334155; margin-top: 20px;">Business Details</h3>
+          <p><strong>Annual Revenue:</strong> ${data.annualRevenue || 'Not provided'}</p>
+          
+          ${data.notes ? `
+            <h3 style="color: #334155; margin-top: 20px;">Notes (Optional)</h3>
+            <p style="background-color: white; padding: 15px; border-radius: 4px; border: 1px solid #e2e8f0; white-space: pre-wrap;">${data.notes}</p>
+          ` : ''}
+        </div>
+        
+        <div style="margin-top: 20px; padding: 15px; background-color: #ecfdf5; border-radius: 8px;">
+          <p style="margin: 0; color: #166534;">
+            <strong>Next Steps:</strong> Connect this business owner with a vetted advisor in the network within 1-2 business days.
+          </p>
+        </div>
+        
+        <div style="margin-top: 30px; text-align: center; color: #64748b; font-size: 14px;">
+          <p>This notification was sent automatically from the ExitClarity Talk to Advisor system.</p>
+        </div>
+      </div>
+    `;
+
+    const msg = {
+      to: ['mjoel@exitclarity.io', 'rjoel@exitclarity.io'],
+      from: 'notifications@exitclarity.io',
+      subject: subject,
+      html: htmlContent,
+    };
+
+    await sgMail.send(msg);
+    console.log(`Advisor request notification sent for ${data.name}`);
+    return true;
+  } catch (error) {
+    console.error('SendGrid advisor request notification error:', error);
+    return false;
+  }
+}
