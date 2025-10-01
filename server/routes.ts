@@ -3,7 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertDemoRequestSchema, insertTrialRequestSchema } from "@shared/schema";
 import { z } from "zod";
-import { sendNotificationEmail, sendTrialRequestNotification, sendTrialRequestAutoReply, sendSampleReportAutoReply, sendWaitlistConfirmation } from "./email";
+import { sendNotificationEmail, sendTrialRequestNotification, sendTrialRequestAutoReply, sendSampleReportAutoReply, sendWaitlistConfirmation, sendAdvisorRequestConfirmation, sendAdvisorRequestNotification } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Demo request endpoint
@@ -61,6 +61,48 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json({ success: true, data: requests });
     } catch (error) {
       res.status(500).json({ success: false, error: "Internal server error" });
+    }
+  });
+
+  // Advisor request endpoint
+  app.post("/api/advisor-request", async (req, res) => {
+    try {
+      const advisorRequestSchema = z.object({
+        name: z.string().min(2),
+        email: z.string().email(),
+        company: z.string().optional(),
+        annualRevenue: z.string().optional(),
+        notes: z.string().optional(),
+      });
+
+      const validatedData = advisorRequestSchema.parse(req.body);
+      
+      // Send notification email to admins
+      await sendAdvisorRequestNotification({
+        name: validatedData.name,
+        email: validatedData.email,
+        company: validatedData.company,
+        annualRevenue: validatedData.annualRevenue,
+        notes: validatedData.notes,
+      });
+      
+      // Send confirmation email to user
+      await sendAdvisorRequestConfirmation({
+        name: validatedData.name,
+        email: validatedData.email,
+        company: validatedData.company,
+        annualRevenue: validatedData.annualRevenue,
+        notes: validatedData.notes,
+      });
+      
+      res.json({ success: true });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        res.status(400).json({ success: false, error: "Invalid request data", details: error.errors });
+      } else {
+        console.error('Advisor request error:', error);
+        res.status(500).json({ success: false, error: "Internal server error" });
+      }
     }
   });
 

@@ -45,10 +45,13 @@ export function TalkToAdvisorModal({ isOpen, onClose }: TalkToAdvisorModalProps)
 
   const submitMutation = useMutation({
     mutationFn: async (data: FormData) => {
-      return await apiRequest("/api/advisor-request", {
+      const response = await fetch("/api/advisor-request", {
         method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
+      if (!response.ok) throw new Error("Failed to submit request");
+      return response.json();
     },
     onSuccess: () => {
       setIsSubmitted(true);
