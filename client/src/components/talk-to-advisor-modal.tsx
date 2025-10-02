@@ -85,10 +85,10 @@ export function TalkToAdvisorModal({ isOpen, onClose }: TalkToAdvisorModalProps)
           <>
             <DialogHeader>
               <DialogTitle className="text-xl font-bold text-gray-900">
-                Get Matched with the Right Guidance
+                We Will Match with the Right Guidance
               </DialogTitle>
               <p className="text-sm text-gray-600 mt-2">
-                Share a few details and we'll connect you with a trusted advisor in our network who specializes in owners like you.
+                Share a few details and we will connect you with a trusted advisor in our vetted expert network who specializes in owners like you.
               </p>
             </DialogHeader>
 
