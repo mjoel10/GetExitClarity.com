@@ -321,18 +321,18 @@ export function HeroSection() {
               >
                 View Sample Report
               </a>
-              
-              {/* Trust Indicator */}
-              <div className="flex items-center gap-3 mt-6">
-                <div className="flex -space-x-2">
-                  {[...Array(4)].map((_, i) => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-blue-600 border-2 border-white shadow-sm"></div>
-                  ))}
-                </div>
-                <p className="text-muted-foreground font-medium">
-                  Join 500+ business owners who've discovered their exit readiness
-                </p>
+            </div>
+            
+            {/* Trust Indicator - below image on mobile */}
+            <div className="order-5 lg:order-4 flex items-center gap-3">
+              <div className="flex -space-x-2">
+                {[...Array(4)].map((_, i) => (
+                  <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-blue-600 border-2 border-white shadow-sm"></div>
+                ))}
               </div>
+              <p className="text-muted-foreground font-medium">
+                Join 500+ business owners who've discovered their exit readiness
+              </p>
             </div>
           </div>
           
