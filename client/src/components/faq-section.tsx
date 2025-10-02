@@ -10,31 +10,31 @@ export function FAQSection() {
   const faqs = [
     {
       question: "How long does the assessment take?",
-      answer: "The assessment typically takes about 15–30 minutes. It's designed to be efficient while covering all 11 deal-critical readiness factors. Your advisor then reviews the results with you to provide context, recommendations, and next steps."
+      answer: "The assessment typically takes about 15–30 minutes. It's designed to be efficient while covering all 11 deal-critical readiness factors. Once complete, you'll receive your comprehensive report within 24 hours. If you're working with an advisor, they can review the results with you to provide additional context and next steps."
     },
     {
       question: "How much does it cost?",
-      answer: "ExitClarity is delivered through trusted advisors, wealth managers, and M&A professionals. Pricing may vary depending on your advisor relationship, but the goal is the same, to give you unbiased, actionable insights that strengthen your readiness and deal value."
+      answer: "A comprehensive exit readiness report is $3,500. You can purchase directly or work with a trusted advisor who can guide you through the process and help you implement the recommendations. Either way, you'll receive unbiased, actionable insights that strengthen your readiness and maximize your deal value."
     },
     {
       question: "Will you share my information?",
-      answer: "No. Your information remains private and is only shared with the advisor you choose to work with. ExitClarity does not sell or distribute your data."
+      answer: "No. Your information remains completely private and confidential. ExitClarity does not sell or distribute your data to third parties. If you choose to work with an advisor, you control what information you share with them."
     },
     {
       question: "How accurate is the valuation?",
-      answer: "ExitClarity provides valuation ranges based on conservative EBITDA multiples and relevant market comps. These insights create a clear, fact-based baseline of what buyers are likely to pay. Your advisor then layers their deal expertise and knowledge of your industry and buyer pool to refine the picture."
+      answer: "ExitClarity provides valuation ranges based on conservative EBITDA multiples and relevant market comparables. These insights create a clear, fact-based baseline of what buyers are likely to pay. The report includes scenario-based ranges that account for your business's specific characteristics and risk factors."
     },
     {
       question: "What if I'm not ready to sell?",
-      answer: "That's exactly what ExitClarity is built for. Many owners aren't ready on the first try. Your advisor can use your results to highlight key gaps, set priorities, and create a plan to improve valuation and reduce risk before you go to market."
+      answer: "That's exactly what ExitClarity is built for. Most owners aren't ready on their first assessment. Your report will highlight key gaps, prioritize improvements, and provide a concrete action plan to increase valuation and reduce risk before you go to market. You can use this roadmap on your own or work with an advisor to accelerate progress."
     },
     {
       question: "Can I retake the assessment?",
-      answer: "Yes. Owners often retake the assessment to measure progress and update readiness. Your advisor can guide when and how to revisit it, so improvements are tracked and your timing stays on target."
+      answer: "Yes. Many owners retake the assessment every 6-12 months to measure progress and track improvements. Each new assessment shows how your readiness has evolved, helping you stay on target for a successful exit."
     },
     {
       question: "Do I still need an advisor if I have ExitClarity?",
-      answer: "Yes. ExitClarity doesn't replace your advisor, it enhances their ability to guide you. The platform delivers objective data and unbiased insights rooted in real owner sell-side experience, while your advisor applies deal expertise, strategy, and negotiation to turn those insights into a stronger exit outcome."
+      answer: "It depends on your situation. ExitClarity gives you the objective data, unbiased advice, and actionable roadmap you need to improve your exit readiness. However, many owners choose to work with an advisor who can provide deal expertise, strategic guidance, and negotiation support to maximize their exit outcome. The platform is designed to work either way—as a standalone tool or to enhance your advisor relationship."
     }
   ];
 
