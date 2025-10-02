@@ -17,7 +17,7 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="pt-20">
+      <div className="pt-16">
         <HeroSection />
         <ProblemSection />
         <RossStorySection />

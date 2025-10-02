@@ -244,9 +244,9 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative pt-8 pb-20 lg:pt-12 lg:pb-32 overflow-hidden -mt-1">
+    <section className="relative pt-8 pb-20 lg:pt-12 lg:pb-32 overflow-hidden">
       {/* Premium Background */}
-      <div className="absolute inset-0 -top-1 bg-gradient-to-br from-white via-blue-50/30 to-slate-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/30 to-slate-50"></div>
       
       {/* Decorative Elements */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-primary/10 to-blue-200/20 rounded-full blur-3xl opacity-60"></div>
