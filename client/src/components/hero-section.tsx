@@ -255,7 +255,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
           {/* Left Side - Enhanced Content */}
-          <div className="order-1 lg:order-1 space-y-8">
+          <div className="order-1 lg:order-1 flex flex-col space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 Are You Ready to{" "}
