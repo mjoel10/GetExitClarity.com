@@ -269,8 +269,8 @@ export function HeroSection() {
               </p>
             </div>
             
-            {/* Mobile Assessment Visual - appears after checkboxes on mobile only */}
-            <div className="lg:hidden order-3">
+            {/* Mobile Assessment Visual - appears after CTAs on mobile only */}
+            <div className="lg:hidden order-4">
               <AssessmentProgress />
             </div>
             
@@ -294,7 +294,7 @@ export function HeroSection() {
             </div>
             
             {/* Enhanced CTA Section */}
-            <div className="order-4 lg:order-3">
+            <div className="order-3 lg:order-3">
               {/* Two Buttons Side-by-Side */}
               <div className="flex flex-col sm:flex-row gap-4 mb-2">
                 <Button 
