@@ -78,26 +78,15 @@ export function AssessmentStepsSection() {
                 </div>
               </div>
               
-              {/* CTA Buttons */}
+              {/* CTA Button */}
               <div>
-                {/* Two Buttons Side-by-Side */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-2">
-                  <Button 
-                    onClick={() => window.location.href = 'https://app.exitclarity.io/owner-signup'}
-                    className="w-full sm:w-[280px] bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-xl"
-                  >
-                    Get Started
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-                  <Button 
-                    onClick={handleCTAClick}
-                    variant="outline"
-                    className="w-full sm:w-[280px] bg-white hover:bg-gray-50 text-primary border-2 border-primary font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-lg"
-                  >
-                    Match with an Advisor
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-                </div>
+                <Button 
+                  onClick={() => window.location.href = 'https://app.exitclarity.io/owner-signup'}
+                  className="w-full sm:w-[280px] bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-xl mb-2"
+                >
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
                 
                 {/* View Sample Report Link */}
                 <a
