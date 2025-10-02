@@ -131,7 +131,7 @@ export function FAQSection() {
               onClick={() => window.location.href = 'https://app.exitclarity.io/owner-signup'}
               className="w-full sm:w-[280px] bg-white hover:bg-gray-100 text-primary font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-xl"
             >
-              Get Started
+              Get Your Report
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button 
