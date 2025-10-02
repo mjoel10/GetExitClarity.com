@@ -57,7 +57,7 @@ export default function Header() {
         <nav className="flex items-center justify-between h-8">
           {/* Logo Section */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <a href="https://www.exitclarity.io/" className="flex items-center">
               <img src={exitClarityLogo} alt="ExitClarity" className="h-8 w-auto" />
             </a>
           </div>
