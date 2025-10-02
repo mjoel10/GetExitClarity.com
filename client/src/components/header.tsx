@@ -16,7 +16,7 @@ export default function Header() {
   }, []);
 
   const handleGetStartedClick = () => {
-    window.location.href = '/';
+    window.location.href = 'https://app.exitclarity.io/owner-signup';
   };
 
   const handleSignInClick = () => {
