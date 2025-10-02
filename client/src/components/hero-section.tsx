@@ -265,7 +265,7 @@ export function HeroSection() {
               </h1>
               
               <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
-                ExitClarity shows in minutes if you should sell now, fix what's broken, or wait—giving you the clarity and roadmap you need to maximize your exit value.
+                ExitClarity shows in minutes if you should sell now, fix what's broken, or wait—giving you the insights and advice you need to maximize your exit value.
               </p>
             </div>
             
