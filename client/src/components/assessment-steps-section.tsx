@@ -83,7 +83,7 @@ export function AssessmentStepsSection() {
                 {/* Two Buttons Side-by-Side */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-2">
                   <Button 
-                    onClick={handleCTAClick}
+                    onClick={() => window.location.href = 'https://app.exitclarity.io/owner-signup'}
                     className="w-full sm:w-[280px] bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-xl"
                   >
                     Get Started
