@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import { TalkToAdvisorModal } from "./talk-to-advisor-modal";
 
 export function FinalCTASection() {
@@ -23,14 +24,33 @@ export function FinalCTASection() {
             Get your free exit readiness report in the next 20 minutes
           </p>
           
-          {/* CTA Button */}
-          <div className="mb-4">
-            <Button 
-              onClick={handleCTAClick}
-              className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-12 py-4 rounded-lg transition-all duration-200 hover:shadow-xl hover:scale-105"
+          {/* CTA Buttons */}
+          <div>
+            {/* Two Buttons Side-by-Side */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-2">
+              <Button 
+                onClick={handleCTAClick}
+                className="w-full sm:w-[280px] bg-white hover:bg-gray-100 text-primary font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-xl"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button 
+                onClick={handleCTAClick}
+                className="w-full sm:w-[280px] bg-transparent hover:bg-white/10 text-white border-2 border-white font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-lg"
+              >
+                Match with an Advisor
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
+            
+            {/* View Sample Report Link */}
+            <a
+              href="/sample-report"
+              className="inline-block text-sm text-white hover:text-white/80 font-medium underline transition-colors duration-200"
             >
-              Match With an Advisor
-            </Button>
+              View Sample Report
+            </a>
           </div>
           
           {/* Trust indicators */}

@@ -294,38 +294,44 @@ export function HeroSection() {
             </div>
             
             {/* Enhanced CTA Section */}
-            <div className="space-y-6 order-4 lg:order-3">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-blue-600/20 rounded-2xl blur-xl"></div>
+            <div className="order-4 lg:order-3">
+              {/* Two Buttons Side-by-Side */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-2">
                 <Button 
                   onClick={handleCTAClick}
-                  variant="hero"
-                  size="xl"
-                  className="relative font-semibold transition-all duration-300 hover:shadow-2xl hover:scale-105 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-lg px-8 py-4"
+                  className="w-full sm:w-[280px] bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-xl"
                 >
-                  Match With an Advisor
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                <Button 
+                  onClick={handleCTAClick}
+                  variant="outline"
+                  className="w-full sm:w-[280px] bg-white hover:bg-gray-50 text-primary border-2 border-primary font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-lg"
+                >
+                  Match with an Advisor
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>
               
-              {/* Trust Indicator with Free Messaging */}
-              <div className="space-y-3">
-                <button
-                  onClick={() => setIsModalOpen(true)}
-                  className="text-sm text-primary hover:text-primary/80 font-medium underline transition-colors duration-200"
-                >
-                  See a Sample Report
-                </button>
-                <div className="flex items-center gap-3">
-                  <div className="flex -space-x-2">
-                    {[...Array(4)].map((_, i) => (
-                      <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-blue-600 border-2 border-white shadow-sm"></div>
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground font-medium">
-                    Join 500+ business owners who've discovered their exit readiness
-                  </p>
+              {/* View Sample Report Link */}
+              <a
+                href="/sample-report"
+                className="inline-block text-sm text-primary hover:text-primary/80 font-medium underline transition-colors duration-200"
+              >
+                View Sample Report
+              </a>
+              
+              {/* Trust Indicator */}
+              <div className="flex items-center gap-3 mt-6">
+                <div className="flex -space-x-2">
+                  {[...Array(4)].map((_, i) => (
+                    <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-blue-600 border-2 border-white shadow-sm"></div>
+                  ))}
                 </div>
+                <p className="text-muted-foreground font-medium">
+                  Join 500+ business owners who've discovered their exit readiness
+                </p>
               </div>
             </div>
           </div>

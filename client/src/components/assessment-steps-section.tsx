@@ -78,18 +78,34 @@ export function AssessmentStepsSection() {
                 </div>
               </div>
               
-              {/* CTA Button */}
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-600/10 rounded-2xl blur-xl"></div>
-                <Button 
-                  onClick={handleCTAClick}
-                  variant="hero"
-                  size="lg"
-                  className="relative font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90"
+              {/* CTA Buttons */}
+              <div>
+                {/* Two Buttons Side-by-Side */}
+                <div className="flex flex-col sm:flex-row gap-4 mb-2">
+                  <Button 
+                    onClick={handleCTAClick}
+                    className="w-full sm:w-[280px] bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-xl"
+                  >
+                    Get Started
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                  <Button 
+                    onClick={handleCTAClick}
+                    variant="outline"
+                    className="w-full sm:w-[280px] bg-white hover:bg-gray-50 text-primary border-2 border-primary font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-lg"
+                  >
+                    Match with an Advisor
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </div>
+                
+                {/* View Sample Report Link */}
+                <a
+                  href="/sample-report"
+                  className="inline-block text-sm text-primary hover:text-primary/80 font-medium underline transition-colors duration-200"
                 >
-                  Connect with a Trusted Advisor
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
+                  View Sample Report
+                </a>
               </div>
             </div>
           </div>
