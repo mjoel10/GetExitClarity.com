@@ -79,10 +79,10 @@ export function AssessmentStepsSection() {
               </div>
               
               {/* CTA Button */}
-              <div>
+              <div className="flex flex-col items-start gap-2">
                 <Button 
                   onClick={() => window.location.href = 'https://app.exitclarity.io/owner-signup'}
-                  className="w-full sm:w-[280px] bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-xl mb-2"
+                  className="w-full sm:w-[280px] bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-xl"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -91,7 +91,7 @@ export function AssessmentStepsSection() {
                 {/* View Sample Report Link */}
                 <a
                   href="/sample-report"
-                  className="inline-block text-sm text-primary hover:text-primary/80 font-medium underline transition-colors duration-200"
+                  className="text-sm text-primary hover:text-primary/80 font-medium underline transition-colors duration-200"
                 >
                   View Sample Report
                 </a>
