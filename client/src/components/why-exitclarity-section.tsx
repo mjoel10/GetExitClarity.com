@@ -328,7 +328,7 @@ export function WhyExitClaritySection() {
                 <Button 
                   onClick={handleCTAClick}
                   variant="outline"
-                  className="w-full sm:w-[280px] bg-white hover:bg-gray-50 text-primary border-2 border-primary font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-lg"
+                  className="w-full sm:w-[280px] bg-white hover:bg-gray-50 text-primary hover:text-primary border-2 border-primary font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-lg"
                 >
                   Match with an Advisor
                   <ArrowRight className="w-5 h-5 ml-2" />

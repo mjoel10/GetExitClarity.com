@@ -37,7 +37,7 @@ export function FinalCTASection() {
               </Button>
               <Button 
                 onClick={handleCTAClick}
-                className="w-full sm:w-[280px] bg-transparent hover:bg-white/10 text-white border-2 border-white font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-lg"
+                className="w-full sm:w-[280px] bg-transparent hover:bg-white/10 text-white hover:text-white border-2 border-white font-semibold text-lg px-8 py-6 transition-all duration-300 hover:shadow-lg"
               >
                 Match with an Advisor
                 <ArrowRight className="w-5 h-5 ml-2" />
