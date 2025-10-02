@@ -269,13 +269,13 @@ export function HeroSection() {
               </p>
             </div>
             
-            {/* Mobile Assessment Visual - appears after subhead on mobile only */}
-            <div className="lg:hidden order-2">
+            {/* Mobile Assessment Visual - appears after checkboxes on mobile only */}
+            <div className="lg:hidden order-3">
               <AssessmentProgress />
             </div>
             
             {/* Enhanced Value Propositions */}
-            <div className="space-y-4 order-3 lg:order-2">
+            <div className="space-y-4 order-2 lg:order-2">
               {[
                 "Realistic business valuation ranges",
                 "Clear timeline for optimal sale", 
